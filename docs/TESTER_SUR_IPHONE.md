@@ -6,7 +6,7 @@ Si vous avez déjà testé M0, commencez par la section suivante. Les étapes d'
 
 ## Mettre à jour le projet déjà installé sur Windows
 
-Cette mise à jour corrige la détection des glissements entre l'accueil et Musculation. L'accueil vers le haut doit fonctionner sans devoir rejoindre le bas de la page ; le retour depuis Musculation se fait depuis le haut de la liste. Elle conserve la même identité de projet et la même base SQLite ; vos programmes et séances ne doivent pas être effacés.
+Cette mise à jour ajoute la suppression confirmée des programmes et des séances planifiées. Sur l'écran Programmes, le bouton **Accueil** remplace la flèche de retour. Les swipes validés sur iPhone sont conservés. Elle garde la même identité de projet et la même base SQLite ; la mise à jour ne supprime pas vos programmes ni vos séances.
 
 1. Dans le terminal où l'ancien serveur tourne, appuyer sur **Ctrl+C** pour l'arrêter.
 2. Ouvrir votre dossier `logbook` dans l'Explorateur Windows, puis choisir **Ouvrir dans le Terminal** avec un clic droit dans un espace vide. Si le terminal est déjà dans ce dossier, le garder ouvert.
@@ -24,10 +24,11 @@ Si rien ne s'affiche, passer aux commandes suivantes. Si des fichiers modifiés 
 git switch feat/m0-programmes
 git pull --ff-only origin feat/m0-programmes
 npm ci
+npm test
 npm start -- --clear
 ```
 
-`git pull` récupère la nouvelle version de la branche M0. `npm ci` met les bibliothèques de l'ordinateur en accord avec cette version. `--clear` vide uniquement le cache du serveur de développement : **cela ne vide pas la base SQLite sur votre iPhone**.
+`git pull` récupère la nouvelle version de la branche M0. `npm ci` met les bibliothèques de l'ordinateur en accord avec cette version. `npm test` vérifie le code sur l'ordinateur avec des données temporaires, sans toucher à celles de l'iPhone. `--clear` vide uniquement le cache du serveur de développement : **cela ne vide pas la base SQLite sur votre iPhone**.
 
 Si `git pull` échoue avec un message de branches divergentes, arrêter la mise à jour et conserver les fichiers locaux ; ne pas forcer ni réinitialiser la branche.
 
@@ -107,6 +108,7 @@ Pour vérifier la correction de la navigation sur votre véritable iPhone :
 - [ ] Depuis le haut de la liste des programmes, glisser vers le bas : Musculation descend avec le doigt et l'accueil réapparaît depuis le haut. Essayer depuis le titre et depuis une carte, puis avec un petit geste qui revient à Musculation.
 - [ ] Interrompre un geste en ajoutant un second doigt pendant le déplacement : la page doit revenir à son point de départ et rester utilisable au geste suivant.
 - [ ] Utiliser les boutons de navigation entre l'accueil et Musculation sans faire de swipe. La transition reste verticale. Les boutons ouvrant un programme, une séance ou un formulaire continuent de fonctionner avec un simple toucher.
+- [ ] Sur l'écran principal **Programmes**, aucune flèche n'apparaît à gauche du titre. Le bouton **Accueil** permet de revenir sans swipe. Les sous-écrans conservent leur flèche de retour.
 - [ ] Si la liste des programmes est assez longue pour défiler, descendre dans la liste, puis remonter : la liste doit défiler normalement. Aucun changement d'univers ne doit se produire au milieu de la liste. Après avoir atteint son début, lever le doigt puis commencer un nouveau glissement vers le bas pour revenir à l'accueil.
 - [ ] Dans un formulaire de programme ou de séance, faire défiler les champs avec le clavier affiché. Le formulaire reste ouvert et ne déclenche pas de changement d'univers.
 - [ ] Dans **Réglages → Accessibilité → Affichage et taille du texte** de l'iPhone, essayer une taille de texte plus grande. Les boutons et les informations importantes restent lisibles.
@@ -126,6 +128,18 @@ Faire cette vérification avec vos propres noms de programmes. Les exemples ci-d
 - [ ] Revenir à la liste des programmes et vérifier les informations enregistrées.
 - [ ] Fermer complètement Expo Go depuis le sélecteur d'applications de l'iPhone, puis rouvrir le même projet pendant que `npm start` reste actif. Les programmes, séances et modifications doivent toujours être présents.
 - [ ] Après le chargement du projet, activer le mode avion et essayer de créer ou modifier un programme. Le stockage n'utilise pas Internet. Désactiver ensuite le mode avion pour retrouver le serveur de développement si nécessaire.
+
+Pour vérifier les suppressions, créer un programme temporaire avec trois séances, et un second programme temporaire avec une séance. Ces noms et données sont à saisir pour l'essai ; l'application ne les ajoute pas automatiquement.
+
+- [ ] Ouvrir le détail du premier programme puis **Supprimer le programme** : vérifier le nom affiché et l'avertissement concernant les séances planifiées. Choisir **Annuler** ; le programme et ses trois séances restent présents.
+- [ ] Ouvrir la modification de la deuxième séance puis **Supprimer la séance**. Vérifier son nom dans la confirmation, puis **Annuler** ; les trois séances restent intactes.
+- [ ] Refaire la suppression de la deuxième séance et choisir **Supprimer**. La liste des séances revient automatiquement ; seules la première et la troisième restent présentes, dans cet ordre, avec leurs noms et notes conservés.
+- [ ] Ajouter une nouvelle séance : elle apparaît après les deux restantes. Vérifier que le second programme et sa séance n'ont pas changé.
+- [ ] Supprimer le premier programme en confirmant. La liste Programmes revient automatiquement ; le programme supprimé a disparu, et le second programme reste intact. La carte de l'accueil reflète également les programmes restants.
+- [ ] Fermer puis rouvrir le même projet dans Expo Go : les éléments supprimés restent absents et les données conservées sont toujours présentes.
+- [ ] Pendant une suppression, les actions de l'écran sont temporairement désactivées. Plusieurs touchers rapides ne déclenchent pas plusieurs suppressions. **Annuler** dans la confirmation ne lance aucune écriture.
+
+Les suppressions confirmées sont définitives : M0 ne propose pas encore de restauration. Une suppression de programme concerne uniquement ses séances planifiées ; aucun historique d'entraînement réalisé n'existe encore dans M0.
 
 Un nom est obligatoire et limité à 80 caractères. Les descriptions de programmes et les notes de séances sont facultatives et limitées à 1 000 caractères. Un champ ne contenant que des espaces est considéré comme vide.
 
@@ -199,4 +213,4 @@ Pour arrêter le serveur sur l'ordinateur, revenir au terminal et appuyer sur `C
 
 Expo Go sert à tester cette version. Une distribution autonome ou via TestFlight demandera ensuite une compilation iOS, les outils de signature et généralement un compte Apple Developer payant. Aucun fichier installable ni publication App Store n'est produit par M0.
 
-Le simulateur iOS nécessite macOS et Xcode. L'environnement Linux utilisé pour développer M0 vérifie le code, les tests SQLite et l'export JavaScript pour iOS. La création, la modification, la persistance, le nouvel accueil et les boutons ont déjà été testés sur un véritable iPhone par l'utilisateur. Les swipes de la version précédente n'y fonctionnaient pas malgré les tests réussis. La correction actuelle, sa coexistence avec le défilement et l'accessibilité doivent être vérifiées avec la liste ci-dessus.
+Le simulateur iOS nécessite macOS et Xcode. L'environnement Linux utilisé pour développer M0 vérifie le code, les tests SQLite et l'export JavaScript pour iOS. La création, la modification, la persistance, le nouvel accueil, les boutons et les swipes corrigés ont déjà été testés sur un véritable iPhone par l'utilisateur. Les nouvelles confirmations de suppression et leurs retours aux listes doivent être vérifiés avec la liste ci-dessus.

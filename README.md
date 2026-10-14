@@ -2,7 +2,7 @@
 
 Application iPhone de musculation développée avec React Native, Expo, TypeScript, Expo Router et SQLite local.
 
-Cette première version permet de créer et modifier ses programmes, d'y ajouter des séances prévues, puis de retrouver ces données après fermeture de l'application. Le premier lancement est vide : aucun programme, aucune performance et aucune statistique de démonstration ne sont enregistrés.
+Cette première version permet de créer et modifier ses programmes, d'y ajouter des séances prévues, puis de retrouver ces données après fermeture de l'application. Elle permet aussi de supprimer un programme et ses séances planifiées, ou une seule séance, après confirmation. Le premier lancement est vide : aucun programme, aucune performance et aucune statistique de démonstration ne sont enregistrés.
 
 Le thème sombre, les accents bleus et les cartes arrondies reprennent les écrans 1 à 4 de la [maquette validée](docs/design/Maquette%20d’application%20fitness%20complète%20en%2021%20écrans.png). L'accueil conserve la disposition des cartes de progression avec des états vides, sans performances inventées. Un glissement vertical interactif relie l'accueil à l'univers Musculation ; des boutons permettent aussi de naviguer. Le suivi d'un entraînement sera développé au jalon M1.
 

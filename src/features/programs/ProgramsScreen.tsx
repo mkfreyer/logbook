@@ -15,7 +15,8 @@ export default function ProgramsScreen() {
   useFocusEffect(useCallback(() => { if (active) void refresh(); }, [active, refresh]));
 
   return <UniverseScreen testID="programs-scroll">
-    <Heading title="Programmes" subtitle="Musculation" back onBack={() => goTo('home')} />
+    <Heading title="Programmes" subtitle="Musculation"
+      action={<Button label="Accueil" icon="home-outline" variant="ghost" onPress={() => goTo('home')} />} />
     <View style={featureStyles.sections}>
       {loading || error ? <LoadState loading={loading} error={error} retry={() => { void refresh(); }} /> :
         programs.length === 0 ? <Card>

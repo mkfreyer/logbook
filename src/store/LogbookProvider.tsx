@@ -14,8 +14,10 @@ interface LogbookContextValue {
   getWorkout(id: string): Promise<WorkoutTemplate | null>;
   createProgram(input: ProgramInput): Promise<Program>;
   updateProgram(id: string, input: ProgramInput): Promise<Program>;
+  deleteProgram(id: string): Promise<void>;
   createWorkout(programId: string, input: WorkoutInput): Promise<WorkoutTemplate>;
   updateWorkout(id: string, input: WorkoutInput): Promise<WorkoutTemplate>;
+  deleteWorkout(id: string): Promise<void>;
 }
 
 const LogbookContext = createContext<LogbookContextValue | null>(null);
@@ -63,8 +65,21 @@ export function LogbookProvider({ children }: { children: ReactNode }) {
     const result = await repository.updateWorkout(id, input); await refresh(); return result;
   }, [repository, refresh]);
 
-  const value = useMemo(() => ({ programs, loading, error, refresh, getProgram, listWorkouts, getWorkout, createProgram, updateProgram, createWorkout, updateWorkout }),
-    [programs, loading, error, refresh, getProgram, listWorkouts, getWorkout, createProgram, updateProgram, createWorkout, updateWorkout]);
+  const deleteProgram = useCallback(async (id: string) => {
+    await repository.deleteProgram(id);
+    // Invalidate older reads and remove the deleted card even if the subsequent
+    // refresh fails. refresh() exposes read errors on the list for retry.
+    request.current++;
+    setPrograms(current => current.filter(program => program.id !== id));
+    await refresh();
+  }, [repository, refresh]);
+  const deleteWorkout = useCallback(async (id: string) => {
+    await repository.deleteWorkout(id);
+    await refresh();
+  }, [repository, refresh]);
+
+  const value = useMemo(() => ({ programs, loading, error, refresh, getProgram, listWorkouts, getWorkout, createProgram, updateProgram, deleteProgram, createWorkout, updateWorkout, deleteWorkout }),
+    [programs, loading, error, refresh, getProgram, listWorkouts, getWorkout, createProgram, updateProgram, deleteProgram, createWorkout, updateWorkout, deleteWorkout]);
   return <LogbookContext.Provider value={value}>{children}</LogbookContext.Provider>;
 }
 

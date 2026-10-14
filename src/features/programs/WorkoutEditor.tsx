@@ -5,12 +5,13 @@ import { Text, View } from 'react-native';
 import { useLogbook } from '../../store/LogbookProvider';
 import { Button, Card, Field, Heading, Screen } from '../../ui';
 import { featureStyles, FormError, LoadState, LocalNotice, messageFor, useFocusedData } from './shared';
+import { useConfirmedDelete } from './useConfirmedDelete';
 
 export function WorkoutEditor({ mode, programId, workoutId }: {
   mode: 'create' | 'edit'; programId?: string; workoutId?: string;
 }) {
   const editing = mode === 'edit';
-  const { getProgram, getWorkout, createWorkout, updateWorkout } = useLogbook();
+  const { getProgram, getWorkout, createWorkout, updateWorkout, deleteWorkout } = useLogbook();
   const load = useCallback(async () => {
     if (!programId || (editing && !workoutId)) return null;
     const program = await getProgram(programId);
@@ -27,6 +28,15 @@ export function WorkoutEditor({ mode, programId, workoutId }: {
   const savingRef = useRef(false);
   const mounted = useRef(true);
   const focused = useRef(false);
+  const deletion = useConfirmedDelete({
+    title: 'Supprimer la séance ?',
+    message: `La séance planifiée « ${data?.workout?.name ?? ''} » sera supprimée. Les autres séances seront conservées. Cette action est définitive.`,
+    remove: async () => { if (data?.workout) await deleteWorkout(data.workout.id); },
+    onDeleted: () => router.dismissTo({ pathname: '/programs/[id]/workouts', params: { id: data!.program.id } }),
+    failureMessage: 'Impossible de supprimer cette séance. Réessayez.',
+    operationLock: savingRef,
+  });
+  const busy = saving || deletion.busy;
 
   useFocusEffect(useCallback(() => {
     focused.current = true;
@@ -70,7 +80,7 @@ export function WorkoutEditor({ mode, programId, workoutId }: {
   };
 
   return <Screen>
-    <Heading title={editing ? 'Modifier la séance' : 'Ajouter une séance'} subtitle={data?.program.name} back backDisabled={saving} />
+    <Heading title={editing ? 'Modifier la séance' : 'Ajouter une séance'} subtitle={data?.program.name} back backDisabled={busy} />
     {loading || error || !data ? <LoadState loading={loading} error={error} retry={retry}
       missing="Cette séance ou son programme n’est pas disponible." /> : <View style={featureStyles.sections}>
       <Text style={featureStyles.body}>{editing
@@ -85,9 +95,12 @@ export function WorkoutEditor({ mode, programId, workoutId }: {
         </View>
       </Card>
       <FormError message={formError} />
+      <FormError message={deletion.error} />
       <Button label={editing ? 'Enregistrer les modifications' : 'Ajouter la séance'} onPress={() => { void save(); }}
-        icon="checkmark" loading={saving} disabled={saving} />
-      <Button label="Annuler" variant="ghost" onPress={returnToWorkouts} disabled={saving} />
+        icon="checkmark" loading={saving} disabled={busy} />
+      <Button label="Annuler" variant="ghost" onPress={returnToWorkouts} disabled={busy} />
+      {editing && <Button label="Supprimer la séance" variant="danger" icon="trash-outline"
+        onPress={deletion.confirm} disabled={busy} loading={deletion.deleting} />}
       <Text style={featureStyles.body}>Vous pourrez ajouter les exercices dans la prochaine version.</Text>
       <LocalNotice />
     </View>}

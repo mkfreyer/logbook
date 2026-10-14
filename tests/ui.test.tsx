@@ -1,7 +1,9 @@
 import { afterEach, beforeEach, describe, expect, jest, test } from '@jest/globals';
 import { act, cleanup, fireEvent, render, waitFor } from '@testing-library/react-native';
 import { router } from 'expo-router';
+import { Alert, type AlertButton } from 'react-native';
 
+import ProgramScreen from '../app/programs/[id]/index';
 import HomeScreen from '../src/features/home/HomeScreen';
 import ProgramsScreen from '../src/features/programs/ProgramsScreen';
 import type { Program, ProgramInput, WorkoutInput, WorkoutTemplate } from '../src/domain/models';
@@ -15,7 +17,8 @@ const mockGoTo = jest.fn();
 jest.mock('expo-router', () => {
   const React = require('react') as typeof import('react');
   return {
-    router: { push: jest.fn(), replace: jest.fn(), back: jest.fn(), canGoBack: jest.fn() },
+    router: { push: jest.fn(), replace: jest.fn(), back: jest.fn(), canGoBack: jest.fn(), dismissTo: jest.fn() },
+    useLocalSearchParams: () => ({ id: 'program-local' }),
     useFocusEffect: (effect: () => void | (() => void)) => React.useEffect(() => {
       const cleanupFocus = effect();
       if (typeof cleanupFocus !== 'function') return undefined;
@@ -50,6 +53,8 @@ const mockStore = {
   updateProgram: jest.fn<(id: string, input: ProgramInput) => Promise<Program>>(),
   createWorkout: jest.fn<(id: string, input: WorkoutInput) => Promise<WorkoutTemplate>>(),
   updateWorkout: jest.fn<(id: string, input: WorkoutInput) => Promise<WorkoutTemplate>>(),
+  deleteProgram: jest.fn<(id: string) => Promise<void>>(),
+  deleteWorkout: jest.fn<(id: string) => Promise<void>>(),
 };
 
 function deferred<T>() {
@@ -72,10 +77,12 @@ beforeEach(() => {
   mockStore.updateProgram.mockResolvedValue(program);
   mockStore.createWorkout.mockResolvedValue(workout);
   mockStore.updateWorkout.mockResolvedValue(workout);
+  mockStore.deleteProgram.mockResolvedValue(undefined);
+  mockStore.deleteWorkout.mockResolvedValue(undefined);
   jest.mocked(router.canGoBack).mockReturnValue(false);
   jest.mocked(useLogbook).mockReturnValue(mockStore);
 });
-afterEach(() => { cleanup(); mockFocusCleanups.clear(); });
+afterEach(() => { cleanup(); mockFocusCleanups.clear(); jest.restoreAllMocks(); });
 
 describe('M0 : états vides et organisation locale', () => {
   test('une première ouverture invite à créer sans programmes ni performances fictifs', () => {
@@ -120,7 +127,8 @@ describe('M0 : états vides et organisation locale', () => {
     home.unmount();
 
     const list = render(<ProgramsScreen />);
-    fireEvent.press(list.getByRole('button', { name: 'Retour' }));
+    expect(list.queryByRole('button', { name: 'Retour' })).toBeNull();
+    fireEvent.press(list.getByRole('button', { name: 'Accueil' }));
     expect(mockGoTo).toHaveBeenLastCalledWith('home');
     expect(router.back).not.toHaveBeenCalled();
   });
@@ -203,5 +211,161 @@ describe('M0 : états vides et organisation locale', () => {
     expect(await view.findByText('Cette séance ou son programme n’est pas disponible.')).toBeTruthy();
     expect(view.queryByLabelText('Nom de la séance')).toBeNull();
     expect(mockStore.updateWorkout).not.toHaveBeenCalled();
+  });
+});
+
+describe('M0 : suppressions confirmées', () => {
+  let alert: jest.SpiedFunction<typeof Alert.alert>;
+  beforeEach(() => { alert = jest.spyOn(Alert, 'alert').mockImplementation(() => undefined); });
+
+  function choice(text: string): AlertButton {
+    const button = alert.mock.calls.at(-1)?.[2]?.find(item => item.text === text);
+    expect(button).toBeDefined();
+    return button!;
+  }
+  function screen(kind: 'programme' | 'séance') {
+    return render(kind === 'programme' ? <ProgramScreen /> : <WorkoutEditor mode="edit" programId={program.id} workoutId={workout.id} />);
+  }
+  function pressHandler(button: ReturnType<ReturnType<typeof render>['getByRole']>): () => void {
+    let node: typeof button | null = button;
+    while (node) {
+      if (typeof node.props.onPress === 'function') return node.props.onPress as () => void;
+      node = node.parent;
+    }
+    throw new Error('No press handler found');
+  }
+
+  test.each(['programme', 'séance'] as const)('annuler la confirmation du %s ne supprime ni ne navigue', async kind => {
+    const view = screen(kind);
+    const label = kind === 'programme' ? 'Supprimer le programme' : 'Supprimer la séance';
+    const button = await view.findByRole('button', { name: label });
+    expect(view.getByRole('button', { name: 'Retour' })).toBeTruthy();
+    fireEvent.press(button);
+    expect(alert).toHaveBeenCalledTimes(1);
+    const [title, message] = alert.mock.calls[0]!;
+    expect(title).toContain(label);
+    expect(message).toContain(kind === 'programme' ? program.name : workout.name);
+    expect(message).toContain(kind === 'programme' ? 'toutes ses séances planifiées' : 'Les autres séances seront conservées');
+    expect(choice('Annuler').style).toBe('cancel');
+    expect(choice('Supprimer').style).toBe('destructive');
+    act(() => choice('Annuler').onPress?.());
+    expect(mockStore.deleteProgram).not.toHaveBeenCalled();
+    expect(mockStore.deleteWorkout).not.toHaveBeenCalled();
+    expect(router.dismissTo).not.toHaveBeenCalled();
+    expect(router.back).not.toHaveBeenCalled();
+    expect(view.getByRole('button', { name: label }).props.accessibilityState.disabled).toBe(false);
+    // Even a stale callback from the cancelled dialog cannot delete.
+    act(() => choice('Supprimer').onPress?.());
+    expect(mockStore.deleteProgram).not.toHaveBeenCalled();
+    expect(mockStore.deleteWorkout).not.toHaveBeenCalled();
+  });
+
+  test('la suppression du programme est unique et attend le stockage avant le retour à Musculation', async () => {
+    const pending = deferred<void>();
+    mockStore.deleteProgram.mockReturnValue(pending.promise);
+    const view = screen('programme');
+    const button = await view.findByRole('button', { name: 'Supprimer le programme' });
+    // Bypass the React disabled render to exercise the synchronous double-click lock.
+    const press = pressHandler(button);
+    act(() => { press(); press(); });
+    expect(alert).toHaveBeenCalledTimes(1);
+    expect(mockStore.deleteProgram).not.toHaveBeenCalled();
+    const remove = choice('Supprimer').onPress;
+    act(() => { remove?.(); remove?.(); });
+    expect(mockStore.deleteProgram).toHaveBeenCalledTimes(1);
+    expect(mockStore.deleteProgram).toHaveBeenCalledWith(program.id);
+    expect(view.getByRole('button', { name: 'Retour' }).props.accessibilityState.disabled).toBe(true);
+    expect(view.getByRole('button', { name: 'Modifier le programme' }).props.accessibilityState.disabled).toBe(true);
+    expect(router.dismissTo).not.toHaveBeenCalled();
+    await act(async () => { pending.resolve(); await pending.promise; });
+    expect(router.dismissTo).toHaveBeenCalledTimes(1);
+    expect(router.dismissTo).toHaveBeenCalledWith({ pathname: '/', params: { universe: 'musculation' } });
+    expect(mockStore.deleteWorkout).not.toHaveBeenCalled();
+  });
+
+  test('la suppression de séance attend le stockage et bloque une sauvegarde concurrente', async () => {
+    const pending = deferred<void>();
+    mockStore.deleteWorkout.mockReturnValue(pending.promise);
+    const view = screen('séance');
+    const removeButton = await view.findByRole('button', { name: 'Supprimer la séance' });
+    const savePress = pressHandler(view.getByRole('button', { name: 'Enregistrer les modifications' }));
+    fireEvent.changeText(view.getByLabelText('Nom de la séance'), 'Nom non enregistré');
+    fireEvent.press(removeButton);
+    expect(alert.mock.calls[0]?.[1]).toContain(workout.name);
+    act(() => savePress());
+    expect(mockStore.updateWorkout).not.toHaveBeenCalled();
+    const remove = choice('Supprimer').onPress;
+    act(() => { remove?.(); remove?.(); savePress(); });
+    expect(mockStore.deleteWorkout).toHaveBeenCalledTimes(1);
+    expect(mockStore.deleteWorkout).toHaveBeenCalledWith(workout.id);
+    expect(mockStore.updateWorkout).not.toHaveBeenCalled();
+    expect(router.dismissTo).not.toHaveBeenCalled();
+    await act(async () => { pending.resolve(); await pending.promise; });
+    expect(router.dismissTo).toHaveBeenCalledWith({ pathname: '/programs/[id]/workouts', params: { id: program.id } });
+    expect(mockStore.deleteProgram).not.toHaveBeenCalled();
+  });
+
+  test.each(['programme', 'séance'] as const)('une erreur de suppression du %s laisse l’écran ouvert et permet une nouvelle tentative', async kind => {
+    const remove = kind === 'programme' ? mockStore.deleteProgram : mockStore.deleteWorkout;
+    remove.mockRejectedValueOnce(new Error('SQLite unavailable'));
+    const view = screen(kind);
+    const label = kind === 'programme' ? 'Supprimer le programme' : 'Supprimer la séance';
+    fireEvent.press(await view.findByRole('button', { name: label }));
+    act(() => choice('Supprimer').onPress?.());
+    expect(await view.findByText(kind === 'programme' ? 'Impossible de supprimer ce programme. Réessayez.' : 'Impossible de supprimer cette séance. Réessayez.')).toBeTruthy();
+    expect(router.dismissTo).not.toHaveBeenCalled();
+    expect(router.back).not.toHaveBeenCalled();
+    expect(view.getByRole('button', { name: label }).props.accessibilityState.disabled).toBe(false);
+    if (kind === 'séance') expect(view.getByLabelText('Nom de la séance').props.value).toBe(workout.name);
+    fireEvent.press(view.getByRole('button', { name: label }));
+    act(() => choice('Supprimer').onPress?.());
+    await waitFor(() => expect(router.dismissTo).toHaveBeenCalledTimes(1));
+    expect(remove).toHaveBeenCalledTimes(2);
+  });
+
+  test('une sauvegarde de séance en cours empêche même l’ouverture de la confirmation de suppression', async () => {
+    const pending = deferred<WorkoutTemplate>();
+    mockStore.updateWorkout.mockReturnValue(pending.promise);
+    const view = screen('séance');
+    const removeButton = await view.findByRole('button', { name: 'Supprimer la séance' });
+    const deletePress = pressHandler(removeButton);
+    fireEvent.press(view.getByRole('button', { name: 'Enregistrer les modifications' }));
+    act(() => deletePress());
+    expect(alert).not.toHaveBeenCalled();
+    expect(mockStore.deleteWorkout).not.toHaveBeenCalled();
+    await act(async () => { pending.resolve(workout); await pending.promise; });
+  });
+
+  test('une confirmation quittée et une suppression terminée après perte du focus ne redirigent pas', async () => {
+    const view = screen('programme');
+    fireEvent.press(await view.findByRole('button', { name: 'Supprimer le programme' }));
+    const confirm = choice('Supprimer').onPress;
+    act(() => mockFocusCleanups.forEach(blur => blur()));
+    act(() => confirm?.());
+    expect(mockStore.deleteProgram).not.toHaveBeenCalled();
+    view.unmount();
+
+    const pending = deferred<void>();
+    mockStore.deleteWorkout.mockReturnValue(pending.promise);
+    const editor = screen('séance');
+    fireEvent.press(await editor.findByRole('button', { name: 'Supprimer la séance' }));
+    act(() => choice('Supprimer').onPress?.());
+    expect(mockStore.deleteWorkout).toHaveBeenCalledTimes(1);
+    act(() => mockFocusCleanups.forEach(blur => blur()));
+    editor.unmount();
+    await act(async () => { pending.resolve(); await pending.promise; });
+    expect(router.dismissTo).not.toHaveBeenCalled();
+  });
+
+  test('la suppression est absente lors de la création ou pour une séance d’un autre programme', async () => {
+    const create = render(<WorkoutEditor mode="create" programId={program.id} />);
+    await create.findByLabelText('Nom de la séance');
+    expect(create.queryByRole('button', { name: 'Supprimer la séance' })).toBeNull();
+    create.unmount();
+    mockStore.getWorkout.mockResolvedValue({ ...workout, programId: 'other-program' });
+    const invalid = screen('séance');
+    await invalid.findByText('Cette séance ou son programme n’est pas disponible.');
+    expect(invalid.queryByRole('button', { name: 'Supprimer la séance' })).toBeNull();
+    expect(mockStore.deleteWorkout).not.toHaveBeenCalled();
   });
 });

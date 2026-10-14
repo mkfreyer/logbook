@@ -179,6 +179,111 @@ test('database foreign keys reject orphan workouts independently of repository v
   ), /FOREIGN KEY/);
 });
 
+test('deleting a program cascades only its planned workouts and preserves other records', async (t) => {
+  const { db, repository } = await fixture();
+  t.after(() => db.close());
+  const removed = await repository.createProgram({ name: 'À supprimer' });
+  const kept = await repository.createProgram({ name: 'À conserver', description: 'Personnel' });
+  const first = await repository.createWorkout(removed.id, { name: 'A' });
+  const second = await repository.createWorkout(removed.id, { name: 'B' });
+  const keptWorkout = await repository.createWorkout(kept.id, { name: 'Intacte', notes: 'À conserver' });
+  const keptProgram = await repository.getProgram(kept.id);
+
+  await repository.deleteProgram(removed.id);
+  await assert.rejects(repository.getProgram(removed.id), NotFoundError);
+  await assert.rejects(repository.getWorkout(first.id), NotFoundError);
+  await assert.rejects(repository.getWorkout(second.id), NotFoundError);
+  assert.deepEqual(await repository.listPrograms(), [keptProgram]);
+  assert.deepEqual(await repository.listWorkouts(kept.id), [keptWorkout]);
+  assert.deepEqual(await db.getAllAsync('PRAGMA foreign_key_check'), []);
+  assert.equal((await db.getFirstAsync<{ user_version: number }>('PRAGMA user_version'))?.user_version, DATABASE_VERSION);
+});
+
+test('deleting a middle workout preserves sibling identities, notes, timestamps and order', async (t) => {
+  const { db, repository } = await fixture();
+  t.after(() => db.close());
+  const program = await repository.createProgram({ name: 'Trois séances' });
+  const other = await repository.createProgram({ name: 'Autre programme' });
+  const first = await repository.createWorkout(program.id, { name: 'A', notes: 'Première' });
+  const middle = await repository.createWorkout(program.id, { name: 'B' });
+  const last = await repository.createWorkout(program.id, { name: 'C', notes: 'Dernière' });
+  const independent = await repository.createWorkout(other.id, { name: 'Indépendante' });
+  const otherBefore = await repository.getProgram(other.id);
+
+  await repository.deleteWorkout(middle.id);
+  assert.deepEqual(await repository.listWorkouts(program.id), [first, last]);
+  assert.deepEqual(await repository.getProgram(program.id), { ...program, workoutCount: 2 });
+  assert.deepEqual(await repository.getProgram(other.id), otherBefore);
+  assert.deepEqual(await repository.getWorkout(independent.id), independent);
+  const appended = await repository.createWorkout(program.id, { name: 'D' });
+  assert.equal(appended.sortOrder, 3);
+  assert.deepEqual(await repository.listWorkouts(program.id), [first, last, appended]);
+
+  await repository.deleteWorkout(first.id);
+  await repository.deleteWorkout(last.id);
+  await repository.deleteWorkout(appended.id);
+  assert.deepEqual(await repository.listWorkouts(program.id), []);
+  assert.equal((await repository.getProgram(program.id)).workoutCount, 0);
+  assert.deepEqual(await repository.getWorkout(independent.id), independent);
+});
+
+test('missing, repeated and SQL-looking delete identifiers never remove unrelated data', async (t) => {
+  const { db, repository } = await fixture();
+  t.after(() => db.close());
+  const program = await repository.createProgram({ name: 'Intact' });
+  const workout = await repository.createWorkout(program.id, { name: 'Intacte' });
+  await assert.rejects(repository.deleteProgram("' OR 1=1 --"), NotFoundError);
+  await assert.rejects(repository.deleteWorkout("' OR 1=1 --"), NotFoundError);
+  await assert.rejects(repository.deleteProgram('missing'), NotFoundError);
+  await assert.rejects(repository.deleteWorkout('missing'), NotFoundError);
+  assert.deepEqual(await repository.getWorkout(workout.id), workout);
+  assert.deepEqual(await repository.getProgram(program.id), { ...program, workoutCount: 1 });
+
+  await repository.deleteWorkout(workout.id);
+  await assert.rejects(repository.deleteWorkout(workout.id), NotFoundError);
+  assert.deepEqual(await repository.getProgram(program.id), program);
+  await repository.deleteProgram(program.id);
+  await assert.rejects(repository.deleteProgram(program.id), NotFoundError);
+  assert.deepEqual(await repository.listPrograms(), []);
+});
+
+test('a SQLite failure rolls back both the program deletion and its cascading children', async (t) => {
+  const { db, repository } = await fixture();
+  t.after(() => db.close());
+  const program = await repository.createProgram({ name: 'Conserver si erreur' });
+  const first = await repository.createWorkout(program.id, { name: 'A' });
+  const second = await repository.createWorkout(program.id, { name: 'B' });
+  await db.execAsync(`CREATE TRIGGER reject_workout_deletion BEFORE DELETE ON workout_templates
+    WHEN OLD.sort_order = 1 BEGIN SELECT RAISE(ABORT, 'simulated storage failure'); END;`);
+  await assert.rejects(repository.deleteProgram(program.id), /simulated storage failure/);
+  assert.deepEqual(await repository.getProgram(program.id), { ...program, workoutCount: 2 });
+  assert.deepEqual(await repository.listWorkouts(program.id), [first, second]);
+  await assert.rejects(repository.deleteWorkout(second.id), /simulated storage failure/);
+  assert.deepEqual(await repository.listWorkouts(program.id), [first, second]);
+});
+
+test('deletions persist across database closure without changing retained preparations', async (t) => {
+  const directory = mkdtempSync(join(tmpdir(), 'logbook-delete-'));
+  t.after(() => rmSync(directory, { recursive: true, force: true }));
+  const filename = join(directory, 'logbook.db');
+  const first = await fixture(filename);
+  const program = await first.repository.createProgram({ name: 'Programme restant' });
+  const removedProgram = await first.repository.createProgram({ name: 'Programme supprimé' });
+  const kept = await first.repository.createWorkout(program.id, { name: 'Restante', notes: 'Notes' });
+  const removed = await first.repository.createWorkout(program.id, { name: 'Supprimée' });
+  await first.repository.createWorkout(removedProgram.id, { name: 'Cascade' });
+  await first.repository.deleteProgram(removedProgram.id);
+  await first.repository.deleteWorkout(removed.id);
+  first.db.close();
+
+  const reopened = await fixture(filename);
+  t.after(() => reopened.db.close());
+  assert.deepEqual(await reopened.repository.listPrograms(), [{ ...program, workoutCount: 1 }]);
+  assert.deepEqual(await reopened.repository.listWorkouts(program.id), [kept]);
+  await assert.rejects(reopened.repository.getWorkout(removed.id), NotFoundError);
+  await assert.rejects(reopened.repository.getProgram(removedProgram.id), NotFoundError);
+});
+
 test('concurrent workout creations use distinct stable positions within each program', async (t) => {
   const { db, repository } = await fixture();
   t.after(() => db.close());

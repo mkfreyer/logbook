@@ -35,12 +35,12 @@ export function Card({ children, style }: { children: ReactNode; style?: StylePr
 }
 
 export function Button({ label, onPress, variant = 'primary', disabled = false, loading = false, icon }: {
-  label: string; onPress: () => void; variant?: 'primary' | 'secondary' | 'ghost'; disabled?: boolean; loading?: boolean; icon?: IconName;
+  label: string; onPress: () => void; variant?: 'primary' | 'secondary' | 'ghost' | 'danger'; disabled?: boolean; loading?: boolean; icon?: IconName;
 }) {
   return <Pressable onPress={onPress} disabled={disabled || loading} accessibilityRole="button" accessibilityState={{ disabled: disabled || loading, busy: loading }}
-    style={({ pressed }) => [s.button, variant === 'secondary' && s.secondary, variant === 'ghost' && s.ghost, pressed && s.pressed, (disabled || loading) && s.disabled]}>
-    {loading ? <ActivityIndicator color={colors.text} /> : icon && <Ionicons name={icon} color={variant === 'ghost' ? colors.cyan : colors.text} size={20} />}
-    <Text style={[s.buttonText, variant === 'ghost' && { color: colors.cyan }]}>{label}</Text>
+    style={({ pressed }) => [s.button, variant === 'secondary' && s.secondary, (variant === 'ghost' || variant === 'danger') && s.ghost, pressed && s.pressed, (disabled || loading) && s.disabled]}>
+    {loading ? <ActivityIndicator color={variant === 'danger' ? colors.danger : colors.text} /> : icon && <Ionicons name={icon} color={variant === 'danger' ? colors.danger : variant === 'ghost' ? colors.cyan : colors.text} size={20} />}
+    <Text style={[s.buttonText, variant === 'ghost' && { color: colors.cyan }, variant === 'danger' && { color: colors.danger }]}>{label}</Text>
   </Pressable>;
 }
 

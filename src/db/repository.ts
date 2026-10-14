@@ -98,6 +98,14 @@ export class ProgramRepository {
     return this.getProgram(id);
   }
 
+  /** Delete preparation only. SQLite cascades to workout_templates atomically.
+   * Future completed-session records must retain independent snapshots, without
+   * a cascading foreign key to either preparation table. */
+  async deleteProgram(id: string): Promise<void> {
+    const result = await this.db.runAsync('DELETE FROM programs WHERE id = ?', id);
+    if (!result.changes) throw new NotFoundError('program');
+  }
+
   async listWorkouts(programId: string): Promise<WorkoutTemplate[]> {
     await this.getProgram(programId);
     return this.db.getAllAsync<WorkoutTemplate>(
@@ -150,5 +158,11 @@ export class ProgramRepository {
     );
     if (!result.changes) throw new NotFoundError('workout');
     return this.getWorkout(id);
+  }
+
+  /** Do not renumber siblings: their identities, order and timestamps stay intact. */
+  async deleteWorkout(id: string): Promise<void> {
+    const result = await this.db.runAsync('DELETE FROM workout_templates WHERE id = ?', id);
+    if (!result.changes) throw new NotFoundError('workout');
   }
 }

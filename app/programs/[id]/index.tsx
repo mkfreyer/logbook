@@ -5,17 +5,25 @@ import { StyleSheet, Text, View } from 'react-native';
 
 import { useLogbook } from '../../../src/store/LogbookProvider';
 import { Button, Card, colors, Heading, Screen } from '../../../src/ui';
-import { featureStyles, LoadState, LocalNotice, routeId, useFocusedData } from '../../../src/features/programs/shared';
+import { featureStyles, FormError, LoadState, LocalNotice, routeId, useFocusedData } from '../../../src/features/programs/shared';
+import { useConfirmedDelete } from '../../../src/features/programs/useConfirmedDelete';
 
 export default function ProgramScreen() {
   const params = useLocalSearchParams<{ id: string }>();
   const id = routeId(params.id);
-  const { getProgram } = useLogbook();
+  const { getProgram, deleteProgram } = useLogbook();
   const load = useCallback(() => id ? getProgram(id) : Promise.resolve(null), [getProgram, id]);
   const { data: program, loading, error, retry } = useFocusedData(load);
+  const deletion = useConfirmedDelete({
+    title: 'Supprimer le programme ?',
+    message: `Le programme « ${program?.name ?? ''} » et toutes ses séances planifiées seront supprimés. Cette action est définitive.`,
+    remove: async () => { if (program) await deleteProgram(program.id); },
+    onDeleted: () => router.dismissTo({ pathname: '/', params: { universe: 'musculation' } }),
+    failureMessage: 'Impossible de supprimer ce programme. Réessayez.',
+  });
 
   return <Screen>
-    <Heading title="Votre programme" back />
+    <Heading title="Votre programme" back backDisabled={deletion.busy} />
     {loading || error || !program ? <LoadState loading={loading} error={error} retry={retry}
       missing="Ce programme n’est pas disponible. Retrouvez vos programmes depuis l’accueil." /> :
       <View style={featureStyles.sections}>
@@ -39,9 +47,12 @@ export default function ProgramScreen() {
           <Text style={[featureStyles.body, styles.help]}>Ajoutez vos séances, donnez-leur un nom et retrouvez-les ici quand vous en avez besoin.</Text>
         </Card>
         <Button label="Voir les séances" icon="arrow-forward"
-          onPress={() => router.push({ pathname: '/programs/[id]/workouts', params: { id: program.id } })} />
+          disabled={deletion.busy} onPress={() => router.push({ pathname: '/programs/[id]/workouts', params: { id: program.id } })} />
         <Button label="Modifier le programme" icon="create-outline" variant="secondary"
-          onPress={() => router.push({ pathname: '/programs/[id]/edit', params: { id: program.id } })} />
+          disabled={deletion.busy} onPress={() => router.push({ pathname: '/programs/[id]/edit', params: { id: program.id } })} />
+        <FormError message={deletion.error} />
+        <Button label="Supprimer le programme" icon="trash-outline" variant="danger"
+          onPress={deletion.confirm} disabled={deletion.busy} loading={deletion.deleting} />
         <LocalNotice />
       </View>}
   </Screen>;
