@@ -16,13 +16,13 @@ describe('Intent and ownership of vertical universe gestures', () => {
     assert.equal(isVerticalIntent(8, -20), true);
   });
 
-  test('upward swipes from Home require its list to have started at the bottom', () => {
-    assert.equal(canStartPageDrag(0, 2, -60, 0, 300), false);
-    assert.equal(canStartPageDrag(0, 2, -60, 150, 300), false);
+  test('upward swipes from Home work at every scroll position, including before measurements', () => {
+    assert.equal(canStartPageDrag(0, 2, -60, 0, 300), true);
+    assert.equal(canStartPageDrag(0, 2, -60, 150, 300), true);
     assert.equal(canStartPageDrag(0, 2, -60, 300, 300), true);
-    // Sub-pixel scroll measurement differences are allowed at the edge.
+    assert.equal(canStartPageDrag(0, 2, -60, 0, 0), true);
     assert.equal(canStartPageDrag(0, 2, -60, 299.5, 300), true);
-    assert.equal(canStartPageDrag(0, 2, -60, 297, 300), false);
+    assert.equal(canStartPageDrag(0, 2, -60, 297, 300), true);
   });
 
   test('returning downward from Musculation requires the list to have started at the top', () => {

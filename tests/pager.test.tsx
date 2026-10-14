@@ -1,18 +1,20 @@
 import { afterEach, beforeEach, describe, expect, jest, test } from '@jest/globals';
 import { act, cleanup, fireEvent, render } from '@testing-library/react-native';
+import { useContext } from 'react';
 import { AccessibilityInfo, DeviceEventEmitter, Pressable, StyleSheet, Text } from 'react-native';
 import { Gesture, PointerType, State, type GestureStateManager, type GestureTouchEvent } from 'react-native-gesture-handler';
 import { fireGestureHandler, getByGestureTestId } from 'react-native-gesture-handler/jest-utils';
-import { ReduceMotion, withTiming } from 'react-native-reanimated';
+import { ReduceMotion, runOnUI, withTiming, type SharedValue } from 'react-native-reanimated';
 
-import { useUniverseNavigation, type UniverseId } from '../src/navigation/UniverseContext';
+import { UniversePageContext, useUniverseNavigation, type PageScrollState, type UniverseId } from '../src/navigation/UniverseContext';
 import { UniversePager, type UniversePage } from '../src/navigation/UniversePager';
 import { UniverseScreen } from '../src/navigation/UniverseScreen';
 
 // Keep the real pager, contexts, scroll view and RNGH event dispatcher. Only the
 // UI-thread animation runtime is replaced: shared values survive React renders,
 // styles read their latest values, and animations finish synchronously by default.
-// These tests exercise bindings and decisions; they cannot prove native smoothness.
+// Native recognition is explicitly supplied as an input; Jest never runs UIKit.
+// These tests exercise configuration, bindings and decisions, not native activation or smoothness.
 jest.mock('react-native-reanimated', () => {
   const React = require('react') as typeof import('react');
   const mock = require('react-native-reanimated/mock') as typeof import('react-native-reanimated');
@@ -23,6 +25,7 @@ jest.mock('react-native-reanimated', () => {
     useAnimatedStyle: (factory: () => { transform: unknown }) => ({ get transform() { return factory().transform; } }),
     useAnimatedScrollHandler: (callback: (event: unknown) => void) => (event: { nativeEvent?: unknown }) => callback(event.nativeEvent ?? event),
     withTiming: mockJest.fn(mock.withTiming),
+    runOnUI: mockJest.fn(mock.runOnUI),
   };
 });
 jest.mock('react-native-safe-area-context', () => jest.requireActual<{ default: typeof import('react-native-safe-area-context') }>('react-native-safe-area-context/jest/mock').default);
@@ -32,9 +35,12 @@ jest.mock('expo-router', () => ({ router: { push: jest.fn(), replace: jest.fn(),
 type Pan = ReturnType<typeof Gesture.Pan>;
 type View = ReturnType<typeof render>;
 const height = 800;
+const pageScrollStates = new Map<UniverseId, SharedValue<Record<string, PageScrollState>>>();
 
 function SamplePage({ id }: { id: UniverseId }) {
   const navigation = useUniverseNavigation();
+  const page = useContext(UniversePageContext);
+  if (page) pageScrollStates.set(id, page.scroll);
   return <UniverseScreen testID={`scroll-${id}`}>
     <Text>{id}</Text>
     {(['home', 'musculation', 'cardio'] as const).map(target => <Pressable key={target} accessibilityRole="button"
@@ -69,42 +75,141 @@ function touches(pan: Pan, eventType: GestureTouchEvent['eventType'], dy = 0, dx
   return { handlerTag: pan.handlerTag, state: State.BEGAN, pointerType: PointerType.TOUCH, eventType, numberOfTouches: count, allTouches, changedTouches: allTouches };
 }
 
-function emitPan(pan: Pan, state: number, dy: number, velocityY = 0, oldState?: number) {
+function emitPan(pan: Pan, state: number, dy: number, velocityY = 0, oldState?: number, nativeTranslationY = dy) {
   const event = { handlerTag: pan.handlerTag, state, pointerType: PointerType.TOUCH, numberOfPointers: 1,
     x: 100, y: 400 + dy, absoluteX: 100, absoluteY: 400 + dy,
-    translationX: 0, translationY: dy, velocityX: 0, velocityY, ...(oldState === undefined ? {} : { oldState }) };
+    translationX: 0, translationY: nativeTranslationY, velocityX: 0, velocityY, ...(oldState === undefined ? {} : { oldState }) };
   DeviceEventEmitter.emit(oldState === undefined ? 'onGestureHandlerEvent' : 'onGestureHandlerStateChange', event);
 }
 
 function managerFor(pan: Pan): GestureStateManager {
-  return {
-    handlerTag: pan.handlerTag,
-    begin: jest.fn(), end: jest.fn(), fail: jest.fn(),
-    activate: jest.fn(() => {
-      emitPan(pan, State.BEGAN, 0, 0, State.UNDETERMINED);
-      emitPan(pan, State.ACTIVE, 0, 0, State.BEGAN);
-    }),
-  };
+  // This fixture deliberately cannot activate the Pan. Only the native recognizer
+  // should do that, and its emitted states are separate test inputs below.
+  return { handlerTag: pan.handlerTag, begin: jest.fn(), end: jest.fn(), fail: jest.fn(), activate: jest.fn() };
 }
 
 function startDrag(pan: Pan, dy: number) {
   const manager = managerFor(pan);
   act(() => {
+    emitPan(pan, State.BEGAN, 0, 0, State.UNDETERMINED);
     pan.handlers.onTouchesDown?.(touches(pan, 1), manager);
     pan.handlers.onTouchesMove?.(touches(pan, 2, dy), manager);
   });
-  expect(manager.activate).toHaveBeenCalledTimes(1);
+  expect(manager.activate).not.toHaveBeenCalled();
   expect(manager.fail).not.toHaveBeenCalled();
+  // UIKit's successful recognition is an assumption here, not a test result.
+  // iOS resets translation on activation; absolute touch coordinates do not reset.
+  act(() => emitPan(pan, State.ACTIVE, dy, 0, State.BEGAN, 0));
   return manager;
 }
 
 beforeEach(() => {
   jest.clearAllMocks();
+  pageScrollStates.clear();
   jest.spyOn(AccessibilityInfo, 'announceForAccessibility').mockImplementation(() => undefined);
 });
 afterEach(() => { cleanup(); jest.restoreAllMocks(); });
 
 describe('The mounted vertical universe pager', () => {
+  test('optional development diagnostics report received events without intercepting touch input', () => {
+    const { view, pan } = setup();
+    if (process.env.EXPO_PUBLIC_GESTURE_DEBUG !== '1') {
+      expect(view.queryByText('Diagnostic geste · home')).toBeNull();
+      return;
+    }
+    const log = jest.spyOn(console, 'info').mockImplementation(() => undefined);
+    const heading = view.getByText('Diagnostic geste · home');
+    let panel = heading.parent;
+    while (panel && panel.props.pointerEvents !== 'none') panel = panel.parent;
+    expect(panel).not.toBeNull();
+    fireEvent(view.getByTestId('universe-viewport'), 'touchStart');
+    startDrag(pan, -20);
+    act(() => emitPan(pan, State.ACTIVE, -100));
+    expect(log).toHaveBeenCalledWith('[UniversePager] vue: toucher reçu');
+    expect(log).toHaveBeenCalledWith('[UniversePager] pan: touch down');
+    expect(log).toHaveBeenCalledWith('[UniversePager] pan: ACTIVE');
+    expect(log).toHaveBeenCalledWith('[UniversePager] pan: déplacement reçu');
+    expect(translation(view)).toBe(-100);
+  });
+
+  test('the native recognizer can activate automatically and scroll views wait without a dependency cycle', () => {
+    const nativeGestures: ReturnType<typeof Gesture.Native>[] = [];
+    const createNative = Gesture.Native;
+    jest.spyOn(Gesture, 'Native').mockImplementation(() => {
+      const gesture = createNative();
+      nativeGestures.push(gesture);
+      return gesture;
+    });
+    const { pan } = setup();
+    expect(pan.config.manualActivation).not.toBe(true);
+    expect(pan.config).toMatchObject({ activeOffsetYStart: -12, activeOffsetYEnd: 12, failOffsetXStart: -18, failOffsetXEnd: 18, maxPointers: 1 });
+    expect(pan.config.requireToFail).toBeUndefined();
+    expect(pan.config.blocksHandlers).toBeUndefined();
+    expect(pan.config.simultaneousWith).toBeUndefined();
+    expect(nativeGestures).toHaveLength(2);
+    for (const native of nativeGestures) {
+      expect(native.config.requireToFail).toEqual([pan]);
+      expect(native.config.simultaneousWith).toBeUndefined();
+    }
+  });
+
+  test.each([0, 150, 400])('Home accepts an upward gesture with overflowing content at scroll offset %i', y => {
+    const { view, onSelect, pan } = setup();
+    measure(view, 'home', 1200, y);
+    startDrag(pan, -20);
+    act(() => emitPan(pan, State.ACTIVE, -100));
+    expect(translation(view)).toBe(-100);
+    act(() => emitPan(pan, State.END, -200, 0, State.ACTIVE));
+    expect(translation(view)).toBe(-height);
+    expect(onSelect).toHaveBeenCalledWith('musculation');
+  });
+
+  test('queued layout patches preserve each page, both dimensions and the latest UI scroll offset', () => {
+    const { view } = setup();
+    const scroll = pageScrollStates.get('home')!;
+    expect(scroll).toBe(pageScrollStates.get('musculation'));
+    let liveValue = scroll.value;
+    let onUIThread = false;
+    const queued: (() => void)[] = [];
+    // Reanimated reads .value synchronously on JS but queues writes to its UI
+    // runtime. Reproduce that distinction, which the stock Jest mock misses.
+    Object.defineProperty(scroll, 'value', {
+      configurable: true,
+      get: () => liveValue,
+      set: (next: Record<string, PageScrollState>) => {
+        if (onUIThread) liveValue = next;
+        else queued.push(() => { liveValue = next; });
+      },
+    });
+    jest.mocked(runOnUI).mockImplementation(worklet => (...args) => {
+      queued.push(() => {
+        onUIThread = true;
+        try { worklet(...args); } finally { onUIThread = false; }
+      });
+    });
+    try {
+      for (const [id, contentHeight] of [['home', 1200], ['musculation', 1800]] as const) {
+        const scrollView = view.getByTestId(`scroll-${id}`, { includeHiddenElements: true });
+        fireEvent(scrollView, 'layout', { nativeEvent: { layout: { height, width: 390, x: 0, y: 0 } } });
+        fireEvent(scrollView, 'contentSizeChange', 390, contentHeight);
+      }
+      // A scroll event already executed on UI while the layout patches wait.
+      onUIThread = true;
+      fireEvent.scroll(view.getByTestId('scroll-musculation', { includeHiddenElements: true }), {
+        nativeEvent: { contentOffset: { x: 0, y: 125 } },
+      });
+      onUIThread = false;
+      expect(queued).toHaveLength(4);
+      act(() => { for (const update of queued) update(); });
+      expect(liveValue).toEqual({
+        home: { y: 0, contentHeight: 1200, viewportHeight: height },
+        musculation: { y: 125, contentHeight: 1800, viewportHeight: height },
+      });
+    } finally {
+      jest.mocked(runOnUI).mockImplementation(worklet => worklet);
+    }
+  });
+
   test('accessible buttons select universes with the same vertical track and hide inactive pages', () => {
     const { view, onSelect } = setup();
     expect(translation(view)).toBe(0);
@@ -126,23 +231,21 @@ describe('The mounted vertical universe pager', () => {
     expect(onSelect).toHaveBeenLastCalledWith('home');
   });
 
-  test('the real gesture binding moves the track before selection, then commits in both directions', () => {
+  test('native ACTIVE events move the track before selection, in both directions without scroll measurements', () => {
     const { view, onSelect, pan } = setup();
-    measure(view, 'home');
-    measure(view, 'musculation');
     startDrag(pan, -20);
-    act(() => emitPan(pan, State.ACTIVE, -100));
+    act(() => emitPan(pan, State.ACTIVE, -100, 0, undefined, -80));
     expect(translation(view)).toBe(-100);
     expect(onSelect).not.toHaveBeenCalled();
     expect(view.getByRole('button', { name: 'home vers musculation' })).toBeTruthy();
 
-    act(() => emitPan(pan, State.END, -180, 0, State.ACTIVE));
+    act(() => emitPan(pan, State.END, -180, 0, State.ACTIVE, -160));
     expect(translation(view)).toBe(-height);
     expect(onSelect).toHaveBeenCalledTimes(1);
     expect(onSelect).toHaveBeenLastCalledWith('musculation');
 
     startDrag(pan, 20);
-    act(() => emitPan(pan, State.ACTIVE, 75));
+    act(() => emitPan(pan, State.ACTIVE, 75, 0, undefined, 55));
     expect(translation(view)).toBe(-height + 75);
     act(() => emitPan(pan, State.END, 75, 900, State.ACTIVE));
     expect(translation(view)).toBe(0);
@@ -178,11 +281,11 @@ describe('The mounted vertical universe pager', () => {
     const directionManager = managerFor(pan);
     act(() => {
       pan.handlers.onTouchesDown?.(touches(pan, 1), directionManager);
-      pan.handlers.onTouchesMove?.(touches(pan, 2, -20), { ...directionManager, activate: jest.fn() });
+      pan.handlers.onTouchesMove?.(touches(pan, 2, -20), directionManager);
       fireGestureHandler(pan, [
-        { state: State.BEGAN }, { state: State.ACTIVE },
-        { state: State.ACTIVE, translationY: -220 },
-        { state: State.CANCELLED, translationY: -220, velocityY: -1000 },
+        { state: State.BEGAN, absoluteY: 400 }, { state: State.ACTIVE, absoluteY: 380, translationY: 0 },
+        { state: State.ACTIVE, absoluteY: 180, translationY: -200 },
+        { state: State.CANCELLED, absoluteY: 180, translationY: -200, velocityY: -1000 },
       ]);
     });
     expect(translation(view)).toBe(0);
@@ -220,6 +323,22 @@ describe('The mounted vertical universe pager', () => {
     expect(translation(view)).toBe(0);
   });
 
+  test('upward intent on the program list releases the pan so the list can scroll normally', () => {
+    const { view, onSelect, pan } = setup('musculation');
+    measure(view, 'musculation', 1800, 0);
+    const manager = managerFor(pan);
+    act(() => {
+      pan.handlers.onTouchesDown?.(touches(pan, 1), manager);
+      pan.handlers.onTouchesMove?.(touches(pan, 2, -30), manager);
+    });
+    expect(manager.fail).toHaveBeenCalledTimes(1);
+    expect(onSelect).not.toHaveBeenCalled();
+    expect(translation(view)).toBe(-height);
+    // Native scrolling is an explicit input here, not simulated UIKit arbitration.
+    fireEvent.scroll(view.getByTestId('scroll-musculation'), { nativeEvent: { contentOffset: { x: 0, y: 250 } } });
+    expect(pageScrollStates.get('musculation')?.value.musculation?.y).toBe(250);
+  });
+
   test('a third page shares the registry and cannot be reached by reversing a gesture from the wrong list edge', () => {
     const { view, onSelect, pan } = setup('musculation', ['home', 'musculation', 'cardio']);
     measure(view, 'musculation', 1200, 0);
@@ -242,13 +361,8 @@ describe('The mounted vertical universe pager', () => {
     expect(view.queryByRole('button', { name: 'musculation vers home' })).toBeNull();
   });
 
-  test('unmeasured pages, tiny drags and horizontal intent fail without taking control of the list', () => {
+  test('tiny movements preserve taps and horizontal intent releases the list without manual activation', () => {
     const { view, onSelect, pan } = setup();
-    const unmeasured = managerFor(pan);
-    act(() => pan.handlers.onTouchesDown?.(touches(pan, 1), unmeasured));
-    expect(unmeasured.fail).toHaveBeenCalledTimes(1);
-    measure(view, 'home');
-
     const tiny = managerFor(pan);
     act(() => {
       pan.handlers.onTouchesDown?.(touches(pan, 1), tiny);
@@ -256,8 +370,7 @@ describe('The mounted vertical universe pager', () => {
     });
     expect(tiny.activate).not.toHaveBeenCalled();
     expect(tiny.fail).not.toHaveBeenCalled();
-    act(() => pan.handlers.onTouchesUp?.(touches(pan, 3, -10), tiny));
-    expect(tiny.fail).toHaveBeenCalledTimes(1);
+    expect(pan.handlers.onTouchesUp).toBeUndefined();
 
     const horizontal = managerFor(pan);
     act(() => {

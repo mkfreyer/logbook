@@ -6,7 +6,9 @@ export function isVerticalIntent(dx: number, dy: number): boolean {
 
 export function canStartPageDrag(index: number, count: number, dy: number, scrollY: number, maxScroll: number): boolean {
   'worklet';
-  if (dy < 0) return index < count - 1 && scrollY >= Math.max(0, maxScroll) - 1;
+  // Home is an entry point: overflow (small display / larger text) must not
+  // silently turn its advertised upward gesture into a scroll-to-bottom task.
+  if (dy < 0) return index < count - 1 && (index === 0 || scrollY >= Math.max(0, maxScroll) - 1);
   if (dy > 0) return index > 0 && scrollY <= 1;
   return false;
 }
