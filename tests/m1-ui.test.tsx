@@ -1,13 +1,14 @@
 import { afterEach, beforeEach, describe, expect, jest, test } from '@jest/globals';
 import { act, cleanup, fireEvent, render, waitFor } from '@testing-library/react-native';
 import { router } from 'expo-router';
-import { Alert } from 'react-native';
+import { Alert, AppState } from 'react-native';
 import type { Program, WorkoutTemplate } from '../src/domain/models';
 import type { ExerciseCatalogItem, SetTemplate, WorkoutExercise } from '../src/domain/training';
 import { parseSetDraft, type SetDraft } from '../src/domain/setDraft';
 import { TrainingRepository } from '../src/db/trainingRepository';
 import { useLogbook } from '../src/store/LogbookProvider';
 import { useTraining } from '../src/store/TrainingProvider';
+import { useSessions } from '../src/store/SessionProvider';
 import { SetEditor } from '../src/features/training/SetEditor';
 import { WorkoutOverview } from '../src/features/training/WorkoutOverview';
 import { ExerciseOverview } from '../src/features/training/ExerciseOverview';
@@ -31,6 +32,7 @@ jest.mock('expo-router', () => {
 });
 jest.mock('../src/store/LogbookProvider', () => ({ useLogbook: jest.fn() }));
 jest.mock('../src/store/TrainingProvider', () => ({ useTraining: jest.fn() }));
+jest.mock('../src/store/SessionProvider', () => ({ useSessions: jest.fn() }));
 jest.mock('@expo/vector-icons', () => ({ Ionicons: () => null }));
 jest.mock('react-native-safe-area-context', () => jest.requireActual<{ default: typeof import('react-native-safe-area-context') }>('react-native-safe-area-context/jest/mock').default);
 
@@ -57,6 +59,7 @@ const mockTraining = {
   addWorkoutExercise: jest.fn<TrainingRepository['addWorkoutExercise']>(),
   updateWorkoutExercise: jest.fn<TrainingRepository['updateWorkoutExercise']>(),
 };
+const mockSessions = { getActiveSession: jest.fn<ReturnType<typeof useSessions>['getActiveSession']>() };
 const route = { programId: program.id, workoutId: workout.id, exerciseInstanceId: occurrence.id };
 const exerciseDestination = { pathname: '/programs/[id]/workouts/[workoutId]/exercises/[exerciseInstanceId]', params: { id: program.id, workoutId: workout.id, exerciseInstanceId: occurrence.id } };
 function deferred<T>() {
@@ -66,7 +69,8 @@ function deferred<T>() {
 }
 
 beforeEach(() => {
-  jest.resetAllMocks(); mockFocusCleanups.clear();
+  jest.resetAllMocks();
+  jest.spyOn(AppState, 'addEventListener').mockImplementation(() => ({ remove: jest.fn() })); mockFocusCleanups.clear();
   mockStore.getProgram.mockResolvedValue(program); mockStore.getWorkout.mockResolvedValue(workout);
   mockStore.listWorkouts.mockResolvedValue([workout]);
   mockTraining.listWorkoutExercises.mockResolvedValue([occurrence]);
@@ -80,6 +84,8 @@ beforeEach(() => {
   mockTraining.addWorkoutExercise.mockResolvedValue(occurrence); mockTraining.updateWorkoutExercise.mockResolvedValue(occurrence);
   jest.mocked(useLogbook).mockReturnValue(mockStore as unknown as ReturnType<typeof useLogbook>);
   jest.mocked(useTraining).mockReturnValue(mockTraining as unknown as TrainingRepository);
+  mockSessions.getActiveSession.mockResolvedValue(null);
+  jest.mocked(useSessions).mockReturnValue(mockSessions as unknown as ReturnType<typeof useSessions>);
 });
 afterEach(() => { cleanup(); jest.restoreAllMocks(); });
 
@@ -93,11 +99,11 @@ describe('M1.1 : vue des cibles et séries indépendantes', () => {
     fireEvent.press(await view.findByRole('button', { name: 'Modifier la séance' }));
     expect(router.push).toHaveBeenLastCalledWith({ pathname: '/programs/[id]/workouts/[workoutId]/edit', params: { id: program.id, workoutId: workout.id } });
   });
-  test('une séance vide propose la bibliothèque sans performances ni bouton de démarrage', async () => {
+  test('une séance vide propose la bibliothèque sans performances et désactive le démarrage', async () => {
     mockTraining.listWorkoutExercises.mockResolvedValue([]);
     const view = render(<WorkoutOverview {...route} />);
     await view.findByText('Composez votre séance');
-    expect(view.queryByRole('button', { name: /Démarrer/ })).toBeNull();
+    expect(view.getByRole('button', { name: 'Démarrer la séance' }).props.accessibilityState.disabled).toBe(true);
     expect(view.queryByText(/tonnage|durée estimée|dernière performance/i)).toBeNull();
     fireEvent.press(view.getByRole('button', { name: 'Ajouter un exercice' }));
     expect(router.push).toHaveBeenCalledWith({ pathname: '/programs/[id]/workouts/[workoutId]/library', params: { id: program.id, workoutId: workout.id } });

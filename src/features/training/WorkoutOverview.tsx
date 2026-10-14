@@ -2,14 +2,37 @@ import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import { Pressable, Text, View } from 'react-native';
 
+import type { WorkoutSession } from '../../domain/session';
+import { useSessions } from '../../store/SessionProvider';
 import { Button, Card, colors, EmptyState, Heading, Screen } from '../../ui';
 import { FormError, LoadState, LocalNotice } from '../programs/shared';
+import { useActiveSession } from '../sessions/ResumeSessionCard';
 import { OrderControls, SetTargetSummary, swappedIds, trainingStyles as s, useScreenOperation, type TrainingRoute } from './shared';
 import { useWorkoutPlan } from './useWorkoutPlan';
 
 export function WorkoutOverview({ programId, workoutId }: TrainingRoute) {
   const { data, loading, error, retry, training } = useWorkoutPlan({ programId, workoutId });
   const operation = useScreenOperation();
+  const sessions = useSessions();
+  const active = useActiveSession();
+  const ready = !!data?.exercises.length && data.exercises.every(exercise => exercise.sets.length > 0);
+  const finishConfiguration = () => {
+    if (!data || operation.lock.current || operation.error) return;
+    operation.lock.current = true;
+    router.dismissTo({ pathname: '/programs/[id]/workouts', params: { id: data.program.id, configuredWorkoutId: data.workout.id } });
+  };
+  const start = () => {
+    if (!data || active.loading || active.error || (!ready && !active.data)) return;
+    let session: WorkoutSession;
+    void operation.run(async () => {
+      session = await sessions.startOrResume(data.workout.id);
+      // A session may have appeared since this screen loaded. Make the choice explicit.
+      if (session.sourceWorkoutTemplateId !== data.workout.id && session.id !== active.data?.id) {
+        active.retry();
+        throw new Error(`« ${session.workoutName} » est déjà en cours. Reprenez cette séance pour continuer.`);
+      }
+    }, () => router.push({ pathname: '/sessions/[sessionId]', params: { sessionId: session.id } }), true);
+  };
   const goBack = () => {
     if (router.canGoBack()) router.back();
     else if (programId) router.replace({ pathname: '/programs/[id]/workouts', params: { id: programId } });
@@ -43,11 +66,20 @@ export function WorkoutOverview({ programId, workoutId }: TrainingRoute) {
         </Card>)}
       </View>}
       <FormError message={operation.error} />
-      <Button label="Ajouter un exercice" icon="add" disabled={operation.busy}
+      <FormError message={active.error} />
+      {active.error ? <Button label="Vérifier la séance en cours" variant="secondary" onPress={active.retry} /> : null}
+      {active.data ? <Text style={s.body}>« {active.data.workoutName} » est déjà en cours. Reprenez votre progression sauvegardée.</Text> : null}
+      <Button label={active.data ? 'Reprendre la séance en cours' : 'Démarrer la séance'} icon="play"
+        disabled={operation.busy || active.loading || !!active.error || (!ready && !active.data)}
+        loading={operation.busy} onPress={start} />
+      {!ready && !active.data ? <Text style={s.hint}>Ajoutez au moins un exercice et configurez les séries de chaque exercice pour démarrer.</Text> : null}
+      <Button label="Terminer la configuration" variant="secondary" icon="checkmark" disabled={operation.busy || !!operation.error}
+        onPress={finishConfiguration} />
+      <Button label="Ajouter un exercice" variant="secondary" icon="add" disabled={operation.busy}
         onPress={() => router.push({ pathname: '/programs/[id]/workouts/[workoutId]/library', params: { id: data.program.id, workoutId: data.workout.id } })} />
       <Button label="Modifier la séance" variant="ghost" icon="create-outline" disabled={operation.busy}
         onPress={() => router.push({ pathname: '/programs/[id]/workouts/[workoutId]/edit', params: { id: data.program.id, workoutId: data.workout.id } })} />
-      <Text style={s.hint}>Ces valeurs sont des objectifs programmés. Les performances réalisées seront enregistrées lors d’une prochaine version.</Text>
+      <Text style={s.hint}>Ces valeurs sont des objectifs programmés. Vos résultats seront saisis séparément pendant l’entraînement.</Text>
       <LocalNotice />
     </View>}
   </Screen>;

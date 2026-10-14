@@ -28,6 +28,7 @@ jest.mock('expo-router', () => {
   };
 });
 jest.mock('../src/store/LogbookProvider', () => ({ useLogbook: jest.fn() }));
+jest.mock('../src/features/sessions/ResumeSessionCard', () => ({ ResumeSessionCard: () => null }));
 jest.mock('@expo/vector-icons', () => ({ Ionicons: () => null }));
 jest.mock('@expo/vector-icons/Ionicons', () => ({ __esModule: true, default: () => null }));
 jest.mock('../src/navigation/UniverseScreen', () => ({ UniverseScreen: ({ children }: { children: import('react').ReactNode }) => children }));
@@ -88,7 +89,7 @@ describe('M0 : états vides et organisation locale', () => {
   test('une première ouverture invite à créer sans programmes ni performances fictifs', () => {
     const home = render(<HomeScreen />);
     expect(home.getByText('Créer mon premier programme')).toBeTruthy();
-    expect(home.getByText('Après vos premières séances')).toBeTruthy();
+    expect(home.getByText('Statistiques à venir')).toBeTruthy();
     expect(home.queryByText(/Prise de muscle|Alex|\+12\s*%|124\s*350/)).toBeNull();
     fireEvent.press(home.getByRole('button', { name: 'Créer mon premier programme' }));
     expect(router.push).toHaveBeenCalledWith('/programs/new');

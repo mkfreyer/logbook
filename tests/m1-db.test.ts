@@ -129,7 +129,7 @@ test('failed V2 catalogue insertion rolls back all new tables and preserves popu
     assert.equal(await db.getFirstAsync("SELECT name FROM sqlite_master WHERE type = 'table' AND name = ?", table), null);
   }
   await initializeDatabase(db);
-  assert.equal((await db.getFirstAsync<{ user_version: number }>('PRAGMA user_version'))?.user_version, 2);
+  assert.equal((await db.getFirstAsync<{ user_version: number }>('PRAGMA user_version'))?.user_version, DATABASE_VERSION);
 });
 
 test('library search ignores accents and case, matches equipment and never executes SQL-looking terms', async t => {

@@ -8,13 +8,14 @@ import { useUniverseIsActive, useUniverseNavigation } from '../../navigation/Uni
 import { UniverseScreen } from '../../navigation/UniverseScreen';
 import { useLogbook } from '../../store/LogbookProvider';
 import { colors } from '../../ui';
+import { ResumeSessionCard } from '../sessions/ResumeSessionCard';
 
 function deviceDate() {
   const date = new Date().toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
   return date.charAt(0).toUpperCase() + date.slice(1);
 }
 
-/** The dashboard shows planning data only; completed sessions do not exist in M0. */
+/** Planning and an active-session entry; statistics will have their own milestone. */
 export default function HomeScreen() {
   const { programs, loading, error, refresh } = useLogbook();
   const { goTo } = useUniverseNavigation();
@@ -40,19 +41,20 @@ export default function HomeScreen() {
       </View>
     </View>
 
+    <ResumeSessionCard active={isActive} />
     <View style={styles.stats}>
       <LinearGradient colors={['#0d2432', '#091824']} style={styles.statCard}>
         <Text style={styles.statLabel}>Cette semaine</Text>
-        <Text style={styles.statValue} accessibilityLabel="Aucune séance réalisée">—</Text>
-        <Text style={styles.statCaption}>Aucune séance réalisée</Text>
+        <Text style={styles.statValue} accessibilityLabel="Bilan hebdomadaire à venir">—</Text>
+        <Text style={styles.statCaption}>Bilan hebdomadaire à venir</Text>
         <View style={styles.weekMarkers} accessible={false} accessibilityElementsHidden importantForAccessibility="no-hide-descendants">
           {Array.from({ length: 7 }, (_, day) => <View key={day} style={styles.weekMarker} />)}
         </View>
       </LinearGradient>
       <LinearGradient colors={['#0b252d', '#091824']} style={styles.statCard}>
         <Text style={styles.statLabel}>Progression</Text>
-        <Text style={[styles.statValue, styles.progressValue]} accessibilityLabel="Aucune performance enregistrée">—</Text>
-        <Text style={styles.statCaption}>Après vos premières séances</Text>
+        <Text style={[styles.statValue, styles.progressValue]} accessibilityLabel="Statistiques à venir">—</Text>
+        <Text style={styles.statCaption}>Statistiques à venir</Text>
         <View style={styles.emptyProgress} accessible={false} accessibilityElementsHidden importantForAccessibility="no-hide-descendants">
           <View style={styles.emptyProgressLine} />
           <View style={styles.emptyProgressDot} />
