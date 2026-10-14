@@ -1,7 +1,7 @@
 import type { Database } from './types';
-import type { SetTemplate, WeightMode } from '../domain/training';
+import type { ExerciseCatalogItem, SetTemplate, WeightMode } from '../domain/training';
 import { selectSessionStep, type ActualSetInput, type PerformedSet, type RestInterval, type RestPause,
-  type SessionExercise, type SessionSet, type SetTargets, type WorkoutSession } from '../domain/session';
+  type SessionExercise, type SessionSet, type SetTargets, type WorkoutSession, type ExerciseReplacement, type ExerciseChoice } from '../domain/session';
 import { calculateRestTiming } from '../domain/restTimer';
 
 export class SessionStateError extends Error {
@@ -10,10 +10,11 @@ export class SessionStateError extends Error {
 
 const sessionColumns = `id, source_workout_template_id AS sourceWorkoutTemplateId,
   source_program_id AS sourceProgramId, workout_name AS workoutName, program_name AS programName,
-  status, started_at AS startedAt, finished_at AS finishedAt`;
+  status, started_at AS startedAt, finished_at AS finishedAt, selected_exercise_id AS selectedExerciseId`;
 const targetColumns = `reps_min AS repsMin, reps_max AS repsMax, target_weight_kg AS targetWeightKg,
   target_rir AS targetRir, rest_after_sec AS restAfterSec`;
-type SessionRow = Omit<WorkoutSession, 'exercises' | 'sets' | 'performances' | 'rests'>;
+type SessionRow = Omit<WorkoutSession, 'exercises' | 'sets' | 'performances' | 'rests' | 'replacements' | 'exerciseChoices'>;
+export type CompletedSessionEntry = Pick<WorkoutSession, 'id' | 'workoutName' | 'programName' | 'startedAt' | 'finishedAt'> & { performedSetCount: number };
 type SetRow = Omit<SessionSet, 'targets' | 'originalTargets'> & SetTargets & { originalTargetsJson: string };
 type ExerciseSource = {
   id: string; exerciseId: string; name: string; muscleGroup: string; equipment: string;
@@ -74,10 +75,19 @@ export class SessionRepository {
     return result;
   }
 
+  /** A multi-query snapshot must not straddle a replacement transaction. Sharing
+   * the queue with writes keeps its exercise identities, series and cursor coherent. */
+  private read<T>(operation: () => Promise<T>): Promise<T> {
+    const result = this.pendingWrite.then(operation);
+    this.pendingWrite = result.then(() => undefined, () => undefined);
+    return result;
+  }
+
   private stamp(session: WorkoutSession, extra: string[] = []): string {
     // Retain causal timestamp ordering even if the phone clock was moved backwards.
     return [this.now(), session.startedAt, ...session.performances.map(item => item.advancedAt ?? item.performedAt),
-      ...session.rests.flatMap(item => [item.endedAt ?? item.startedAt, ...item.pauses.map(pause => pause.endedAt ?? pause.startedAt)]), ...extra].sort().at(-1)!;
+      ...session.rests.flatMap(item => [item.endedAt ?? item.startedAt, ...item.pauses.map(pause => pause.endedAt ?? pause.startedAt)]),
+      ...(session.replacements ?? []).map(item => item.changedAt), ...(session.exerciseChoices ?? []).map(item => item.chosenAt), ...extra].sort().at(-1)!;
   }
 
   private async readSession(db: Database, id: string): Promise<WorkoutSession | null> {
@@ -85,7 +95,7 @@ export class SessionRepository {
     if (!session) return null;
     const exercises = await db.getAllAsync<SessionExercise>(`SELECT id, session_id AS sessionId,
       source_workout_exercise_id AS sourceWorkoutExerciseId, source_catalog_exercise_id AS sourceCatalogExerciseId,
-      sort_order AS sortOrder, name, muscle_group AS muscleGroup, equipment, instructions, notes, weight_mode AS weightMode
+      sort_order AS sortOrder, planned_order AS plannedOrder, name, muscle_group AS muscleGroup, equipment, instructions, notes, weight_mode AS weightMode
       FROM session_exercises WHERE session_id = ? ORDER BY sort_order, id`, id);
     const rows = await db.getAllAsync<SetRow>(`SELECT id, session_id AS sessionId, session_exercise_id AS sessionExerciseId,
       source_set_template_id AS sourceSetTemplateId, sort_order AS sortOrder, series_index AS seriesIndex,
@@ -105,7 +115,14 @@ export class SessionRepository {
       WHERE r.session_id = ? ORDER BY p.started_at, p.id`, id);
     const rests = intervals.map(interval => ({ ...interval, pauses: pauses.filter(pause => pause.restId === interval.id)
       .map(({ restId: _restId, ...pause }) => pause) }));
-    return { ...session, exercises, sets, performances, rests };
+    const replacements = await db.getAllAsync<ExerciseReplacement>(`SELECT id, session_id AS sessionId,
+      from_exercise_id AS fromExerciseId, to_exercise_id AS toExerciseId, active_set_id AS activeSetId,
+      remaining_set_count AS remainingSetCount, changed_at AS changedAt FROM session_exercise_replacements
+      WHERE session_id = ? ORDER BY changed_at, rowid`, id);
+    const exerciseChoices = await db.getAllAsync<ExerciseChoice>(`SELECT id, session_id AS sessionId,
+      exercise_id AS exerciseId, expected_set_id AS expectedSetId, chosen_at AS chosenAt FROM session_exercise_choices
+      WHERE session_id = ? ORDER BY chosen_at, rowid`, id);
+    return { ...session, exercises, sets, performances, rests, replacements, exerciseChoices };
   }
 
   private async requireSession(db: Database, id: string, activeOnly = true): Promise<WorkoutSession> {
@@ -115,13 +132,20 @@ export class SessionRepository {
     return session;
   }
   async getSession(id: string): Promise<WorkoutSession | null> {
-    await this.pendingWrite;
-    return this.readSession(this.db, id);
+    return this.read(() => this.readSession(this.db, id));
   }
   async getActiveSession(): Promise<WorkoutSession | null> {
-    await this.pendingWrite;
-    const row = await this.db.getFirstAsync<{ id: string }>("SELECT id FROM workout_sessions WHERE status = 'active'");
-    return row ? this.readSession(this.db, row.id) : null;
+    return this.read(async () => {
+      const row = await this.db.getFirstAsync<{ id: string }>("SELECT id FROM workout_sessions WHERE status = 'active'");
+      return row ? this.readSession(this.db, row.id) : null;
+    });
+  }
+
+  async listCompletedSessions(): Promise<CompletedSessionEntry[]> {
+    return this.read(() => this.db.getAllAsync<CompletedSessionEntry>(`SELECT s.id, s.workout_name AS workoutName,
+      s.program_name AS programName, s.started_at AS startedAt, s.finished_at AS finishedAt,
+      (SELECT COUNT(*) FROM performed_sets WHERE session_id = s.id) AS performedSetCount
+      FROM workout_sessions s WHERE s.status = 'completed' ORDER BY s.finished_at DESC, s.id`));
   }
 
   startOrResume(workoutId: string): Promise<WorkoutSession> {
@@ -147,9 +171,9 @@ export class SessionRepository {
         if (!series.length) throw new SessionStateError(`Ajoutez au moins une série à « ${exercise.name} » avant de démarrer.`);
         const exerciseId = this.idFactory();
         await db.runAsync(`INSERT INTO session_exercises (id, session_id, source_workout_exercise_id,
-          source_catalog_exercise_id, sort_order, name, muscle_group, equipment, instructions, notes, weight_mode)
-          VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`, exerciseId, id, exercise.id, exercise.exerciseId,
-        exerciseOrder, exercise.name, exercise.muscleGroup, exercise.equipment, exercise.instructions, exercise.notes, exercise.weightMode);
+          source_catalog_exercise_id, sort_order, planned_order, name, muscle_group, equipment, instructions, notes, weight_mode)
+          VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`, exerciseId, id, exercise.id, exercise.exerciseId,
+        exerciseOrder, exerciseOrder, exercise.name, exercise.muscleGroup, exercise.equipment, exercise.instructions, exercise.notes, exercise.weightMode);
         for (const [seriesIndex, seriesSource] of series.entries()) {
           const clean = targets(seriesSource);
           await db.runAsync(`INSERT INTO session_sets (id, session_id, session_exercise_id, source_set_template_id,
@@ -171,7 +195,9 @@ export class SessionRepository {
       const step = selectSessionStep(session);
       if (step.phase !== 'set' || step.set.id !== setId) throw new SessionStateError('Cette série n’est pas la série active. Reprenez votre entraînement.');
       const stamp = this.stamp(session), performedId = this.idFactory();
-      const hasNext = session.sets.some(item => item.sortOrder > step.set.sortOrder);
+      const performedIds = new Set(session.performances.map(item => item.sessionSetId));
+      const remaining = session.sets.filter(item => item.id !== setId && !performedIds.has(item.id));
+      const hasNext = remaining.length > 0;
       await db.runAsync(`INSERT INTO performed_sets (id, session_id, session_set_id, sort_order, weight_kg, reps, rir, performed_at, advanced_at)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`, performedId, sessionId, setId, session.performances.length,
       clean.weightKg, clean.reps, clean.rir, stamp, hasNext ? null : stamp);
@@ -180,6 +206,11 @@ export class SessionRepository {
       if (hasNext && step.set.targets.restAfterSec > 0) {
         await db.runAsync(`INSERT INTO rest_intervals (id, session_id, performed_set_id, planned_seconds, started_at)
           VALUES (?, ?, ?, ?, ?)`, this.idFactory(), sessionId, performedId, step.set.targets.restAfterSec, stamp);
+      }
+      // An explicit choice holds through this exercise only. Then resume original
+      // program order among all unfinished series, including temporarily skipped ones.
+      if (session.selectedExerciseId && !remaining.some(item => item.sessionExerciseId === session.selectedExerciseId)) {
+        await db.runAsync('UPDATE workout_sessions SET selected_exercise_id = NULL WHERE id = ?', sessionId);
       }
       return this.requireSession(db, sessionId);
     });
@@ -229,6 +260,66 @@ export class SessionRepository {
     });
   }
 
+  /** A choice changes only the next unperformed series. An active rest and its
+   * pauses are left open until the user explicitly completes it. */
+  chooseNextExercise(sessionId: string, exerciseId: string, expectedSetId: string): Promise<WorkoutSession> {
+    return this.write(async db => {
+      const session = await this.requireSession(db, sessionId);
+      if (session.selectedExerciseId === exerciseId) return session;
+      const step = selectSessionStep(session);
+      const next = step.phase === 'set' ? step.set : step.phase === 'rest' || step.phase === 'between_sets' ? step.nextSet : null;
+      if (!next || next.id !== expectedSetId) throw new SessionStateError('La série active a changé. Actualisez les exercices restants.');
+      const done = new Set(session.performances.map(item => item.sessionSetId));
+      if (!session.exercises.some(item => item.id === exerciseId) ||
+          !session.sets.some(item => item.sessionExerciseId === exerciseId && !done.has(item.id))) {
+        throw new SessionStateError('Cet exercice n’a plus de série à effectuer dans cet entraînement.');
+      }
+      await db.runAsync(`INSERT INTO session_exercise_choices (id, session_id, exercise_id, expected_set_id, chosen_at)
+        VALUES (?, ?, ?, ?, ?)`, this.idFactory(), sessionId, exerciseId, next.id, this.stamp(session));
+      await db.runAsync('UPDATE workout_sessions SET selected_exercise_id = ? WHERE id = ?', exerciseId, sessionId);
+      return this.requireSession(db, sessionId);
+    });
+  }
+
+  /** Split only unperformed series into a new immutable exercise snapshot.
+   * Prior performances keep their original series, exercise and unit. */
+  replaceExercise(sessionId: string, fromExerciseId: string, catalogId: string, expectedSetId: string): Promise<WorkoutSession> {
+    return this.write(async db => {
+      const session = await this.requireSession(db, sessionId);
+      const previous = (session.replacements ?? []).find(item => item.fromExerciseId === fromExerciseId);
+      if (previous && previous.activeSetId === expectedSetId &&
+          session.exercises.find(item => item.id === previous.toExerciseId)?.sourceCatalogExerciseId === catalogId) return session;
+      const step = selectSessionStep(session);
+      if (step.phase !== 'set' || step.set.id !== expectedSetId || step.exercise.id !== fromExerciseId) {
+        throw new SessionStateError('Reprenez la série active avant de remplacer son exercice. Un repos doit être terminé manuellement.');
+      }
+      if (catalogId === step.exercise.sourceCatalogExerciseId) throw new SessionStateError('Choisissez un exercice différent.');
+      const catalog = await db.getFirstAsync<ExerciseCatalogItem>(`SELECT id, name, muscle_group AS muscleGroup,
+        equipment, instructions, weight_mode AS weightMode FROM exercise_catalog WHERE id = ?`, catalogId);
+      if (!catalog) throw new SessionStateError('Cet exercice n’est plus dans la bibliothèque.');
+      const done = new Set(session.performances.map(item => item.sessionSetId));
+      const remaining = session.sets.filter(item => item.sessionExerciseId === fromExerciseId && !done.has(item.id));
+      if (!remaining.length) throw new SessionStateError('Cet exercice est déjà terminé.');
+      const id = this.idFactory(), stamp = this.stamp(session);
+      const order = Math.max(...session.exercises.map(item => item.sortOrder)) + 1;
+      await db.runAsync(`INSERT INTO session_exercises (id, session_id, source_workout_exercise_id,
+        source_catalog_exercise_id, sort_order, planned_order, name, muscle_group, equipment, instructions, notes, weight_mode)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`, id, sessionId, step.exercise.sourceWorkoutExerciseId,
+      catalog.id, order, step.exercise.plannedOrder ?? step.exercise.sortOrder, catalog.name,
+      catalog.muscleGroup, catalog.equipment, catalog.instructions, step.exercise.notes, catalog.weightMode);
+      for (const series of remaining) {
+        await db.runAsync(`UPDATE session_sets SET session_exercise_id = ?, target_weight_kg = NULL
+          WHERE id = ? AND session_id = ? AND NOT EXISTS (SELECT 1 FROM performed_sets WHERE session_set_id = session_sets.id)`,
+        id, series.id, sessionId);
+      }
+      await db.runAsync(`INSERT INTO session_exercise_replacements (id, session_id, from_exercise_id,
+        to_exercise_id, active_set_id, remaining_set_count, changed_at) VALUES (?, ?, ?, ?, ?, ?, ?)`,
+      this.idFactory(), sessionId, fromExerciseId, id, expectedSetId, remaining.length, stamp);
+      await db.runAsync('UPDATE workout_sessions SET selected_exercise_id = ? WHERE id = ?', id, sessionId);
+      return this.requireSession(db, sessionId);
+    });
+  }
+
   updateSetTargets(sessionId: string, setId: string, input: SetTargets, scope: 'session' | 'program'): Promise<WorkoutSession> {
     return this.write(async db => {
       if (scope !== 'session' && scope !== 'program') throw new SessionStateError('Choisissez « Cette séance » ou « Programme ».');
@@ -239,10 +330,11 @@ export class SessionRepository {
       if (scope === 'program') {
         const result = await db.runAsync(`UPDATE set_templates SET reps_min = ?, reps_max = ?, target_weight_kg = ?,
           target_rir = ?, rest_after_sec = ?, updated_at = ? WHERE id = ? AND workout_exercise_id IN
-          (SELECT id FROM workout_exercises WHERE id = ? AND workout_template_id = ? AND exercise_id = ?)`, ...values,
+          (SELECT id FROM workout_exercises WHERE id = ? AND workout_template_id = ? AND exercise_id = ?
+            AND exercise_id IN (SELECT id FROM exercise_catalog WHERE weight_mode = ?))`, ...values,
         this.stamp(session), step.set.sourceSetTemplateId,
-        step.exercise.sourceWorkoutExerciseId, session.sourceWorkoutTemplateId, step.exercise.sourceCatalogExerciseId);
-        if (!result.changes) throw new SessionStateError('La série du programme a été supprimée ou son exercice remplacé. Choisissez « Cette séance » pour conserver la modification uniquement ici.');
+        step.exercise.sourceWorkoutExerciseId, session.sourceWorkoutTemplateId, step.exercise.sourceCatalogExerciseId, step.exercise.weightMode);
+        if (!result.changes) throw new SessionStateError('La série du programme a été supprimée, son exercice remplacé ou son mode de charge modifié. Choisissez « Cette séance » pour conserver la modification uniquement ici.');
       }
       await db.runAsync(`UPDATE session_sets SET reps_min = ?, reps_max = ?, target_weight_kg = ?, target_rir = ?, rest_after_sec = ?
         WHERE id = ? AND session_id = ?`, ...values, setId, sessionId);

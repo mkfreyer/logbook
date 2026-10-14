@@ -1,7 +1,7 @@
 import type { Database } from './types';
 import { CATALOG_CREATED_AT, INITIAL_EXERCISES } from './exerciseCatalog';
 
-export const DATABASE_VERSION = 3;
+export const DATABASE_VERSION = 4;
 
 const versionOne = `
   CREATE TABLE programs (
@@ -160,6 +160,47 @@ const versionThree = `
     BEGIN SELECT RAISE(ABORT, 'Performed values are immutable'); END;
 `;
 
+/** Keep every v3 record and the clock schema intact; execution choices are additive. */
+const versionFour = `
+  ALTER TABLE workout_sessions ADD COLUMN selected_exercise_id TEXT;
+  ALTER TABLE session_exercises ADD COLUMN planned_order INTEGER NOT NULL DEFAULT 0 CHECK(typeof(planned_order) = 'integer' AND planned_order >= 0);
+  UPDATE session_exercises SET planned_order = sort_order;
+
+  CREATE TABLE session_exercise_replacements (
+    id TEXT PRIMARY KEY NOT NULL,
+    session_id TEXT NOT NULL REFERENCES workout_sessions(id) ON DELETE CASCADE,
+    from_exercise_id TEXT NOT NULL,
+    to_exercise_id TEXT NOT NULL,
+    active_set_id TEXT NOT NULL,
+    remaining_set_count INTEGER NOT NULL CHECK(typeof(remaining_set_count) = 'integer' AND remaining_set_count > 0),
+    changed_at TEXT NOT NULL,
+    CHECK(from_exercise_id != to_exercise_id),
+    UNIQUE(session_id, from_exercise_id),
+    UNIQUE(session_id, to_exercise_id),
+    FOREIGN KEY(from_exercise_id, session_id) REFERENCES session_exercises(id, session_id) ON DELETE RESTRICT,
+    FOREIGN KEY(to_exercise_id, session_id) REFERENCES session_exercises(id, session_id) ON DELETE RESTRICT,
+    FOREIGN KEY(active_set_id, session_id) REFERENCES session_sets(id, session_id) ON DELETE RESTRICT
+  );
+  CREATE TABLE session_exercise_choices (
+    id TEXT PRIMARY KEY NOT NULL,
+    session_id TEXT NOT NULL REFERENCES workout_sessions(id) ON DELETE CASCADE,
+    exercise_id TEXT NOT NULL,
+    expected_set_id TEXT NOT NULL,
+    chosen_at TEXT NOT NULL,
+    FOREIGN KEY(exercise_id, session_id) REFERENCES session_exercises(id, session_id) ON DELETE RESTRICT,
+    FOREIGN KEY(expected_set_id, session_id) REFERENCES session_sets(id, session_id) ON DELETE RESTRICT
+  );
+  CREATE INDEX replacements_session ON session_exercise_replacements(session_id, changed_at, id);
+  CREATE INDEX choices_session ON session_exercise_choices(session_id, chosen_at, id);
+  CREATE INDEX completed_sessions ON workout_sessions(finished_at DESC, id) WHERE status = 'completed';
+  CREATE TRIGGER selected_exercise_belongs_to_session BEFORE UPDATE OF selected_exercise_id ON workout_sessions
+    WHEN NEW.selected_exercise_id IS NOT NULL AND NOT EXISTS
+      (SELECT 1 FROM session_exercises WHERE id = NEW.selected_exercise_id AND session_id = NEW.id)
+    BEGIN SELECT RAISE(ABORT, 'Selected exercise belongs to another session'); END;
+  CREATE TRIGGER preserve_execution_exercise BEFORE UPDATE ON session_exercises
+    BEGIN SELECT RAISE(ABORT, 'Execution exercise identity is immutable'); END;
+`;
+
 /** No demo content: a new database contains no programs or workout templates. */
 export async function initializeDatabase(db: Database): Promise<void> {
   // Foreign keys must be enabled before a transaction, on every connection.
@@ -186,6 +227,7 @@ export async function initializeDatabase(db: Database): Promise<void> {
         }
       }
       if (currentVersion < 3) await db.execAsync(versionThree);
+      if (currentVersion < 4) await db.execAsync(versionFour);
       await db.execAsync(`PRAGMA user_version = ${DATABASE_VERSION};`);
     });
   }
