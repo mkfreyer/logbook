@@ -101,7 +101,7 @@ export function WorkoutEditor({ mode, programId, workoutId }: {
       <Button label="Annuler" variant="ghost" onPress={returnToWorkouts} disabled={busy} />
       {editing && <Button label="Supprimer la séance" variant="danger" icon="trash-outline"
         onPress={deletion.confirm} disabled={busy} loading={deletion.deleting} />}
-      <Text style={featureStyles.body}>Vous pourrez ajouter les exercices dans la prochaine version.</Text>
+      <Text style={featureStyles.body}>Ouvrez votre séance pour configurer ses exercices et les objectifs de chaque série.</Text>
       <LocalNotice />
     </View>}
   </Screen>;
