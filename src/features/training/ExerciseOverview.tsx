@@ -21,6 +21,11 @@ export function ExerciseOverview({ programId, workoutId, exerciseInstanceId }: T
     failureMessage: 'Impossible de supprimer cet exercice. Réessayez.', operationLock: operation.lock,
   });
   const busy = operation.busy || deletion.busy;
+  const finish = () => {
+    if (!data || !exercise || operation.lock.current || operation.error || deletion.error) return;
+    operation.lock.current = true;
+    router.dismissTo({ pathname: '/programs/[id]/workouts/[workoutId]', params: { id: data.program.id, workoutId: data.workout.id } });
+  };
   const goBack = () => {
     if (router.canGoBack()) router.back();
     else if (programId && workoutId) router.replace({ pathname: '/programs/[id]/workouts/[workoutId]', params: { id: programId, workoutId } });
@@ -55,7 +60,8 @@ export function ExerciseOverview({ programId, workoutId, exerciseInstanceId }: T
         </Card>)}
       </View>}
       <FormError message={operation.error} /><FormError message={deletion.error} />
-      <Button label="Ajouter une série" icon="add" disabled={busy}
+      <Button label="Terminer" icon="checkmark" disabled={busy || !!operation.error || !!deletion.error} onPress={finish} />
+      <Button label="Ajouter une série" variant="secondary" icon="add" disabled={busy}
         onPress={() => router.push({ pathname: '/programs/[id]/workouts/[workoutId]/exercises/[exerciseInstanceId]/sets/new', params: { id: data.program.id, workoutId: data.workout.id, exerciseInstanceId: exercise.id } })} />
       <Button label="Modifier l’exercice prévu" variant="secondary" icon="create-outline" disabled={busy}
         onPress={() => router.push({ pathname: '/programs/[id]/workouts/[workoutId]/exercises/[exerciseInstanceId]/edit', params: { id: data.program.id, workoutId: data.workout.id, exerciseInstanceId: exercise.id } })} />

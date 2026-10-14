@@ -1,52 +1,48 @@
-# Logbook — configuration des exercices et séries M1.1
+# Logbook — entraînements et repos M1.2
 
-Application iPhone de musculation développée avec React Native, Expo, TypeScript, Expo Router et SQLite local.
+Application iPhone de musculation en React Native, Expo SDK 57, TypeScript, Expo Router et SQLite local. M0 et M1.1 ont été testés sur iPhone. La branche **`feat/m1-entrainement`** ajoute M1.2, à vérifier sur appareil avant validation.
 
-M0 a été validé sur un véritable iPhone avec Expo Go : programmes et séances prévues, modification, suppression confirmée, sauvegarde locale et navigation verticale interactive. La branche de développement **`feat/m1-exercices-series`** ajoute uniquement **M1.1**, la préparation des exercices et de leurs séries. Elle conserve les fonctionnalités et les données M0.
+Vous pouvez configurer vos programmes, exercices et séries, puis démarrer un entraînement. Une seule série est affichée pendant l’effort. Les résultats saisis sont sauvegardés à chaque validation, séparément des objectifs. Le repos circulaire utilise la durée propre à la série ; il peut être mis en pause ou terminé tôt, et continue en dépassement sans passer automatiquement à la suivante.
 
-Une séance peut maintenant contenir des exercices issus d'une bibliothèque recherchable ou créés par l'utilisateur. Chaque exercice possède des séries indépendantes : étiquette, répétitions exactes ou plage, charge et RIR facultatifs, **repos après cette série en secondes**. Les exercices et les séries sont modifiables, réordonnables et supprimables. La vue d'ensemble affiche ces objectifs avec le thème sombre, les accents bleus et les cartes arrondies de la [maquette validée](docs/design/Maquette%20d’application%20fitness%20complète%20en%2021%20écrans.png).
+La séance et les horodatages du repos sont conservés après fermeture. Une carte sur l’accueil et dans Musculation permet de reprendre. **Terminer** et **Terminer la configuration** sortent de la préparation ; **Terminer la séance** clôt un entraînement réellement effectué.
 
-Le premier lancement ne contient aucun programme ni performance de démonstration. Le catalogue initial contient des exercices réels, distincts des programmes utilisateur. L'entraînement en direct, la validation d'une série réalisée et le chronomètre viendront pendant M1.2 ; aucun bouton factice de démarrage n'est affiché.
+Le premier lancement ne contient aucun programme ni performance fictive. La bibliothèque d’exercices est distincte des programmes utilisateur. Aucun compte ni serveur n’est nécessaire.
 
-## Essayer sur iPhone
+## Tester sur iPhone depuis Windows
 
-Suivre le [guide M1.1 pour Windows et iPhone](docs/TESTER_M1_SUR_IPHONE.md). Il faut un ordinateur avec **Node.js 24**, Git, un iPhone avec **Expo Go compatible avec Expo SDK 57**, et le même réseau Wi-Fi pour les deux appareils.
+Suivre le [guide M1.2](docs/TESTER_M12_SUR_IPHONE.md), avec Node.js 24, Git et Expo Go compatible avec Expo SDK 57. Arrêter Metro avec **Ctrl+C**, ouvrir PowerShell dans `logbook`, puis :
 
-Depuis un terminal sur votre ordinateur :
-
-```bash
-git clone --branch feat/m1-exercices-series https://github.com/mkfreyer/logbook.git
-cd logbook
-npm ci
-npm start
+```powershell
+git fetch origin
+git switch feat/m1-entrainement
+git pull --ff-only origin feat/m1-entrainement
+npm.cmd ci
+npm.cmd start -- --clear
 ```
 
-Scanner ensuite le QR code avec l'appareil photo de l'iPhone et ouvrir le projet dans Expo Go. Ce QR code doit provenir du serveur lancé sur votre ordinateur ; l'environnement cloud de développement ne fournit pas automatiquement un accès depuis votre iPhone.
+Si la branche n’existe pas localement, utiliser `git switch --track origin/feat/m1-entrainement` à la place du premier `git switch`. Scanner le QR code avec l’iPhone, sur le même réseau Wi-Fi. Conserver le même projet Expo Go pour retrouver les données.
 
-Si le projet est déjà installé sur votre ordinateur Windows, suivre la [mise à jour du dossier existant](docs/TESTER_M1_SUR_IPHONE.md#mettre-à-jour-votre-dossier-logbook). Utiliser le même projet dans Expo Go pour retrouver les données M0. La migration SQLite s'effectue à sa première ouverture.
+## Vérifications
 
-## Vérifications de développement
-
-Avec Node.js 24, dans le dossier `logbook` :
-
-```bash
-npm run typecheck
-npm test
-npm run export:ios
+```powershell
+npm.cmd run typecheck
+npm.cmd test
+npm.cmd run export:ios
 ```
 
-Les tests couvrent les migrations depuis une base M0, les créations, modifications, réorganisations, suppressions et la persistance sur une vraie base SQLite avec le moteur de Node. Les tests Jest couvrent aussi les formulaires, les états vides et la navigation verticale. L'export iOS produit le JavaScript et les ressources ; il ne compile pas une application native installable et ne remplace pas un essai des écrans, claviers et confirmations sur iPhone.
+Les tests couvrent les migrations, la persistance réelle SQLite, les parcours de configuration et d’entraînement, les pauses, les repos individuels, les erreurs et les doubles validations. La CI vérifie aussi la navigation verticale. L’export iOS produit le JavaScript et les ressources, sans compiler une application native installable. Gestes, clavier, son et reprise doivent être testés sur iPhone.
 
-La CI GitHub lance ces mêmes vérifications. Voir [le périmètre et l'architecture de M1.1](docs/M1.1.md) pour les limites et la suite. Les [notes de M0](docs/M0.md) restent disponibles comme référence de la version validée.
+## Données et limites
 
-## Données locales
+La migration **version 3** ajoute les entraînements dans le même fichier `logbook.db`, sans effacer les programmes, séances ou séries. Chaque entraînement conserve un instantané indépendant : supprimer son programme ne supprime pas ses résultats. Une ancienne version M1.1 refuse d’ouvrir une base passée en version 3 sans la rétrograder.
 
-Aucun compte ni serveur n'est nécessaire. Les programmes, séances et configurations restent dans la base **`logbook.db`** du même projet sur l'appareil. La migration version 2 ajoute les tables M1.1 sans supprimer les programmes ou séances M0. Il n'y a pas encore de sauvegarde iCloud ni d'export : conserver Expo Go et ses données pendant les mises à jour.
+Le décompte exclut les pauses manuelles ; **Repos réel** inclut tout le temps chronologique. L’arrière-plan ne met pas automatiquement en pause. Le son est une alerte locale au premier plan, soumise au volume et au mode silencieux ; aucune notification écran verrouillé n’est promise dans Expo Go.
 
-## Références
+M2 apportera le remplacement temporaire d’exercice, le choix d’un exercice restant et le bilan complet. Graphiques, historique avancé, Cardio, mannequin 3D et coach restent hors périmètre.
 
-- [Spécification fonctionnelle et technique](SPECIFICATION_CODEX%20.md)
-- [Maquette des 21 écrans](docs/design/Maquette%20d’application%20fitness%20complète%20en%2021%20écrans.png)
-- [Comment tester M1.1 sur iPhone](docs/TESTER_M1_SUR_IPHONE.md)
-- [Architecture et limites M1.1](docs/M1.1.md)
-- [Guide de la version M0](docs/TESTER_SUR_IPHONE.md)
+- [Architecture et conventions M1.2](docs/M1.2.md)
+- [Guide de test M1.2](docs/TESTER_M12_SUR_IPHONE.md)
+- [Spécification](SPECIFICATION_CODEX%20.md)
+- [Maquette](docs/design/Maquette%20d’application%20fitness%20complète%20en%2021%20écrans.png)
+- [Référence M1.1](docs/M1.1.md)
+- [Référence M0](docs/M0.md)

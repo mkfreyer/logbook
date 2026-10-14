@@ -12,7 +12,7 @@
     "typecheck": "tsc --noEmit",
     "test": "npm run test:db && npm run test:navigation && npm run test:ui",
     "export:ios": "expo export --platform ios --output-dir dist/ios",
-    "test:db": "tsx --test tests/db.test.ts tests/m1-db.test.ts",
+    "test:db": "tsx --test tests/db.test.ts tests/m1-db.test.ts tests/m12-db.test.ts",
     "test:ui": "jest --runInBand",
     "test:navigation": "tsx --test tests/navigation.test.ts"
   },
@@ -20,6 +20,7 @@
     "@expo/metro-runtime": "~57.0.16",
     "@expo/vector-icons": "^15.1.1",
     "expo": "~57.0.28",
+    "expo-audio": "~57.0.5",
     "expo-constants": "~57.0.21",
     "expo-crypto": "~57.0.4",
     "expo-font": "~57.0.4",
@@ -36,6 +37,7 @@
     "react-native-reanimated": "4.5.1",
     "react-native-safe-area-context": "~5.7.0",
     "react-native-screens": "~4.26.0",
+    "react-native-svg": "15.15.4",
     "react-native-web": "^0.21.4",
     "react-native-worklets": "0.10.1"
   },

@@ -40,17 +40,31 @@ export function useScreenOperation() {
   const lock = useRef(false);
   const mounted = useRef(true);
   const focused = useRef(false);
+  const completedNavigation = useRef(false);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   useEffect(() => { mounted.current = true; return () => { mounted.current = false; }; }, []);
-  useFocusEffect(useCallback(() => { focused.current = true; return () => { focused.current = false; }; }, []));
+  useFocusEffect(useCallback(() => {
+    focused.current = true;
+    // A pushed editor/session can return to this mounted screen. Only release a
+    // completed navigation, never an in-flight write that still owns the lock.
+    if (completedNavigation.current) {
+      completedNavigation.current = false;
+      lock.current = false;
+      setBusy(false);
+    }
+    return () => { focused.current = false; };
+  }, []));
   const run = async (operation: () => Promise<unknown>, onSuccess?: () => void, leavesScreen = false) => {
     if (lock.current || !mounted.current || !focused.current) return;
     lock.current = true; setBusy(true); setError(null);
     let succeeded = false;
     try {
       await operation();
-      if (mounted.current && focused.current) { onSuccess?.(); succeeded = true; }
+      if (mounted.current && focused.current) {
+        completedNavigation.current = leavesScreen;
+        onSuccess?.(); succeeded = true;
+      }
     } catch (failure: unknown) {
       if (mounted.current && focused.current) setError(messageFor(failure));
     } finally {

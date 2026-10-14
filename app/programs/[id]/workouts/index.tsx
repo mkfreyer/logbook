@@ -8,8 +8,9 @@ import { Button, Card, colors, EmptyState, Heading, Screen } from '../../../../s
 import { featureStyles, LoadState, LocalNotice, routeId, useFocusedData } from '../../../../src/features/programs/shared';
 
 export default function WorkoutsScreen() {
-  const params = useLocalSearchParams<{ id: string }>();
+  const params = useLocalSearchParams<{ id: string; configuredWorkoutId?: string }>();
   const id = routeId(params.id);
+  const configuredWorkoutId = routeId(params.configuredWorkoutId);
   const { getProgram, listWorkouts } = useLogbook();
   const load = useCallback(async () => {
     if (!id) return null;
@@ -18,12 +19,17 @@ export default function WorkoutsScreen() {
     return { program, workouts: await listWorkouts(id) };
   }, [getProgram, id, listWorkouts]);
   const { data, loading, error, retry } = useFocusedData(load);
+  const configuredWorkout = data?.workouts.find(workout => workout.id === configuredWorkoutId);
 
   return <Screen>
     <Heading title="Vos séances" subtitle={data?.program.name} back />
     {loading || error || !data ? <LoadState loading={loading} error={error} retry={retry}
       missing="Ce programme n’est pas disponible." /> : <View style={featureStyles.sections}>
-        <Text style={featureStyles.body}>Choisissez une séance pour configurer ses exercices et ses séries.</Text>
+        {configuredWorkout ? <Card style={{ gap: 6 }}>
+          <Text accessibilityRole="alert" style={featureStyles.title}>Configuration enregistrée</Text>
+          <Text style={featureStyles.body}>{configuredWorkout.name} · vos modifications sont sauvegardées.</Text>
+        </Card> : null}
+        <Text style={featureStyles.body}>Choisissez une séance pour configurer ses exercices et ses séries ou démarrer un entraînement.</Text>
         {data.workouts.length === 0 ? <Card>
           <EmptyState icon="layers-outline" title="Votre programme prend forme"
             description="Ajoutez votre première séance. Vous pourrez lui donner un nom et noter vos consignes." />

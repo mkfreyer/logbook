@@ -7,6 +7,7 @@ import { UniverseScreen } from '../../navigation/UniverseScreen';
 import { useLogbook } from '../../store/LogbookProvider';
 import { Button, Card, colors, EmptyState, Heading } from '../../ui';
 import { featureStyles, LoadState, LocalNotice } from './shared';
+import { ResumeSessionCard } from '../sessions/ResumeSessionCard';
 
 export default function ProgramsScreen() {
   const { programs, loading, error, refresh } = useLogbook();
@@ -18,6 +19,7 @@ export default function ProgramsScreen() {
     <Heading title="Programmes" subtitle="Musculation"
       action={<Button label="Accueil" icon="home-outline" variant="ghost" onPress={() => goTo('home')} />} />
     <View style={featureStyles.sections}>
+      <ResumeSessionCard active={active} />
       {loading || error ? <LoadState loading={loading} error={error} retry={() => { void refresh(); }} /> :
         programs.length === 0 ? <Card>
           <EmptyState icon="barbell-outline" title="Un programme à votre image"

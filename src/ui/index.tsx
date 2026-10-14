@@ -12,10 +12,11 @@ export const colors = {
 export const spacing = { xs: 4, sm: 8, md: 16, lg: 24, xl: 32 };
 type IconName = ComponentProps<typeof Ionicons>['name'];
 
-export function Screen({ children }: { children: ReactNode }) {
+export function Screen({ children, footer, compact = false }: { children: ReactNode; footer?: ReactNode; compact?: boolean }) {
   return <SafeAreaView style={s.screen} edges={['top', 'bottom']}>
     <KeyboardAvoidingView style={s.flex} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
-      <ScrollView contentContainerStyle={s.content} keyboardShouldPersistTaps="handled" keyboardDismissMode="interactive">{children}</ScrollView>
+      <ScrollView contentContainerStyle={[s.content, compact && { gap: 16, paddingTop: 16, paddingBottom: 20 }]} keyboardShouldPersistTaps="handled" keyboardDismissMode="interactive">{children}</ScrollView>
+      {footer ? <View style={s.footer}>{footer}</View> : null}
     </KeyboardAvoidingView>
   </SafeAreaView>;
 }
@@ -64,6 +65,7 @@ export function Field({ label, value, onChangeText, placeholder, multiline = fal
 
 const s = StyleSheet.create({
   flex: { flex: 1 }, screen: { flex: 1, backgroundColor: colors.background },
+  footer: { paddingHorizontal: 24, paddingVertical: 12, borderTopWidth: 1, borderTopColor: colors.border, backgroundColor: colors.background },
   content: { padding: 24, gap: 24, flexGrow: 1, paddingBottom: 32, width: '100%', maxWidth: 640, alignSelf: 'center' },
   heading: { flexDirection: 'row', alignItems: 'center', gap: 8, paddingTop: 8 },
   back: { minWidth: 44, minHeight: 44, justifyContent: 'center', alignItems: 'center', marginLeft: -12 },
