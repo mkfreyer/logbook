@@ -50,7 +50,7 @@ Si Git signale des branches divergentes ou si une vérification échoue, conserv
 
 À la première ouverture, la migration ajoute les tables M1.1 à la base existante. Vérifier immédiatement que vos programmes, noms, notes et séances M0 sont toujours présents. Tester aussi le swipe montant depuis l'accueil, le retour descendant depuis le haut de Musculation et les boutons de navigation.
 
-La migration passe la base locale en version 2. Si vous relancez ensuite l'ancien code M0 sur ce même projet, il pourra afficher qu'il faut mettre l'application à jour : il ne sait pas ouvrir cette version de base et ne l'efface pas. Pour poursuivre les essais, rester sur `feat/m1-exercices-series` et relancer son serveur.
+La migration passe la base locale en version 2. Si vous relancez ensuite l'ancien code M0 sur ce même projet, son écran pourra indiquer **Stockage indisponible** : il ne sait pas ouvrir cette version de base et ne l'efface pas. Pour poursuivre les essais, rester sur `feat/m1-exercices-series` et relancer son serveur.
 
 ## Composer une séance d'essai
 
