@@ -27,7 +27,11 @@ function RestSoundObserver({ repository }: { repository: SessionRepository }) {
         const session = await repository.getActiveSession();
         if (!mounted || version !== request) return;
         const step = session ? selectSessionStep(session) : null;
-        setRest(step?.phase === 'rest' ? step.rest : null);
+        const next = step?.phase === 'rest' ? step.rest : null;
+        // A choice changes session metadata, not the interval. Preserve its
+        // reference so a reread cannot restart the foreground alert observation
+        // between its last clock tick and the deadline.
+        setRest(previous => JSON.stringify(previous) === JSON.stringify(next) ? previous : next);
       } catch {
         if (mounted && version === request) setRest(null);
         // Resume cards/screens expose a retry for storage errors.

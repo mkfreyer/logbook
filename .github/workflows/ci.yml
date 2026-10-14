@@ -25,7 +25,7 @@ jobs:
         run: npm ci
       - name: Vérifier TypeScript
         run: npm run typecheck
-      - name: Tester SQLite, M0, M1.1, M1.2 et la navigation
+      - name: Tester SQLite, M0, M1.1, M1.2, M2 et la navigation
         run: npm test
       - name: Vérifier le diagnostic des gestes en développement
         run: npm run test:ui -- --runTestsByPath tests/pager.test.tsx --silent

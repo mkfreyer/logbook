@@ -151,15 +151,16 @@ describe('M1.2 : une seule série et sauvegarde explicite', () => {
     expect(mockSessions.finishSession).not.toHaveBeenCalled();
     fireEvent.press(view.getByRole('button', { name: 'Terminer la séance' }));
     await view.findByText('Entraînement enregistré');
-    expect(view.getByText('Ma séance · 3 séries réalisées.')).toBeTruthy();
+    expect(view.getByLabelText('Séries réalisées').props.children).toBe('3');
     expect(mockSessions.finishSession).toHaveBeenCalledTimes(1);
     expect(view.queryByRole('button', { name: 'Terminer la séance' })).toBeNull();
   });
 
   test('le menu secondaire ne concerne que les objectifs de la série active', async () => {
     const view = render(<SessionScreen sessionId="session" />);
+    fireEvent.press(await view.findByRole('button', { name: 'Actions de séance' }));
     fireEvent.press(await view.findByRole('button', { name: 'Modifier les objectifs de la série' }));
-    expect(router.push).toHaveBeenCalledWith({ pathname: '/sessions/[sessionId]/edit', params: { sessionId: 'session', setId: 'first' } });
+    await waitFor(() => expect(router.push).toHaveBeenCalledWith({ pathname: '/sessions/[sessionId]/edit', params: { sessionId: 'session', setId: 'first' } }));
   });
 });
 
