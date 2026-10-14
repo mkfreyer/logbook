@@ -20,9 +20,9 @@ export function Screen({ children }: { children: ReactNode }) {
   </SafeAreaView>;
 }
 
-export function Heading({ title, subtitle, back = false, backDisabled = false, action }: { title: string; subtitle?: string; back?: boolean; backDisabled?: boolean; action?: ReactNode }) {
+export function Heading({ title, subtitle, back = false, backDisabled = false, onBack, action }: { title: string; subtitle?: string; back?: boolean; backDisabled?: boolean; onBack?: () => void; action?: ReactNode }) {
   return <View style={s.heading}>
-    {back && <Pressable disabled={backDisabled} onPress={() => router.canGoBack() ? router.back() : router.replace('/programs')} accessibilityRole="button" accessibilityLabel="Retour" accessibilityState={{ disabled: backDisabled }} style={({ pressed }) => [s.back, pressed && s.pressed, backDisabled && s.disabled]}>
+    {back && <Pressable disabled={backDisabled} onPress={onBack ?? (() => router.canGoBack() ? router.back() : router.replace({ pathname: '/', params: { universe: 'musculation' } }))} accessibilityRole="button" accessibilityLabel="Retour" accessibilityState={{ disabled: backDisabled }} style={({ pressed }) => [s.back, pressed && s.pressed, backDisabled && s.disabled]}>
       <Ionicons name="chevron-back" size={24} color={colors.text} />
     </Pressable>}
     <View style={s.flex}><Text style={s.title} accessibilityRole="header">{title}</Text>{subtitle && <Text style={s.subtitle}>{subtitle}</Text>}</View>

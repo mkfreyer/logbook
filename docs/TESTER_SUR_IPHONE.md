@@ -2,6 +2,40 @@
 
 Vous allez lancer la première version depuis votre ordinateur, puis l'ouvrir sur votre iPhone avec **Expo Go**. Expo Go est une application gratuite qui permet d'essayer un projet Expo pendant son développement. Aucun abonnement développeur Apple payant n'est nécessaire pour ce parcours.
 
+Si vous avez déjà testé M0, commencez par la section suivante. Les étapes d'installation plus bas restent utiles pour un premier essai.
+
+## Mettre à jour le projet déjà installé sur Windows
+
+Cette mise à jour ajoute la navigation verticale interactive et le nouvel accueil. Elle conserve la même identité de projet et la même base SQLite ; vos programmes et séances ne doivent pas être effacés.
+
+1. Dans le terminal où l'ancien serveur tourne, appuyer sur **Ctrl+C** pour l'arrêter.
+2. Ouvrir votre dossier `logbook` dans l'Explorateur Windows, puis choisir **Ouvrir dans le Terminal** avec un clic droit dans un espace vide. Si le terminal est déjà dans ce dossier, le garder ouvert.
+3. Vérifier les fichiers locaux :
+
+```powershell
+git status --short
+```
+
+Si rien ne s'affiche, passer aux commandes suivantes. Si des fichiers modifiés apparaissent, conserver vos modifications avant de mettre à jour, par exemple dans une copie séparée du dossier. Ne pas utiliser `git reset --hard` pour les effacer. En cas de doute, garder les fichiers et demander de l'aide avec les noms affichés.
+
+4. Copier les commandes ci-dessous une par une, en attendant la fin de chacune :
+
+```powershell
+git switch feat/m0-programmes
+git pull --ff-only origin feat/m0-programmes
+npm ci
+npm start -- --clear
+```
+
+`git pull` récupère la nouvelle version de la branche M0. `npm ci` met les bibliothèques de l'ordinateur en accord avec cette version. `--clear` vide uniquement le cache du serveur de développement : **cela ne vide pas la base SQLite sur votre iPhone**.
+
+Si `git pull` échoue avec un message de branches divergentes, arrêter la mise à jour et conserver les fichiers locaux ; ne pas forcer ni réinitialiser la branche.
+
+5. Laisser le terminal ouvert. Sur l'iPhone, scanner le nouveau QR code avec **Appareil photo** et ouvrir le même projet dans Expo Go, sur le même Wi-Fi que l'ordinateur.
+6. Vérifier d'abord que vos programmes et séances sont toujours présents, puis faire les essais de navigation de la section 4.
+
+Ne pas désinstaller Expo Go, effacer ses données ni créer un nouveau projet Expo pour faire cette mise à jour. Si Windows refuse `npm` en indiquant que l'exécution de scripts est désactivée, utiliser `npm.cmd ci` puis `npm.cmd start -- --clear` dans PowerShell.
+
 ## 1. Préparer l'ordinateur et l'iPhone
 
 Sur votre ordinateur Windows, macOS ou Linux :
@@ -63,6 +97,21 @@ Le QR code doit être celui de votre ordinateur. Une adresse `localhost` ou un Q
 
 ## 4. Vérifier le parcours de M0
 
+Pour vérifier la correction de l'accueil et de la navigation :
+
+- [ ] Après la mise à jour du même projet, vos anciens programmes et séances sont toujours présents.
+- [ ] Sur l'accueil, les cartes reprennent le thème sombre, les accents bleus et les proportions de la maquette. Aucun entraînement n'ayant été réalisé dans M0, les cartes de progression affichent des états vides, même si vous avez déjà créé des séances prévues.
+- [ ] Glisser lentement vers le haut et garder le doigt sur l'écran à mi-parcours : l'accueil monte avec le doigt, et Musculation apparaît depuis le bas. La transition ne doit pas être horizontale.
+- [ ] Relâcher après un petit déplacement : vous restez sur l'écran de départ. Un glissement plus ample ou rapide mène à Musculation.
+- [ ] Depuis le haut de la liste des programmes, glisser vers le bas : Musculation descend avec le doigt et l'accueil réapparaît depuis le haut. Essayer aussi un petit geste qui revient à Musculation.
+- [ ] Utiliser les boutons de navigation entre l'accueil et Musculation sans faire de swipe. Le résultat est le même.
+- [ ] Si la liste des programmes est assez longue pour défiler, descendre dans la liste, puis remonter : la liste doit défiler normalement. Le retour à l'accueil se fait depuis son début, sans changer d'univers pendant un défilement au milieu de la liste.
+- [ ] Dans un formulaire de programme ou de séance, faire défiler les champs avec le clavier affiché. Le formulaire reste ouvert et ne déclenche pas de changement d'univers.
+- [ ] Dans **Réglages → Accessibilité → Affichage et taille du texte** de l'iPhone, essayer une taille de texte plus grande. Les boutons et les informations importantes restent lisibles.
+- [ ] Dans **Réglages → Accessibilité → Animation**, activer **Réduire les animations**, puis essayer les boutons de navigation. Les écrans restent accessibles avec une transition adaptée à ce réglage.
+
+Pour vérifier que la création, la modification et la sauvegarde fonctionnent toujours :
+
 Faire cette vérification avec vos propres noms de programmes. Les exemples ci-dessous sont des noms à saisir vous-même ; l'application ne les ajoute pas automatiquement.
 
 - [ ] À la première ouverture, aucun programme ni aucune statistique fictive n'apparaît.
@@ -110,4 +159,4 @@ Pour arrêter le serveur sur l'ordinateur, revenir au terminal et appuyer sur `C
 
 Expo Go sert à tester cette version. Une distribution autonome ou via TestFlight demandera ensuite une compilation iOS, les outils de signature et généralement un compte Apple Developer payant. Aucun fichier installable ni publication App Store n'est produit par M0.
 
-Le simulateur iOS nécessite macOS et Xcode. L'environnement Linux utilisé pour développer M0 vérifie le code, les tests SQLite et l'export JavaScript pour iOS ; le rendu, le clavier, l'accessibilité et la persistance réelle sur iPhone doivent encore être vérifiés avec la liste ci-dessus.
+Le simulateur iOS nécessite macOS et Xcode. L'environnement Linux utilisé pour développer M0 vérifie le code, les tests SQLite et l'export JavaScript pour iOS. Le premier parcours de création, modification et persistance a déjà été testé sur un véritable iPhone par l'utilisateur. Les nouvelles transitions, leur coexistence avec le défilement, le rendu de l'accueil et l'accessibilité doivent être vérifiés avec la liste ci-dessus.

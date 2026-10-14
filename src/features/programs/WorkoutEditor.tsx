@@ -44,7 +44,7 @@ export function WorkoutEditor({ mode, programId, workoutId }: {
   const returnToWorkouts = () => {
     if (router.canGoBack()) router.back();
     else if (programId) router.replace({ pathname: '/programs/[id]/workouts', params: { id: programId } });
-    else router.replace('/programs');
+    else router.replace({ pathname: '/', params: { universe: 'musculation' } });
   };
   const save = async () => {
     if (savingRef.current || !programId) return;

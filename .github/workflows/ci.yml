@@ -25,7 +25,7 @@ jobs:
         run: npm ci
       - name: Vérifier TypeScript
         run: npm run typecheck
-      - name: Tester les validations et SQLite
+      - name: Tester SQLite, les formulaires et la navigation
         run: npm test
       - name: Exporter le JavaScript iOS
         run: npm run export:ios

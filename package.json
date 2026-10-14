@@ -10,10 +10,11 @@
     "start": "expo start",
     "ios": "expo start --ios",
     "typecheck": "tsc --noEmit",
-    "test": "npm run test:db && npm run test:ui",
+    "test": "npm run test:db && npm run test:navigation && npm run test:ui",
     "export:ios": "expo export --platform ios --output-dir dist/ios",
     "test:db": "tsx --test tests/db.test.ts",
-    "test:ui": "jest --runInBand"
+    "test:ui": "jest --runInBand",
+    "test:navigation": "tsx --test tests/navigation.test.ts"
   },
   "dependencies": {
     "@expo/metro-runtime": "~57.0.16",
@@ -22,6 +23,7 @@
     "expo-constants": "~57.0.21",
     "expo-crypto": "~57.0.4",
     "expo-font": "~57.0.4",
+    "expo-linear-gradient": "~57.0.2",
     "expo-linking": "~57.0.12",
     "expo-router": "~57.0.26",
     "expo-sqlite": "~57.0.4",

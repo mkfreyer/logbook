@@ -60,7 +60,7 @@ export function ProgramEditor({ mode, id }: { mode: 'create' | 'edit'; id?: stri
   const cancel = () => {
     if (router.canGoBack()) router.back();
     else if (editing && id) router.replace({ pathname: '/programs/[id]', params: { id } });
-    else router.replace('/programs');
+    else router.replace({ pathname: '/', params: { universe: 'musculation' } });
   };
 
   return <Screen>

@@ -2,14 +2,15 @@ import { afterEach, beforeEach, describe, expect, jest, test } from '@jest/globa
 import { act, cleanup, fireEvent, render, waitFor } from '@testing-library/react-native';
 import { router } from 'expo-router';
 
-import HomeScreen from '../app/index';
-import ProgramsScreen from '../app/programs';
+import HomeScreen from '../src/features/home/HomeScreen';
+import ProgramsScreen from '../src/features/programs/ProgramsScreen';
 import type { Program, ProgramInput, WorkoutInput, WorkoutTemplate } from '../src/domain/models';
 import { ProgramEditor } from '../src/features/programs/ProgramEditor';
 import { WorkoutEditor } from '../src/features/programs/WorkoutEditor';
 import { useLogbook } from '../src/store/LogbookProvider';
 
 const mockFocusCleanups = new Set<() => void>();
+const mockGoTo = jest.fn();
 
 jest.mock('expo-router', () => {
   const React = require('react') as typeof import('react');
@@ -25,6 +26,9 @@ jest.mock('expo-router', () => {
 });
 jest.mock('../src/store/LogbookProvider', () => ({ useLogbook: jest.fn() }));
 jest.mock('@expo/vector-icons', () => ({ Ionicons: () => null }));
+jest.mock('@expo/vector-icons/Ionicons', () => ({ __esModule: true, default: () => null }));
+jest.mock('../src/navigation/UniverseScreen', () => ({ UniverseScreen: ({ children }: { children: import('react').ReactNode }) => children }));
+jest.mock('../src/navigation/UniverseContext', () => ({ useUniverseIsActive: () => true, useUniverseNavigation: () => ({ goTo: mockGoTo }) }));
 jest.mock('react-native-safe-area-context', () => jest.requireActual<{ default: typeof import('react-native-safe-area-context') }>('react-native-safe-area-context/jest/mock').default);
 
 const program: Program = {
@@ -77,7 +81,7 @@ describe('M0 : états vides et organisation locale', () => {
   test('une première ouverture invite à créer sans programmes ni performances fictifs', () => {
     const home = render(<HomeScreen />);
     expect(home.getByText('Créer mon premier programme')).toBeTruthy();
-    expect(home.getByText('Votre progression apparaîtra ici après vos premiers entraînements.')).toBeTruthy();
+    expect(home.getByText('Après vos premières séances')).toBeTruthy();
     expect(home.queryByText(/Prise de muscle|Alex|\+12\s*%|124\s*350/)).toBeNull();
     fireEvent.press(home.getByRole('button', { name: 'Créer mon premier programme' }));
     expect(router.push).toHaveBeenCalledWith('/programs/new');
@@ -102,6 +106,23 @@ describe('M0 : états vides et organisation locale', () => {
     fireEvent.press(view.getByRole('button', { name: 'Créer le programme' }));
     await waitFor(() => expect(mockStore.createProgram).toHaveBeenCalledWith({ name: 'Mon organisation', description: 'Deux jours par semaine' }));
     await waitFor(() => expect(router.replace).toHaveBeenCalledWith({ pathname: '/programs/[id]', params: { id: program.id } }));
+  });
+
+  test('les boutons entre univers utilisent le pager, et Cardio reste indisponible', () => {
+    mockStore.programs = [program];
+    const home = render(<HomeScreen />);
+    expect(home.getByText(program.name)).toBeTruthy();
+    expect(home.getByText('0 séance prévue · à votre rythme')).toBeTruthy();
+    fireEvent.press(home.getByRole('button', { name: 'Musculation' }));
+    expect(mockGoTo).toHaveBeenCalledWith('musculation');
+    expect(router.push).not.toHaveBeenCalled();
+    expect(home.getByRole('button', { name: 'Cardio, à venir' }).props.accessibilityState.disabled).toBe(true);
+    home.unmount();
+
+    const list = render(<ProgramsScreen />);
+    fireEvent.press(list.getByRole('button', { name: 'Retour' }));
+    expect(mockGoTo).toHaveBeenLastCalledWith('home');
+    expect(router.back).not.toHaveBeenCalled();
   });
 
   test('la modification charge le programme et conserve son identité', async () => {

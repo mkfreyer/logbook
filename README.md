@@ -4,7 +4,7 @@ Application iPhone de musculation développée avec React Native, Expo, TypeScri
 
 Cette première version permet de créer et modifier ses programmes, d'y ajouter des séances prévues, puis de retrouver ces données après fermeture de l'application. Le premier lancement est vide : aucun programme, aucune performance et aucune statistique de démonstration ne sont enregistrés.
 
-Le thème sombre, les accents bleus et les cartes arrondies reprennent les écrans 1 à 4 de la [maquette validée](docs/design/Maquette%20d’application%20fitness%20complète%20en%2021%20écrans.png). Le suivi d'un entraînement sera développé au jalon M1.
+Le thème sombre, les accents bleus et les cartes arrondies reprennent les écrans 1 à 4 de la [maquette validée](docs/design/Maquette%20d’application%20fitness%20complète%20en%2021%20écrans.png). L'accueil conserve la disposition des cartes de progression avec des états vides, sans performances inventées. Un glissement vertical interactif relie l'accueil à l'univers Musculation ; des boutons permettent aussi de naviguer. Le suivi d'un entraînement sera développé au jalon M1.
 
 ## Essayer sur iPhone
 
@@ -21,6 +21,8 @@ npm start
 
 Scanner ensuite le QR code avec l'appareil photo de l'iPhone et ouvrir le projet dans Expo Go. Ce QR code doit provenir du serveur lancé sur votre ordinateur ; l'environnement cloud de développement ne fournit pas automatiquement un accès depuis votre iPhone.
 
+Si le projet est déjà installé sur votre ordinateur Windows, suivre la [mise à jour du projet existant](docs/TESTER_SUR_IPHONE.md#mettre-à-jour-le-projet-déjà-installé-sur-windows). Elle conserve les programmes sur l'iPhone et évite de recréer le projet.
+
 ## Vérifications de développement
 
 Avec Node.js 24, dans le dossier `logbook` :
@@ -31,7 +33,7 @@ npm test
 npm run export:ios
 ```
 
-Les 20 tests couvrent les migrations et le stockage sur une vraie base SQLite avec le moteur de Node, ainsi que les formulaires et la navigation avec Jest. L'export iOS produit le JavaScript et les ressources ; il ne compile pas une application native installable et ne remplace pas un essai sur iPhone.
+Les tests couvrent les migrations et le stockage sur une vraie base SQLite avec le moteur de Node, ainsi que les formulaires, les états vides et la navigation verticale avec Jest. L'export iOS produit le JavaScript et les ressources ; il ne compile pas une application native installable et ne remplace pas un essai des gestes sur iPhone.
 
 La CI GitHub lance ces mêmes vérifications. Voir [le périmètre et l'architecture de M0](docs/M0.md) pour les limites et la suite.
 
