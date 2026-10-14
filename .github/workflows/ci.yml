@@ -1,4 +1,4 @@
-name: Vérifications M0
+name: Vérifications Logbook
 
 on:
   pull_request:
@@ -25,7 +25,7 @@ jobs:
         run: npm ci
       - name: Vérifier TypeScript
         run: npm run typecheck
-      - name: Tester SQLite, les formulaires et la navigation
+      - name: Tester SQLite, M0, M1.1 et la navigation
         run: npm test
       - name: Vérifier le diagnostic des gestes en développement
         run: npm run test:ui -- --runTestsByPath tests/pager.test.tsx --silent

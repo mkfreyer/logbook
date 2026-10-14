@@ -14,4 +14,6 @@ export interface Database {
     ...params: (string | number | null)[]
   ): Promise<T[]>;
   withTransactionAsync(task: () => Promise<void>): Promise<void>;
+  /** Expo uses a separate connection so outside reads/writes cannot join this transaction. */
+  withExclusiveTransactionAsync?(task: (transaction: Database) => Promise<void>): Promise<void>;
 }
