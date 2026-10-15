@@ -7,6 +7,7 @@ import type { Program, ProgramInput, WorkoutInput, WorkoutTemplate } from '../do
 interface LogbookContextValue {
   programs: Program[];
   loading: boolean;
+  hasLoaded: boolean;
   error: string | null;
   refresh(): Promise<void>;
   getProgram(id: string): Promise<Program | null>;
@@ -27,6 +28,7 @@ export function LogbookProvider({ children }: { children: ReactNode }) {
   const repository = useMemo(() => new ProgramRepository(db, randomUUID), [db]);
   const [programs, setPrograms] = useState<Program[]>([]);
   const [loading, setLoading] = useState(true);
+  const [hasLoaded, setHasLoaded] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const request = useRef(0);
 
@@ -34,7 +36,7 @@ export function LogbookProvider({ children }: { children: ReactNode }) {
     const version = ++request.current;
     try {
       const result = await repository.listPrograms();
-      if (version === request.current) { setPrograms(result); setError(null); }
+      if (version === request.current) { setPrograms(result); setHasLoaded(true); setError(null); }
     } catch {
       if (version === request.current) setError('Impossible de lire vos programmes. Réessayez.');
     } finally {
@@ -78,8 +80,8 @@ export function LogbookProvider({ children }: { children: ReactNode }) {
     await refresh();
   }, [repository, refresh]);
 
-  const value = useMemo(() => ({ programs, loading, error, refresh, getProgram, listWorkouts, getWorkout, createProgram, updateProgram, deleteProgram, createWorkout, updateWorkout, deleteWorkout }),
-    [programs, loading, error, refresh, getProgram, listWorkouts, getWorkout, createProgram, updateProgram, deleteProgram, createWorkout, updateWorkout, deleteWorkout]);
+  const value = useMemo(() => ({ programs, loading, hasLoaded, error, refresh, getProgram, listWorkouts, getWorkout, createProgram, updateProgram, deleteProgram, createWorkout, updateWorkout, deleteWorkout }),
+    [programs, loading, hasLoaded, error, refresh, getProgram, listWorkouts, getWorkout, createProgram, updateProgram, deleteProgram, createWorkout, updateWorkout, deleteWorkout]);
   return <LogbookContext.Provider value={value}>{children}</LogbookContext.Provider>;
 }
 

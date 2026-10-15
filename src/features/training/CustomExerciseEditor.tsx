@@ -4,14 +4,14 @@ import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 import { weightModeLabel, type WeightMode } from '../../domain/training';
 import { Button, Card, colors, Field, Heading, Screen } from '../../ui';
-import { FormError, LoadState, LocalNotice } from '../programs/shared';
+import { FormError, LoadState, RefreshNotice, LocalNotice } from '../programs/shared';
 import { trainingStyles as s, useScreenOperation, type TrainingRoute } from './shared';
 import { useWorkoutPlan } from './useWorkoutPlan';
 
 const modes: WeightMode[] = ['total', 'per_hand', 'additional'];
 
 export function CustomExerciseEditor({ programId, workoutId, exerciseInstanceId, catalogId }: TrainingRoute & { catalogId?: string }) {
-  const { data, loading, error, retry, training } = useWorkoutPlan({ programId, workoutId, exerciseInstanceId });
+  const { data, loading, error, refreshError, refreshing, retry, training } = useWorkoutPlan({ programId, workoutId, exerciseInstanceId });
   const editing = Boolean(catalogId);
   const customExercise = data?.exercise?.exercise;
   const validEdit = !editing || Boolean(customExercise?.isCustom && customExercise.id === catalogId);
@@ -41,6 +41,7 @@ export function CustomExerciseEditor({ programId, workoutId, exerciseInstanceId,
   };
   return <Screen>
     <Heading title={editing ? 'Modifier votre exercice' : 'Votre exercice'} subtitle={editing ? 'Votre référence personnalisée' : 'Ajouter à votre bibliothèque'} back backDisabled={operation.busy} onBack={goBack} />
+    <RefreshNotice refreshError={refreshError} refreshing={refreshing} retry={retry} />
     {loading || error || !data || !validEdit ? <LoadState loading={loading} error={error} retry={retry} missing="Cet exercice ou cette séance n’est plus disponible." /> : <View style={s.sections}>
       <Text style={s.body}>{editing ? 'Le même exercice sera mis à jour dans la bibliothèque et dans les séances qui l’utilisent. Son identifiant et ses séries seront conservés ; vérifiez les charges prévues si vous changez leur mode.' : 'Créez votre référence personnelle. Retrouvez-la ensuite dans la bibliothèque pour l’ajouter à une séance.'}</Text>
       <Card>

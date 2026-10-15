@@ -4,7 +4,7 @@ import { Text, View } from 'react-native';
 
 import { useLogbook } from '../../store/LogbookProvider';
 import { Button, Card, Field, Heading, Screen } from '../../ui';
-import { featureStyles, FormError, LoadState, LocalNotice, messageFor, useFocusedData } from './shared';
+import { featureStyles, FormError, LoadState, RefreshNotice, LocalNotice, messageFor, useFocusedData } from './shared';
 import { useConfirmedDelete } from './useConfirmedDelete';
 
 export function WorkoutEditor({ mode, programId, workoutId }: {
@@ -20,7 +20,7 @@ export function WorkoutEditor({ mode, programId, workoutId }: {
     if (editing && (!workout || workout.programId !== programId)) return null;
     return { program, workout };
   }, [editing, getProgram, getWorkout, programId, workoutId]);
-  const { data, loading, error, retry } = useFocusedData(load);
+  const { data, loading, error, refreshError, refreshing, retry } = useFocusedData(load);
   const [name, setName] = useState('');
   const [notes, setNotes] = useState('');
   const [formError, setFormError] = useState<string | null>(null);
@@ -81,6 +81,7 @@ export function WorkoutEditor({ mode, programId, workoutId }: {
 
   return <Screen>
     <Heading title={editing ? 'Modifier la séance' : 'Ajouter une séance'} subtitle={data?.program.name} back backDisabled={busy} />
+    <RefreshNotice refreshError={refreshError} refreshing={refreshing} retry={retry} />
     {loading || error || !data ? <LoadState loading={loading} error={error} retry={retry}
       missing="Cette séance ou son programme n’est pas disponible." /> : <View style={featureStyles.sections}>
       <Text style={featureStyles.body}>{editing

@@ -4,13 +4,13 @@ import { Pressable, Text, View } from 'react-native';
 
 import { weightModeLabel } from '../../domain/training';
 import { Button, Card, colors, EmptyState, Heading, Screen } from '../../ui';
-import { FormError, LoadState, LocalNotice } from '../programs/shared';
+import { FormError, LoadState, RefreshNotice, LocalNotice } from '../programs/shared';
 import { useConfirmedDelete } from '../programs/useConfirmedDelete';
 import { OrderControls, seriesTitle, SetTargetSummary, swappedIds, trainingStyles as s, useScreenOperation, type TrainingRoute } from './shared';
 import { useWorkoutPlan } from './useWorkoutPlan';
 
 export function ExerciseOverview({ programId, workoutId, exerciseInstanceId }: TrainingRoute) {
-  const { data, loading, error, retry, training } = useWorkoutPlan({ programId, workoutId, exerciseInstanceId });
+  const { data, loading, error, refreshError, refreshing, retry, training } = useWorkoutPlan({ programId, workoutId, exerciseInstanceId });
   const operation = useScreenOperation();
   const exercise = data?.exercise;
   const deletion = useConfirmedDelete({
@@ -32,11 +32,12 @@ export function ExerciseOverview({ programId, workoutId, exerciseInstanceId }: T
     else router.replace({ pathname: '/', params: { universe: 'musculation' } });
   };
   const move = (index: number, delta: -1 | 1) => {
-    if (!exercise) return;
+    if (!exercise || refreshing) return;
     void operation.run(() => training.reorderSets(exercise.id, swappedIds(exercise.sets, index, delta)), retry);
   };
   return <Screen>
     <Heading title={exercise?.exercise.name ?? 'Exercice prévu'} subtitle={data?.workout.name} back backDisabled={busy} onBack={goBack} />
+    <RefreshNotice refreshError={refreshError} refreshing={refreshing} retry={retry} />
     {loading || error || !exercise || !data ? <LoadState loading={loading} error={error} retry={retry} missing="Cet exercice prévu n’est plus disponible." /> : <View style={s.sections}>
       <Card style={{ padding: 16, gap: 10 }}>
         <View style={s.row}><View style={s.icon}><Ionicons name="barbell-outline" color={colors.cyan} size={27} /></View>
@@ -57,7 +58,7 @@ export function ExerciseOverview({ programId, workoutId, exerciseInstanceId }: T
             <SetTargetSummary series={series} index={index} mode={exercise.exercise.weightMode} />
             <Ionicons name="chevron-forward" color={colors.muted} size={18} />
           </Pressable>
-          <OrderControls label={`${seriesTitle(series, index)} (position ${index + 1})`} first={index === 0} last={index === exercise.sets.length - 1} disabled={busy}
+          <OrderControls label={`${seriesTitle(series, index)} (position ${index + 1})`} first={index === 0} last={index === exercise.sets.length - 1} disabled={busy || refreshing}
             onUp={() => move(index, -1)} onDown={() => move(index, 1)} />
         </Card>)}
       </View>}

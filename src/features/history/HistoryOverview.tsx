@@ -6,24 +6,27 @@ import { historyRange, previousHistoryRange, type HistoryPeriod } from '../../do
 import { formatSessionDuration } from '../../domain/sessionSummary';
 import { useSessions } from '../../store/SessionProvider';
 import { Button, Card, colors, EmptyState, Heading, Screen } from '../../ui';
-import { LoadState, useFocusedData } from '../programs/shared';
+import { LoadState, RefreshNotice, useFocusedData } from '../programs/shared';
 import { sessionStyles as s } from '../sessions/shared';
 import { ProgressChart } from './ProgressChart';
-import { h, HistoryMetric, HistoryPagination, HistoryTab, historyDate, historyWeight, PeriodPicker, useHistoryClock } from './shared';
+import { h, HistoryMetric, HistoryPagination, HistoryTab, historyDate, historyWeight, PeriodPicker, useHistoryClock, useHistoryForegroundRefresh } from './shared';
 
 export function HistoryOverview({ programId, programName, initialPeriod = '30' }: { programId?: string; programName?: string; initialPeriod?: HistoryPeriod }) {
   const repository = useSessions().history;
   const [period, setPeriod] = useState<HistoryPeriod>(initialPeriod), [page, setPage] = useState(0);
   const [metric, setMetric] = useState<'tonnage' | 'sets'>('tonnage');
   const now = useHistoryClock();
-  const data = useFocusedData(useCallback(() => repository.overview({ ...historyRange(period, now), programId }, page,
-    previousHistoryRange(period, now)), [repository, period, now, programId, page]));
+  const range = historyRange(period, now), previous = previousHistoryRange(period, now);
+  const data = useFocusedData(useCallback(() => repository.overview({ from: range.from, until: range.until, programId }, page,
+    previous ? { from: previous.from, until: previous.until } : null), [repository, range.from, range.until, previous?.from, previous?.until, programId, page]));
+  useHistoryForegroundRefresh(data.retry);
   const result = data.data;
   const title = programId ? result?.programs[0]?.name ?? programName ?? 'Historique du programme' : 'Historique';
   return <Screen compact>
     <Heading title={title} subtitle={programId ? 'Entraînements de ce programme' : 'Vos entraînements réellement terminés'} back />
     <PeriodPicker value={period} onChange={value => { setPeriod(value); setPage(0); }} />
     {!programId && <Button label="Performances par exercice" icon="barbell-outline" variant="secondary" onPress={() => router.push('/history/exercises')} />}
+    <RefreshNotice {...data} />
     {data.loading || data.error || !result ? <LoadState loading={data.loading} error={data.error} retry={data.retry} /> : <View style={s.sections}>
       {result.stats.sessionCount === 0 ? <Card>
         <EmptyState icon="stats-chart-outline" title="Votre histoire commence ici"

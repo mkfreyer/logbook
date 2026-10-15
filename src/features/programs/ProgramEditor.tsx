@@ -4,13 +4,13 @@ import { Text, View } from 'react-native';
 
 import { useLogbook } from '../../store/LogbookProvider';
 import { Button, Card, Field, Heading, Screen } from '../../ui';
-import { featureStyles, FormError, LoadState, LocalNotice, messageFor, useFocusedData } from './shared';
+import { featureStyles, FormError, LoadState, RefreshNotice, LocalNotice, messageFor, useFocusedData } from './shared';
 
 export function ProgramEditor({ mode, id }: { mode: 'create' | 'edit'; id?: string }) {
   const editing = mode === 'edit';
   const { getProgram, createProgram, updateProgram } = useLogbook();
   const load = useCallback(() => editing && id ? getProgram(id) : Promise.resolve(null), [editing, getProgram, id]);
-  const { data: program, loading, error, retry } = useFocusedData(load);
+  const { data: program, loading, error, refreshError, refreshing, retry } = useFocusedData(load);
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
   const [formError, setFormError] = useState<string | null>(null);
@@ -65,6 +65,7 @@ export function ProgramEditor({ mode, id }: { mode: 'create' | 'edit'; id?: stri
 
   return <Screen>
     <Heading title={editing ? 'Modifier le programme' : 'Créer un programme'} back backDisabled={saving} />
+    <RefreshNotice refreshError={refreshError} refreshing={refreshing} retry={retry} />
     {loading || error || (editing && !program) ? <LoadState loading={loading} error={error} retry={retry}
       missing="Ce programme n’est pas disponible." /> : <View style={featureStyles.sections}>
       <Text style={featureStyles.body}>{editing

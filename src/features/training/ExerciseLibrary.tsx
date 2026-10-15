@@ -5,7 +5,7 @@ import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
 
 import type { ExerciseCatalogItem } from '../../domain/training';
 import { Button, Card, colors, EmptyState, Heading, Screen } from '../../ui';
-import { FormError, LoadState, useFocusedData } from '../programs/shared';
+import { FormError, LoadState, RefreshNotice, useFocusedData } from '../programs/shared';
 import { trainingStyles as s, useScreenOperation, type TrainingRoute } from './shared';
 import { useWorkoutPlan } from './useWorkoutPlan';
 
@@ -43,6 +43,7 @@ export function ExerciseLibrary({ programId, workoutId, exerciseInstanceId }: Tr
   };
   return <Screen>
     <Heading title="Bibliothèque d’exercices" subtitle={replacing ? 'Choisir un autre exercice prévu' : plan.data?.workout.name} back backDisabled={operation.busy} onBack={goBack} />
+    <RefreshNotice refreshError={plan.refreshError ?? catalog.refreshError} refreshing={plan.refreshing || catalog.refreshing} retry={retry} />
     {plan.loading || catalog.loading || plan.error || catalog.error || !plan.data || !catalog.data ? <LoadState
       loading={plan.loading || catalog.loading} error={plan.error ?? catalog.error} retry={retry} missing="Cette séance n’est plus disponible." /> : <View style={s.sections}>
       <View style={styles.search}>

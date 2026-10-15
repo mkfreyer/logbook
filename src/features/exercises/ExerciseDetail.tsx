@@ -5,7 +5,7 @@ import { Text, View } from 'react-native';
 import { weightModeLabel } from '../../domain/training';
 import { useTraining } from '../../store/TrainingProvider';
 import { Button, Card, colors, Heading, Screen } from '../../ui';
-import { LoadState, useFocusedData } from '../programs/shared';
+import { LoadState, RefreshNotice, useFocusedData } from '../programs/shared';
 import { trainingStyles as s } from '../training/shared';
 
 export function ExerciseDetail({ exerciseId }: { exerciseId?: string }) {
@@ -13,6 +13,7 @@ export function ExerciseDetail({ exerciseId }: { exerciseId?: string }) {
   const data = useFocusedData(useCallback(() => exerciseId ? repository.getCatalogExercise(exerciseId) : Promise.resolve(null), [repository, exerciseId]));
   const exercise = data.data;
   return <Screen compact><Heading title={exercise?.name ?? 'Fiche d’exercice'} subtitle={exercise?.isCustom ? 'Votre exercice personnalisé' : 'Catalogue Logbook'} back />
+    <RefreshNotice {...data} />
     {data.loading || data.error || !exercise ? <LoadState loading={data.loading} error={data.error} retry={data.retry} /> : <View style={s.sections}>
       <Card><View style={s.row}><Ionicons name="barbell-outline" size={36} color={colors.cyan} /><View style={s.grow}>
         <Text style={s.title}>{exercise.muscleGroup}</Text><Text style={s.body}>{exercise.equipment}</Text></View></View>

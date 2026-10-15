@@ -5,7 +5,7 @@ import { Pressable, Text, View } from 'react-native';
 
 import { useLogbook } from '../../../../src/store/LogbookProvider';
 import { Button, Card, colors, EmptyState, Heading, Screen } from '../../../../src/ui';
-import { featureStyles, LoadState, LocalNotice, routeId, useFocusedData } from '../../../../src/features/programs/shared';
+import { featureStyles, LoadState, RefreshNotice, LocalNotice, routeId, useFocusedData } from '../../../../src/features/programs/shared';
 
 export default function WorkoutsScreen() {
   const params = useLocalSearchParams<{ id: string; configuredWorkoutId?: string }>();
@@ -18,11 +18,12 @@ export default function WorkoutsScreen() {
     if (!program) return null;
     return { program, workouts: await listWorkouts(id) };
   }, [getProgram, id, listWorkouts]);
-  const { data, loading, error, retry } = useFocusedData(load);
+  const { data, loading, error, refreshError, refreshing, retry } = useFocusedData(load);
   const configuredWorkout = data?.workouts.find(workout => workout.id === configuredWorkoutId);
 
   return <Screen>
     <Heading title="Vos séances" subtitle={data?.program.name} back />
+    <RefreshNotice refreshError={refreshError} refreshing={refreshing} retry={retry} />
     {loading || error || !data ? <LoadState loading={loading} error={error} retry={retry}
       missing="Ce programme n’est pas disponible." /> : <View style={featureStyles.sections}>
         {configuredWorkout ? <Card style={{ gap: 6 }}>

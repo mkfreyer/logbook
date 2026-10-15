@@ -25,6 +25,14 @@ export function useHistoryClock() {
   }, []));
   return now;
 }
+
+/** Same calendar bounds keep the snapshot; foreground still requests fresh rows. */
+export function useHistoryForegroundRefresh(retry: () => void) {
+  useFocusEffect(useCallback(() => {
+    const subscription = AppState.addEventListener('change', state => { if (state === 'active') retry(); });
+    return () => subscription.remove();
+  }, [retry]));
+}
 export function PeriodPicker({ value, onChange }: { value: HistoryPeriod; onChange(value: HistoryPeriod): void }) {
   return <View accessibilityRole="radiogroup" accessibilityLabel="Période" style={h.tabs}>
     {historyPeriods.map(item => <HistoryTab key={item.id} label={item.label} selected={value === item.id} onPress={() => onChange(item.id)} />)}

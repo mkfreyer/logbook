@@ -5,7 +5,7 @@ import { StyleSheet, Text, View } from 'react-native';
 
 import { useLogbook } from '../../../src/store/LogbookProvider';
 import { Button, Card, colors, Heading, Screen } from '../../../src/ui';
-import { featureStyles, FormError, LoadState, LocalNotice, routeId, useFocusedData } from '../../../src/features/programs/shared';
+import { featureStyles, FormError, LoadState, RefreshNotice, LocalNotice, routeId, useFocusedData } from '../../../src/features/programs/shared';
 import { useConfirmedDelete } from '../../../src/features/programs/useConfirmedDelete';
 
 export default function ProgramScreen() {
@@ -13,7 +13,7 @@ export default function ProgramScreen() {
   const id = routeId(params.id);
   const { getProgram, deleteProgram } = useLogbook();
   const load = useCallback(() => id ? getProgram(id) : Promise.resolve(null), [getProgram, id]);
-  const { data: program, loading, error, retry } = useFocusedData(load);
+  const { data: program, loading, error, refreshError, refreshing, retry } = useFocusedData(load);
   const deletion = useConfirmedDelete({
     title: 'Supprimer le programme ?',
     message: `Le programme « ${program?.name ?? ''} » et toutes ses séances planifiées seront supprimés. Cette action est définitive.`,
@@ -24,6 +24,7 @@ export default function ProgramScreen() {
 
   return <Screen>
     <Heading title="Votre programme" back backDisabled={deletion.busy} />
+    <RefreshNotice refreshError={refreshError} refreshing={refreshing} retry={retry} />
     {loading || error || !program ? <LoadState loading={loading} error={error} retry={retry}
       missing="Ce programme n’est pas disponible. Retrouvez vos programmes depuis l’accueil." /> :
       <View style={featureStyles.sections}>

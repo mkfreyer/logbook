@@ -45,6 +45,21 @@ Ce correctif suit `534a8a6` et ne change ni la navigation restaurée ni SQLite v
 
 Une vidéo des allers-retours rapides peut aider à confirmer l’absence de clignotement natif. Les tests Linux ne constituent pas cette validation sur iPhone.
 
+## Navigation stable dans les programmes et séances
+
+Ce correctif suit `c0b5ccb`. Utiliser les commandes PowerShell ci-dessus, sans effacer le stockage du projet. Les lectures restent locales et aucun programme de démonstration n’est ajouté.
+
+1. Ouvrir **Votre programme**, puis **Vos séances** et une séance configurée. Un premier accès sans résultat disponible peut afficher une carte « Chargement… ». Au retour vers un écran déjà ouvert, ses cartes et actions doivent rester visibles pendant la relecture.
+2. Faire plusieurs allers-retours rapides entre programme, séances, séance et exercice. Vérifier aussi les retours depuis une série modifiée. Aucun écran presque vide ne doit remplacer brièvement le contenu. Sur une liste longue, revenir après avoir défilé : la relecture seule ne doit pas remettre le contenu en haut.
+3. Renommer un programme, revenir à son détail, puis renommer/ajouter une séance. Vérifier l’arrivée des nouvelles valeurs et la conservation des autres séances. Modifier le repos d’une série, revenir à l’exercice puis à la séance : la nouvelle valeur doit apparaître sans spinner remplaçant toute la page.
+4. Ouvrir alternativement deux programmes aux noms distincts. Aucun nom, séance ou exercice du premier ne doit apparaître comme appartenant au second. Tester aussi deux séances différentes d’un même programme.
+5. Avec des éléments de test dont vous acceptez la suppression, supprimer une série, un exercice prévu, une séance puis un programme. Vérifier leur disparition des listes et la conservation des autres éléments et des historiques. Une route devenue indisponible doit indiquer **Introuvable**, sans présenter l’élément supprimé comme valide.
+6. Vérifier bibliothèque, fiche d’exercice et historiques au retour depuis un sous-écran : mêmes filtres et informations pendant une relecture du même contexte. Un changement de programme, exercice ou période peut nécessiter un chargement initial distinct.
+7. Si une lecture échoue, le contenu déjà connu doit rester visible avec **Données non à jour · Réessayer**. Sans résultat disponible, une vraie erreur propose **Réessayer**. Les erreurs et réponses retardées sont injectées automatiquement dans les tests ; ne pas corrompre SQLite pour les reproduire sur iPhone. Le mode avion ne fait pas échouer cette base locale.
+8. Confirmer les swipes, les statistiques silencieuses de l’accueil, le Switch sonore et l’export, puis reprendre un entraînement : une seule série active, repos et passage manuel inchangés.
+
+Les modifications réelles d’une liste peuvent en réduire la hauteur et ajuster normalement le défilement. Après démontage complet ou fermeture du projet, un chargement initial reste attendu. Les tests automatiques ne remplacent pas votre vérification visuelle sur iPhone.
+
 ## Paramètres
 
 1. Sur l’accueil, toucher l’engrenage. Dans Musculation, vérifier aussi le bouton **Paramètres**. Les deux ouvrent le même écran.

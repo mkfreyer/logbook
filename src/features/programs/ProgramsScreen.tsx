@@ -6,11 +6,11 @@ import { useUniverseIsActive, useUniverseNavigation } from '../../navigation/Uni
 import { UniverseScreen } from '../../navigation/UniverseScreen';
 import { useLogbook } from '../../store/LogbookProvider';
 import { Button, Card, colors, EmptyState, Heading } from '../../ui';
-import { featureStyles, LoadState, LocalNotice } from './shared';
+import { featureStyles, LoadState, LocalNotice, RefreshNotice } from './shared';
 import { ResumeSessionCard } from '../sessions/ResumeSessionCard';
 
 export default function ProgramsScreen() {
-  const { programs, loading, error, refresh } = useLogbook();
+  const { programs, loading, hasLoaded, error, refresh } = useLogbook();
   const { goTo } = useUniverseNavigation();
   const active = useUniverseIsActive();
   useFocusEffect(useCallback(() => { if (active) void refresh(); }, [active, refresh]));
@@ -23,7 +23,8 @@ export default function ProgramsScreen() {
       <Button label="Historique des entraînements" icon="stats-chart-outline" variant="ghost" onPress={() => router.push('/history')} />
       <Button label="Bibliothèque d’exercices" icon="barbell-outline" variant="ghost" onPress={() => router.push('/exercises')} />
       <Button label="Paramètres" icon="settings-outline" variant="ghost" onPress={() => router.push('/settings')} />
-      {loading || error ? <LoadState loading={loading} error={error} retry={() => { void refresh(); }} /> :
+      <RefreshNotice refreshError={hasLoaded ? error : null} retry={() => { void refresh(); }} />
+      {!hasLoaded && (loading || error) ? <LoadState loading={loading} error={error} retry={() => { void refresh(); }} /> :
         programs.length === 0 ? <Card>
           <EmptyState icon="barbell-outline" title="Un programme à votre image"
             description="Vous n’avez pas encore de programme. Créez le vôtre et organisez vos premières séances." />

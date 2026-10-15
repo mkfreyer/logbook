@@ -7,7 +7,7 @@ import type { ExerciseCatalogItem } from '../../domain/training';
 import { weightModeLabel } from '../../domain/training';
 import { useTraining } from '../../store/TrainingProvider';
 import { Button, Card, colors, EmptyState, Heading, Screen } from '../../ui';
-import { FormError, LoadState, useFocusedData } from '../programs/shared';
+import { FormError, LoadState, RefreshNotice, useFocusedData } from '../programs/shared';
 import { useScreenOperation } from '../training/shared';
 import { sessionStyles as s, useSessionData } from './shared';
 import { useSessionConfirmation } from './useSessionConfirmation';
@@ -41,6 +41,7 @@ export function SessionReplacement({ sessionId, exerciseId, setId }: { sessionId
   };
   return <Screen compact>
     <Heading title="Remplacer l’exercice" subtitle="Uniquement cet entraînement" back backDisabled={busy} onBack={back} />
+    <RefreshNotice {...catalog} />
     {data.loading || catalog.loading || data.error || catalog.error || !current ? <LoadState
       loading={data.loading || catalog.loading} error={data.error ?? catalog.error}
       retry={() => { data.retry(); catalog.retry(); }} missing="Revenez à la série active pour remplacer son exercice. Le repos doit être terminé manuellement." /> : <View style={s.sections}>

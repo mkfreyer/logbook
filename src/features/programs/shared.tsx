@@ -1,8 +1,10 @@
 import { Ionicons } from '@expo/vector-icons';
 import { useFocusEffect } from 'expo-router';
-import { useCallback, useState } from 'react';
-import { ActivityIndicator, StyleSheet, Text, View } from 'react-native';
+import { useCallback, useRef, useState } from 'react';
+import { ActivityIndicator, Pressable, StyleSheet, Text, View } from 'react-native';
 
+import { NotFoundError } from '../../db/repository';
+import { TrainingNotFoundError } from '../../db/trainingRepository';
 import { Button, Card, colors, EmptyState } from '../../ui';
 
 export function routeId(value: string | string[] | undefined): string | undefined {
@@ -13,34 +15,66 @@ export function messageFor(error: unknown): string {
   return error instanceof Error ? error.message : 'Une erreur est survenue. Réessayez.';
 }
 
-/** Refresh route data when returning from an editor, ignoring late responses after blur. */
+/** One local snapshot, scoped to a memoized reader (including its route IDs).
+ * Returning to the same screen refreshes silently; a different reader hides the
+ * old snapshot during render, before the focus effect can start its new read. */
 export function useFocusedData<T>(load: () => Promise<T>) {
-  const [data, setData] = useState<T | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [state, setState] = useState({ reader: load, data: null as T | null,
+    reading: true, settled: false, error: null as string | null });
   const [revision, setRevision] = useState(0);
+  const reading = useRef(false);
 
   useFocusEffect(
     useCallback(() => {
       let active = true;
-      setLoading(true);
-      setError(null);
-      void load()
-        .then((result) => {
-          if (active) setData(result);
-        })
-        .catch((failure: unknown) => {
-          if (active) setError(messageFor(failure));
-        })
-        .finally(() => {
-          if (active) setLoading(false);
-        });
-      return () => { active = false; };
+      reading.current = true;
+      setState(current => current.reader === load ? { ...current, reading: true }
+        : { reader: load, data: null, reading: true, settled: false, error: null });
+      void (async () => {
+        try {
+          const result = await load();
+          // null is an authoritative missing result, not a failed refresh: it
+          // must evict the previous item, even if the following retry fails.
+          if (active) setState({ reader: load, data: result, reading: false, settled: true, error: null });
+        } catch (failure: unknown) {
+          if (active) {
+            if (failure instanceof NotFoundError || failure instanceof TrainingNotFoundError) {
+              setState({ reader: load, data: null, reading: false, settled: true, error: null });
+            } else setState(current => current.reader === load
+              ? { ...current, reading: false, settled: true, error: messageFor(failure) } : current);
+          }
+        } finally {
+          if (active) reading.current = false;
+        }
+      })();
+      return () => { active = false; reading.current = false; };
     }, [load, revision]),
   );
 
-  const retry = useCallback(() => setRevision((value) => value + 1), []);
-  return { data, loading, error, retry };
+  const retry = useCallback(() => {
+    if (reading.current) return;
+    reading.current = true;
+    setRevision(value => value + 1);
+  }, []);
+  const matches = state.reader === load;
+  const data = matches ? state.data : null;
+  const error = matches ? state.error : null;
+  return { data, loading: !matches || state.reading && !state.settled,
+    refreshing: matches && state.reading && state.settled,
+    // Existing LoadState guards receive only blocking errors. A successful
+    // empty list is valid data too; it must not become an error screen.
+    error: data == null ? error : null, refreshError: data != null ? error : null, retry };
+}
+
+/** Kept separate from LoadState so existing content and scroll views stay mounted. */
+export function RefreshNotice({ refreshError, retry, refreshing = false }: {
+  refreshError?: string | null; retry(): void; refreshing?: boolean;
+}) {
+  if (!refreshError) return null;
+  return <Pressable accessibilityRole="button" accessibilityLabel="Données non à jour, réessayer"
+    accessibilityState={{ disabled: refreshing }} disabled={refreshing} onPress={retry} style={styles.refreshNotice}>
+    <Text style={styles.noticeText}>Données non à jour · Réessayer</Text>
+  </Pressable>;
 }
 
 export function LoadState({ loading, error, retry, missing }: {
@@ -50,10 +84,10 @@ export function LoadState({ loading, error, retry, missing }: {
   missing?: string;
 }) {
   if (loading) {
-    return <View style={styles.loading} accessibilityRole="progressbar" accessibilityLabel="Chargement">
-      <ActivityIndicator color={colors.blue} size="large" />
+    return <Card><View style={styles.loading} accessible accessibilityRole="progressbar" accessibilityLabel="Chargement">
+      <ActivityIndicator color={colors.blue} size="small" />
       <Text style={styles.muted}>Chargement…</Text>
-    </View>;
+    </View></Card>;
   }
   return <Card>
     <EmptyState icon="alert-circle-outline" title={error ? 'Chargement impossible' : 'Introuvable'}
@@ -90,7 +124,8 @@ export const featureStyles = StyleSheet.create({
 });
 
 const styles = StyleSheet.create({
-  loading: { paddingVertical: 60, alignItems: 'center', gap: 16 },
+  loading: { minHeight: 144, justifyContent: 'center', alignItems: 'center', gap: 16 },
+  refreshNotice: { minHeight: 44, justifyContent: 'center', paddingVertical: 8 },
   muted: { color: colors.muted, fontSize: 15 },
   error: { color: colors.danger, fontSize: 14, lineHeight: 21 },
   notice: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 7, paddingVertical: 6 },

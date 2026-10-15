@@ -5,7 +5,7 @@ import type { CatalogExerciseInput, ExerciseCatalogItem, WeightMode } from '../.
 import { weightModeLabel } from '../../domain/training';
 import { useTraining } from '../../store/TrainingProvider';
 import { Button, Card, Field, Heading, Screen } from '../../ui';
-import { FormError, LoadState, useFocusedData } from '../programs/shared';
+import { FormError, LoadState, RefreshNotice, useFocusedData } from '../programs/shared';
 import { Choice } from '../sessions/shared';
 import { trainingStyles as s, useScreenOperation } from '../training/shared';
 
@@ -27,6 +27,7 @@ export function CatalogExerciseEditor({ exerciseId }: { exerciseId?: string }) {
     }, true);
   };
   return <Screen><Heading title={editing ? 'Modifier votre exercice' : 'Votre exercice'} subtitle="Référence personnelle" back backDisabled={operation.busy} />
+    <RefreshNotice {...data} />
     {data.loading || data.error || editing && !data.data?.isCustom ? <LoadState loading={data.loading} error={data.error} retry={data.retry} missing="Seuls vos exercices personnalisés peuvent être modifiés." /> : <View style={s.sections}>
       <Text style={s.body}>{editing ? 'Le même exercice sera mis à jour dans vos préparations. Les performances passées gardent leurs noms et modes de charge enregistrés. Si vous changez le mode, vérifiez les charges prévues.' : 'Cette référence restera dans votre bibliothèque, sans créer de programme ni de séance.'}</Text>
       <Card><Field label="Nom de l’exercice" value={draft.name} onChangeText={value => change('name', value)} maxLength={80} />

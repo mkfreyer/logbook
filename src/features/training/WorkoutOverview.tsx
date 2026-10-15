@@ -5,13 +5,13 @@ import { Pressable, Text, View } from 'react-native';
 import type { WorkoutSession } from '../../domain/session';
 import { useSessions } from '../../store/SessionProvider';
 import { Button, Card, colors, EmptyState, Heading, Screen } from '../../ui';
-import { FormError, LoadState, LocalNotice } from '../programs/shared';
+import { FormError, LoadState, RefreshNotice, LocalNotice } from '../programs/shared';
 import { useActiveSession } from '../sessions/ResumeSessionCard';
 import { OrderControls, SetTargetSummary, swappedIds, trainingStyles as s, useScreenOperation, type TrainingRoute } from './shared';
 import { useWorkoutPlan } from './useWorkoutPlan';
 
 export function WorkoutOverview({ programId, workoutId }: TrainingRoute) {
-  const { data, loading, error, retry, training } = useWorkoutPlan({ programId, workoutId });
+  const { data, loading, error, refreshError, refreshing, retry, training } = useWorkoutPlan({ programId, workoutId });
   const operation = useScreenOperation();
   const sessions = useSessions();
   const active = useActiveSession();
@@ -39,11 +39,12 @@ export function WorkoutOverview({ programId, workoutId }: TrainingRoute) {
     else router.replace({ pathname: '/', params: { universe: 'musculation' } });
   };
   const move = (index: number, delta: -1 | 1) => {
-    if (!data) return;
+    if (!data || refreshing) return;
     void operation.run(() => training.reorderWorkoutExercises(data.workout.id, swappedIds(data.exercises, index, delta)), retry);
   };
   return <Screen>
     <Heading title={data?.workout.name ?? 'Votre séance'} subtitle={data?.program.name} back backDisabled={operation.busy} onBack={goBack} />
+    <RefreshNotice refreshError={refreshError} refreshing={refreshing} retry={retry} />
     {loading || error || !data ? <LoadState loading={loading} error={error} retry={retry} missing="Cette séance n’est plus disponible." /> : <View style={s.sections}>
       {data.workout.notes ? <Text style={s.body}>{data.workout.notes}</Text> : null}
       <Text style={s.eyebrow}>EXERCICES PRÉVUS</Text>
@@ -61,7 +62,7 @@ export function WorkoutOverview({ programId, workoutId }: TrainingRoute) {
             <Ionicons name="chevron-forward" size={19} color={colors.muted} />
           </Pressable>
           {exercise.sets.length > 0 ? <View style={s.sets}>{exercise.sets.map((series, seriesIndex) => <SetTargetSummary key={series.id} compact series={series} mode={exercise.exercise.weightMode} index={seriesIndex} />)}</View> : null}
-          <OrderControls label={exercise.exercise.name} first={index === 0} last={index === data.exercises.length - 1} disabled={operation.busy}
+          <OrderControls label={exercise.exercise.name} first={index === 0} last={index === data.exercises.length - 1} disabled={operation.busy || refreshing}
             onUp={() => move(index, -1)} onDown={() => move(index, 1)} />
         </Card>)}
       </View>}

@@ -4,7 +4,7 @@ import { useCallback, useState } from 'react';
 import { Pressable, Text, View } from 'react-native';
 import { useTraining } from '../../store/TrainingProvider';
 import { Button, Card, colors, EmptyState, Field, Heading, Screen } from '../../ui';
-import { LoadState, useFocusedData } from '../programs/shared';
+import { LoadState, RefreshNotice, useFocusedData } from '../programs/shared';
 import { trainingStyles as s } from '../training/shared';
 
 export function ExerciseCatalog() {
@@ -17,6 +17,7 @@ export function ExerciseCatalog() {
   return <Screen compact><Heading title="Bibliothèque d’exercices" subtitle="Vos références, distinctes des programmes" back />
     <Field label="Rechercher dans la bibliothèque" value={query} onChangeText={setQuery} placeholder="Nom, muscle, matériel" />
     <Button label="Créer un exercice personnalisé" variant="secondary" icon="add" onPress={() => router.push('/exercises/new')} />
+    <RefreshNotice {...data} />
     {data.loading || data.error || !found ? <LoadState loading={data.loading} error={data.error} retry={data.retry} /> : found.length === 0 ? <Card>
       <EmptyState icon="search-outline" title="Aucun exercice trouvé" description="Essayez un autre nom, muscle ou matériel." /></Card> : <View style={s.cards}>
       {found.map(item => <Pressable key={item.id} accessibilityRole="button" accessibilityLabel={`Fiche de ${item.name}`}

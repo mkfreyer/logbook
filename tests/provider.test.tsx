@@ -42,6 +42,15 @@ beforeEach(() => {
 afterEach(cleanup);
 
 describe('LogbookProvider : suppressions et actualisation', () => {
+  test('distingue une liste vide confirmée d’une première lecture en échec', async () => {
+    mockRepository.listPrograms.mockRejectedValueOnce(new Error('initial read failure'));
+    await setup(); expect(store.hasLoaded).toBe(false); expect(store.error).not.toBeNull();
+    mockRepository.listPrograms.mockResolvedValue([]);
+    await act(async () => store.refresh()); expect(store.hasLoaded).toBe(true); expect(store.programs).toEqual([]);
+    mockRepository.listPrograms.mockRejectedValueOnce(new Error('refresh failure'));
+    await act(async () => store.refresh()); expect(store.hasLoaded).toBe(true); expect(store.programs).toEqual([]); expect(store.error).not.toBeNull();
+  });
+
   test('deleteProgram supprime la carte et publie la liste actualisée avant de terminer', async () => {
     await setup();
     mockRepository.listPrograms.mockResolvedValue([second]);
