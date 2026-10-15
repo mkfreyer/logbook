@@ -13,6 +13,20 @@ export interface SessionSummary {
   tonnageByMode: Record<WeightMode, number>; exercises: ExerciseSummary[];
 }
 
+/** Split returns to a previous exercise into separate consecutive blocks, so a
+ * historical detail follows actual validation order even after M2 free choices. */
+export function chronologicalExerciseBlocks(summary: SessionSummary): ExerciseSummary[] {
+  const ordered = summary.exercises.flatMap(group => group.performances.map(item => ({ group, item })))
+    .sort((a, b) => a.item.performance.sortOrder - b.item.performance.sortOrder);
+  const blocks: ExerciseSummary[] = [];
+  for (const { group, item } of ordered) {
+    const previous = blocks.at(-1);
+    if (previous?.exercise.id === group.exercise.id) previous.performances.push(item);
+    else blocks.push({ exercise: group.exercise, replacedFrom: group.replacedFrom, performances: [item] });
+  }
+  return blocks;
+}
+
 /** Tonnage is the sum of recorded kg × reps, including warm-ups. Per-hand kg are
  * counted once (no assumed number of hands); additional kg exclude body weight.
  * A missing weight is excluded, never imputed. This is not total displaced mass. */

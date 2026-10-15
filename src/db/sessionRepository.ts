@@ -3,6 +3,7 @@ import type { ExerciseCatalogItem, SetTemplate, WeightMode } from '../domain/tra
 import { selectSessionStep, type ActualSetInput, type PerformedSet, type RestInterval, type RestPause,
   type SessionExercise, type SessionSet, type SetTargets, type WorkoutSession, type ExerciseReplacement, type ExerciseChoice } from '../domain/session';
 import { calculateRestTiming } from '../domain/restTimer';
+import { HistoryRepository } from './historyRepository';
 
 export class SessionStateError extends Error {
   constructor(message: string) { super(message); this.name = 'SessionStateError'; }
@@ -52,6 +53,7 @@ function actual(input: ActualSetInput): ActualSetInput {
 export class SessionRepository {
   private pendingWrite: Promise<void> = Promise.resolve();
   private readonly listeners = new Set<() => void>();
+  readonly history = new HistoryRepository(operation => this.read(() => operation(this.db)));
   constructor(private readonly db: Database, private readonly idFactory: () => string,
     private readonly now: () => string = () => new Date().toISOString()) {}
 
