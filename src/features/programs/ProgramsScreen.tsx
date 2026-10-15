@@ -20,7 +20,7 @@ export default function ProgramsScreen() {
       action={<Button label="Accueil" icon="home-outline" variant="ghost" onPress={() => goTo('home')} />} />
     <View style={featureStyles.sections}>
       <ResumeSessionCard active={active} />
-      <Button label="Bilans de séances" icon="checkmark-done-outline" variant="ghost" onPress={() => router.push('/sessions/completed')} />
+      <Button label="Historique des entraînements" icon="stats-chart-outline" variant="ghost" onPress={() => router.push('/history')} />
       {loading || error ? <LoadState loading={loading} error={error} retry={() => { void refresh(); }} /> :
         programs.length === 0 ? <Card>
           <EmptyState icon="barbell-outline" title="Un programme à votre image"

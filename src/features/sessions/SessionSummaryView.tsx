@@ -3,26 +3,31 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { useState } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import type { WorkoutSession } from '../../domain/session';
-import { formatSessionDuration, summarizeSession } from '../../domain/sessionSummary';
+import { chronologicalExerciseBlocks, formatSessionDuration, summarizeSession } from '../../domain/sessionSummary';
+import type { SessionExercise } from '../../domain/session';
 import { Button, Card, colors, Heading, Screen } from '../../ui';
 import { LoadState } from '../programs/shared';
 import { sessionSeriesTitle, sessionStyles as s } from './shared';
 
 const number = (value: number) => value.toLocaleString('fr-FR', { maximumFractionDigits: 2 });
 
-export function SessionSummaryView({ session, onExit, onRetry }: { session: WorkoutSession; onExit(): void; onRetry(): void }) {
+export function SessionSummaryView({ session, onExit, onRetry, historical = false, onExercise }: {
+  session: WorkoutSession; onExit(): void; onRetry(): void; historical?: boolean; onExercise?(exercise: SessionExercise): void;
+}) {
   const [details, setDetails] = useState(false);
+  const [expandedRest, setExpandedRest] = useState<string | null>(null);
   let summary;
   try { summary = summarizeSession(session); } catch (failure) {
     return <Screen><Heading title="Bilan de séance" back onBack={onExit} /><LoadState loading={false}
       error={failure instanceof Error ? failure.message : 'Bilan indisponible.'} retry={onRetry} /></Screen>;
   }
-  return <Screen compact footer={<Button label="Retour aux programmes" icon="arrow-back" onPress={onExit} />}>
-    <Heading title="Séance terminée" back onBack={onExit} />
+  return <Screen compact footer={<Button label={historical ? 'Retour à l’historique' : 'Retour aux programmes'} icon="arrow-back" onPress={onExit} />}>
+    <Heading title={historical ? 'Détail de séance' : 'Séance terminée'} back onBack={onExit} />
     <LinearGradient colors={['#123954', '#0c1d2c']} style={styles.hero}>
       <View style={styles.trophy}><Ionicons name="trophy-outline" color={colors.cyan} size={36} /></View>
       <Text style={s.title}>Entraînement enregistré</Text>
       <Text style={s.subtitle}>{session.workoutName}</Text>
+      <Text style={s.help}>{session.programName}</Text>
       <Text style={s.help}>{new Date(session.finishedAt!).toLocaleString('fr-FR', { dateStyle: 'medium', timeStyle: 'short' })}</Text>
     </LinearGradient>
     <View style={styles.grid}>
@@ -46,15 +51,30 @@ export function SessionSummaryView({ session, onExit, onRetry }: { session: Work
       </Card>}
     </View>
     <Text style={s.eyebrow}>EXERCICES RÉALISÉS</Text>
-    {summary.exercises.map(({ exercise, performances, replacedFrom }) => <Card key={exercise.id} style={{ gap: 10 }}>
-      <View style={s.row}><Ionicons name="barbell-outline" color={colors.cyan} size={26} /><View style={{ flex: 1 }}>
+    {chronologicalExerciseBlocks(summary).map(({ exercise, performances, replacedFrom }) => <Card key={performances[0]!.performance.id} style={{ gap: 10 }}>
+      <Pressable accessibilityRole={onExercise ? 'button' : undefined} accessibilityLabel={onExercise ? `Historique : ${exercise.name}` : undefined}
+        disabled={!onExercise} onPress={() => onExercise?.(exercise)} style={[s.row, { minHeight: 44 }]}>
+        <Ionicons name="barbell-outline" color={colors.cyan} size={26} /><View style={{ flex: 1 }}>
         <Text style={s.subtitle}>{exercise.name}</Text><Text style={s.help}>{performances.length} série{performances.length > 1 ? 's' : ''} réalisée{performances.length > 1 ? 's' : ''}</Text>
-      </View></View>
+      </View>{onExercise && <Ionicons name="chevron-forward" color={colors.cyan} size={18} />}</Pressable>
       {replacedFrom && <Text style={[s.help, { color: colors.cyan }]}>En remplacement de {replacedFrom.name}</Text>}
-      {performances.map(({ performance, series }) => <View key={performance.id} style={styles.performance}>
+      {performances.map(({ performance, series }) => {
+        const rest = session.rests.find(item => item.performedSetId === performance.id);
+        return <View key={performance.id} style={styles.performance}>
         <Text style={s.help}>{performance.sortOrder + 1}. {sessionSeriesTitle(series)}</Text>
         <Text style={s.body}>{performance.weightKg === null ? 'Charge non renseignée' : `${number(performance.weightKg)} kg${exercise.weightMode === 'per_hand' ? ' / haltère' : exercise.weightMode === 'additional' ? ' ajoutés' : ''}`} · {performance.reps} reps{performance.rir === null ? '' : ` · RIR ${performance.rir}`}</Text>
-      </View>)}
+        <Pressable accessibilityRole="button" accessibilityLabel={`Repos de la série réalisée ${performance.sortOrder + 1}`} accessibilityState={{ expanded: expandedRest === performance.id }}
+          onPress={() => setExpandedRest(value => value === performance.id ? null : performance.id)} style={{ minHeight: 44, justifyContent: 'center' }}>
+          <Text style={[s.help, { color: colors.cyan }]}>Horaires et repos {expandedRest === performance.id ? '−' : '+'}</Text>
+        </Pressable>
+        {expandedRest === performance.id && <View style={{ gap: 4 }}>
+          <Text style={s.help}>Validée le {new Date(performance.performedAt).toLocaleString('fr-FR')}</Text>
+          {rest ? <>
+            <Text style={s.help}>Repos prévu : {rest.plannedSeconds} s · Repos réel : {rest.chronologicalMs === null ? 'non terminé' : formatSessionDuration(rest.chronologicalMs)}</Text>
+            <Text style={s.help}>Minuteur actif : {rest.activeMs === null ? '—' : formatSessionDuration(rest.activeMs)} · {rest.pauses.length} pause(s). Le repos réel inclut les pauses.</Text>
+          </> : <Text style={s.help}>Aucun intervalle de repos enregistré après cette série.</Text>}
+        </View>}
+      </View>; })}
     </Card>)}
     <Text style={s.help}>Les numéros indiquent l’ordre réel de validation. Vos résultats et vos repos sont conservés sur cet iPhone.</Text>
   </Screen>;

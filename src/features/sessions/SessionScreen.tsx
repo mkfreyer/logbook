@@ -62,7 +62,8 @@ export function SessionScreen({ sessionId }: { sessionId?: string }) {
     <Button label="Valider la série" icon="checkmark" loading={operation.busy} onPress={validate} />
   </View> : undefined;
   if (!data.loading && !data.error && session && step?.phase === 'completed') {
-    return <SessionSummaryView session={session} onExit={leave} onRetry={data.retry} />;
+    return <SessionSummaryView session={session} onExit={leave} onRetry={data.retry}
+      onExercise={exercise => router.push({ pathname: '/history/exercises/[exerciseId]', params: { exerciseId: exercise.sourceCatalogExerciseId, mode: exercise.weightMode } })} />;
   }
   return <Screen compact footer={footer}>
     <Heading title={title} subtitle={step?.phase === 'rest' ? currentExercise?.name : exerciseIndex ? `${progressLabel} ${exerciseIndex} sur ${exerciseCount}` : undefined}
