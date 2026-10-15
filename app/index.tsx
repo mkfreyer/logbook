@@ -6,12 +6,12 @@ import type { UniverseId } from '../src/navigation/UniverseContext';
 import { UniversePager, type UniversePage } from '../src/navigation/UniversePager';
 
 export default function UniversesScreen() {
-  const { universe } = useLocalSearchParams<{ universe?: string }>();
+  const { universe, universeReceipt } = useLocalSearchParams<{ universe?: string; universeReceipt?: string }>();
   const pages = useMemo<UniversePage[]>(() => [
     { id: 'home', label: 'Accueil', content: <HomeScreen /> },
     { id: 'musculation', label: 'Musculation', content: <ProgramsScreen /> },
   ], []);
   const selectedId: UniverseId = pages.find(page => page.id === universe)?.id ?? 'home';
-  const select = useCallback((id: UniverseId) => router.setParams({ universe: id }), []);
-  return <UniversePager pages={pages} selectedId={selectedId} onSelect={select} />;
+  const select = useCallback((id: UniverseId, receipt: string) => router.setParams({ universe: id, universeReceipt: receipt }), []);
+  return <UniversePager pages={pages} selectedId={selectedId} selectionReceipt={universeReceipt} onSelect={select} />;
 }

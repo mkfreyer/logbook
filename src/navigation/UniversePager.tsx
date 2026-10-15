@@ -11,8 +11,8 @@ const timing = { duration: 260, easing: Easing.out(Easing.cubic), reduceMotion: 
 const debugGestures = __DEV__ && process.env.EXPO_PUBLIC_GESTURE_DEBUG === '1';
 
 /** Add Cardio as another page here without introducing a second navigation mechanism. */
-export function UniversePager({ pages, selectedId, onSelect }: {
-  pages: readonly UniversePage[]; selectedId: UniverseId; onSelect(id: UniverseId): void;
+export function UniversePager({ pages, selectedId, selectionReceipt, onSelect }: {
+  pages: readonly UniversePage[]; selectedId: UniverseId; selectionReceipt?: string; onSelect(id: UniverseId, receipt: string): void;
 }) {
   const { height: windowHeight } = useWindowDimensions();
   const initialIndex = Math.max(0, pages.findIndex(page => page.id === selectedId));
@@ -42,6 +42,8 @@ export function UniversePager({ pages, selectedId, onSelect }: {
   pagesRef.current = pages;
   const onSelectRef = useRef(onSelect);
   onSelectRef.current = onSelect;
+  const selectionSerial = useRef(0);
+  const pendingSelections = useRef(new Map<string, UniverseId>());
   const pageIds = useMemo(() => pages.map(page => page.id), [pages]);
   const count = pages.length;
 
@@ -49,7 +51,10 @@ export function UniversePager({ pages, selectedId, onSelect }: {
     const page = pagesRef.current[index];
     if (!page) return;
     setActiveIndex(index);
-    onSelectRef.current(page.id);
+    const receipt = String(++selectionSerial.current);
+    pendingSelections.current.set(receipt, page.id);
+    if (debugGestures) diagnose(`sélection UI #${receipt}: ${page.id}`);
+    onSelectRef.current(page.id, receipt);
     AccessibilityInfo.announceForAccessibility(page.label);
   }, []);
 
@@ -73,16 +78,27 @@ export function UniversePager({ pages, selectedId, onSelect }: {
   }, [busy, dragging, settle]);
 
   useEffect(() => {
+    if (debugGestures) diagnose(`géométrie: hauteur=${Math.round(height)}`);
     cancelAnimation(offset);
     pageHeight.value = height;
     offset.value = -current.value * height;
     busy.value = false;
     dragging.value = false;
-  }, [height, pageHeight, offset, busy, dragging, current]);
+  }, [height, pageHeight, offset, busy, dragging, current, diagnose]);
 
   useEffect(() => {
+    // Router echoes may arrive AFTER another UI-thread swipe has completed or
+    // started. An acknowledgement must not cancel/reanchor the current track.
+    if (selectionReceipt && pendingSelections.current.get(selectionReceipt) === selectedId) {
+      for (const receipt of pendingSelections.current.keys()) {
+        if (Number(receipt) <= Number(selectionReceipt)) pendingSelections.current.delete(receipt);
+      }
+      if (debugGestures) diagnose(`route: accusé #${selectionReceipt} ${selectedId} (sans déplacement)`);
+      return;
+    }
     const index = pagesRef.current.findIndex(page => page.id === selectedId);
     if (index >= 0 && index !== current.value) {
+      if (debugGestures) diagnose(`route externe: ${selectedId}, position=${Math.round(offset.value)}`);
       cancelAnimation(offset);
       current.value = index;
       offset.value = -index * pageHeight.value;
@@ -90,7 +106,7 @@ export function UniversePager({ pages, selectedId, onSelect }: {
       dragging.value = false;
       setActiveIndex(index);
     }
-  }, [selectedId, current, offset, pageHeight, busy, dragging]);
+  }, [selectedId, selectionReceipt, current, offset, pageHeight, busy, dragging, diagnose]);
 
   // UIKit activates this pan itself after the vertical threshold. The native
   // ScrollView waits only for this decision; no manual activation recognizer.

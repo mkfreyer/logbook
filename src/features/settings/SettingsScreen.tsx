@@ -45,9 +45,9 @@ export function SettingsScreen() {
     onBack={() => { if (!lock.current) router.canGoBack() ? router.back() : router.replace({ pathname: '/', params: { universe: 'musculation' } }); }} />
     <Text style={s.eyebrow}>CHRONOMÈTRE ET ALERTES</Text>
     <Card style={{ gap: 10 }}><View style={s.row}><View style={{ flex: 1 }}><Text style={s.subtitle}>Son de fin de repos</Text>
-      <Text style={s.help}>{preferences.loading ? 'Lecture du réglage…' : preferences.saving ? 'Enregistrement…' : 'Alerte au premier plan, selon le volume et le mode silencieux iOS.'}</Text></View>
+      <Text style={s.help}>{preferences.loading ? 'Lecture du réglage…' : 'Alerte au premier plan, selon le volume et le mode silencieux iOS.'}</Text></View>
       <Switch accessibilityLabel="Son de fin de repos" value={preferences.data?.restSoundEnabled ?? false}
-        disabled={preferences.loading || preferences.saving || !!preferences.error} trackColor={{ false: colors.border, true: colors.blue }}
+        disabled={preferences.loading || !!preferences.error} trackColor={{ false: colors.border, true: colors.blue }} ios_backgroundColor={colors.border}
         onValueChange={value => { void preferences.setRestSoundEnabled(value); }} /></View>
       <Text style={s.help}>Le minuteur et le passage manuel aux séries restent identiques. Aucune alerte écran verrouillé n’est garantie dans Expo Go.</Text>
       {preferences.error && <><FormError message="Le réglage n’a pas pu être lu ou enregistré. Le son reste coupé jusqu’à une lecture réussie." />

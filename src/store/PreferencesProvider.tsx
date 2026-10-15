@@ -13,24 +13,35 @@ export function PreferencesProvider({ children }: { children: ReactNode }) {
   const db = useSQLiteContext(), repository = useMemo(() => new PreferencesRepository(db), [db]);
   const [data, setData] = useState<Preferences | null>(null), [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false), [error, setError] = useState<string | null>(null), [revision, setRevision] = useState(0);
-  const lock = useRef(false), mounted = useRef(true);
+  const mounted = useRef(true), confirmed = useRef<Preferences | null>(null), desired = useRef<Preferences | null>(null);
+  const latest = useRef(0), failed = useRef(false);
   useEffect(() => { mounted.current = true; return () => { mounted.current = false; }; }, []);
   useEffect(() => {
-    let current = true; setLoading(true); setError(null);
-    void repository.getPreferences().then(value => { if (current) setData(value); })
-      .catch(failure => { if (current) setError(messageFor(failure)); })
+    let current = true; setLoading(true); setError(null); failed.current = false;
+    void repository.getPreferences().then(value => {
+      if (current) { confirmed.current = desired.current = value; setData(value); }
+    })
+      .catch(failure => { if (current) { failed.current = true; setError(messageFor(failure)); } })
       .finally(() => { if (current) setLoading(false); });
     return () => { current = false; };
   }, [repository, revision]);
   const setRestSoundEnabled = useCallback(async (enabled: boolean) => {
-    if (lock.current || !mounted.current || loading || !data) return;
-    lock.current = true; setSaving(true); setError(null);
+    if (!mounted.current || loading || !desired.current || failed.current || desired.current.restSoundEnabled === enabled) return;
+    const request = ++latest.current;
+    // UISwitch is controlled: acknowledge its native value in the SAME event.
+    // SQLite's queue serializes writes; old completions must never reset a newer intent.
+    desired.current = { restSoundEnabled: enabled };
+    setData(desired.current); setSaving(true); setError(null);
     try {
       const value = await repository.setRestSoundEnabled(enabled);
-      if (mounted.current) setData(value);
-    } catch (failure) { if (mounted.current) setError(messageFor(failure)); }
-    finally { lock.current = false; if (mounted.current) setSaving(false); }
-  }, [repository, loading, data]);
+      confirmed.current = value;
+    } catch (failure) {
+      if (mounted.current && request === latest.current) {
+        desired.current = confirmed.current; setData(confirmed.current);
+        failed.current = true; setError(messageFor(failure));
+      }
+    } finally { if (mounted.current && request === latest.current) setSaving(false); }
+  }, [repository, loading]);
   return <Context.Provider value={{ data, loading, saving, error,
     soundEnabled: Boolean(data?.restSoundEnabled && !loading && !saving && !error),
     retry: () => setRevision(value => value + 1), setRestSoundEnabled }}>{children}</Context.Provider>;

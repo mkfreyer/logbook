@@ -100,6 +100,31 @@ test('failed preference writes preserve the saved value and recover; malformed k
   await f.db.runAsync("UPDATE app_preferences SET value_json = '\"invalid\"'"); await assert.rejects(f.preferences.getPreferences());
   await assert.rejects(f.preferences.setRestSoundEnabled('false' as unknown as boolean));
 });
+test('rapid preference requests serialize real SQLite writes and persist the latest intent without touching other data', async t => {
+  const f = await fixture(t), before = await snapshot(f.db, true), original = f.db.runAsync.bind(f.db);
+  let inFlight = 0, maxInFlight = 0;
+  f.db.runAsync = async (sql, ...args) => {
+    inFlight++; maxInFlight = Math.max(maxInFlight, inFlight);
+    try { await new Promise(resolve => setTimeout(resolve, 2)); return await original(sql, ...args); }
+    finally { inFlight--; }
+  };
+  await Promise.all([false, true, false, true, false].map(value => f.preferences.setRestSoundEnabled(value)));
+  assert.equal(maxInFlight, 1);
+  const reader = new SqliteDatabase(f.path); t.after(() => reader.close());
+  assert.equal((await new PreferencesRepository(reader).getPreferences()).restSoundEnabled, false);
+  assert.deepEqual(await snapshot(f.db, true), before);
+});
+test('a failed queued preference write does not block the last intent or corrupt application data', async t => {
+  const f = await fixture(t), before = await snapshot(f.db, true), original = f.db.runAsync.bind(f.db); let writes = 0;
+  f.db.runAsync = async (sql, ...args) => {
+    if (++writes === 2) throw new Error('storage full');
+    return original(sql, ...args);
+  };
+  const results = await Promise.allSettled([false, true, false].map(value => f.preferences.setRestSoundEnabled(value)));
+  assert.deepEqual(results.map(result => result.status), ['fulfilled', 'rejected', 'fulfilled']);
+  assert.equal((await f.preferences.getPreferences()).restSoundEnabled, false);
+  assert.deepEqual(await snapshot(f.db, true), before);
+});
 test('complete JSON export preserves all table values, IDs, null/zero, targets, pauses, active/completed sessions and tied journal order', async t => {
   const f = await fixture(t); await f.preferences.setRestSoundEnabled(false); const before = await snapshot(f.db);
   const file = await exportFile(f.path);

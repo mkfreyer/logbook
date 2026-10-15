@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, expect, jest, test } from '@jest/globals';
 import { act, cleanup, fireEvent, render, waitFor } from '@testing-library/react-native';
-import { AppState, Switch } from 'react-native';
+import { AppState, Switch, Text } from 'react-native';
 import { router } from 'expo-router';
 import type { WorkoutSession } from '../src/domain/session';
 import { PreferencesProvider } from '../src/store/PreferencesProvider';
@@ -80,13 +80,79 @@ test('settings show real units, local-data risks and unavailable restoration, wi
   expect(view.getAllByRole('switch')).toHaveLength(1); expect(exportPersonalData).not.toHaveBeenCalled();
   fireEvent.press(view.getByRole('button', { name: 'Retour' })); expect(router.back).toHaveBeenCalledTimes(1);
 });
-test('changing the switch persists the value before displaying it and restores it after provider remount', async () => {
+test('changing the switch displays the intent immediately and persists it across provider remount', async () => {
   let view = render(<Screen />); await loaded(view);
   expect(view.getByLabelText('Son de fin de repos').props.value).toBe(true);
   fireEvent(view.getByLabelText('Son de fin de repos'), 'valueChange', false);
   await waitFor(() => expect(view.getByLabelText('Son de fin de repos').props.value).toBe(false));
-  expect(mockStored).toBe('false'); view.unmount();
+  await waitFor(() => expect(mockStored).toBe('false')); view.unmount();
   view = render(<Screen />); await loaded(view); expect(view.getByLabelText('Son de fin de repos').props.value).toBe(false);
+});
+test('a delayed SQLite write must not disable, revert or relayout the native switch while the latest intent is displayed', async () => {
+  const pending = deferred<void>();
+  mockWrite.mockImplementation(async (_sql, _key, value) => { await pending.promise; mockStored = value; });
+  const view = render(<Screen />); await loaded(view);
+  fireEvent(view.getByLabelText('Son de fin de repos'), 'valueChange', false);
+  expect(view.getByLabelText('Son de fin de repos').props.value).toBe(false);
+  expect(view.getByLabelText('Son de fin de repos').props.disabled).toBe(false);
+  expect(view.queryByText('Enregistrement…')).toBeNull();
+  await act(async () => { pending.resolve(); });
+  expect(mockStored).toBe('false');
+});
+test('rapid alternating taps stay responsive while ordered completions cannot overwrite the latest visible intent', async () => {
+  const jobs: { value: string; finish(): void }[] = [];
+  mockWrite.mockImplementation((_sql, _key, value) => new Promise(resolve => {
+    jobs.push({ value, finish: () => { mockStored = value; resolve(); } });
+  }));
+  const view = render(<Screen />); await loaded(view);
+  const control = view.UNSAFE_getByType(Switch);
+  act(() => { for (const value of [false, true, false, true, false]) control.props.onValueChange(value); });
+  expect(view.getByLabelText('Son de fin de repos').props.value).toBe(false);
+  expect(view.getByLabelText('Son de fin de repos').props.disabled).toBe(false);
+  for (let i = 0; i < 5; i++) {
+    await waitFor(() => expect(jobs).toHaveLength(i + 1));
+    expect(jobs[i]!.value).toBe(i % 2 ? 'true' : 'false');
+    await act(async () => { jobs[i]!.finish(); });
+    expect(view.getByLabelText('Son de fin de repos').props.value).toBe(false);
+    expect(view.getByLabelText('Son de fin de repos').props.disabled).toBe(false);
+    expect(view.queryByText('Enregistrement…')).toBeNull();
+  }
+  expect(mockWrite).toHaveBeenCalledTimes(5); expect(mockStored).toBe('false');
+  view.unmount(); const reopened = render(<Screen />); await loaded(reopened);
+  expect(reopened.getByLabelText('Son de fin de repos').props.value).toBe(false);
+});
+test('an older failed intent cannot roll back a later queued choice or disable its switch', async () => {
+  const pending = deferred<void>();
+  mockWrite.mockImplementationOnce(async () => { await pending.promise; throw new Error('Première écriture échouée'); });
+  const view = render(<Screen />); await loaded(view); const control = view.UNSAFE_getByType(Switch);
+  act(() => { control.props.onValueChange(false); control.props.onValueChange(true); });
+  await act(async () => { pending.resolve(); });
+  await waitFor(() => expect(mockStored).toBe('true'));
+  expect(view.getByLabelText('Son de fin de repos').props.value).toBe(true);
+  expect(view.getByLabelText('Son de fin de repos').props.disabled).toBe(false);
+  expect(view.queryByText(/Le réglage n’a pas pu être lu ou enregistré/)).toBeNull();
+});
+test('a failed latest write rolls back to the last actual commit, not the initial default, and retry reads SQLite', async () => {
+  const view = render(<Screen />); await loaded(view);
+  fireEvent(view.getByLabelText('Son de fin de repos'), 'valueChange', false);
+  await waitFor(() => expect(mockStored).toBe('false'));
+  mockWrite.mockRejectedValueOnce(new Error('Stockage saturé'));
+  fireEvent(view.getByLabelText('Son de fin de repos'), 'valueChange', true);
+  await view.findByText(/Le réglage n’a pas pu être lu ou enregistré/);
+  expect(view.getByLabelText('Son de fin de repos').props.value).toBe(false);
+  expect(mockStored).toBe('false');
+  fireEvent.press(view.getByText('Réessayer le réglage sonore')); await loaded(view);
+  expect(view.getByLabelText('Son de fin de repos').props.value).toBe(false);
+});
+test('leaving settings does not cancel a pending preference commit in the app-level provider', async () => {
+  const pending = deferred<void>();
+  mockWrite.mockImplementation(async (_sql, _key, value) => { await pending.promise; mockStored = value; });
+  const view = render(<PreferencesProvider><SettingsScreen /></PreferencesProvider>); await loaded(view);
+  fireEvent(view.getByLabelText('Son de fin de repos'), 'valueChange', false);
+  view.rerender(<PreferencesProvider><Text>Accueil</Text></PreferencesProvider>);
+  await act(async () => { pending.resolve(); }); expect(mockStored).toBe('false');
+  view.rerender(<PreferencesProvider><SettingsScreen /></PreferencesProvider>); await loaded(view);
+  expect(view.getByLabelText('Son de fin de repos').props.value).toBe(false);
 });
 test('the actual global rest observer plays once with the persisted preference and respects silent mode configuration', async () => {
   jest.useFakeTimers(); jest.setSystemTime(start);
@@ -100,7 +166,7 @@ test('disabling sound really mutes the active interval, including after reopenin
   jest.useFakeTimers(); jest.setSystemTime(start);
   let view = render(<Screen sound />); await loaded(view);
   fireEvent(view.getByLabelText('Son de fin de repos'), 'valueChange', false);
-  await loaded(view); expect(mockStored).toBe('false'); view.unmount();
+  await waitFor(() => expect(mockStored).toBe('false')); view.unmount();
   view = render(<Screen sound />); await loaded(view); await advance(3000);
   expect(mockPlayer.play).not.toHaveBeenCalled(); expect(mockAudioMode).not.toHaveBeenCalled();
 });
