@@ -8,5 +8,7 @@ L’application fonctionnelle reste prioritaire. Ce document réserve les retouc
 - Améliorer la distinction visuelle des programmes homonymes tout en gardant leurs identifiants stables et leurs noms capturés.
 - Évaluer des pictogrammes ou illustrations d’exercices dont la provenance est vérifiée ; conserver les icônes actuelles en attendant.
 - Vérifier l’ensemble des contrastes, zones tactiles et annonces VoiceOver pendant la future passe, sans animation décorative complexe.
+- Affiner la carte « Dernière fois » après les tests de clavier numérique, sans déplacer les champs ni concurrencer « Valider la série ».
+- Harmoniser les fiches du catalogue et les repères hebdomadaires de l’accueil, sans créer de conseils ou d’indicateurs fictifs.
 
 Ne pas refaire la navigation verticale validée et ne jamais remplir un état vide avec des performances fictives.

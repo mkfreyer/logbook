@@ -46,6 +46,7 @@ const resting: WorkoutSession = { ...initial, performances: [performed], rests: 
 const advanced: WorkoutSession = { ...resting, performances: [{ ...performed, advancedAt: stamp }], rests: [{ ...rest, endedAt: stamp, chronologicalMs: 10000, activeMs: 10000 }] };
 const allDone: WorkoutSession = { ...initial, performances: [first, second, third].map((series, index) => ({ ...performed, id: `performance-${index}`, sessionSetId: series.id, sortOrder: index, advancedAt: stamp })) };
 const mockSessions = {
+  history: { previousPerformance: jest.fn<() => Promise<null>>() },
   getSession: jest.fn<SessionRepository['getSession']>(), getActiveSession: jest.fn<SessionRepository['getActiveSession']>(),
   validateSet: jest.fn<SessionRepository['validateSet']>(), pauseRest: jest.fn<SessionRepository['pauseRest']>(),
   resumeRest: jest.fn<SessionRepository['resumeRest']>(), completeRest: jest.fn<SessionRepository['completeRest']>(),
@@ -59,6 +60,7 @@ function deferred<T>() {
 }
 beforeEach(() => {
   jest.resetAllMocks();
+  mockSessions.history.previousPerformance.mockResolvedValue(null);
   jest.spyOn(AppState, 'addEventListener').mockImplementation(() => ({ remove: jest.fn() })); mockFocusCleanups.clear();
   Object.defineProperty(AppState, 'currentState', { value: 'active', writable: true, configurable: true });
   mockSessions.getSession.mockResolvedValue(initial); mockSessions.getActiveSession.mockResolvedValue(initial);

@@ -44,6 +44,8 @@ export function ExerciseOverview({ programId, workoutId, exerciseInstanceId }: T
         </View>
         {exercise.notes ? <Text style={s.body}>{exercise.notes}</Text> : null}
         {exercise.exercise.instructions ? <Text style={s.body}>{exercise.exercise.instructions}</Text> : null}
+        <Button label="Fiche de l’exercice" variant="ghost" icon="information-circle-outline" disabled={busy}
+          onPress={() => router.push({ pathname: '/exercises/[exerciseId]', params: { exerciseId: exercise.exercise.id } })} />
       </Card>
       <Text style={s.eyebrow}>SÉRIES PRÉVUES</Text>
       {exercise.sets.length === 0 ? <Card><EmptyState icon="layers-outline" title="Votre première série"

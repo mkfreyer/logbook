@@ -21,6 +21,7 @@ export default function ProgramsScreen() {
     <View style={featureStyles.sections}>
       <ResumeSessionCard active={active} />
       <Button label="Historique des entraînements" icon="stats-chart-outline" variant="ghost" onPress={() => router.push('/history')} />
+      <Button label="Bibliothèque d’exercices" icon="barbell-outline" variant="ghost" onPress={() => router.push('/exercises')} />
       {loading || error ? <LoadState loading={loading} error={error} retry={() => { void refresh(); }} /> :
         programs.length === 0 ? <Card>
           <EmptyState icon="barbell-outline" title="Un programme à votre image"
