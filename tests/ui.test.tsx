@@ -1,7 +1,7 @@
 import { afterEach, beforeEach, describe, expect, jest, test } from '@jest/globals';
 import { act, cleanup, fireEvent, render, waitFor } from '@testing-library/react-native';
 import { router } from 'expo-router';
-import { Alert, AppState, type AlertButton } from 'react-native';
+import { Alert, AppState, StyleSheet, View, type AlertButton } from 'react-native';
 import { useSessions } from '../src/store/SessionProvider';
 import type { HomeActivity } from '../src/domain/activity';
 import { localWeek } from '../src/domain/activity';
@@ -95,6 +95,25 @@ beforeEach(() => {
 afterEach(() => { cleanup(); mockFocusCleanups.clear(); jest.restoreAllMocks(); });
 
 describe('M0 : états vides et organisation locale', () => {
+  test('la restauration M3.2 conserve les accès Paramètres M3.3 depuis les deux univers', async () => {
+    const home = render(<HomeScreen />);
+    await home.findByText('Après votre première séance terminée.');
+    fireEvent.press(home.getByRole('button', { name: 'Paramètres' }));
+    expect(router.push).toHaveBeenLastCalledWith('/settings'); home.unmount();
+    const programs = render(<ProgramsScreen />);
+    fireEvent.press(programs.getByRole('button', { name: 'Paramètres' }));
+    expect(router.push).toHaveBeenCalledTimes(2); expect(router.push).toHaveBeenLastCalledWith('/settings');
+  });
+
+  test('le bloc inférieur de l’accueil retrouve sa marge automatique M3.2 avec ses boutons inchangés', async () => {
+    const home = render(<HomeScreen />); await home.findByText('Après votre première séance terminée.');
+    const footers = home.UNSAFE_getAllByType(View).filter(node => StyleSheet.flatten(node.props.style)?.marginTop === 'auto');
+    expect(footers).toHaveLength(1);
+    expect(footers[0]!.findAll(node => node.props.accessibilityLabel === 'Musculation').length).toBeGreaterThan(0);
+    expect(footers[0]!.findAll(node => node.props.accessibilityLabel === 'Cardio, à venir').length).toBeGreaterThan(0);
+    fireEvent.press(home.getByRole('button', { name: 'Musculation' }));
+    expect(mockGoTo).toHaveBeenCalledWith('musculation');
+  });
   test('une première ouverture invite à créer sans programmes ni performances fictifs', async () => {
     const home = render(<HomeScreen />);
     expect(home.getByText('Créer mon premier programme')).toBeTruthy();

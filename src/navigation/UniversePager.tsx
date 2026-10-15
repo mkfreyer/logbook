@@ -4,7 +4,6 @@ import { Gesture, GestureDetector } from 'react-native-gesture-handler';
 import Animated, { cancelAnimation, Easing, ReduceMotion, runOnJS, useAnimatedStyle, useSharedValue, withTiming, type SharedValue } from 'react-native-reanimated';
 import { colors } from '../ui';
 import { clampDrag, canStartPageDrag, directionalDrag, isVerticalIntent, releaseIndex } from './physics';
-import { coveredPageOffset } from './presentation';
 import { UniverseNavigationContext, UniversePageContext, type PageScrollState, type UniverseId } from './UniverseContext';
 
 export interface UniversePage { id: UniverseId; label: string; content: ReactNode }
@@ -12,8 +11,8 @@ const timing = { duration: 260, easing: Easing.out(Easing.cubic), reduceMotion: 
 const debugGestures = __DEV__ && process.env.EXPO_PUBLIC_GESTURE_DEBUG === '1';
 
 /** Add Cardio as another page here without introducing a second navigation mechanism. */
-export function UniversePager({ pages, selectedId, selectionReceipt, onSelect }: {
-  pages: readonly UniversePage[]; selectedId: UniverseId; selectionReceipt?: string; onSelect(id: UniverseId, receipt: string): void;
+export function UniversePager({ pages, selectedId, onSelect }: {
+  pages: readonly UniversePage[]; selectedId: UniverseId; onSelect(id: UniverseId): void;
 }) {
   const { height: windowHeight } = useWindowDimensions();
   const initialIndex = Math.max(0, pages.findIndex(page => page.id === selectedId));
@@ -43,8 +42,6 @@ export function UniversePager({ pages, selectedId, selectionReceipt, onSelect }:
   pagesRef.current = pages;
   const onSelectRef = useRef(onSelect);
   onSelectRef.current = onSelect;
-  const selectionSerial = useRef(0);
-  const pendingSelections = useRef(new Map<string, UniverseId>());
   const pageIds = useMemo(() => pages.map(page => page.id), [pages]);
   const count = pages.length;
 
@@ -52,10 +49,7 @@ export function UniversePager({ pages, selectedId, selectionReceipt, onSelect }:
     const page = pagesRef.current[index];
     if (!page) return;
     setActiveIndex(index);
-    const receipt = String(++selectionSerial.current);
-    pendingSelections.current.set(receipt, page.id);
-    if (debugGestures) diagnose(`sélection UI #${receipt}: ${page.id}`);
-    onSelectRef.current(page.id, receipt);
+    onSelectRef.current(page.id);
     AccessibilityInfo.announceForAccessibility(page.label);
   }, []);
 
@@ -79,27 +73,16 @@ export function UniversePager({ pages, selectedId, selectionReceipt, onSelect }:
   }, [busy, dragging, settle]);
 
   useEffect(() => {
-    if (debugGestures) diagnose(`géométrie: hauteur=${Math.round(height)}`);
     cancelAnimation(offset);
     pageHeight.value = height;
     offset.value = -current.value * height;
     busy.value = false;
     dragging.value = false;
-  }, [height, pageHeight, offset, busy, dragging, current, diagnose]);
+  }, [height, pageHeight, offset, busy, dragging, current]);
 
   useEffect(() => {
-    // Router echoes may arrive AFTER another UI-thread swipe has completed or
-    // started. An acknowledgement must not cancel/reanchor the current track.
-    if (selectionReceipt && pendingSelections.current.get(selectionReceipt) === selectedId) {
-      for (const receipt of pendingSelections.current.keys()) {
-        if (Number(receipt) <= Number(selectionReceipt)) pendingSelections.current.delete(receipt);
-      }
-      if (debugGestures) diagnose(`route: accusé #${selectionReceipt} ${selectedId} (sans déplacement)`);
-      return;
-    }
     const index = pagesRef.current.findIndex(page => page.id === selectedId);
     if (index >= 0 && index !== current.value) {
-      if (debugGestures) diagnose(`route externe: ${selectedId}, position=${Math.round(offset.value)}`);
       cancelAnimation(offset);
       current.value = index;
       offset.value = -index * pageHeight.value;
@@ -107,7 +90,7 @@ export function UniversePager({ pages, selectedId, selectionReceipt, onSelect }:
       dragging.value = false;
       setActiveIndex(index);
     }
-  }, [selectedId, selectionReceipt, current, offset, pageHeight, busy, dragging, diagnose]);
+  }, [selectedId, current, offset, pageHeight, busy, dragging]);
 
   // UIKit activates this pan itself after the vertical threshold. The native
   // ScrollView waits only for this decision; no manual activation recognizer.
@@ -182,7 +165,7 @@ export function UniversePager({ pages, selectedId, selectionReceipt, onSelect }:
         onTouchStart={debugGestures ? () => diagnose('vue: toucher reçu') : undefined}
         onLayout={event => { const next = event.nativeEvent.layout.height; if (next > 0) setHeight(next); }}>
         <Animated.View testID="universe-track" style={[s.track, { height: height * count }, style]}>
-          {pages.map((page, index) => <UniversePageView key={page.id} page={page} index={index} offset={offset} pan={pan} height={height} active={index === activeIndex} scrollStates={scrollStates} />)}
+          {pages.map((page, index) => <UniversePageView key={page.id} page={page} pan={pan} height={height} active={index === activeIndex} scrollStates={scrollStates} />)}
         </Animated.View>
         {debugGestures && <View pointerEvents="none" style={s.diagnostic}>
           <Text style={s.diagnosticText}>Diagnostic geste · {activeId}</Text>
@@ -193,16 +176,14 @@ export function UniversePager({ pages, selectedId, selectionReceipt, onSelect }:
   </UniverseNavigationContext.Provider>;
 }
 
-function UniversePageView({ page, index, offset, pan, height, active, scrollStates }: {
-  page: UniversePage; index: number; offset: SharedValue<number>; pan: ReturnType<typeof Gesture.Pan>; height: number; active: boolean;
+function UniversePageView({ page, pan, height, active, scrollStates }: {
+  page: UniversePage; pan: ReturnType<typeof Gesture.Pan>; height: number; active: boolean;
   scrollStates: SharedValue<Record<string, PageScrollState>>;
 }) {
   const value = useMemo(() => ({ id: page.id, pan, scroll: scrollStates }), [page.id, pan, scrollStates]);
-  const presentation = useAnimatedStyle(() => ({ transform: [{ translateY: coveredPageOffset(index, offset.value, height) }] }));
   return <UniversePageContext.Provider value={value}>
-    <Animated.View testID={`universe-${page.id}`} style={[{ height, width: '100%', flexShrink: 0, zIndex: index, overflow: 'hidden', backgroundColor: colors.background }, presentation]}
-      pointerEvents={active ? 'auto' : 'none'} accessibilityElementsHidden={!active}
-      importantForAccessibility={active ? 'auto' : 'no-hide-descendants'}>{page.content}</Animated.View>
+    <View testID={`universe-${page.id}`} style={{ height, width: '100%' }} pointerEvents={active ? 'auto' : 'none'}
+      accessibilityElementsHidden={!active} importantForAccessibility={active ? 'auto' : 'no-hide-descendants'}>{page.content}</View>
   </UniversePageContext.Provider>;
 }
 

@@ -2,9 +2,7 @@
 
 M0 à M3.2 sont validés. **M3.3 ne sera validé qu’après votre retour sur iPhone.** Les tests Linux vérifient les données et les composants ; ils ne prouvent pas le son, Fichiers ni les gestes natifs.
 
-Après le premier retour iPhone, les paramètres et l’export fonctionnent. Le test des animations corrigées est détaillé dans [CORRECTIFS_ANIMATION_M3_3.md](CORRECTIFS_ANIMATION_M3_3.md) : bascules rapides du son, sauvegarde du dernier choix et allers-retours rapides entre univers.
-
-Le propriétaire a ensuite confirmé le Switch corrigé. Le nouveau test prioritaire est [le retour vers l’accueil](RETOUR_ACCUEIL_M3_3.md), qui ajuste la présentation des pages et le vide entre la carte et les boutons, sans changer les gestes ni le défilement.
+Les paramètres, l’export et le Switch corrigé ont été testés sur iPhone. Les modifications expérimentales du swipe M3.3 sont retirées : le test prioritaire est maintenant [la navigation M3.2 rétablie sur M3.3](NAVIGATION_M3_2_RESTAUREE.md). Ne pas suivre les anciens protocoles de compensation ou de reçus de sélection, qui ne font plus partie de l’application.
 
 ## Récupérer la version sur Windows
 

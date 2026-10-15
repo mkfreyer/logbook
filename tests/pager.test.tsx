@@ -50,7 +50,7 @@ function SamplePage({ id }: { id: UniverseId }) {
 
 function setup(selectedId: UniverseId = 'home', ids: UniverseId[] = ['home', 'musculation']) {
   const pages: UniversePage[] = ids.map(id => ({ id, label: id === 'home' ? 'Accueil' : id === 'musculation' ? 'Musculation' : 'Cardio', content: <SamplePage id={id} /> }));
-  const onSelect = jest.fn<(id: UniverseId, receipt: string) => void>();
+  const onSelect = jest.fn<(id: UniverseId) => void>();
   const view = render(<UniversePager pages={pages} selectedId={selectedId} onSelect={onSelect} />);
   fireEvent(view.getByTestId('universe-viewport'), 'layout', { nativeEvent: { layout: { height, width: 390, x: 0, y: 0 } } });
   return { view, onSelect, pages, pan: getByGestureTestId('universe-pan') as Pan };
@@ -68,12 +68,6 @@ function translation(view: View): number {
   const value = style.transform.find((entry: { translateY?: number }) => entry.translateY !== undefined).translateY as number;
   // Both signed zeros represent the same physical position.
   return value === 0 ? 0 : value;
-}
-
-function pageTop(view: View, id: UniverseId, index: number, viewportHeight = height): number {
-  const style = StyleSheet.flatten(view.getByTestId(`universe-${id}`, { includeHiddenElements: true }).props.style);
-  const compensation = style.transform?.find((item: { translateY?: number }) => item.translateY !== undefined)?.translateY ?? 0;
-  return index * viewportHeight + translation(view) + compensation;
 }
 
 function touches(pan: Pan, eventType: GestureTouchEvent['eventType'], dy = 0, dx = 0, count = 1): GestureTouchEvent {
@@ -117,56 +111,35 @@ beforeEach(() => {
 afterEach(() => { cleanup(); jest.restoreAllMocks(); });
 
 describe('The mounted vertical universe pager', () => {
-  test('returning down reveals the top of Home while Programs follows the finger, without a travelling empty strip', () => {
+  test('M3.2 restoration moves both full pages on the same track in either direction, without per-page compensation', () => {
     const { view, pan, onSelect } = setup('musculation');
     startDrag(pan, 20);
-    for (const dy of [20, 80, 200, 400, 600, 780]) {
+    for (const dy of [20, 80, 200, 400, 600]) {
       act(() => emitPan(pan, State.ACTIVE, dy));
       expect(translation(view)).toBe(-height + dy);
-      expect(pageTop(view, 'home', 0)).toBe(0);
-      expect(pageTop(view, 'musculation', 1)).toBe(dy);
+      for (const id of ['home', 'musculation']) {
+        const style = StyleSheet.flatten(view.getByTestId(`universe-${id}`, { includeHiddenElements: true }).props.style);
+        expect(style.height).toBe(height); expect(style.transform).toBeUndefined();
+      }
     }
-    expect(onSelect).not.toHaveBeenCalled();
-    act(() => emitPan(pan, State.END, 780, 0, State.ACTIVE));
-    expect(pageTop(view, 'home', 0)).toBe(0);
-    expect(pageTop(view, 'musculation', 1)).toBe(height);
+    act(() => emitPan(pan, State.END, 600, 0, State.ACTIVE));
+    expect(translation(view)).toBe(0); expect(onSelect.mock.calls).toEqual([['home']]);
+    startDrag(pan, -20); act(() => emitPan(pan, State.ACTIVE, -100));
+    expect(translation(view)).toBe(-100);
+    act(() => emitPan(pan, State.CANCELLED, -100, 0, State.ACTIVE));
+    expect(translation(view)).toBe(0); expect(onSelect).toHaveBeenCalledTimes(1);
   });
 
-  test('moving up covers a stationary Home from below and a short gesture restores the same composition', () => {
-    const { view, pan, onSelect } = setup();
-    startDrag(pan, -20);
-    for (const dy of [-20, -80, -200, -400, -600, -780, -60]) {
-      act(() => emitPan(pan, State.ACTIVE, dy));
-      expect(pageTop(view, 'home', 0)).toBe(0);
-      expect(pageTop(view, 'musculation', 1)).toBe(height + dy);
-    }
-    act(() => emitPan(pan, State.END, -60, 0, State.ACTIVE));
-    expect(pageTop(view, 'home', 0)).toBe(0); expect(pageTop(view, 'musculation', 1)).toBe(height);
-    expect(onSelect).not.toHaveBeenCalled();
-    const home = StyleSheet.flatten(view.getByTestId('universe-home').props.style);
-    const programs = StyleSheet.flatten(view.getByTestId('universe-musculation', { includeHiddenElements: true }).props.style);
-    expect(home.zIndex).toBeLessThan(programs.zIndex); expect(programs.backgroundColor).toBe(home.backgroundColor);
-    expect(programs.overflow).toBe('hidden');
-  });
-
-  test.each([State.END, State.CANCELLED])('return gesture ending with state %i restores Programs without exposing a shifted Home', state => {
-    const { view, pan, onSelect } = setup('musculation');
-    startDrag(pan, 20); act(() => emitPan(pan, State.ACTIVE, 60));
-    expect(pageTop(view, 'home', 0)).toBe(0); expect(pageTop(view, 'musculation', 1)).toBe(60);
-    act(() => emitPan(pan, state, 60, 0, State.ACTIVE));
-    expect(pageTop(view, 'home', 0)).toBe(0); expect(pageTop(view, 'musculation', 1)).toBe(0);
-    expect(view.getByTestId('universe-home', { includeHiddenElements: true }).props.pointerEvents).toBe('none');
-    expect(onSelect).not.toHaveBeenCalled();
-  });
-
-  test('the same presentation can cover the middle page with a future third page without moving either underlay', () => {
-    const { view, pan, onSelect } = setup('musculation', ['home', 'musculation', 'cardio']);
-    measure(view, 'musculation', 1200, 400); startDrag(pan, -20);
-    act(() => emitPan(pan, State.ACTIVE, -200));
-    expect(pageTop(view, 'home', 0)).toBe(0); expect(pageTop(view, 'musculation', 1)).toBe(0);
-    expect(pageTop(view, 'cardio', 2)).toBe(height - 200);
-    act(() => emitPan(pan, State.END, -200, 0, State.ACTIVE));
-    expect(pageTop(view, 'cardio', 2)).toBe(0); expect(onSelect).toHaveBeenCalledWith('cardio', expect.any(String));
+  test('M3.2 route selection and accessible buttons use the original single-id contract', () => {
+    const { view, onSelect, pages } = setup();
+    view.rerender(<UniversePager pages={pages} selectedId="musculation" onSelect={onSelect} />);
+    expect(translation(view)).toBe(-height); expect(onSelect).not.toHaveBeenCalled();
+    fireEvent.press(view.getByRole('button', { name: 'musculation vers home' }));
+    expect(translation(view)).toBe(0); expect(onSelect.mock.calls).toEqual([['home']]);
+    view.rerender(<UniversePager pages={pages} selectedId="home" onSelect={onSelect} />);
+    fireEvent.press(view.getByRole('button', { name: 'home vers musculation' }));
+    expect(onSelect.mock.calls).toEqual([['home'], ['musculation']]);
+    expect(translation(view)).toBe(-height);
   });
   test('optional development diagnostics report received events without intercepting touch input', () => {
     const { view, pan } = setup();
@@ -218,7 +191,7 @@ describe('The mounted vertical universe pager', () => {
     expect(translation(view)).toBe(-100);
     act(() => emitPan(pan, State.END, -200, 0, State.ACTIVE));
     expect(translation(view)).toBe(-height);
-    expect(onSelect).toHaveBeenCalledWith('musculation', expect.any(String));
+    expect(onSelect).toHaveBeenCalledWith('musculation');
   });
 
   test('queued layout patches preserve each page, both dimensions and the latest UI scroll offset', () => {
@@ -274,7 +247,7 @@ describe('The mounted vertical universe pager', () => {
     expect(view.queryByRole('button', { name: 'musculation vers home' })).toBeNull();
 
     fireEvent.press(view.getByRole('button', { name: 'home vers musculation' }));
-    expect(onSelect).toHaveBeenCalledWith('musculation', expect.any(String));
+    expect(onSelect).toHaveBeenCalledWith('musculation');
     expect(translation(view)).toBe(-height);
     expect(withTiming).toHaveBeenLastCalledWith(-height, expect.objectContaining({ reduceMotion: ReduceMotion.System }), expect.any(Function));
     const home = view.getByTestId('universe-home', { includeHiddenElements: true });
@@ -285,7 +258,7 @@ describe('The mounted vertical universe pager', () => {
 
     fireEvent.press(view.getByRole('button', { name: 'musculation vers home' }));
     expect(translation(view)).toBe(0);
-    expect(onSelect).toHaveBeenLastCalledWith('home', expect.any(String));
+    expect(onSelect).toHaveBeenLastCalledWith('home');
   });
 
   test('native ACTIVE events move the track before selection, in both directions without scroll measurements', () => {
@@ -299,14 +272,14 @@ describe('The mounted vertical universe pager', () => {
     act(() => emitPan(pan, State.END, -180, 0, State.ACTIVE, -160));
     expect(translation(view)).toBe(-height);
     expect(onSelect).toHaveBeenCalledTimes(1);
-    expect(onSelect).toHaveBeenLastCalledWith('musculation', expect.any(String));
+    expect(onSelect).toHaveBeenLastCalledWith('musculation');
 
     startDrag(pan, 20);
     act(() => emitPan(pan, State.ACTIVE, 75, 0, undefined, 55));
     expect(translation(view)).toBe(-height + 75);
     act(() => emitPan(pan, State.END, 75, 900, State.ACTIVE));
     expect(translation(view)).toBe(0);
-    expect(onSelect).toHaveBeenLastCalledWith('home', expect.any(String));
+    expect(onSelect).toHaveBeenLastCalledWith('home');
   });
 
   test('a short drag and backtracking restore the origin instead of claiming the opposite direction', () => {
@@ -376,7 +349,7 @@ describe('The mounted vertical universe pager', () => {
     // A fresh downward gesture at the top is now eligible to return Home.
     startDrag(pan, 20);
     act(() => emitPan(pan, State.END, 200, 0, State.ACTIVE));
-    expect(onSelect).toHaveBeenLastCalledWith('home', expect.any(String));
+    expect(onSelect).toHaveBeenLastCalledWith('home');
     expect(translation(view)).toBe(0);
   });
 
@@ -413,7 +386,7 @@ describe('The mounted vertical universe pager', () => {
     startDrag(pan, -20);
     act(() => emitPan(pan, State.END, -200, 0, State.ACTIVE));
     expect(translation(view)).toBe(-height * 2);
-    expect(onSelect).toHaveBeenCalledWith('cardio', expect.any(String));
+    expect(onSelect).toHaveBeenCalledWith('cardio');
     expect(view.getByRole('button', { name: 'cardio vers home' })).toBeTruthy();
     expect(view.queryByRole('button', { name: 'musculation vers home' })).toBeNull();
   });
@@ -456,15 +429,15 @@ describe('The mounted vertical universe pager', () => {
     expect(manager.fail).toHaveBeenCalledTimes(1);
     act(() => finish?.());
     expect(onSelect).toHaveBeenCalledTimes(1);
-    expect(onSelect).toHaveBeenCalledWith('musculation', expect.any(String));
+    expect(onSelect).toHaveBeenCalledWith('musculation');
 
     fireEvent(view.getByTestId('universe-viewport'), 'layout', { nativeEvent: { layout: { height: 650, width: 500, x: 0, y: 0 } } });
     expect(translation(view)).toBe(-650);
-    expect(StyleSheet.flatten(view.getByTestId('universe-musculation').props.style).height).toBe(650);
+    expect(view.getByTestId('universe-musculation').props.style.height).toBe(650);
     expect(onSelect).toHaveBeenCalledTimes(1);
     fireEvent.press(view.getByRole('button', { name: 'musculation vers home' }));
     expect(translation(view)).toBe(0);
-    expect(onSelect).toHaveBeenLastCalledWith('home', expect.any(String));
+    expect(onSelect).toHaveBeenLastCalledWith('home');
 
     // A resize in the middle of a drag invalidates that gesture's old geometry.
     measure(view, 'home');
@@ -480,74 +453,5 @@ describe('The mounted vertical universe pager', () => {
     expect(drag.fail).toHaveBeenCalledTimes(1);
     expect(translation(view)).toBe(0);
     expect(onSelect).toHaveBeenCalledTimes(2);
-  });
-
-  test('a delayed router acknowledgement cannot reposition the track after a newer completed swipe', () => {
-    const { view, onSelect, pan, pages } = setup();
-    startDrag(pan, -20);
-    act(() => emitPan(pan, State.END, -200, 0, State.ACTIVE));
-    expect(translation(view)).toBe(-height);
-    startDrag(pan, 20);
-    act(() => emitPan(pan, State.END, 200, 0, State.ACTIVE));
-    expect(translation(view)).toBe(0);
-    // The UI thread has already finished the return. React/router deliver the
-    // acknowledgement of the FIRST selection later than the gesture callbacks.
-    view.rerender(<UniversePager pages={pages} selectedId="musculation" selectionReceipt={onSelect.mock.calls[0]![1]} onSelect={onSelect} />);
-    expect(translation(view)).toBe(0);
-    expect(view.getByTestId('universe-home').props.pointerEvents).toBe('auto');
-    view.rerender(<UniversePager pages={pages} selectedId="home" selectionReceipt={onSelect.mock.calls[1]![1]} onSelect={onSelect} />);
-    expect(translation(view)).toBe(0);
-  });
-
-  test('late acknowledgements preserve an ongoing third gesture and its settling animation', () => {
-    const { view, onSelect, pan, pages } = setup();
-    for (const dy of [-200, 200]) { startDrag(pan, Math.sign(dy) * 20); act(() => emitPan(pan, State.END, dy, 0, State.ACTIVE)); }
-    startDrag(pan, -20); act(() => emitPan(pan, State.ACTIVE, -130));
-    view.rerender(<UniversePager pages={pages} selectedId="musculation" selectionReceipt={onSelect.mock.calls[0]![1]} onSelect={onSelect} />);
-    expect(translation(view)).toBe(-130);
-    let finish: (() => void) | undefined;
-    jest.mocked(withTiming).mockImplementationOnce((value, _configuration, callback) => { finish = () => callback?.(true); return value; });
-    act(() => emitPan(pan, State.END, -200, 0, State.ACTIVE));
-    const finishTarget = translation(view);
-    view.rerender(<UniversePager pages={pages} selectedId="home" selectionReceipt={onSelect.mock.calls[1]![1]} onSelect={onSelect} />);
-    expect(translation(view)).toBe(finishTarget);
-    expect(onSelect).toHaveBeenCalledTimes(2); act(() => finish?.());
-    expect(onSelect).toHaveBeenLastCalledWith('musculation', expect.any(String));
-    expect(translation(view)).toBe(-height);
-  });
-
-  test('batched route echoes with an unchanged final id are consumed, while genuine external requests still work', () => {
-    const { view, onSelect, pan, pages } = setup();
-    for (const dy of [-200, 200]) { startDrag(pan, Math.sign(dy) * 20); act(() => emitPan(pan, State.END, dy, 0, State.ACTIVE)); }
-    const receipt = onSelect.mock.calls[1]![1];
-    // Router batches both changes and publishes only the last params.
-    view.rerender(<UniversePager pages={pages} selectedId="home" selectionReceipt={receipt} onSelect={onSelect} />);
-    expect(translation(view)).toBe(0);
-    view.rerender(<UniversePager pages={pages} selectedId="musculation" selectionReceipt={receipt} onSelect={onSelect} />);
-    expect(translation(view)).toBe(-height);
-    // Reusing old params after a real external navigation isn't a new receipt.
-    view.rerender(<UniversePager pages={pages} selectedId="home" selectionReceipt={receipt} onSelect={onSelect} />);
-    expect(translation(view)).toBe(0); expect(onSelect).toHaveBeenCalledTimes(2);
-  });
-
-  test('an old route echo cannot snap an intermediate settling position directly to its destination', () => {
-    const { view, onSelect, pan, pages } = setup();
-    for (const dy of [-200, 200]) { startDrag(pan, Math.sign(dy) * 20); act(() => emitPan(pan, State.END, dy, 0, State.ACTIVE)); }
-    startDrag(pan, -20);
-    let finish: (() => void) | undefined;
-    // Freeze this mock frame partway through the third settling animation.
-    // The callback models completion, not UIKit's frame-by-frame interpolation.
-    jest.mocked(withTiming).mockImplementationOnce((value, _configuration, callback) => {
-      finish = () => callback?.(true); return -350 as typeof value;
-    });
-    act(() => emitPan(pan, State.END, -200, 0, State.ACTIVE));
-    expect(translation(view)).toBe(-350);
-    expect(pageTop(view, 'home', 0)).toBe(0); expect(pageTop(view, 'musculation', 1)).toBe(height - 350);
-    view.rerender(<UniversePager pages={pages} selectedId="musculation" selectionReceipt={onSelect.mock.calls[0]![1]} onSelect={onSelect} />);
-    expect(translation(view)).toBe(-350); expect(onSelect).toHaveBeenCalledTimes(2);
-    expect(pageTop(view, 'home', 0)).toBe(0); expect(pageTop(view, 'musculation', 1)).toBe(height - 350);
-    act(() => finish?.()); expect(onSelect).toHaveBeenCalledTimes(3);
-    fireEvent.press(view.getByRole('button', { name: 'musculation vers home' }));
-    expect(translation(view)).toBe(0);
   });
 });
