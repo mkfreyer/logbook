@@ -63,7 +63,11 @@ function HomeHarness({ enabled = true }: { enabled?: boolean }) {
   const state = useHomeActivity(enabled);
   return <View><Text testID="local-date">{state.now.toString()}</Text><HomeActivityCards activity={state} /></View>;
 }
-function deferred<T>() { let resolve!: (value: T) => void; const promise = new Promise<T>(done => { resolve = done; }); return { promise, resolve }; }
+function deferred<T>() {
+  let resolve!: (value: T) => void, reject!: (error: Error) => void;
+  const promise = new Promise<T>((done, fail) => { resolve = done; reject = fail; });
+  return { promise, resolve, reject };
+}
 
 beforeEach(() => {
   jest.resetAllMocks(); completions.clear(); mockFocusCleanups.clear();
@@ -134,6 +138,130 @@ test('home shows actual weekly count/day markers and a neutral progression link'
   expect(view.getByLabelText('Séances terminées cette semaine').props.accessibilityValue.text).toBe('2');
   expect(view.getAllByLabelText(/ : .*séance/)).toHaveLength(7); expect(view.queryByText(/\+\d+%/)).toBeNull();
   fireEvent.press(view.getByRole('button', { name: 'Consulter ma progression par exercice' })); expect(router.push).toHaveBeenCalledWith('/history/exercises');
+});
+test('first home load has a discreet placeholder without claiming zero sessions or fabricated day counts', async () => {
+  const pending = deferred<HomeActivity>(); history.homeActivity.mockReturnValueOnce(pending.promise);
+  const view = render(<HomeHarness />);
+  expect(view.getByText('Chargement…')).toBeTruthy();
+  expect(view.getByLabelText('Séances terminées cette semaine').props.accessibilityValue.text).toBe('Chargement');
+  expect(view.queryByText('Aucune séance cette semaine.')).toBeNull(); expect(view.queryAllByLabelText(/ : .*séance/)).toHaveLength(0);
+  await act(async () => { pending.resolve(activity()); await pending.promise; });
+  expect(view.queryByText('Chargement…')).toBeNull(); expect(view.getAllByLabelText(/ : .*séance/)).toHaveLength(7);
+});
+test('returning to Home keeps the valid count, caption and seven markers throughout a deferred read', async () => {
+  const view = render(<HomeHarness />); await view.findByText('séances terminées');
+  const markers = view.getAllByLabelText(/ : .*séance/).map(day => day.props.accessibilityLabel);
+  const pending = deferred<HomeActivity>(); history.homeActivity.mockReturnValueOnce(pending.promise);
+  view.rerender(<HomeHarness enabled={false} />); view.rerender(<HomeHarness />);
+  expect(history.homeActivity).toHaveBeenCalledTimes(2);
+  expect(view.getByLabelText('Séances terminées cette semaine').props.children).toBe(2);
+  expect(view.getByText('séances terminées')).toBeTruthy();
+  expect(view.getAllByLabelText(/ : .*séance/).map(day => day.props.accessibilityLabel)).toEqual(markers);
+  expect(view.queryByText(/Actualisation|Chargement|Lecture en cours/)).toBeNull(); expect(view.queryByText('…')).toBeNull();
+  await act(async () => { pending.resolve(activity(3)); await pending.promise; });
+  expect(view.getByLabelText('Séances terminées cette semaine').props.children).toBe(3);
+});
+test('a known empty week and first-session caption also stay stable on foreground refresh', async () => {
+  history.homeActivity.mockResolvedValueOnce(activity(0, 0));
+  const view = render(<HomeHarness />); await view.findByText('Après votre première séance terminée.');
+  const pending = deferred<HomeActivity>(); history.homeActivity.mockReturnValueOnce(pending.promise);
+  const listener = jest.mocked(AppState.addEventListener).mock.calls[0]![1];
+  act(() => listener('background')); act(() => listener('active'));
+  expect(view.getByText('Après votre première séance terminée.')).toBeTruthy(); expect(view.getByText('Aucune séance cette semaine.')).toBeTruthy();
+  expect(view.getByLabelText('Séances terminées cette semaine').props.children).toBe(0); expect(view.getAllByLabelText(/ : .*séance/)).toHaveLength(7);
+  await act(async () => { pending.resolve(activity(1, 1)); await pending.promise; });
+  expect(view.getByLabelText('Séances terminées cette semaine').props.children).toBe(1);
+});
+test('rapid refreshes accept only the newest result and ignore late failures without flashing loading', async () => {
+  const view = render(<HomeHarness />); await view.findByText('séances terminées');
+  const older = deferred<HomeActivity>(), failing = deferred<HomeActivity>(), newest = deferred<HomeActivity>();
+  history.homeActivity.mockReturnValueOnce(older.promise).mockReturnValueOnce(failing.promise).mockReturnValueOnce(newest.promise);
+  act(() => completions.forEach(listener => listener()));
+  act(() => completions.forEach(listener => listener()));
+  act(() => completions.forEach(listener => listener()));
+  expect(view.getByLabelText('Séances terminées cette semaine').props.children).toBe(2); expect(view.queryByText('…')).toBeNull();
+  await act(async () => { newest.resolve(activity(5)); await newest.promise; });
+  await act(async () => { older.resolve(activity(1)); failing.reject(new Error('Ancienne lecture en échec')); });
+  expect(view.getByLabelText('Séances terminées cette semaine').props.children).toBe(5);
+  expect(view.queryByRole('button', { name: 'Actualiser les statistiques' })).toBeNull(); expect(history.homeActivity).toHaveBeenCalledTimes(4);
+});
+test('refresh failure preserves valid statistics and retry keeps the stale notice until a successful replacement', async () => {
+  const view = render(<HomeHarness />); await view.findByText('séances terminées');
+  history.homeActivity.mockRejectedValueOnce(new Error('Lecture impossible'));
+  act(() => completions.forEach(listener => listener())); await view.findByText('Données non à jour · Réessayer');
+  expect(view.getByLabelText('Séances terminées cette semaine').props.children).toBe(2); expect(view.getAllByLabelText(/ : .*séance/)).toHaveLength(7);
+  const pending = deferred<HomeActivity>(); history.homeActivity.mockReturnValueOnce(pending.promise);
+  const retry = view.getByRole('button', { name: 'Actualiser les statistiques' }); fireEvent.press(retry); fireEvent.press(retry);
+  expect(history.homeActivity).toHaveBeenCalledTimes(3); expect(view.getByText('Données non à jour · Réessayer')).toBeTruthy();
+  expect(view.getByLabelText('Séances terminées cette semaine').props.children).toBe(2); expect(view.queryByText('…')).toBeNull();
+  await act(async () => { pending.resolve(activity(4)); await pending.promise; });
+  expect(view.getByLabelText('Séances terminées cette semaine').props.children).toBe(4); expect(view.queryByText('Données non à jour · Réessayer')).toBeNull();
+});
+test('an older success cannot clear the newest failure or replace the last valid statistics', async () => {
+  const view = render(<HomeHarness />); await view.findByText('séances terminées');
+  const older = deferred<HomeActivity>(), latest = deferred<HomeActivity>();
+  history.homeActivity.mockReturnValueOnce(older.promise).mockReturnValueOnce(latest.promise);
+  act(() => completions.forEach(listener => listener())); act(() => completions.forEach(listener => listener()));
+  await act(async () => { latest.reject(new Error('Lecture récente impossible')); });
+  await act(async () => { older.resolve(activity(9)); await older.promise; });
+  expect(view.getByLabelText('Séances terminées cette semaine').props.children).toBe(2);
+  expect(view.getByText('Données non à jour · Réessayer')).toBeTruthy();
+});
+test('Sunday midnight dates the cached week instead of calling its count current while Monday is loading', async () => {
+  jest.useFakeTimers(); jest.setSystemTime(new Date(2026, 9, 18, 23, 59, 59));
+  const view = render(<HomeHarness />); await act(async () => {});
+  const pending = deferred<HomeActivity>(); history.homeActivity.mockReturnValueOnce(pending.promise);
+  await act(async () => { jest.advanceTimersByTime(1000); });
+  expect(history.homeActivity.mock.lastCall![0]!.getDay()).toBe(1);
+  expect(view.queryByLabelText('Séances terminées cette semaine')).toBeNull(); expect(view.getByText('Semaine du 12/10')).toBeTruthy();
+  expect(view.getByLabelText('Séances terminées la semaine du 2026-10-12').props.children).toBe(2);
+  expect(view.getAllByLabelText(/ : .*séance/)).toHaveLength(7); expect(view.queryAllByLabelText(/aujourd’hui/)).toHaveLength(0);
+  await act(async () => { pending.resolve(activity(0)); await pending.promise; });
+  expect(view.getByLabelText('Séances terminées cette semaine').props.children).toBe(0);
+  expect(view.queryByText('Semaine du 12/10')).toBeNull(); expect(view.getByLabelText('2026-10-19 : 0 séance terminée, aujourd’hui')).toBeTruthy();
+});
+test('a week-change read failure retains explicitly dated data and retries the new week', async () => {
+  jest.useFakeTimers(); jest.setSystemTime(new Date(2026, 9, 18, 23, 59, 59));
+  const view = render(<HomeHarness />); await act(async () => {});
+  history.homeActivity.mockRejectedValueOnce(new Error('Lecture impossible'));
+  await act(async () => { jest.advanceTimersByTime(1000); });
+  expect(view.getByText('Données non à jour · Réessayer')).toBeTruthy();
+  expect(view.getByLabelText('Séances terminées la semaine du 2026-10-12').props.children).toBe(2);
+  expect(view.queryByText('Cette semaine')).toBeNull();
+  fireEvent.press(view.getByRole('button', { name: 'Actualiser les statistiques' })); await act(async () => {});
+  expect(view.getByText('Cette semaine')).toBeTruthy(); expect(view.queryByText('Données non à jour · Réessayer')).toBeNull();
+});
+test('a new day in the same week updates today without hiding cached counts or markers', async () => {
+  jest.useFakeTimers(); jest.setSystemTime(new Date(2026, 9, 15, 23, 59, 59));
+  const view = render(<HomeHarness />); await act(async () => {});
+  expect(view.getByLabelText('2026-10-15 : 0 séance terminée, aujourd’hui')).toBeTruthy();
+  const pending = deferred<HomeActivity>(); history.homeActivity.mockReturnValueOnce(pending.promise);
+  await act(async () => { jest.advanceTimersByTime(1000); });
+  expect(view.getByLabelText('2026-10-16 : 0 séance terminée, aujourd’hui')).toBeTruthy();
+  expect(view.getByLabelText('Séances terminées cette semaine').props.children).toBe(2); expect(view.getAllByLabelText(/ : .*séance/)).toHaveLength(7);
+  expect(view.queryByText(/Lecture en cours|Chargement/)).toBeNull();
+  await act(async () => { pending.resolve(activity()); await pending.promise; });
+});
+test('a hidden Home returning weeks later labels the saved period before its new read completes', async () => {
+  jest.useFakeTimers(); jest.setSystemTime(new Date(2026, 9, 15, 12));
+  const view = render(<HomeHarness />); await act(async () => {}); view.rerender(<HomeHarness enabled={false} />);
+  jest.setSystemTime(new Date(2026, 10, 2, 12));
+  const pending = deferred<HomeActivity>(); history.homeActivity.mockReturnValueOnce(pending.promise);
+  view.rerender(<HomeHarness />);
+  expect(view.queryByText('Cette semaine')).toBeNull(); expect(view.getByText('Semaine du 12/10')).toBeTruthy();
+  expect(view.queryAllByLabelText(/aujourd’hui/)).toHaveLength(0);
+  await act(async () => { pending.resolve(activity(1)); await pending.promise; });
+  expect(view.getByLabelText('Séances terminées cette semaine').props.children).toBe(1);
+});
+test('a read crossing midnight cannot call Sunday statistics current even before the midnight callback runs', async () => {
+  jest.useFakeTimers(); jest.setSystemTime(new Date(2026, 9, 18, 23, 59, 59));
+  const sundayData = activity(), pending = deferred<HomeActivity>(); history.homeActivity.mockReturnValueOnce(pending.promise);
+  const view = render(<HomeHarness />);
+  // A suspended JS timer may run later than the SQLite response on resume.
+  jest.setSystemTime(new Date(2026, 9, 19, 0, 0, 1));
+  await act(async () => { pending.resolve(sundayData); await pending.promise; });
+  expect(history.homeActivity).toHaveBeenCalledTimes(1); expect(view.queryByText('Cette semaine')).toBeNull();
+  expect(view.getByLabelText('Séances terminées la semaine du 2026-10-12').props.children).toBe(2);
 });
 test('empty home is truthful and storage failure never masquerades as an empty week', async () => {
   history.homeActivity.mockRejectedValueOnce(new Error('Lecture impossible'));

@@ -6,29 +6,32 @@ import { colors } from '../../ui';
 import type { useHomeActivity } from './useHomeActivity';
 
 export function HomeActivityCards({ activity }: { activity: ReturnType<typeof useHomeActivity> }) {
-  const { data, loading, error } = activity;
+  const { data, loading, error, isCurrentWeek, weekStart } = activity;
+  const weekLabel = isCurrentWeek || !weekStart ? 'Cette semaine' : `Semaine du ${weekStart.slice(8, 10)}/${weekStart.slice(5, 7)}`;
+  const countLabel = isCurrentWeek ? 'Séances terminées cette semaine' : `Séances terminées la semaine du ${weekStart}`;
   return <View style={{ gap: 8 }}><View style={styles.stats}>
     <LinearGradient colors={['#0d2432', '#091824']} style={styles.card}>
-      <Text style={styles.label}>Cette semaine</Text>
-      <Text style={styles.value} accessibilityLabel="Séances terminées cette semaine"
-        accessibilityValue={{ text: loading ? 'Actualisation' : error || !data ? 'Indisponible' : String(data.sessionCount) }}>{loading ? '…' : error || !data ? '—' : data.sessionCount}</Text>
-      <Text style={styles.caption}>{loading ? 'Actualisation…' : error ? 'Bilan indisponible' : data?.sessionCount ? `séance${data.sessionCount > 1 ? 's' : ''} terminée${data.sessionCount > 1 ? 's' : ''}` : 'Aucune séance cette semaine.'}</Text>
-      {!loading && !error && data && <View style={styles.week}>
-        {data.days.map(day => <View key={day.key} accessible accessibilityLabel={`${day.key} : ${day.count} séance${day.count > 1 ? 's' : ''} terminée${day.count > 1 ? 's' : ''}${day.today ? ', aujourd’hui' : ''}`} style={{ alignItems: 'center', gap: 4 }}>
+      <Text style={styles.label}>{weekLabel}</Text>
+      <Text style={styles.value} accessibilityLabel={countLabel}
+        accessibilityValue={{ text: data ? String(data.sessionCount) : loading && !error ? 'Chargement' : 'Indisponible' }}>{data ? data.sessionCount : loading && !error ? '…' : '—'}</Text>
+      <Text style={styles.caption}>{data ? data.sessionCount ? `séance${data.sessionCount > 1 ? 's' : ''} terminée${data.sessionCount > 1 ? 's' : ''}` : isCurrentWeek ? 'Aucune séance cette semaine.' : 'Aucune séance enregistrée.' : error ? 'Bilan indisponible' : 'Chargement…'}</Text>
+      <View style={styles.week}>
+        {data?.days.map(day => <View key={day.key} accessible accessibilityLabel={`${day.key} : ${day.count} séance${day.count > 1 ? 's' : ''} terminée${day.count > 1 ? 's' : ''}${day.today ? ', aujourd’hui' : ''}`} style={{ alignItems: 'center', gap: 4 }}>
           <View style={[styles.marker, day.count > 0 && styles.trained, day.today && styles.today]} /><Text style={styles.day}>{day.label}</Text>
         </View>)}
-      </View>}
+      </View>
     </LinearGradient>
     <Pressable accessibilityRole="button" accessibilityLabel="Consulter ma progression par exercice" onPress={() => router.push('/history/exercises')} style={{ flex: 1 }}>
       <LinearGradient colors={['#0b252d', '#091824']} style={[styles.card, { flex: 1 }]}>
         <Text style={styles.label}>Progression</Text><Text style={styles.progress}>Vos courbes</Text>
-        <Text style={styles.caption}>{!loading && !error && data?.totalCompleted === 0 ? 'Après votre première séance terminée.' : 'Comparez vos performances par exercice.'}</Text>
+        <Text style={styles.caption}>{data?.totalCompleted === 0 ? 'Après votre première séance terminée.' : 'Comparez vos performances par exercice.'}</Text>
         <Ionicons name="stats-chart-outline" size={22} color="#45d4bf" />
       </LinearGradient>
     </Pressable>
   </View>
-    {error && <Pressable accessibilityRole="button" accessibilityLabel="Actualiser les statistiques" onPress={activity.retry} style={{ minHeight: 44, justifyContent: 'center' }}>
-      <Text style={{ color: colors.cyan, fontSize: 12 }}>Statistiques indisponibles · Réessayer</Text></Pressable>}
+    {error ? <Pressable accessibilityRole="button" accessibilityLabel="Actualiser les statistiques" disabled={activity.loading || activity.refreshing} onPress={activity.retry} style={{ minHeight: 44, justifyContent: 'center' }}>
+      <Text style={{ color: colors.cyan, fontSize: 12 }}>{data ? 'Données non à jour · Réessayer' : 'Statistiques indisponibles · Réessayer'}</Text></Pressable>
+      : !isCurrentWeek && <Text style={styles.caption}>Période précédente · Lecture en cours</Text>}
   </View>;
 }
 const styles = StyleSheet.create({
@@ -38,7 +41,7 @@ const styles = StyleSheet.create({
   value: { color: '#2bbcff', fontSize: 34, fontWeight: '600', lineHeight: 37 },
   progress: { color: '#45d4bf', fontSize: 19, fontWeight: '600', lineHeight: 27, marginVertical: 5 },
   caption: { color: '#9eb6c9', fontSize: 11, lineHeight: 16, minHeight: 32 },
-  week: { flexDirection: 'row', justifyContent: 'space-between', gap: 2, marginTop: 4 },
+  week: { flexDirection: 'row', justifyContent: 'space-between', gap: 2, marginTop: 4, minHeight: 26 },
   marker: { width: 10, height: 10, borderRadius: 5, borderWidth: 1, borderColor: '#416073', backgroundColor: '#132e40' },
   trained: { backgroundColor: colors.blue, borderColor: colors.cyan }, today: { borderWidth: 2, borderColor: colors.text },
   day: { color: colors.muted, fontSize: 9, lineHeight: 12 },

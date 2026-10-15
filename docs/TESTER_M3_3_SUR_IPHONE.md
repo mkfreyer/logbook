@@ -32,6 +32,19 @@ Un tunnel peut demander l’installation de son utilitaire et une connexion Inte
 
 **Ne pas désinstaller Expo Go, supprimer son stockage, changer l’identité Expo ou effacer les programmes pour tester.** M3.3 ajoute la table de préférences et passe SQLite de v4 à **v5**. Les données M0–M3.2 restent présentes. Une ancienne branche M2/M3.1/M3.2 ne peut plus ouvrir cette base v5 ; elle la refuse sans l’effacer. Conserver cette version ou une version plus récente.
 
+## Actualisation silencieuse des statistiques d’accueil
+
+Ce correctif suit `534a8a6` et ne change ni la navigation restaurée ni SQLite v5. Sur le même carnet, sans supprimer de données :
+
+1. Ouvrir l’accueil et noter le nombre de séances de **Cette semaine** et les jours marqués. Au tout premier chargement du projet, un bref « Chargement… » est possible, avec un espace réservé pour les marqueurs.
+2. Passer plusieurs fois rapidement Accueil → Musculation → Accueil, puis revenir depuis Paramètres ou l’historique. Le nombre, le libellé et les sept marqueurs doivent rester visibles, sans « … » ni « Actualisation… » à chaque retour. Vérifier aussi un geste annulé et les boutons de navigation.
+3. Passer temporairement Expo Go en arrière-plan, puis revenir : les dernières valeurs restent affichées pendant la lecture. Fermer et rouvrir le projet : les valeurs proviennent à nouveau de SQLite, sans perte de performances.
+4. À la fin d’un véritable entraînement, revenir à l’accueil. Le total doit se mettre à jour après la lecture, sans état vide intermédiaire. Plusieurs séances le même jour augmentent le total et gardent ce jour marqué.
+5. Si un changement de jour survient pendant l’utilisation, le repère d’aujourd’hui doit changer. Dimanche → lundi, une ancienne valeur peut rester brièvement visible sous **Semaine du JJ/MM**, jamais comme le total de « Cette semaine », avant l’arrivée des nouvelles valeurs. Ne pas changer l’horloge de votre iPhone pendant un entraînement pour provoquer ce cas : les tests automatisés le simulent.
+6. Si une erreur de lecture se produit, vérifier **Données non à jour · Réessayer**, les valeurs précédentes toujours visibles et l’action Réessayer. Sans aucune lecture réussie, la carte indique une indisponibilité, pas zéro séance. Ces erreurs sont injectées dans les tests ; aucune action de corruption de la base n’est nécessaire sur l’iPhone. Le mode avion ne simule pas un échec de SQLite local.
+
+Une vidéo des allers-retours rapides peut aider à confirmer l’absence de clignotement natif. Les tests Linux ne constituent pas cette validation sur iPhone.
+
 ## Paramètres
 
 1. Sur l’accueil, toucher l’engrenage. Dans Musculation, vérifier aussi le bouton **Paramètres**. Les deux ouvrent le même écran.
