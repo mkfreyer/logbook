@@ -5,6 +5,7 @@ import { AppState } from 'react-native';
 import { SessionRepository } from '../db/sessionRepository';
 import { selectSessionStep, type RestInterval } from '../domain/session';
 import { useRestAlert } from '../features/sessions/useRestAlert';
+import { usePreferences } from './PreferencesProvider';
 
 const SessionContext = createContext<SessionRepository | null>(null);
 
@@ -18,7 +19,8 @@ export function SessionProvider({ children }: { children: ReactNode }) {
 /** Keep the foreground cue alive when navigating away from the rest screen. */
 function RestSoundObserver({ repository }: { repository: SessionRepository }) {
   const [rest, setRest] = useState<RestInterval | null>(null);
-  useRestAlert(rest, true);
+  const { soundEnabled } = usePreferences();
+  useRestAlert(rest, soundEnabled);
   useEffect(() => {
     let mounted = true, request = 0;
     const refresh = async () => {

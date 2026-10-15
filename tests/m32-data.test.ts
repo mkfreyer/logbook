@@ -164,7 +164,7 @@ test('M3.1 SQLite rows survive readings, reopening, and a personalized reference
     return Promise.all(tables.map(row => f.db.getAllAsync(`SELECT * FROM ${row.name} ORDER BY rowid`)));
   };
   const before = await dump(); await initializeDatabase(f.db); await f.previous(active); await f.sessions.history.homeActivity();
-  assert.deepEqual(await dump(), before); assert.equal(DATABASE_VERSION, 4);
+  assert.deepEqual(await dump(), before); assert.equal(DATABASE_VERSION, 5);
   const renamed = await f.training.updateCustomExercise(f.exercise.id, { ...f.exercise, name: 'Renommé après les réalisations' });
   assert.equal(renamed.id, f.exercise.id); f.db.close();
   const db = new SqliteDatabase(path); t.after(() => db.close()); await initializeDatabase(db);

@@ -14,6 +14,7 @@ const mockRepository = {
 };
 jest.mock('expo-sqlite', () => ({ useSQLiteContext: () => mockDatabase }));
 jest.mock('expo-crypto', () => ({ randomUUID: () => 'uuid' }));
+jest.mock('../src/store/PreferencesProvider', () => ({ usePreferences: () => ({ soundEnabled: true }) }));
 jest.mock('../src/db/sessionRepository', () => ({ SessionRepository: class { constructor() { return mockRepository; } } }));
 jest.mock('../src/features/sessions/useRestAlert', () => ({ useRestAlert: jest.fn(() => false) }));
 const stamp = '2026-10-14T12:00:00.000Z';

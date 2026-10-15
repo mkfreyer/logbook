@@ -10,5 +10,6 @@ L’application fonctionnelle reste prioritaire. Ce document réserve les retouc
 - Vérifier l’ensemble des contrastes, zones tactiles et annonces VoiceOver pendant la future passe, sans animation décorative complexe.
 - Affiner la carte « Dernière fois » après les tests de clavier numérique, sans déplacer les champs ni concurrencer « Valider la série ».
 - Harmoniser les fiches du catalogue et les repères hebdomadaires de l’accueil, sans créer de conseils ou d’indicateurs fictifs.
+- Affiner la densité des explications de stockage/export dans Paramètres après les retours iPhone, en gardant visibles les limites de restauration et le risque de suppression de l’application.
 
 Ne pas refaire la navigation verticale validée et ne jamais remplir un état vide avec des performances fictives.

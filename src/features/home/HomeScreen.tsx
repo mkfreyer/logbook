@@ -38,9 +38,9 @@ export default function HomeScreen() {
         <Text accessibilityRole="header" style={styles.headline}>À votre rythme.</Text>
         <Text style={styles.date}>{date}</Text>
       </View>
-      <View style={styles.brandMark} accessibilityLabel="Logbook">
-        <Ionicons name="barbell" size={24} color={colors.cyan} />
-      </View>
+      <Pressable style={styles.brandMark} accessibilityRole="button" accessibilityLabel="Paramètres" onPress={() => router.push('/settings')}>
+        <Ionicons name="settings-outline" size={24} color={colors.cyan} />
+      </Pressable>
     </View>
 
     <ResumeSessionCard active={isActive} />

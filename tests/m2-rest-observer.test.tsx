@@ -14,6 +14,7 @@ const mockRepository = {
 const mockDatabase = {};
 jest.mock('expo-sqlite', () => ({ useSQLiteContext: () => mockDatabase }));
 jest.mock('expo-crypto', () => ({ randomUUID: () => 'unused' }));
+jest.mock('../src/store/PreferencesProvider', () => ({ usePreferences: () => ({ soundEnabled: true }) }));
 jest.mock('../src/db/sessionRepository', () => ({ SessionRepository: class { constructor() { return mockRepository; } } }));
 jest.mock('expo-audio', () => ({ useAudioPlayer: () => mockPlayer, setAudioModeAsync: () => mockAudioMode() }));
 
