@@ -1,7 +1,7 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { router, useFocusEffect } from 'expo-router';
-import { useCallback, useState } from 'react';
+import { useCallback } from 'react';
 import { ActivityIndicator, Pressable, StyleSheet, Text, View } from 'react-native';
 
 import { useUniverseIsActive, useUniverseNavigation } from '../../navigation/UniverseContext';
@@ -9,23 +9,25 @@ import { UniverseScreen } from '../../navigation/UniverseScreen';
 import { useLogbook } from '../../store/LogbookProvider';
 import { colors } from '../../ui';
 import { ResumeSessionCard } from '../sessions/ResumeSessionCard';
+import { useHomeActivity } from './useHomeActivity';
+import { HomeActivityCards } from './HomeActivityCards';
 
-function deviceDate() {
-  const date = new Date().toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+function deviceDate(now: Date) {
+  const date = now.toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
   return date.charAt(0).toUpperCase() + date.slice(1);
 }
 
-/** Planning and an active-session entry; statistics will have their own milestone. */
+/** Planning, real local activity and an active-session entry. */
 export default function HomeScreen() {
   const { programs, loading, error, refresh } = useLogbook();
   const { goTo } = useUniverseNavigation();
   const isActive = useUniverseIsActive();
-  const [date, setDate] = useState(deviceDate);
+  const activity = useHomeActivity(isActive);
+  const date = deviceDate(activity.now);
   const firstProgram = programs[0];
 
   useFocusEffect(useCallback(() => {
     if (!isActive) return;
-    setDate(deviceDate());
     void refresh().catch(() => undefined);
   }, [isActive, refresh]));
 
@@ -42,25 +44,7 @@ export default function HomeScreen() {
     </View>
 
     <ResumeSessionCard active={isActive} />
-    <View style={styles.stats}>
-      <LinearGradient colors={['#0d2432', '#091824']} style={styles.statCard}>
-        <Text style={styles.statLabel}>Cette semaine</Text>
-        <Text style={styles.statValue} accessibilityLabel="Bilan hebdomadaire à venir">—</Text>
-        <Text style={styles.statCaption}>Bilan hebdomadaire à venir</Text>
-        <View style={styles.weekMarkers} accessible={false} accessibilityElementsHidden importantForAccessibility="no-hide-descendants">
-          {Array.from({ length: 7 }, (_, day) => <View key={day} style={styles.weekMarker} />)}
-        </View>
-      </LinearGradient>
-      <LinearGradient colors={['#0b252d', '#091824']} style={styles.statCard}>
-        <Text style={styles.statLabel}>Progression</Text>
-        <Text style={[styles.statValue, styles.progressValue]} accessibilityLabel="Statistiques à venir">—</Text>
-        <Text style={styles.statCaption}>Statistiques à venir</Text>
-        <View style={styles.emptyProgress} accessible={false} accessibilityElementsHidden importantForAccessibility="no-hide-descendants">
-          <View style={styles.emptyProgressLine} />
-          <View style={styles.emptyProgressDot} />
-        </View>
-      </LinearGradient>
-    </View>
+    <HomeActivityCards activity={activity} />
 
     <LinearGradient colors={['#0c2c42', '#0a1b2c', '#091724']} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.programCard}>
       <View style={styles.programHeader}>
@@ -143,17 +127,6 @@ const styles = StyleSheet.create({
   headline: { color: colors.text, fontSize: 30, fontWeight: '700', lineHeight: 37, letterSpacing: -0.8, marginTop: 1 },
   date: { color: '#9cb9cc', fontSize: 12, lineHeight: 18, marginTop: 4 },
   brandMark: { backgroundColor: '#103a57', borderColor: '#246186', borderWidth: 1, width: 42, height: 42, borderRadius: 15, alignItems: 'center', justifyContent: 'center', marginTop: 7 },
-  stats: { flexDirection: 'row', gap: 12 },
-  statCard: { flex: 1, minWidth: 0, borderColor: '#204253', borderWidth: 1, borderRadius: 18, padding: 14, gap: 3 },
-  statLabel: { color: '#bed2e0', fontSize: 12, fontWeight: '500', lineHeight: 18 },
-  statValue: { color: '#2bbcff', fontSize: 34, fontWeight: '600', lineHeight: 37, letterSpacing: -0.8 },
-  progressValue: { color: '#45d4bf' },
-  statCaption: { color: '#9eb6c9', fontSize: 11, lineHeight: 16, minHeight: 32 },
-  weekMarkers: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 4, marginTop: 6, minHeight: 9 },
-  weekMarker: { width: 8, height: 8, borderRadius: 4, borderWidth: 1, borderColor: '#416073', backgroundColor: '#132e40' },
-  emptyProgress: { marginTop: 6, height: 9, flexDirection: 'row', alignItems: 'center' },
-  emptyProgressLine: { flex: 1, height: 1, backgroundColor: '#315751' },
-  emptyProgressDot: { width: 5, height: 5, borderRadius: 3, backgroundColor: '#49766e' },
   programCard: { borderColor: '#226e99', borderWidth: 1, borderRadius: 20, padding: 15, gap: 12, overflow: 'hidden' },
   programHeader: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
   eyebrow: { color: '#a7cee7', fontSize: 10, lineHeight: 14, fontWeight: '600', letterSpacing: 1.3 },

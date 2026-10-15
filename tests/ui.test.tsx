@@ -1,7 +1,10 @@
 import { afterEach, beforeEach, describe, expect, jest, test } from '@jest/globals';
 import { act, cleanup, fireEvent, render, waitFor } from '@testing-library/react-native';
 import { router } from 'expo-router';
-import { Alert, type AlertButton } from 'react-native';
+import { Alert, AppState, type AlertButton } from 'react-native';
+import { useSessions } from '../src/store/SessionProvider';
+import type { HomeActivity } from '../src/domain/activity';
+import { localWeek } from '../src/domain/activity';
 
 import ProgramScreen from '../app/programs/[id]/index';
 import HomeScreen from '../src/features/home/HomeScreen';
@@ -27,6 +30,7 @@ jest.mock('expo-router', () => {
     }, [effect]),
   };
 });
+jest.mock('../src/store/SessionProvider', () => ({ useSessions: jest.fn() }));
 jest.mock('../src/store/LogbookProvider', () => ({ useLogbook: jest.fn() }));
 jest.mock('../src/features/sessions/ResumeSessionCard', () => ({ ResumeSessionCard: () => null }));
 jest.mock('@expo/vector-icons', () => ({ Ionicons: () => null }));
@@ -44,6 +48,7 @@ const workout: WorkoutTemplate = {
   id: 'workout-local', programId: program.id, name: 'Ma séance', notes: 'À mon rythme',
   sortOrder: 0, createdAt: program.createdAt, updatedAt: program.updatedAt,
 };
+const mockSessions = { history: { homeActivity: jest.fn<() => Promise<HomeActivity>>() }, subscribeCompleted: jest.fn<() => () => void>() };
 const mockStore = {
   programs: [] as Program[], loading: false, error: null as string | null,
   refresh: jest.fn<() => Promise<void>>(),
@@ -66,6 +71,10 @@ function deferred<T>() {
 
 beforeEach(() => {
   jest.resetAllMocks();
+  jest.spyOn(AppState, 'addEventListener').mockImplementation(() => ({ remove: jest.fn() }));
+  mockSessions.history.homeActivity.mockResolvedValue({ sessionCount: 0, totalCompleted: 0, days: localWeek(new Date()).days });
+  mockSessions.subscribeCompleted.mockReturnValue(() => undefined);
+  jest.mocked(useSessions).mockReturnValue(mockSessions as unknown as ReturnType<typeof useSessions>);
   mockFocusCleanups.clear();
   mockStore.programs = [];
   mockStore.loading = false;
@@ -86,10 +95,11 @@ beforeEach(() => {
 afterEach(() => { cleanup(); mockFocusCleanups.clear(); jest.restoreAllMocks(); });
 
 describe('M0 : états vides et organisation locale', () => {
-  test('une première ouverture invite à créer sans programmes ni performances fictifs', () => {
+  test('une première ouverture invite à créer sans programmes ni performances fictifs', async () => {
     const home = render(<HomeScreen />);
     expect(home.getByText('Créer mon premier programme')).toBeTruthy();
-    expect(home.getByText('Statistiques à venir')).toBeTruthy();
+    expect(await home.findByText('Après votre première séance terminée.')).toBeTruthy();
+    expect(home.getByLabelText('Séances terminées cette semaine').props.children).toBe(0);
     expect(home.queryByText(/Prise de muscle|Alex|\+12\s*%|124\s*350/)).toBeNull();
     fireEvent.press(home.getByRole('button', { name: 'Créer mon premier programme' }));
     expect(router.push).toHaveBeenCalledWith('/programs/new');

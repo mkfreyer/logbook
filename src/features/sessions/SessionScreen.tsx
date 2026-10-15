@@ -10,6 +10,7 @@ import { useScreenOperation } from '../training/shared';
 import { RestTimer } from './RestTimer';
 import { NumericCard, parseActualDraft, sessionSeriesTitle, sessionStyles, useSessionData } from './shared';
 import { SessionSummaryView } from './SessionSummaryView';
+import { PreviousPerformanceCard } from './PreviousPerformanceCard';
 
 const emptyActual = { weight: '', reps: '', rir: '' };
 
@@ -115,6 +116,7 @@ export function SessionScreen({ sessionId }: { sessionId?: string }) {
           <NumericCard caption="Répétitions" label="Répétitions réelles" value={draft.reps} onChange={value => change('reps', value)} disabled={operation.busy} />
           <NumericCard caption="RIR" label="RIR réel" value={draft.rir} onChange={value => change('rir', value)} disabled={operation.busy} />
         </View>
+        <PreviousPerformanceCard sessionId={session.id} series={step.set} exercise={step.exercise} />
         <Text style={sessionStyles.help}>Charge et RIR facultatifs. RIR : répétitions que vous auriez encore pu faire, de 0 à 10.</Text>
       </>}
       {step.phase === 'rest' && <>

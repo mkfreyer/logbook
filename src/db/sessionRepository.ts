@@ -53,6 +53,7 @@ function actual(input: ActualSetInput): ActualSetInput {
 export class SessionRepository {
   private pendingWrite: Promise<void> = Promise.resolve();
   private readonly listeners = new Set<() => void>();
+  private readonly completionListeners = new Set<() => void>();
   readonly history = new HistoryRepository(operation => this.read(() => operation(this.db)));
   constructor(private readonly db: Database, private readonly idFactory: () => string,
     private readonly now: () => string = () => new Date().toISOString()) {}
@@ -63,7 +64,12 @@ export class SessionRepository {
     return () => { this.listeners.delete(listener); };
   }
 
-  private write<T>(operation: (db: Database) => Promise<T>): Promise<T> {
+  subscribeCompleted(listener: () => void): () => void {
+    this.completionListeners.add(listener);
+    return () => { this.completionListeners.delete(listener); };
+  }
+
+  private write<T>(operation: (db: Database) => Promise<T>, completed?: () => boolean): Promise<T> {
     const result = this.pendingWrite.then(async () => {
       let value!: T;
       const task = async (db: Database) => { value = await operation(db); };
@@ -71,6 +77,7 @@ export class SessionRepository {
       else await this.db.withTransactionAsync(() => task(this.db));
       // Observation must never turn an already committed save into a reported failure.
       for (const listener of this.listeners) { try { listener(); } catch { /* Observer owns its retry. */ } }
+      if (completed?.()) for (const listener of this.completionListeners) { try { listener(); } catch { /* Observer owns its retry. */ } }
       return value;
     });
     this.pendingWrite = result.then(() => undefined, () => undefined);
@@ -345,6 +352,7 @@ export class SessionRepository {
   }
 
   finishSession(sessionId: string): Promise<WorkoutSession> {
+    let changed = false;
     return this.write(async db => {
       const session = await this.requireSession(db, sessionId, false);
       if (session.status === 'completed') return session;
@@ -352,7 +360,8 @@ export class SessionRepository {
         throw new SessionStateError('Validez toutes les séries avant de terminer la séance.');
       }
       await db.runAsync("UPDATE workout_sessions SET status = 'completed', finished_at = ? WHERE id = ?", this.stamp(session), sessionId);
+      changed = true;
       return this.requireSession(db, sessionId, false);
-    });
+    }, () => changed);
   }
 }

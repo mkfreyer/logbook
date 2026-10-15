@@ -1,5 +1,6 @@
 import type { Database } from './types';
 import type { WeightMode } from '../domain/training';
+import { localDayKey, localWeek, type HomeActivity, type PreviousPerformance } from '../domain/activity';
 import { exercisePoints, type ExerciseHistory, type ExercisePerformance, type ExerciseVisit,
   type HistoricalExercise, type HistoryFilter, type HistoryOverview, type HistoryProgram,
   type HistoryRange, type HistorySession, type HistoryStats } from '../domain/history';
@@ -36,6 +37,53 @@ function boundedPage(value: number, count: number) {
  * workouts: SQL aggregates, 20 visits/page and at most 120 chart sessions. */
 export class HistoryRepository {
   constructor(private readonly read: Read) {}
+  /** Context comes from the active snapshot, never from mutable catalog targets.
+   * Rank exact type+position first, then same type, then last non-warmup result.
+   * Within a rank, use the latest completed execution, across all programs. */
+  previousPerformance(sessionId: string, setId: string): Promise<PreviousPerformance | null> {
+    return this.read(async db => {
+      const current = await db.getFirstAsync<{ exerciseId: string; mode: WeightMode; kind: string; position: number; startedAt: string }>(
+        `SELECT e.source_catalog_exercise_id AS exerciseId, e.weight_mode AS mode,
+          t.kind, t.series_index AS position, s.started_at AS startedAt
+         FROM workout_sessions s JOIN session_sets t ON t.session_id = s.id
+         JOIN session_exercises e ON e.id = t.session_exercise_id AND e.session_id = s.id
+         WHERE s.id = ? AND t.id = ? AND s.status = 'active'
+           AND NOT EXISTS (SELECT 1 FROM performed_sets p WHERE p.session_set_id = t.id)`, sessionId, setId);
+      if (!current) return null;
+      const row = await db.getFirstAsync<ExercisePerformance>(`SELECT p.id, s.id AS sessionId,
+        e.id AS sessionExerciseId, e.name AS exerciseName, s.workout_name AS workoutName,
+        s.program_name AS programName, s.finished_at AS finishedAt, p.performed_at AS performedAt,
+        p.sort_order AS sortOrder, t.series_index AS seriesIndex, t.label, t.kind,
+        p.weight_kg AS weightKg, p.reps, p.rir, e.weight_mode AS weightMode
+        FROM workout_sessions s JOIN performed_sets p ON p.session_id = s.id
+        JOIN session_sets t ON t.id = p.session_set_id AND t.session_id = s.id
+        JOIN session_exercises e ON e.id = t.session_exercise_id AND e.session_id = s.id
+        WHERE s.status = 'completed' AND s.id != ? AND s.finished_at <= ?
+          AND e.source_catalog_exercise_id = ? AND e.weight_mode = ?
+          AND ${current.kind === 'warmup' ? "t.kind = 'warmup'" : "t.kind != 'warmup'"}
+        ORDER BY CASE WHEN t.kind = ? AND t.series_index = ? THEN 0 WHEN t.kind = ? THEN 1 ELSE 2 END,
+          s.finished_at DESC, s.id DESC,
+          CASE WHEN t.kind = ? THEN ABS(t.series_index - ?) ELSE 0 END, p.sort_order DESC LIMIT 1`,
+      sessionId, current.startedAt, current.exerciseId, current.mode, current.kind, current.position, current.kind, current.kind, current.position);
+      return row ? { performance: row, comparison: row.kind === current.kind
+        ? row.seriesIndex === current.position ? 'same_series' : 'same_type' : 'exercise' } : null;
+    });
+  }
+
+  homeActivity(now = new Date()): Promise<HomeActivity> {
+    return this.read(async db => {
+      const week = localWeek(now);
+      const rows = await db.getAllAsync<{ finishedAt: string }>(`SELECT finished_at AS finishedAt FROM workout_sessions
+        WHERE status = 'completed' AND finished_at >= ? AND finished_at < ?`, week.from, week.until);
+      const total = await db.getFirstAsync<{ count: number }>("SELECT COUNT(*) AS count FROM workout_sessions WHERE status = 'completed'");
+      const days = week.days.map(day => ({ ...day }));
+      for (const row of rows) {
+        const day = days.find(item => item.key === localDayKey(new Date(row.finishedAt)));
+        if (day) day.count++;
+      }
+      return { sessionCount: rows.length, totalCompleted: total!.count, days };
+    });
+  }
   private async stats(db: Database, filter: HistoryFilter): Promise<HistoryStats> {
     const where = scope(filter);
     const row = await db.getFirstAsync<HistoryStats>(`WITH visits AS (

@@ -57,14 +57,17 @@ export function ExerciseLibrary({ programId, workoutId, exerciseInstanceId }: Tr
       <FormError message={operation.error} />
       {items.length === 0 ? <Card><EmptyState icon="search-outline" title="Aucun exercice trouvé"
         description="Essayez un autre nom, un muscle ou un matériel. Vous pouvez aussi créer votre exercice." /></Card> : <View style={s.cards}>
-        {items.map(item => <Pressable key={item.id} accessibilityRole="button" accessibilityLabel={`${replacing ? 'Choisir' : 'Ajouter'} ${item.name}`}
+        {items.map(item => <View key={item.id} style={styles.exercise}><Pressable accessibilityRole="button" accessibilityLabel={`${replacing ? 'Choisir' : 'Ajouter'} ${item.name}`}
           disabled={operation.busy} accessibilityState={{ disabled: operation.busy }} onPress={() => select(item)}
-          style={({ pressed }) => [styles.exercise, pressed && s.pressed, operation.busy && s.disabled]}>
+          style={({ pressed }) => [s.row, { flex: 1 }, pressed && s.pressed, operation.busy && s.disabled]}>
           <View style={s.icon}><Ionicons name="barbell-outline" size={26} color={colors.cyan} /></View>
           <View style={s.grow}><Text style={s.title}>{item.name}</Text><Text style={s.body}>{item.muscleGroup} · {item.equipment}</Text>
             {item.isCustom ? <Text style={s.meta}>Exercice personnalisé</Text> : null}</View>
           <Ionicons name={replacing ? 'chevron-forward' : 'add-circle-outline'} size={22} color={colors.cyan} />
-        </Pressable>)}
+        </Pressable><Pressable accessibilityRole="button" accessibilityLabel={`Fiche de ${item.name}`} disabled={operation.busy}
+          onPress={() => router.push({ pathname: '/exercises/[exerciseId]', params: { exerciseId: item.id } })}
+          style={{ width: 44, minHeight: 44, justifyContent: 'center', alignItems: 'center' }}>
+          <Ionicons name="information-circle-outline" size={24} color={colors.cyan} /></Pressable></View>)}
       </View>}
       <Button label="Créer un exercice personnalisé" variant="secondary" icon="create-outline" disabled={operation.busy}
         onPress={() => router.push({ pathname: '/programs/[id]/workouts/[workoutId]/custom-exercise', params: { id: plan.data!.program.id, workoutId: plan.data!.workout.id, ...(exerciseInstanceId ? { exerciseInstanceId } : {}) } })} />

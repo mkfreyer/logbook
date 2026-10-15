@@ -53,6 +53,7 @@ const completed: WorkoutSession = { ...replacement, status: 'completed', finishe
     reps: i === 1 ? 10 : 8, rir: i === 2 ? null : i === 1 ? 0 : 2, advancedAt: stamp })),
 };
 const repository = {
+  history: { previousPerformance: jest.fn<() => Promise<null>>() },
   getSession: jest.fn<SessionRepository['getSession']>(), replaceExercise: jest.fn<SessionRepository['replaceExercise']>(),
   chooseNextExercise: jest.fn<SessionRepository['chooseNextExercise']>(), validateSet: jest.fn<SessionRepository['validateSet']>(),
   completeRest: jest.fn<SessionRepository['completeRest']>(), finishSession: jest.fn<SessionRepository['finishSession']>(),
@@ -67,7 +68,8 @@ function deferred<T>() { let resolve!: (value: T) => void; const promise = new P
 const replacementProps = { sessionId: 's', exerciseId: 'e0', setId: 'set0' };
 
 beforeEach(() => {
-  jest.resetAllMocks(); mockFocusCleanups.clear(); mockFocusEffects.clear();
+  jest.resetAllMocks();
+  repository.history.previousPerformance.mockResolvedValue(null); mockFocusCleanups.clear(); mockFocusEffects.clear();
   jest.spyOn(Alert, 'alert').mockImplementation(() => undefined);
   jest.spyOn(AppState, 'addEventListener').mockImplementation(() => ({ remove: jest.fn() }));
   Object.defineProperty(AppState, 'currentState', { value: 'active', writable: true, configurable: true });
