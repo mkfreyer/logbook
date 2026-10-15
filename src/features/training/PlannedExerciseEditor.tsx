@@ -3,12 +3,12 @@ import { useEffect, useState } from 'react';
 import { Text, View } from 'react-native';
 
 import { Button, Card, Field, Heading, Screen } from '../../ui';
-import { FormError, LoadState } from '../programs/shared';
+import { FormError, LoadState, RefreshNotice } from '../programs/shared';
 import { trainingStyles as s, useScreenOperation, type TrainingRoute } from './shared';
 import { useWorkoutPlan } from './useWorkoutPlan';
 
 export function PlannedExerciseEditor({ programId, workoutId, exerciseInstanceId }: TrainingRoute) {
-  const { data, loading, error, retry, training } = useWorkoutPlan({ programId, workoutId, exerciseInstanceId });
+  const { data, loading, error, refreshError, refreshing, retry, training } = useWorkoutPlan({ programId, workoutId, exerciseInstanceId });
   const exercise = data?.exercise;
   const operation = useScreenOperation();
   const [notes, setNotes] = useState('');
@@ -24,6 +24,7 @@ export function PlannedExerciseEditor({ programId, workoutId, exerciseInstanceId
   };
   return <Screen>
     <Heading title="Modifier l’exercice prévu" subtitle={exercise?.exercise.name} back backDisabled={operation.busy} onBack={goBack} />
+    <RefreshNotice refreshError={refreshError} refreshing={refreshing} retry={retry} />
     {loading || error || !data || !exercise ? <LoadState loading={loading} error={error} retry={retry} missing="Cet exercice prévu n’est plus disponible." /> : <View style={s.sections}>
       <Card><Text style={s.title}>{exercise.exercise.name}</Text><Text style={s.body}>{exercise.exercise.muscleGroup} · {exercise.exercise.equipment}</Text>
         <Field label="Consignes pour cette séance (facultatives)" value={notes} onChangeText={setNotes} multiline maxLength={1000} placeholder="Vos repères pour cet exercice dans cette séance" />

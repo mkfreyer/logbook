@@ -1,6 +1,6 @@
-# Logbook — repères en séance, accueil et fiches M3.2
+# Logbook — paramètres et export personnel M3.3
 
-Application iPhone de musculation en React Native, Expo SDK 57, TypeScript, Expo Router et SQLite local. M0, M1.1, M1.2, M2 et M3.1 ont été validés sur un véritable iPhone. La branche **`feat/m3-performances-accueil`** ajoute M3.2, à tester sur appareil avant validation.
+Application iPhone de musculation en React Native, Expo SDK 57, TypeScript, Expo Router et SQLite local. M0 à M3.2 ont été validés sur un véritable iPhone. La branche **`feat/m3-parametres-stabilisation`** ajoute M3.3, à tester sur appareil avant validation.
 
 Vous pouvez configurer vos programmes, exercices et séries, puis démarrer un entraînement. Une seule série est affichée pendant l’effort. Les résultats saisis sont sauvegardés à chaque validation, séparément des objectifs. Le repos circulaire utilise la durée propre à la série ; il peut être mis en pause ou terminé tôt, et continue en dépassement sans passer automatiquement à la suivante.
 
@@ -14,21 +14,23 @@ M3.1 ajoute le parcours historique général → programme → séance réelle �
 
 M3.2 ajoute une carte **Dernière fois** sous les champs de la série active : résultats antérieurs du même exercice et mode, type/position privilégiés, sans remplir les résultats actuels. L’accueil compte les séances terminées dans la semaine locale lundi–dimanche. **Vos courbes** ouvre les graphiques sans inventer de progrès. La bibliothèque générale donne accès aux fiches et aux modifications de vos exercices personnalisés, avec leurs identifiants conservés.
 
+M3.3 ajoute **Paramètres**, accessible depuis l’engrenage de l’accueil et Musculation. Le son de fin de repos peut être coupé ou activé, avec préférence persistante et respect du mode silencieux iOS. Les charges restent en kilogrammes. **Exporter mes données** prépare un JSON personnel complet et cohérent, puis permet de l’enregistrer dans Fichiers par la feuille native. Aucun envoi automatique. **La restauration n’est pas encore disponible** : conserver les données actuelles, même après export. Un import sécurisé reste obligatoire avant publication V1.
+
 Le premier lancement ne contient aucun programme ni performance fictive. La bibliothèque d’exercices est distincte des programmes utilisateur. Aucun compte ni serveur n’est nécessaire.
 
 ## Tester sur iPhone depuis Windows
 
-Suivre le [guide M3.2](docs/TESTER_M3_2_SUR_IPHONE.md), avec Node.js 24, Git et le même Expo Go compatible avec Expo SDK 57. Arrêter Metro avec **Ctrl+C**, ouvrir PowerShell dans `logbook`, puis :
+Suivre le [guide M3.3](docs/TESTER_M3_3_SUR_IPHONE.md), avec Node.js 24, Git et le même Expo Go compatible avec Expo SDK 57. Arrêter Metro avec **Ctrl+C**, ouvrir PowerShell dans `logbook`, puis :
 
 ```powershell
 git fetch origin
-git switch feat/m3-performances-accueil
-git pull --ff-only origin feat/m3-performances-accueil
+git switch feat/m3-parametres-stabilisation
+git pull --ff-only origin feat/m3-parametres-stabilisation
 npm.cmd ci
 npm.cmd start -- --clear
 ```
 
-Si la branche n’existe pas localement, utiliser `git switch --track origin/feat/m3-performances-accueil` à la place du premier `git switch`. Scanner le QR code avec l’iPhone, sur le même réseau Wi-Fi. Conserver le même projet Expo Go pour retrouver les données.
+Si la branche n’existe pas localement, utiliser `git switch --track origin/feat/m3-parametres-stabilisation` à la place du premier `git switch`. Scanner le QR code avec l’iPhone, sur le même réseau Wi-Fi. Conserver le même projet Expo Go pour retrouver les données. **Ne pas désinstaller Expo Go ni effacer son stockage.**
 
 ## Vérifications
 
@@ -38,20 +40,24 @@ npm.cmd test
 npm.cmd run export:ios
 ```
 
-Les tests couvrent les migrations M0 à M2, la persistance SQLite, les configurations, entraînements, remplacements, choix d’ordre, calculs du bilan, historiques filtrés, identités, comparaisons de séries, semaines locales, graphiques, fiches, erreurs et doubles validations. La CI vérifie aussi la navigation verticale. L’export iOS produit le JavaScript et les ressources, sans compiler une application native installable. Les nouveaux parcours M3.2, le clavier numérique, les interactions tactiles et la reprise doivent être testés sur iPhone.
+Les tests couvrent les migrations M0 à M3.3, la persistance SQLite, les configurations, entraînements, remplacements, choix d’ordre, calculs du bilan, historiques filtrés, identités, comparaisons de séries, semaines locales, graphiques, fiches, préférences et export personnel, erreurs et doubles validations. L’export de plusieurs années est testé par lots et sous écritures concurrentes. La CI vérifie aussi la navigation verticale. L’export iOS produit le JavaScript et les ressources, sans compiler une application native installable. Les sons, la feuille Fichiers, les interactions tactiles et la reprise doivent être testés sur iPhone.
 
 ## Données et limites
 
-M3.2 n’ajoute **aucune migration** et conserve SQLite **version 4**. La migration M2 a ajouté le choix persistant et les journaux de remplacement/ordre au même fichier `logbook.db`. Elle conserve programmes, séances, exercices, séries, réalisations et pauses. Chaque entraînement conserve des instantanés indépendants : supprimer son programme ne supprime pas ses résultats. Les anciens codes M1.1/M1.2 refusent d’ouvrir une base v4 sans l’effacer ni la rétrograder.
+M3.3 ajoute uniquement `app_preferences` et passe SQLite de **v4 à v5**, au même fichier `logbook.db`. Les programmes, séances, exercices, séries, réalisations, repos et journaux existants sont conservés. Chaque entraînement conserve des instantanés indépendants : supprimer son programme ne supprime pas ses résultats. Les anciens codes M2/M3.1/M3.2 refusent d’ouvrir une base v5 sans l’effacer ni la rétrograder ; ne pas revenir sur une ancienne branche avec cette base.
 
 Le décompte exclut les pauses manuelles ; **Repos réel** inclut tout le temps chronologique. L’arrière-plan ne met pas automatiquement en pause. Le son est une alerte locale au premier plan, soumise au volume et au mode silencieux ; aucune notification écran verrouillé n’est promise dans Expo Go.
 
 Le tonnage est la somme **charge saisie × répétitions réalisées**, échauffements inclus. Une charge par haltère est comptée une fois, sans inventer le nombre de mains utilisées. Le poids corporel n’est pas estimé et les charges absentes sont exclues. Le RIR moyen exclut les valeurs absentes, tout en comptant un RIR explicitement saisi à zéro.
 
-M3.3 traitera les préférences et l’export local sécurisé si faisable, puis la stabilisation. Ce sous-lot n’est pas commencé. Aucun export ni restauration n’est livré dans M3.2. Cardio, mannequin 3D, synchronisation, coach et refonte visuelle globale restent hors périmètre.
+L’export JSON n’est pas chiffré et **n’est pas encore réimportable** par Logbook. Les données nécessaires à une restauration future sont incluses ; la restauration transactionnelle, validée sur appareil et avec récupération après échec, reste une [tâche V1 obligatoire](docs/RESTAURATION_V1.md). Les options avancées de séries sont réservées à M3.4. Cardio, mannequin 3D, synchronisation et refonte visuelle globale restent hors de M3.3 ; les fonctionnalités coach sont réservées à la V2.
 
-Les PR #2 → #3 → #4 → #5 → M3.2 restent empilées ; aucune fusion sans accord. La PR M3.2 cible `feat/m3-historiques-progression` tant que ses parents ne sont pas fusionnés.
+Les PR #2 → #3 → #4 → #5 → #6 → M3.3 restent empilées ; aucune fusion sans accord. La PR M3.3 cible `feat/m3-performances-accueil` tant que ses parents ne sont pas fusionnés.
 
+- [Architecture, migration et stabilisation M3.3](docs/M3.3.md)
+- [Guide de test M3.3](docs/TESTER_M3_3_SUR_IPHONE.md)
+- [Format de l’export personnel](docs/FORMAT_EXPORT_PERSONNEL.md)
+- [Restauration à livrer avant la publication V1](docs/RESTAURATION_V1.md)
 - [Architecture et règles de comparaison M3.2](docs/M3.2.md)
 - [Guide de test M3.2](docs/TESTER_M3_2_SUR_IPHONE.md)
 - [Architecture, calculs et limites M3.1](docs/M3.1.md)

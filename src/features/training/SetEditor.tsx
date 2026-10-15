@@ -7,7 +7,7 @@ import { setKindLabel, weightModeLabel } from '../../domain/training';
 import { useLogbook } from '../../store/LogbookProvider';
 import { useTraining } from '../../store/TrainingProvider';
 import { Button, Card, colors, Field, Heading, Screen } from '../../ui';
-import { featureStyles, FormError, LoadState, messageFor, useFocusedData } from '../programs/shared';
+import { featureStyles, FormError, LoadState, RefreshNotice, messageFor, useFocusedData } from '../programs/shared';
 import { useConfirmedDelete } from '../programs/useConfirmedDelete';
 
 const initialDraft: SetDraft = { label: '', kind: 'work', repetitionMode: 'exact', repsMin: '8', repsMax: '12', weight: '', rir: '', rest: '90', notes: '' };
@@ -36,7 +36,7 @@ export function SetEditor({ mode, programId, workoutId, exerciseInstanceId, setI
       throw failure;
     }
   }, [editing, exerciseInstanceId, getProgram, getWorkout, programId, setId, training, workoutId]);
-  const { data, loading, error, retry } = useFocusedData(load);
+  const { data, loading, error, refreshError, refreshing, retry } = useFocusedData(load);
   const [draft, setDraft] = useState<SetDraft>(initialDraft);
   const [formError, setFormError] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
@@ -85,6 +85,7 @@ export function SetEditor({ mode, programId, workoutId, exerciseInstanceId, setI
 
   return <Screen>
     <Heading title={editing ? 'Modifier la série' : 'Ajouter une série'} subtitle={data?.occurrence.exercise.name} back backDisabled={busy} onBack={returnToExercise} />
+    <RefreshNotice refreshError={refreshError} refreshing={refreshing} retry={retry} />
     {loading || error || !data ? <LoadState loading={loading} error={error} retry={retry} missing="Cette série ou son exercice n’est pas disponible." /> : <View style={featureStyles.sections}>
       <Text style={featureStyles.eyebrow}>SÉRIE PRÉVUE {data.number}</Text>
       <Text style={featureStyles.body}>Préparez les cibles de cette série. Vous pourrez renseigner vos résultats pendant l’entraînement dans la prochaine étape.</Text>

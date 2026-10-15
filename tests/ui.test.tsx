@@ -1,7 +1,7 @@
 import { afterEach, beforeEach, describe, expect, jest, test } from '@jest/globals';
 import { act, cleanup, fireEvent, render, waitFor } from '@testing-library/react-native';
 import { router } from 'expo-router';
-import { Alert, AppState, type AlertButton } from 'react-native';
+import { Alert, AppState, StyleSheet, View, type AlertButton } from 'react-native';
 import { useSessions } from '../src/store/SessionProvider';
 import type { HomeActivity } from '../src/domain/activity';
 import { localWeek } from '../src/domain/activity';
@@ -50,7 +50,7 @@ const workout: WorkoutTemplate = {
 };
 const mockSessions = { history: { homeActivity: jest.fn<() => Promise<HomeActivity>>() }, subscribeCompleted: jest.fn<() => () => void>() };
 const mockStore = {
-  programs: [] as Program[], loading: false, error: null as string | null,
+  programs: [] as Program[], loading: false, hasLoaded: true, error: null as string | null,
   refresh: jest.fn<() => Promise<void>>(),
   getProgram: jest.fn<(id: string) => Promise<Program | null>>(),
   getWorkout: jest.fn<(id: string) => Promise<WorkoutTemplate | null>>(),
@@ -78,6 +78,7 @@ beforeEach(() => {
   mockFocusCleanups.clear();
   mockStore.programs = [];
   mockStore.loading = false;
+  mockStore.hasLoaded = true;
   mockStore.error = null;
   mockStore.refresh.mockResolvedValue(undefined);
   mockStore.getProgram.mockResolvedValue(program);
@@ -95,6 +96,40 @@ beforeEach(() => {
 afterEach(() => { cleanup(); mockFocusCleanups.clear(); jest.restoreAllMocks(); });
 
 describe('M0 : états vides et organisation locale', () => {
+  test('une erreur d’actualisation garde les programmes connus avec une action Réessayer discrète', () => {
+    mockStore.programs = [program]; mockStore.error = 'Lecture impossible';
+    const view = render(<ProgramsScreen />);
+    expect(view.getByRole('button', { name: `Ouvrir le programme ${program.name}` })).toBeTruthy();
+    expect(view.getByText('Données non à jour · Réessayer')).toBeTruthy(); expect(view.queryByText('Chargement impossible')).toBeNull();
+    fireEvent.press(view.getByRole('button', { name: 'Données non à jour, réessayer' })); expect(mockStore.refresh).toHaveBeenCalledTimes(2);
+  });
+
+  test('une première lecture de programmes en échec ne présente pas une liste vide comme confirmée', () => {
+    mockStore.hasLoaded = false; mockStore.error = 'Lecture impossible';
+    const view = render(<ProgramsScreen />);
+    expect(view.getByText('Chargement impossible')).toBeTruthy(); expect(view.queryByText('Un programme à votre image')).toBeNull();
+    expect(view.getByRole('button', { name: 'Réessayer' })).toBeTruthy();
+  });
+
+  test('la restauration M3.2 conserve les accès Paramètres M3.3 depuis les deux univers', async () => {
+    const home = render(<HomeScreen />);
+    await home.findByText('Après votre première séance terminée.');
+    fireEvent.press(home.getByRole('button', { name: 'Paramètres' }));
+    expect(router.push).toHaveBeenLastCalledWith('/settings'); home.unmount();
+    const programs = render(<ProgramsScreen />);
+    fireEvent.press(programs.getByRole('button', { name: 'Paramètres' }));
+    expect(router.push).toHaveBeenCalledTimes(2); expect(router.push).toHaveBeenLastCalledWith('/settings');
+  });
+
+  test('le bloc inférieur de l’accueil retrouve sa marge automatique M3.2 avec ses boutons inchangés', async () => {
+    const home = render(<HomeScreen />); await home.findByText('Après votre première séance terminée.');
+    const footers = home.UNSAFE_getAllByType(View).filter(node => StyleSheet.flatten(node.props.style)?.marginTop === 'auto');
+    expect(footers).toHaveLength(1);
+    expect(footers[0]!.findAll(node => node.props.accessibilityLabel === 'Musculation').length).toBeGreaterThan(0);
+    expect(footers[0]!.findAll(node => node.props.accessibilityLabel === 'Cardio, à venir').length).toBeGreaterThan(0);
+    fireEvent.press(home.getByRole('button', { name: 'Musculation' }));
+    expect(mockGoTo).toHaveBeenCalledWith('musculation');
+  });
   test('une première ouverture invite à créer sans programmes ni performances fictifs', async () => {
     const home = render(<HomeScreen />);
     expect(home.getByText('Créer mon premier programme')).toBeTruthy();

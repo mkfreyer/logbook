@@ -111,6 +111,36 @@ beforeEach(() => {
 afterEach(() => { cleanup(); jest.restoreAllMocks(); });
 
 describe('The mounted vertical universe pager', () => {
+  test('M3.2 restoration moves both full pages on the same track in either direction, without per-page compensation', () => {
+    const { view, pan, onSelect } = setup('musculation');
+    startDrag(pan, 20);
+    for (const dy of [20, 80, 200, 400, 600]) {
+      act(() => emitPan(pan, State.ACTIVE, dy));
+      expect(translation(view)).toBe(-height + dy);
+      for (const id of ['home', 'musculation']) {
+        const style = StyleSheet.flatten(view.getByTestId(`universe-${id}`, { includeHiddenElements: true }).props.style);
+        expect(style.height).toBe(height); expect(style.transform).toBeUndefined();
+      }
+    }
+    act(() => emitPan(pan, State.END, 600, 0, State.ACTIVE));
+    expect(translation(view)).toBe(0); expect(onSelect.mock.calls).toEqual([['home']]);
+    startDrag(pan, -20); act(() => emitPan(pan, State.ACTIVE, -100));
+    expect(translation(view)).toBe(-100);
+    act(() => emitPan(pan, State.CANCELLED, -100, 0, State.ACTIVE));
+    expect(translation(view)).toBe(0); expect(onSelect).toHaveBeenCalledTimes(1);
+  });
+
+  test('M3.2 route selection and accessible buttons use the original single-id contract', () => {
+    const { view, onSelect, pages } = setup();
+    view.rerender(<UniversePager pages={pages} selectedId="musculation" onSelect={onSelect} />);
+    expect(translation(view)).toBe(-height); expect(onSelect).not.toHaveBeenCalled();
+    fireEvent.press(view.getByRole('button', { name: 'musculation vers home' }));
+    expect(translation(view)).toBe(0); expect(onSelect.mock.calls).toEqual([['home']]);
+    view.rerender(<UniversePager pages={pages} selectedId="home" onSelect={onSelect} />);
+    fireEvent.press(view.getByRole('button', { name: 'home vers musculation' }));
+    expect(onSelect.mock.calls).toEqual([['home'], ['musculation']]);
+    expect(translation(view)).toBe(-height);
+  });
   test('optional development diagnostics report received events without intercepting touch input', () => {
     const { view, pan } = setup();
     if (process.env.EXPO_PUBLIC_GESTURE_DEBUG !== '1') {

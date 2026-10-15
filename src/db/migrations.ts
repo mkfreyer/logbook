@@ -1,7 +1,7 @@
 import type { Database } from './types';
 import { CATALOG_CREATED_AT, INITIAL_EXERCISES } from './exerciseCatalog';
 
-export const DATABASE_VERSION = 4;
+export const DATABASE_VERSION = 5;
 
 const versionOne = `
   CREATE TABLE programs (
@@ -201,6 +201,14 @@ const versionFour = `
     BEGIN SELECT RAISE(ABORT, 'Execution exercise identity is immutable'); END;
 `;
 
+const versionFive = `
+  CREATE TABLE app_preferences (
+    key TEXT PRIMARY KEY NOT NULL CHECK(length(key) BETWEEN 1 AND 80),
+    value_json TEXT NOT NULL CHECK(json_valid(value_json)),
+    updated_at TEXT NOT NULL
+  );
+`;
+
 /** No demo content: a new database contains no programs or workout templates. */
 export async function initializeDatabase(db: Database): Promise<void> {
   // Foreign keys must be enabled before a transaction, on every connection.
@@ -228,6 +236,7 @@ export async function initializeDatabase(db: Database): Promise<void> {
       }
       if (currentVersion < 3) await db.execAsync(versionThree);
       if (currentVersion < 4) await db.execAsync(versionFour);
+      if (currentVersion < 5) await db.execAsync(versionFive);
       await db.execAsync(`PRAGMA user_version = ${DATABASE_VERSION};`);
     });
   }
