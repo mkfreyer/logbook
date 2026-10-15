@@ -70,6 +70,12 @@ function translation(view: View): number {
   return value === 0 ? 0 : value;
 }
 
+function pageTop(view: View, id: UniverseId, index: number, viewportHeight = height): number {
+  const style = StyleSheet.flatten(view.getByTestId(`universe-${id}`, { includeHiddenElements: true }).props.style);
+  const compensation = style.transform?.find((item: { translateY?: number }) => item.translateY !== undefined)?.translateY ?? 0;
+  return index * viewportHeight + translation(view) + compensation;
+}
+
 function touches(pan: Pan, eventType: GestureTouchEvent['eventType'], dy = 0, dx = 0, count = 1): GestureTouchEvent {
   const allTouches = Array.from({ length: count }, (_, id) => ({ id, x: 100 + dx + id * 20, y: 400 + dy, absoluteX: 100 + dx + id * 20, absoluteY: 400 + dy }));
   return { handlerTag: pan.handlerTag, state: State.BEGAN, pointerType: PointerType.TOUCH, eventType, numberOfTouches: count, allTouches, changedTouches: allTouches };
@@ -111,6 +117,57 @@ beforeEach(() => {
 afterEach(() => { cleanup(); jest.restoreAllMocks(); });
 
 describe('The mounted vertical universe pager', () => {
+  test('returning down reveals the top of Home while Programs follows the finger, without a travelling empty strip', () => {
+    const { view, pan, onSelect } = setup('musculation');
+    startDrag(pan, 20);
+    for (const dy of [20, 80, 200, 400, 600, 780]) {
+      act(() => emitPan(pan, State.ACTIVE, dy));
+      expect(translation(view)).toBe(-height + dy);
+      expect(pageTop(view, 'home', 0)).toBe(0);
+      expect(pageTop(view, 'musculation', 1)).toBe(dy);
+    }
+    expect(onSelect).not.toHaveBeenCalled();
+    act(() => emitPan(pan, State.END, 780, 0, State.ACTIVE));
+    expect(pageTop(view, 'home', 0)).toBe(0);
+    expect(pageTop(view, 'musculation', 1)).toBe(height);
+  });
+
+  test('moving up covers a stationary Home from below and a short gesture restores the same composition', () => {
+    const { view, pan, onSelect } = setup();
+    startDrag(pan, -20);
+    for (const dy of [-20, -80, -200, -400, -600, -780, -60]) {
+      act(() => emitPan(pan, State.ACTIVE, dy));
+      expect(pageTop(view, 'home', 0)).toBe(0);
+      expect(pageTop(view, 'musculation', 1)).toBe(height + dy);
+    }
+    act(() => emitPan(pan, State.END, -60, 0, State.ACTIVE));
+    expect(pageTop(view, 'home', 0)).toBe(0); expect(pageTop(view, 'musculation', 1)).toBe(height);
+    expect(onSelect).not.toHaveBeenCalled();
+    const home = StyleSheet.flatten(view.getByTestId('universe-home').props.style);
+    const programs = StyleSheet.flatten(view.getByTestId('universe-musculation', { includeHiddenElements: true }).props.style);
+    expect(home.zIndex).toBeLessThan(programs.zIndex); expect(programs.backgroundColor).toBe(home.backgroundColor);
+    expect(programs.overflow).toBe('hidden');
+  });
+
+  test.each([State.END, State.CANCELLED])('return gesture ending with state %i restores Programs without exposing a shifted Home', state => {
+    const { view, pan, onSelect } = setup('musculation');
+    startDrag(pan, 20); act(() => emitPan(pan, State.ACTIVE, 60));
+    expect(pageTop(view, 'home', 0)).toBe(0); expect(pageTop(view, 'musculation', 1)).toBe(60);
+    act(() => emitPan(pan, state, 60, 0, State.ACTIVE));
+    expect(pageTop(view, 'home', 0)).toBe(0); expect(pageTop(view, 'musculation', 1)).toBe(0);
+    expect(view.getByTestId('universe-home', { includeHiddenElements: true }).props.pointerEvents).toBe('none');
+    expect(onSelect).not.toHaveBeenCalled();
+  });
+
+  test('the same presentation can cover the middle page with a future third page without moving either underlay', () => {
+    const { view, pan, onSelect } = setup('musculation', ['home', 'musculation', 'cardio']);
+    measure(view, 'musculation', 1200, 400); startDrag(pan, -20);
+    act(() => emitPan(pan, State.ACTIVE, -200));
+    expect(pageTop(view, 'home', 0)).toBe(0); expect(pageTop(view, 'musculation', 1)).toBe(0);
+    expect(pageTop(view, 'cardio', 2)).toBe(height - 200);
+    act(() => emitPan(pan, State.END, -200, 0, State.ACTIVE));
+    expect(pageTop(view, 'cardio', 2)).toBe(0); expect(onSelect).toHaveBeenCalledWith('cardio', expect.any(String));
+  });
   test('optional development diagnostics report received events without intercepting touch input', () => {
     const { view, pan } = setup();
     if (process.env.EXPO_PUBLIC_GESTURE_DEBUG !== '1') {
@@ -403,7 +460,7 @@ describe('The mounted vertical universe pager', () => {
 
     fireEvent(view.getByTestId('universe-viewport'), 'layout', { nativeEvent: { layout: { height: 650, width: 500, x: 0, y: 0 } } });
     expect(translation(view)).toBe(-650);
-    expect(view.getByTestId('universe-musculation').props.style.height).toBe(650);
+    expect(StyleSheet.flatten(view.getByTestId('universe-musculation').props.style).height).toBe(650);
     expect(onSelect).toHaveBeenCalledTimes(1);
     fireEvent.press(view.getByRole('button', { name: 'musculation vers home' }));
     expect(translation(view)).toBe(0);
@@ -485,8 +542,10 @@ describe('The mounted vertical universe pager', () => {
     });
     act(() => emitPan(pan, State.END, -200, 0, State.ACTIVE));
     expect(translation(view)).toBe(-350);
+    expect(pageTop(view, 'home', 0)).toBe(0); expect(pageTop(view, 'musculation', 1)).toBe(height - 350);
     view.rerender(<UniversePager pages={pages} selectedId="musculation" selectionReceipt={onSelect.mock.calls[0]![1]} onSelect={onSelect} />);
     expect(translation(view)).toBe(-350); expect(onSelect).toHaveBeenCalledTimes(2);
+    expect(pageTop(view, 'home', 0)).toBe(0); expect(pageTop(view, 'musculation', 1)).toBe(height - 350);
     act(() => finish?.()); expect(onSelect).toHaveBeenCalledTimes(3);
     fireEvent.press(view.getByRole('button', { name: 'musculation vers home' }));
     expect(translation(view)).toBe(0);

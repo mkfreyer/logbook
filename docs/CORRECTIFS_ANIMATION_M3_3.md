@@ -2,6 +2,8 @@
 
 Les fonctionnalités testées de M3.3, y compris Paramètres et l’export personnel, fonctionnent sur l’iPhone du propriétaire. Cette correction reste sur `feat/m3-parametres-stabilisation`, dans la **PR #7 en brouillon**, sans fusion ni début de M3.4. Les deux animations doivent être réessayées sur l’appareil.
 
+Retour suivant : le Switch est confirmé corrigé sur iPhone ; le retour Musculation → Accueil nécessite encore un ajustement de **composition**. La correction ultérieure et ses essais sont décrits dans [RETOUR_ACCUEIL_M3_3.md](RETOUR_ACCUEIL_M3_3.md). Le scénario de route ci-dessous n’est pas supposé expliquer ce nouvel effet de disposition.
+
 ## Switch : causes établies dans le code
 
 Le Switch devenait `disabled` pendant chaque écriture SQLite. Sur iOS, React Native transmet ce changement à `UISwitch.enabled` ; sa documentation précise que le contrôle désactivé est translucide. En parallèle, sa valeur contrôlée React restait ancienne jusqu’au retour de SQLite. `Switch.js` compare cette valeur au nouvel état natif et peut rappeler `setValue` pour annuler l’état natif non acquitté. Cela oppose une remise à l’ancienne valeur au mouvement déjà engagé par UIKit. Enfin, remplacer l’aide par « Enregistrement… » pouvait changer la hauteur du texte et déplacer le contrôle.

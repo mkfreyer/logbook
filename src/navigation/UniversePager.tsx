@@ -4,6 +4,7 @@ import { Gesture, GestureDetector } from 'react-native-gesture-handler';
 import Animated, { cancelAnimation, Easing, ReduceMotion, runOnJS, useAnimatedStyle, useSharedValue, withTiming, type SharedValue } from 'react-native-reanimated';
 import { colors } from '../ui';
 import { clampDrag, canStartPageDrag, directionalDrag, isVerticalIntent, releaseIndex } from './physics';
+import { coveredPageOffset } from './presentation';
 import { UniverseNavigationContext, UniversePageContext, type PageScrollState, type UniverseId } from './UniverseContext';
 
 export interface UniversePage { id: UniverseId; label: string; content: ReactNode }
@@ -181,7 +182,7 @@ export function UniversePager({ pages, selectedId, selectionReceipt, onSelect }:
         onTouchStart={debugGestures ? () => diagnose('vue: toucher reçu') : undefined}
         onLayout={event => { const next = event.nativeEvent.layout.height; if (next > 0) setHeight(next); }}>
         <Animated.View testID="universe-track" style={[s.track, { height: height * count }, style]}>
-          {pages.map((page, index) => <UniversePageView key={page.id} page={page} pan={pan} height={height} active={index === activeIndex} scrollStates={scrollStates} />)}
+          {pages.map((page, index) => <UniversePageView key={page.id} page={page} index={index} offset={offset} pan={pan} height={height} active={index === activeIndex} scrollStates={scrollStates} />)}
         </Animated.View>
         {debugGestures && <View pointerEvents="none" style={s.diagnostic}>
           <Text style={s.diagnosticText}>Diagnostic geste · {activeId}</Text>
@@ -192,14 +193,16 @@ export function UniversePager({ pages, selectedId, selectionReceipt, onSelect }:
   </UniverseNavigationContext.Provider>;
 }
 
-function UniversePageView({ page, pan, height, active, scrollStates }: {
-  page: UniversePage; pan: ReturnType<typeof Gesture.Pan>; height: number; active: boolean;
+function UniversePageView({ page, index, offset, pan, height, active, scrollStates }: {
+  page: UniversePage; index: number; offset: SharedValue<number>; pan: ReturnType<typeof Gesture.Pan>; height: number; active: boolean;
   scrollStates: SharedValue<Record<string, PageScrollState>>;
 }) {
   const value = useMemo(() => ({ id: page.id, pan, scroll: scrollStates }), [page.id, pan, scrollStates]);
+  const presentation = useAnimatedStyle(() => ({ transform: [{ translateY: coveredPageOffset(index, offset.value, height) }] }));
   return <UniversePageContext.Provider value={value}>
-    <View testID={`universe-${page.id}`} style={{ height, width: '100%' }} pointerEvents={active ? 'auto' : 'none'}
-      accessibilityElementsHidden={!active} importantForAccessibility={active ? 'auto' : 'no-hide-descendants'}>{page.content}</View>
+    <Animated.View testID={`universe-${page.id}`} style={[{ height, width: '100%', flexShrink: 0, zIndex: index, overflow: 'hidden', backgroundColor: colors.background }, presentation]}
+      pointerEvents={active ? 'auto' : 'none'} accessibilityElementsHidden={!active}
+      importantForAccessibility={active ? 'auto' : 'no-hide-descendants'}>{page.content}</Animated.View>
   </UniversePageContext.Provider>;
 }
 

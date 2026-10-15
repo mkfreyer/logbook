@@ -139,7 +139,7 @@ const styles = StyleSheet.create({
   programAction: { minHeight: 44, paddingVertical: 11, paddingHorizontal: 11, backgroundColor: '#087dce', borderWidth: 1, borderColor: '#299ee4', borderRadius: 12, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 7 },
   actionLabel: { color: colors.text, fontSize: 13, fontWeight: '600', lineHeight: 19, flexShrink: 1, textAlign: 'center' },
   status: { minHeight: 110, gap: 14, alignItems: 'center', justifyContent: 'center' },
-  footer: { gap: 18, marginTop: 'auto' },
+  footer: { gap: 18 },
   explore: { flexDirection: 'row', alignItems: 'center', gap: 10, marginBottom: -6 },
   exploreLine: { flex: 1, height: 1, backgroundColor: '#203c4b' },
   exploreCopy: { alignItems: 'center', gap: 1, flexShrink: 1 },

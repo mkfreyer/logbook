@@ -4,6 +4,8 @@ M0 à M3.2 sont validés. **M3.3 ne sera validé qu’après votre retour sur iP
 
 Après le premier retour iPhone, les paramètres et l’export fonctionnent. Le test des animations corrigées est détaillé dans [CORRECTIFS_ANIMATION_M3_3.md](CORRECTIFS_ANIMATION_M3_3.md) : bascules rapides du son, sauvegarde du dernier choix et allers-retours rapides entre univers.
 
+Le propriétaire a ensuite confirmé le Switch corrigé. Le nouveau test prioritaire est [le retour vers l’accueil](RETOUR_ACCUEIL_M3_3.md), qui ajuste la présentation des pages et le vide entre la carte et les boutons, sans changer les gestes ni le défilement.
+
 ## Récupérer la version sur Windows
 
 Conserver le même dossier `logbook` et le même projet Expo Go. Dans PowerShell, arrêter Metro avec **Ctrl+C**, puis :
