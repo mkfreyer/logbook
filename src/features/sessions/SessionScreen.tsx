@@ -111,7 +111,7 @@ export function SessionScreen({ sessionId }: { sessionId?: string }) {
               <Text style={sessionStyles.title}>{step.exercise.name}</Text>
             </View>
           </View>
-          <Text style={sessionStyles.body}>{sessionSeriesTitle(step.set, seriesDisplay)} · {step.set.seriesIndex + 1} / {sourceSets.length}</Text>
+          <Text style={sessionStyles.body}>{sessionSeriesTitle(step.set, seriesDisplay)} · {sourceSets.findIndex(item => item.id === step.set.id) + 1} / {sourceSets.length}</Text>
           {replacedFrom && <Text style={sessionStyles.help}>En remplacement de {replacedFrom.name} · charge cible à adapter.</Text>}
         </LinearGradient>
         <Card style={styles.targetCard}>

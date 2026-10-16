@@ -111,3 +111,10 @@ test('the summary displays personal notes with the real exercise identity and no
   expect(view.getByText('Bonne énergie')).toBeTruthy();expect(view.getByText('Repère personnel')).toBeTruthy();expect(view.getByText('95 kg · 8 reps · RIR 0')).toBeTruthy();
   expect(view.queryByText('100 kg · 8 reps')).toBeNull();
 });
+
+test('the active position counter uses the retained list after an extra set is removed, preserving stable series numbers',async()=>{
+  const extra={...top,id:'extra',seriesIndex:3,sortOrder:3,label:'Bonus',addition:{key:'bonus',scope:'session' as const,addedAt:initial.startedAt}};
+  repo.getSession.mockResolvedValue({...initial,sets:[top,extra],performances:[{id:'p',sessionId:'session',sessionSetId:'top',sortOrder:0,weightKg:95,reps:8,rir:null,performedAt:initial.startedAt,advancedAt:initial.startedAt}]});
+  const view=render(<SessionScreen sessionId="session"/>);await view.findByText('Bonus · 2 / 2');
+  expect(view.queryByText('Bonus · 4 / 2')).toBeNull();expect(view.getByText('1 / 2 séries validées')).toBeTruthy();
+});
