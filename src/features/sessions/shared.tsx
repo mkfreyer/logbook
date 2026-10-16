@@ -2,7 +2,7 @@ import { useFocusEffect } from 'expo-router';
 import { useCallback, useRef, useState } from 'react';
 import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
 import type { ActualSetInput, SessionSet, WorkoutSession } from '../../domain/session';
-import { setKindLabel } from '../../domain/training';
+import { formatSeriesTitle, type SeriesDisplay } from '../../domain/series';
 import { useSessions } from '../../store/SessionProvider';
 import { Card, colors } from '../../ui';
 import { messageFor } from '../programs/shared';
@@ -31,8 +31,8 @@ export function useSessionData(sessionId?: string) {
   return { repository, session, loading, error, accept, retry: () => setRevision(value => value + 1) };
 }
 
-export function sessionSeriesTitle(series: SessionSet): string {
-  return series.label || (series.kind === 'work' ? `Série ${series.seriesIndex + 1}` : setKindLabel[series.kind]);
+export function sessionSeriesTitle(series: SessionSet, display?: SeriesDisplay): string {
+  return formatSeriesTitle(series, series.seriesIndex, display);
 }
 
 export function parseActualDraft(draft: { weight: string; reps: string; rir: string }): ActualSetInput {

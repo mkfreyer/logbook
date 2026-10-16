@@ -128,9 +128,14 @@ async function fixture(rests = [60, 120, 180, 240], filename = ':memory:', v2 = 
   const workout = await repositories.programs.createWorkout(program.id, { name: 'Ma séance', notes: 'Mes notes M0' });
   const custom = await repositories.training.createCustomExercise({ name: 'Mon exercice', muscleGroup: 'Dos', equipment: 'Poids du corps', weightMode: 'additional' });
   const exercise = await repositories.training.addWorkoutExercise(workout.id, { exerciseId: custom.id, notes: 'Ma consigne' });
-  for (const [index, restAfterSec] of rests.entries()) await repositories.training.createSet(exercise.id,
-    { kind: index === 0 ? 'warmup' : 'work', label: index === 0 ? 'Mise en route' : '', repsMin: 8, repsMax: 12,
-      targetWeightKg: 42.5, targetRir: 2, restAfterSec });
+  for (const [index, restAfterSec] of rests.entries()) {
+    const input = { kind: index === 0 ? 'warmup' as const : 'work' as const, label: index === 0 ? 'Mise en route' : '', repsMin: 8, repsMax: 12,
+      targetWeightKg: 42.5, targetRir: 2, restAfterSec };
+    // Populate the released schema directly: today's repository requires v6.
+    if (v2) await db.runAsync(`INSERT INTO set_templates (id,workout_exercise_id,sort_order,label,kind,reps_min,reps_max,target_weight_kg,target_rir,rest_after_sec,notes,created_at,updated_at)
+      VALUES (?,?,?,?,?,?,?,?,?,?,'',?,?)`, `legacy-set-${index}`, exercise.id, index, input.label, input.kind, 8, 12, 42.5, 2, restAfterSec, repositories.now(), repositories.now());
+    else await repositories.training.createSet(exercise.id, input);
+  }
   return { db, ...repositories, program, workout, exercise, custom };
 }
 const performed = { weightKg: 35, reps: 9, rir: 1 };

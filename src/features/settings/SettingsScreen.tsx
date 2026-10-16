@@ -8,6 +8,7 @@ import { usePreferences } from '../../store/PreferencesProvider';
 import { Button, Card, colors, Heading, Screen } from '../../ui';
 import { FormError, messageFor } from '../programs/shared';
 import { sessionStyles as s } from '../sessions/shared';
+import { SeriesDisplaySettings } from './SeriesDisplaySettings';
 
 export function SettingsScreen() {
   const preferences = usePreferences();
@@ -56,7 +57,8 @@ export function SettingsScreen() {
     <Text style={s.eyebrow}>UNITÉS ET AFFICHAGE</Text>
     <Card style={{ gap: 8 }}><Text style={s.subtitle}>Kilogrammes · kg</Text>
       <Text style={s.body}>Les charges et les performances sont enregistrées en kilogrammes. Les modes charge totale, par haltère et charge ajoutée restent distincts.</Text>
-      <Text style={s.help}>Thème sombre. La conversion complète en livres et les options avancées de séries ne sont pas disponibles dans cette version.</Text></Card>
+      <Text style={s.help}>Thème sombre. Les charges restent en kilogrammes ; aucune conversion partielle en livres.</Text></Card>
+    <SeriesDisplaySettings />
     <Text style={s.eyebrow}>MES DONNÉES</Text>
     <Card style={{ gap: 12 }}><Text style={s.subtitle}>Un carnet personnel local</Text>
       <Text style={s.body}>Programmes, entraînements, historiques et préférences restent sur cet appareil. Supprimer Logbook, Expo Go ou son stockage peut effacer ces données.</Text>

@@ -9,6 +9,7 @@ import { LogbookProvider } from '../src/store/LogbookProvider';
 import { TrainingProvider } from '../src/store/TrainingProvider';
 import { SessionProvider } from '../src/store/SessionProvider';
 import { PreferencesProvider } from '../src/store/PreferencesProvider';
+import { SeriesDisplayProvider } from '../src/store/SeriesDisplayProvider';
 import { Button, Card, colors, EmptyState, Screen } from '../src/ui';
 
 const theme = { ...DarkTheme, colors: { ...DarkTheme.colors, background: colors.background, card: colors.surface, text: colors.text, primary: colors.blue, border: colors.border } };
@@ -24,11 +25,11 @@ export default function RootLayout() {
       <EmptyState icon="lock-closed-outline" title="Stockage indisponible" description="Vos données locales n’ont pas pu être ouvertes. Fermez puis rouvrez l’application ou réessayez." />
       <Button label="Réessayer" onPress={() => { setDatabaseError(null); setAttempt(value => value + 1); }} />
     </Card></Screen> : <SQLiteProvider key={attempt} databaseName="logbook.db" onInit={initializeDatabase} onError={onDatabaseError}>
-      <PreferencesProvider><LogbookProvider><TrainingProvider><SessionProvider>
+      <PreferencesProvider><SeriesDisplayProvider><LogbookProvider><TrainingProvider><SessionProvider>
         <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: colors.background } }}>
           <Stack.Screen name="programs/index" options={{ animation: 'none' }} />
         </Stack>
-      </SessionProvider></TrainingProvider></LogbookProvider></PreferencesProvider>
+      </SessionProvider></TrainingProvider></LogbookProvider></SeriesDisplayProvider></PreferencesProvider>
     </SQLiteProvider>}
   </ThemeProvider></SafeAreaProvider></GestureHandlerRootView>;
 }

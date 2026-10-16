@@ -1,0 +1,475 @@
+{
+  "program": {
+    "id": "id-99999",
+    "name": "Mes vrais repères de test",
+    "description": "Texte \"cité\"\navec accents 🏋️",
+    "sportType": "musculation",
+    "createdAt": "2026-10-15T12:00:00.000Z",
+    "updatedAt": "2026-10-15T12:00:00.000Z",
+    "workoutCount": 0
+  },
+  "workout": {
+    "id": "id-99998",
+    "programId": "id-99999",
+    "name": "Haut du corps",
+    "notes": "",
+    "sortOrder": 0,
+    "createdAt": "2026-10-15T12:00:00.000Z",
+    "updatedAt": "2026-10-15T12:00:00.000Z"
+  },
+  "completed": {
+    "id": "id-99988",
+    "sourceWorkoutTemplateId": "id-99998",
+    "sourceProgramId": "id-99999",
+    "workoutName": "Haut du corps",
+    "programName": "Mes vrais repères de test",
+    "status": "completed",
+    "startedAt": "2026-10-15T12:00:00.000Z",
+    "finishedAt": "2026-10-15T12:00:15.000Z",
+    "selectedExerciseId": null,
+    "exercises": [
+      {
+        "id": "id-99987",
+        "sessionId": "id-99988",
+        "sourceWorkoutExerciseId": "id-99994",
+        "sourceCatalogExerciseId": "id-99997",
+        "sortOrder": 0,
+        "plannedOrder": 0,
+        "name": "Barre",
+        "muscleGroup": "Dos",
+        "equipment": "Salle",
+        "instructions": "",
+        "notes": "",
+        "weightMode": "total"
+      },
+      {
+        "id": "id-99984",
+        "sessionId": "id-99988",
+        "sourceWorkoutExerciseId": "id-99991",
+        "sourceCatalogExerciseId": "id-99996",
+        "sortOrder": 1,
+        "plannedOrder": 1,
+        "name": "Tractions",
+        "muscleGroup": "Dos",
+        "equipment": "Salle",
+        "instructions": "",
+        "notes": "",
+        "weightMode": "additional"
+      },
+      {
+        "id": "id-99978",
+        "sessionId": "id-99988",
+        "sourceWorkoutExerciseId": "id-99994",
+        "sourceCatalogExerciseId": "id-99995",
+        "sortOrder": 2,
+        "plannedOrder": 0,
+        "name": "Haltères",
+        "muscleGroup": "Dos",
+        "equipment": "Salle",
+        "instructions": "",
+        "notes": "",
+        "weightMode": "per_hand"
+      }
+    ],
+    "sets": [
+      {
+        "id": "id-99986",
+        "sessionId": "id-99988",
+        "sessionExerciseId": "id-99987",
+        "sourceSetTemplateId": "id-99993",
+        "sortOrder": 0,
+        "seriesIndex": 0,
+        "label": "",
+        "kind": "work",
+        "notes": "",
+        "originalTargets": {
+          "repsMin": 99,
+          "repsMax": 99,
+          "targetWeightKg": 999,
+          "targetRir": 7,
+          "restAfterSec": 30
+        },
+        "targets": {
+          "repsMin": 99,
+          "repsMax": 99,
+          "targetWeightKg": 999,
+          "targetRir": 7,
+          "restAfterSec": 30
+        }
+      },
+      {
+        "id": "id-99985",
+        "sessionId": "id-99988",
+        "sessionExerciseId": "id-99978",
+        "sourceSetTemplateId": "id-99992",
+        "sortOrder": 1,
+        "seriesIndex": 1,
+        "label": "",
+        "kind": "work",
+        "notes": "",
+        "originalTargets": {
+          "repsMin": 99,
+          "repsMax": 99,
+          "targetWeightKg": 999,
+          "targetRir": 7,
+          "restAfterSec": 30
+        },
+        "targets": {
+          "repsMin": 99,
+          "repsMax": 99,
+          "targetWeightKg": null,
+          "targetRir": 7,
+          "restAfterSec": 30
+        }
+      },
+      {
+        "id": "id-99983",
+        "sessionId": "id-99988",
+        "sessionExerciseId": "id-99984",
+        "sourceSetTemplateId": "id-99990",
+        "sortOrder": 2,
+        "seriesIndex": 0,
+        "label": "",
+        "kind": "work",
+        "notes": "",
+        "originalTargets": {
+          "repsMin": 99,
+          "repsMax": 99,
+          "targetWeightKg": 999,
+          "targetRir": 7,
+          "restAfterSec": 30
+        },
+        "targets": {
+          "repsMin": 99,
+          "repsMax": 99,
+          "targetWeightKg": 999,
+          "targetRir": 7,
+          "restAfterSec": 30
+        }
+      },
+      {
+        "id": "id-99982",
+        "sessionId": "id-99988",
+        "sessionExerciseId": "id-99984",
+        "sourceSetTemplateId": "id-99989",
+        "sortOrder": 3,
+        "seriesIndex": 1,
+        "label": "",
+        "kind": "work",
+        "notes": "",
+        "originalTargets": {
+          "repsMin": 99,
+          "repsMax": 99,
+          "targetWeightKg": 999,
+          "targetRir": 7,
+          "restAfterSec": 30
+        },
+        "targets": {
+          "repsMin": 99,
+          "repsMax": 99,
+          "targetWeightKg": 999,
+          "targetRir": 7,
+          "restAfterSec": 30
+        }
+      }
+    ],
+    "performances": [
+      {
+        "id": "id-99981",
+        "sessionId": "id-99988",
+        "sessionSetId": "id-99986",
+        "sortOrder": 0,
+        "weightKg": 40,
+        "reps": 8,
+        "rir": 0,
+        "performedAt": "2026-10-15T12:00:00.000Z",
+        "advancedAt": "2026-10-15T12:00:10.000Z"
+      },
+      {
+        "id": "id-99973",
+        "sessionId": "id-99988",
+        "sessionSetId": "id-99983",
+        "sortOrder": 1,
+        "weightKg": null,
+        "reps": 10,
+        "rir": null,
+        "performedAt": "2026-10-15T12:00:11.000Z",
+        "advancedAt": "2026-10-15T12:00:12.000Z"
+      },
+      {
+        "id": "id-99971",
+        "sessionId": "id-99988",
+        "sessionSetId": "id-99982",
+        "sortOrder": 2,
+        "weightKg": null,
+        "reps": 10,
+        "rir": null,
+        "performedAt": "2026-10-15T12:00:13.000Z",
+        "advancedAt": "2026-10-15T12:00:14.000Z"
+      },
+      {
+        "id": "id-99969",
+        "sessionId": "id-99988",
+        "sessionSetId": "id-99985",
+        "sortOrder": 3,
+        "weightKg": 15,
+        "reps": 10,
+        "rir": null,
+        "performedAt": "2026-10-15T12:00:15.000Z",
+        "advancedAt": "2026-10-15T12:00:15.000Z"
+      }
+    ],
+    "rests": [
+      {
+        "id": "id-99980",
+        "sessionId": "id-99988",
+        "performedSetId": "id-99981",
+        "plannedSeconds": 30,
+        "startedAt": "2026-10-15T12:00:00.000Z",
+        "endedAt": "2026-10-15T12:00:10.000Z",
+        "chronologicalMs": 10000,
+        "activeMs": 8000,
+        "pauses": [
+          {
+            "id": "id-99979",
+            "startedAt": "2026-10-15T12:00:03.000Z",
+            "endedAt": "2026-10-15T12:00:05.000Z"
+          }
+        ]
+      },
+      {
+        "id": "id-99972",
+        "sessionId": "id-99988",
+        "performedSetId": "id-99973",
+        "plannedSeconds": 30,
+        "startedAt": "2026-10-15T12:00:11.000Z",
+        "endedAt": "2026-10-15T12:00:12.000Z",
+        "chronologicalMs": 1000,
+        "activeMs": 1000,
+        "pauses": []
+      },
+      {
+        "id": "id-99970",
+        "sessionId": "id-99988",
+        "performedSetId": "id-99971",
+        "plannedSeconds": 30,
+        "startedAt": "2026-10-15T12:00:13.000Z",
+        "endedAt": "2026-10-15T12:00:14.000Z",
+        "chronologicalMs": 1000,
+        "activeMs": 1000,
+        "pauses": []
+      }
+    ],
+    "replacements": [
+      {
+        "id": "id-99977",
+        "sessionId": "id-99988",
+        "fromExerciseId": "id-99987",
+        "toExerciseId": "id-99978",
+        "activeSetId": "id-99985",
+        "remainingSetCount": 1,
+        "changedAt": "2026-10-15T12:00:10.000Z"
+      }
+    ],
+    "exerciseChoices": [
+      {
+        "id": "id-99976",
+        "sessionId": "id-99988",
+        "exerciseId": "id-99984",
+        "expectedSetId": "id-99985",
+        "chosenAt": "2026-10-15T12:00:10.000Z"
+      },
+      {
+        "id": "id-99975",
+        "sessionId": "id-99988",
+        "exerciseId": "id-99978",
+        "expectedSetId": "id-99983",
+        "chosenAt": "2026-10-15T12:00:10.000Z"
+      },
+      {
+        "id": "id-99974",
+        "sessionId": "id-99988",
+        "exerciseId": "id-99984",
+        "expectedSetId": "id-99985",
+        "chosenAt": "2026-10-15T12:00:10.000Z"
+      }
+    ]
+  },
+  "active": {
+    "id": "id-99968",
+    "sourceWorkoutTemplateId": "id-99998",
+    "sourceProgramId": "id-99999",
+    "workoutName": "Haut du corps",
+    "programName": "Mes vrais repères de test",
+    "status": "active",
+    "startedAt": "2026-10-15T12:01:15.000Z",
+    "finishedAt": null,
+    "selectedExerciseId": null,
+    "exercises": [
+      {
+        "id": "id-99967",
+        "sessionId": "id-99968",
+        "sourceWorkoutExerciseId": "id-99994",
+        "sourceCatalogExerciseId": "id-99997",
+        "sortOrder": 0,
+        "plannedOrder": 0,
+        "name": "Barre",
+        "muscleGroup": "Dos",
+        "equipment": "Salle",
+        "instructions": "",
+        "notes": "",
+        "weightMode": "total"
+      },
+      {
+        "id": "id-99964",
+        "sessionId": "id-99968",
+        "sourceWorkoutExerciseId": "id-99991",
+        "sourceCatalogExerciseId": "id-99996",
+        "sortOrder": 1,
+        "plannedOrder": 1,
+        "name": "Tractions",
+        "muscleGroup": "Dos",
+        "equipment": "Salle",
+        "instructions": "",
+        "notes": "",
+        "weightMode": "additional"
+      }
+    ],
+    "sets": [
+      {
+        "id": "id-99966",
+        "sessionId": "id-99968",
+        "sessionExerciseId": "id-99967",
+        "sourceSetTemplateId": "id-99993",
+        "sortOrder": 0,
+        "seriesIndex": 0,
+        "label": "",
+        "kind": "work",
+        "notes": "",
+        "originalTargets": {
+          "repsMin": 99,
+          "repsMax": 99,
+          "targetWeightKg": 999,
+          "targetRir": 7,
+          "restAfterSec": 30
+        },
+        "targets": {
+          "repsMin": 99,
+          "repsMax": 99,
+          "targetWeightKg": 999,
+          "targetRir": 7,
+          "restAfterSec": 30
+        }
+      },
+      {
+        "id": "id-99965",
+        "sessionId": "id-99968",
+        "sessionExerciseId": "id-99967",
+        "sourceSetTemplateId": "id-99992",
+        "sortOrder": 1,
+        "seriesIndex": 1,
+        "label": "",
+        "kind": "work",
+        "notes": "",
+        "originalTargets": {
+          "repsMin": 99,
+          "repsMax": 99,
+          "targetWeightKg": 999,
+          "targetRir": 7,
+          "restAfterSec": 30
+        },
+        "targets": {
+          "repsMin": 99,
+          "repsMax": 99,
+          "targetWeightKg": 999,
+          "targetRir": 7,
+          "restAfterSec": 30
+        }
+      },
+      {
+        "id": "id-99963",
+        "sessionId": "id-99968",
+        "sessionExerciseId": "id-99964",
+        "sourceSetTemplateId": "id-99990",
+        "sortOrder": 2,
+        "seriesIndex": 0,
+        "label": "",
+        "kind": "work",
+        "notes": "",
+        "originalTargets": {
+          "repsMin": 99,
+          "repsMax": 99,
+          "targetWeightKg": 999,
+          "targetRir": 7,
+          "restAfterSec": 30
+        },
+        "targets": {
+          "repsMin": 99,
+          "repsMax": 99,
+          "targetWeightKg": 999,
+          "targetRir": 7,
+          "restAfterSec": 30
+        }
+      },
+      {
+        "id": "id-99962",
+        "sessionId": "id-99968",
+        "sessionExerciseId": "id-99964",
+        "sourceSetTemplateId": "id-99989",
+        "sortOrder": 3,
+        "seriesIndex": 1,
+        "label": "",
+        "kind": "work",
+        "notes": "",
+        "originalTargets": {
+          "repsMin": 99,
+          "repsMax": 99,
+          "targetWeightKg": 999,
+          "targetRir": 7,
+          "restAfterSec": 30
+        },
+        "targets": {
+          "repsMin": 99,
+          "repsMax": 99,
+          "targetWeightKg": 999,
+          "targetRir": 7,
+          "restAfterSec": 30
+        }
+      }
+    ],
+    "performances": [
+      {
+        "id": "id-99961",
+        "sessionId": "id-99968",
+        "sessionSetId": "id-99966",
+        "sortOrder": 0,
+        "weightKg": null,
+        "reps": 10,
+        "rir": null,
+        "performedAt": "2026-10-15T12:01:15.000Z",
+        "advancedAt": null
+      }
+    ],
+    "rests": [
+      {
+        "id": "id-99960",
+        "sessionId": "id-99968",
+        "performedSetId": "id-99961",
+        "plannedSeconds": 30,
+        "startedAt": "2026-10-15T12:01:15.000Z",
+        "endedAt": null,
+        "chronologicalMs": null,
+        "activeMs": null,
+        "pauses": [
+          {
+            "id": "id-99959",
+            "startedAt": "2026-10-15T12:01:20.000Z",
+            "endedAt": null
+          }
+        ]
+      }
+    ],
+    "replacements": [],
+    "exerciseChoices": []
+  }
+}

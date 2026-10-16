@@ -1,9 +1,11 @@
 import type { Database } from './types';
-import type { ExerciseCatalogItem, SetTemplate, WeightMode } from '../domain/training';
+import type { ExerciseCatalogItem, WeightMode } from '../domain/training';
 import { selectSessionStep, type ActualSetInput, type PerformedSet, type RestInterval, type RestPause,
   type SessionExercise, type SessionSet, type SetTargets, type WorkoutSession, type ExerciseReplacement, type ExerciseChoice } from '../domain/session';
 import { calculateRestTiming } from '../domain/restTimer';
 import { HistoryRepository } from './historyRepository';
+import { readPlannedSets } from './plannedSets';
+import type { LoadRuleSnapshot } from '../domain/session';
 
 export class SessionStateError extends Error {
   constructor(message: string) { super(message); this.name = 'SessionStateError'; }
@@ -16,7 +18,7 @@ const targetColumns = `reps_min AS repsMin, reps_max AS repsMax, target_weight_k
   target_rir AS targetRir, rest_after_sec AS restAfterSec`;
 type SessionRow = Omit<WorkoutSession, 'exercises' | 'sets' | 'performances' | 'rests' | 'replacements' | 'exerciseChoices'>;
 export type CompletedSessionEntry = Pick<WorkoutSession, 'id' | 'workoutName' | 'programName' | 'startedAt' | 'finishedAt'> & { performedSetCount: number };
-type SetRow = Omit<SessionSet, 'targets' | 'originalTargets'> & SetTargets & { originalTargetsJson: string };
+type SetRow = Omit<SessionSet, 'targets' | 'originalTargets'> & SetTargets & { originalTargetsJson: string; loadRuleJson: string | null };
 type ExerciseSource = {
   id: string; exerciseId: string; name: string; muscleGroup: string; equipment: string;
   instructions: string; notes: string; weightMode: WeightMode;
@@ -108,10 +110,11 @@ export class SessionRepository {
       FROM session_exercises WHERE session_id = ? ORDER BY sort_order, id`, id);
     const rows = await db.getAllAsync<SetRow>(`SELECT id, session_id AS sessionId, session_exercise_id AS sessionExerciseId,
       source_set_template_id AS sourceSetTemplateId, sort_order AS sortOrder, series_index AS seriesIndex,
-      label, kind, notes, original_targets AS originalTargetsJson, ${targetColumns}
+      label, kind, notes, original_targets AS originalTargetsJson, load_rule_snapshot AS loadRuleJson, ${targetColumns}
       FROM session_sets WHERE session_id = ? ORDER BY sort_order, id`, id);
-    const sets = rows.map(({ originalTargetsJson, repsMin, repsMax, targetWeightKg, targetRir, restAfterSec, ...row }) =>
+    const sets = rows.map(({ originalTargetsJson, loadRuleJson, repsMin, repsMax, targetWeightKg, targetRir, restAfterSec, ...row }) =>
       ({ ...row, originalTargets: JSON.parse(originalTargetsJson) as SetTargets,
+        ...(loadRuleJson ? { loadRuleSnapshot: JSON.parse(loadRuleJson) as LoadRuleSnapshot } : {}),
         targets: { repsMin, repsMax, targetWeightKg, targetRir, restAfterSec } }));
     const performances = await db.getAllAsync<PerformedSet>(`SELECT id, session_id AS sessionId, session_set_id AS sessionSetId,
       sort_order AS sortOrder, weight_kg AS weightKg, reps, rir, performed_at AS performedAt, advanced_at AS advancedAt
@@ -175,8 +178,7 @@ export class SessionRepository {
         program_name, status, started_at) VALUES (?, ?, ?, ?, ?, 'active', ?)`, id, source.id, source.programId, source.name, source.programName, stamp);
       let globalOrder = 0;
       for (const [exerciseOrder, exercise] of sourceExercises.entries()) {
-        const series = await db.getAllAsync<SetTemplate>(`SELECT id, label, kind, notes, ${targetColumns}
-          FROM set_templates WHERE workout_exercise_id = ? ORDER BY sort_order, id`, exercise.id);
+        const series = await readPlannedSets(db, exercise.id);
         if (!series.length) throw new SessionStateError(`Ajoutez au moins une série à « ${exercise.name} » avant de démarrer.`);
         const exerciseId = this.idFactory();
         await db.runAsync(`INSERT INTO session_exercises (id, session_id, source_workout_exercise_id,
@@ -185,11 +187,16 @@ export class SessionRepository {
         exerciseOrder, exerciseOrder, exercise.name, exercise.muscleGroup, exercise.equipment, exercise.instructions, exercise.notes, exercise.weightMode);
         for (const [seriesIndex, seriesSource] of series.entries()) {
           const clean = targets(seriesSource);
+          const rule = seriesSource.loadRule;
+          const loadRuleSnapshot: LoadRuleSnapshot | null = rule ? { basis: rule.basis,
+            referenceSetTemplateId: rule.referenceSetId, percent: rule.percent,
+            referenceWeightKg: series.find(item => item.id === rule.referenceSetId)?.targetWeightKg ?? null,
+            resolvedWeightKg: clean.targetWeightKg, weightMode: exercise.weightMode } : null;
           await db.runAsync(`INSERT INTO session_sets (id, session_id, session_exercise_id, source_set_template_id,
-            sort_order, series_index, label, kind, notes, original_targets, reps_min, reps_max, target_weight_kg, target_rir, rest_after_sec)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`, this.idFactory(), id, exerciseId, seriesSource.id,
+            sort_order, series_index, label, kind, notes, original_targets, reps_min, reps_max, target_weight_kg, target_rir, rest_after_sec, load_rule_snapshot)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`, this.idFactory(), id, exerciseId, seriesSource.id,
           globalOrder++, seriesIndex, seriesSource.label, seriesSource.kind, seriesSource.notes, JSON.stringify(clean),
-          clean.repsMin, clean.repsMax, clean.targetWeightKg, clean.targetRir, clean.restAfterSec);
+          clean.repsMin, clean.repsMax, clean.targetWeightKg, clean.targetRir, clean.restAfterSec, loadRuleSnapshot ? JSON.stringify(loadRuleSnapshot) : null);
         }
       }
       return this.requireSession(db, id);
@@ -337,6 +344,9 @@ export class SessionRepository {
       if (step.phase !== 'set' || step.set.id !== setId) throw new SessionStateError('Seule la série active non validée peut être modifiée.');
       const values = [clean.repsMin, clean.repsMax, clean.targetWeightKg, clean.targetRir, clean.restAfterSec];
       if (scope === 'program') {
+        // The existing live editor accepts manual targets only. Its explicit
+        // Program choice therefore replaces this rule, never the past snapshot.
+        await db.runAsync('DELETE FROM set_load_rules WHERE set_template_id = ?', step.set.sourceSetTemplateId);
         const result = await db.runAsync(`UPDATE set_templates SET reps_min = ?, reps_max = ?, target_weight_kg = ?,
           target_rir = ?, rest_after_sec = ?, updated_at = ? WHERE id = ? AND workout_exercise_id IN
           (SELECT id FROM workout_exercises WHERE id = ? AND workout_template_id = ? AND exercise_id = ?

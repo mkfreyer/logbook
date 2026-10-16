@@ -1,3 +1,4 @@
+import { useSeriesDisplay } from '../../store/SeriesDisplayProvider';
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { router } from 'expo-router';
@@ -15,6 +16,7 @@ import { PreviousPerformanceCard } from './PreviousPerformanceCard';
 const emptyActual = { weight: '', reps: '', rir: '' };
 
 export function SessionScreen({ sessionId }: { sessionId?: string }) {
+  const seriesDisplay = useSeriesDisplay();
   const data = useSessionData(sessionId);
   const operation = useScreenOperation();
   const [draft, setDraft] = useState(emptyActual);
@@ -102,12 +104,12 @@ export function SessionScreen({ sessionId }: { sessionId?: string }) {
               <Text style={sessionStyles.title}>{step.exercise.name}</Text>
             </View>
           </View>
-          <Text style={sessionStyles.body}>{sessionSeriesTitle(step.set)} · {step.set.seriesIndex + 1} / {sourceSets.length}</Text>
+          <Text style={sessionStyles.body}>{sessionSeriesTitle(step.set, seriesDisplay)} · {step.set.seriesIndex + 1} / {sourceSets.length}</Text>
           {replacedFrom && <Text style={sessionStyles.help}>En remplacement de {replacedFrom.name} · charge cible à adapter.</Text>}
         </LinearGradient>
         <Card style={styles.targetCard}>
           <Text style={sessionStyles.eyebrow}>OBJECTIFS PROGRAMMÉS</Text>
-          <Text style={sessionStyles.body}>{step.set.targets.repsMin === step.set.targets.repsMax ? step.set.targets.repsMin : `${step.set.targets.repsMin}–${step.set.targets.repsMax}`} répétitions · {step.set.targets.targetWeightKg === null ? 'Charge libre' : `${step.set.targets.targetWeightKg.toLocaleString('fr-FR')} kg${step.exercise.weightMode === 'per_hand' ? ' / haltère' : step.exercise.weightMode === 'additional' ? ' ajoutés' : ''}`}{step.set.targets.targetRir === null ? '' : ` · RIR ${step.set.targets.targetRir}`}</Text>
+          <Text style={sessionStyles.body}>{step.set.targets.repsMin === step.set.targets.repsMax ? step.set.targets.repsMin : `${step.set.targets.repsMin}–${step.set.targets.repsMax}`} répétitions · {step.set.targets.targetWeightKg === null ? 'Charge libre' : `${step.set.targets.targetWeightKg.toLocaleString('fr-FR', { maximumSignificantDigits: 21 })} kg${step.exercise.weightMode === 'per_hand' ? ' / haltère' : step.exercise.weightMode === 'additional' ? ' ajoutés' : ''}`}{step.set.targets.targetRir === null ? '' : ` · RIR ${step.set.targets.targetRir}`}</Text>
           {step.set.notes ? <Text style={sessionStyles.help}>{replacedFrom ? `Note prévue avant le remplacement : ${step.set.notes}` : step.set.notes}</Text> : null}
         </Card>
         <Text style={sessionStyles.eyebrow}>VOTRE SÉRIE RÉALISÉE</Text>
@@ -131,7 +133,7 @@ export function SessionScreen({ sessionId }: { sessionId?: string }) {
         <Card>
           <Ionicons name="checkmark-circle-outline" size={42} color="#49ebc4" />
           <Text style={sessionStyles.title}>Série enregistrée</Text>
-          <Text style={sessionStyles.body}>À suivre : {step.exercise.name} · {sessionSeriesTitle(step.nextSet)}.</Text>
+          <Text style={sessionStyles.body}>À suivre : {step.exercise.name} · {sessionSeriesTitle(step.nextSet, seriesDisplay)}.</Text>
         </Card>
         <FormError message={operation.error} />
         <Button label="Passer à la série suivante" icon="arrow-forward" loading={operation.busy}

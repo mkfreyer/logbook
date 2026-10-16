@@ -1,3 +1,4 @@
+import { useSeriesDisplay } from '../../store/SeriesDisplayProvider';
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useState } from 'react';
@@ -14,6 +15,7 @@ const number = (value: number) => value.toLocaleString('fr-FR', { maximumFractio
 export function SessionSummaryView({ session, onExit, onRetry, historical = false, onExercise }: {
   session: WorkoutSession; onExit(): void; onRetry(): void; historical?: boolean; onExercise?(exercise: SessionExercise): void;
 }) {
+  const seriesDisplay = useSeriesDisplay();
   const [details, setDetails] = useState(false);
   const [expandedRest, setExpandedRest] = useState<string | null>(null);
   let summary;
@@ -61,7 +63,7 @@ export function SessionSummaryView({ session, onExit, onRetry, historical = fals
       {performances.map(({ performance, series }) => {
         const rest = session.rests.find(item => item.performedSetId === performance.id);
         return <View key={performance.id} style={styles.performance}>
-        <Text style={s.help}>{performance.sortOrder + 1}. {sessionSeriesTitle(series)}</Text>
+        <Text style={s.help}>{performance.sortOrder + 1}. {sessionSeriesTitle(series, seriesDisplay)}</Text>
         <Text style={s.body}>{performance.weightKg === null ? 'Charge non renseignée' : `${number(performance.weightKg)} kg${exercise.weightMode === 'per_hand' ? ' / haltère' : exercise.weightMode === 'additional' ? ' ajoutés' : ''}`} · {performance.reps} reps{performance.rir === null ? '' : ` · RIR ${performance.rir}`}</Text>
         <Pressable accessibilityRole="button" accessibilityLabel={`Repos de la série réalisée ${performance.sortOrder + 1}`} accessibilityState={{ expanded: expandedRest === performance.id }}
           onPress={() => setExpandedRest(value => value === performance.id ? null : performance.id)} style={{ minHeight: 44, justifyContent: 'center' }}>
