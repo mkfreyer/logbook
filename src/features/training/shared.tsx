@@ -33,7 +33,7 @@ export function SetTargetSummary({ series, mode, index, compact = false }: {
     <Text style={compact ? trainingStyles.compactTitle : trainingStyles.title}>{seriesTitle(series, index, display)}</Text>
     <Text style={trainingStyles.body}>{repetitionTarget(series)} · {weightTarget(series, mode)}{series.targetRir !== null ? ` · RIR ${series.targetRir}` : ''}</Text>
     <Text style={trainingStyles.meta}>{series.restAfterSec === 0 ? 'Aucun repos prévu après cette série' : `Repos après cette série : ${series.restAfterSec} s`}</Text>
-    {series.loadRule && <Text style={trainingStyles.hint}>{series.loadRule.percent} % d’une référence prévue{series.targetWeightKg === null ? ' · charge à définir' : ''}</Text>}
+    {series.loadRule && <Text style={trainingStyles.hint}>{series.loadRule.percent} % {series.loadRule.basis === 'performed_weight' ? 'd’une charge réelle à valider' : 'd’une référence prévue'}{series.targetWeightKg === null ? ' · charge à définir' : ''}</Text>}
     {!compact && series.notes ? <Text style={trainingStyles.body}>{series.notes}</Text> : null}
   </View>;
 }

@@ -70,7 +70,7 @@ function cleanCatalog(input: CatalogExerciseInput) {
     equipment: text(input.equipment, 'equipment', 80, true), instructions: text(input.instructions, 'instructions', 1000), weightMode };
 }
 
-function cleanSet(input: SetTemplateInput) {
+export function cleanSet(input: SetTemplateInput) {
   const kind: SetKind = input.kind;
   if (!['work', 'warmup', 'top_set', 'back_off', 'custom'].includes(kind)) {
     throw new TrainingValidationError('kind', 'Choisissez un type de série.');
@@ -85,7 +85,7 @@ function cleanSet(input: SetTemplateInput) {
   const targetRir = input.targetRir == null ? null : integer(input.targetRir, 'targetRir', 10);
   const loadRule = input.loadRule ?? null;
   if (loadRule) {
-    if (!['warmup', 'back_off'].includes(kind) || loadRule.basis !== 'planned_target' ||
+    if (!['warmup', 'back_off'].includes(kind) || !['planned_target', 'performed_weight'].includes(loadRule.basis) ||
         typeof loadRule.referenceSetId !== 'string' || !loadRule.referenceSetId) {
       throw new TrainingValidationError('loadRule', 'Choisissez une série de référence pour cet échauffement ou back-off.');
     }
@@ -116,22 +116,6 @@ export class TrainingRepository {
     if (this.db.withExclusiveTransactionAsync) await this.db.withExclusiveTransactionAsync(async db => { value = await operation(db); });
     else await this.db.withTransactionAsync(async () => { value = await operation(this.db); });
     return value;
-  }
-
-  private async saveLoadRule(db: Database, id: string, exerciseId: string, clean: ReturnType<typeof cleanSet>) {
-    if (!clean.loadRule) return;
-    const reference = await readPlannedSet(db, clean.loadRule.referenceSetId!);
-    if (!reference || reference.id === id || reference.workoutExerciseId !== exerciseId || reference.loadRule ||
-        !['work', 'top_set', 'custom'].includes(reference.kind) || clean.kind === 'back_off' && reference.kind !== 'top_set') {
-      throw new TrainingValidationError('loadRule', 'Choisissez une référence manuelle du même exercice (un top set pour un back-off). Les chaînes de calcul sont interdites.');
-    }
-    if (await db.getFirstAsync('SELECT set_template_id FROM set_load_rules WHERE reference_set_id = ?', id)) {
-      throw new TrainingValidationError('loadRule', 'Cette série sert déjà de référence. Retirez ses liens avant de la rendre calculée.');
-    }
-    // Validate representability before committing a rule, also when the base is zero.
-    percentageWeight(reference.targetWeightKg, clean.loadRule.percent);
-    await db.runAsync('INSERT INTO set_load_rules (set_template_id, reference_set_id, percent, basis) VALUES (?, ?, ?, ?)',
-      id, reference.id, clean.loadRule.percent, clean.loadRule.basis);
   }
 
   /** Exclusive Expo transactions open a fresh connection. This helper is reserved
@@ -241,36 +225,14 @@ export class TrainingRepository {
   }
 
   createSet(workoutExerciseId: string, input: SetTemplateInput): Promise<SetTemplate> {
-    return this.write(() => this.setTransaction(async db => {
-      const clean = cleanSet(input);
-      if (!await db.getFirstAsync('SELECT id FROM workout_exercises WHERE id = ?', workoutExerciseId)) throw new TrainingNotFoundError('exercise');
-      const id = this.idFactory(), stamp = this.now();
-      await db.runAsync(`INSERT INTO set_templates
-        (id, workout_exercise_id, sort_order, label, kind, reps_min, reps_max, target_weight_kg,
-         target_rir, rest_after_sec, notes, created_at, updated_at)
-        SELECT ?, ?, COALESCE(MAX(sort_order), -1) + 1, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
-        FROM set_templates WHERE workout_exercise_id = ?`, id, workoutExerciseId, clean.label, clean.kind,
-      clean.repsMin, clean.repsMax, clean.targetWeightKg, clean.targetRir, clean.restAfterSec, clean.notes, stamp, stamp, workoutExerciseId);
-      await this.saveLoadRule(db, id, workoutExerciseId, clean);
-      return (await readPlannedSet(db, id))!;
-    }));
+    return this.write(() => this.setTransaction(db => writePreparedSet(db, workoutExerciseId, input, this.idFactory(), this.now())));
   }
 
   updateSet(id: string, input: SetTemplateInput): Promise<SetTemplate> {
     return this.write(() => this.setTransaction(async db => {
-      const clean = cleanSet(input);
       const previous = await readPlannedSet(db, id);
       if (!previous) throw new TrainingNotFoundError('set');
-      const dependents = await db.getFirstAsync('SELECT r.set_template_id FROM set_load_rules r JOIN set_templates s ON s.id = r.set_template_id WHERE r.reference_set_id = ? AND (? NOT IN (\'work\', \'top_set\', \'custom\') OR (s.kind = \'back_off\' AND ? != \'top_set\'))', id, clean.kind, clean.kind);
-      if (dependents) throw new TrainingValidationError('kind', 'Cette série sert de référence. Retirez ses liens avant de changer son type.');
-      await db.runAsync('DELETE FROM set_load_rules WHERE set_template_id = ?', id);
-      const result = await db.runAsync(`UPDATE set_templates SET label = ?, kind = ?, reps_min = ?, reps_max = ?,
-        target_weight_kg = ?, target_rir = ?, rest_after_sec = ?, notes = ?, updated_at = ? WHERE id = ?`,
-      clean.label, clean.kind, clean.repsMin, clean.repsMax, clean.targetWeightKg, clean.targetRir,
-      clean.restAfterSec, clean.notes, this.now(), id);
-      if (!result.changes) throw new TrainingNotFoundError('set');
-      await this.saveLoadRule(db, id, previous.workoutExerciseId, clean);
-      return (await readPlannedSet(db, id))!;
+      return writePreparedSet(db, previous.workoutExerciseId, input, id, this.now(), true);
     }));
   }
 
@@ -315,4 +277,46 @@ export class TrainingRepository {
       });
     });
   }
+}
+
+async function saveLoadRule(db: Database, id: string, exerciseId: string, clean: ReturnType<typeof cleanSet>) {
+    if (!clean.loadRule) return;
+    const reference = await readPlannedSet(db, clean.loadRule.referenceSetId!);
+    if (!reference || reference.id === id || reference.workoutExerciseId !== exerciseId || reference.loadRule ||
+        !['work', 'top_set', 'custom'].includes(reference.kind) || clean.kind === 'back_off' && reference.kind !== 'top_set') {
+      throw new TrainingValidationError('loadRule', 'Choisissez une référence manuelle du même exercice (un top set pour un back-off). Les chaînes de calcul sont interdites.');
+    }
+    if (await db.getFirstAsync('SELECT set_template_id FROM all_load_rules WHERE reference_set_id = ?', id)) {
+      throw new TrainingValidationError('loadRule', 'Cette série sert déjà de référence. Retirez ses liens avant de la rendre calculée.');
+    }
+    // Validate representability before committing a rule, also when the base is zero.
+    if (clean.loadRule.basis === 'planned_target') percentageWeight(reference.targetWeightKg, clean.loadRule.percent);
+    await db.runAsync(`INSERT INTO ${clean.loadRule.basis === 'planned_target' ? 'set_load_rules' : 'set_actual_load_rules'} (set_template_id, reference_set_id, percent, basis) VALUES (?, ?, ?, ?)`,
+      id, reference.id, clean.loadRule.percent, clean.loadRule.basis);
+  }
+
+
+/** Runs inside the caller's transaction, including session + program changes. */
+export async function writePreparedSet(db: Database, exerciseId: string, input: SetTemplateInput, id: string, stamp: string, editing = false): Promise<SetTemplate> {
+  const clean = cleanSet(input);
+  if (!await db.getFirstAsync('SELECT id FROM workout_exercises WHERE id = ?', exerciseId)) throw new TrainingNotFoundError('exercise');
+  if (editing) {
+    const previous = await readPlannedSet(db, id);
+    if (!previous || previous.workoutExerciseId !== exerciseId) throw new TrainingNotFoundError('set');
+    const dependents = await db.getFirstAsync(`SELECT r.set_template_id FROM all_load_rules r JOIN set_templates s ON s.id = r.set_template_id
+      WHERE r.reference_set_id = ? AND (? NOT IN ('work','top_set','custom') OR (s.kind = 'back_off' AND ? != 'top_set'))`, id, clean.kind, clean.kind);
+    if (dependents) throw new TrainingValidationError('kind', 'Cette série sert de référence. Retirez ses liens avant de changer son type.');
+    await db.runAsync('DELETE FROM set_load_rules WHERE set_template_id = ?', id);
+    await db.runAsync('DELETE FROM set_actual_load_rules WHERE set_template_id = ?', id);
+    await db.runAsync(`UPDATE set_templates SET label = ?, kind = ?, reps_min = ?, reps_max = ?, target_weight_kg = ?, target_rir = ?,
+      rest_after_sec = ?, notes = ?, updated_at = ? WHERE id = ?`, clean.label, clean.kind, clean.repsMin, clean.repsMax,
+      clean.targetWeightKg, clean.targetRir, clean.restAfterSec, clean.notes, stamp, id);
+  } else {
+    await db.runAsync(`INSERT INTO set_templates (id, workout_exercise_id, sort_order, label, kind, reps_min, reps_max,
+      target_weight_kg, target_rir, rest_after_sec, notes, created_at, updated_at)
+      SELECT ?, ?, COALESCE(MAX(sort_order), -1) + 1, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? FROM set_templates WHERE workout_exercise_id = ?`,
+      id, exerciseId, clean.label, clean.kind, clean.repsMin, clean.repsMax, clean.targetWeightKg, clean.targetRir, clean.restAfterSec, clean.notes, stamp, stamp, exerciseId);
+  }
+  await saveLoadRule(db, id, exerciseId, clean);
+  return (await readPlannedSet(db, id))!;
 }

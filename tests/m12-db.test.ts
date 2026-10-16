@@ -210,7 +210,7 @@ test('start atomically snapshots names, exercise order and individual targets wi
   assert.deepEqual(await preparation(f.db), before);
   assert.equal(active(session).label, 'Fin');
   await f.training.updateCustomExercise(f.custom.id, { name: 'Nouveau nom', muscleGroup: 'Bras', equipment: 'Haltère', weightMode: 'total' });
-  await f.training.updateSet(session.sets[0]!.sourceSetTemplateId, { kind: 'work', repsMin: 20, repsMax: 20, targetWeightKg: 50, restAfterSec: 25 });
+  await f.training.updateSet(session.sets[0]!.sourceSetTemplateId!, { kind: 'work', repsMin: 20, repsMax: 20, targetWeightKg: 50, restAfterSec: 25 });
   assert.deepEqual(await f.sessions.getSession(session.id), session);
 });
 
@@ -368,7 +368,7 @@ test('Programme updates the active objective and the future template, without re
   session = await f.sessions.updateSetTargets(session.id, set.id, changed, 'program');
   assert.deepEqual(active(session).targets, changed); assert.deepEqual(active(session).originalTargets, original);
   assert.deepEqual(session.performances[0], { ...first, advancedAt: f.now() });
-  const template = await f.training.getSet(set.sourceSetTemplateId);
+  const template = await f.training.getSet(set.sourceSetTemplateId!);
   assert.equal(template.repsMin, 6); assert.equal(template.targetWeightKg, 22.5);
   session = await f.sessions.validateSet(session.id, set.id, { weightKg: 20, reps: 5, rir: null });
   session = await f.sessions.finishSession(session.id);
@@ -407,7 +407,7 @@ test('a deleted or replaced template cannot receive Programme edits but This ses
   await assert.rejects(f.sessions.updateSetTargets(session.id, set.id, changed, 'program'), /remplacé/);
   assert.deepEqual(await f.sessions.getSession(session.id), session);
   session = await f.sessions.updateSetTargets(session.id, set.id, changed, 'session');
-  await f.training.deleteSet(set.sourceSetTemplateId);
+  await f.training.deleteSet(set.sourceSetTemplateId!);
   await assert.rejects(f.sessions.updateSetTargets(session.id, set.id, { ...changed, restAfterSec: 10 }, 'program'), /supprimée/);
   assert.deepEqual(await f.sessions.getSession(session.id), session);
 });
@@ -423,7 +423,7 @@ test('SQLite independently protects original targets, validated objectives, actu
   session = await f.sessions.validateSet(session.id, set.id, performed);
   await assert.rejects(f.db.runAsync('UPDATE performed_sets SET reps = 15 WHERE id = ?', session.performances[0]!.id), /immutable/);
   await assert.rejects(f.db.runAsync('UPDATE session_sets SET reps_min = 1 WHERE id = ?', set.id), /immutable/);
-  await assert.rejects(f.db.runAsync(`INSERT INTO session_sets (id,session_id,session_exercise_id,source_set_template_id,sort_order,series_index,label,kind,notes,original_targets,reps_min,reps_max,rest_after_sec)
+  await assert.rejects(f.db.runAsync(`INSERT INTO session_sets (id,session_id,session_exercise_id,legacy_source_set_template_id,sort_order,series_index,label,kind,notes,original_targets,reps_min,reps_max,rest_after_sec)
     VALUES ('orphan',?,'missing','source',500,0,'','work','','{}',1,1,0)`, session.id), /FOREIGN KEY/);
   assert.deepEqual(await f.db.getAllAsync('PRAGMA foreign_key_check'), []);
 });
@@ -456,10 +456,10 @@ test('failure closing a paused rest rolls back pause end and advancement, and pr
 test('Programme and execution objective updates commit together or both roll back', async t => {
   const f = await fixture(); t.after(() => f.db.close());
   const session = await f.sessions.startOrResume(f.workout.id), set = active(session);
-  const template = await f.training.getSet(set.sourceSetTemplateId);
+  const template = await f.training.getSet(set.sourceSetTemplateId!);
   await f.db.execAsync(`CREATE TRIGGER fail_targets BEFORE UPDATE OF reps_min ON session_sets BEGIN SELECT RAISE(ABORT,'targets failure'); END;`);
   await assert.rejects(f.sessions.updateSetTargets(session.id, set.id, { ...set.targets, repsMin: 3 }, 'program'), /targets failure/);
-  assert.deepEqual(await f.training.getSet(set.sourceSetTemplateId), template);
+  assert.deepEqual(await f.training.getSet(set.sourceSetTemplateId!), template);
   assert.deepEqual(await f.sessions.getSession(session.id), session);
 });
 

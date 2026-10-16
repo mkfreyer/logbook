@@ -1,7 +1,7 @@
 import type { SetKind, WeightMode } from './training';
 
 export interface LoadRuleSnapshot {
-  basis: 'planned_target'; referenceSetTemplateId: string | null; percent: number;
+  basis: 'planned_target' | 'performed_weight'; referenceSetTemplateId: string | null; percent: number;
   referenceWeightKg: number | null; resolvedWeightKg: number | null; weightMode: WeightMode;
 }
 
@@ -23,8 +23,16 @@ export interface ExerciseReplacement {
 export interface ExerciseChoice {
   id: string; sessionId: string; exerciseId: string; expectedSetId: string; chosenAt: string;
 }
+export type ChangeScope = 'session' | 'program';
+export interface SessionLoadRule {
+  basis: 'planned_target' | 'performed_weight'; referenceSetId: string; percent: number;
+  weightMode: WeightMode; suspended: boolean;
+}
+export interface SetAdjustment {
+  id: string; setId: string; scope: ChangeScope; action: string; payload: Record<string, unknown>; changedAt: string;
+}
 export interface SessionSet {
-  id: string; sessionId: string; sessionExerciseId: string; sourceSetTemplateId: string;
+  id: string; sessionId: string; sessionExerciseId: string; sourceSetTemplateId: string | null;
   sortOrder: number; seriesIndex: number; label: string; kind: SetKind; notes: string;
   /** Immutable targets captured when the workout started. */
   originalTargets: SetTargets;
@@ -32,6 +40,9 @@ export interface SessionSet {
   targets: SetTargets;
   /** Immutable provenance, never reevaluated using a live program/performance. */
   loadRuleSnapshot?: LoadRuleSnapshot | null;
+  loadRule?: SessionLoadRule;
+  addition?: { key: string; scope: ChangeScope; addedAt: string };
+  editScope?: ChangeScope;
 }
 export interface ActualSetInput { weightKg: number | null; reps: number; rir: number | null }
 export interface PerformedSet extends ActualSetInput {
@@ -54,6 +65,9 @@ export interface WorkoutSession {
   selectedExerciseId?: string | null;
   replacements?: ExerciseReplacement[];
   exerciseChoices?: ExerciseChoice[];
+  personalNote?: string;
+  exerciseNotes?: Record<string, string>;
+  adjustments?: SetAdjustment[];
 }
 export type SessionStep =
   | { phase: 'set'; set: SessionSet; exercise: SessionExercise }

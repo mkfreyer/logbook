@@ -12,8 +12,8 @@ import { sessionSeriesTitle, sessionStyles as s } from './shared';
 
 const number = (value: number) => value.toLocaleString('fr-FR', { maximumFractionDigits: 2 });
 
-export function SessionSummaryView({ session, onExit, onRetry, historical = false, onExercise }: {
-  session: WorkoutSession; onExit(): void; onRetry(): void; historical?: boolean; onExercise?(exercise: SessionExercise): void;
+export function SessionSummaryView({ session, onExit, onRetry, historical = false, onExercise, onNotes }: {
+  session: WorkoutSession; onExit(): void; onRetry(): void; historical?: boolean; onExercise?(exercise: SessionExercise): void; onNotes?(): void;
 }) {
   const seriesDisplay = useSeriesDisplay();
   const [details, setDetails] = useState(false);
@@ -52,6 +52,14 @@ export function SessionSummaryView({ session, onExit, onRetry, historical = fals
         <Text style={s.help}>Charges totales : {number(summary.tonnageByMode.total)} kg · Par haltère : {number(summary.tonnageByMode.per_hand)} kg · Charges ajoutées : {number(summary.tonnageByMode.additional)} kg</Text>
       </Card>}
     </View>
+    {(session.personalNote || Object.values(session.exerciseNotes ?? {}).some(Boolean)) && <Card style={{ gap: 8 }}>
+      <Text style={s.eyebrow}>NOTES PERSONNELLES</Text>
+      {session.personalNote ? <Text style={s.body}>{session.personalNote}</Text> : null}
+      {session.exercises.filter(exercise => session.exerciseNotes?.[exercise.id]).map(exercise => <View key={exercise.id}>
+        <Text style={s.subtitle}>{exercise.name}</Text><Text style={s.body}>{session.exerciseNotes![exercise.id]}</Text>
+      </View>)}
+    </Card>}
+    {onNotes && <Button label="Modifier mes notes personnelles" variant="ghost" icon="document-text-outline" onPress={onNotes} />}
     <Text style={s.eyebrow}>EXERCICES RÉALISÉS</Text>
     {chronologicalExerciseBlocks(summary).map(({ exercise, performances, replacedFrom }) => <Card key={performances[0]!.performance.id} style={{ gap: 10 }}>
       <Pressable accessibilityRole={onExercise ? 'button' : undefined} accessibilityLabel={onExercise ? `Historique : ${exercise.name}` : undefined}
@@ -70,6 +78,9 @@ export function SessionSummaryView({ session, onExit, onRetry, historical = fals
           <Text style={[s.help, { color: colors.cyan }]}>Horaires et repos {expandedRest === performance.id ? '−' : '+'}</Text>
         </Pressable>
         {expandedRest === performance.id && <View style={{ gap: 4 }}>
+          {series.addition && <Text style={s.help}>Série ajoutée pendant l’entraînement · {series.addition.scope === 'program' ? 'Cette séance et Programme' : 'Cette séance'}</Text>}
+          {series.loadRule && <Text style={s.help}>{series.loadRule.percent} % · {series.loadRule.basis === 'performed_weight' ? 'charge réellement validée' : 'charge prévue'} · cible : {series.targets.targetWeightKg === null ? 'non disponible' : `${number(series.targets.targetWeightKg)} kg`}</Text>}
+          {series.notes ? <Text style={s.help}>Note de série : {series.notes}</Text> : null}
           <Text style={s.help}>Validée le {new Date(performance.performedAt).toLocaleString('fr-FR')}</Text>
           {rest ? <>
             <Text style={s.help}>Repos prévu : {rest.plannedSeconds} s · Repos réel : {rest.chronologicalMs === null ? 'non terminé' : formatSessionDuration(rest.chronologicalMs)}</Text>

@@ -45,3 +45,7 @@ La restauration ne sera annoncée disponible qu’après ces garanties et la val
 ## Extension M3.4A — schéma 6
 
 La restauration devra également importer `set_load_rules`, vérifier même exercice, référence manuelle, type top set pour les back-offs, pourcentage > 0 et ≤ 100 et absence de chaîne/cycle. Une référence null après suppression est valide ; aucune charge ne doit être inventée. Préserver exactement `session_sets.load_rule_snapshot` et son mode de charge sans le recalculer depuis les préparations actuelles. Vérifier la préférence `series_display` (number/name/both). Tester des exports v5 et v6, anciens instantanés nulls, suppressions et entraînements actifs avec calculs capturés. L’import reste absent en M3.4A.
+
+## Extension M3.4B à prendre en charge
+
+Le futur restaurateur devra accepter explicitement le schéma 7 (19 tables), les liens source nullables/colonne de compatibilité, les ajouts et retraits logiques, les règles réelles et prévues distinctes, les ajustements append-only et les notes personnelles. Valider les références d’exécution, suspensions, modes de charge et jetons d’ajout, sans recalculer les captures ou performances. Les métadonnées initiales sont immuables. Aucun import n’est livré en M3.4B.

@@ -11,6 +11,7 @@ export function SessionHistory({ sessionId }: { sessionId?: string }) {
     <Heading title="Détail de séance" back /><LoadState loading={data.loading} error={data.error} retry={data.retry}
       missing="Cet entraînement n’est pas terminé ou n’est plus disponible." /></Screen>;
   return <SessionSummaryView session={data.session} historical onRetry={data.retry}
+    onNotes={() => router.push({ pathname: '/sessions/[sessionId]/notes', params: { sessionId: data.session!.id } })}
     onExit={() => router.canGoBack() ? router.back() : router.replace('/history')}
     onExercise={exercise => router.push({ pathname: '/history/exercises/[exerciseId]', params: { exerciseId: exercise.sourceCatalogExerciseId, mode: exercise.weightMode } })} />;
 }

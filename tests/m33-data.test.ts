@@ -66,13 +66,18 @@ async function fixture(t: { after(callback: () => void): void }, legacy = false)
   const reference = (await training.listSets(occurrence.id))[0]!;
   await training.createSet(occurrence.id, { kind: 'warmup', repsMin: 5, repsMax: 5, restAfterSec: 20,
     loadRule: { basis: 'planned_target', referenceSetId: reference.id, percent: 50 } });
+  await training.createSet(occurrence.id, { kind: 'warmup', repsMin: 5, repsMax: 5, restAfterSec: 20,
+    loadRule: { basis: 'performed_weight', referenceSetId: reference.id, percent: 60 } });
+  active = await sessions.addSet(active.id, active.exercises[0]!.id, { kind: 'warmup', repsMin: 5, repsMax: 5, restAfterSec: 20,
+    loadRule: { basis: 'performed_weight', referenceSetId: active.sets[0]!.id, percent: 50 } }, 'session', 'm33-export-addition');
+  active = await sessions.savePersonalNote(active.id, 'Note personnelle de test');
   return { db, path, programs, training, sessions, preferences, completed, active, program, workout };
 }
-async function snapshot(db: SqliteDatabase, excludePreferences = false) {
+async function snapshot(db: SqliteDatabase, excludePreferences = false, legacyProjection = false) {
   const result: Record<string, Row[]> = {};
-  for (const [table] of EXPORT_TABLES) if (!(excludePreferences && ['app_preferences', 'set_load_rules'].includes(table))) {
-    const columns = excludePreferences && table === 'session_sets'
-      ? (await db.getAllAsync<{ name: string }>('PRAGMA table_info(session_sets)')).map(item => item.name).filter(name => name !== 'load_rule_snapshot').join(',') : '*';
+  for (const [table] of EXPORT_TABLES) if (!(excludePreferences && table === 'app_preferences') && !(legacyProjection && ['set_load_rules', 'set_actual_load_rules', 'session_set_load_rules', 'session_set_adjustments', 'session_personal_notes'].includes(table))) {
+    const columns = legacyProjection && table === 'session_sets'
+      ? (await db.getAllAsync<{ name: string }>('PRAGMA table_info(session_sets)')).map(item => item.name).filter(name => !['load_rule_snapshot','legacy_source_set_template_id','added_at','addition_scope','addition_key','edit_scope','removed_at','initial_metadata'].includes(name)).join(',') : '*';
     result[table] = await db.getAllAsync(`SELECT rowid AS __rowid, ${columns} FROM ${table} ORDER BY rowid`);
   }
   return result;
@@ -86,17 +91,17 @@ async function exportFile(path: string, onChunk?: (text: string) => void | Promi
 }
 
 test('v4 to current migration preserves every M0–M3.2 value, including a paused active rest; preference table starts empty', async t => {
-  const f = await fixture(t, true), before = await snapshot(f.db, true);
+  const f = await fixture(t, true), before = await snapshot(f.db, true, true);
   await initializeDatabase(f.db);
-  assert.deepEqual(await snapshot(f.db, true), before); assert.deepEqual(await f.db.getAllAsync('SELECT * FROM app_preferences'), []);
+  assert.deepEqual(await snapshot(f.db, true, true), before); assert.deepEqual(await f.db.getAllAsync('SELECT * FROM app_preferences'), []);
   assert.equal((await f.db.getFirstAsync<{ user_version: number }>('PRAGMA user_version'))!.user_version, DATABASE_VERSION);
   assert.deepEqual(await f.sessions.getSession(f.active.id), f.active); assert.deepEqual(await f.sessions.getSession(f.completed.id), f.completed);
   assert.deepEqual(await f.db.getAllAsync('PRAGMA foreign_key_check'), []);
 });
 test('failed preference migration rolls back its schema and leaves version 4 data untouched', async t => {
-  const f = await fixture(t, true), before = await snapshot(f.db, true), original = f.db.execAsync.bind(f.db);
+  const f = await fixture(t, true), before = await snapshot(f.db, true, true), original = f.db.execAsync.bind(f.db);
   f.db.execAsync = async sql => { if (sql.includes('CREATE TABLE app_preferences')) throw new Error('storage full'); return original(sql); };
-  await assert.rejects(initializeDatabase(f.db), /storage full/); assert.deepEqual(await snapshot(f.db, true), before);
+  await assert.rejects(initializeDatabase(f.db), /storage full/); assert.deepEqual(await snapshot(f.db, true, true), before);
   assert.equal((await f.db.getFirstAsync<{ user_version: number }>('PRAGMA user_version'))!.user_version, 4);
   assert.equal(await f.db.getFirstAsync("SELECT name FROM sqlite_master WHERE name='app_preferences'"), null);
 });

@@ -41,7 +41,7 @@ export function SetEditor({ mode, programId, workoutId, exerciseInstanceId, setI
   const { data, loading, error, refreshError, refreshing, retry } = useFocusedData(load);
   const [draft, setDraft] = useState<SetDraft>(initialDraft);
   const [advanced, setAdvanced] = useState(false), [suggestions, setSuggestions] = useState(false);
-  const [loadMode, setLoadMode] = useState<'manual' | 'percentage'>('manual');
+  const [loadMode, setLoadMode] = useState<'manual' | 'percentage' | 'performed'>('manual');
   const [referenceId, setReferenceId] = useState(''), [percent, setPercent] = useState('');
   const [formError, setFormError] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
@@ -69,33 +69,34 @@ export function SetEditor({ mode, programId, workoutId, exerciseInstanceId, setI
     setDraft({ label: set.label, kind: set.kind, repetitionMode: set.repsMin === set.repsMax ? 'exact' : 'range',
       repsMin: String(set.repsMin), repsMax: String(set.repsMax), weight: set.targetWeightKg === null ? '' : String(set.targetWeightKg),
       rir: set.targetRir === null ? '' : String(set.targetRir), rest: String(set.restAfterSec), notes: set.notes });
-    setLoadMode(set.loadRule ? 'percentage' : 'manual'); setAdvanced(!!set.loadRule);
+    setLoadMode(set.loadRule ? set.loadRule.basis === 'performed_weight' ? 'performed' : 'percentage' : 'manual'); setAdvanced(!!set.loadRule);
     setReferenceId(set.loadRule?.referenceSetId ?? ''); setPercent(set.loadRule ? String(set.loadRule.percent) : '');
   }, [data]);
   const candidates = data?.sets.map((item, displayIndex) => ({ ...item, displayIndex })).filter(item => item.id !== setId && !item.loadRule &&
     (draft.kind === 'back_off' ? item.kind === 'top_set' : ['work', 'top_set', 'custom'].includes(item.kind))) ?? [];
   const reference = candidates.find(item => item.id === referenceId);
   let preview: number | null = null, calculationError: string | null = null;
-  if (loadMode === 'percentage') {
+  if (loadMode !== 'manual') {
     try {
       const percentage = parseLoadPercentage(percent);
       if (!reference) calculationError = data?.set?.loadRule?.referenceSetId === null
         ? 'La référence de cette série a été supprimée. Choisissez une autre référence ou une charge manuelle.'
         : 'Choisissez une série de référence compatible.';
+      else if (loadMode === 'performed') calculationError = 'En attente de la série de référence : sa charge réelle sera connue après validation pendant l’entraînement.';
       else if (reference.targetWeightKg === null) calculationError = 'Cette référence n’a pas de charge cible. Renseignez-la ou utilisez une charge manuelle.';
       else preview = percentageWeight(reference.targetWeightKg, percentage);
     } catch (failure) { calculationError = messageFor(failure); }
   }
-  const manual = () => { if (loadMode === 'percentage') setDraft(current => ({ ...current, weight: preview === null ? '' : String(preview) })); setLoadMode('manual'); };
+  const manual = () => { if (loadMode !== 'manual') setDraft(current => ({ ...current, weight: preview === null ? '' : String(preview) })); setLoadMode('manual'); };
   const change = <K extends keyof SetDraft>(key: K, value: SetDraft[K]) => { setDraft(current => ({ ...current, [key]: value })); setFormError(null); };
   const save = async () => {
     if (lock.current || !data) return;
     let input;
     try {
-      input = parseSetDraft({ ...draft, weight: loadMode === 'percentage' ? '' : draft.weight });
-      if (loadMode === 'percentage') {
+      input = parseSetDraft({ ...draft, weight: loadMode !== 'manual' ? '' : draft.weight });
+      if (loadMode !== 'manual') {
         if (!reference) throw new Error('Choisissez une série de référence avant d’enregistrer.');
-        input.loadRule = { basis: 'planned_target', referenceSetId: reference.id, percent: parseLoadPercentage(percent) };
+        input.loadRule = { basis: loadMode === 'performed' ? 'performed_weight' : 'planned_target', referenceSetId: reference.id, percent: parseLoadPercentage(percent) };
       } else input.loadRule = null;
     } catch (failure) { setFormError(messageFor(failure)); return; }
     lock.current = true; setSaving(true); setFormError(null);
@@ -129,8 +130,8 @@ export function SetEditor({ mode, programId, workoutId, exerciseInstanceId, setI
       <Text style={styles.help}>Échauffement : préparation. Top set : série principale. Back-off : série suivante avec une charge choisie par vous.</Text>
       {(draft.kind === 'warmup' || draft.kind === 'back_off') && <>
         <Button label="Charge calculée (facultatif)" variant="secondary" disabled={busy} onPress={() => setAdvanced(value => !value)} />
-        {advanced && <LoadRuleFields mode={loadMode} onManual={manual} onPercentage={() => setLoadMode('percentage')}
-          candidates={candidates} referenceId={referenceId} onReference={setReferenceId} percent={percent} onPercent={setPercent}
+        {advanced && <LoadRuleFields mode={loadMode} onManual={manual} onPercentage={() => setLoadMode('percentage')} onPerformed={() => setLoadMode('performed')}
+          candidates={loadMode === 'performed' ? candidates.map(item => ({ ...item, targetWeightKg: null })) : candidates} referenceId={referenceId} onReference={setReferenceId} percent={percent} onPercent={setPercent}
           preview={preview} error={calculationError} disabled={busy} />}
       </>}
       <View style={styles.choices} accessibilityRole="radiogroup" accessibilityLabel="Cible de répétitions">
@@ -138,7 +139,7 @@ export function SetEditor({ mode, programId, workoutId, exerciseInstanceId, setI
         <Choice label="Plage min / max" selected={draft.repetitionMode === 'range'} disabled={busy} onPress={() => change('repetitionMode', 'range')} />
       </View>
       <View style={styles.grid}>
-        <NumberBox label={`${weightModeLabel[data.occurrence.exercise.weightMode]} · facultative`} value={loadMode === 'percentage' ? preview === null ? '' : String(preview) : draft.weight} onChange={value => change('weight', value)} decimal disabled={busy || loadMode === 'percentage'} placeholder="Facultative" />
+        <NumberBox label={`${weightModeLabel[data.occurrence.exercise.weightMode]} · facultative`} value={loadMode !== 'manual' ? preview === null ? '' : String(preview) : draft.weight} onChange={value => change('weight', value)} decimal disabled={busy || loadMode !== 'manual'} placeholder="Facultative" />
         <Card style={styles.numberCard}>
           <Text style={styles.label}>Répétitions cibles</Text>
           {draft.repetitionMode === 'range' ? <View style={styles.range}>

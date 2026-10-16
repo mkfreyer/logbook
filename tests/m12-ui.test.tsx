@@ -51,7 +51,8 @@ const mockSessions = {
   validateSet: jest.fn<SessionRepository['validateSet']>(), pauseRest: jest.fn<SessionRepository['pauseRest']>(),
   resumeRest: jest.fn<SessionRepository['resumeRest']>(), completeRest: jest.fn<SessionRepository['completeRest']>(),
   advanceAfterSet: jest.fn<SessionRepository['advanceAfterSet']>(), finishSession: jest.fn<SessionRepository['finishSession']>(),
-  updateSetTargets: jest.fn<SessionRepository['updateSetTargets']>(),
+  updateSet: jest.fn<SessionRepository['updateSet']>(),
+  canUpdateProgram: jest.fn<SessionRepository['canUpdateProgram']>(),
 };
 function deferred<T>() {
   let resolve!: (value: T) => void;
@@ -67,7 +68,7 @@ beforeEach(() => {
   mockSessions.validateSet.mockResolvedValue(resting); mockSessions.completeRest.mockResolvedValue(advanced);
   mockSessions.advanceAfterSet.mockResolvedValue(advanced);
   mockSessions.finishSession.mockResolvedValue({ ...allDone, status: 'completed', finishedAt: stamp });
-  mockSessions.updateSetTargets.mockResolvedValue(initial);
+  mockSessions.updateSet.mockResolvedValue(initial); mockSessions.canUpdateProgram.mockResolvedValue(true);
   mockSessions.pauseRest.mockResolvedValue({ ...resting, rests: [{ ...rest, pauses: [{ id: 'pause', startedAt: stamp, endedAt: null }] }] });
   mockSessions.resumeRest.mockResolvedValue(resting);
   jest.mocked(useSessions).mockReturnValue(mockSessions as unknown as SessionRepository);
@@ -243,23 +244,24 @@ describe('M1.2 : modification explicite des objectifs', () => {
     fireEvent.changeText(view.getByLabelText('Charge cible (kg)'), '75,5');
     fireEvent.changeText(view.getByLabelText('Repos cible (s)'), '135');
     fireEvent.press(view.getByRole('button', { name: 'Enregistrer les objectifs' }));
-    await waitFor(() => expect(mockSessions.updateSetTargets).toHaveBeenCalledWith('session', 'first', { ...targets, targetWeightKg: 75.5, restAfterSec: 135 }, 'session'));
+    await waitFor(() => expect(mockSessions.updateSet).toHaveBeenCalledWith('session', 'first', { ...targets, label: 'Top set', kind: 'top_set', notes: '', loadRule: null, targetWeightKg: 75.5, restAfterSec: 135 }, 'session'));
     await waitFor(() => expect(router.dismissTo).toHaveBeenCalledWith({ pathname: '/sessions/[sessionId]', params: { sessionId: 'session' } }));
     expect(mockSessions.validateSet).not.toHaveBeenCalled();
   });
 
   test('Programme est un choix explicite et transmet sa portée sans toucher aux résultats', async () => {
     const view = render(<SessionSetEditor sessionId="session" setId="first" />);
-    fireEvent.press(await view.findByRole('radio', { name: 'Programme' }));
+    await waitFor(() => expect(view.getByRole('radio', { name: 'Programme' }).props.accessibilityState.disabled).toBe(false));
+    fireEvent.press(view.getByRole('radio', { name: 'Programme' }));
     fireEvent.changeText(view.getByLabelText('RIR cible'), '');
     fireEvent.press(view.getByRole('button', { name: 'Enregistrer les objectifs' }));
-    await waitFor(() => expect(mockSessions.updateSetTargets).toHaveBeenCalledWith('session', 'first', { ...targets, targetRir: null }, 'program'));
+    await waitFor(() => expect(mockSessions.updateSet).toHaveBeenCalledWith('session', 'first', { ...targets, label: 'Top set', kind: 'top_set', notes: '', loadRule: null, targetRir: null }, 'program'));
     await waitFor(() => expect(router.dismissTo).toHaveBeenCalledWith({ pathname: '/sessions/[sessionId]', params: { sessionId: 'session' } }));
     expect(mockSessions.validateSet).not.toHaveBeenCalled();
   });
 
   test('une erreur ne quitte pas l’éditeur, et Annuler ne sauvegarde pas', async () => {
-    mockSessions.updateSetTargets.mockRejectedValueOnce(new Error('La série du programme a été supprimée'));
+    mockSessions.updateSet.mockRejectedValueOnce(new Error('La série du programme a été supprimée'));
     const view = render(<SessionSetEditor sessionId="session" setId="first" />);
     await view.findByLabelText('Repos cible (s)');
     fireEvent.changeText(view.getByLabelText('Repos cible (s)'), '90');
@@ -268,23 +270,23 @@ describe('M1.2 : modification explicite des objectifs', () => {
     expect(router.dismissTo).not.toHaveBeenCalled();
     expect(view.getByLabelText('Repos cible (s)').props.value).toBe('90');
     fireEvent.press(view.getByRole('button', { name: 'Annuler' }));
-    expect(mockSessions.updateSetTargets).toHaveBeenCalledTimes(1);
+    expect(mockSessions.updateSet).toHaveBeenCalledTimes(1);
   });
 
   test('une série déjà validée ou une autre série n’est pas modifiable depuis une route ancienne', async () => {
     mockSessions.getSession.mockResolvedValue(advanced);
     const view = render(<SessionSetEditor sessionId="session" setId="first" />);
-    await view.findByText('Seule la série active, non encore validée, peut être modifiée.');
+    await view.findByText('Cette série n’est pas modifiable : elle est validée, retirée ou la séance est terminée.');
     expect(view.queryByRole('button', { name: 'Enregistrer les objectifs' })).toBeNull();
-    expect(mockSessions.updateSetTargets).not.toHaveBeenCalled();
+    expect(mockSessions.updateSet).not.toHaveBeenCalled();
   });
 
   test('une sauvegarde doublée reste unique, sans navigation tardive après perte du focus', async () => {
-    const pending = deferred<WorkoutSession>(); mockSessions.updateSetTargets.mockReturnValue(pending.promise);
+    const pending = deferred<WorkoutSession>(); mockSessions.updateSet.mockReturnValue(pending.promise);
     const view = render(<SessionSetEditor sessionId="session" setId="first" />);
     const save = await view.findByRole('button', { name: 'Enregistrer les objectifs' });
     fireEvent.press(save); fireEvent.press(save);
-    expect(mockSessions.updateSetTargets).toHaveBeenCalledTimes(1);
+    expect(mockSessions.updateSet).toHaveBeenCalledTimes(1);
     act(() => mockFocusCleanups.forEach(blur => blur()));
     await act(async () => { pending.resolve(initial); await pending.promise; });
     expect(router.dismissTo).not.toHaveBeenCalled();

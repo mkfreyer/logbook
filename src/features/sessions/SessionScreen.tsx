@@ -49,12 +49,15 @@ export function SessionScreen({ sessionId }: { sessionId?: string }) {
   const progressLabel = session?.exerciseChoices?.length ? 'Position prévue' : 'Exercice';
   const sourceSets = session && currentExercise ? session.sets.filter(item => session.exercises.find(exercise => exercise.id === item.sessionExerciseId)?.sourceWorkoutExerciseId === currentExercise.sourceWorkoutExerciseId) : [];
   const replacedFrom = session && activeExerciseId ? replacementOrigin(session, activeExerciseId) : null;
-  const showActions = !data.loading && !data.error && (step?.phase === 'set' || step?.phase === 'rest' || step?.phase === 'between_sets');
-  const goAction = (kind: 'edit' | 'replace' | 'exercises') => {
+  const showActions = !data.loading && !data.error && (step?.phase === 'set' || step?.phase === 'rest' || step?.phase === 'between_sets' || step?.phase === 'ready_to_finish');
+  const goAction = (kind: 'edit' | 'replace' | 'exercises' | 'add' | 'remaining' | 'notes') => {
     if (!session) return;
     void operation.run(async () => undefined, () => {
       setActionsOpen(false); Keyboard.dismiss();
-      if (kind === 'exercises') router.push({ pathname: '/sessions/[sessionId]/exercises', params: { sessionId: session.id } });
+      if (kind === 'add') router.push({ pathname: '/sessions/[sessionId]/add', params: { sessionId: session.id } });
+      else if (kind === 'notes') router.push({ pathname: '/sessions/[sessionId]/notes', params: { sessionId: session.id } });
+      else if (kind === 'remaining') router.push({ pathname: '/sessions/[sessionId]/edit', params: { sessionId: session.id } });
+      else if (kind === 'exercises') router.push({ pathname: '/sessions/[sessionId]/exercises', params: { sessionId: session.id } });
       else if (step?.phase === 'set' && kind === 'edit') router.push({ pathname: '/sessions/[sessionId]/edit', params: { sessionId: session.id, setId: step.set.id } });
       else if (step?.phase === 'set') router.push({ pathname: '/sessions/[sessionId]/replace', params: { sessionId: session.id, exerciseId: step.exercise.id, setId: step.set.id } });
     }, true);
@@ -66,6 +69,7 @@ export function SessionScreen({ sessionId }: { sessionId?: string }) {
   </View> : undefined;
   if (!data.loading && !data.error && session && step?.phase === 'completed') {
     return <SessionSummaryView session={session} onExit={leave} onRetry={data.retry}
+      onNotes={() => router.push({ pathname: '/sessions/[sessionId]/notes', params: { sessionId: session.id } })}
       onExercise={exercise => router.push({ pathname: '/history/exercises/[exerciseId]', params: { exerciseId: exercise.sourceCatalogExerciseId, mode: exercise.weightMode } })} />;
   }
   return <Screen compact footer={footer}>
@@ -85,7 +89,10 @@ export function SessionScreen({ sessionId }: { sessionId?: string }) {
             <Button label="Modifier les objectifs de la série" variant="ghost" icon="create-outline" disabled={operation.busy} onPress={() => goAction('edit')} />
             <Button label="Remplacer cet exercice" variant="ghost" icon="swap-horizontal" disabled={operation.busy} onPress={() => goAction('replace')} />
           </>}
-          <Button label="Choisir le prochain exercice" variant="ghost" icon="grid-outline" disabled={operation.busy} onPress={() => goAction('exercises')} />
+          <Button label="Ajouter une série" variant="ghost" icon="add-outline" disabled={operation.busy} onPress={() => goAction('add')} />
+          {step?.phase !== 'ready_to_finish' && <Button label="Modifier une série restante" variant="ghost" icon="create-outline" disabled={operation.busy} onPress={() => goAction('remaining')} />}
+          <Button label="Notes personnelles" variant="ghost" icon="document-text-outline" disabled={operation.busy} onPress={() => goAction('notes')} />
+          {step?.phase !== 'ready_to_finish' && <Button label="Choisir le prochain exercice" variant="ghost" icon="grid-outline" disabled={operation.busy} onPress={() => goAction('exercises')} />}
           <Button label="Fermer" variant="secondary" disabled={operation.busy} onPress={() => setActionsOpen(false)} />
         </View></Card>
       </View>
@@ -108,8 +115,11 @@ export function SessionScreen({ sessionId }: { sessionId?: string }) {
           {replacedFrom && <Text style={sessionStyles.help}>En remplacement de {replacedFrom.name} · charge cible à adapter.</Text>}
         </LinearGradient>
         <Card style={styles.targetCard}>
-          <Text style={sessionStyles.eyebrow}>OBJECTIFS PROGRAMMÉS</Text>
+          <Text style={sessionStyles.eyebrow}>OBJECTIFS DE CETTE SÉRIE</Text>
           <Text style={sessionStyles.body}>{step.set.targets.repsMin === step.set.targets.repsMax ? step.set.targets.repsMin : `${step.set.targets.repsMin}–${step.set.targets.repsMax}`} répétitions · {step.set.targets.targetWeightKg === null ? 'Charge libre' : `${step.set.targets.targetWeightKg.toLocaleString('fr-FR', { maximumSignificantDigits: 21 })} kg${step.exercise.weightMode === 'per_hand' ? ' / haltère' : step.exercise.weightMode === 'additional' ? ' ajoutés' : ''}`}{step.set.targets.targetRir === null ? '' : ` · RIR ${step.set.targets.targetRir}`}</Text>
+          {step.set.loadRule && <Text style={sessionStyles.help}>{step.set.loadRule.suspended ? 'Calcul suspendu après remplacement ou retrait : choisissez une cible manuelle ou une référence compatible.' : step.set.loadRule.basis === 'performed_weight'
+            ? !session.performances.some(item => item.sessionSetId === step.set.loadRule!.referenceSetId) ? 'En attente de la série de référence' : step.set.targets.targetWeightKg === null ? 'Charge de référence non renseignée · charge libre' : `${step.set.loadRule.percent} % de la charge réellement validée · cible proposée`
+            : `${step.set.loadRule.percent} % de la charge prévue · cible proposée`}</Text>}
           {step.set.notes ? <Text style={sessionStyles.help}>{replacedFrom ? `Note prévue avant le remplacement : ${step.set.notes}` : step.set.notes}</Text> : null}
         </Card>
         <Text style={sessionStyles.eyebrow}>VOTRE SÉRIE RÉALISÉE</Text>
