@@ -1,7 +1,7 @@
 import type { Database } from './types';
 import { CATALOG_CREATED_AT, INITIAL_EXERCISES } from './exerciseCatalog';
 
-export const DATABASE_VERSION = 5;
+export const DATABASE_VERSION = 6;
 
 const versionOne = `
   CREATE TABLE programs (
@@ -209,6 +209,47 @@ const versionFive = `
   );
 `;
 
+const versionSix = `
+  CREATE TABLE set_load_rules (
+    set_template_id TEXT PRIMARY KEY NOT NULL REFERENCES set_templates(id) ON DELETE CASCADE,
+    reference_set_id TEXT REFERENCES set_templates(id) ON DELETE SET NULL,
+    percent REAL NOT NULL CHECK(typeof(percent) IN ('real', 'integer') AND percent > 0 AND percent <= 100),
+    basis TEXT NOT NULL DEFAULT 'planned_target' CHECK(basis = 'planned_target')
+  );
+  CREATE INDEX load_rules_reference ON set_load_rules(reference_set_id);
+  CREATE TRIGGER validate_load_rule_insert BEFORE INSERT ON set_load_rules
+  WHEN NOT EXISTS (SELECT 1 FROM set_templates s WHERE s.id = NEW.set_template_id
+    AND s.kind IN ('warmup', 'back_off') AND s.target_weight_kg IS NULL)
+    OR EXISTS (SELECT 1 FROM set_load_rules WHERE reference_set_id = NEW.set_template_id)
+    OR (NEW.reference_set_id IS NOT NULL AND NOT EXISTS (
+      SELECT 1 FROM set_templates s JOIN set_templates ref ON ref.id = NEW.reference_set_id
+      WHERE s.id = NEW.set_template_id AND s.id != ref.id AND s.workout_exercise_id = ref.workout_exercise_id
+      AND ref.kind IN ('work', 'top_set', 'custom') AND (s.kind != 'back_off' OR ref.kind = 'top_set')
+      AND NOT EXISTS (SELECT 1 FROM set_load_rules WHERE set_template_id = ref.id)))
+  BEGIN SELECT RAISE(ABORT, 'Invalid planned load reference'); END;
+  CREATE TRIGGER validate_load_rule_update BEFORE UPDATE ON set_load_rules
+  WHEN NEW.set_template_id != OLD.set_template_id OR NEW.basis != 'planned_target'
+    OR (NEW.reference_set_id IS NOT NULL AND NOT EXISTS (
+      SELECT 1 FROM set_templates s JOIN set_templates ref ON ref.id = NEW.reference_set_id
+      WHERE s.id = NEW.set_template_id AND s.id != ref.id AND s.workout_exercise_id = ref.workout_exercise_id
+      AND ref.kind IN ('work', 'top_set', 'custom') AND (s.kind != 'back_off' OR ref.kind = 'top_set')
+      AND NOT EXISTS (SELECT 1 FROM set_load_rules WHERE set_template_id = ref.id)))
+  BEGIN SELECT RAISE(ABORT, 'Invalid planned load reference'); END;
+  CREATE TRIGGER preserve_load_reference BEFORE UPDATE OF kind, workout_exercise_id ON set_templates
+  WHEN EXISTS (SELECT 1 FROM set_load_rules r JOIN set_templates dependent ON dependent.id = r.set_template_id
+    WHERE r.reference_set_id = OLD.id AND (NEW.workout_exercise_id != dependent.workout_exercise_id
+      OR NEW.kind NOT IN ('work', 'top_set', 'custom') OR (dependent.kind = 'back_off' AND NEW.kind != 'top_set')))
+    OR EXISTS (SELECT 1 FROM set_load_rules r WHERE r.set_template_id = OLD.id
+      AND (NEW.kind != OLD.kind OR NEW.workout_exercise_id != OLD.workout_exercise_id))
+  BEGIN SELECT RAISE(ABORT, 'Remove dependent load rules before changing this reference'); END;
+  CREATE TRIGGER calculated_weight_is_derived BEFORE UPDATE OF target_weight_kg ON set_templates
+  WHEN NEW.target_weight_kg IS NOT NULL AND EXISTS (SELECT 1 FROM set_load_rules WHERE set_template_id = NEW.id)
+  BEGIN SELECT RAISE(ABORT, 'Calculated weight must remain derived'); END;
+  ALTER TABLE session_sets ADD COLUMN load_rule_snapshot TEXT CHECK(load_rule_snapshot IS NULL OR json_valid(load_rule_snapshot));
+  CREATE TRIGGER preserve_load_rule_snapshot BEFORE UPDATE OF load_rule_snapshot ON session_sets
+  BEGIN SELECT RAISE(ABORT, 'Original load rule snapshot is immutable'); END;
+`;
+
 /** No demo content: a new database contains no programs or workout templates. */
 export async function initializeDatabase(db: Database): Promise<void> {
   // Foreign keys must be enabled before a transaction, on every connection.
@@ -237,6 +278,7 @@ export async function initializeDatabase(db: Database): Promise<void> {
       if (currentVersion < 3) await db.execAsync(versionThree);
       if (currentVersion < 4) await db.execAsync(versionFour);
       if (currentVersion < 5) await db.execAsync(versionFive);
+      if (currentVersion < 6) await db.execAsync(versionSix);
       await db.execAsync(`PRAGMA user_version = ${DATABASE_VERSION};`);
     });
   }

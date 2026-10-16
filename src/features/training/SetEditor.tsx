@@ -4,11 +4,13 @@ import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
 import { TrainingNotFoundError } from '../../db/trainingRepository';
 import { parseSetDraft, type SetDraft } from '../../domain/setDraft';
 import { setKindLabel, weightModeLabel } from '../../domain/training';
+import { formatSeriesTitle, parseLoadPercentage, percentageWeight } from '../../domain/series';
 import { useLogbook } from '../../store/LogbookProvider';
 import { useTraining } from '../../store/TrainingProvider';
 import { Button, Card, colors, Field, Heading, Screen } from '../../ui';
 import { featureStyles, FormError, LoadState, RefreshNotice, messageFor, useFocusedData } from '../programs/shared';
 import { useConfirmedDelete } from '../programs/useConfirmedDelete';
+import { LoadRuleFields } from './LoadRuleFields';
 
 const initialDraft: SetDraft = { label: '', kind: 'work', repetitionMode: 'exact', repsMin: '8', repsMax: '12', weight: '', rir: '', rest: '90', notes: '' };
 
@@ -30,7 +32,7 @@ export function SetEditor({ mode, programId, workoutId, exerciseInstanceId, setI
       const sets = await training.listSets(exerciseInstanceId);
       const index = set ? sets.findIndex(item => item.id === set.id) : sets.length;
       if (index < 0) return null;
-      return { program, workout, occurrence, set, number: index + 1 };
+      return { program, workout, occurrence, set, sets, number: index + 1 };
     } catch (failure) {
       if (failure instanceof TrainingNotFoundError) return null;
       throw failure;
@@ -38,9 +40,13 @@ export function SetEditor({ mode, programId, workoutId, exerciseInstanceId, setI
   }, [editing, exerciseInstanceId, getProgram, getWorkout, programId, setId, training, workoutId]);
   const { data, loading, error, refreshError, refreshing, retry } = useFocusedData(load);
   const [draft, setDraft] = useState<SetDraft>(initialDraft);
+  const [advanced, setAdvanced] = useState(false), [suggestions, setSuggestions] = useState(false);
+  const [loadMode, setLoadMode] = useState<'manual' | 'percentage'>('manual');
+  const [referenceId, setReferenceId] = useState(''), [percent, setPercent] = useState('');
   const [formError, setFormError] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
   const lock = useRef(false), mounted = useRef(true), focused = useRef(false);
+  const dependentCount = setId ? data?.sets.filter(item => item.loadRule?.referenceSetId === setId).length ?? 0 : 0;
   const returnToExercise = () => {
     if (programId && workoutId && exerciseInstanceId) router.dismissTo({
       pathname: '/programs/[id]/workouts/[workoutId]/exercises/[exerciseInstanceId]',
@@ -49,7 +55,7 @@ export function SetEditor({ mode, programId, workoutId, exerciseInstanceId, setI
   };
   const deletion = useConfirmedDelete({
     title: 'Supprimer la série ?',
-    message: `La série « ${data?.set?.label || `Série ${data?.number ?? ''}`} » et ses cibles seront supprimées. Les autres séries seront conservées.`,
+    message: `La série « ${data?.set ? formatSeriesTitle(data.set, data.number - 1, 'both') : `Série ${data?.number ?? ''}`} » et ses cibles seront supprimées. Les autres séries seront conservées.${dependentCount ? ' Les séries calculées qui l’utilisent perdront leur référence ; leurs charges seront à redéfinir.' : ''}`,
     remove: async () => { if (!data?.set) throw new Error('Série indisponible.'); await training.deleteSet(data.set.id); },
     onDeleted: returnToExercise,
     failureMessage: 'Impossible de supprimer cette série. Réessayez.', operationLock: lock,
@@ -63,12 +69,35 @@ export function SetEditor({ mode, programId, workoutId, exerciseInstanceId, setI
     setDraft({ label: set.label, kind: set.kind, repetitionMode: set.repsMin === set.repsMax ? 'exact' : 'range',
       repsMin: String(set.repsMin), repsMax: String(set.repsMax), weight: set.targetWeightKg === null ? '' : String(set.targetWeightKg),
       rir: set.targetRir === null ? '' : String(set.targetRir), rest: String(set.restAfterSec), notes: set.notes });
+    setLoadMode(set.loadRule ? 'percentage' : 'manual'); setAdvanced(!!set.loadRule);
+    setReferenceId(set.loadRule?.referenceSetId ?? ''); setPercent(set.loadRule ? String(set.loadRule.percent) : '');
   }, [data]);
+  const candidates = data?.sets.map((item, displayIndex) => ({ ...item, displayIndex })).filter(item => item.id !== setId && !item.loadRule &&
+    (draft.kind === 'back_off' ? item.kind === 'top_set' : ['work', 'top_set', 'custom'].includes(item.kind))) ?? [];
+  const reference = candidates.find(item => item.id === referenceId);
+  let preview: number | null = null, calculationError: string | null = null;
+  if (loadMode === 'percentage') {
+    try {
+      const percentage = parseLoadPercentage(percent);
+      if (!reference) calculationError = data?.set?.loadRule?.referenceSetId === null
+        ? 'La référence de cette série a été supprimée. Choisissez une autre référence ou une charge manuelle.'
+        : 'Choisissez une série de référence compatible.';
+      else if (reference.targetWeightKg === null) calculationError = 'Cette référence n’a pas de charge cible. Renseignez-la ou utilisez une charge manuelle.';
+      else preview = percentageWeight(reference.targetWeightKg, percentage);
+    } catch (failure) { calculationError = messageFor(failure); }
+  }
+  const manual = () => { if (loadMode === 'percentage') setDraft(current => ({ ...current, weight: preview === null ? '' : String(preview) })); setLoadMode('manual'); };
   const change = <K extends keyof SetDraft>(key: K, value: SetDraft[K]) => { setDraft(current => ({ ...current, [key]: value })); setFormError(null); };
   const save = async () => {
     if (lock.current || !data) return;
     let input;
-    try { input = parseSetDraft(draft); } catch (failure) { setFormError(messageFor(failure)); return; }
+    try {
+      input = parseSetDraft({ ...draft, weight: loadMode === 'percentage' ? '' : draft.weight });
+      if (loadMode === 'percentage') {
+        if (!reference) throw new Error('Choisissez une série de référence avant d’enregistrer.');
+        input.loadRule = { basis: 'planned_target', referenceSetId: reference.id, percent: parseLoadPercentage(percent) };
+      } else input.loadRule = null;
+    } catch (failure) { setFormError(messageFor(failure)); return; }
     lock.current = true; setSaving(true); setFormError(null);
     let leaving = false;
     try {
@@ -88,18 +117,28 @@ export function SetEditor({ mode, programId, workoutId, exerciseInstanceId, setI
     <RefreshNotice refreshError={refreshError} refreshing={refreshing} retry={retry} />
     {loading || error || !data ? <LoadState loading={loading} error={error} retry={retry} missing="Cette série ou son exercice n’est pas disponible." /> : <View style={featureStyles.sections}>
       <Text style={featureStyles.eyebrow}>SÉRIE PRÉVUE {data.number}</Text>
-      <Text style={featureStyles.body}>Préparez les cibles de cette série. Vous pourrez renseigner vos résultats pendant l’entraînement dans la prochaine étape.</Text>
+      <Text style={featureStyles.body}>Préparez les cibles de cette série. Vos résultats réels seront saisis séparément pendant l’entraînement.</Text>
+      {dependentCount > 0 && <Text style={styles.help}>Cette série sert de référence à {dependentCount} autre{dependentCount > 1 ? 's' : ''} série{dependentCount > 1 ? 's' : ''}. Modifier sa charge actualise leurs objectifs futurs, sans modifier un entraînement déjà démarré.</Text>}
       <Field label="Étiquette (facultative)" value={draft.label} onChangeText={value => change('label', value)} placeholder="Ex. Ma série principale" maxLength={80} />
+      <Button label="Suggestions de noms" variant="ghost" disabled={busy} onPress={() => setSuggestions(value => !value)} />
+      {suggestions && <View style={styles.choices}>{['Échauffement', 'Top set', 'Back-off', 'Série principale'].map(label =>
+        <Choice key={label} label={`Nom : ${label}`} selected={draft.label === label} disabled={busy} onPress={() => change('label', label)} />)}</View>}
       <View style={styles.choices} accessibilityRole="radiogroup" accessibilityLabel="Type de série">
-        {(Object.keys(setKindLabel) as (keyof typeof setKindLabel)[]).map(kind => <Choice key={kind} label={setKindLabel[kind]} selected={draft.kind === kind} disabled={busy} onPress={() => change('kind', kind)} />)}
+        {(Object.keys(setKindLabel) as (keyof typeof setKindLabel)[]).map(kind => <Choice key={kind} label={setKindLabel[kind]} selected={draft.kind === kind} disabled={busy} onPress={() => { if (kind !== draft.kind) { manual(); change('kind', kind); setAdvanced(false); } }} />)}
       </View>
       <Text style={styles.help}>Échauffement : préparation. Top set : série principale. Back-off : série suivante avec une charge choisie par vous.</Text>
+      {(draft.kind === 'warmup' || draft.kind === 'back_off') && <>
+        <Button label="Charge calculée (facultatif)" variant="secondary" disabled={busy} onPress={() => setAdvanced(value => !value)} />
+        {advanced && <LoadRuleFields mode={loadMode} onManual={manual} onPercentage={() => setLoadMode('percentage')}
+          candidates={candidates} referenceId={referenceId} onReference={setReferenceId} percent={percent} onPercent={setPercent}
+          preview={preview} error={calculationError} disabled={busy} />}
+      </>}
       <View style={styles.choices} accessibilityRole="radiogroup" accessibilityLabel="Cible de répétitions">
         <Choice label="Nombre exact" selected={draft.repetitionMode === 'exact'} disabled={busy} onPress={() => change('repetitionMode', 'exact')} />
         <Choice label="Plage min / max" selected={draft.repetitionMode === 'range'} disabled={busy} onPress={() => change('repetitionMode', 'range')} />
       </View>
       <View style={styles.grid}>
-        <NumberBox label={`${weightModeLabel[data.occurrence.exercise.weightMode]} · facultative`} value={draft.weight} onChange={value => change('weight', value)} decimal disabled={busy} placeholder="Facultative" />
+        <NumberBox label={`${weightModeLabel[data.occurrence.exercise.weightMode]} · facultative`} value={loadMode === 'percentage' ? preview === null ? '' : String(preview) : draft.weight} onChange={value => change('weight', value)} decimal disabled={busy || loadMode === 'percentage'} placeholder="Facultative" />
         <Card style={styles.numberCard}>
           <Text style={styles.label}>Répétitions cibles</Text>
           {draft.repetitionMode === 'range' ? <View style={styles.range}>

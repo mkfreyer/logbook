@@ -8,8 +8,10 @@ import { FormError, LoadState, RefreshNotice, LocalNotice } from '../programs/sh
 import { useConfirmedDelete } from '../programs/useConfirmedDelete';
 import { OrderControls, seriesTitle, SetTargetSummary, swappedIds, trainingStyles as s, useScreenOperation, type TrainingRoute } from './shared';
 import { useWorkoutPlan } from './useWorkoutPlan';
+import { useSeriesDisplay } from '../../store/SeriesDisplayProvider';
 
 export function ExerciseOverview({ programId, workoutId, exerciseInstanceId }: TrainingRoute) {
+  const display = useSeriesDisplay();
   const { data, loading, error, refreshError, refreshing, retry, training } = useWorkoutPlan({ programId, workoutId, exerciseInstanceId });
   const operation = useScreenOperation();
   const exercise = data?.exercise;
@@ -52,13 +54,13 @@ export function ExerciseOverview({ programId, workoutId, exerciseInstanceId }: T
       {exercise.sets.length === 0 ? <Card><EmptyState icon="layers-outline" title="Votre première série"
         description="Définissez les répétitions, la charge et le RIR facultatifs, puis le repos propre à cette série." /></Card> : <View style={s.cards}>
         {exercise.sets.map((series, index) => <Card key={series.id} style={{ padding: 16, gap: 12 }}>
-          <Pressable accessibilityRole="button" accessibilityLabel={`Modifier ${seriesTitle(series, index)}`} disabled={busy}
+          <Pressable accessibilityRole="button" accessibilityLabel={`Modifier ${seriesTitle(series, index, display)}`} disabled={busy}
             onPress={() => router.push({ pathname: '/programs/[id]/workouts/[workoutId]/exercises/[exerciseInstanceId]/sets/[setId]/edit', params: { id: data.program.id, workoutId: data.workout.id, exerciseInstanceId: exercise.id, setId: series.id } })}
             style={s.row}>
             <SetTargetSummary series={series} index={index} mode={exercise.exercise.weightMode} />
             <Ionicons name="chevron-forward" color={colors.muted} size={18} />
           </Pressable>
-          <OrderControls label={`${seriesTitle(series, index)} (position ${index + 1})`} first={index === 0} last={index === exercise.sets.length - 1} disabled={busy || refreshing}
+          <OrderControls label={`${seriesTitle(series, index, display)} (position ${index + 1})`} first={index === 0} last={index === exercise.sets.length - 1} disabled={busy || refreshing}
             onUp={() => move(index, -1)} onDown={() => move(index, 1)} />
         </Card>)}
       </View>}

@@ -41,3 +41,7 @@ Cette politique doit être annoncée dans l’interface avant confirmation. Pour
 - Essais réels sur iPhone : sélectionner depuis Fichiers, restaurer dans une installation de test indépendante, fermer/réouvrir pendant les étapes sensibles et vérifier reprise/chronomètre. Ne pas utiliser le seul carnet du propriétaire pour les essais destructifs.
 
 La restauration ne sera annoncée disponible qu’après ces garanties et la validation native. L’export M3.3 reste utile pour conserver une copie personnelle lisible et préparer cette tâche, sans promettre un import actuel.
+
+## Extension M3.4A — schéma 6
+
+La restauration devra également importer `set_load_rules`, vérifier même exercice, référence manuelle, type top set pour les back-offs, pourcentage > 0 et ≤ 100 et absence de chaîne/cycle. Une référence null après suppression est valide ; aucune charge ne doit être inventée. Préserver exactement `session_sets.load_rule_snapshot` et son mode de charge sans le recalculer depuis les préparations actuelles. Vérifier la préférence `series_display` (number/name/both). Tester des exports v5 et v6, anciens instantanés nulls, suppressions et entraînements actifs avec calculs capturés. L’import reste absent en M3.4A.

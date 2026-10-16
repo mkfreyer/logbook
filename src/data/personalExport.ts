@@ -1,6 +1,7 @@
 import type { Database } from '../db/types';
 import { DATABASE_VERSION } from '../db/migrations';
 import { DEFAULT_PREFERENCES } from '../domain/preferences';
+import { DEFAULT_SERIES_DISPLAY } from '../domain/series';
 
 export const PERSONAL_EXPORT_FORMAT = 'logbook.personal-data';
 export const PERSONAL_EXPORT_VERSION = 1;
@@ -11,6 +12,7 @@ export const EXPORT_TABLES = [
   ['session_exercises', 'id'], ['session_sets', 'id'], ['performed_sets', 'id'],
   ['rest_intervals', 'id'], ['rest_pauses', 'id'], ['session_exercise_replacements', 'id'],
   ['session_exercise_choices', 'id'], ['app_preferences', 'key'],
+  ['set_load_rules', 'set_template_id'],
 ] as const;
 export class PersonalExportError extends Error {
   constructor(readonly code: 'cancelled' | 'incompatible' | 'integrity' | 'unavailable' | 'busy' | 'io' | 'cleanup', message: string) {
@@ -52,9 +54,10 @@ export async function writePersonalExport(db: Database, write: (text: string) =>
     if (!Number.isFinite(Date.parse(createdAt))) throw new PersonalExportError('integrity', 'La date de création de l’export est invalide.');
     const metadata = { format: PERSONAL_EXPORT_FORMAT, formatVersion: PERSONAL_EXPORT_VERSION,
       sqliteSchemaVersion: version.user_version, createdAt, application: { name: 'Logbook', version: options.appVersion },
-      units: { weight: 'kg' }, preferenceDefaults: DEFAULT_PREFERENCES, rowidField: '__rowid',
+      units: { weight: 'kg' }, preferenceDefaults: { ...DEFAULT_PREFERENCES, seriesDisplay: DEFAULT_SERIES_DISPLAY }, rowidField: '__rowid',
       conventions: { tonnage: 'recorded_kg_x_reps_including_warmups_no_doubling_no_bodyweight', duration: 'finished_at_minus_started_at_including_absences',
-        restChronological: 'includes_pauses', restActive: 'excludes_pauses' }, restorationAvailableInExporter: false };
+        restChronological: 'includes_pauses', restActive: 'excludes_pauses',
+        plannedLoad: 'decimal_reference_target_x_percent_div_100_no_equipment_rounding_frozen_at_session_start' }, restorationAvailableInExporter: false };
     await write(json(metadata).slice(0, -1) + ',"tables":{');
     for (const [table, key] of EXPORT_TABLES) {
       checkExportCancellation(options.signal);

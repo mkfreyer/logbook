@@ -16,15 +16,21 @@ export interface WorkoutExercise {
 }
 export interface WorkoutExerciseInput { exerciseId: string; notes?: string }
 export type SetKind = 'work' | 'warmup' | 'top_set' | 'back_off' | 'custom';
+export interface PlannedLoadRule {
+  basis: 'planned_target'; referenceSetId: string | null; percent: number;
+}
 /** Targets only. M1.2 will snapshot these in independent performed-session models. */
 export interface SetTemplate {
   id: string; workoutExerciseId: string; sortOrder: number; label: string; kind: SetKind;
   repsMin: number; repsMax: number; targetWeightKg: number | null; targetRir: number | null;
   restAfterSec: number; notes: string; createdAt: string; updatedAt: string;
+  /** Optional for old in-memory fixtures; SQLite v6 returns null for manual sets. */
+  loadRule?: PlannedLoadRule | null;
 }
 export interface SetTemplateInput {
   label?: string; kind: SetKind; repsMin: number; repsMax: number;
   targetWeightKg?: number | null; targetRir?: number | null; restAfterSec: number; notes?: string;
+  loadRule?: PlannedLoadRule | null;
 }
 export interface PlannedExercise extends WorkoutExercise { sets: SetTemplate[] }
 

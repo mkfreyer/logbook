@@ -4,14 +4,15 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 import type { SetTemplate, WeightMode } from '../../domain/training';
-import { setKindLabel } from '../../domain/training';
+import { formatSeriesTitle, type SeriesDisplay } from '../../domain/series';
+import { useSeriesDisplay } from '../../store/SeriesDisplayProvider';
 import { colors } from '../../ui';
 import { messageFor } from '../programs/shared';
 
 export interface TrainingRoute { programId?: string; workoutId?: string; exerciseInstanceId?: string }
 
-export function seriesTitle(series: SetTemplate, index: number): string {
-  return series.label || (series.kind === 'work' ? `Série ${index + 1}` : setKindLabel[series.kind]);
+export function seriesTitle(series: SetTemplate, index: number, display?: SeriesDisplay): string {
+  return formatSeriesTitle(series, index, display);
 }
 
 export function repetitionTarget(series: SetTemplate): string {
@@ -20,17 +21,19 @@ export function repetitionTarget(series: SetTemplate): string {
 
 export function weightTarget(series: SetTemplate, mode: WeightMode): string {
   if (series.targetWeightKg === null) return 'Charge non définie';
-  const weight = series.targetWeightKg.toLocaleString('fr-FR');
+  const weight = series.targetWeightKg.toLocaleString('fr-FR', { maximumSignificantDigits: 21 });
   return `${weight} kg${mode === 'per_hand' ? ' / haltère' : mode === 'additional' ? ' ajoutés' : ''}`;
 }
 
 export function SetTargetSummary({ series, mode, index, compact = false }: {
   series: SetTemplate; mode: WeightMode; index: number; compact?: boolean;
 }) {
+  const display = useSeriesDisplay();
   return <View style={trainingStyles.setSummary}>
-    <Text style={compact ? trainingStyles.compactTitle : trainingStyles.title}>{seriesTitle(series, index)}</Text>
+    <Text style={compact ? trainingStyles.compactTitle : trainingStyles.title}>{seriesTitle(series, index, display)}</Text>
     <Text style={trainingStyles.body}>{repetitionTarget(series)} · {weightTarget(series, mode)}{series.targetRir !== null ? ` · RIR ${series.targetRir}` : ''}</Text>
     <Text style={trainingStyles.meta}>{series.restAfterSec === 0 ? 'Aucun repos prévu après cette série' : `Repos après cette série : ${series.restAfterSec} s`}</Text>
+    {series.loadRule && <Text style={trainingStyles.hint}>{series.loadRule.percent} % d’une référence prévue{series.targetWeightKg === null ? ' · charge à définir' : ''}</Text>}
     {!compact && series.notes ? <Text style={trainingStyles.body}>{series.notes}</Text> : null}
   </View>;
 }

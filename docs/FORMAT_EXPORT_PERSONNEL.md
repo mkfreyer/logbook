@@ -1,6 +1,6 @@
 # Export personnel Logbook — format 1
 
-Format de conservation des données locales ; **pas encore importable par Logbook M3.3**. La restauration V1 reste une tâche distincte, avec validation sur appareil. Le fichier n’est ni chiffré ni anonymisé. L’utilisateur est responsable de la destination qu’il choisit dans la feuille native.
+Format de conservation des données locales ; **pas encore importable par Logbook M3.4A**. La restauration V1 reste une tâche distincte, avec validation sur appareil. Le fichier n’est ni chiffré ni anonymisé. L’utilisateur est responsable de la destination qu’il choisit dans la feuille native.
 
 ## Enveloppe JSON
 
@@ -8,15 +8,15 @@ Format de conservation des données locales ; **pas encore importable par Logboo
 | --- | --- |
 | `format` | `logbook.personal-data` |
 | `formatVersion` | `1`, version du contrat de fichier |
-| `sqliteSchemaVersion` | `5`, schéma de la base exportée |
+| `sqliteSchemaVersion` | `6`, schéma de la base exportée (M3.4A ; anciens fichiers M3.3 : 5) |
 | `createdAt` | Date ISO UTC de préparation, après fixation de l’instantané |
 | `application` | `{ "name": "Logbook", "version": "0.1.0" }` pour cette livraison |
 | `units` | `{ "weight": "kg" }` ; les modes de charge restent dans les lignes d’exercices |
-| `preferenceDefaults` | `{ "restSoundEnabled": true }` si aucune préférence explicite n’existe |
+| `preferenceDefaults` | `{ "restSoundEnabled": true, "seriesDisplay": "name" }` si aucune préférence explicite n’existe |
 | `rowidField` | `__rowid`, identifiant technique de ligne SQLite préservé |
 | `conventions` | Identifiants des règles de tonnage, durée et repos ci-dessous |
 | `restorationAvailableInExporter` | `false` ; ce logiciel exportateur n’offre pas d’import |
-| `tables` | Objet contenant les 14 tables ci-dessous |
+| `tables` | Objet contenant les 15 tables ci-dessous |
 
 Chaque entrée de `tables` contient `columns` (noms SQL des colonnes physiques), `rows` (objets avec toutes ces colonnes, plus `__rowid`) et `rowCount` (nombre exact). `__rowid` n’est pas une colonne physique et ne figure donc pas dans `columns`. Les tables vides ont `rows: []` et `rowCount: 0`.
 
@@ -33,6 +33,7 @@ Les lignes sont ordonnées par `__rowid` croissant. Les ordres métier restent d
 | `exercise_catalog` | `id`, références initiales et personnalisées, noms, instructions, matériel, modes |
 | `workout_exercises` | `id`, exercice dans la configuration d’une séance et ordre |
 | `set_templates` | `id`, étiquettes, type, objectifs et repos propres à chaque série |
+| `set_load_rules` | Clé `set_template_id`, référence prévue `reference_set_id` nullable après suppression, `percent`, `basis = planned_target`. Liens seulement entre séries du même exercice ; aucune chaîne de calcul. |
 | `workout_sessions` | `id`, entraînements actifs/terminés, provenance, instantanés, dates, choix courant |
 | `session_exercises` | `id`, identité réellement utilisée, provenance et ordre programmé capturés |
 | `session_sets` | `id`, séries capturées, objectifs actuels et originaux, ordre et rattachement |
@@ -67,3 +68,9 @@ Le temporaire vit dans le cache privé `logbook-personal-exports`, puis est nett
 Le fichier ne contient pas le code de l’application, les caches de graphiques, ressources Expo ou secrets de compte (aucun compte n’existe). Il ne comprend pas les modifications postérieures à son instantané. Aucun checksum n’est une preuve d’authenticité ; le futur import traitera le fichier comme une entrée non fiable. Le partage choisi par l’utilisateur peut copier le fichier vers un autre service ; aucun transfert n’est déclenché sans son action.
 
 **Ne pas annoncer une sauvegarde déjà restaurable ou effacer l’ancien iPhone sur cette seule base.** La tâche [RESTAURATION_V1.md](RESTAURATION_V1.md) doit être livrée et validée avant publication. Toute nouvelle table, sémantique ou version de schéma impose d’actualiser explicitement l’export et ses tests ; un schéma inconnu est refusé plutôt que tronqué.
+
+## Données avancées M3.4A
+
+Le format d’enveloppe reste **1** ; `sqliteSchemaVersion: 6` identifie la nouvelle structure. `set_templates.target_weight_kg` reste null pour une série calculée : sa règle et sa référence permettent de reconstruire l’objectif. `session_sets.load_rule_snapshot` est une chaîne JSON nullable : base `planned_target`, ID de référence source, pourcentage, charge de référence, résultat capturé et mode. Cette provenance est indépendante du programme courant et n’est pas une performance réalisée. Les anciennes séances restent null. `series_display` dans `app_preferences` contient une chaîne JSON `number`, `name` ou `both` ; défaut `name`, distinct du réglage sonore. La convention `plannedLoad` précise le produit décimal sans arrondi au matériel et sa capture au démarrage.
+
+L’export conserve les valeurs brutes et les relations de ces nouvelles données, y compris une référence devenue null après suppression. Le futur restaurateur devra valider portée, types, absence de cycles/chaînes et cohérence des instantanés, sans recalculer les résultats historiques avec le programme courant.

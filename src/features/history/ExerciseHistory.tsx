@@ -2,7 +2,9 @@ import { router } from 'expo-router';
 import { useCallback, useState } from 'react';
 import { Pressable, Text, View } from 'react-native';
 import { historyRange, type HistoryPeriod } from '../../domain/history';
-import { setKindLabel, weightModeLabel, type WeightMode, type SetKind } from '../../domain/training';
+import { weightModeLabel, type WeightMode, type SetKind } from '../../domain/training';
+import { formatSeriesTitle } from '../../domain/series';
+import { useSeriesDisplay } from '../../store/SeriesDisplayProvider';
 import { useSessions } from '../../store/SessionProvider';
 import { Button, Card, EmptyState, Field, Heading, Screen } from '../../ui';
 import { LoadState, RefreshNotice, useFocusedData } from '../programs/shared';
@@ -32,6 +34,7 @@ export function ExerciseHistoryIndex() {
 }
 
 export function ExerciseHistory({ exerciseId, initialMode }: { exerciseId?: string; initialMode?: WeightMode }) {
+  const seriesDisplay = useSeriesDisplay();
   const repository = useSessions().history, now = useHistoryClock();
   const [period, setPeriod] = useState<HistoryPeriod>('all'), [mode, setMode] = useState(initialMode), [page, setPage] = useState(0);
   const [metric, setMetric] = useState<'weight' | 'reps' | 'tonnage'>('weight');
@@ -70,7 +73,7 @@ export function ExerciseHistory({ exerciseId, initialMode }: { exerciseId?: stri
         <Text style={s.subtitle}>{visit.workoutName}</Text><Text style={s.help}>{historyDate(visit.finishedAt)} · {visit.programName}</Text>
         <View style={h.tableRow}><Text style={[s.help, h.seriesCell]}>Série</Text><Text style={[s.help, h.cell]}>Kg</Text><Text style={[s.help, h.cell]}>Reps</Text><Text style={[s.help, h.cell]}>RIR</Text></View>
         {visit.performances.map(performance => <View key={performance.id} style={h.tableRow}>
-          <View style={h.seriesCell}><Text style={s.help}>{performance.label || (performance.kind === 'work' ? `Série ${performance.seriesIndex + 1}` : setKindLabel[performance.kind as SetKind])}</Text>
+          <View style={h.seriesCell}><Text style={s.help}>{formatSeriesTitle({ label: performance.label, kind: performance.kind as SetKind }, performance.seriesIndex, seriesDisplay)}</Text>
             {performance.exerciseName !== result.exercise!.name && <Text style={s.help}>{performance.exerciseName}</Text>}</View>
           <Text style={[s.body, h.cell]}>{performance.weightKg === null ? '—' : historyNumber(performance.weightKg)}</Text>
           <Text style={[s.body, h.cell]}>{performance.reps}</Text><Text style={[s.body, h.cell]}>{performance.rir ?? '—'}</Text>

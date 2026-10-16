@@ -3,7 +3,8 @@ import { readFileSync, mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { test } from 'node:test';
-import { initializeDatabase } from '../src/db/migrations';
+import { DATABASE_VERSION, initializeDatabase } from '../src/db/migrations';
+import type { Program, WorkoutTemplate } from '../src/domain/models';
 import { ProgramRepository } from '../src/db/repository';
 import { TrainingRepository } from '../src/db/trainingRepository';
 import { SessionRepository } from '../src/db/sessionRepository';
@@ -19,11 +20,19 @@ interface ExportFile { format: string; formatVersion: number; sqliteSchemaVersio
 async function fixture(t: { after(callback: () => void): void }, legacy = false) {
   const directory = mkdtempSync(join(tmpdir(), 'logbook-m33-')), path = join(directory, 'logbook.db');
   const db = new SqliteDatabase(path); t.after(() => { db.close(); rmSync(directory, { recursive: true, force: true }); });
-  if (legacy) await db.execAsync(readFileSync(new URL('./fixtures/m2-v4.sql', import.meta.url), 'utf8'));
-  else await initializeDatabase(db);
+  if (legacy) {
+    await db.execAsync(readFileSync(new URL('./fixtures/m33-populated-v5.sql', import.meta.url), 'utf8'));
+    await db.execAsync('DROP TABLE app_preferences; PRAGMA user_version = 4;');
+  } else await initializeDatabase(db);
   let serial = 100000, clock = Date.parse('2026-10-15T12:00:00.000Z');
   const id = () => `id-${--serial}`, now = () => new Date(clock).toISOString(), advance = (ms: number) => { clock += ms; };
   const programs = new ProgramRepository(db, id, now), training = new TrainingRepository(db, id, now), sessions = new SessionRepository(db, id, now), preferences = new PreferencesRepository(db, now);
+  if (legacy) {
+    const saved = JSON.parse(readFileSync(new URL('./fixtures/m33-populated-snapshots.json', import.meta.url), 'utf8')) as {
+      program: Program; workout: WorkoutTemplate; completed: WorkoutSession; active: WorkoutSession;
+    };
+    return { db, path, programs, training, sessions, preferences, ...saved };
+  }
   const program = await programs.createProgram({ name: 'Mes vrais repères de test', description: 'Texte "cité"\navec accents 🏋️' });
   const workout = await programs.createWorkout(program.id, { name: 'Haut du corps' });
   const catalog = [];
@@ -53,12 +62,18 @@ async function fixture(t: { after(callback: () => void): void }, legacy = false)
   advance(60000); let active = await sessions.startOrResume(workout.id);
   active = await sessions.validateSet(active.id, active.sets[0]!.id, { weightKg: null, reps: 10, rir: null });
   advance(5000); active = await sessions.pauseRest(active.id, active.rests[0]!.id);
+  const occurrence = (await training.listWorkoutExercises(workout.id))[0]!;
+  const reference = (await training.listSets(occurrence.id))[0]!;
+  await training.createSet(occurrence.id, { kind: 'warmup', repsMin: 5, repsMax: 5, restAfterSec: 20,
+    loadRule: { basis: 'planned_target', referenceSetId: reference.id, percent: 50 } });
   return { db, path, programs, training, sessions, preferences, completed, active, program, workout };
 }
 async function snapshot(db: SqliteDatabase, excludePreferences = false) {
   const result: Record<string, Row[]> = {};
-  for (const [table] of EXPORT_TABLES) if (!(excludePreferences && table === 'app_preferences')) {
-    result[table] = await db.getAllAsync(`SELECT rowid AS __rowid, * FROM ${table} ORDER BY rowid`);
+  for (const [table] of EXPORT_TABLES) if (!(excludePreferences && ['app_preferences', 'set_load_rules'].includes(table))) {
+    const columns = excludePreferences && table === 'session_sets'
+      ? (await db.getAllAsync<{ name: string }>('PRAGMA table_info(session_sets)')).map(item => item.name).filter(name => name !== 'load_rule_snapshot').join(',') : '*';
+    result[table] = await db.getAllAsync(`SELECT rowid AS __rowid, ${columns} FROM ${table} ORDER BY rowid`);
   }
   return result;
 }
@@ -70,11 +85,11 @@ async function exportFile(path: string, onChunk?: (text: string) => void | Promi
   } finally { reader.close(); }
 }
 
-test('v4 to v5 migration preserves every M0–M3.2 row, including a paused active rest; preference table starts empty', async t => {
+test('v4 to current migration preserves every M0–M3.2 value, including a paused active rest; preference table starts empty', async t => {
   const f = await fixture(t, true), before = await snapshot(f.db, true);
   await initializeDatabase(f.db);
   assert.deepEqual(await snapshot(f.db, true), before); assert.deepEqual(await f.db.getAllAsync('SELECT * FROM app_preferences'), []);
-  assert.equal((await f.db.getFirstAsync<{ user_version: number }>('PRAGMA user_version'))!.user_version, 5);
+  assert.equal((await f.db.getFirstAsync<{ user_version: number }>('PRAGMA user_version'))!.user_version, DATABASE_VERSION);
   assert.deepEqual(await f.sessions.getSession(f.active.id), f.active); assert.deepEqual(await f.sessions.getSession(f.completed.id), f.completed);
   assert.deepEqual(await f.db.getAllAsync('PRAGMA foreign_key_check'), []);
 });
@@ -128,7 +143,7 @@ test('a failed queued preference write does not block the last intent or corrupt
 test('complete JSON export preserves all table values, IDs, null/zero, targets, pauses, active/completed sessions and tied journal order', async t => {
   const f = await fixture(t); await f.preferences.setRestSoundEnabled(false); const before = await snapshot(f.db);
   const file = await exportFile(f.path);
-  assert.equal(file.format, 'logbook.personal-data'); assert.equal(file.formatVersion, 1); assert.equal(file.sqliteSchemaVersion, 5);
+  assert.equal(file.format, 'logbook.personal-data'); assert.equal(file.formatVersion, 1); assert.equal(file.sqliteSchemaVersion, DATABASE_VERSION);
   assert.equal(file.rowidField, '__rowid'); assert.equal(file.restorationAvailableInExporter, false); assert.equal(file.preferenceDefaults.restSoundEnabled, true);
   for (const [table] of EXPORT_TABLES) {
     assert.deepEqual(file.tables[table]!.rows, before[table]); assert.equal(file.tables[table]!.rowCount, before[table]!.length);
@@ -179,7 +194,7 @@ test('cancelled export and sink failure release the snapshot and never modify ap
 test('export rejects unknown schema/tables and relational corruption without producing a claimed backup', async t => {
   const f = await fixture(t); await f.db.execAsync('PRAGMA user_version = 99;');
   await assert.rejects(exportFile(f.path), (error: PersonalExportError) => error.code === 'incompatible');
-  await f.db.execAsync('PRAGMA user_version = 5; CREATE TABLE sqlitex_user_data (id TEXT);');
+  await f.db.execAsync(`PRAGMA user_version = ${DATABASE_VERSION}; CREATE TABLE sqlitex_user_data (id TEXT);`);
   await assert.rejects(exportFile(f.path), (error: PersonalExportError) => error.code === 'incompatible');
   await f.db.execAsync('DROP TABLE sqlitex_user_data; PRAGMA foreign_keys = OFF;');
   await f.db.runAsync("INSERT INTO workout_templates VALUES ('orphan','missing','Orpheline','',999,'2026','2026')");

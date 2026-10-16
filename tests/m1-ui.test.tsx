@@ -89,6 +89,97 @@ beforeEach(() => {
 });
 afterEach(() => { cleanup(); jest.restoreAllMocks(); });
 
+describe('M3.4A : configuration facultative des charges calculées', () => {
+  async function percentageForm() {
+    const view = render(<SetEditor mode="create" {...route} />); await view.findByLabelText('Étiquette (facultative)');
+    fireEvent.press(view.getByRole('radio', { name: 'Échauffement' }));
+    fireEvent.press(view.getByRole('button', { name: 'Charge calculée (facultatif)' }));
+    fireEvent.press(view.getByRole('radio', { name: 'Pourcentage d’une série prévue' }));
+    return view;
+  }
+  test('un échauffement choisit sa référence explicitement, montre le calcul et garde son repos individuel', async () => {
+    const view = await percentageForm();
+    expect(view.getByLabelText('Charge calculée').props.children).toBe('Charge calculée non disponible');
+    fireEvent.press(view.getByRole('radio', { name: /Référence : Série 2/ }));
+    fireEvent.changeText(view.getByLabelText('Pourcentage de charge'), '50');
+    expect(view.getByText('21,25 kg')).toBeTruthy(); fireEvent.changeText(view.getByLabelText('Repos après cette série (s)'), '30');
+    fireEvent.press(view.getByRole('button', { name: 'Ajouter la série' }));
+    fireEvent.press(view.getByRole('button', { name: 'Ajouter la série' }));
+    await waitFor(() => expect(mockTraining.createSet).toHaveBeenCalledWith(occurrence.id, expect.objectContaining({
+      kind: 'warmup', restAfterSec: 30, targetWeightKg: null, loadRule: { basis: 'planned_target', referenceSetId: second.id, percent: 50 },
+    })));
+    expect(mockTraining.createSet).toHaveBeenCalledTimes(1);
+  });
+  test('aucune référence n’est choisie implicitement et une absence de sélection empêche la sauvegarde', async () => {
+    const view = await percentageForm(); fireEvent.changeText(view.getByLabelText('Pourcentage de charge'), '50');
+    fireEvent.press(view.getByRole('button', { name: 'Ajouter la série' }));
+    expect(view.getByText('Choisissez une série de référence avant d’enregistrer.')).toBeTruthy(); expect(mockTraining.createSet).not.toHaveBeenCalled();
+  });
+  test('une référence sans charge montre un état neutre et ne remplace pas null par zéro', async () => {
+    mockTraining.listSets.mockResolvedValue([first, { ...second, targetWeightKg: null }]);
+    const view = await percentageForm(); fireEvent.press(view.getByRole('radio', { name: /Référence : Série 2/ }));
+    fireEvent.changeText(view.getByLabelText('Pourcentage de charge'), '75');
+    expect(view.getByText(/Cette référence n’a pas de charge cible/)).toBeTruthy(); expect(view.queryByText('0 kg')).toBeNull();
+    fireEvent.press(view.getByRole('button', { name: 'Ajouter la série' }));
+    await waitFor(() => expect(mockTraining.createSet).toHaveBeenCalledWith(occurrence.id, expect.objectContaining({ targetWeightKg: null, loadRule: expect.objectContaining({ percent: 75 }) })));
+  });
+  test('le remplacement manuel rend le champ éditable et retire la règle du futur enregistrement', async () => {
+    const view = await percentageForm(); fireEvent.press(view.getByRole('radio', { name: /Référence : Série 2/ }));
+    fireEvent.changeText(view.getByLabelText('Pourcentage de charge'), '50');
+    fireEvent.press(view.getByRole('button', { name: 'Remplacer par une charge manuelle' }));
+    const input = view.getByLabelText('Charge totale (kg) · facultative'); expect(input.props.editable).toBe(true); expect(input.props.value).toBe('21.25');
+    fireEvent.changeText(input, '22,5'); fireEvent.press(view.getByRole('button', { name: 'Ajouter la série' }));
+    await waitFor(() => expect(mockTraining.createSet).toHaveBeenCalledWith(occurrence.id, expect.objectContaining({ targetWeightKg: 22.5, loadRule: null })));
+  });
+  test('le back-off manuel ne nécessite aucun panneau avancé ni pourcentage', async () => {
+    const view = render(<SetEditor mode="create" {...route} />); await view.findByLabelText('Étiquette (facultative)');
+    fireEvent.press(view.getByRole('radio', { name: 'Back-off' })); expect(view.queryByLabelText('Pourcentage de charge')).toBeNull();
+    fireEvent.press(view.getByRole('button', { name: 'Ajouter la série' }));
+    await waitFor(() => expect(mockTraining.createSet).toHaveBeenCalledWith(occurrence.id, expect.objectContaining({ kind: 'back_off', loadRule: null })));
+  });
+  test('un back-off calculé utilise explicitement un top set et conserve son type', async () => {
+    const view = render(<SetEditor mode="create" {...route} />); await view.findByLabelText('Étiquette (facultative)');
+    fireEvent.press(view.getByRole('radio', { name: 'Back-off' })); fireEvent.press(view.getByRole('button', { name: 'Charge calculée (facultatif)' }));
+    fireEvent.press(view.getByRole('radio', { name: 'Pourcentage d’une série prévue' }));
+    expect(view.getAllByRole('radio', { name: /Référence :/ })).toHaveLength(1);
+    fireEvent.press(view.getByRole('radio', { name: /Référence : Série 2/ })); fireEvent.changeText(view.getByLabelText('Pourcentage de charge'), '90');
+    expect(view.getByText('38,25 kg')).toBeTruthy(); fireEvent.press(view.getByRole('button', { name: 'Ajouter la série' }));
+    await waitFor(() => expect(mockTraining.createSet).toHaveBeenCalledWith(occurrence.id, expect.objectContaining({ kind: 'back_off', loadRule: expect.objectContaining({ referenceSetId: second.id, percent: 90 }) })));
+  });
+  test('une référence supprimée est indiquée et peut être remplacée par une cible manuelle vide', async () => {
+    mockTraining.getSet.mockResolvedValue({ ...first, loadRule: { basis: 'planned_target', referenceSetId: null, percent: 50 } });
+    const view = render(<SetEditor mode="edit" {...route} setId={first.id} />); await view.findByLabelText('Pourcentage de charge');
+    expect(view.getByText(/La référence de cette série a été supprimée/)).toBeTruthy();
+    fireEvent.press(view.getByRole('button', { name: 'Remplacer par une charge manuelle' }));
+    expect(view.getByLabelText('Charge totale (kg) · facultative').props.value).toBe('');
+    fireEvent.press(view.getByRole('button', { name: 'Enregistrer les modifications' }));
+    await waitFor(() => expect(mockTraining.updateSet).toHaveBeenCalledWith(first.id, expect.objectContaining({ targetWeightKg: null, loadRule: null })));
+  });
+  test('la confirmation de suppression d’une référence prévient ses séries dépendantes et ne supprime rien sans confirmation', async () => {
+    mockTraining.listSets.mockResolvedValue([{ ...first, loadRule: { basis: 'planned_target', referenceSetId: second.id, percent: 50 } }, second]);
+    const alert = jest.spyOn(Alert, 'alert'); const view = render(<SetEditor mode="edit" {...route} setId={second.id} />);
+    fireEvent.press(await view.findByRole('button', { name: 'Supprimer la série' }));
+    expect(alert).toHaveBeenCalledWith('Supprimer la série ?', expect.stringContaining('perdront leur référence'), expect.any(Array), expect.objectContaining({ cancelable: true }));
+    act(() => { alert.mock.calls[0]![2]!.find(button => button.text === 'Annuler')?.onPress?.(); });
+    expect(mockTraining.deleteSet).not.toHaveBeenCalled();
+  });
+  test('une règle existante est éditée avec le même ID sans se désactiver en touchant son type déjà sélectionné', async () => {
+    const edited = { ...first, targetWeightKg: 21.25, loadRule: { basis: 'planned_target' as const, referenceSetId: second.id, percent: 50 } };
+    mockTraining.getSet.mockResolvedValue(edited); mockTraining.listSets.mockResolvedValue([edited, second]);
+    const view = render(<SetEditor mode="edit" {...route} setId={first.id} />); await view.findByLabelText('Pourcentage de charge');
+    fireEvent.press(view.getByRole('radio', { name: 'Échauffement' })); fireEvent.changeText(view.getByLabelText('Pourcentage de charge'), '75');
+    expect(view.getByText('31,875 kg')).toBeTruthy(); fireEvent.press(view.getByRole('button', { name: 'Enregistrer les modifications' }));
+    await waitFor(() => expect(mockTraining.updateSet).toHaveBeenCalledWith(first.id, expect.objectContaining({ loadRule: { basis: 'planned_target', referenceSetId: second.id, percent: 75 } })));
+  });
+  test('les suggestions modifient le nom seulement, sans imposer un type ou un calcul', async () => {
+    const view = render(<SetEditor mode="create" {...route} />); await view.findByLabelText('Étiquette (facultative)');
+    fireEvent.press(view.getByRole('button', { name: 'Suggestions de noms' })); fireEvent.press(view.getByRole('radio', { name: 'Nom : Top set' }));
+    expect(view.getByLabelText('Étiquette (facultative)').props.value).toBe('Top set');
+    fireEvent.press(view.getByRole('button', { name: 'Ajouter la série' }));
+    await waitFor(() => expect(mockTraining.createSet).toHaveBeenCalledWith(occurrence.id, expect.objectContaining({ label: 'Top set', kind: 'work', loadRule: null })));
+  });
+});
+
 describe('M1.1 : vue des cibles et séries indépendantes', () => {
   test('ouvrir une séance M0 mène à sa préparation et sa modification reste accessible', async () => {
     const list = render(<WorkoutsScreen />);
@@ -143,7 +234,7 @@ describe('M1.1 : vue des cibles et séries indépendantes', () => {
     fireEvent.changeText(view.getByLabelText('Repos après cette série (s)'), '75');
     fireEvent.press(view.getByRole('button', { name: 'Ajouter la série' }));
     await waitFor(() => expect(mockTraining.createSet).toHaveBeenCalledWith(occurrence.id, {
-      label: 'Ma série', kind: 'work', repsMin: 8, repsMax: 12, targetWeightKg: 42.5, targetRir: null, restAfterSec: 75, notes: '',
+      label: 'Ma série', kind: 'work', repsMin: 8, repsMax: 12, targetWeightKg: 42.5, targetRir: null, restAfterSec: 75, notes: '', loadRule: null,
     }));
     expect(mockTraining.updateSet).not.toHaveBeenCalled();
     await waitFor(() => expect(router.dismissTo).toHaveBeenCalledWith(exerciseDestination));

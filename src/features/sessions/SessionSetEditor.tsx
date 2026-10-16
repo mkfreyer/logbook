@@ -1,3 +1,4 @@
+import { useSeriesDisplay } from '../../store/SeriesDisplayProvider';
 import { router } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { Keyboard, Text, View } from 'react-native';
@@ -12,6 +13,7 @@ import { Choice, NumericInput, sessionSeriesTitle, sessionStyles, useSessionData
 const emptyDraft: SetDraft = { label: '', kind: 'work', repetitionMode: 'exact', repsMin: '', repsMax: '', weight: '', rir: '', rest: '', notes: '' };
 
 export function SessionSetEditor({ sessionId, setId }: { sessionId?: string; setId?: string }) {
+  const seriesDisplay = useSeriesDisplay();
   const data = useSessionData(sessionId);
   const operation = useScreenOperation();
   const [draft, setDraft] = useState(emptyDraft);
@@ -42,7 +44,8 @@ export function SessionSetEditor({ sessionId, setId }: { sessionId?: string; set
       const parsed = parseSetDraft(draft);
       targets = { repsMin: parsed.repsMin, repsMax: parsed.repsMax, targetWeightKg: parsed.targetWeightKg ?? null,
         targetRir: parsed.targetRir ?? null, restAfterSec: parsed.restAfterSec };
-    } catch (error) { setValidationError(messageFor(error)); return; }
+    } catch (error) {
+      setValidationError(messageFor(error)); return; }
     const currentSessionId = data.session.id, currentSetId = editable.set.id;
     setValidationError(null); Keyboard.dismiss();
     void operation.run(() => data.repository.updateSetTargets(currentSessionId, currentSetId, targets, scope),
@@ -56,7 +59,8 @@ export function SessionSetEditor({ sessionId, setId }: { sessionId?: string; set
     <Heading title="Modifier la série" subtitle={editable?.exercise.name} back backDisabled={operation.busy} onBack={back} />
     {data.loading || data.error || !editable ? <LoadState loading={data.loading} error={data.error} retry={data.retry}
       missing="Seule la série active, non encore validée, peut être modifiée." /> : <View style={sessionStyles.sections}>
-      <Text style={sessionStyles.eyebrow}>{sessionSeriesTitle(editable.set).toLocaleUpperCase('fr-FR')}</Text>
+      <Text style={sessionStyles.eyebrow}>{sessionSeriesTitle(editable.set, seriesDisplay).toLocaleUpperCase('fr-FR')}</Text>
+      {editable.set.loadRuleSnapshot && <Text style={sessionStyles.help}>La charge a été calculée au démarrage sur une cible prévue. Cet éditeur reste manuel : le choix Programme remplacera la règle future par la charge saisie, sans modifier l’origine capturée.</Text>}
       <Text style={sessionStyles.body}>Ajustez les objectifs de cette série. Les résultats déjà enregistrés sont conservés.</Text>
       <View style={sessionStyles.choices} accessibilityRole="radiogroup" accessibilityLabel="Cible de répétitions">
         <Choice label="Nombre exact" selected={draft.repetitionMode === 'exact'} disabled={operation.busy} onPress={() => change('repetitionMode', 'exact')} />

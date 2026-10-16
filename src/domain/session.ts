@@ -1,5 +1,10 @@
 import type { SetKind, WeightMode } from './training';
 
+export interface LoadRuleSnapshot {
+  basis: 'planned_target'; referenceSetTemplateId: string | null; percent: number;
+  referenceWeightKg: number | null; resolvedWeightKg: number | null; weightMode: WeightMode;
+}
+
 export interface SetTargets {
   repsMin: number; repsMax: number; targetWeightKg: number | null;
   targetRir: number | null; restAfterSec: number;
@@ -25,6 +30,8 @@ export interface SessionSet {
   originalTargets: SetTargets;
   /** Targets for this execution; only unperformed sets can be changed. */
   targets: SetTargets;
+  /** Immutable provenance, never reevaluated using a live program/performance. */
+  loadRuleSnapshot?: LoadRuleSnapshot | null;
 }
 export interface ActualSetInput { weightKg: number | null; reps: number; rir: number | null }
 export interface PerformedSet extends ActualSetInput {
