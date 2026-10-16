@@ -190,11 +190,17 @@ test('Expo-style exclusive connections atomically write and capture rules even w
   const exclusive = Object.create(f.db) as Database;
   exclusive.withExclusiveTransactionAsync = async operation => {
     const transaction = new SqliteDatabase(f.path); transactions++;
-    try { await transaction.withTransactionAsync(() => operation(transaction)); } finally { transaction.close(); }
+    try {
+      await transaction.execAsync('PRAGMA foreign_keys = OFF;');
+      assert.equal((await transaction.getFirstAsync<{ foreign_keys: number }>('PRAGMA foreign_keys'))!.foreign_keys, 0);
+      await transaction.withTransactionAsync(() => operation(transaction));
+    } finally { transaction.close(); }
   };
   const training = new TrainingRepository(exclusive, f.id), sessions = new SessionRepository(exclusive, f.id);
   const base = await training.createSet(f.exercise.id, manual), warm = await training.createSet(f.exercise.id, { ...manual, kind: 'warmup', loadRule: rule(base.id) });
   assert.equal(warm.targetWeightKg, 40); const session = await sessions.startOrResume(f.workout.id);
   assert.equal(session.sets[1]!.loadRuleSnapshot!.resolvedWeightKg, 40); assert.equal(transactions, 3);
+  await assert.rejects(training.createSet(f.exercise.id, { ...manual, kind: 'warmup', loadRule: rule('missing') }));
+  assert.equal((await training.listSets(f.exercise.id)).length, 2);
   assert.deepEqual(await f.db.getAllAsync('PRAGMA foreign_key_check'), []);
 });
