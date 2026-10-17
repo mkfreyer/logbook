@@ -8,7 +8,7 @@ Format de conservation des données locales ; **pas encore importable par Logboo
 | --- | --- |
 | `format` | `logbook.personal-data` |
 | `formatVersion` | `1`, version du contrat de fichier |
-| `sqliteSchemaVersion` | `7`, schéma de la base exportée (M3.4B ; anciens fichiers M3.4A : 6, M3.3 : 5) |
+| `sqliteSchemaVersion` | `8`, schéma courant M3.4B avec passages (M3.4B initial : 7 ; M3.4A : 6 ; M3.3 : 5) |
 | `createdAt` | Date ISO UTC de préparation, après fixation de l’instantané |
 | `application` | `{ "name": "Logbook", "version": "0.1.0" }` pour cette livraison |
 | `units` | `{ "weight": "kg" }` ; les modes de charge restent dans les lignes d’exercices |
@@ -16,7 +16,7 @@ Format de conservation des données locales ; **pas encore importable par Logboo
 | `rowidField` | `__rowid`, identifiant technique de ligne SQLite préservé |
 | `conventions` | Identifiants des règles de tonnage, durée et repos ci-dessous |
 | `restorationAvailableInExporter` | `false` ; ce logiciel exportateur n’offre pas d’import |
-| `tables` | Objet contenant les 19 tables ci-dessous |
+| `tables` | Objet contenant les 20 tables ci-dessous |
 
 Chaque entrée de `tables` contient `columns` (noms SQL des colonnes physiques), `rows` (objets avec toutes ces colonnes, plus `__rowid`) et `rowCount` (nombre exact). `__rowid` n’est pas une colonne physique et ne figure donc pas dans `columns`. Les tables vides ont `rows: []` et `rowCount: 0`.
 
@@ -37,6 +37,7 @@ Les lignes sont ordonnées par `__rowid` croissant. Les ordres métier restent d
 | `set_actual_load_rules` | Clé `set_template_id`, référence prévue manuelle `reference_set_id`, `percent`, base `performed_weight` ; calcul différé au résultat validé de la séance. |
 | `session_set_load_rules` | Clé `session_set_id`, référence de série d’exécution, base prévue/réelle, pourcentage, mode et suspension. |
 | `session_set_adjustments` | `id`, portée, action, JSON des objectifs/règle/base/résultat appliqué, référence de performance et horodatage ; journal immuable. |
+| `session_set_passages` | `id`, série d’exécution, séance, action `skip`/`reintegrate`, révision croissante par série et date ISO ; journal immuable des passages et réintégrations. |
 | `session_personal_notes` | `id`, séance, exercice réel facultatif, texte personnel et date ; distinct des consignes prévues. |
 | `workout_sessions` | `id`, entraînements actifs/terminés, provenance, instantanés, dates, choix courant |
 | `session_exercises` | `id`, identité réellement utilisée, provenance et ordre programmé capturés |
@@ -48,7 +49,7 @@ Les lignes sont ordonnées par `__rowid` croissant. Les ordres métier restent d
 | `session_exercise_choices` | `id`, journal des choix d’ordre effectués |
 | `app_preferences` | `key`, valeur JSON et date de modification |
 
-Les colonnes exactes sont celles du schéma v7 dans `src/db/migrations.ts`, exportées sans sélection partielle. Tous les identifiants et références sont inclus, même lorsqu’une provenance ne pointe plus vers un programme supprimé. Les historiques, courbes et statistiques d’accueil sont **dérivés** de ces réalisations et n’ont pas besoin de tables de chiffres dupliqués.
+Les colonnes exactes sont celles du schéma v8 dans `src/db/migrations.ts`, exportées sans sélection partielle. Tous les identifiants et références sont inclus, même lorsqu’une provenance ne pointe plus vers un programme supprimé. Les historiques, courbes et statistiques d’accueil sont **dérivés** de ces réalisations et n’ont pas besoin de tables de chiffres dupliqués.
 
 Un premier lancement possède 15 références réelles de catalogue, mais aucun programme ni entraînement. Ce catalogue n’est pas une performance ni un programme préinstallé.
 
@@ -90,3 +91,11 @@ L’enveloppe reste au format 1 : le contrat brut `tables/columns/rows` est iden
 Les notes personnelles restent indépendantes et peuvent être modifiées après clôture. Les nouvelles relations sont contrôlées en plus des vérifications SQLite : pas de double règle prévue/réelle, règles actives compatibles avec leurs références et modes, provenance complète des ajouts. Les IDs de modèles supprimés restent de simples provenances historiques valides ; ils ne sont pas traités comme des relations manquantes à reconstruire artificiellement.
 
 La restauration reste une tâche V1 distincte. Elle devra vérifier les versions, ces liens et les valeurs gelées, et ne jamais réexécuter les calculs pour réécrire un résultat historique.
+
+## Séries passées — schéma 8
+
+Le schéma 8 contient **20 tables**. `session_set_passages` conserve tous les événements, sans mise à jour des objectifs initiaux ni insertion de performance. La dernière révision pour chaque `session_set_id` détermine le statut : `skip` = Passée, `reintegrate` = à nouveau disponible si elle n’est pas réalisée/retirée. Une série sans événement conserve son comportement antérieur. Les statuts `skippedAt`/`passageRevision` des objets TypeScript sont dérivés de ce journal ; ils ne sont pas des colonnes supplémentaires de l’export.
+
+Les révisions commencent à 1 et sont consécutives ; les actions alternent en commençant par `skip`. Les horodatages, IDs et révisions sont conservés, même si une série ajoutée a été réintégrée puis retirée logiquement. Un dernier passage ne peut pas coexister avec une performance réelle ou un retrait. Ces invariants sont vérifiés avant partage, en plus de SQLite et des autres contrôles. La convention `skippedSeries: latest_passage_revision_is_not_a_performance` interdit de traiter un passage comme une réalisation ou un poids nul.
+
+L’enveloppe reste format 1 et doit être interprétée avec `sqliteSchemaVersion: 8`. Une restauration future devra conserver le journal et reconstruire le dernier statut, sans compter les passages dans les performances ni rejouer les calculs historiques. **Aucune restauration n’est livrée.**

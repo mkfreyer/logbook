@@ -49,3 +49,7 @@ La restauration devra également importer `set_load_rules`, vérifier même exer
 ## Extension M3.4B à prendre en charge
 
 Le futur restaurateur devra accepter explicitement le schéma 7 (19 tables), les liens source nullables/colonne de compatibilité, les ajouts et retraits logiques, les règles réelles et prévues distinctes, les ajustements append-only et les notes personnelles. Valider les références d’exécution, suspensions, modes de charge et jetons d’ajout, sans recalculer les captures ou performances. Les métadonnées initiales sont immuables. Aucun import n’est livré en M3.4B.
+
+## Passages de séries — schéma 8
+
+Le futur restaurateur devra aussi valider et conserver `session_set_passages` : appartenance à une série d’exécution, révisions consécutives, alternance passage/réintégration, horodatages, absence de performance ou retrait incompatible avec un dernier passage. Reconstruire le statut depuis la dernière révision sans générer de résultat réel. Le schéma 8 contient 20 tables ; aucun import n’est encore disponible.

@@ -30,6 +30,7 @@ export async function saveExecutionSet(db: Database, session: WorkoutSession, ex
   if (scope !== 'session' && scope !== 'program') throw new SessionStateError('Choisissez « Cette séance » ou « Programme ».');
   const clean = cleanSet(input), exercise = session.exercises.find(item => item.id === exerciseId);
   if (!exercise) throw new SessionStateError('Cet exercice est introuvable dans cet entraînement.');
+  if (existing?.skippedAt) throw new SessionStateError('Réintégrer la série avant de modifier ses objectifs.');
   if (existing && session.performances.some(item => item.sessionSetId === setId)) throw new SessionStateError('Cette série est déjà validée. Ses résultats et ses objectifs sont conservés.');
   if (!existing && session.replacements?.some(item => item.fromExerciseId === exerciseId)) throw new SessionStateError('Choisissez l’exercice de remplacement actuellement présent dans la séance.');
   // Completed exercises may receive an explicit extra set before the workout closes.

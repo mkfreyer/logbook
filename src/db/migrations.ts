@@ -1,7 +1,7 @@
 import type { Database } from './types';
 import { CATALOG_CREATED_AT, INITIAL_EXERCISES } from './exerciseCatalog';
 
-export const DATABASE_VERSION = 7;
+export const DATABASE_VERSION = 8;
 
 const versionOne = `
   CREATE TABLE programs (
@@ -374,6 +374,40 @@ const versionSeven = `
   BEGIN SELECT RAISE(ABORT, 'Invalid load reference'); END;
 `).join('')).join('');
 
+/** One new append-only table; no v7 row or original snapshot is updated. */
+const versionEight = `
+  CREATE TABLE session_set_passages (
+    id TEXT PRIMARY KEY NOT NULL,
+    session_id TEXT NOT NULL REFERENCES workout_sessions(id) ON DELETE RESTRICT,
+    session_set_id TEXT NOT NULL,
+    action TEXT NOT NULL CHECK(action IN ('skip','reintegrate')),
+    revision INTEGER NOT NULL CHECK(typeof(revision) = 'integer' AND revision > 0),
+    changed_at TEXT NOT NULL,
+    UNIQUE(session_set_id, revision),
+    FOREIGN KEY(session_set_id, session_id) REFERENCES session_sets(id, session_id) ON DELETE RESTRICT
+  );
+  CREATE INDEX passages_session ON session_set_passages(session_id, session_set_id, revision);
+  CREATE TRIGGER validate_set_passage BEFORE INSERT ON session_set_passages
+  WHEN NOT EXISTS(SELECT 1 FROM session_sets s JOIN workout_sessions w ON w.id = s.session_id
+    WHERE s.id = NEW.session_set_id AND w.id = NEW.session_id AND w.status = 'active' AND s.removed_at IS NULL)
+    OR EXISTS(SELECT 1 FROM performed_sets WHERE session_set_id = NEW.session_set_id)
+    OR NEW.revision != COALESCE((SELECT MAX(revision) FROM session_set_passages WHERE session_set_id = NEW.session_set_id), 0) + 1
+    OR NEW.action = COALESCE((SELECT action FROM session_set_passages WHERE session_set_id = NEW.session_set_id ORDER BY revision DESC LIMIT 1), 'reintegrate')
+    OR NEW.changed_at < COALESCE((SELECT MAX(changed_at) FROM session_set_passages WHERE session_set_id = NEW.session_set_id),
+      (SELECT started_at FROM workout_sessions WHERE id = NEW.session_id))
+  BEGIN SELECT RAISE(ABORT, 'Invalid series passage'); END;
+  CREATE TRIGGER preserve_set_passage_update BEFORE UPDATE ON session_set_passages
+    BEGIN SELECT RAISE(ABORT, 'Series passage history is immutable'); END;
+  CREATE TRIGGER preserve_set_passage_delete BEFORE DELETE ON session_set_passages
+    BEGIN SELECT RAISE(ABORT, 'Series passage history is immutable'); END;
+  CREATE TRIGGER protect_skipped_performance BEFORE INSERT ON performed_sets
+    WHEN (SELECT action FROM session_set_passages WHERE session_set_id = NEW.session_set_id ORDER BY revision DESC LIMIT 1) = 'skip'
+    BEGIN SELECT RAISE(ABORT, 'Reintegrate a skipped series before performing it'); END;
+  CREATE TRIGGER protect_skipped_removal BEFORE UPDATE OF removed_at ON session_sets
+    WHEN NEW.removed_at IS NOT NULL AND (SELECT action FROM session_set_passages WHERE session_set_id = OLD.id ORDER BY revision DESC LIMIT 1) = 'skip'
+    BEGIN SELECT RAISE(ABORT, 'Reintegrate a skipped series before removing it'); END;
+`;
+
 /** No demo content: a new database contains no programs or workout templates. */
 export async function initializeDatabase(db: Database): Promise<void> {
   // Foreign keys must be enabled before a transaction, on every connection.
@@ -404,6 +438,7 @@ export async function initializeDatabase(db: Database): Promise<void> {
       if (currentVersion < 5) await db.execAsync(versionFive);
       if (currentVersion < 6) await db.execAsync(versionSix);
       if (currentVersion < 7) await db.execAsync(versionSeven);
+      if (currentVersion < 8) await db.execAsync(versionEight);
       await db.execAsync(`PRAGMA user_version = ${DATABASE_VERSION};`);
     });
   }

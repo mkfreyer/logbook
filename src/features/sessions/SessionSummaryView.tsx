@@ -8,6 +8,7 @@ import { chronologicalExerciseBlocks, formatSessionDuration, summarizeSession } 
 import type { SessionExercise } from '../../domain/session';
 import { Button, Card, colors, Heading, Screen } from '../../ui';
 import { LoadState } from '../programs/shared';
+import { PassedSets } from './PassedSets';
 import { sessionSeriesTitle, sessionStyles as s } from './shared';
 
 const number = (value: number) => value.toLocaleString('fr-FR', { maximumFractionDigits: 2 });
@@ -89,6 +90,7 @@ export function SessionSummaryView({ session, onExit, onRetry, historical = fals
         </View>}
       </View>; })}
     </Card>)}
+    <PassedSets session={session} />
     <Text style={s.help}>Les numéros indiquent l’ordre réel de validation. Vos résultats et vos repos sont conservés sur cet iPhone.</Text>
   </Screen>;
 }

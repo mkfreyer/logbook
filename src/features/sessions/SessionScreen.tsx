@@ -4,13 +4,15 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { router } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { Keyboard, Modal, Pressable, StyleSheet, Text, View } from 'react-native';
-import { replacementOrigin, selectSessionStep, type WorkoutSession } from '../../domain/session';
+import { replacementOrigin, selectSessionStep, sessionProgress, sessionProgressLabel, PASSED_REFERENCE_MESSAGE, type WorkoutSession } from '../../domain/session';
 import { Button, Card, colors, Heading, Screen } from '../../ui';
 import { FormError, LoadState, messageFor } from '../programs/shared';
 import { useScreenOperation } from '../training/shared';
 import { RestTimer } from './RestTimer';
 import { NumericCard, parseActualDraft, sessionSeriesTitle, sessionStyles, useSessionData } from './shared';
 import { SessionSummaryView } from './SessionSummaryView';
+import { PassedSets } from './PassedSets';
+import { useSkipSet } from './useSkipSet';
 import { PreviousPerformanceCard } from './PreviousPerformanceCard';
 
 const emptyActual = { weight: '', reps: '', rir: '' };
@@ -22,7 +24,10 @@ export function SessionScreen({ sessionId }: { sessionId?: string }) {
   const [draft, setDraft] = useState(emptyActual);
   const [validationError, setValidationError] = useState<string | null>(null);
   const [actionsOpen, setActionsOpen] = useState(false);
+  const skipping = useSkipSet({ operation, repository: data.repository, sessionId, onSkipped: data.accept });
+  const busy = operation.busy || skipping.confirming;
   const session = data.session;
+  const progress = session ? sessionProgress(session) : null;
   const step = session ? selectSessionStep(session) : null;
   const activeSetId = step?.phase === 'set' ? step.set.id : null;
   const activeExerciseId = step?.phase === 'set' ? step.exercise.id : null;
@@ -38,7 +43,7 @@ export function SessionScreen({ sessionId }: { sessionId?: string }) {
     let actual;
     try { actual = parseActualDraft(draft); } catch (error) { setValidationError(messageFor(error)); return; }
     setValidationError(null); Keyboard.dismiss();
-    void mutate(() => data.repository.validateSet(session.id, step.set.id, actual));
+    void mutate(() => data.repository.validateSet(session.id, step.set.id, actual, step.set.passageRevision ?? 0));
   };
   const change = (field: keyof typeof draft, value: string) => { setDraft(current => ({ ...current, [field]: value })); setValidationError(null); };
   const restSet = step?.phase === 'rest' ? session?.sets.find(item => item.id === step.performed.sessionSetId) : null;
@@ -65,7 +70,8 @@ export function SessionScreen({ sessionId }: { sessionId?: string }) {
   const title = step?.phase === 'rest' ? 'Repos entre les séries' : step?.phase === 'completed' ? 'Séance terminée' : session?.workoutName ?? 'Entraînement';
   const footer = !data.loading && !data.error && step?.phase === 'set' ? <View style={{ gap: 8 }}>
     <FormError message={validationError ?? operation.error} />
-    <Button label="Valider la série" icon="checkmark" loading={operation.busy} onPress={validate} />
+    <Button label="Valider la série" icon="checkmark" loading={operation.busy} disabled={busy} onPress={validate} />
+    <Button label="Passer cette série" variant="ghost" disabled={busy} onPress={() => { setValidationError(null); skipping.confirm(step.set); }} />
   </View> : undefined;
   if (!data.loading && !data.error && session && step?.phase === 'completed') {
     return <SessionSummaryView session={session} onExit={leave} onRetry={data.retry}
@@ -74,9 +80,9 @@ export function SessionScreen({ sessionId }: { sessionId?: string }) {
   }
   return <Screen compact footer={footer}>
     <Heading title={title} subtitle={step?.phase === 'rest' ? currentExercise?.name : exerciseIndex ? `${progressLabel} ${exerciseIndex} sur ${exerciseCount}` : undefined}
-      back backDisabled={operation.busy} onBack={leave}
-      action={showActions ? <Pressable accessibilityRole="button" accessibilityLabel="Actions de séance" disabled={operation.busy}
-        accessibilityState={{ disabled: operation.busy }} style={styles.menu}
+      back backDisabled={busy} onBack={leave}
+      action={showActions ? <Pressable accessibilityRole="button" accessibilityLabel="Actions de séance" disabled={busy}
+        accessibilityState={{ disabled: busy }} style={styles.menu}
         onPress={() => { Keyboard.dismiss(); setActionsOpen(true); }}>
         <Ionicons name="ellipsis-horizontal" size={24} color={colors.cyan} />
       </Pressable> : undefined} />
@@ -86,21 +92,21 @@ export function SessionScreen({ sessionId }: { sessionId?: string }) {
         <Card style={{ gap: 8 }}><View accessibilityViewIsModal>
           <Text style={[sessionStyles.subtitle, { marginBottom: 12 }]}>Actions de séance</Text>
           {step?.phase === 'set' && <>
-            <Button label="Modifier les objectifs de la série" variant="ghost" icon="create-outline" disabled={operation.busy} onPress={() => goAction('edit')} />
-            <Button label="Remplacer cet exercice" variant="ghost" icon="swap-horizontal" disabled={operation.busy} onPress={() => goAction('replace')} />
+            <Button label="Modifier les objectifs de la série" variant="ghost" icon="create-outline" disabled={busy} onPress={() => goAction('edit')} />
+            <Button label="Remplacer cet exercice" variant="ghost" icon="swap-horizontal" disabled={busy} onPress={() => goAction('replace')} />
           </>}
-          <Button label="Ajouter une série" variant="ghost" icon="add-outline" disabled={operation.busy} onPress={() => goAction('add')} />
-          {step?.phase !== 'ready_to_finish' && <Button label="Modifier une série restante" variant="ghost" icon="create-outline" disabled={operation.busy} onPress={() => goAction('remaining')} />}
-          <Button label="Notes personnelles" variant="ghost" icon="document-text-outline" disabled={operation.busy} onPress={() => goAction('notes')} />
-          {step?.phase !== 'ready_to_finish' && <Button label="Choisir le prochain exercice" variant="ghost" icon="grid-outline" disabled={operation.busy} onPress={() => goAction('exercises')} />}
-          <Button label="Fermer" variant="secondary" disabled={operation.busy} onPress={() => setActionsOpen(false)} />
+          <Button label="Ajouter une série" variant="ghost" icon="add-outline" disabled={busy} onPress={() => goAction('add')} />
+          {!!progress?.remaining && <Button label="Modifier une série restante" variant="ghost" icon="create-outline" disabled={busy} onPress={() => goAction('remaining')} />}
+          <Button label="Notes personnelles" variant="ghost" icon="document-text-outline" disabled={busy} onPress={() => goAction('notes')} />
+          {!!progress?.remaining && <Button label="Choisir le prochain exercice" variant="ghost" icon="grid-outline" disabled={busy} onPress={() => goAction('exercises')} />}
+          <Button label="Fermer" variant="secondary" disabled={busy} onPress={() => setActionsOpen(false)} />
         </View></Card>
       </View>
     </Modal>
     {data.loading || data.error || !session || !step ? <LoadState loading={data.loading} error={data.error} retry={data.retry} missing="Cet entraînement n’est pas disponible." /> : <View style={sessionStyles.sections}>
       {step.phase !== 'completed' && <View style={styles.progressSection}>
-        <Text style={sessionStyles.help}>{session.performances.length} / {session.sets.length} séries validées</Text>
-        <View style={styles.progressTrack}><View style={[styles.progress, { width: `${session.sets.length ? session.performances.length / session.sets.length * 100 : 0}%` }]} /></View>
+        <Text style={sessionStyles.help}>{sessionProgressLabel(session)}</Text>
+        <View style={styles.progressTrack}><View style={[styles.progress, { width: `${progress && progress.total > progress.skipped ? progress.performed / (progress.total - progress.skipped) * 100 : 0}%` }]} /></View>
       </View>}
       {step.phase === 'set' && <>
         <LinearGradient colors={['#123852', '#0b1b2a']} style={styles.exerciseHero}>
@@ -118,48 +124,53 @@ export function SessionScreen({ sessionId }: { sessionId?: string }) {
           <Text style={sessionStyles.eyebrow}>OBJECTIFS DE CETTE SÉRIE</Text>
           <Text style={sessionStyles.body}>{step.set.targets.repsMin === step.set.targets.repsMax ? step.set.targets.repsMin : `${step.set.targets.repsMin}–${step.set.targets.repsMax}`} répétitions · {step.set.targets.targetWeightKg === null ? 'Charge libre' : `${step.set.targets.targetWeightKg.toLocaleString('fr-FR', { maximumSignificantDigits: 21 })} kg${step.exercise.weightMode === 'per_hand' ? ' / haltère' : step.exercise.weightMode === 'additional' ? ' ajoutés' : ''}`}{step.set.targets.targetRir === null ? '' : ` · RIR ${step.set.targets.targetRir}`}</Text>
           {step.set.loadRule && <Text style={sessionStyles.help}>{step.set.loadRule.suspended ? 'Calcul suspendu après remplacement ou retrait : choisissez une cible manuelle ou une référence compatible.' : step.set.loadRule.basis === 'performed_weight'
-            ? !session.performances.some(item => item.sessionSetId === step.set.loadRule!.referenceSetId) ? 'En attente de la série de référence' : step.set.targets.targetWeightKg === null ? 'Charge de référence non renseignée · charge libre' : `${step.set.loadRule.percent} % de la charge réellement validée · cible proposée`
+            ? session.sets.find(item => item.id === step.set.loadRule!.referenceSetId)?.skippedAt ? PASSED_REFERENCE_MESSAGE : !session.performances.some(item => item.sessionSetId === step.set.loadRule!.referenceSetId) ? 'En attente de la série de référence' : step.set.targets.targetWeightKg === null ? 'Charge de référence non renseignée · charge libre' : `${step.set.loadRule.percent} % de la charge réellement validée · cible proposée`
             : `${step.set.loadRule.percent} % de la charge prévue · cible proposée`}</Text>}
           {step.set.notes ? <Text style={sessionStyles.help}>{replacedFrom ? `Note prévue avant le remplacement : ${step.set.notes}` : step.set.notes}</Text> : null}
         </Card>
         <Text style={sessionStyles.eyebrow}>VOTRE SÉRIE RÉALISÉE</Text>
         <View style={styles.actualRow}>
-          <NumericCard caption={step.exercise.weightMode === 'per_hand' ? 'Kg / haltère' : step.exercise.weightMode === 'additional' ? 'Kg ajoutés' : 'Charge (kg)'} label="Charge réelle (kg)" value={draft.weight} onChange={value => change('weight', value)} decimal disabled={operation.busy} />
-          <NumericCard caption="Répétitions" label="Répétitions réelles" value={draft.reps} onChange={value => change('reps', value)} disabled={operation.busy} />
-          <NumericCard caption="RIR" label="RIR réel" value={draft.rir} onChange={value => change('rir', value)} disabled={operation.busy} />
+          <NumericCard caption={step.exercise.weightMode === 'per_hand' ? 'Kg / haltère' : step.exercise.weightMode === 'additional' ? 'Kg ajoutés' : 'Charge (kg)'} label="Charge réelle (kg)" value={draft.weight} onChange={value => change('weight', value)} decimal disabled={busy} />
+          <NumericCard caption="Répétitions" label="Répétitions réelles" value={draft.reps} onChange={value => change('reps', value)} disabled={busy} />
+          <NumericCard caption="RIR" label="RIR réel" value={draft.rir} onChange={value => change('rir', value)} disabled={busy} />
         </View>
         <PreviousPerformanceCard sessionId={session.id} series={step.set} exercise={step.exercise} />
         <Text style={sessionStyles.help}>Charge et RIR facultatifs. RIR : répétitions que vous auriez encore pu faire, de 0 à 10.</Text>
       </>}
       {step.phase === 'rest' && <>
         <FormError message={operation.error} />
-        {session.selectedExerciseId && <Text style={sessionStyles.help}>À suivre : {step.exercise.name}. Terminez votre repos manuellement pour continuer.</Text>}
-        <RestTimer rest={step.rest} busy={operation.busy}
+        {session.selectedExerciseId && step.nextSet && <Text style={sessionStyles.help}>À suivre : {step.exercise.name}. Terminez votre repos manuellement pour continuer.</Text>}
+        <RestTimer rest={step.rest} busy={busy} showAction={!!step.nextSet}
           onPause={() => { void mutate(() => data.repository.pauseRest(session.id, step.rest.id)); }}
           onResume={() => { void mutate(() => data.repository.resumeRest(session.id, step.rest.id)); }}
           onComplete={() => { void mutate(() => data.repository.completeRest(session.id, step.rest.id)); }} />
+      </>}
+      {step.phase === 'rest' && !step.nextSet && <>
+        <Text style={sessionStyles.help}>Aucune série restante. Votre repos continue jusqu’à votre fin manuelle.</Text>
+        <Button label="Terminer le repos" loading={operation.busy} disabled={busy} onPress={() => { void mutate(() => data.repository.completeRest(session.id, step.rest.id)); }} />
       </>}
       {step.phase === 'between_sets' && <>
         <Card>
           <Ionicons name="checkmark-circle-outline" size={42} color="#49ebc4" />
           <Text style={sessionStyles.title}>Série enregistrée</Text>
-          <Text style={sessionStyles.body}>À suivre : {step.exercise.name} · {sessionSeriesTitle(step.nextSet, seriesDisplay)}.</Text>
+          <Text style={sessionStyles.body}>{step.nextSet ? `À suivre : ${step.exercise.name} · ${sessionSeriesTitle(step.nextSet, seriesDisplay)}.` : 'Aucune série restante. Continuez pour accéder à la fin de séance.'}</Text>
         </Card>
         <FormError message={operation.error} />
-        <Button label="Passer à la série suivante" icon="arrow-forward" loading={operation.busy}
+        <Button label={step.nextSet ? "Passer à la série suivante" : "Continuer"} icon="arrow-forward" loading={operation.busy} disabled={busy}
           onPress={() => { void mutate(() => data.repository.advanceAfterSet(session.id, step.performed.id)); }} />
       </>}
       {step.phase === 'ready_to_finish' && <>
         <Card>
           <Ionicons name="checkmark-done-circle-outline" size={48} color="#49ebc4" />
-          <Text style={sessionStyles.title}>Toutes les séries sont enregistrées</Text>
-          <Text style={sessionStyles.body}>Terminez la séance pour enregistrer son heure de fin.</Text>
+          <Text style={sessionStyles.title}>{progress?.skipped ? 'Séries réalisées ou passées' : 'Toutes les séries sont enregistrées'}</Text>
+          <Text style={sessionStyles.body}>{session.performances.length ? 'Terminez la séance pour enregistrer son heure de fin.' : 'Pour terminer, utilisez « Réintégrer la série » puis enregistrez au moins une performance réelle.'}</Text>
         </Card>
         <FormError message={operation.error} />
-        <Button label="Terminer la séance" icon="checkmark" loading={operation.busy}
+        <Button label="Terminer la séance" icon="checkmark" loading={operation.busy} disabled={busy || !session.performances.length}
           onPress={() => { void mutate(() => data.repository.finishSession(session.id)); }} />
       </>}
-      <Button label="Quitter et reprendre plus tard" variant="ghost" disabled={operation.busy} onPress={leave} />
+      <PassedSets session={session} busy={busy} onReintegrate={series => { setValidationError(null); void mutate(() => data.repository.reintegrateSet(session.id, series.id, series.passageRevision ?? 0)); }} />
+      <Button label="Quitter et reprendre plus tard" variant="ghost" disabled={busy} onPress={leave} />
       <Text style={[sessionStyles.help, sessionStyles.center]}>Les séries validées sont sauvegardées. {step.phase === 'rest' ? 'Le repos continue pendant votre absence, sauf si vous mettez le minuteur en pause.' : 'Les champs non validés ne constituent pas une performance enregistrée.'}</Text>
     </View>}
   </Screen>;

@@ -222,7 +222,7 @@ test('export includes all current rules, additions, scopes, notes and immutable 
   s=await f.sessions.savePersonalNote(s.id,'Personnel'); s=await f.sessions.validateSet(s.id,s.sets[0]!.id,{weightKg:95,reps:8,rir:1});
   const before=await capture(f.db), reader=new SqliteDatabase(f.path); t.after(()=>reader.close()); let json='';
   await writePersonalExport(reader,chunk=>{json+=chunk;},{appVersion:'0.1.0'}); const file=JSON.parse(json);
-  assert.equal(file.sqliteSchemaVersion,7); assert.equal(file.restorationAvailableInExporter,false);
+  assert.equal(file.sqliteSchemaVersion,8); assert.equal(file.restorationAvailableInExporter,false);
   for(const [name] of EXPORT_TABLES) assert.equal(file.tables[name].rowCount,before.find(t=>t.name===name)!.rows.length);
   assert.equal(file.tables.session_personal_notes.rows[0].body,'Personnel');
   assert.ok(file.tables.session_set_adjustments.rows.some((a:any)=>JSON.parse(a.payload).resolvedWeightKg===85.5));

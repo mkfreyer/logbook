@@ -1,12 +1,12 @@
 import type { Database } from './types';
 import type { ExerciseCatalogItem, WeightMode, SetTemplateInput } from '../domain/training';
-import { selectSessionStep, type ActualSetInput, type PerformedSet, type RestInterval, type RestPause,
+import { selectSessionStep, remainingSessionSets, type ActualSetInput, type PerformedSet, type RestInterval, type RestPause,
   type SessionExercise, type SessionSet, type SetTargets, type WorkoutSession, type ExerciseReplacement, type ExerciseChoice } from '../domain/session';
 import { calculateRestTiming } from '../domain/restTimer';
 import { HistoryRepository } from './historyRepository';
 import { readPlannedSets } from './plannedSets';
 import { hasProgramLink, logAdjustment, saveExecutionSet, resolveDependentRules, suspendRulesFor } from './sessionSetOperations';
-import type { ChangeScope, SessionLoadRule, SetAdjustment } from '../domain/session';
+import type { ChangeScope, SessionLoadRule, SetAdjustment, SetPassage } from '../domain/session';
 import type { LoadRuleSnapshot } from '../domain/session';
 
 import { SessionStateError } from '../domain/sessionError';
@@ -98,7 +98,7 @@ export class SessionRepository {
 
   private stamp(session: WorkoutSession, extra: string[] = []): string {
     // Retain causal timestamp ordering even if the phone clock was moved backwards.
-    return [this.now(), session.startedAt, session.finishedAt ?? session.startedAt, ...(session.adjustments ?? []).map(item => item.changedAt), ...session.performances.map(item => item.advancedAt ?? item.performedAt),
+    return [this.now(), session.startedAt, session.finishedAt ?? session.startedAt, ...(session.adjustments ?? []).map(item => item.changedAt), ...(session.passages ?? []).map(item => item.changedAt), ...session.performances.map(item => item.advancedAt ?? item.performedAt),
       ...session.rests.flatMap(item => [item.endedAt ?? item.startedAt, ...item.pauses.map(pause => pause.endedAt ?? pause.startedAt)]),
       ...(session.replacements ?? []).map(item => item.changedAt), ...(session.exerciseChoices ?? []).map(item => item.chosenAt), ...extra].sort().at(-1)!;
   }
@@ -150,7 +150,18 @@ export class SessionRepository {
     const notes = await db.getAllAsync<{ exerciseId: string | null; body: string }>('SELECT session_exercise_id AS exerciseId, body FROM session_personal_notes WHERE session_id = ?', id);
     const adjustments = await db.getAllAsync<Omit<SetAdjustment, 'payload'> & { payload: string }>(`SELECT id, session_set_id AS setId,
       scope, action, payload, changed_at AS changedAt FROM session_set_adjustments WHERE session_id = ? ORDER BY changed_at, rowid`, id);
+    const passages = await db.getAllAsync<SetPassage>(`SELECT id, session_id AS sessionId, session_set_id AS setId,
+      action, revision, changed_at AS changedAt FROM session_set_passages WHERE session_id = ? ORDER BY rowid`, id);
+    const byId = new Map(sets.map(series => [series.id, series]));
+    for (const passage of passages) {
+      const series = byId.get(passage.setId);
+      if (!series) continue; // A withdrawn addition retains its journal in the export.
+      series.passageRevision = passage.revision;
+      if (passage.action === 'skip') series.skippedAt = passage.changedAt;
+      else delete series.skippedAt;
+    }
     return { ...session, exercises, sets, performances, rests, replacements, exerciseChoices,
+      ...(passages.length ? { passages } : {}),
       ...(notes.some(n => !n.exerciseId) ? { personalNote: notes.find(n => !n.exerciseId)!.body } : {}),
       ...(notes.some(n => n.exerciseId) ? { exerciseNotes: Object.fromEntries(notes.filter(n => n.exerciseId).map(n => [n.exerciseId!, n.body])) } : {}),
       ...(adjustments.length ? { adjustments: adjustments.map(a => ({ ...a, payload: JSON.parse(a.payload) as Record<string, unknown> })) } : {}) };
@@ -228,16 +239,19 @@ export class SessionRepository {
     });
   }
 
-  validateSet(sessionId: string, setId: string, input: ActualSetInput): Promise<WorkoutSession> {
+  validateSet(sessionId: string, setId: string, input: ActualSetInput, expectedPassageRevision = 0): Promise<WorkoutSession> {
     return this.write(async db => {
       const clean = actual(input), session = await this.requireSession(db, sessionId);
+      const series = session.sets.find(item => item.id === setId);
+      if (series?.skippedAt) throw new SessionStateError('Réintégrer la série avant de la valider.');
+      integer(expectedPassageRevision, 'Version de la série');
+      if ((series?.passageRevision ?? 0) !== expectedPassageRevision) throw new SessionStateError('Le statut de cette série a changé. Actualisez avant de valider sa performance.');
       // Idempotence is scoped to this exact immutable series, never the next one.
       if (session.performances.some(item => item.sessionSetId === setId)) return session;
       const step = selectSessionStep(session);
       if (step.phase !== 'set' || step.set.id !== setId) throw new SessionStateError('Cette série n’est pas la série active. Reprenez votre entraînement.');
       const stamp = this.stamp(session), performedId = this.idFactory();
-      const performedIds = new Set(session.performances.map(item => item.sessionSetId));
-      const remaining = session.sets.filter(item => item.id !== setId && !performedIds.has(item.id));
+      const remaining = remainingSessionSets(session).filter(item => item.id !== setId);
       const hasNext = remaining.length > 0;
       await db.runAsync(`INSERT INTO performed_sets (id, session_id, session_set_id, sort_order, weight_kg, reps, rir, performed_at, advanced_at)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`, performedId, sessionId, setId, session.performances.length,
@@ -314,9 +328,8 @@ export class SessionRepository {
       const step = selectSessionStep(session);
       const next = step.phase === 'set' ? step.set : step.phase === 'rest' || step.phase === 'between_sets' ? step.nextSet : null;
       if (!next || next.id !== expectedSetId) throw new SessionStateError('La série active a changé. Actualisez les exercices restants.');
-      const done = new Set(session.performances.map(item => item.sessionSetId));
       if (!session.exercises.some(item => item.id === exerciseId) ||
-          !session.sets.some(item => item.sessionExerciseId === exerciseId && !done.has(item.id))) {
+          !remainingSessionSets(session).some(item => item.sessionExerciseId === exerciseId)) {
         throw new SessionStateError('Cet exercice n’a plus de série à effectuer dans cet entraînement.');
       }
       await db.runAsync(`INSERT INTO session_exercise_choices (id, session_id, exercise_id, expected_set_id, chosen_at)
@@ -334,6 +347,7 @@ export class SessionRepository {
       const previous = (session.replacements ?? []).find(item => item.fromExerciseId === fromExerciseId);
       if (previous && previous.activeSetId === expectedSetId &&
           session.exercises.find(item => item.id === previous.toExerciseId)?.sourceCatalogExerciseId === catalogId) return session;
+      if (previous) throw new SessionStateError('Cet exercice a déjà été remplacé. Les séries réintégrées conservent l’exercice initial ; réalisez-les ou utilisez « Passer cette série ».');
       const step = selectSessionStep(session);
       if (step.phase !== 'set' || step.set.id !== expectedSetId || step.exercise.id !== fromExerciseId) {
         throw new SessionStateError('Reprenez la série active avant de remplacer son exercice. Un repos doit être terminé manuellement.');
@@ -342,8 +356,7 @@ export class SessionRepository {
       const catalog = await db.getFirstAsync<ExerciseCatalogItem>(`SELECT id, name, muscle_group AS muscleGroup,
         equipment, instructions, weight_mode AS weightMode FROM exercise_catalog WHERE id = ?`, catalogId);
       if (!catalog) throw new SessionStateError('Cet exercice n’est plus dans la bibliothèque.');
-      const done = new Set(session.performances.map(item => item.sessionSetId));
-      const remaining = session.sets.filter(item => item.sessionExerciseId === fromExerciseId && !done.has(item.id));
+      const remaining = remainingSessionSets(session).filter(item => item.sessionExerciseId === fromExerciseId);
       if (!remaining.length) throw new SessionStateError('Cet exercice est déjà terminé.');
       const id = this.idFactory(), stamp = this.stamp(session);
       const order = Math.max(...session.exercises.map(item => item.sortOrder)) + 1;
@@ -408,15 +421,50 @@ export class SessionRepository {
     return this.write(async db => {
       const session = await this.requireSession(db, sessionId), series = session.sets.find(item => item.id === setId);
       if (!series) return session;
+      if (series.skippedAt) throw new SessionStateError('Réintégrer la série avant de retirer cet ajout.');
       if (!series.addition || session.performances.some(item => item.sessionSetId === setId)) throw new SessionStateError('Seule une série ajoutée non validée peut être retirée.');
-      if (session.rests.some(item => item.endedAt === null) && session.sets.length - session.performances.length <= 1) throw new SessionStateError('Terminez explicitement le repos avant de retirer la dernière série restante.');
+      if (session.rests.some(item => item.endedAt === null) && remainingSessionSets(session).length <= 1) throw new SessionStateError('Terminez explicitement le repos avant de retirer la dernière série restante.');
       const stamp = this.stamp(session);
       await suspendRulesFor(db, session, [setId], stamp, this.idFactory);
       await logAdjustment(db, sessionId, setId, 'session', 'delete', { programPreserved: true }, stamp, this.idFactory);
       // Retain provenance/log foreign keys. Only the execution's remaining list is
       // affected; a prior Program addition is preserved for future workouts.
       await db.runAsync('UPDATE session_sets SET removed_at = ? WHERE id = ?', stamp, setId);
-      if (session.selectedExerciseId === series.sessionExerciseId && !session.sets.some(item => item.id !== setId && item.sessionExerciseId === series.sessionExerciseId && !session.performances.some(p => p.sessionSetId === item.id))) {
+      if (session.selectedExerciseId === series.sessionExerciseId && !session.sets.some(item => item.id !== setId && item.sessionExerciseId === series.sessionExerciseId && !item.skippedAt && !session.performances.some(p => p.sessionSetId === item.id))) {
+        await db.runAsync('UPDATE workout_sessions SET selected_exercise_id = NULL WHERE id = ?', sessionId);
+      }
+      return this.requireSession(db, sessionId);
+    });
+  }
+
+  skipSet(sessionId: string, setId: string, expectedRevision: number): Promise<WorkoutSession> {
+    return this.changeSetPassage(sessionId, setId, expectedRevision, 'skip');
+  }
+
+  reintegrateSet(sessionId: string, setId: string, expectedRevision: number): Promise<WorkoutSession> {
+    return this.changeSetPassage(sessionId, setId, expectedRevision, 'reintegrate');
+  }
+
+  private changeSetPassage(sessionId: string, setId: string, expectedRevision: number, action: SetPassage['action']): Promise<WorkoutSession> {
+    return this.write(async db => {
+      const session = await this.requireSession(db, sessionId), series = session.sets.find(item => item.id === setId);
+      if (!series) throw new SessionStateError('Cette série est introuvable ou a été retirée.');
+      if (session.performances.some(item => item.sessionSetId === setId)) throw new SessionStateError('Cette série est déjà réalisée. Sa performance reste conservée.');
+      integer(expectedRevision, 'Version de la série');
+      const revision = series.passageRevision ?? 0, skipped = !!series.skippedAt, requested = action === 'skip';
+      if (revision !== expectedRevision) {
+        // Repeating the same intent is harmless; a response from an earlier
+        // skip/reintegration cycle must never overwrite a more recent decision.
+        if (revision === expectedRevision + 1 && skipped === requested) return session;
+        throw new SessionStateError('Le statut de cette série a changé. Actualisez avant de réessayer.');
+      }
+      if (skipped === requested) return session;
+      await db.runAsync(`INSERT INTO session_set_passages (id, session_id, session_set_id, action, revision, changed_at)
+        VALUES (?, ?, ?, ?, ?, ?)`, this.idFactory(), sessionId, setId, action, revision + 1, this.stamp(session));
+      // The rest and pending manual advance belong to the previous performance.
+      // Neither is closed or edited by this operation.
+      if (requested && session.selectedExerciseId === series.sessionExerciseId &&
+          !remainingSessionSets(session).some(item => item.id !== setId && item.sessionExerciseId === series.sessionExerciseId)) {
         await db.runAsync('UPDATE workout_sessions SET selected_exercise_id = NULL WHERE id = ?', sessionId);
       }
       return this.requireSession(db, sessionId);
@@ -441,7 +489,7 @@ export class SessionRepository {
       const session = await this.requireSession(db, sessionId, false);
       if (session.status === 'completed') return session;
       if (selectSessionStep(session).phase !== 'ready_to_finish' || !session.performances.length) {
-        throw new SessionStateError('Validez toutes les séries avant de terminer la séance.');
+        throw new SessionStateError('Réalisez ou passez toutes les séries avant de terminer la séance, avec au moins une performance réelle.');
       }
       await db.runAsync("UPDATE workout_sessions SET status = 'completed', finished_at = ? WHERE id = ?", this.stamp(session), sessionId);
       changed = true;

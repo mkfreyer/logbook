@@ -2,7 +2,7 @@ import { router, useFocusEffect } from 'expo-router';
 import { useCallback, useState } from 'react';
 import { AppState, Text } from 'react-native';
 
-import type { WorkoutSession } from '../../domain/session';
+import { sessionProgressLabel, type WorkoutSession } from '../../domain/session';
 import { useSessions } from '../../store/SessionProvider';
 import { Button, Card } from '../../ui';
 import { featureStyles, FormError, messageFor } from '../programs/shared';
@@ -49,7 +49,7 @@ export function ResumeSessionCard({ active = true }: { active?: boolean }) {
   return <Card style={{ gap: 10 }}>
     <Text style={featureStyles.eyebrow}>ENTRAÎNEMENT EN COURS</Text>
     <Text style={featureStyles.title}>{current.workoutName}</Text>
-    <Text style={featureStyles.body}>{current.performances.length} / {current.sets.length} séries validées · progression sauvegardée</Text>
+    <Text style={featureStyles.body}>{sessionProgressLabel(current)} · progression sauvegardée</Text>
     <Button label="Reprendre la séance" icon="play" disabled={session.loading}
       onPress={() => router.push({ pathname: '/sessions/[sessionId]', params: { sessionId: current.id } })} />
   </Card>;

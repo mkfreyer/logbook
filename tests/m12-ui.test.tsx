@@ -94,7 +94,7 @@ describe('M1.2 : une seule série et sauvegarde explicite', () => {
     fireEvent.changeText(view.getByLabelText('Répétitions réelles'), '9');
     fireEvent.press(view.getByRole('button', { name: 'Valider la série' }));
     await view.findByText('Repos entre les séries');
-    expect(mockSessions.validateSet).toHaveBeenCalledWith('session', 'first', { weightKg: 72.5, reps: 9, rir: null });
+    expect(mockSessions.validateSet).toHaveBeenCalledWith('session', 'first', { weightKg: 72.5, reps: 9, rir: null }, 0);
     expect(view.queryByLabelText('Répétitions réelles')).toBeNull();
     expect(view.getByText('Repos prévu')).toBeTruthy();
     expect(view.getByRole('button', { name: 'Passer à la série suivante' })).toBeTruthy();
@@ -105,7 +105,7 @@ describe('M1.2 : une seule série et sauvegarde explicite', () => {
     const view = render(<SessionScreen sessionId="session" />);
     fireEvent.changeText(await view.findByLabelText('Répétitions réelles'), '12');
     fireEvent.press(view.getByRole('button', { name: 'Valider la série' }));
-    await waitFor(() => expect(mockSessions.validateSet).toHaveBeenCalledWith('session', 'first', { weightKg: null, reps: 12, rir: null }));
+    await waitFor(() => expect(mockSessions.validateSet).toHaveBeenCalledWith('session', 'first', { weightKg: null, reps: 12, rir: null }, 0));
     await view.findByText('Repos entre les séries');
   });
 

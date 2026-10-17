@@ -27,7 +27,7 @@ export function SessionReplacement({ sessionId, exerciseId, setId }: { sessionId
   const items = (catalog.data ?? []).filter(item => item.id !== current?.exercise.sourceCatalogExerciseId &&
     terms.every(term => searchable(`${item.name} ${item.muscleGroup} ${item.equipment}`).includes(term)));
   const done = new Set(data.session?.performances.map(item => item.sessionSetId));
-  const remainingCount = data.session?.sets.filter(item => item.sessionExerciseId === exerciseId && !done.has(item.id)).length ?? 0;
+  const remainingCount = data.session?.sets.filter(item => item.sessionExerciseId === exerciseId && !item.skippedAt && !done.has(item.id)).length ?? 0;
   const performedCount = data.session?.sets.filter(item => item.sessionExerciseId === exerciseId && done.has(item.id)).length ?? 0;
   const choose = (item: ExerciseCatalogItem) => {
     if (!current || !data.session || operation.lock.current) return;

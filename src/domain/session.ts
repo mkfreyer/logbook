@@ -31,6 +31,9 @@ export interface SessionLoadRule {
 export interface SetAdjustment {
   id: string; setId: string; scope: ChangeScope; action: string; payload: Record<string, unknown>; changedAt: string;
 }
+export interface SetPassage {
+  id: string; sessionId: string; setId: string; action: 'skip' | 'reintegrate'; revision: number; changedAt: string;
+}
 export interface SessionSet {
   id: string; sessionId: string; sessionExerciseId: string; sourceSetTemplateId: string | null;
   sortOrder: number; seriesIndex: number; label: string; kind: SetKind; notes: string;
@@ -43,6 +46,9 @@ export interface SessionSet {
   loadRule?: SessionLoadRule;
   addition?: { key: string; scope: ChangeScope; addedAt: string };
   editScope?: ChangeScope;
+  /** Derived from the append-only passage journal, never a performance. */
+  skippedAt?: string;
+  passageRevision?: number;
 }
 export interface ActualSetInput { weightKg: number | null; reps: number; rir: number | null }
 export interface PerformedSet extends ActualSetInput {
@@ -68,36 +74,54 @@ export interface WorkoutSession {
   personalNote?: string;
   exerciseNotes?: Record<string, string>;
   adjustments?: SetAdjustment[];
+  passages?: SetPassage[];
 }
 export type SessionStep =
   | { phase: 'set'; set: SessionSet; exercise: SessionExercise }
-  | { phase: 'rest'; rest: RestInterval; performed: PerformedSet; nextSet: SessionSet; exercise: SessionExercise }
-  | { phase: 'between_sets'; performed: PerformedSet; nextSet: SessionSet; exercise: SessionExercise }
+  | { phase: 'rest'; rest: RestInterval; performed: PerformedSet; nextSet: SessionSet | null; exercise: SessionExercise }
+  | { phase: 'between_sets'; performed: PerformedSet; nextSet: SessionSet | null; exercise: SessionExercise }
   | { phase: 'ready_to_finish' }
   | { phase: 'completed' };
 
-/** Progress is derived from persisted records, never a screen-local series counter. */
+/** Progress counts actual results separately from skipped and remaining series. */
+export function remainingSessionSets(session: WorkoutSession): SessionSet[] {
+  const done = new Set(session.performances.map(item => item.sessionSetId));
+  return session.sets.filter(item => !item.skippedAt && !done.has(item.id));
+}
+export function sessionProgress(session: WorkoutSession) {
+  const skipped = session.sets.filter(item => !!item.skippedAt).length;
+  return { performed: session.performances.length, skipped, remaining: remainingSessionSets(session).length, total: session.sets.length };
+}
+export function sessionProgressLabel(session: WorkoutSession): string {
+  const p = sessionProgress(session);
+  return p.skipped ? `${p.performed} série${p.performed > 1 ? 's' : ''} réalisée${p.performed > 1 ? 's' : ''} · ${p.skipped} passée${p.skipped > 1 ? 's' : ''} · ${p.remaining} restante${p.remaining > 1 ? 's' : ''}`
+    : `${p.performed} / ${p.total} séries validées`;
+}
+export const PASSED_REFERENCE_MESSAGE = 'La série de référence est passée. Utilisez « Réintégrer la série » ou choisissez une charge manuelle.';
+
+/** A pending rest/advance remains visible even after the last remaining series
+ * is skipped. Only the existing manual actions may close that transition. */
 export function selectSessionStep(session: WorkoutSession): SessionStep {
   if (session.status === 'completed') return { phase: 'completed' };
-  const performedIds = new Set(session.performances.map(item => item.sessionSetId));
-  const remaining = session.sets.filter(item => !performedIds.has(item.id));
-  const nextSet = remaining.find(item => item.sessionExerciseId === session.selectedExerciseId) ?? remaining[0];
-  if (!nextSet) return { phase: 'ready_to_finish' };
-  const exercise = session.exercises.find(item => item.id === nextSet.sessionExerciseId);
-  if (!exercise) throw new Error('Exercice de la séance introuvable.');
+  const remaining = remainingSessionSets(session);
+  const nextSet = remaining.find(item => item.sessionExerciseId === session.selectedExerciseId) ?? remaining[0] ?? null;
   const pending = session.performances.find(item => item.advancedAt === null);
+  const exerciseId = nextSet?.sessionExerciseId ?? session.sets.find(item => item.id === pending?.sessionSetId)?.sessionExerciseId;
+  const exercise = session.exercises.find(item => item.id === exerciseId);
   if (pending) {
+    if (!exercise) throw new Error('Exercice de la séance introuvable.');
     const rest = session.rests.find(item => item.performedSetId === pending.id && item.endedAt === null);
     if (rest) return { phase: 'rest', rest, performed: pending, nextSet, exercise };
     return { phase: 'between_sets', performed: pending, nextSet, exercise };
   }
+  if (!nextSet) return { phase: 'ready_to_finish' };
+  if (!exercise) throw new Error('Exercice de la séance introuvable.');
   return { phase: 'set', set: nextSet, exercise };
 }
 
 export function remainingSessionExercises(session: WorkoutSession): { exercise: SessionExercise; sets: SessionSet[] }[] {
-  const performed = new Set(session.performances.map(item => item.sessionSetId));
-  return session.exercises.map(exercise => ({ exercise,
-    sets: session.sets.filter(item => item.sessionExerciseId === exercise.id && !performed.has(item.id)) }))
+  const remaining = remainingSessionSets(session);
+  return session.exercises.map(exercise => ({ exercise, sets: remaining.filter(item => item.sessionExerciseId === exercise.id) }))
     .filter(item => item.sets.length > 0)
     .sort((a, b) => (a.exercise.plannedOrder ?? a.exercise.sortOrder) - (b.exercise.plannedOrder ?? b.exercise.sortOrder)
       || a.sets[0]!.sortOrder - b.sets[0]!.sortOrder);

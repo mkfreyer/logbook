@@ -150,7 +150,7 @@ test('v5 migration preserves every old column, ID, preference, completed workout
   for (const table of before) assert.deepEqual(await db.getAllAsync(`SELECT ${table.columns.join(',')} FROM ${table.name} ORDER BY rowid`), table.rows, table.name);
   assert.deepEqual(await db.getAllAsync('SELECT * FROM set_load_rules'), []);
   assert.deepEqual(await db.getAllAsync('SELECT load_rule_snapshot FROM session_sets WHERE load_rule_snapshot IS NOT NULL'), []);
-  assert.equal((await db.getFirstAsync<{user_version:number}>('PRAGMA user_version'))!.user_version, 7);
+  assert.equal((await db.getFirstAsync<{user_version:number}>('PRAGMA user_version'))!.user_version, 8);
   const saved = JSON.parse(readFileSync(new URL('./fixtures/m33-populated-snapshots.json', import.meta.url), 'utf8')) as {active:WorkoutSession;completed:WorkoutSession};
   const sessions = new SessionRepository(db, () => 'unused');
   assert.deepEqual(await sessions.getActiveSession(), saved.active); assert.deepEqual(await sessions.getSession(saved.completed.id), saved.completed);
@@ -178,7 +178,7 @@ test('personal export includes complete calculation relationships, frozen proven
   const session = await f.sessions.startOrResume(f.workout.id); await new PreferencesRepository(f.db).setSeriesDisplay('both');
   const before = await capture(f.db), reader = new SqliteDatabase(f.path); t.after(() => reader.close()); let json = '';
   await writePersonalExport(reader, value => { json += value; }, { appVersion: '0.1.0' });
-  const file = JSON.parse(json); assert.equal(file.formatVersion, 1); assert.equal(file.sqliteSchemaVersion, 7);
+  const file = JSON.parse(json); assert.equal(file.formatVersion, 1); assert.equal(file.sqliteSchemaVersion, 8);
   assert.equal(Object.keys(file.tables).length, EXPORT_TABLES.length); assert.equal(file.tables.set_load_rules.rows[0].reference_set_id, base.id);
   assert.equal(JSON.parse(file.tables.session_sets.rows[1].load_rule_snapshot).resolvedWeightKg, 72);
   assert.equal(file.tables.app_preferences.rows[0].value_json, '"both"'); assert.equal(file.preferenceDefaults.seriesDisplay, 'name');

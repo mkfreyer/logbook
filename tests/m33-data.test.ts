@@ -71,11 +71,14 @@ async function fixture(t: { after(callback: () => void): void }, legacy = false)
   active = await sessions.addSet(active.id, active.exercises[0]!.id, { kind: 'warmup', repsMin: 5, repsMax: 5, restAfterSec: 20,
     loadRule: { basis: 'performed_weight', referenceSetId: active.sets[0]!.id, percent: 50 } }, 'session', 'm33-export-addition');
   active = await sessions.savePersonalNote(active.id, 'Note personnelle de test');
+  const extra = active.sets.find(series => series.addition)!;
+  active = await sessions.skipSet(active.id, extra.id, 0);
+  active = await sessions.reintegrateSet(active.id, extra.id, 1);
   return { db, path, programs, training, sessions, preferences, completed, active, program, workout };
 }
 async function snapshot(db: SqliteDatabase, excludePreferences = false, legacyProjection = false) {
   const result: Record<string, Row[]> = {};
-  for (const [table] of EXPORT_TABLES) if (!(excludePreferences && table === 'app_preferences') && !(legacyProjection && ['set_load_rules', 'set_actual_load_rules', 'session_set_load_rules', 'session_set_adjustments', 'session_personal_notes'].includes(table))) {
+  for (const [table] of EXPORT_TABLES) if (!(excludePreferences && table === 'app_preferences') && !(legacyProjection && ['set_load_rules', 'set_actual_load_rules', 'session_set_load_rules', 'session_set_adjustments', 'session_personal_notes', 'session_set_passages'].includes(table))) {
     const columns = legacyProjection && table === 'session_sets'
       ? (await db.getAllAsync<{ name: string }>('PRAGMA table_info(session_sets)')).map(item => item.name).filter(name => !['load_rule_snapshot','legacy_source_set_template_id','added_at','addition_scope','addition_key','edit_scope','removed_at','initial_metadata'].includes(name)).join(',') : '*';
     result[table] = await db.getAllAsync(`SELECT rowid AS __rowid, ${columns} FROM ${table} ORDER BY rowid`);
