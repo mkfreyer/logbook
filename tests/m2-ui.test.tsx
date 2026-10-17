@@ -88,7 +88,7 @@ describe('M2 : remplacement temporaire confirmé', () => {
     fireEvent.changeText(view.getByLabelText('Rechercher un remplacement'), 'developpe HALTERES');
     expect(view.queryByText('Presse à cuisses')).toBeNull();
     fireEvent.press(view.getByRole('button', { name: `Remplacer par ${alternative.name}` }));
-    expect(Alert.alert).toHaveBeenCalledWith('Remplacer cet exercice ?', expect.stringContaining('charges cibles restantes seront effacées'), expect.any(Array), expect.any(Object));
+    await waitFor(() => expect(Alert.alert).toHaveBeenCalledWith('Remplacer cet exercice ?', expect.stringContaining('charges cibles restantes seront effacées'), expect.any(Array), expect.any(Object)));
     expect(repository.replaceExercise).not.toHaveBeenCalled(); alertButton('Annuler');
     expect(repository.replaceExercise).not.toHaveBeenCalled(); expect(router.dismissTo).not.toHaveBeenCalled();
   });
@@ -96,9 +96,9 @@ describe('M2 : remplacement temporaire confirmé', () => {
     const pending = deferred<WorkoutSession>(); repository.replaceExercise.mockReturnValueOnce(pending.promise);
     const view = render(<SessionReplacement {...replacementProps} />);
     const row = await view.findByRole('button', { name: `Remplacer par ${alternative.name}` });
-    fireEvent.press(row); fireEvent.press(row); expect(Alert.alert).toHaveBeenCalledTimes(1);
+    fireEvent.press(row); fireEvent.press(row); await waitFor(() => expect(Alert.alert).toHaveBeenCalledTimes(1));
     alertButton('Remplacer'); alertButton('Remplacer');
-    expect(repository.replaceExercise).toHaveBeenCalledTimes(1);
+    await waitFor(() => expect(repository.replaceExercise).toHaveBeenCalledTimes(1));
     expect(repository.replaceExercise).toHaveBeenCalledWith('s', 'e0', alternative.id, 'set0');
     expect(router.dismissTo).not.toHaveBeenCalled();
     await act(async () => { pending.resolve(replacement); await pending.promise; });
@@ -107,14 +107,15 @@ describe('M2 : remplacement temporaire confirmé', () => {
   test('un échec conserve l’écran et permet une nouvelle confirmation, sans masquer l’erreur', async () => {
     repository.replaceExercise.mockRejectedValueOnce(new Error('Sauvegarde impossible'));
     const view = render(<SessionReplacement {...replacementProps} />);
-    fireEvent.press(await view.findByRole('button', { name: `Remplacer par ${alternative.name}` })); alertButton('Remplacer');
+    fireEvent.press(await view.findByRole('button', { name: `Remplacer par ${alternative.name}` })); await waitFor(() => expect(Alert.alert).toHaveBeenCalled()); alertButton('Remplacer');
     await view.findByText('Sauvegarde impossible'); expect(router.dismissTo).not.toHaveBeenCalled();
-    fireEvent.press(view.getByRole('button', { name: `Remplacer par ${alternative.name}` })); alertButton('Remplacer');
+    fireEvent.press(view.getByRole('button', { name: `Remplacer par ${alternative.name}` })); await waitFor(() => expect(Alert.alert).toHaveBeenCalledTimes(2)); alertButton('Remplacer');
     await waitFor(() => expect(router.dismissTo).toHaveBeenCalledTimes(1));
   });
   test('une confirmation tardive après sortie ne modifie aucune série', async () => {
     const view = render(<SessionReplacement {...replacementProps} />);
     fireEvent.press(await view.findByRole('button', { name: `Remplacer par ${alternative.name}` }));
+    await waitFor(() => expect(Alert.alert).toHaveBeenCalled());
     act(() => mockFocusCleanups.forEach(blur => blur())); alertButton('Remplacer');
     expect(repository.replaceExercise).not.toHaveBeenCalled();
   });
@@ -236,4 +237,11 @@ test('le menu secondaire ouvre les trois actions sans transformer la série acti
   fireEvent.press(view.getByRole('button', { name: 'Choisir le prochain exercice' }));
   await waitFor(() => expect(router.push).toHaveBeenCalledWith({ pathname: '/sessions/[sessionId]/exercises', params: { sessionId: 's' } }));
   expect(repository.validateSet).not.toHaveBeenCalled();
+});
+test('la fiche depuis la série active conserve les trois identifiants sans enregistrer de performance', async () => {
+  const view = render(<SessionScreen sessionId="s" />);
+  fireEvent.press(await view.findByRole('button', { name: 'Actions de séance' }));
+  fireEvent.press(view.getByRole('button', { name: 'Fiche et conseils de l’exercice' }));
+  await waitFor(() => expect(router.push).toHaveBeenCalledWith({ pathname: '/exercises/[exerciseId]', params: { exerciseId: 'c0', replacementSessionId: 's', replacementExerciseId: 'e0', replacementSetId: 'set0' } }));
+  expect(repository.validateSet).not.toHaveBeenCalled(); expect(repository.replaceExercise).not.toHaveBeenCalled();
 });

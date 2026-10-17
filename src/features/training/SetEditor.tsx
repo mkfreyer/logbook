@@ -1,3 +1,4 @@
+import { TrainingHelp } from '../exercises/TrainingHelp';
 import { router, useFocusEffect } from 'expo-router';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
@@ -154,6 +155,7 @@ export function SetEditor({ mode, programId, workoutId, exerciseInstanceId, setI
       <Text style={styles.help}>RIR : répétitions que vous estimez encore pouvoir faire, de 0 à 10. Laissez vide si vous ne souhaitez pas définir de cible.</Text>
       <Text style={styles.help}>Le repos appartient uniquement à l’intervalle après cette série. 0 signifie aucun repos. La valeur de la dernière série est conservée pour la préparation ; aucun chronomètre n’est lancé.</Text>
       <Field label="Notes de la série (facultatives)" value={draft.notes} onChangeText={value => change('notes', value)} maxLength={1000} multiline placeholder="Vos consignes" />
+      <TrainingHelp />
       <FormError message={formError ?? deletion.error} />
       <Button label={editing ? 'Enregistrer les modifications' : 'Ajouter la série'} icon="checkmark" loading={saving} disabled={busy} onPress={() => { void save(); }} />
       <Button label="Annuler" variant="ghost" disabled={busy} onPress={returnToExercise} />

@@ -99,3 +99,10 @@ Le schéma 8 contient **20 tables**. `session_set_passages` conserve tous les é
 Les révisions commencent à 1 et sont consécutives ; les actions alternent en commençant par `skip`. Les horodatages, IDs et révisions sont conservés, même si une série ajoutée a été réintégrée puis retirée logiquement. Un dernier passage ne peut pas coexister avec une performance réelle ou un retrait. Ces invariants sont vérifiés avant partage, en plus de SQLite et des autres contrôles. La convention `skippedSeries: latest_passage_revision_is_not_a_performance` interdit de traiter un passage comme une réalisation ou un poids nul.
 
 L’enveloppe reste format 1 et doit être interprétée avec `sqliteSchemaVersion: 8`. Une restauration future devra conserver le journal et reconstruire le dernier statut, sans compter les passages dans les performances ni rejouer les calculs historiques. **Aucune restauration n’est livrée.**
+
+
+## M3.4C — Contenu des fiches sans migration
+
+SQLite reste **v8**, l’enveloppe **format 1**, avec les mêmes **20 tables**. Présentations, étapes, conseils et liens d’alternatives du catalogue initial sont des contenus éditoriaux embarqués dans `src/data/exerciseGuides.ts`, liés aux identifiants stables existants. Ils ne sont pas des données personnelles SQLite et ne sont pas dupliqués dans le JSON. Aucun entraînement ni programme n’est créé pour les fournir.
+
+Les consignes personnelles restent dans `exercise_catalog.instructions`, donc sont déjà exportées intégralement. Les identités du catalogue, instantanés, remplacements, règles, résultats, repos et passages restent exportés comme auparavant. Aucun nouveau champ utilisateur ou table ne nécessite de changement de format. **L’import/restauration reste indisponible.**

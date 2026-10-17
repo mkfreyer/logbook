@@ -12,4 +12,6 @@ L’application fonctionnelle reste prioritaire. Ce document réserve les retouc
 - Harmoniser les fiches du catalogue et les repères hebdomadaires de l’accueil, sans créer de conseils ou d’indicateurs fictifs.
 - Affiner la densité des explications de stockage/export dans Paramètres après les retours iPhone, en gardant visibles les limites de restauration et le risque de suppression de l’application.
 
+- Après retour iPhone M3.4C, affiner la densité des fiches et des trois onglets avec texte agrandi ; conserver des repères courts et le parcours de remplacement discret. Les illustrations et alternatives personnalisées restent des améliorations distinctes.
+
 Ne pas refaire la navigation verticale validée et ne jamais remplir un état vide avec des performances fictives.

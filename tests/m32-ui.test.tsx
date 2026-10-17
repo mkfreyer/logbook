@@ -317,7 +317,7 @@ test('custom exercise detail shows real instructions, load mode, history and edi
 test('catalog entry without instructions has an honest empty state and no edit/fictional advice', async () => {
   training.getCatalogExercise.mockResolvedValue({ ...custom, instructions: '', isCustom: false });
   const view = render(<ExerciseDetail exerciseId="custom" />); await view.findByText('Aucune instruction renseignée pour cet exercice.');
-  expect(view.queryByRole('button', { name: 'Modifier mon exercice personnalisé' })).toBeNull(); expect(view.queryByText('Conseils')).toBeNull();
+  expect(view.queryByRole('button', { name: 'Modifier mon exercice personnalisé' })).toBeNull(); fireEvent.press(view.getByRole('tab', { name: 'Conseils' })); expect(view.getByText('Aucun conseil spécifique renseigné')).toBeTruthy();
 });
 test('personalized edit keeps its stable ID, saves before returning, and prevents duplicate saves', async () => {
   const pending = deferred<ExerciseCatalogItem>(); training.updateCustomExercise.mockReturnValue(pending.promise);
@@ -327,6 +327,12 @@ test('personalized edit keeps its stable ID, saves before returning, and prevent
   expect(training.updateCustomExercise).toHaveBeenCalledTimes(1); expect(training.updateCustomExercise).toHaveBeenCalledWith('custom', expect.objectContaining({ name: 'Renommé' }));
   expect(router.dismissTo).not.toHaveBeenCalled(); await act(async () => { pending.resolve({ ...custom, name: 'Renommé' }); await pending.promise; });
   expect(router.dismissTo).toHaveBeenCalledWith({ pathname: '/exercises/[exerciseId]', params: { exerciseId: 'custom' } });
+});
+test('personalized edit returns to the sheet with its original replacement context', async () => {
+  const view = render(<CatalogExerciseEditor exerciseId="custom" replacementContext={{ sessionId: 's', exerciseId: 'e', setId: 'set' }} />);
+  await view.findByLabelText('Nom de l’exercice'); fireEvent.press(view.getByRole('button', { name: 'Enregistrer l’exercice' }));
+  await waitFor(() => expect(router.dismissTo).toHaveBeenCalledWith({ pathname: '/exercises/[exerciseId]', params: { exerciseId: 'custom', replacementSessionId: 's', replacementExerciseId: 'e', replacementSetId: 'set' } }));
+  expect(repo.validateSet).not.toHaveBeenCalled();
 });
 test('save errors stay on the personalized form and allow correction', async () => {
   training.updateCustomExercise.mockRejectedValueOnce(new Error('Sauvegarde impossible'));

@@ -3,7 +3,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import { router } from 'expo-router';
 import { useEffect, useState } from 'react';
-import { Keyboard, Modal, Pressable, StyleSheet, Text, View } from 'react-native';
+import { Keyboard, Modal, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { replacementOrigin, selectSessionStep, sessionProgress, sessionProgressLabel, PASSED_REFERENCE_MESSAGE, type WorkoutSession } from '../../domain/session';
 import { Button, Card, colors, Heading, Screen } from '../../ui';
 import { FormError, LoadState, messageFor } from '../programs/shared';
@@ -14,6 +14,8 @@ import { SessionSummaryView } from './SessionSummaryView';
 import { PassedSets } from './PassedSets';
 import { useSkipSet } from './useSkipSet';
 import { PreviousPerformanceCard } from './PreviousPerformanceCard';
+import { replacementParams } from './useExerciseReplacement';
+import { TrainingHelp } from '../exercises/TrainingHelp';
 
 const emptyActual = { weight: '', reps: '', rir: '' };
 
@@ -55,7 +57,7 @@ export function SessionScreen({ sessionId }: { sessionId?: string }) {
   const sourceSets = session && currentExercise ? session.sets.filter(item => session.exercises.find(exercise => exercise.id === item.sessionExerciseId)?.sourceWorkoutExerciseId === currentExercise.sourceWorkoutExerciseId) : [];
   const replacedFrom = session && activeExerciseId ? replacementOrigin(session, activeExerciseId) : null;
   const showActions = !data.loading && !data.error && (step?.phase === 'set' || step?.phase === 'rest' || step?.phase === 'between_sets' || step?.phase === 'ready_to_finish');
-  const goAction = (kind: 'edit' | 'replace' | 'exercises' | 'add' | 'remaining' | 'notes') => {
+  const goAction = (kind: 'edit' | 'replace' | 'exercises' | 'add' | 'remaining' | 'notes' | 'guide') => {
     if (!session) return;
     void operation.run(async () => undefined, () => {
       setActionsOpen(false); Keyboard.dismiss();
@@ -63,6 +65,8 @@ export function SessionScreen({ sessionId }: { sessionId?: string }) {
       else if (kind === 'notes') router.push({ pathname: '/sessions/[sessionId]/notes', params: { sessionId: session.id } });
       else if (kind === 'remaining') router.push({ pathname: '/sessions/[sessionId]/edit', params: { sessionId: session.id } });
       else if (kind === 'exercises') router.push({ pathname: '/sessions/[sessionId]/exercises', params: { sessionId: session.id } });
+      else if (step?.phase === 'set' && kind === 'guide') router.push({ pathname: '/exercises/[exerciseId]', params: { exerciseId: step.exercise.sourceCatalogExerciseId,
+        ...replacementParams({ sessionId: session.id, exerciseId: step.exercise.id, setId: step.set.id }) } });
       else if (step?.phase === 'set' && kind === 'edit') router.push({ pathname: '/sessions/[sessionId]/edit', params: { sessionId: session.id, setId: step.set.id } });
       else if (step?.phase === 'set') router.push({ pathname: '/sessions/[sessionId]/replace', params: { sessionId: session.id, exerciseId: step.exercise.id, setId: step.set.id } });
     }, true);
@@ -89,9 +93,10 @@ export function SessionScreen({ sessionId }: { sessionId?: string }) {
     <Modal visible={actionsOpen} transparent animationType="fade" onRequestClose={() => setActionsOpen(false)}>
       <View style={styles.modal}>
         <Pressable style={styles.scrim} accessibilityRole="button" accessibilityLabel="Fermer les actions" onPress={() => setActionsOpen(false)} />
-        <Card style={{ gap: 8 }}><View accessibilityViewIsModal>
+        <Card style={{ gap: 8, maxHeight: '90%' }}><ScrollView style={{ flexShrink: 1 }} keyboardShouldPersistTaps="handled"><View accessibilityViewIsModal>
           <Text style={[sessionStyles.subtitle, { marginBottom: 12 }]}>Actions de séance</Text>
           {step?.phase === 'set' && <>
+            <Button label="Fiche et conseils de l’exercice" variant="ghost" icon="information-circle-outline" disabled={busy} onPress={() => goAction('guide')} />
             <Button label="Modifier les objectifs de la série" variant="ghost" icon="create-outline" disabled={busy} onPress={() => goAction('edit')} />
             <Button label="Remplacer cet exercice" variant="ghost" icon="swap-horizontal" disabled={busy} onPress={() => goAction('replace')} />
           </>}
@@ -100,7 +105,7 @@ export function SessionScreen({ sessionId }: { sessionId?: string }) {
           <Button label="Notes personnelles" variant="ghost" icon="document-text-outline" disabled={busy} onPress={() => goAction('notes')} />
           {!!progress?.remaining && <Button label="Choisir le prochain exercice" variant="ghost" icon="grid-outline" disabled={busy} onPress={() => goAction('exercises')} />}
           <Button label="Fermer" variant="secondary" disabled={busy} onPress={() => setActionsOpen(false)} />
-        </View></Card>
+        </View></ScrollView></Card>
       </View>
     </Modal>
     {data.loading || data.error || !session || !step ? <LoadState loading={data.loading} error={data.error} retry={data.retry} missing="Cet entraînement n’est pas disponible." /> : <View style={sessionStyles.sections}>
@@ -136,6 +141,7 @@ export function SessionScreen({ sessionId }: { sessionId?: string }) {
         </View>
         <PreviousPerformanceCard sessionId={session.id} series={step.set} exercise={step.exercise} />
         <Text style={sessionStyles.help}>Charge et RIR facultatifs. RIR : répétitions que vous auriez encore pu faire, de 0 à 10.</Text>
+        <TrainingHelp />
       </>}
       {step.phase === 'rest' && <>
         <FormError message={operation.error} />
