@@ -1,6 +1,6 @@
 # Tester M3.4C sur iPhone avec Expo Go
 
-M0 à M3.4B (dont Passer/Réintégrer) sont validés par le propriétaire. **M3.4C doit encore être vérifié sur votre iPhone.** La base reste SQLite **v8**, sans nouvelle migration ; données, identité Expo et fichier `logbook.db` sont conservés.
+M0 à M3.4B (dont Passer/Réintégrer) sont validés par le propriétaire. M3.4C initiale `c85a2a9` a également été validée. **Le nouvel accès direct à la fiche doit encore être vérifié sur votre iPhone** ([guide court](TESTER_ACCES_DIRECT_FICHE_SUR_IPHONE.md)). La base reste SQLite **v8**, sans nouvelle migration ; données, identité Expo et fichier `logbook.db` sont conservés.
 
 ## Récupérer le code sur Windows
 
@@ -38,7 +38,7 @@ Après ouverture de Logbook, coupez le Wi-Fi et les données mobiles temporairem
 
 1. Dans une configuration de série, dépliez **Comprendre les termes d’entraînement** puis refermez. Vérifiez cible/réel, RIR, types, unités, passage/suppression.
 2. Démarrez une séance avec plusieurs séries. Pendant l’effort, une seule série reste active et ses trois champs réels restent vides avant votre saisie.
-3. Ouvrez l’aide sous les champs, puis le menu « … » → **Fiche et conseils de l’exercice**. Consultez les onglets et revenez. La consultation ne valide aucune série et ne change aucun objectif.
+3. Ouvrez l’aide sous les champs, puis touchez **l’encadré bleu de l’exercice actif**. Consultez les onglets et revenez. La consultation ne valide aucune série et ne change aucun objectif.
 4. Vérifiez que **Terminer**, **Terminer la configuration**, **Quitter et reprendre plus tard**, Passer et Réintégrer restent opérationnels.
 
 ## 3. Remplacement temporaire depuis une alternative
@@ -46,7 +46,7 @@ Après ouverture de Logbook, coupez le Wi-Fi et les données mobiles temporairem
 Utilisez une séance de votre choix avec au moins quatre séries sur le couché barre et un repos positif entre séries, sans créer de performances dans vos véritables historiques si vous ne souhaitez pas y garder cet essai.
 
 1. Passez la première série. Réalisez et validez la suivante avec vos vraies valeurs. Testez pause/reprise et fin manuelle du repos.
-2. Sur la prochaine série active, menu « … » → **Fiche et conseils de l’exercice** → Alternatives → incliné haltères.
+2. Sur la prochaine série active, touchez **l’encadré bleu de l’exercice** → Alternatives → incliné haltères.
 3. Touchez **Remplacer pour cette séance**. Vérifiez que la confirmation nomme les deux exercices, annonce les charges cibles effacées et le programme inchangé. **Annuler** ne doit rien changer.
 4. Recommencez et confirmez. Vous revenez à l’entraînement : les séries restantes admissibles utilisent le vrai nom et le mode par haltère, avec une charge cible à adapter. Les règles de pourcentage liées sont suspendues, jamais transposées entre deux modes.
 5. La série validée reste sur le couché barre avec ses résultats. La série passée reste passée sur l’exercice initial. Réintégrez-la si vous souhaitez la réaliser : elle doit garder son identité d’origine.

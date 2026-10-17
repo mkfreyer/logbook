@@ -11,6 +11,7 @@ import type { WorkoutSession } from '../src/domain/session';
 import type { ExerciseCatalogItem } from '../src/domain/training';
 import { ExerciseDetail } from '../src/features/exercises/ExerciseDetail';
 import { ExerciseCatalog } from '../src/features/exercises/ExerciseCatalog';
+import { SessionScreen } from '../src/features/sessions/SessionScreen';
 import { SessionReplacement } from '../src/features/sessions/SessionReplacement';
 import { useTraining } from '../src/store/TrainingProvider';
 import { useSessions } from '../src/store/SessionProvider';
@@ -44,7 +45,7 @@ const session: WorkoutSession = { id: 's', sourceProgramId: 'p', sourceWorkoutTe
   startedAt: stamp, finishedAt: null, exercises: [exercise], sets: [set], performances: [], rests: [] };
 const context = { sessionId: 's', exerciseId: 'se', setId: 'set' };
 const training = { getCatalogExercise: jest.fn<TrainingRepository['getCatalogExercise']>(), listCatalog: jest.fn<TrainingRepository['listCatalog']>() };
-const sessions = { getSession: jest.fn<SessionRepository['getSession']>(), replaceExercise: jest.fn<SessionRepository['replaceExercise']>() };
+const sessions = { history: { previousPerformance: jest.fn<() => Promise<null>>() }, validateSet: jest.fn<SessionRepository['validateSet']>(), getSession: jest.fn<SessionRepository['getSession']>(), replaceExercise: jest.fn<SessionRepository['replaceExercise']>() };
 function deferred<T>() { let resolve!: (value: T) => void; const promise = new Promise<T>(done => { resolve = done; }); return { promise, resolve }; }
 function pressAlert(name: string) { const button = jest.mocked(Alert.alert).mock.lastCall?.[2]?.find(item => item.text === name); expect(button).toBeTruthy(); act(() => button?.onPress?.()); }
 async function requestReplacement(view: ReturnType<typeof render>) {
@@ -56,6 +57,7 @@ beforeEach(() => {
   jest.resetAllMocks(); mockEffects.clear(); mockBlurs.clear();
   jest.spyOn(Alert, 'alert').mockImplementation(() => undefined);
   training.getCatalogExercise.mockImplementation(async id => [...catalog, custom].find(item => item.id === id)!);
+  sessions.history.previousPerformance.mockResolvedValue(null);
   training.listCatalog.mockResolvedValue([...catalog, custom]); sessions.getSession.mockResolvedValue(session); sessions.replaceExercise.mockResolvedValue(session);
   jest.mocked(useTraining).mockReturnValue(training as unknown as TrainingRepository);
   jest.mocked(useSessions).mockReturnValue(sessions as unknown as SessionRepository);
@@ -208,4 +210,40 @@ test('changing replacement-route identifiers ignores a delayed preflight from th
   await view.findByText(/Revenez à la série active pour remplacer/);
   await act(async () => { pending.resolve(session); await pending.promise; });
   expect(Alert.alert).not.toHaveBeenCalled(); expect(sessions.replaceExercise).not.toHaveBeenCalled();
+});
+
+for (const replace of [false, true]) test(`direct sheet → tabs → alternative → ${replace ? 'confirmed replacement' : 'back without replacement'} preserves training correctly`, async () => {
+  const trainingView = render(<SessionScreen sessionId="s" />);
+  fireEvent.changeText(await trainingView.findByLabelText('Charge réelle (kg)'), '62,5');
+  fireEvent.changeText(trainingView.getByLabelText('Répétitions réelles'), '9'); fireEvent.changeText(trainingView.getByLabelText('RIR réel'), '2');
+  fireEvent.press(trainingView.getByRole('button', { name: `Voir la fiche de ${source.name}` }));
+  await waitFor(() => expect(router.push).toHaveBeenCalledWith({ pathname: '/exercises/[exerciseId]', params: { exerciseId: source.id, replacementSessionId: 's', replacementExerciseId: 'se', replacementSetId: 'set' } }));
+  act(() => mockBlurs.forEach(blur => blur()));
+  const sheet = render(<ExerciseDetail exerciseId={source.id} replacementContext={context} />);
+  await sheet.findByRole('tab', { name: 'Description', selected: true });
+  fireEvent.press(sheet.getByRole('tab', { name: 'Conseils' })); expect(sheet.getByText(EXERCISE_GUIDES[source.id]!.load)).toBeTruthy();
+  fireEvent.press(sheet.getByRole('tab', { name: 'Alternatives' }));
+  fireEvent.press(await sheet.findByRole('button', { name: `Fiche de ${alternative.name}` }));
+  expect(router.push).toHaveBeenLastCalledWith({ pathname: '/exercises/[exerciseId]', params: { exerciseId: alternative.id, replacementSessionId: 's', replacementExerciseId: 'se', replacementSetId: 'set' } });
+  act(() => mockBlurs.forEach(blur => blur()));
+  const target = render(<ExerciseDetail exerciseId={alternative.id} replacementContext={context} />);
+  await target.findByRole('button', { name: 'Remplacer pour cette séance' });
+  if (replace) {
+    await requestReplacement(target); expect(sessions.replaceExercise).not.toHaveBeenCalled();
+    const updated: WorkoutSession = { ...session, exercises: [{ ...exercise, id: 'replaced', sourceCatalogExerciseId: alternative.id, name: alternative.name, weightMode: 'per_hand' }],
+      sets: [{ ...set, sessionExerciseId: 'replaced', targets: { ...targets, targetWeightKg: null } }] };
+    sessions.replaceExercise.mockImplementationOnce(async () => { sessions.getSession.mockResolvedValue(updated); return updated; }); pressAlert('Remplacer');
+    await waitFor(() => expect(sessions.replaceExercise).toHaveBeenCalledWith('s', 'se', alternative.id, 'set'));
+    await waitFor(() => expect(router.dismissTo).toHaveBeenCalledWith({ pathname: '/sessions/[sessionId]', params: { sessionId: 's' } }));
+  } else {
+    fireEvent.press(target.getByRole('button', { name: 'Revenir à la séance' }));
+    expect(router.dismissTo).toHaveBeenCalledWith({ pathname: '/sessions/[sessionId]', params: { sessionId: 's' } });
+    expect(sessions.replaceExercise).not.toHaveBeenCalled();
+  }
+  target.unmount(); sheet.unmount(); act(() => mockEffects.forEach(effect => effect()));
+  await trainingView.findByRole('button', { name: `Voir la fiche de ${replace ? alternative.name : source.name}` });
+  expect(trainingView.getByLabelText('Charge réelle (kg)').props.value).toBe(replace ? '' : '62,5');
+  expect(trainingView.getByLabelText('Répétitions réelles').props.value).toBe(replace ? '' : '9');
+  expect(trainingView.getByLabelText('RIR réel').props.value).toBe(replace ? '' : '2');
+  expect(sessions.validateSet).not.toHaveBeenCalled();
 });

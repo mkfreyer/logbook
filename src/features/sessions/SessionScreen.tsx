@@ -96,7 +96,6 @@ export function SessionScreen({ sessionId }: { sessionId?: string }) {
         <Card style={{ gap: 8, maxHeight: '90%' }}><ScrollView style={{ flexShrink: 1 }} keyboardShouldPersistTaps="handled"><View accessibilityViewIsModal>
           <Text style={[sessionStyles.subtitle, { marginBottom: 12 }]}>Actions de séance</Text>
           {step?.phase === 'set' && <>
-            <Button label="Fiche et conseils de l’exercice" variant="ghost" icon="information-circle-outline" disabled={busy} onPress={() => goAction('guide')} />
             <Button label="Modifier les objectifs de la série" variant="ghost" icon="create-outline" disabled={busy} onPress={() => goAction('edit')} />
             <Button label="Remplacer cet exercice" variant="ghost" icon="swap-horizontal" disabled={busy} onPress={() => goAction('replace')} />
           </>}
@@ -114,17 +113,22 @@ export function SessionScreen({ sessionId }: { sessionId?: string }) {
         <View style={styles.progressTrack}><View style={[styles.progress, { width: `${progress && progress.total > progress.skipped ? progress.performed / (progress.total - progress.skipped) * 100 : 0}%` }]} /></View>
       </View>}
       {step.phase === 'set' && <>
-        <LinearGradient colors={['#123852', '#0b1b2a']} style={styles.exerciseHero}>
-          <View style={styles.heroRow}>
-            <View style={styles.exerciseIcon}><Ionicons name="barbell-outline" size={28} color={colors.cyan} /></View>
-            <View style={{ flex: 1, gap: 4 }}>
-              <Text style={sessionStyles.eyebrow}>{step.exercise.muscleGroup.toLocaleUpperCase('fr-FR')}</Text>
-              <Text style={sessionStyles.title}>{step.exercise.name}</Text>
+        <Pressable accessibilityRole="button" accessibilityLabel={`Voir la fiche de ${step.exercise.name}`}
+          accessibilityHint="Description, conseils et alternatives de cet exercice" accessibilityState={{ disabled: busy }} disabled={busy}
+          onPress={() => goAction('guide')} style={({ pressed }) => pressed && styles.heroPressed}>
+          <LinearGradient colors={['#123852', '#0b1b2a']} style={styles.exerciseHero}>
+            <View style={styles.heroRow}>
+              <View style={styles.exerciseIcon}><Ionicons name="barbell-outline" size={28} color={colors.cyan} /></View>
+              <View style={{ flex: 1, gap: 4 }}>
+                <Text style={sessionStyles.eyebrow}>{step.exercise.muscleGroup.toLocaleUpperCase('fr-FR')}</Text>
+                <Text style={sessionStyles.title}>{step.exercise.name}</Text>
+              </View>
+              <Ionicons name="chevron-forward" size={18} color={colors.cyan} accessible={false} />
             </View>
-          </View>
-          <Text style={sessionStyles.body}>{sessionSeriesTitle(step.set, seriesDisplay)} · {sourceSets.findIndex(item => item.id === step.set.id) + 1} / {sourceSets.length}</Text>
-          {replacedFrom && <Text style={sessionStyles.help}>En remplacement de {replacedFrom.name} · charge cible à adapter.</Text>}
-        </LinearGradient>
+            <Text style={sessionStyles.body}>{sessionSeriesTitle(step.set, seriesDisplay)} · {sourceSets.findIndex(item => item.id === step.set.id) + 1} / {sourceSets.length}</Text>
+            {replacedFrom && <Text style={sessionStyles.help}>En remplacement de {replacedFrom.name} · charge cible à adapter.</Text>}
+          </LinearGradient>
+        </Pressable>
         <Card style={styles.targetCard}>
           <Text style={sessionStyles.eyebrow}>OBJECTIFS DE CETTE SÉRIE</Text>
           <Text style={sessionStyles.body}>{step.set.targets.repsMin === step.set.targets.repsMax ? step.set.targets.repsMin : `${step.set.targets.repsMin}–${step.set.targets.repsMax}`} répétitions · {step.set.targets.targetWeightKg === null ? 'Charge libre' : `${step.set.targets.targetWeightKg.toLocaleString('fr-FR', { maximumSignificantDigits: 21 })} kg${step.exercise.weightMode === 'per_hand' ? ' / haltère' : step.exercise.weightMode === 'additional' ? ' ajoutés' : ''}`}{step.set.targets.targetRir === null ? '' : ` · RIR ${step.set.targets.targetRir}`}</Text>
@@ -189,6 +193,7 @@ const styles = StyleSheet.create({
   progressSection: { gap: 8 }, progressTrack: { height: 4, backgroundColor: colors.surfaceRaised, borderRadius: 2, overflow: 'hidden' },
   progress: { height: 4, backgroundColor: colors.blue, borderRadius: 2 },
   exerciseHero: { padding: 16, borderRadius: 24, gap: 12, borderWidth: 1, borderColor: colors.border },
+  heroPressed: { opacity: 0.82 },
   heroRow: { flexDirection: 'row', gap: 12, alignItems: 'center' },
   exerciseIcon: { width: 48, height: 48, borderRadius: 16, alignItems: 'center', justifyContent: 'center', backgroundColor: '#153e5a' },
   targetCard: { padding: 16, gap: 7 }, actualRow: { flexDirection: 'row', gap: 8 },
