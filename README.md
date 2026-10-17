@@ -1,6 +1,8 @@
-# Logbook — liberté pendant l’entraînement M3.4B
+# Logbook — fiches et alternatives M3.4C
 
-Application iPhone de musculation en React Native, Expo SDK 57, TypeScript, Expo Router et SQLite local. M0 à M3.4A sont validés sur un véritable iPhone. La branche **`feat/m34b-liberte-entrainement`**, basée sur M3.4A `7a079b4`, contient M3.4B initiale validée sur iPhone et son complément **Passer cette série / Réintégrer la série**, à tester avant la suite.
+Application iPhone de musculation en React Native, Expo SDK 57, TypeScript, Expo Router et SQLite local. M0 à M3.4C, y compris Passer/Réintégrer, sont validés sur un véritable iPhone. La branche **`feat/m34c-fiches-exercices`**, basée sur M3.4B `e701785`, ajoute les fiches **Description / Conseils / Alternatives**, des repères hors ligne pour les 15 exercices et une aide facultative. Le remplacement depuis une alternative utilise le parcours existant et sa confirmation, uniquement pour l’entraînement actif. La fiche s’ouvre désormais en touchant directement l’encadré bleu de l’exercice actif ; le menu garde les autres actions. **Cet ajustement d’accès direct attend la validation iPhone.** [Vérification rapide](docs/TESTER_ACCES_DIRECT_FICHE_SUR_IPHONE.md).
+
+Aucune migration supplémentaire : SQLite reste **v8**, export personnel format 1 / 20 tables. Les consignes personnelles restent enregistrées ; les nouveaux textes éditoriaux sont inclus avec l’app. [Décisions M3.4C](docs/M3.4C.md) · [Guide de test iPhone](docs/TESTER_M3_4C_SUR_IPHONE.md).
 
 Vous pouvez configurer vos programmes, exercices et séries, puis démarrer un entraînement. Une seule série est affichée pendant l’effort. Les résultats saisis sont sauvegardés à chaque validation, séparément des objectifs. Le repos circulaire utilise la durée propre à la série ; il peut être mis en pause ou terminé tôt, et continue en dépassement sans passer automatiquement à la suivante.
 

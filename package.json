@@ -12,7 +12,7 @@
     "typecheck": "tsc --noEmit",
     "test": "npm run test:db && npm run test:navigation && npm run test:ui",
     "export:ios": "expo export --platform ios --output-dir dist/ios",
-    "test:db": "tsx --test tests/db.test.ts tests/m1-db.test.ts tests/m12-db.test.ts tests/m2-db.test.ts tests/m2-summary.test.ts tests/m3-history.test.ts tests/m32-data.test.ts tests/m33-data.test.ts tests/m34a-data.test.ts tests/m34b-data.test.ts tests/set-passages-data.test.ts",
+    "test:db": "tsx --test tests/db.test.ts tests/m1-db.test.ts tests/m12-db.test.ts tests/m2-db.test.ts tests/m2-summary.test.ts tests/m3-history.test.ts tests/m32-data.test.ts tests/m33-data.test.ts tests/m34a-data.test.ts tests/m34b-data.test.ts tests/set-passages-data.test.ts tests/m34c-data.test.ts",
     "test:ui": "jest --runInBand",
     "test:navigation": "tsx --test tests/navigation.test.ts"
   },

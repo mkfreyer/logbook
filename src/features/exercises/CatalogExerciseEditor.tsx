@@ -8,10 +8,11 @@ import { Button, Card, Field, Heading, Screen } from '../../ui';
 import { FormError, LoadState, RefreshNotice, useFocusedData } from '../programs/shared';
 import { Choice } from '../sessions/shared';
 import { trainingStyles as s, useScreenOperation } from '../training/shared';
+import { replacementParams, type ReplacementContext } from '../sessions/useExerciseReplacement';
 
 /** Independent catalog editor: creating a reference never installs a program or
  * inserts it into a workout. Updates retain its stable catalog ID. */
-export function CatalogExerciseEditor({ exerciseId }: { exerciseId?: string }) {
+export function CatalogExerciseEditor({ exerciseId, replacementContext }: { exerciseId?: string; replacementContext?: ReplacementContext }) {
   const repository = useTraining(), editing = Boolean(exerciseId);
   const data = useFocusedData(useCallback(() => exerciseId ? repository.getCatalogExercise(exerciseId) : Promise.resolve(null), [repository, exerciseId]));
   const operation = useScreenOperation();
@@ -22,7 +23,7 @@ export function CatalogExerciseEditor({ exerciseId }: { exerciseId?: string }) {
     if (data.loading || data.error || operation.lock.current || editing && !data.data?.isCustom) return;
     let saved: ExerciseCatalogItem;
     void operation.run(async () => { saved = editing ? await repository.updateCustomExercise(exerciseId!, draft) : await repository.createCustomExercise(draft); }, () => {
-      const target = { pathname: '/exercises/[exerciseId]' as const, params: { exerciseId: saved.id } };
+      const target = { pathname: '/exercises/[exerciseId]' as const, params: { exerciseId: saved.id, ...(replacementContext ? replacementParams(replacementContext) : {}) } };
       if (editing) router.dismissTo(target); else router.replace(target);
     }, true);
   };
