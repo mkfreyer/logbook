@@ -105,7 +105,7 @@ test('a choice during paused rest never closes or alters that interval; its real
   const rest = session.rests[0]!; f.advance(10000); session = await f.repository.pauseRest(session.id, rest.id);
   const savedRest = structuredClone(session.rests[0]); f.advance(20000);
   const pending = selectSessionStep(session); assert.equal(pending.phase, 'rest'); if (pending.phase !== 'rest') throw new Error('rest');
-  session = await f.repository.chooseNextExercise(session.id, session.exercises[3]!.id, pending.nextSet.id);
+  session = await f.repository.chooseNextExercise(session.id, session.exercises[3]!.id, pending.nextSet!.id);
   assert.deepEqual(session.rests[0], savedRest); assert.equal(selectSessionStep(session).phase, 'rest');
   assert.equal(calculateRestTiming(session.rests[0]!, Date.parse(f.now())).chronologicalMs, 30000);
   session = await f.repository.completeRest(session.id, rest.id);

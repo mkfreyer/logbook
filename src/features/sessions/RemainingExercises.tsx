@@ -43,7 +43,7 @@ export function RemainingExercises({ sessionId }: { sessionId?: string }) {
           <Text style={s.help}>{sets.length} série{sets.length > 1 ? 's' : ''} restante{sets.length > 1 ? 's' : ''}</Text>
           <Text style={[s.help, { color: colors.cyan }]}>{current || hasPerformed ? 'En cours' : 'À effectuer'}</Text>
         </Pressable>;
-      })}</View> : <Card><Text style={s.subtitle}>Toutes les séries sont réalisées</Text><Text style={s.body}>Revenez à la séance pour la terminer ou consulter son bilan.</Text></Card>}
+      })}</View> : <Card><Text style={s.subtitle}>Aucune série restante</Text><Text style={s.body}>Revenez à la séance pour la terminer ou consulter son bilan.</Text></Card>}
       <Button label={step?.phase === 'rest' ? 'Retour au repos' : 'Retour à la séance'} variant="ghost" disabled={busy} onPress={back} />
     </View>}
   </Screen>;

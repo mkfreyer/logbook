@@ -1,0 +1,629 @@
+{
+  "active": {
+    "id": "v7-25",
+    "sourceWorkoutTemplateId": "v7-2",
+    "sourceProgramId": "v7-1",
+    "workoutName": "Séance v7",
+    "programName": "Mon carnet v7",
+    "status": "active",
+    "startedAt": "2026-10-16T12:00:20.000Z",
+    "finishedAt": null,
+    "selectedExerciseId": null,
+    "exercises": [
+      {
+        "id": "v7-26",
+        "sessionId": "v7-25",
+        "sourceWorkoutExerciseId": "v7-4",
+        "sourceCatalogExerciseId": "v7-3",
+        "sortOrder": 0,
+        "plannedOrder": 0,
+        "name": "Barre personnelle v7",
+        "muscleGroup": "Dos",
+        "equipment": "Barre",
+        "instructions": "",
+        "notes": "",
+        "weightMode": "total"
+      },
+      {
+        "id": "v7-30",
+        "sessionId": "v7-25",
+        "sourceWorkoutExerciseId": "v7-8",
+        "sourceCatalogExerciseId": "b459f856-f639-4cb2-9278-d7ac1e287a15",
+        "sortOrder": 1,
+        "plannedOrder": 1,
+        "name": "Crunch au sol",
+        "muscleGroup": "Abdominaux",
+        "equipment": "Poids du corps",
+        "instructions": "Décollez légèrement les épaules en rapprochant le thorax du bassin, sans tirer sur la nuque. Revenez avec contrôle. La charge cible indique un éventuel poids ajouté.",
+        "notes": "",
+        "weightMode": "additional"
+      }
+    ],
+    "sets": [
+      {
+        "id": "v7-27",
+        "sessionId": "v7-25",
+        "sessionExerciseId": "v7-26",
+        "sourceSetTemplateId": "v7-5",
+        "sortOrder": 0,
+        "seriesIndex": 0,
+        "label": "Top",
+        "kind": "top_set",
+        "notes": "Consigne initiale",
+        "originalTargets": {
+          "repsMin": 8,
+          "repsMax": 10,
+          "targetWeightKg": 100,
+          "targetRir": 2,
+          "restAfterSec": 60
+        },
+        "targets": {
+          "repsMin": 8,
+          "repsMax": 10,
+          "targetWeightKg": 100,
+          "targetRir": 2,
+          "restAfterSec": 60
+        }
+      },
+      {
+        "id": "v7-28",
+        "sessionId": "v7-25",
+        "sessionExerciseId": "v7-26",
+        "sourceSetTemplateId": "v7-6",
+        "sortOrder": 1,
+        "seriesIndex": 1,
+        "label": "Top",
+        "kind": "warmup",
+        "notes": "Consigne initiale",
+        "originalTargets": {
+          "repsMin": 8,
+          "repsMax": 10,
+          "targetWeightKg": 50,
+          "targetRir": 2,
+          "restAfterSec": 60
+        },
+        "loadRuleSnapshot": {
+          "basis": "planned_target",
+          "referenceSetTemplateId": "v7-5",
+          "percent": 50,
+          "referenceWeightKg": 100,
+          "resolvedWeightKg": 50,
+          "weightMode": "total"
+        },
+        "targets": {
+          "repsMin": 8,
+          "repsMax": 10,
+          "targetWeightKg": 50,
+          "targetRir": 2,
+          "restAfterSec": 60
+        },
+        "loadRule": {
+          "referenceSetId": "v7-27",
+          "basis": "planned_target",
+          "percent": 50,
+          "weightMode": "total",
+          "suspended": false
+        }
+      },
+      {
+        "id": "v7-29",
+        "sessionId": "v7-25",
+        "sessionExerciseId": "v7-26",
+        "sourceSetTemplateId": "v7-7",
+        "sortOrder": 2,
+        "seriesIndex": 2,
+        "label": "Top",
+        "kind": "back_off",
+        "notes": "Consigne initiale",
+        "originalTargets": {
+          "repsMin": 8,
+          "repsMax": 10,
+          "targetWeightKg": null,
+          "targetRir": 2,
+          "restAfterSec": 60
+        },
+        "loadRuleSnapshot": {
+          "basis": "performed_weight",
+          "referenceSetTemplateId": "v7-5",
+          "percent": 90,
+          "referenceWeightKg": null,
+          "resolvedWeightKg": null,
+          "weightMode": "total"
+        },
+        "editScope": "session",
+        "targets": {
+          "repsMin": 8,
+          "repsMax": 10,
+          "targetWeightKg": 0,
+          "targetRir": 2,
+          "restAfterSec": 60
+        },
+        "loadRule": {
+          "referenceSetId": "v7-27",
+          "basis": "performed_weight",
+          "percent": 85,
+          "weightMode": "total",
+          "suspended": false
+        }
+      },
+      {
+        "id": "v7-37",
+        "sessionId": "v7-25",
+        "sessionExerciseId": "v7-26",
+        "sourceSetTemplateId": null,
+        "sortOrder": 4,
+        "seriesIndex": 3,
+        "label": "Extra locale",
+        "kind": "custom",
+        "notes": "Note ajoutée",
+        "originalTargets": {
+          "repsMin": 8,
+          "repsMax": 10,
+          "targetWeightKg": 100,
+          "targetRir": 2,
+          "restAfterSec": 60
+        },
+        "addition": {
+          "key": "v7-local",
+          "scope": "session",
+          "addedAt": "2026-10-16T12:00:24.000Z"
+        },
+        "targets": {
+          "repsMin": 8,
+          "repsMax": 10,
+          "targetWeightKg": 100,
+          "targetRir": 2,
+          "restAfterSec": 60
+        }
+      },
+      {
+        "id": "v7-31",
+        "sessionId": "v7-25",
+        "sessionExerciseId": "v7-30",
+        "sourceSetTemplateId": "v7-9",
+        "sortOrder": 3,
+        "seriesIndex": 0,
+        "label": "Top",
+        "kind": "work",
+        "notes": "Consigne initiale",
+        "originalTargets": {
+          "repsMin": 8,
+          "repsMax": 10,
+          "targetWeightKg": null,
+          "targetRir": null,
+          "restAfterSec": 0
+        },
+        "targets": {
+          "repsMin": 8,
+          "repsMax": 10,
+          "targetWeightKg": null,
+          "targetRir": null,
+          "restAfterSec": 0
+        }
+      }
+    ],
+    "performances": [
+      {
+        "id": "v7-32",
+        "sessionId": "v7-25",
+        "sessionSetId": "v7-27",
+        "sortOrder": 0,
+        "weightKg": 0,
+        "reps": 8,
+        "rir": null,
+        "performedAt": "2026-10-16T12:00:21.000Z",
+        "advancedAt": null
+      }
+    ],
+    "rests": [
+      {
+        "id": "v7-34",
+        "sessionId": "v7-25",
+        "performedSetId": "v7-32",
+        "plannedSeconds": 60,
+        "startedAt": "2026-10-16T12:00:21.000Z",
+        "endedAt": null,
+        "chronologicalMs": null,
+        "activeMs": null,
+        "pauses": [
+          {
+            "id": "v7-35",
+            "startedAt": "2026-10-16T12:00:22.000Z",
+            "endedAt": null
+          }
+        ]
+      }
+    ],
+    "replacements": [],
+    "exerciseChoices": [],
+    "personalNote": "Ressenti v7",
+    "exerciseNotes": {
+      "v7-26": "Note exercice v7"
+    },
+    "adjustments": [
+      {
+        "id": "v7-33",
+        "setId": "v7-29",
+        "scope": "session",
+        "action": "resolve",
+        "payload": {
+          "rule": {
+            "referenceSetId": "v7-27",
+            "basis": "performed_weight",
+            "percent": 90,
+            "weightMode": "total",
+            "suspended": false
+          },
+          "referenceWeightKg": 0,
+          "referencePerformanceId": "v7-32",
+          "resolvedWeightKg": 0
+        },
+        "changedAt": "2026-10-16T12:00:21.000Z"
+      },
+      {
+        "id": "v7-36",
+        "setId": "v7-29",
+        "scope": "session",
+        "action": "edit",
+        "payload": {
+          "targets": {
+            "repsMin": 8,
+            "repsMax": 10,
+            "targetWeightKg": 0,
+            "targetRir": 2,
+            "restAfterSec": 60
+          },
+          "kind": "back_off",
+          "label": "Top",
+          "notes": "Consigne initiale",
+          "rule": {
+            "basis": "performed_weight",
+            "referenceSetId": "v7-27",
+            "percent": 85
+          },
+          "referenceWeightKg": 0,
+          "referencePerformanceId": "v7-32",
+          "resolvedWeightKg": 0,
+          "sourceSetTemplateId": "v7-7"
+        },
+        "changedAt": "2026-10-16T12:00:23.000Z"
+      },
+      {
+        "id": "v7-38",
+        "setId": "v7-37",
+        "scope": "session",
+        "action": "add",
+        "payload": {
+          "targets": {
+            "repsMin": 8,
+            "repsMax": 10,
+            "targetWeightKg": 100,
+            "targetRir": 2,
+            "restAfterSec": 60
+          },
+          "kind": "custom",
+          "label": "Extra locale",
+          "notes": "Note ajoutée",
+          "rule": null,
+          "referenceWeightKg": null,
+          "referencePerformanceId": null,
+          "resolvedWeightKg": 100,
+          "sourceSetTemplateId": null
+        },
+        "changedAt": "2026-10-16T12:00:24.000Z"
+      },
+      {
+        "id": "v7-41",
+        "setId": "v7-39",
+        "scope": "program",
+        "action": "add",
+        "payload": {
+          "targets": {
+            "repsMin": 8,
+            "repsMax": 10,
+            "targetWeightKg": 100,
+            "targetRir": 2,
+            "restAfterSec": 60
+          },
+          "kind": "work",
+          "label": "Extra future",
+          "notes": "Consigne initiale",
+          "rule": null,
+          "referenceWeightKg": null,
+          "referencePerformanceId": null,
+          "resolvedWeightKg": 100,
+          "sourceSetTemplateId": "v7-40"
+        },
+        "changedAt": "2026-10-16T12:00:25.000Z"
+      },
+      {
+        "id": "v7-42",
+        "setId": "v7-39",
+        "scope": "session",
+        "action": "delete",
+        "payload": {
+          "programPreserved": true
+        },
+        "changedAt": "2026-10-16T12:00:26.000Z"
+      }
+    ]
+  },
+  "completed": {
+    "id": "v7-10",
+    "sourceWorkoutTemplateId": "v7-2",
+    "sourceProgramId": "v7-1",
+    "workoutName": "Séance v7",
+    "programName": "Mon carnet v7",
+    "status": "completed",
+    "startedAt": "2026-10-16T12:00:10.000Z",
+    "finishedAt": "2026-10-16T12:00:18.000Z",
+    "selectedExerciseId": null,
+    "exercises": [
+      {
+        "id": "v7-11",
+        "sessionId": "v7-10",
+        "sourceWorkoutExerciseId": "v7-4",
+        "sourceCatalogExerciseId": "v7-3",
+        "sortOrder": 0,
+        "plannedOrder": 0,
+        "name": "Barre personnelle v7",
+        "muscleGroup": "Dos",
+        "equipment": "Barre",
+        "instructions": "",
+        "notes": "",
+        "weightMode": "total"
+      },
+      {
+        "id": "v7-15",
+        "sessionId": "v7-10",
+        "sourceWorkoutExerciseId": "v7-8",
+        "sourceCatalogExerciseId": "b459f856-f639-4cb2-9278-d7ac1e287a15",
+        "sortOrder": 1,
+        "plannedOrder": 1,
+        "name": "Crunch au sol",
+        "muscleGroup": "Abdominaux",
+        "equipment": "Poids du corps",
+        "instructions": "Décollez légèrement les épaules en rapprochant le thorax du bassin, sans tirer sur la nuque. Revenez avec contrôle. La charge cible indique un éventuel poids ajouté.",
+        "notes": "",
+        "weightMode": "additional"
+      }
+    ],
+    "sets": [
+      {
+        "id": "v7-12",
+        "sessionId": "v7-10",
+        "sessionExerciseId": "v7-11",
+        "sourceSetTemplateId": "v7-5",
+        "sortOrder": 0,
+        "seriesIndex": 0,
+        "label": "Top",
+        "kind": "top_set",
+        "notes": "Consigne initiale",
+        "originalTargets": {
+          "repsMin": 8,
+          "repsMax": 10,
+          "targetWeightKg": 100,
+          "targetRir": 2,
+          "restAfterSec": 60
+        },
+        "targets": {
+          "repsMin": 8,
+          "repsMax": 10,
+          "targetWeightKg": 100,
+          "targetRir": 2,
+          "restAfterSec": 60
+        }
+      },
+      {
+        "id": "v7-13",
+        "sessionId": "v7-10",
+        "sessionExerciseId": "v7-11",
+        "sourceSetTemplateId": "v7-6",
+        "sortOrder": 1,
+        "seriesIndex": 1,
+        "label": "Top",
+        "kind": "warmup",
+        "notes": "Consigne initiale",
+        "originalTargets": {
+          "repsMin": 8,
+          "repsMax": 10,
+          "targetWeightKg": 50,
+          "targetRir": 2,
+          "restAfterSec": 60
+        },
+        "loadRuleSnapshot": {
+          "basis": "planned_target",
+          "referenceSetTemplateId": "v7-5",
+          "percent": 50,
+          "referenceWeightKg": 100,
+          "resolvedWeightKg": 50,
+          "weightMode": "total"
+        },
+        "targets": {
+          "repsMin": 8,
+          "repsMax": 10,
+          "targetWeightKg": 50,
+          "targetRir": 2,
+          "restAfterSec": 60
+        },
+        "loadRule": {
+          "referenceSetId": "v7-12",
+          "basis": "planned_target",
+          "percent": 50,
+          "weightMode": "total",
+          "suspended": false
+        }
+      },
+      {
+        "id": "v7-14",
+        "sessionId": "v7-10",
+        "sessionExerciseId": "v7-11",
+        "sourceSetTemplateId": "v7-7",
+        "sortOrder": 2,
+        "seriesIndex": 2,
+        "label": "Top",
+        "kind": "back_off",
+        "notes": "Consigne initiale",
+        "originalTargets": {
+          "repsMin": 8,
+          "repsMax": 10,
+          "targetWeightKg": null,
+          "targetRir": 2,
+          "restAfterSec": 60
+        },
+        "loadRuleSnapshot": {
+          "basis": "performed_weight",
+          "referenceSetTemplateId": "v7-5",
+          "percent": 90,
+          "referenceWeightKg": null,
+          "resolvedWeightKg": null,
+          "weightMode": "total"
+        },
+        "targets": {
+          "repsMin": 8,
+          "repsMax": 10,
+          "targetWeightKg": 85.5,
+          "targetRir": 2,
+          "restAfterSec": 60
+        },
+        "loadRule": {
+          "referenceSetId": "v7-12",
+          "basis": "performed_weight",
+          "percent": 90,
+          "weightMode": "total",
+          "suspended": false
+        }
+      },
+      {
+        "id": "v7-16",
+        "sessionId": "v7-10",
+        "sessionExerciseId": "v7-15",
+        "sourceSetTemplateId": "v7-9",
+        "sortOrder": 3,
+        "seriesIndex": 0,
+        "label": "Top",
+        "kind": "work",
+        "notes": "Consigne initiale",
+        "originalTargets": {
+          "repsMin": 8,
+          "repsMax": 10,
+          "targetWeightKg": null,
+          "targetRir": null,
+          "restAfterSec": 0
+        },
+        "targets": {
+          "repsMin": 8,
+          "repsMax": 10,
+          "targetWeightKg": null,
+          "targetRir": null,
+          "restAfterSec": 0
+        }
+      }
+    ],
+    "performances": [
+      {
+        "id": "v7-17",
+        "sessionId": "v7-10",
+        "sessionSetId": "v7-12",
+        "sortOrder": 0,
+        "weightKg": 95,
+        "reps": 8,
+        "rir": 0,
+        "performedAt": "2026-10-16T12:00:11.000Z",
+        "advancedAt": "2026-10-16T12:00:12.000Z"
+      },
+      {
+        "id": "v7-20",
+        "sessionId": "v7-10",
+        "sessionSetId": "v7-13",
+        "sortOrder": 1,
+        "weightKg": null,
+        "reps": 8,
+        "rir": null,
+        "performedAt": "2026-10-16T12:00:13.000Z",
+        "advancedAt": "2026-10-16T12:00:14.000Z"
+      },
+      {
+        "id": "v7-22",
+        "sessionId": "v7-10",
+        "sessionSetId": "v7-14",
+        "sortOrder": 2,
+        "weightKg": 85.5,
+        "reps": 8,
+        "rir": null,
+        "performedAt": "2026-10-16T12:00:15.000Z",
+        "advancedAt": "2026-10-16T12:00:16.000Z"
+      },
+      {
+        "id": "v7-24",
+        "sessionId": "v7-10",
+        "sessionSetId": "v7-16",
+        "sortOrder": 3,
+        "weightKg": null,
+        "reps": 8,
+        "rir": null,
+        "performedAt": "2026-10-16T12:00:17.000Z",
+        "advancedAt": "2026-10-16T12:00:17.000Z"
+      }
+    ],
+    "rests": [
+      {
+        "id": "v7-19",
+        "sessionId": "v7-10",
+        "performedSetId": "v7-17",
+        "plannedSeconds": 60,
+        "startedAt": "2026-10-16T12:00:11.000Z",
+        "endedAt": "2026-10-16T12:00:12.000Z",
+        "chronologicalMs": 1000,
+        "activeMs": 1000,
+        "pauses": []
+      },
+      {
+        "id": "v7-21",
+        "sessionId": "v7-10",
+        "performedSetId": "v7-20",
+        "plannedSeconds": 60,
+        "startedAt": "2026-10-16T12:00:13.000Z",
+        "endedAt": "2026-10-16T12:00:14.000Z",
+        "chronologicalMs": 1000,
+        "activeMs": 1000,
+        "pauses": []
+      },
+      {
+        "id": "v7-23",
+        "sessionId": "v7-10",
+        "performedSetId": "v7-22",
+        "plannedSeconds": 60,
+        "startedAt": "2026-10-16T12:00:15.000Z",
+        "endedAt": "2026-10-16T12:00:16.000Z",
+        "chronologicalMs": 1000,
+        "activeMs": 1000,
+        "pauses": []
+      }
+    ],
+    "replacements": [],
+    "exerciseChoices": [],
+    "personalNote": "Note de bilan v7",
+    "adjustments": [
+      {
+        "id": "v7-18",
+        "setId": "v7-14",
+        "scope": "session",
+        "action": "resolve",
+        "payload": {
+          "rule": {
+            "referenceSetId": "v7-12",
+            "basis": "performed_weight",
+            "percent": 90,
+            "weightMode": "total",
+            "suspended": false
+          },
+          "referenceWeightKg": 95,
+          "referencePerformanceId": "v7-17",
+          "resolvedWeightKg": 85.5
+        },
+        "changedAt": "2026-10-16T12:00:11.000Z"
+      }
+    ]
+  }
+}

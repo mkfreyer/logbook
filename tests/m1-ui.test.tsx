@@ -110,6 +110,18 @@ describe('M3.4A : configuration facultative des charges calculées', () => {
     })));
     expect(mockTraining.createSet).toHaveBeenCalledTimes(1);
   });
+  test('M3.4B : une règle réelle se prépare sans utiliser les 42,5 kg prévus comme une performance', async () => {
+    const view = await percentageForm();
+    fireEvent.press(view.getByRole('radio', { name: 'Pourcentage de la charge réellement effectuée' }));
+    fireEvent.press(view.getByRole('radio', { name: /Référence : Série 2/ }));
+    fireEvent.changeText(view.getByLabelText('Pourcentage de charge'), '90');
+    expect(view.getByText(/En attente de la série de référence/)).toBeTruthy();
+    expect(view.getByLabelText('Charge calculée').props.children).toBe('Charge calculée non disponible');
+    fireEvent.press(view.getByRole('button', { name: 'Ajouter la série' }));
+    await waitFor(() => expect(mockTraining.createSet).toHaveBeenCalledWith(occurrence.id,
+      expect.objectContaining({ targetWeightKg: null, loadRule: { basis: 'performed_weight', referenceSetId: second.id, percent: 90 } })));
+  });
+
   test('aucune référence n’est choisie implicitement et une absence de sélection empêche la sauvegarde', async () => {
     const view = await percentageForm(); fireEvent.changeText(view.getByLabelText('Pourcentage de charge'), '50');
     fireEvent.press(view.getByRole('button', { name: 'Ajouter la série' }));

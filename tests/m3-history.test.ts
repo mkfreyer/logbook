@@ -188,7 +188,7 @@ test('history reads cannot alter actual results or rest pauses, and v4 initializ
   };
   const before = await snapshot(); await initializeDatabase(f.db);
   await f.sessions.history.overview(all); await f.sessions.history.exercise(f.exercise.id, all); await f.sessions.history.exercises(all);
-  assert.deepEqual(await snapshot(), before); assert.equal(DATABASE_VERSION, 6);
+  assert.deepEqual(await snapshot(), before); assert.equal(DATABASE_VERSION, 8);
   assert.deepEqual(await f.sessions.getSession(completed.id), completed);
   assert.deepEqual(await f.sessions.getActiveSession(), active);
   assert.deepEqual(await f.db.getAllAsync('PRAGMA foreign_key_check'), []);

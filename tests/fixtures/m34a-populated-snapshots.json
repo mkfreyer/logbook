@@ -1,0 +1,379 @@
+{
+  "active": {
+    "id": "v6-22",
+    "sourceWorkoutTemplateId": "v6-2",
+    "sourceProgramId": "v6-1",
+    "workoutName": "Séance conservée",
+    "programName": "Programme personnel v6",
+    "status": "active",
+    "startedAt": "2026-10-16T12:00:18.000Z",
+    "finishedAt": null,
+    "selectedExerciseId": null,
+    "exercises": [
+      {
+        "id": "v6-23",
+        "sessionId": "v6-22",
+        "sourceWorkoutExerciseId": "v6-4",
+        "sourceCatalogExerciseId": "v6-3",
+        "sortOrder": 0,
+        "plannedOrder": 0,
+        "name": "Barre personnelle",
+        "muscleGroup": "Pectoraux",
+        "equipment": "Barre",
+        "instructions": "",
+        "notes": "",
+        "weightMode": "total"
+      },
+      {
+        "id": "v6-26",
+        "sessionId": "v6-22",
+        "sourceWorkoutExerciseId": "v6-7",
+        "sourceCatalogExerciseId": "v6-3",
+        "sortOrder": 1,
+        "plannedOrder": 1,
+        "name": "Barre personnelle",
+        "muscleGroup": "Pectoraux",
+        "equipment": "Barre",
+        "instructions": "",
+        "notes": "",
+        "weightMode": "total"
+      }
+    ],
+    "sets": [
+      {
+        "id": "v6-24",
+        "sessionId": "v6-22",
+        "sessionExerciseId": "v6-23",
+        "sourceSetTemplateId": "v6-5",
+        "sortOrder": 0,
+        "seriesIndex": 0,
+        "label": "Référence",
+        "kind": "top_set",
+        "notes": "Consigne v6",
+        "originalTargets": {
+          "repsMin": 8,
+          "repsMax": 10,
+          "targetWeightKg": 100,
+          "targetRir": null,
+          "restAfterSec": 60
+        },
+        "targets": {
+          "repsMin": 8,
+          "repsMax": 10,
+          "targetWeightKg": 100,
+          "targetRir": null,
+          "restAfterSec": 60
+        }
+      },
+      {
+        "id": "v6-25",
+        "sessionId": "v6-22",
+        "sessionExerciseId": "v6-23",
+        "sourceSetTemplateId": "v6-6",
+        "sortOrder": 1,
+        "seriesIndex": 1,
+        "label": "",
+        "kind": "back_off",
+        "notes": "",
+        "originalTargets": {
+          "repsMin": 10,
+          "repsMax": 12,
+          "targetWeightKg": 90,
+          "targetRir": null,
+          "restAfterSec": 120
+        },
+        "loadRuleSnapshot": {
+          "basis": "planned_target",
+          "referenceSetTemplateId": "v6-5",
+          "percent": 90,
+          "referenceWeightKg": 100,
+          "resolvedWeightKg": 90,
+          "weightMode": "total"
+        },
+        "targets": {
+          "repsMin": 10,
+          "repsMax": 12,
+          "targetWeightKg": 90,
+          "targetRir": null,
+          "restAfterSec": 120
+        }
+      },
+      {
+        "id": "v6-27",
+        "sessionId": "v6-22",
+        "sessionExerciseId": "v6-26",
+        "sourceSetTemplateId": "v6-8",
+        "sortOrder": 2,
+        "seriesIndex": 0,
+        "label": "",
+        "kind": "work",
+        "notes": "",
+        "originalTargets": {
+          "repsMin": 5,
+          "repsMax": 5,
+          "targetWeightKg": null,
+          "targetRir": null,
+          "restAfterSec": 0
+        },
+        "targets": {
+          "repsMin": 5,
+          "repsMax": 5,
+          "targetWeightKg": null,
+          "targetRir": null,
+          "restAfterSec": 0
+        }
+      }
+    ],
+    "performances": [
+      {
+        "id": "v6-28",
+        "sessionId": "v6-22",
+        "sessionSetId": "v6-24",
+        "sortOrder": 0,
+        "weightKg": 0,
+        "reps": 8,
+        "rir": null,
+        "performedAt": "2026-10-16T12:00:19.000Z",
+        "advancedAt": null
+      }
+    ],
+    "rests": [
+      {
+        "id": "v6-29",
+        "sessionId": "v6-22",
+        "performedSetId": "v6-28",
+        "plannedSeconds": 60,
+        "startedAt": "2026-10-16T12:00:19.000Z",
+        "endedAt": null,
+        "chronologicalMs": null,
+        "activeMs": null,
+        "pauses": [
+          {
+            "id": "v6-30",
+            "startedAt": "2026-10-16T12:00:20.000Z",
+            "endedAt": null
+          }
+        ]
+      }
+    ],
+    "replacements": [],
+    "exerciseChoices": []
+  },
+  "completed": {
+    "id": "v6-9",
+    "sourceWorkoutTemplateId": "v6-2",
+    "sourceProgramId": "v6-1",
+    "workoutName": "Séance conservée",
+    "programName": "Programme personnel v6",
+    "status": "completed",
+    "startedAt": "2026-10-16T12:00:09.000Z",
+    "finishedAt": "2026-10-16T12:00:17.000Z",
+    "selectedExerciseId": null,
+    "exercises": [
+      {
+        "id": "v6-10",
+        "sessionId": "v6-9",
+        "sourceWorkoutExerciseId": "v6-4",
+        "sourceCatalogExerciseId": "v6-3",
+        "sortOrder": 0,
+        "plannedOrder": 0,
+        "name": "Barre personnelle",
+        "muscleGroup": "Pectoraux",
+        "equipment": "Barre",
+        "instructions": "",
+        "notes": "",
+        "weightMode": "total"
+      },
+      {
+        "id": "v6-13",
+        "sessionId": "v6-9",
+        "sourceWorkoutExerciseId": "v6-7",
+        "sourceCatalogExerciseId": "v6-3",
+        "sortOrder": 1,
+        "plannedOrder": 1,
+        "name": "Barre personnelle",
+        "muscleGroup": "Pectoraux",
+        "equipment": "Barre",
+        "instructions": "",
+        "notes": "",
+        "weightMode": "total"
+      }
+    ],
+    "sets": [
+      {
+        "id": "v6-11",
+        "sessionId": "v6-9",
+        "sessionExerciseId": "v6-10",
+        "sourceSetTemplateId": "v6-5",
+        "sortOrder": 0,
+        "seriesIndex": 0,
+        "label": "Référence",
+        "kind": "top_set",
+        "notes": "Consigne v6",
+        "originalTargets": {
+          "repsMin": 8,
+          "repsMax": 10,
+          "targetWeightKg": 100,
+          "targetRir": null,
+          "restAfterSec": 60
+        },
+        "targets": {
+          "repsMin": 8,
+          "repsMax": 10,
+          "targetWeightKg": 100,
+          "targetRir": null,
+          "restAfterSec": 60
+        }
+      },
+      {
+        "id": "v6-12",
+        "sessionId": "v6-9",
+        "sessionExerciseId": "v6-10",
+        "sourceSetTemplateId": "v6-6",
+        "sortOrder": 1,
+        "seriesIndex": 1,
+        "label": "",
+        "kind": "back_off",
+        "notes": "",
+        "originalTargets": {
+          "repsMin": 10,
+          "repsMax": 12,
+          "targetWeightKg": 90,
+          "targetRir": null,
+          "restAfterSec": 120
+        },
+        "loadRuleSnapshot": {
+          "basis": "planned_target",
+          "referenceSetTemplateId": "v6-5",
+          "percent": 90,
+          "referenceWeightKg": 100,
+          "resolvedWeightKg": 90,
+          "weightMode": "total"
+        },
+        "targets": {
+          "repsMin": 10,
+          "repsMax": 12,
+          "targetWeightKg": 90,
+          "targetRir": null,
+          "restAfterSec": 120
+        }
+      },
+      {
+        "id": "v6-14",
+        "sessionId": "v6-9",
+        "sessionExerciseId": "v6-13",
+        "sourceSetTemplateId": "v6-8",
+        "sortOrder": 2,
+        "seriesIndex": 0,
+        "label": "",
+        "kind": "work",
+        "notes": "",
+        "originalTargets": {
+          "repsMin": 5,
+          "repsMax": 5,
+          "targetWeightKg": null,
+          "targetRir": null,
+          "restAfterSec": 0
+        },
+        "targets": {
+          "repsMin": 5,
+          "repsMax": 5,
+          "targetWeightKg": null,
+          "targetRir": null,
+          "restAfterSec": 0
+        }
+      }
+    ],
+    "performances": [
+      {
+        "id": "v6-15",
+        "sessionId": "v6-9",
+        "sessionSetId": "v6-11",
+        "sortOrder": 0,
+        "weightKg": 95,
+        "reps": 9,
+        "rir": 0,
+        "performedAt": "2026-10-16T12:00:10.000Z",
+        "advancedAt": "2026-10-16T12:00:12.000Z"
+      },
+      {
+        "id": "v6-18",
+        "sessionId": "v6-9",
+        "sessionSetId": "v6-12",
+        "sortOrder": 1,
+        "weightKg": null,
+        "reps": 9,
+        "rir": null,
+        "performedAt": "2026-10-16T12:00:13.000Z",
+        "advancedAt": "2026-10-16T12:00:15.000Z"
+      },
+      {
+        "id": "v6-21",
+        "sessionId": "v6-9",
+        "sessionSetId": "v6-14",
+        "sortOrder": 2,
+        "weightKg": null,
+        "reps": 9,
+        "rir": null,
+        "performedAt": "2026-10-16T12:00:16.000Z",
+        "advancedAt": "2026-10-16T12:00:16.000Z"
+      }
+    ],
+    "rests": [
+      {
+        "id": "v6-16",
+        "sessionId": "v6-9",
+        "performedSetId": "v6-15",
+        "plannedSeconds": 60,
+        "startedAt": "2026-10-16T12:00:10.000Z",
+        "endedAt": "2026-10-16T12:00:12.000Z",
+        "chronologicalMs": 2000,
+        "activeMs": 1000,
+        "pauses": [
+          {
+            "id": "v6-17",
+            "startedAt": "2026-10-16T12:00:11.000Z",
+            "endedAt": "2026-10-16T12:00:12.000Z"
+          }
+        ]
+      },
+      {
+        "id": "v6-19",
+        "sessionId": "v6-9",
+        "performedSetId": "v6-18",
+        "plannedSeconds": 120,
+        "startedAt": "2026-10-16T12:00:13.000Z",
+        "endedAt": "2026-10-16T12:00:15.000Z",
+        "chronologicalMs": 2000,
+        "activeMs": 1000,
+        "pauses": [
+          {
+            "id": "v6-20",
+            "startedAt": "2026-10-16T12:00:14.000Z",
+            "endedAt": "2026-10-16T12:00:15.000Z"
+          }
+        ]
+      }
+    ],
+    "replacements": [],
+    "exerciseChoices": []
+  },
+  "program": {
+    "id": "v6-1",
+    "name": "Programme personnel v6",
+    "description": "",
+    "sportType": "musculation",
+    "createdAt": "2026-10-16T12:00:01.000Z",
+    "updatedAt": "2026-10-16T12:00:01.000Z",
+    "workoutCount": 0
+  },
+  "workout": {
+    "id": "v6-2",
+    "programId": "v6-1",
+    "name": "Séance conservée",
+    "notes": "",
+    "sortOrder": 0,
+    "createdAt": "2026-10-16T12:00:02.000Z",
+    "updatedAt": "2026-10-16T12:00:02.000Z"
+  }
+}

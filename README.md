@@ -1,6 +1,6 @@
-# Logbook — séries avancées et charges calculées M3.4A
+# Logbook — liberté pendant l’entraînement M3.4B
 
-Application iPhone de musculation en React Native, Expo SDK 57, TypeScript, Expo Router et SQLite local. M0 à M3.3 sont validés sur un véritable iPhone. La branche **`feat/m34a-series-avancees`**, basée sur M3.3 `52f9b49`, ajoute les séries avancées M3.4A, à tester sur appareil avant validation.
+Application iPhone de musculation en React Native, Expo SDK 57, TypeScript, Expo Router et SQLite local. M0 à M3.4A sont validés sur un véritable iPhone. La branche **`feat/m34b-liberte-entrainement`**, basée sur M3.4A `7a079b4`, contient M3.4B initiale validée sur iPhone et son complément **Passer cette série / Réintégrer la série**, à tester avant la suite.
 
 Vous pouvez configurer vos programmes, exercices et séries, puis démarrer un entraînement. Une seule série est affichée pendant l’effort. Les résultats saisis sont sauvegardés à chaque validation, séparément des objectifs. Le repos circulaire utilise la durée propre à la série ; il peut être mis en pause ou terminé tôt, et continue en dépassement sans passer automatiquement à la suivante.
 
@@ -18,21 +18,25 @@ M3.3 ajoute **Paramètres**, accessible depuis l’engrenage de l’accueil et M
 
 M3.4A ajoute des suggestions de noms, une préférence numéro/nom et des charges facultatives en pourcentage pour échauffements et back-offs. La référence planifiée est choisie explicitement dans le même exercice ; les calculs sont capturés au démarrage, sans préremplir les résultats réels. Le mode manuel reste disponible. Voir [les règles, la migration v6 et les limites](docs/M3.4A.md).
 
+M3.4B ajoute les séries imprévues, l’édition des séries restantes avec portée explicite, les pourcentages fondés sur une charge réellement validée et les notes personnelles. Les captures initiales et performances sont protégées ; les ajustements sont conservés à part. Le repos en cours ne change pas lorsqu’on ajoute une série. Voir [architecture et migration v7](docs/M3.4B.md).
+
+Le complément M3.4B permet de **Passer cette série**, prévue ou ajoutée, puis **Réintégrer la série** avant clôture. Le programme reste inchangé ; les statuts persistent, les repos restent manuels et les statistiques comptent seulement les performances réelles. Le bilan distingue les séries passées. Voir [fonctionnement, protections et schéma v8](docs/PASSAGE_SERIES_M3.4B.md).
+
 Le premier lancement ne contient aucun programme ni performance fictive. La bibliothèque d’exercices est distincte des programmes utilisateur. Aucun compte ni serveur n’est nécessaire.
 
 ## Tester sur iPhone depuis Windows
 
-Suivre le [guide M3.4A](docs/TESTER_M3_4A_SUR_IPHONE.md), avec Node.js 24, Git et le même Expo Go compatible avec Expo SDK 57. Arrêter Metro avec **Ctrl+C**, ouvrir PowerShell dans `logbook`, puis :
+Suivre le [guide des séries passées](docs/TESTER_PASSAGE_SERIES_SUR_IPHONE.md), avec Node.js 24, Git et le même Expo Go compatible avec Expo SDK 57. Arrêter Metro avec **Ctrl+C**, ouvrir PowerShell dans `logbook`, puis :
 
 ```powershell
 git fetch origin
-git switch feat/m34a-series-avancees
-git pull --ff-only origin feat/m34a-series-avancees
+git switch feat/m34b-liberte-entrainement
+git pull --ff-only origin feat/m34b-liberte-entrainement
 npm.cmd ci
 npm.cmd start -- --clear
 ```
 
-Si la branche n’existe pas localement, utiliser `git switch --track origin/feat/m34a-series-avancees` à la place du premier `git switch`. Scanner le QR code avec l’iPhone, sur le même réseau Wi-Fi. Conserver le même projet Expo Go pour retrouver les données. **Ne pas désinstaller Expo Go ni effacer son stockage.**
+Si la branche n’existe pas localement, utiliser `git switch --track origin/feat/m34b-liberte-entrainement` à la place du premier `git switch`. Scanner le QR code avec l’iPhone, sur le même réseau Wi-Fi. Conserver le même projet Expo Go pour retrouver les données. **Ne pas désinstaller Expo Go ni effacer son stockage.**
 
 ## Vérifications
 
@@ -42,20 +46,24 @@ npm.cmd test
 npm.cmd run export:ios
 ```
 
-Les tests couvrent les migrations M0 à M3.4A, la persistance SQLite, les configurations, entraînements, remplacements, choix d’ordre, calculs du bilan, historiques filtrés, identités, comparaisons de séries, semaines locales, graphiques, fiches, préférences et export personnel, erreurs et doubles validations. L’export de plusieurs années est testé par lots et sous écritures concurrentes. La CI vérifie aussi la navigation verticale. L’export iOS produit le JavaScript et les ressources, sans compiler une application native installable. Les sons, la feuille Fichiers, les interactions tactiles et la reprise doivent être testés sur iPhone.
+Les tests couvrent les migrations M0 à M3.4B, la persistance SQLite, les configurations, entraînements, remplacements, choix d’ordre, calculs du bilan, historiques filtrés, identités, comparaisons de séries, semaines locales, graphiques, fiches, préférences et export personnel, erreurs et doubles validations. L’export de plusieurs années est testé par lots et sous écritures concurrentes. La CI vérifie aussi la navigation verticale. L’export iOS produit le JavaScript et les ressources, sans compiler une application native installable. Les sons, la feuille Fichiers, les interactions tactiles et la reprise doivent être testés sur iPhone.
 
 ## Données et limites
 
-Après M3.3 (v5), M3.4A passe SQLite de **v5 à v6**, au même fichier `logbook.db` : table de règles de charge et provenance nullable dans les instantanés de séries. Aucun ancien objectif ni résultat n’est réécrit. Les programmes, séances, exercices, séries, réalisations, repos et journaux existants sont conservés. Chaque entraînement conserve des instantanés indépendants : supprimer son programme ne supprime pas ses résultats. Les anciens codes jusqu’à M3.3 refusent d’ouvrir une base v6 sans l’effacer ni la rétrograder ; ne pas revenir sur une ancienne branche avec cette base.
+La livraison M3.4B initiale utilisait le schéma v7. Ce complément passe SQLite de **v7 à v8**, au même fichier `logbook.db`, en ajoutant uniquement un journal des passages/réintégrations et ses protections. Les anciennes lignes, objectifs initiaux, performances, repos, notes et préférences sont conservés. **Les anciennes branches au schéma v7 ou inférieur refusent une base v8** ; rester sur ce correctif ou une version ultérieure. Faire un Reload complet du projet après installation. Voir [la migration détaillée](docs/PASSAGE_SERIES_M3.4B.md).
 
 Le décompte exclut les pauses manuelles ; **Repos réel** inclut tout le temps chronologique. L’arrière-plan ne met pas automatiquement en pause. Le son est une alerte locale au premier plan, soumise au volume et au mode silencieux ; aucune notification écran verrouillé n’est promise dans Expo Go.
 
 Le tonnage est la somme **charge saisie × répétitions réalisées**, échauffements inclus. Une charge par haltère est comptée une fois, sans inventer le nombre de mains utilisées. Le poids corporel n’est pas estimé et les charges absentes sont exclues. Le RIR moyen exclut les valeurs absentes, tout en comptant un RIR explicitement saisi à zéro.
 
-L’export JSON n’est pas chiffré et **n’est pas encore réimportable** par Logbook. Les données nécessaires à une restauration future sont incluses ; la restauration transactionnelle, validée sur appareil et avec récupération après échec, reste une [tâche V1 obligatoire](docs/RESTAURATION_V1.md). Les calculs pendant l’exécution et l’ajout de séries en séance restent pour M3.4B. Cardio, mannequin 3D, synchronisation et refonte visuelle globale restent hors de M3.3 ; les fonctionnalités coach sont réservées à la V2.
+L’export JSON n’est pas chiffré et **n’est pas encore réimportable** par Logbook. Les données nécessaires à une restauration future sont incluses ; la restauration transactionnelle, validée sur appareil et avec récupération après échec, reste une [tâche V1 obligatoire](docs/RESTAURATION_V1.md). Les fiches pédagogiques M3.4C attendent la validation iPhone de ce lot. Cardio, mannequin 3D, synchronisation et refonte visuelle globale restent hors de M3.3 ; les fonctionnalités coach sont réservées à la V2.
 
-Les PR #2 → #3 → #4 → #5 → #6 → #7 (M3.3) → M3.4A restent empilées ; aucune fusion sans accord. La PR M3.4A cible `feat/m3-parametres-stabilisation`. La PR M3.3 cible `feat/m3-performances-accueil` tant que ses parents ne sont pas fusionnés.
+Les PR #2 → #3 → #4 → #5 → #6 → #7 (M3.3) → #8 (M3.4A) → M3.4B restent empilées ; aucune fusion sans accord. La PR M3.4B cible `feat/m34a-series-avancees`. La PR M3.4A cible `feat/m3-parametres-stabilisation`. La PR M3.3 cible `feat/m3-performances-accueil` tant que ses parents ne sont pas fusionnés.
 
+- [Passages et réintégrations M3.4B](docs/PASSAGE_SERIES_M3.4B.md)
+- [Guide iPhone des séries passées](docs/TESTER_PASSAGE_SERIES_SUR_IPHONE.md)
+- [Architecture et décisions M3.4B](docs/M3.4B.md)
+- [Guide de test iPhone M3.4B](docs/TESTER_M3_4B_SUR_IPHONE.md)
 - [Architecture et calculs M3.4A](docs/M3.4A.md)
 - [Guide de test iPhone M3.4A](docs/TESTER_M3_4A_SUR_IPHONE.md)
 - [Architecture, migration et stabilisation M3.3](docs/M3.3.md)

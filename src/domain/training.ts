@@ -17,7 +17,7 @@ export interface WorkoutExercise {
 export interface WorkoutExerciseInput { exerciseId: string; notes?: string }
 export type SetKind = 'work' | 'warmup' | 'top_set' | 'back_off' | 'custom';
 export interface PlannedLoadRule {
-  basis: 'planned_target'; referenceSetId: string | null; percent: number;
+  basis: 'planned_target' | 'performed_weight'; referenceSetId: string | null; percent: number;
 }
 /** Targets only. M1.2 will snapshot these in independent performed-session models. */
 export interface SetTemplate {
