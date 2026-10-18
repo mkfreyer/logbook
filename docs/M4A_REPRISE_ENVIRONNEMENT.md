@@ -1,6 +1,10 @@
 # M4A — Sauvegarde et reprise après changement réseau
 
-> **Nouvelle direction du 18 octobre 2026 : [écorché stylisé](M4A_ECORCHE.md).**
+> **Étape actuelle : [deux propositions originales Logbook](M4A_MANNEQUIN_ORIGINAL.md).**
+> Arrêt pour choix visuel avant intégration. PR #11 toujours en brouillon.
+> Les sources, scènes de revue et paramètres sont sauvegardés directement dans Git.
+
+> **Historique du 18 octobre 2026 : [recherche d’écorché stylisé](M4A_ECORCHE.md).**
 > Les variantes à peau lisse ci-dessous sont conservées comme historique.
 > Arrêt pour choix utilisateur après la comparaison des bases anatomiques,
 > avant toute intégration. PR #11 toujours en brouillon.
