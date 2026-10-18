@@ -1,9 +1,11 @@
 # M4A — Sauvegarde et reprise après changement réseau
 
-> **Étape actuelle : [B+ Écorché doux / premium — deux reliefs continus](M4A_B_PLUS_ECORCHE.md).**
-> Retour au B+ original comme fondation ; L1 / L2 / L3 et S1 / S2 / S3 sont conservés en historique.
-> Quinze rendus Blender, deux variantes et un témoin ; arrêt pour choix utilisateur.
-> PR #11 en brouillon, sans intégration, SQLite, M4B ou fusion.
+> **Étape actuelle : [B+ Écorché Premium Puissance — une seule itération](M4A_B_PLUS_PREMIUM_PUISSANCE.md).**
+> Premium validé comme direction ; volumes et reliefs renforcés, comparés au témoin exact.
+> Arrêt pour validation visuelle. PR #11 en brouillon, sans intégration, SQLite, M4B ou fusion.
+
+> **Historique : [B+ Écorché doux / premium](M4A_B_PLUS_ECORCHE.md).**
+> Premium choisi comme base ; sources et rendus préservés.
 
 > **Historique : [S1 / S2 / S3 — nouvelles bases anatomiques](M4A_S1_S2_S3.md).**
 > Ces variantes sont abandonnées comme base finale ; sources et rendus préservés.

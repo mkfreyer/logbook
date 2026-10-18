@@ -1,0 +1,151 @@
+{
+  "variant": "power",
+  "source_path": "docs/m4a/bplus-fitness/premium/model.blend",
+  "source_blend_sha256": "e090ed9972ab36534dc64d448ee478e5b3f6066a330b0098cae6278a18d17db6",
+  "source_name": "B+ Ecorche Premium selected visual direction; original base geometry Dan Ulrich / Blender Studio CC0",
+  "generator_sha256": "501077ba0a3eeb5d003ed6155693d17accf3e78977b4b8cdda8b2539e4ef032b",
+  "source_geometry_sha256": "9fdc74b543df4ff12279bab0bc339e10354fe2edd1e0e4de4552beb6c19d6333",
+  "original_B_plus_sha256": "0a57656c3c496a28587d84a111762063b1f5dfd5882cbf724151f974c15a0309",
+  "normalization": {
+    "rotation_z": 0,
+    "center": [
+      -2.2643768787384033,
+      -0.033877987414598465,
+      -0.005640706978738308
+    ],
+    "uniform_scale": 1.06503615750482
+  },
+  "topology_changed": false,
+  "remesh_or_decimation": false,
+  "surface_masks_preserved": true,
+  "L_and_S_geometry_read": false,
+  "separate_muscles_added": false,
+  "counts": {
+    "objects": 3,
+    "body_triangles": 110000,
+    "body_vertices": 55002,
+    "visible_triangles": 112176,
+    "demo_surface_zones": 2,
+    "separate_muscle_objects": 0
+  },
+  "volume_fields": [
+    "fuller pectorals",
+    "rounder deltoids",
+    "upper arm radial +20 percent field",
+    "forearm radial +20 percent field",
+    "latissimus breadth and depth",
+    "upper back trapezius depth",
+    "quadriceps fuller bellies",
+    "hamstrings stronger back silhouette",
+    "calf radial fullness"
+  ],
+  "volume": {
+    "maximum_requested_m": 0.020707518921990416,
+    "displacement_smoothing_iterations": 8
+  },
+  "relief": {
+    "target_strength": 1.85,
+    "parent_strength": 1.25,
+    "target_fibre_amplitude_m": 0.00145,
+    "parent_fibre_amplitude_m": 0.00055,
+    "relative_field_limit_m": 0.008,
+    "orientation_guard_iterations": 14,
+    "orientation_guard_min_scale": 0.06020025755475986,
+    "orientation_guard_mean_scale": 0.9347376851285167,
+    "minimum_normal_dot": 0.850607344434667,
+    "max_displacement_from_parent_m": 0.017953532097437764,
+    "mean_displacement_from_parent_m": 0.002151032126709098,
+    "regions": [
+      {
+        "name": "pectoralis fan",
+        "height_m_before_strength": 0.0043,
+        "border_depth_m_before_strength": 0.0012
+      },
+      {
+        "name": "rectus abdominis 1.105",
+        "height_m_before_strength": 0.0032,
+        "border_depth_m_before_strength": 0.0015
+      },
+      {
+        "name": "rectus abdominis 1.167",
+        "height_m_before_strength": 0.0032,
+        "border_depth_m_before_strength": 0.0015
+      },
+      {
+        "name": "rectus abdominis 1.228",
+        "height_m_before_strength": 0.0032,
+        "border_depth_m_before_strength": 0.0015
+      },
+      {
+        "name": "external oblique",
+        "height_m_before_strength": 0.0031,
+        "border_depth_m_before_strength": 0.0017
+      },
+      {
+        "name": "biceps",
+        "height_m_before_strength": 0.004,
+        "border_depth_m_before_strength": 0.0015
+      },
+      {
+        "name": "triceps",
+        "height_m_before_strength": 0.0042,
+        "border_depth_m_before_strength": 0.0015
+      },
+      {
+        "name": "deltoid",
+        "height_m_before_strength": 0.0022,
+        "border_depth_m_before_strength": 0.0016999999909346913
+      },
+      {
+        "name": "latissimus dorsi",
+        "height_m_before_strength": 0.0034,
+        "border_depth_m_before_strength": 0.0
+      },
+      {
+        "name": "trapezius",
+        "height_m_before_strength": 0.0024,
+        "border_depth_m_before_strength": 0.0
+      },
+      {
+        "name": "quadriceps rectus",
+        "height_m_before_strength": 0.0042,
+        "border_depth_m_before_strength": 0.0007
+      },
+      {
+        "name": "quadriceps vastus lateralis",
+        "height_m_before_strength": 0.0033,
+        "border_depth_m_before_strength": 0.0007
+      },
+      {
+        "name": "quadriceps vastus medialis",
+        "height_m_before_strength": 0.0038,
+        "border_depth_m_before_strength": 0.0007
+      },
+      {
+        "name": "hamstrings lateral",
+        "height_m_before_strength": 0.003,
+        "border_depth_m_before_strength": 0.0017
+      },
+      {
+        "name": "hamstrings medial",
+        "height_m_before_strength": 0.003,
+        "border_depth_m_before_strength": 0.0017
+      },
+      {
+        "name": "gastrocnemius 0.117",
+        "height_m_before_strength": 0.0025,
+        "border_depth_m_before_strength": 0.0017
+      },
+      {
+        "name": "gastrocnemius 0.163",
+        "height_m_before_strength": 0.0025,
+        "border_depth_m_before_strength": 0.0017
+      }
+    ]
+  },
+  "limitations": [
+    "Source proxy topology retained; no new high-resolution bake or production retopology.",
+    "Head/foot source self-crossings are preserved; see geometry audit.",
+    "Two demonstration surface masks only; no full segmentation, medical or mobile-runtime validation."
+  ]
+}

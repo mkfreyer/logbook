@@ -1,0 +1,18 @@
+{
+  "../bplus-fitness/premium": {
+    "source_review_geometry_normals_surface_masks_identical": true,
+    "geometry_signature_sha256": "0083371cafc90f7d4a091a2f1688cc8eb0568aad956a8fde4ad18830db1cd4f1",
+    "studio_lights": 4,
+    "camera_count": 1,
+    "neutral_material_restored": true,
+    "visible_objects": 3
+  },
+  "power": {
+    "source_review_geometry_normals_surface_masks_identical": true,
+    "geometry_signature_sha256": "abce7f40d4bd0e9dfb701f70ca124e7abe3aab0d5548ea2af6dd2f5791bb272f",
+    "studio_lights": 4,
+    "camera_count": 1,
+    "neutral_material_restored": true,
+    "visible_objects": 3
+  }
+}

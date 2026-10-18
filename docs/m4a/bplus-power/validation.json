@@ -1,0 +1,45 @@
+{
+  "baseline": "253ddd7978fbe0289616750cce6abc73b64112a0",
+  "historical_files_verified_unchanged": 306,
+  "one_new_direction": true,
+  "comparison": {
+    "../bplus-fitness/premium": {
+      "triangles": 112176,
+      "objects": 3,
+      "demo_surface_zones": 2,
+      "self_crossings_by_region": {
+        "feet": 226,
+        "head": 78,
+        "hands": 0,
+        "sculptable_body": 0
+      }
+    },
+    "power": {
+      "triangles": 112176,
+      "objects": 3,
+      "demo_surface_zones": 2,
+      "self_crossings_by_region": {
+        "feet": 226,
+        "head": 78,
+        "hands": 0,
+        "sculptable_body": 0
+      }
+    }
+  },
+  "same_render_protocol": true,
+  "new_blender_renders": 5,
+  "preserved_control_renders": 5,
+  "comparison_sheets": 7,
+  "body_topology_and_masks_preserved": true,
+  "protected_vertices_preserved": true,
+  "source_geometry_license": "CC0",
+  "application_integration": false,
+  "SQLite_changed": false,
+  "M4B": false,
+  "mobile_benchmark": false,
+  "limitations": [
+    "304 inherited head/foot self-crossings, identical to selected Premium; no globally intersection-free claim.",
+    "No crossings detected in sculpted proxy regions by supplied non-coplanar triangle audit.",
+    "Two pectoral demo masks only; no final segmentation, rig, medical validation or iPhone runtime benchmark."
+  ]
+}

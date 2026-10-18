@@ -1,0 +1,56 @@
+{
+  "sources": [
+    {
+      "file": "../bplus-fitness/premium/front.png",
+      "sha256": "92aae133d24b109f8e4765f3b7ac65bb3b1aaa73f14f0df130a6bb5fc73b98c2"
+    },
+    {
+      "file": "power/front.png",
+      "sha256": "d1d36e835189c0894f045c2789c1db673117cce9140c8357c2799e641b8a85df"
+    },
+    {
+      "file": "../bplus-fitness/premium/three-quarter.png",
+      "sha256": "18a7b78f21f80de9f5e370b0b2ad781c6e05cb1c9b3417e7ad99914e13661d3f"
+    },
+    {
+      "file": "power/three-quarter.png",
+      "sha256": "6ba6e671986d68960ad54e6778bcb68c2ac3c1b5c22d41acd3e1b4015b7e4613"
+    },
+    {
+      "file": "../bplus-fitness/premium/back.png",
+      "sha256": "82a4e1bf70a2c317ede55f6e6146eb2407c3d55a421cf95ef856037151c1a50c"
+    },
+    {
+      "file": "power/back.png",
+      "sha256": "0a2e3b2221863d21fec4014a5f84bbac1857b2a2a98dfa7f6394ad540117ddf3"
+    },
+    {
+      "file": "../bplus-fitness/premium/side.png",
+      "sha256": "27ab7125e6997fdccfd1a061c7fd8335d4d436f1ec7672486e0d03e144f06838"
+    },
+    {
+      "file": "power/side.png",
+      "sha256": "2447c0f3f9062a0ee8a234e3c0343181a6edc6e1e17b319f3ec318eb853b5161"
+    },
+    {
+      "file": "../bplus-fitness/premium/selection.png",
+      "sha256": "07664700296c46a41eba615f357339918a0fc4b54577ae69be5e140bf06987ca"
+    },
+    {
+      "file": "power/selection.png",
+      "sha256": "9adb76ccb5e518c747ebc084c1086feea86265d7ad1de04e7e11e2d086af49a6"
+    }
+  ],
+  "full_comparison_size": [
+    1440,
+    1340
+  ],
+  "detail_crop": [
+    150,
+    210,
+    570,
+    620
+  ],
+  "anatomy_repainted": false,
+  "source_geometry_license": "CC0"
+}
