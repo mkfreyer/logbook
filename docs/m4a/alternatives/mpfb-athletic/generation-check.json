@@ -1,0 +1,39 @@
+{
+  "result": "identical evaluated geometry",
+  "runs": [
+    {
+      "file": "mpfb-athletic-probe.blend",
+      "objects": [
+        {
+          "object": "MPFB_Athletic_Body",
+          "vertices": 13380,
+          "polygons": 13378,
+          "geometry_sha256": "1710848caec30b917beb3d539c150291d24434fd483e92d058265f1a0b96a7d0"
+        },
+        {
+          "object": "MPFB_Core_Eyes",
+          "vertices": 96,
+          "polygons": 86,
+          "geometry_sha256": "18029462efd56ecf32712e0e2c5ef7e0a7aad7b268df783548b387033ec3c957"
+        }
+      ]
+    },
+    {
+      "file": "mpfb-athletic.blend",
+      "objects": [
+        {
+          "object": "MPFB_Athletic_Body",
+          "vertices": 13380,
+          "polygons": 13378,
+          "geometry_sha256": "1710848caec30b917beb3d539c150291d24434fd483e92d058265f1a0b96a7d0"
+        },
+        {
+          "object": "MPFB_Core_Eyes",
+          "vertices": 96,
+          "polygons": 86,
+          "geometry_sha256": "18029462efd56ecf32712e0e2c5ef7e0a7aad7b268df783548b387033ec3c957"
+        }
+      ]
+    }
+  ]
+}

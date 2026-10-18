@@ -6,6 +6,8 @@
 
 Reprise depuis `96fa0e9` sur `feat/m4a-prototype-carte-musculaire-3d`, [PR #11](https://github.com/mkfreyer/logbook/pull/11) en brouillon, base M3.4C `feat/m34c-fiches-exercices` / `7c2aa5c`. Aucune fusion. SQLite reste v8 ; aucune donnée, migration, dépendance ou fonction de l’application n’est modifiée. M4B n’est pas commencé.
 
+**Orientation validée le 18 octobre : recherche d’une nouvelle base, sans reconstruction de BodyParts3D.** La [comparaison des alternatives](M4A_CHOIX_MODELE.md) étudie MakeHuman/MPFB et des modèles existants sous licence compatible. Les 2–3 meilleurs candidats doivent être rendus en entier, face/trois quarts/dos avec les mêmes réglages, puis soumis au choix utilisateur avant toute intégration. Le premier candidat MPFB est rendu ; l’acquisition Blender Studio reste en attente de l’application de la nouvelle configuration réseau à la machine attachée. Le moteur interactif n’est pas commencé.
+
 L’image jointe à la reprise a bien été consultée : corps masculin entier athlétique, muscles définis, surface satinée relativement lisse, gris bleuté sur bleu nuit. Elle sert de référence ; elle n’a pas été remplacée par une image générée.
 
 ## Résultat de l’audit
