@@ -112,3 +112,49 @@ Les neuf empreintes des images sont conservées dans
 reproduite pixel pour pixel, JSON/liens/syntaxe Python et `git diff --check` validés.
 Les tests applicatifs n'ont pas été relancés localement pour cette livraison
 documentaire ; aucun code de l'application ni fichier SQLite n'a changé.
+
+## Variante B+ modérément athlétique
+
+Lire [M4A_B_PLUS.md](../../../docs/M4A_B_PLUS.md) : B est choisi provisoirement,
+C écarté. La variante reste une étude visuelle en attente de validation.
+La source officielle B n'est jamais écrasée. `B-plus.blend` conserve sa base,
+le Multires et une shape key réversible ; les masques d'influence ne sont pas
+une segmentation musculaire.
+
+```sh
+blender --background --factory-startup --disable-autoexec --threads 2 \
+  --python-exit-code 1 --python tools/m4a/alternatives/generate_bplus.py -- \
+  --blend /workspace/work/m4a-alternatives/sources/blender-studio/extracted/human-base-meshes-bundle-v1.4.1/human_base_meshes_bundle.blend \
+  --settings docs/m4a/alternatives/studio-realistic-plus/settings.json \
+  --output /workspace/work/m4a-bplus/B-plus-reproduction.blend \
+  --report /workspace/work/m4a-bplus/generation-reproduction.json
+
+blender --background --factory-startup --disable-autoexec --threads 2 \
+  --python-exit-code 1 --python tools/m4a/alternatives/validate_bplus.py -- \
+  --source /workspace/work/m4a-alternatives/sources/blender-studio/extracted/human-base-meshes-bundle-v1.4.1/human_base_meshes_bundle.blend \
+  --variant docs/m4a/alternatives/studio-realistic-plus/B-plus.blend \
+  --output /workspace/work/m4a-bplus/geometry-validation.json
+
+blender --background --factory-startup --disable-autoexec --threads 2 \
+  --python-exit-code 1 --python tools/m4a/alternatives/render_comparison.py -- \
+  --blend docs/m4a/alternatives/studio-realistic-plus/B-plus.blend \
+  --objects GEO-body_male_realistic GEO-body_male_realistic.eye.L GEO-body_male_realistic.eye.R \
+  --candidate studio-realistic-plus --output /workspace/work/m4a-bplus/renders-reproduction \
+  --samples 128 --subdivision 0 --views front,three-quarter,back,side \
+  --normalization-from docs/m4a/alternatives/studio-realistic/render-metadata.json
+
+python3 tools/m4a/alternatives/build_bplus_sheet.py \
+  --original-root docs/m4a/alternatives/studio-realistic \
+  --original-side-root docs/m4a/alternatives/studio-realistic-side \
+  --variant-root docs/m4a/alternatives/studio-realistic-plus \
+  --output /workspace/work/m4a-bplus/comparaison.png \
+  --detail-output /workspace/work/m4a-bplus/detail-torse.png
+```
+
+Le générateur vérifie le SHA de la source et refuse un fichier de sortie existant.
+Le validateur contrôle les deux bases, la réversibilité au niveau Multires, UV,
+face sets, yeux, faces dégénérées et retournements de normales. Il ne certifie
+ni une segmentation anatomique ni l'absence exhaustive d'auto-intersections.
+Les rapports détaillent les petits effets du fondu Multires hors des volumes ciblés.
+Les trois PNG B existants restent identiques ; son profil est calculé séparément.
+Aucun export GLB, test iPhone, code applicatif ou SQLite n'est nécessaire ici.

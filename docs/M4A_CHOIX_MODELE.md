@@ -1,5 +1,10 @@
 # M4A — Étude d’une nouvelle base 3D
 
+> **Itération suivante :** B est choisi provisoirement, C écarté. La
+> [comparaison B / B+](M4A_B_PLUS.md) renforce modérément B selon le retour produit.
+> Verdict proposé : B+, encore soumis au choix visuel utilisateur. L’étude A/B/C
+> ci-dessous est conservée comme historique, sans remplacer ses rendus.
+
 État du **18 octobre 2026**, reprise depuis `1da5ba6` : **trois candidats réels comparés, neuf vues disponibles ; attente du choix utilisateur**. Aucun modèle retenu ni intégré ; le moteur interactif et M4B ne sont pas commencés. Suite à la décision utilisateur, la reconstruction de BodyParts3D est abandonnée pour cette étape. L’audit précédent reste dans [AUDIT_M4A_ANATOMIE.md](AUDIT_M4A_ANATOMIE.md).
 
 ## Critères et protocole
@@ -123,8 +128,8 @@ Les six nouveaux rendus sont enregistrés avec leurs métadonnées dans
 
 **Avis pour le choix : B est la base gratuite la plus prometteuse parmi ces trois
 candidats pour une direction athlétique réaliste.** Cela ne valide pas sa fidélité
-à la référence ni une future segmentation. L'image d'origine n'est pas accessible
-dans cette reprise : la joindre à nouveau avant de valider cet aspect.
+à la référence ni une future segmentation. Lors de la comparaison A/B/C, l'image d'origine n'était pas accessible.
+Elle est maintenant fournie et examinée dans l'itération B/B+.
 Il est possible de choisir A, B, C ou aucun si le relief reste insuffisant.
 
 ## Reprise et arrêt avant intégration

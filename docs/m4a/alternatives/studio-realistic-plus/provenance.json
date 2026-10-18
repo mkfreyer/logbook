@@ -1,0 +1,38 @@
+{
+  "source_blend_sha256": "3c121505651140ceb4d69fd1d8923f7788ffadd81672f5be14845a5f2c75c137",
+  "shape_key_sha256": "07b5639ed65269ee836a0aaa4c9ce760b92b1ab5b8c83ebd38d2dbe5076ad701",
+  "reproduction_shape_key_sha256": "07b5639ed65269ee836a0aaa4c9ce760b92b1ab5b8c83ebd38d2dbe5076ad701",
+  "shape_key_reproduction_identical": true,
+  "derived_file_sha256": "0a57656c3c496a28587d84a111762063b1f5dfd5882cbf724151f974c15a0309",
+  "licence": "CC0 per source collection Body Male - Realistic and embedded README; Dan Ulrich / Blender Studio Human Base Meshes v1.4.1",
+  "reference": {
+    "source": "image attached by user to B+ iteration prompt",
+    "available_and_visually_examined": true,
+    "view": "three-quarter frontal, small cropped app screenshot",
+    "comparison": "qualitative art direction; no camera matching, no 3D source inferred, no unseen back claimed",
+    "redistributed_as_asset": false
+  },
+  "application_integrated": false,
+  "sqlite_operations_performed": false,
+  "m4b_started": false,
+  "astra_used": false,
+  "user_visual_approval_pending": true,
+  "validation": {
+    "original_png_and_checkpoint_files_verified_unchanged": 14,
+    "original_checkpoint_files_verified": 3606,
+    "new_final_renders_visually_inspected": 5,
+    "comparison_frames": 8,
+    "common_protocol_and_exact_normalization_verified": true,
+    "shape_key_reproduction_identical": true,
+    "geometry_report": "geometry-validation.json",
+    "contact_sheet_and_detail_reproduced_pixel_identically": true,
+    "python_syntax_and_json_and_links_verified": true,
+    "application_tests_run_locally": false
+  },
+  "tool_sha256": {
+    "generate_bplus.py": "a54fa1555589f79fbb80eb4a5f91b38276234392132278d1ace236e45d70e846",
+    "validate_bplus.py": "faa55155069707930bd4b136ecbded2d9fe1c67753cc694ffe0ee57c1b4afc4c",
+    "render_comparison.py": "c86aca145d4ff5e5bd74d01c3dd773ca34b61c646bd8dfd718493fed1c8d95a9",
+    "build_bplus_sheet.py": "8f9068f052413c09ff32ceb6f2fb83df95bd98dec058e7c9fc455c2e04380030"
+  }
+}

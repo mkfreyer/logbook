@@ -4,7 +4,10 @@
 > 3 606 fichiers vérifiée ; domaine Blender accessible (HTTP 200), bundle officiel
 > récupéré et contrôlé. Les trois candidats et leurs neuf vues sont maintenant
 > dans [M4A_CHOIX_MODELE.md](M4A_CHOIX_MODELE.md). **Étape courante : choix
-> utilisateur, aucune intégration.** Les instructions et constats ci-dessous
+> utilisateur, aucune intégration.** Depuis, B a été choisi provisoirement et
+> une [variante B+ est proposée](M4A_B_PLUS.md), encore en attente de validation.
+> La référence a été fournie à nouveau pour cette itération.
+> Les instructions et constats ci-dessous
 > décrivent la sauvegarde initiale et restent utiles à sa restauration.
 
 Sauvegarde du **18 octobre 2026**, avant tout redémarrage, sur

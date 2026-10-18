@@ -1,0 +1,185 @@
+{
+  "source_sha256": "3c121505651140ceb4d69fd1d8923f7788ffadd81672f5be14845a5f2c75c137",
+  "settings_sha256": "8dc4367904139e1252054ea16627b16c0da68f49e111633f5c4531f9c61d4905",
+  "variant_sha256": "0a57656c3c496a28587d84a111762063b1f5dfd5882cbf724151f974c15a0309",
+  "settings": {
+    "schema_version": 1,
+    "variant": "B+ moderate athletic v1",
+    "source_blend_sha256": "3c121505651140ceb4d69fd1d8923f7788ffadd81672f5be14845a5f2c75c137",
+    "normalization": {
+      "height": 1.8,
+      "center": [
+        -2.2643768787384033,
+        -0.033877987414598465,
+        -0.005640706978738308
+      ],
+      "scale": 1.06503615750482
+    },
+    "regions": [
+      {
+        "name": "pectoral volume",
+        "center": [
+          0.108,
+          -0.088,
+          1.364
+        ],
+        "radii": [
+          0.087,
+          0.088,
+          0.094
+        ],
+        "delta": [
+          0.003,
+          -0.015,
+          0.0015
+        ],
+        "z_support": [
+          1.19,
+          1.26,
+          1.44,
+          1.5
+        ]
+      },
+      {
+        "name": "deltoid volume",
+        "center": [
+          0.222,
+          0.028,
+          1.427
+        ],
+        "radii": [
+          0.066,
+          0.125,
+          0.082
+        ],
+        "delta": [
+          0.012,
+          0,
+          0.003
+        ],
+        "radial_y": 0.055,
+        "z_support": [
+          1.24,
+          1.32,
+          1.46,
+          1.53
+        ]
+      },
+      {
+        "name": "upper arm thickness",
+        "center": [
+          0.273,
+          0.028,
+          1.276
+        ],
+        "radii": [
+          0.066,
+          0.125,
+          0.135
+        ],
+        "delta": [
+          0,
+          0,
+          0
+        ],
+        "arm_radial_scale": 0.09,
+        "z_support": [
+          1.08,
+          1.16,
+          1.36,
+          1.44
+        ]
+      },
+      {
+        "name": "latissimus silhouette",
+        "center": [
+          0.138,
+          0.108,
+          1.249
+        ],
+        "radii": [
+          0.082,
+          0.09,
+          0.142
+        ],
+        "delta": [
+          0.009,
+          0.008,
+          0
+        ],
+        "z_support": [
+          1.06,
+          1.14,
+          1.36,
+          1.43
+        ]
+      },
+      {
+        "name": "upper back volume",
+        "center": [
+          0.095,
+          0.124,
+          1.418
+        ],
+        "radii": [
+          0.075,
+          0.075,
+          0.086
+        ],
+        "delta": [
+          0.001,
+          0.006,
+          0.001
+        ],
+        "z_support": [
+          1.25,
+          1.33,
+          1.46,
+          1.51
+        ]
+      },
+      {
+        "name": "quadriceps fullness",
+        "center": [
+          0.137,
+          -0.041,
+          0.736
+        ],
+        "radii": [
+          0.077,
+          0.09,
+          0.158
+        ],
+        "delta": [
+          0.004,
+          -0.01,
+          0
+        ],
+        "z_support": [
+          0.49,
+          0.57,
+          0.83,
+          0.95
+        ]
+      }
+    ],
+    "intent": "Broad symmetric volume refinement only; masks are artistic influence fields, not anatomical selection boundaries. No striations, new muscles, remeshing, displacement texture or topology changes."
+  },
+  "method": "symmetric smooth additive volume fields on original cage shape key before original Multires 3",
+  "vertices": 10582,
+  "faces": 10590,
+  "maximum_cage_displacement_at_normalized_height_1_8": 0.015336133162697475,
+  "mean_cage_displacement_at_normalized_height_1_8": 0.0006196590561714119,
+  "changed_vertices_above_1e_6": 1991,
+  "region_max_influence": {
+    "pectoral volume": 0.9881434913633751,
+    "deltoid volume": 0.8871240502424743,
+    "upper arm thickness": 0.9546219016948874,
+    "latissimus silhouette": 0.9634113963384937,
+    "upper back volume": 0.9170783348097971,
+    "quadriceps fullness": 0.7986938695613397
+  },
+  "original_basis_preserved": true,
+  "shape_key_sha256": "07b5639ed65269ee836a0aaa4c9ce760b92b1ab5b8c83ebd38d2dbe5076ad701",
+  "application_integrated": false
+}

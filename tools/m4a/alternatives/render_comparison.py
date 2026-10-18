@@ -9,9 +9,12 @@ p.add_argument('--objects',nargs='+',required=True)
 p.add_argument('--candidate',required=True)
 p.add_argument('--output',type=Path,required=True)
 p.add_argument('--samples',type=int,default=64)
+p.add_argument('--resolution',type=int,nargs=2,default=[900,1400])
 p.add_argument('--subdivision',type=int,default=1)
 p.add_argument('--views',default='front,three-quarter,back')
 p.add_argument('--rotation-z',type=float,default=0)
+p.add_argument('--normalization-from',type=Path,
+               help='Reuse the exact source-space center and scale from an earlier render metadata JSON')
 a=p.parse_args(sys.argv[sys.argv.index('--')+1:])
 a.output.mkdir(parents=True,exist_ok=True)
 bpy.ops.object.select_all(action='SELECT');bpy.ops.object.delete(use_global=False)
@@ -39,13 +42,17 @@ for ob in loaded:
             if hasattr(m,key):record[key]=getattr(m,key)
         modifiers.append(record)
     ob.data.calc_loop_triangles()
-    records.append({'object':ob.name,'vertices':len(mesh.vertices),'polygons':len(mesh.polygons),'triangles':len(mesh.loop_triangles),'base_mesh':{'vertices':len(ob.data.vertices),'polygons':len(ob.data.polygons),'triangles':len(ob.data.loop_triangles)},'source_modifiers':modifiers,'vertex_group_names':[g.name for g in ob.vertex_groups]})
+    records.append({'object':ob.name,'vertices':len(mesh.vertices),'polygons':len(mesh.polygons),'triangles':len(mesh.loop_triangles),'base_mesh':{'vertices':len(ob.data.vertices),'polygons':len(ob.data.polygons),'triangles':len(ob.data.loop_triangles)},'source_modifiers':modifiers,'source_variant':ob.get('variant'),'source_shape_keys':[{ 'name':key.name,'value':key.value} for key in ob.data.shape_keys.key_blocks] if ob.data.shape_keys else [],'vertex_group_names':[g.name for g in ob.vertex_groups]})
     meshes.append((ob.name,mesh))
 for ob in list(bpy.data.objects):bpy.data.objects.remove(ob,do_unlink=True)
 coords=[v.co for _,m in meshes for v in m.vertices]
 lo=Vector([min(v[i] for v in coords) for i in range(3)])
 hi=Vector([max(v[i] for v in coords) for i in range(3)])
 center=Vector(((lo.x+hi.x)/2,(lo.y+hi.y)/2,lo.z));scale=1.8/(hi.z-lo.z)
+if a.normalization_from:
+    reference=json.loads(a.normalization_from.read_text())
+    if reference['transform']['rotation_z']!=a.rotation_z:raise ValueError('Normalization rotation differs')
+    center=Vector(reference['transform']['center']);scale=reference['transform']['uniform_scale']
 mat=bpy.data.materials.new('Logbook common blue grey satin');mat.use_nodes=True
 bsdf=mat.node_tree.nodes.get('Principled BSDF')
 bsdf.inputs['Base Color'].default_value=(.23,.30,.41,1)
@@ -60,7 +67,7 @@ for name,mesh in meshes:
         mod=ob.modifiers.new('Common comparison subdivision','SUBSURF');mod.levels=a.subdivision;mod.render_levels=a.subdivision
 scene=bpy.context.scene;scene.render.engine='CYCLES'
 scene.cycles.samples=a.samples;scene.cycles.use_denoising=False
-scene.render.resolution_x=900;scene.render.resolution_y=1400;scene.render.resolution_percentage=100
+scene.render.resolution_x=a.resolution[0];scene.render.resolution_y=a.resolution[1];scene.render.resolution_percentage=100
 scene.render.image_settings.file_format='PNG';scene.render.film_transparent=False
 scene.world.use_nodes=True
 scene.world.node_tree.nodes['Background'].inputs['Color'].default_value=(.009,.019,.036,1)
@@ -77,8 +84,10 @@ light('Back fill',(-2,2,1.3),90,2.5,(.75,.82,1))
 camera_data=bpy.data.cameras.new('Common comparison camera');camera=bpy.data.objects.new('Common comparison camera',camera_data)
 bpy.context.collection.objects.link(camera);scene.camera=camera
 camera_data.type='ORTHO';camera_data.ortho_scale=2.30
-metadata={'candidate':a.candidate,'source_blend_sha256':hashlib.sha256(a.blend.read_bytes()).hexdigest(),'source_objects':records,'source_bounds':{'min':list(lo),'max':list(hi)},'transform':{'rotation_z':a.rotation_z,'center':list(center),'uniform_scale':scale},'protocol':{'blender':bpy.app.version_string,'render_engine':'CYCLES_CPU','samples':a.samples,'resolution':[900,1400],'subdivision':a.subdivision,'denoising':False,'orthographic_scale':2.30,'material':{'base_color_linear':[.23,.30,.41],'roughness':.37,'metallic':.12},'source_materials_and_textures_replaced':True,'sculpting_or_geometry_invention':False},'frames':[]}
-angles={'front':0,'three-quarter':-35,'back':180}
+metadata={'candidate':a.candidate,'source_blend_sha256':hashlib.sha256(a.blend.read_bytes()).hexdigest(),'source_objects':records,'source_bounds':{'min':list(lo),'max':list(hi)},'transform':{'rotation_z':a.rotation_z,'center':list(center),'uniform_scale':scale},'protocol':{'blender':bpy.app.version_string,'render_engine':'CYCLES_CPU','samples':a.samples,'resolution':a.resolution,'subdivision':a.subdivision,'denoising':False,'orthographic_scale':2.30,'material':{'base_color_linear':[.23,.30,.41],'roughness':.37,'metallic':.12},'source_materials_and_textures_replaced':True,'sculpting_or_geometry_invention':any(r['source_variant'] for r in records),'geometry_modified_in_renderer':False},'frames':[]}
+angles={'front':0,'three-quarter':-35,'side':90,'back':180}
+if a.normalization_from:
+    metadata['normalization_reference_sha256']=hashlib.sha256(a.normalization_from.read_bytes()).hexdigest()
 for view in a.views.split(','):
     angle=math.radians(angles[view]);camera.location=(4.5*math.sin(angle),-4.5*math.cos(angle),.98);aim(camera,(0,0,.9))
     scene.render.filepath=str(a.output/(view+'.png'));bpy.ops.render.render(write_still=True)

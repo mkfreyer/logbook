@@ -2,13 +2,15 @@
 
 ## État de la livraison du 18 octobre 2026
 
+**Itération courante : [B original / B+](M4A_B_PLUS.md).** B est le choix provisoire utilisateur ; C est écarté. Une variante B+ légèrement plus athlétique est proposée sous quatre angles. Validation visuelle attendue avant toute intégration.
+
 **L’accès officiel BodyParts3D est débloqué et l’archive a été intégralement inspectée. L’intégration du prototype reste suspendue au contrôle qualité du modèle.** Les vrais rendus ne correspondent pas au mannequin athlétique de référence. Aucun écran 3D n’est présenté comme prêt à tester dans Logbook.
 
 Reprise depuis `96fa0e9` sur `feat/m4a-prototype-carte-musculaire-3d`, [PR #11](https://github.com/mkfreyer/logbook/pull/11) en brouillon, base M3.4C `feat/m34c-fiches-exercices` / `7c2aa5c`. Aucune fusion. SQLite reste v8 ; aucune donnée, migration, dépendance ou fonction de l’application n’est modifiée. M4B n’est pas commencé.
 
 **Orientation validée le 18 octobre : recherche d’une nouvelle base, sans reconstruction de BodyParts3D.** La [comparaison des alternatives](M4A_CHOIX_MODELE.md) étudie MakeHuman/MPFB et des modèles existants sous licence compatible. Les 2–3 meilleurs candidats doivent être rendus en entier, face/trois quarts/dos avec les mêmes réglages, puis soumis au choix utilisateur avant toute intégration. La reprise depuis `1da5ba6` a restauré et vérifié la sauvegarde ; l’accès Blender Studio fonctionne désormais (HTTP 200 et archive officielle complète). Les trois candidats MPFB / Blender réaliste / Blender stylisé sont comparés sous neuf vues. Le choix utilisateur reste attendu avant intégration. Le moteur interactif n’est pas commencé.
 
-Lors de l’étude précédente, l’image jointe avait bien été consultée : corps masculin entier athlétique, muscles définis, surface satinée relativement lisse, gris bleuté sur bleu nuit. Elle sert de référence ; elle n’a pas été remplacée par une image générée. Elle n’est pas accessible dans la nouvelle reprise et doit être jointe à nouveau avant validation de la fidélité visuelle.
+Lors de l’étude précédente, l’image jointe avait bien été consultée : corps masculin entier athlétique, muscles définis, surface satinée relativement lisse, gris bleuté sur bleu nuit. Elle sert de référence ; elle n’a pas été remplacée par une image générée. Lors de la reprise réseau, elle n’était pas accessible ; elle a depuis été fournie à nouveau et examinée pour l’itération B/B+.
 
 Le [guide de sauvegarde et reprise réseau](M4A_REPRISE_ENVIRONNEMENT.md) conserve
 les sources, fichiers Blender et rendus de la comparaison avant redémarrage,
