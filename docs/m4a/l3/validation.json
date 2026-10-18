@@ -1,0 +1,21 @@
+{
+  "baseline": "f3bfda6c4d26b523d02262df520bcb015770c82f",
+  "historical_assets_verified_unchanged": 166,
+  "l3_triangles": 89672,
+  "l2_triangles": 81036,
+  "selectable_connected_zones": 22,
+  "closed_shell_genus_zero": true,
+  "source_review_geometry_normals_semantics_identical": true,
+  "same_render_protocol_both_variants": true,
+  "blender_frames_verified": 10,
+  "comparison_sheets_verified": 7,
+  "orange_is_two_real_pectoral_objects": true,
+  "application_integration": false,
+  "M4B": false,
+  "mobile_benchmark": false,
+  "limitations": [
+    "Stylised surface regions, not medical segmentation.",
+    "No exhaustive intersection or medical test.",
+    "Shader and mobile performance not validated in an app."
+  ]
+}

@@ -1,6 +1,10 @@
 # M4A — Sauvegarde et reprise après changement réseau
 
-> **Étape actuelle : [deux propositions originales Logbook](M4A_MANNEQUIN_ORIGINAL.md).**
+> **Étape actuelle : [L3 — atlas fitness stylisé à valider](M4A_L3.md).**
+> Les sources et cinq vues comparatives Blender sont dans `docs/m4a/l3/`.
+> Arrêt pour validation visuelle, aucune intégration, M4B ou modification SQLite.
+
+> **Historique : [deux propositions originales L1 / L2](M4A_MANNEQUIN_ORIGINAL.md).**
 > Arrêt pour choix visuel avant intégration. PR #11 toujours en brouillon.
 > Les sources, scènes de revue et paramètres sont sauvegardés directement dans Git.
 

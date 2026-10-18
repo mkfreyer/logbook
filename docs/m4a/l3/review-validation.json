@@ -1,0 +1,16 @@
+{
+  "l2": {
+    "source_review_geometry_normals_attributes_identical": true,
+    "geometry_signature_sha256": "e7aa215068dbd61750dc8a99a108bce1e2b0cac7c2451e77e3a2be5efb2aefbb",
+    "studio_lights": 4,
+    "neutral_material_restored": true,
+    "construction_hidden": true
+  },
+  "l3": {
+    "source_review_geometry_normals_attributes_identical": true,
+    "geometry_signature_sha256": "f1f1d70777fd80123a8f8af2d1e4af85426ecd76b9edb6fff13fcaf44f92545b",
+    "studio_lights": 4,
+    "neutral_material_restored": true,
+    "construction_hidden": true
+  }
+}
