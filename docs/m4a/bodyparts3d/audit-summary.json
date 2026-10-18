@@ -1,0 +1,4110 @@
+{
+  "schema_version": 1,
+  "source_version": "BodyParts3D 4.0 / official LATEST download, 2026-10-17",
+  "source": {
+    "bytes": 142903898,
+    "sha256": "40665852c49f218326590e204db91064a1ecfc3c6f8cbd7bbbcaac62c7cd409e",
+    "official_url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_BP3D_4.0_obj_99.zip",
+    "all_member_crc32_verified": true,
+    "obj_members": 2234,
+    "uncompressed_obj_bytes": 479605380
+  },
+  "official_tables": [
+    {
+      "file": "isa_element_parts.txt",
+      "sha256": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf",
+      "rows": 29549
+    },
+    {
+      "file": "isa_inclusion_relation_list.txt",
+      "sha256": "26e7d818e03a8c909fe09c561f38d0d513423c87681f9450a803bc38f5b07564",
+      "rows": 2904
+    },
+    {
+      "file": "isa_parts_list_e.txt",
+      "sha256": "ab7796deedd49205e77f3609a1cb8c53e2bbee14ecb5c9a6ca05227469780513",
+      "rows": 2905
+    },
+    {
+      "file": "partof_element_parts.txt",
+      "sha256": "3f5f6df1028eb122b30de77c711597b6bb8e5541658e5985859fd228adbf88ea",
+      "rows": 17943
+    },
+    {
+      "file": "partof_inclusion_relation_list.txt",
+      "sha256": "1b40738270931e3c1d955ce34e0fce0d8d10d8c5ad543463e40b4b4c0243007c",
+      "rows": 1367
+    },
+    {
+      "file": "partof_parts_list_e.txt",
+      "sha256": "9224080557053e6f1322f1e13ab27f0ecde0db19bb3b505f0631afad230eeebd",
+      "rows": 1368
+    }
+  ],
+  "methods": {
+    "anatomical_accuracy": "Not assessed by this structural inventory. Table membership can include broad parent concepts, not just direct anatomical names.",
+    "triangles": "Fan triangulation count; archive source geometry is preserved.",
+    "coordinates": "Raw source OBJ coordinates. Anatomical directions and units require source documentation and visual verification.",
+    "topology": "Undirected polygon edges; boundary/nonmanifold counts describe structure and do not establish anatomical validity.",
+    "exact_position_weld": {
+      "geometry_mutation": false,
+      "precision": "exact parsed floating-point coordinate equality; no rounding, tolerance, repair, or decimation",
+      "scope": "Topological diagnostics only. Neither manifold topology nor connectedness establishes anatomical accuracy.",
+      "rationale": "OBJ source can repeat positions at normal seams; raw vertex-index boundary counts alone do not establish holes."
+    },
+    "degeneracy_threshold_cross_product_squared": 1e-24,
+    "geometry_modified": false,
+    "interpretation": "Finite coordinates, valid indices, watertight edges, or component counts do not establish anatomical accuracy or the requested aesthetic. Visual and domain review remain separate gates."
+  },
+  "source_coordinate_axes": {
+    "x_positive": "anatomical left, verified by official lateralized pectoralis element labels and their coordinate bounds",
+    "y_negative": "anterior, supported by pectoralis vs trapezius coordinate locations and initial render-agent inspection",
+    "z_positive": "superior, supported by whole-body vertical range and initial render-agent inspection",
+    "units": "source coordinate units; physical units not established by the archived README/download pages"
+  },
+  "full_archive": {
+    "element_count": 2234,
+    "all_element_ids_present_in_archive": true,
+    "vertices": 4209773,
+    "faces": 6681030,
+    "valid_faces": 6681030,
+    "triangles_if_fan_triangulated": 6681030,
+    "degenerate_triangles": 149,
+    "boundary_edges": 1562184,
+    "nonmanifold_edges": 0,
+    "inconsistent_winding_edges": 0,
+    "elements_with_structural_issues": [],
+    "elements_with_degenerate_triangles": [
+      {
+        "element_id": "FJ1275",
+        "triangles": 2
+      },
+      {
+        "element_id": "FJ1287",
+        "triangles": 62
+      },
+      {
+        "element_id": "FJ1320",
+        "triangles": 4
+      },
+      {
+        "element_id": "FJ1338",
+        "triangles": 11
+      },
+      {
+        "element_id": "FJ1340",
+        "triangles": 4
+      },
+      {
+        "element_id": "FJ1371",
+        "triangles": 14
+      },
+      {
+        "element_id": "FJ2428",
+        "triangles": 3
+      },
+      {
+        "element_id": "FJ2569",
+        "triangles": 2
+      },
+      {
+        "element_id": "FJ2749",
+        "triangles": 3
+      },
+      {
+        "element_id": "FJ2787",
+        "triangles": 24
+      },
+      {
+        "element_id": "FJ2789",
+        "triangles": 2
+      },
+      {
+        "element_id": "FJ2791",
+        "triangles": 3
+      },
+      {
+        "element_id": "FJ2794",
+        "triangles": 2
+      },
+      {
+        "element_id": "FJ2812",
+        "triangles": 8
+      },
+      {
+        "element_id": "FJ2820",
+        "triangles": 3
+      },
+      {
+        "element_id": "FJ3199",
+        "triangles": 2
+      }
+    ],
+    "bounds": {
+      "min": [
+        -334.119,
+        -246.783,
+        -78.1112
+      ],
+      "max": [
+        332.825,
+        45.2476,
+        1651.63
+      ]
+    }
+  },
+  "groups": {
+    "all_muscles": {
+      "element_count": 425,
+      "all_element_ids_present_in_archive": true,
+      "vertices": 1733522,
+      "faces": 2404604,
+      "valid_faces": 2404604,
+      "triangles_if_fan_triangulated": 2404604,
+      "degenerate_triangles": 3,
+      "boundary_edges": 949702,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "elements_with_structural_issues": [],
+      "elements_with_degenerate_triangles": [
+        {
+          "element_id": "FJ2791",
+          "triangles": 3
+        }
+      ],
+      "bounds": {
+        "min": [
+          -319.379,
+          -226.454,
+          -72.8101
+        ],
+        "max": [
+          319.379,
+          24.5467,
+          1536.97
+        ]
+      },
+      "exact_position_weld_diagnostic": {
+        "boundary_edges": 0,
+        "nonmanifold_edges": 36,
+        "inconsistent_winding_edges": 0,
+        "collapsed_edges": 0,
+        "elements_with_multiple_components": 256,
+        "elements_with_nonmanifold_edges": [
+          {
+            "element_id": "FJ1462",
+            "edges": 8
+          },
+          {
+            "element_id": "FJ1462M",
+            "edges": 8
+          },
+          {
+            "element_id": "FJ1521",
+            "edges": 4
+          },
+          {
+            "element_id": "FJ1521M",
+            "edges": 4
+          },
+          {
+            "element_id": "FJ1588",
+            "edges": 4
+          },
+          {
+            "element_id": "FJ2791",
+            "edges": 4
+          },
+          {
+            "element_id": "FJ3131",
+            "edges": 4
+          }
+        ]
+      }
+    },
+    "candidate_surface": {
+      "element_count": 86,
+      "all_element_ids_present_in_archive": true,
+      "vertices": 390071,
+      "faces": 610896,
+      "valid_faces": 610896,
+      "triangles_if_fan_triangulated": 610896,
+      "degenerate_triangles": 0,
+      "boundary_edges": 156556,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "elements_with_structural_issues": [],
+      "elements_with_degenerate_triangles": [],
+      "bounds": {
+        "min": [
+          -305.054,
+          -223.662,
+          -67.0626
+        ],
+        "max": [
+          305.054,
+          24.5467,
+          1506.24
+        ]
+      },
+      "exact_position_weld_diagnostic": {
+        "boundary_edges": 0,
+        "nonmanifold_edges": 8,
+        "inconsistent_winding_edges": 0,
+        "collapsed_edges": 0,
+        "elements_with_multiple_components": 61,
+        "elements_with_nonmanifold_edges": [
+          {
+            "element_id": "FJ1521",
+            "edges": 4
+          },
+          {
+            "element_id": "FJ1521M",
+            "edges": 4
+          }
+        ]
+      }
+    },
+    "skin": {
+      "element_count": 1,
+      "all_element_ids_present_in_archive": true,
+      "vertices": 102467,
+      "faces": 203382,
+      "valid_faces": 203382,
+      "triangles_if_fan_triangulated": 203382,
+      "degenerate_triangles": 0,
+      "boundary_edges": 1512,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "elements_with_structural_issues": [],
+      "elements_with_degenerate_triangles": [],
+      "bounds": {
+        "min": [
+          -334.119,
+          -246.783,
+          -78.1112
+        ],
+        "max": [
+          332.825,
+          45.2476,
+          1641.36
+        ]
+      },
+      "exact_position_weld_diagnostic": {
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "collapsed_edges": 0,
+        "elements_with_multiple_components": 0,
+        "elements_with_nonmanifold_edges": []
+      }
+    },
+    "pectoralis_major_bilateral": {
+      "element_count": 6,
+      "all_element_ids_present_in_archive": true,
+      "vertices": 15971,
+      "faces": 20992,
+      "valid_faces": 20992,
+      "triangles_if_fan_triangulated": 20992,
+      "degenerate_triangles": 0,
+      "boundary_edges": 9486,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "elements_with_structural_issues": [],
+      "elements_with_degenerate_triangles": [],
+      "bounds": {
+        "min": [
+          -194.262,
+          -219.353,
+          1104.78
+        ],
+        "max": [
+          194.262,
+          -81.0,
+          1335.9
+        ]
+      },
+      "exact_position_weld_diagnostic": {
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "collapsed_edges": 0,
+        "elements_with_multiple_components": 6,
+        "elements_with_nonmanifold_edges": []
+      }
+    }
+  },
+  "pectoral_and_skin_elements": [
+    {
+      "element_id": "FJ1446",
+      "sha256": "7a0d77a63b06d4212998bec86f84853287c3a21696ec7afc92c7767c987a726d",
+      "bytes": 105002,
+      "vertices": 1019,
+      "normals": 1019,
+      "texture_coordinates": 0,
+      "faces": 1536,
+      "polygon_sizes": {
+        "3": 1536
+      },
+      "bounds": {
+        "min": [
+          -180.896,
+          -213.628,
+          1104.78
+        ],
+        "max": [
+          -48.0,
+          -81.7564,
+          1277.94
+        ],
+        "size": [
+          132.896,
+          131.8716,
+          173.16000000000008
+        ]
+      },
+      "structural_issues": {},
+      "degenerate_triangles": 0,
+      "boundary_edges": 468,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "exact_position_weld_diagnostic": {
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "collapsed_edges": 0,
+        "connected_components": 3,
+        "component_used_vertex_counts": [
+          768,
+          3,
+          3
+        ],
+        "euler_characteristic": 6
+      }
+    },
+    {
+      "element_id": "FJ1447",
+      "sha256": "e239a63adf99dfc094ece7efcd91ec7cd9ac802e9d7581141b311a7842fbbbe6",
+      "bytes": 141480,
+      "vertices": 1492,
+      "normals": 1492,
+      "texture_coordinates": 0,
+      "faces": 1846,
+      "polygon_sizes": {
+        "3": 1846
+      },
+      "bounds": {
+        "min": [
+          -194.262,
+          -145.096,
+          1234.51
+        ],
+        "max": [
+          -26.4139,
+          -82.0,
+          1335.9
+        ],
+        "size": [
+          167.8481,
+          63.096000000000004,
+          101.3900000000001
+        ]
+      },
+      "structural_issues": {},
+      "degenerate_triangles": 0,
+      "boundary_edges": 1002,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "exact_position_weld_diagnostic": {
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "collapsed_edges": 0,
+        "connected_components": 13,
+        "component_used_vertex_counts": [
+          906,
+          6,
+          6,
+          4,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "euler_characteristic": 26
+      }
+    },
+    {
+      "element_id": "FJ1464",
+      "sha256": "f446df845d19385cdbd5b86457c8690981cbc914f8f9595b50bdc4a44505aab7",
+      "bytes": 556794,
+      "vertices": 5480,
+      "normals": 5480,
+      "texture_coordinates": 0,
+      "faces": 7114,
+      "polygon_sizes": {
+        "3": 7114
+      },
+      "bounds": {
+        "min": [
+          -187.848,
+          -219.353,
+          1140.61
+        ],
+        "max": [
+          -4.81557,
+          -81.0,
+          1313.8
+        ],
+        "size": [
+          183.03243,
+          138.353,
+          173.19000000000005
+        ]
+      },
+      "structural_issues": {},
+      "degenerate_triangles": 0,
+      "boundary_edges": 3280,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "exact_position_weld_diagnostic": {
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "collapsed_edges": 0,
+        "connected_components": 7,
+        "component_used_vertex_counts": [
+          3147,
+          402,
+          4,
+          3,
+          3,
+          3,
+          3
+        ],
+        "euler_characteristic": 8
+      }
+    },
+    {
+      "element_id": "FJ1446M",
+      "sha256": "3f9dbd5c3f6fdf043454f251d69ea96547dca4bc1efbf7bffd85315fc1a9fd34",
+      "bytes": 103977,
+      "vertices": 1019,
+      "normals": 1019,
+      "texture_coordinates": 0,
+      "faces": 1536,
+      "polygon_sizes": {
+        "3": 1536
+      },
+      "bounds": {
+        "min": [
+          48.0,
+          -213.628,
+          1104.78
+        ],
+        "max": [
+          180.896,
+          -81.7564,
+          1277.94
+        ],
+        "size": [
+          132.896,
+          131.8716,
+          173.16000000000008
+        ]
+      },
+      "structural_issues": {},
+      "degenerate_triangles": 0,
+      "boundary_edges": 468,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "exact_position_weld_diagnostic": {
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "collapsed_edges": 0,
+        "connected_components": 3,
+        "component_used_vertex_counts": [
+          768,
+          3,
+          3
+        ],
+        "euler_characteristic": 6
+      }
+    },
+    {
+      "element_id": "FJ1447M",
+      "sha256": "aab8ea03eed46a79b3f765ef539df785deb333e5079c21f8c7bec14444768a18",
+      "bytes": 140158,
+      "vertices": 1495,
+      "normals": 1495,
+      "texture_coordinates": 0,
+      "faces": 1846,
+      "polygon_sizes": {
+        "3": 1846
+      },
+      "bounds": {
+        "min": [
+          26.4139,
+          -145.096,
+          1234.51
+        ],
+        "max": [
+          194.262,
+          -82.0,
+          1335.9
+        ],
+        "size": [
+          167.8481,
+          63.096000000000004,
+          101.3900000000001
+        ]
+      },
+      "structural_issues": {},
+      "degenerate_triangles": 0,
+      "boundary_edges": 1008,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "exact_position_weld_diagnostic": {
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "collapsed_edges": 0,
+        "connected_components": 13,
+        "component_used_vertex_counts": [
+          906,
+          6,
+          6,
+          4,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "euler_characteristic": 26
+      }
+    },
+    {
+      "element_id": "FJ1464M",
+      "sha256": "a2ffa047e9cff27df3ed7cb5f305491ce921f236cfe60ee90334cc5fead271c3",
+      "bytes": 551361,
+      "vertices": 5466,
+      "normals": 5466,
+      "texture_coordinates": 0,
+      "faces": 7114,
+      "polygon_sizes": {
+        "3": 7114
+      },
+      "bounds": {
+        "min": [
+          4.81557,
+          -219.353,
+          1140.61
+        ],
+        "max": [
+          187.848,
+          -81.0,
+          1313.8
+        ],
+        "size": [
+          183.03243,
+          138.353,
+          173.19000000000005
+        ]
+      },
+      "structural_issues": {},
+      "degenerate_triangles": 0,
+      "boundary_edges": 3260,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "exact_position_weld_diagnostic": {
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "collapsed_edges": 0,
+        "connected_components": 7,
+        "component_used_vertex_counts": [
+          3147,
+          402,
+          4,
+          3,
+          3,
+          3,
+          3
+        ],
+        "euler_characteristic": 8
+      }
+    },
+    {
+      "element_id": "FJ2810",
+      "sha256": "682f402206f15592acdeaae8ffb6b34c3e5c3267fa4685e63d2e4920ef2a80e0",
+      "bytes": 14465502,
+      "vertices": 102467,
+      "normals": 102467,
+      "texture_coordinates": 0,
+      "faces": 203382,
+      "polygon_sizes": {
+        "3": 203382
+      },
+      "bounds": {
+        "min": [
+          -334.119,
+          -246.783,
+          -78.1112
+        ],
+        "max": [
+          332.825,
+          45.2476,
+          1641.36
+        ],
+        "size": [
+          666.944,
+          292.0306,
+          1719.4712
+        ]
+      },
+      "structural_issues": {},
+      "degenerate_triangles": 0,
+      "boundary_edges": 1512,
+      "nonmanifold_edges": 0,
+      "inconsistent_winding_edges": 0,
+      "exact_position_weld_diagnostic": {
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "collapsed_edges": 0,
+        "connected_components": 1,
+        "component_used_vertex_counts": [
+          101691
+        ],
+        "euler_characteristic": 0
+      }
+    }
+  ],
+  "selection_candidates": [
+    {
+      "id": "pectoralis-major-right",
+      "group_id": "pectoralis-major",
+      "side": "right",
+      "element_ids": [
+        "FJ1446",
+        "FJ1447",
+        "FJ1464"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA34690",
+          "name_en": "clavicular part of right pectoralis major",
+          "element_ids": [
+            "FJ1447"
+          ]
+        },
+        {
+          "concept_id": "FMA79979",
+          "name_en": "sternocostal part of right pectoralis major",
+          "element_ids": [
+            "FJ1464"
+          ]
+        },
+        {
+          "concept_id": "FMA45874",
+          "name_en": "abdominal part of right pectoralis major",
+          "element_ids": [
+            "FJ1446"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 3,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 7991,
+        "faces": 10496,
+        "valid_faces": 10496,
+        "triangles_if_fan_triangulated": 10496,
+        "degenerate_triangles": 0,
+        "boundary_edges": 4750,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            -194.262,
+            -219.353,
+            1104.78
+          ],
+          "max": [
+            -4.81557,
+            -81.0,
+            1335.9
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 3,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "pectoralis-major-left",
+      "group_id": "pectoralis-major",
+      "side": "left",
+      "element_ids": [
+        "FJ1446M",
+        "FJ1447M",
+        "FJ1464M"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA34691",
+          "name_en": "clavicular part of left pectoralis major",
+          "element_ids": [
+            "FJ1447M"
+          ]
+        },
+        {
+          "concept_id": "FMA79980",
+          "name_en": "sternocostal part of left pectoralis major",
+          "element_ids": [
+            "FJ1464M"
+          ]
+        },
+        {
+          "concept_id": "FMA45875",
+          "name_en": "abdominal part of left pectoralis major",
+          "element_ids": [
+            "FJ1446M"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 3,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 7980,
+        "faces": 10496,
+        "valid_faces": 10496,
+        "triangles_if_fan_triangulated": 10496,
+        "degenerate_triangles": 0,
+        "boundary_edges": 4736,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            4.81557,
+            -219.353,
+            1104.78
+          ],
+          "max": [
+            194.262,
+            -81.0,
+            1335.9
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 3,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "deltoid-right",
+      "group_id": "deltoid",
+      "side": "right",
+      "element_ids": [
+        "FJ1467",
+        "FJ1468",
+        "FJ1513"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA34680",
+          "name_en": "clavicular part of right deltoid",
+          "element_ids": [
+            "FJ1468"
+          ]
+        },
+        {
+          "concept_id": "FMA34682",
+          "name_en": "acromial part of right deltoid",
+          "element_ids": [
+            "FJ1467"
+          ]
+        },
+        {
+          "concept_id": "FMA34684",
+          "name_en": "spinal part of right deltoid",
+          "element_ids": [
+            "FJ1513"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 3,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 5173,
+        "faces": 5406,
+        "valid_faces": 5406,
+        "triangles_if_fan_triangulated": 5406,
+        "degenerate_triangles": 0,
+        "boundary_edges": 3800,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            -227.228,
+            -121.331,
+            1187.75
+          ],
+          "max": [
+            -82.8341,
+            -2.72512,
+            1355.39
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 2,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "deltoid-left",
+      "group_id": "deltoid",
+      "side": "left",
+      "element_ids": [
+        "FJ1467M",
+        "FJ1468M",
+        "FJ1513M"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA34681",
+          "name_en": "clavicular part of left deltoid",
+          "element_ids": [
+            "FJ1468M"
+          ]
+        },
+        {
+          "concept_id": "FMA34683",
+          "name_en": "acromial part of left deltoid",
+          "element_ids": [
+            "FJ1467M"
+          ]
+        },
+        {
+          "concept_id": "FMA34685",
+          "name_en": "spinal part of left deltoid",
+          "element_ids": [
+            "FJ1513M"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 3,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 5200,
+        "faces": 5406,
+        "valid_faces": 5406,
+        "triangles_if_fan_triangulated": 5406,
+        "degenerate_triangles": 0,
+        "boundary_edges": 3828,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            82.8341,
+            -121.331,
+            1187.75
+          ],
+          "max": [
+            227.228,
+            -2.72512,
+            1355.39
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 2,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "trapezius-right",
+      "group_id": "trapezius",
+      "side": "right",
+      "element_ids": [
+        "FJ1520",
+        "FJ1521",
+        "FJ1554"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA33581",
+          "name_en": "ascending part of right trapezius",
+          "element_ids": [
+            "FJ1520"
+          ]
+        },
+        {
+          "concept_id": "FMA33584",
+          "name_en": "transverse part of right trapezius",
+          "element_ids": [
+            "FJ1554"
+          ]
+        },
+        {
+          "concept_id": "FMA33586",
+          "name_en": "descending part of right trapezius",
+          "element_ids": [
+            "FJ1521"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 3,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 16091,
+        "faces": 22098,
+        "valid_faces": 22098,
+        "triangles_if_fan_triangulated": 22098,
+        "degenerate_triangles": 0,
+        "boundary_edges": 9264,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            -163.242,
+            -100.66,
+            1054.01
+          ],
+          "max": [
+            3.87271,
+            24.5467,
+            1506.24
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 4,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 3,
+          "elements_with_nonmanifold_edges": [
+            {
+              "element_id": "FJ1521",
+              "edges": 4
+            }
+          ]
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "trapezius-left",
+      "group_id": "trapezius",
+      "side": "left",
+      "element_ids": [
+        "FJ1520M",
+        "FJ1521M",
+        "FJ1554M"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA33583",
+          "name_en": "ascending part of left trapezius",
+          "element_ids": [
+            "FJ1520M"
+          ]
+        },
+        {
+          "concept_id": "FMA33585",
+          "name_en": "transverse part of left trapezius",
+          "element_ids": [
+            "FJ1554M"
+          ]
+        },
+        {
+          "concept_id": "FMA33587",
+          "name_en": "descending part of left trapezius",
+          "element_ids": [
+            "FJ1521M"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 3,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 16041,
+        "faces": 22098,
+        "valid_faces": 22098,
+        "triangles_if_fan_triangulated": 22098,
+        "degenerate_triangles": 0,
+        "boundary_edges": 9212,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            -3.87271,
+            -100.66,
+            1054.01
+          ],
+          "max": [
+            163.242,
+            24.5466,
+            1506.24
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 4,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 3,
+          "elements_with_nonmanifold_edges": [
+            {
+              "element_id": "FJ1521M",
+              "edges": 4
+            }
+          ]
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "biceps-brachii-right",
+      "group_id": "biceps-brachii",
+      "side": "right",
+      "element_ids": [
+        "FJ1478",
+        "FJ1512"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA37684",
+          "name_en": "short head of right biceps brachii",
+          "element_ids": [
+            "FJ1512"
+          ]
+        },
+        {
+          "concept_id": "FMA37686",
+          "name_en": "long head of right biceps brachii",
+          "element_ids": [
+            "FJ1478"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 2,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 2792,
+        "faces": 3282,
+        "valid_faces": 3282,
+        "triangles_if_fan_triangulated": 3282,
+        "degenerate_triangles": 0,
+        "boundary_edges": 1932,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            -229.86,
+            -109.292,
+            994.072
+          ],
+          "max": [
+            -135.237,
+            -67.8089,
+            1339.42
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 2,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "biceps-brachii-left",
+      "group_id": "biceps-brachii",
+      "side": "left",
+      "element_ids": [
+        "FJ1478M",
+        "FJ1512M"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA37685",
+          "name_en": "short head of left biceps brachii",
+          "element_ids": [
+            "FJ1512M"
+          ]
+        },
+        {
+          "concept_id": "FMA37687",
+          "name_en": "long head of left biceps brachii",
+          "element_ids": [
+            "FJ1478M"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 2,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 2782,
+        "faces": 3282,
+        "valid_faces": 3282,
+        "triangles_if_fan_triangulated": 3282,
+        "degenerate_triangles": 0,
+        "boundary_edges": 1922,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            135.237,
+            -109.293,
+            994.072
+          ],
+          "max": [
+            229.86,
+            -67.8089,
+            1339.42
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 2,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "triceps-brachii-right",
+      "group_id": "triceps-brachii",
+      "side": "right",
+      "element_ids": [
+        "FJ1477",
+        "FJ1479",
+        "FJ1480"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA37695",
+          "name_en": "medial head of right triceps brachii",
+          "element_ids": [
+            "FJ1480"
+          ]
+        },
+        {
+          "concept_id": "FMA37697",
+          "name_en": "lateral head of right triceps brachii",
+          "element_ids": [
+            "FJ1477"
+          ]
+        },
+        {
+          "concept_id": "FMA37699",
+          "name_en": "long head of right triceps brachii",
+          "element_ids": [
+            "FJ1479"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 3,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 3403,
+        "faces": 5026,
+        "valid_faces": 5026,
+        "triangles_if_fan_triangulated": 5026,
+        "degenerate_triangles": 0,
+        "boundary_edges": 1780,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            -228.005,
+            -71.8799,
+            1029.35
+          ],
+          "max": [
+            -134.691,
+            -18.7595,
+            1300.75
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 3,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "triceps-brachii-left",
+      "group_id": "triceps-brachii",
+      "side": "left",
+      "element_ids": [
+        "FJ1477M",
+        "FJ1479M",
+        "FJ1480M"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA37696",
+          "name_en": "medial head of left triceps brachii",
+          "element_ids": [
+            "FJ1480M"
+          ]
+        },
+        {
+          "concept_id": "FMA37698",
+          "name_en": "lateral head of left triceps brachii",
+          "element_ids": [
+            "FJ1477M"
+          ]
+        },
+        {
+          "concept_id": "FMA37700",
+          "name_en": "long head of left triceps brachii",
+          "element_ids": [
+            "FJ1479M"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 3,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 3402,
+        "faces": 5026,
+        "valid_faces": 5026,
+        "triangles_if_fan_triangulated": 5026,
+        "degenerate_triangles": 0,
+        "boundary_edges": 1780,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            134.691,
+            -71.8799,
+            1029.35
+          ],
+          "max": [
+            228.005,
+            -18.7596,
+            1300.75
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 3,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "external-oblique-right",
+      "group_id": "external-oblique",
+      "side": "right",
+      "element_ids": [
+        "FJ1452"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA13336",
+          "name_en": "right external oblique",
+          "element_ids": [
+            "FJ1452"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 63907,
+        "faces": 111826,
+        "valid_faces": 111826,
+        "triangles_if_fan_triangulated": 111826,
+        "degenerate_triangles": 0,
+        "boundary_edges": 16128,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            -140.823,
+            -218.766,
+            793.626
+          ],
+          "max": [
+            -3.44858,
+            -37.0208,
+            1211.58
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 1,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "external-oblique-left",
+      "group_id": "external-oblique",
+      "side": "left",
+      "element_ids": [
+        "FJ1452M"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA13337",
+          "name_en": "left external oblique",
+          "element_ids": [
+            "FJ1452M"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 63893,
+        "faces": 111826,
+        "valid_faces": 111826,
+        "triangles_if_fan_triangulated": 111826,
+        "degenerate_triangles": 0,
+        "boundary_edges": 16096,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            3.44857,
+            -218.766,
+            793.625
+          ],
+          "max": [
+            140.823,
+            -37.0208,
+            1211.58
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 1,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "serratus-anterior-right",
+      "group_id": "serratus-anterior",
+      "side": "right",
+      "element_ids": [
+        "FJ1459"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA13398",
+          "name_en": "right serratus anterior",
+          "element_ids": [
+            "FJ1459"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 28465,
+        "faces": 49212,
+        "valid_faces": 49212,
+        "triangles_if_fan_triangulated": 49212,
+        "degenerate_triangles": 0,
+        "boundary_edges": 7696,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            -144.392,
+            -157.592,
+            1078.16
+          ],
+          "max": [
+            -57.7297,
+            5.26406,
+            1348.38
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 1,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "serratus-anterior-left",
+      "group_id": "serratus-anterior",
+      "side": "left",
+      "element_ids": [
+        "FJ1459M"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA13399",
+          "name_en": "left serratus anterior",
+          "element_ids": [
+            "FJ1459M"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 28450,
+        "faces": 49212,
+        "valid_faces": 49212,
+        "triangles_if_fan_triangulated": 49212,
+        "degenerate_triangles": 0,
+        "boundary_edges": 7670,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            57.7298,
+            -157.592,
+            1078.16
+          ],
+          "max": [
+            144.392,
+            5.26406,
+            1348.38
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 1,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "gluteus-maximus-right",
+      "group_id": "gluteus-maximus",
+      "side": "right",
+      "element_ids": [
+        "FJ1418"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA22328",
+          "name_en": "right gluteus maximus",
+          "element_ids": [
+            "FJ1418"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 2053,
+        "faces": 2376,
+        "valid_faces": 2376,
+        "triangles_if_fan_triangulated": 2376,
+        "degenerate_triangles": 0,
+        "boundary_edges": 1424,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            -145.401,
+            -78.0115,
+            667.745
+          ],
+          "max": [
+            1.52091,
+            19.8663,
+            932.557
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 1,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "gluteus-maximus-left",
+      "group_id": "gluteus-maximus",
+      "side": "left",
+      "element_ids": [
+        "FJ1418M"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA22329",
+          "name_en": "left gluteus maximus",
+          "element_ids": [
+            "FJ1418M"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 2053,
+        "faces": 2376,
+        "valid_faces": 2376,
+        "triangles_if_fan_triangulated": 2376,
+        "degenerate_triangles": 0,
+        "boundary_edges": 1424,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            -1.52091,
+            -78.0115,
+            667.745
+          ],
+          "max": [
+            145.401,
+            19.8663,
+            932.557
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 1,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "gluteus-medius-right",
+      "group_id": "gluteus-medius",
+      "side": "right",
+      "element_ids": [
+        "FJ1419"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA22330",
+          "name_en": "right gluteus medius",
+          "element_ids": [
+            "FJ1419"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 2312,
+        "faces": 3356,
+        "valid_faces": 3356,
+        "triangles_if_fan_triangulated": 3356,
+        "degenerate_triangles": 0,
+        "boundary_edges": 1214,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            -149.736,
+            -101.998,
+            788.743
+          ],
+          "max": [
+            -59.5963,
+            -16.9342,
+            950.903
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 1,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "gluteus-medius-left",
+      "group_id": "gluteus-medius",
+      "side": "left",
+      "element_ids": [
+        "FJ1419M"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA22331",
+          "name_en": "left gluteus medius",
+          "element_ids": [
+            "FJ1419M"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 2308,
+        "faces": 3356,
+        "valid_faces": 3356,
+        "triangles_if_fan_triangulated": 3356,
+        "degenerate_triangles": 0,
+        "boundary_edges": 1210,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            59.5963,
+            -101.998,
+            788.743
+          ],
+          "max": [
+            149.735,
+            -16.9342,
+            950.903
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 1,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "rectus-femoris-right",
+      "group_id": "rectus-femoris",
+      "side": "right",
+      "element_ids": [
+        "FJ1433"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA38928",
+          "name_en": "right rectus femoris",
+          "element_ids": [
+            "FJ1433"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 3326,
+        "faces": 5688,
+        "valid_faces": 5688,
+        "triangles_if_fan_triangulated": 5688,
+        "degenerate_triangles": 0,
+        "boundary_edges": 1004,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            -154.449,
+            -152.466,
+            314.708
+          ],
+          "max": [
+            -62.9145,
+            -83.8998,
+            871.104
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 0,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "rectus-femoris-left",
+      "group_id": "rectus-femoris",
+      "side": "left",
+      "element_ids": [
+        "FJ1433M"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA38929",
+          "name_en": "left rectus femoris",
+          "element_ids": [
+            "FJ1433M"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 3326,
+        "faces": 5688,
+        "valid_faces": 5688,
+        "triangles_if_fan_triangulated": 5688,
+        "degenerate_triangles": 0,
+        "boundary_edges": 1004,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            62.9145,
+            -152.466,
+            314.708
+          ],
+          "max": [
+            154.449,
+            -83.8998,
+            871.104
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 0,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "vastus-lateralis-right",
+      "group_id": "vastus-lateralis",
+      "side": "right",
+      "element_ids": [
+        "FJ1442"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA38930",
+          "name_en": "right vastus lateralis",
+          "element_ids": [
+            "FJ1442"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 3975,
+        "faces": 6688,
+        "valid_faces": 6688,
+        "triangles_if_fan_triangulated": 6688,
+        "degenerate_triangles": 0,
+        "boundary_edges": 1354,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            -159.632,
+            -137.051,
+            317.932
+          ],
+          "max": [
+            -84.0565,
+            -57.5032,
+            788.167
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 1,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "vastus-lateralis-left",
+      "group_id": "vastus-lateralis",
+      "side": "left",
+      "element_ids": [
+        "FJ1442M"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA38931",
+          "name_en": "left vastus lateralis",
+          "element_ids": [
+            "FJ1442M"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 3974,
+        "faces": 6688,
+        "valid_faces": 6688,
+        "triangles_if_fan_triangulated": 6688,
+        "degenerate_triangles": 0,
+        "boundary_edges": 1350,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            84.0565,
+            -137.051,
+            317.932
+          ],
+          "max": [
+            159.633,
+            -57.5032,
+            788.167
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 1,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "vastus-medialis-right",
+      "group_id": "vastus-medialis",
+      "side": "right",
+      "element_ids": [
+        "FJ1443"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA38932",
+          "name_en": "right vastus medialis",
+          "element_ids": [
+            "FJ1443"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 2773,
+        "faces": 4552,
+        "valid_faces": 4552,
+        "triangles_if_fan_triangulated": 4552,
+        "degenerate_triangles": 0,
+        "boundary_edges": 1032,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            -105.601,
+            -146.901,
+            340.548
+          ],
+          "max": [
+            -34.9392,
+            -89.132,
+            738.179
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 1,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "vastus-medialis-left",
+      "group_id": "vastus-medialis",
+      "side": "left",
+      "element_ids": [
+        "FJ1443M"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA38933",
+          "name_en": "left vastus medialis",
+          "element_ids": [
+            "FJ1443M"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 2772,
+        "faces": 4552,
+        "valid_faces": 4552,
+        "triangles_if_fan_triangulated": 4552,
+        "degenerate_triangles": 0,
+        "boundary_edges": 1030,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            34.9393,
+            -146.901,
+            340.548
+          ],
+          "max": [
+            105.601,
+            -89.132,
+            738.179
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 1,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "biceps-femoris-right",
+      "group_id": "biceps-femoris",
+      "side": "right",
+      "element_ids": [
+        "FJ1395",
+        "FJ1444"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA45888",
+          "name_en": "long head of right biceps femoris",
+          "element_ids": [
+            "FJ1395"
+          ]
+        },
+        {
+          "concept_id": "FMA45891",
+          "name_en": "short head of right biceps femoris",
+          "element_ids": [
+            "FJ1444"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 2,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 4049,
+        "faces": 6838,
+        "valid_faces": 6838,
+        "triangles_if_fan_triangulated": 6838,
+        "degenerate_triangles": 0,
+        "boundary_edges": 1252,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            -126.642,
+            -87.4787,
+            327.905
+          ],
+          "max": [
+            -48.6928,
+            -18.3096,
+            764.753
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 0,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "biceps-femoris-left",
+      "group_id": "biceps-femoris",
+      "side": "left",
+      "element_ids": [
+        "FJ1395M",
+        "FJ1444M"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA45889",
+          "name_en": "long head of left biceps femoris",
+          "element_ids": [
+            "FJ1395M"
+          ]
+        },
+        {
+          "concept_id": "FMA45892",
+          "name_en": "short head of left biceps femoris",
+          "element_ids": [
+            "FJ1444M"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 2,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 4052,
+        "faces": 6838,
+        "valid_faces": 6838,
+        "triangles_if_fan_triangulated": 6838,
+        "degenerate_triangles": 0,
+        "boundary_edges": 1256,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            48.6927,
+            -87.4787,
+            327.905
+          ],
+          "max": [
+            126.642,
+            -18.3095,
+            764.753
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 0,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "semitendinosus-right",
+      "group_id": "semitendinosus",
+      "side": "right",
+      "element_ids": [
+        "FJ1436"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA22358",
+          "name_en": "right semitendinosus",
+          "element_ids": [
+            "FJ1436"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 1812,
+        "faces": 2712,
+        "valid_faces": 2712,
+        "triangles_if_fan_triangulated": 2712,
+        "degenerate_triangles": 0,
+        "boundary_edges": 786,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            -68.2937,
+            -98.5865,
+            283.125
+          ],
+          "max": [
+            -26.9358,
+            -24.7803,
+            763.703
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 0,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "semitendinosus-left",
+      "group_id": "semitendinosus",
+      "side": "left",
+      "element_ids": [
+        "FJ1436M"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA22359",
+          "name_en": "left semitendinosus",
+          "element_ids": [
+            "FJ1436M"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 1808,
+        "faces": 2712,
+        "valid_faces": 2712,
+        "triangles_if_fan_triangulated": 2712,
+        "degenerate_triangles": 0,
+        "boundary_edges": 782,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            26.9357,
+            -98.5865,
+            283.125
+          ],
+          "max": [
+            68.2937,
+            -24.7803,
+            763.703
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 0,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "semimembranosus-right",
+      "group_id": "semimembranosus",
+      "side": "right",
+      "element_ids": [
+        "FJ1435"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA22448",
+          "name_en": "right semimembranosus",
+          "element_ids": [
+            "FJ1435"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 2588,
+        "faces": 4612,
+        "valid_faces": 4612,
+        "triangles_if_fan_triangulated": 4612,
+        "degenerate_triangles": 0,
+        "boundary_edges": 650,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            -70.9992,
+            -103.495,
+            315.926
+          ],
+          "max": [
+            -13.1749,
+            -37.3297,
+            754.438
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 0,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "semimembranosus-left",
+      "group_id": "semimembranosus",
+      "side": "left",
+      "element_ids": [
+        "FJ1435M"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA22449",
+          "name_en": "left semimembranosus",
+          "element_ids": [
+            "FJ1435M"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 2588,
+        "faces": 4612,
+        "valid_faces": 4612,
+        "triangles_if_fan_triangulated": 4612,
+        "degenerate_triangles": 0,
+        "boundary_edges": 650,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            13.1749,
+            -103.495,
+            315.926
+          ],
+          "max": [
+            70.9991,
+            -37.3296,
+            754.438
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 0,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "gastrocnemius-right",
+      "group_id": "gastrocnemius",
+      "side": "right",
+      "element_ids": [
+        "FJ1394",
+        "FJ1397"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA45957",
+          "name_en": "medial head of right gastrocnemius",
+          "element_ids": [
+            "FJ1397"
+          ]
+        },
+        {
+          "concept_id": "FMA45960",
+          "name_en": "lateral head of right gastrocnemius",
+          "element_ids": [
+            "FJ1394"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 2,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 4011,
+        "faces": 6894,
+        "valid_faces": 6894,
+        "triangles_if_fan_triangulated": 6894,
+        "degenerate_triangles": 0,
+        "boundary_edges": 1194,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            -116.992,
+            -92.6934,
+            122.833
+          ],
+          "max": [
+            -21.7597,
+            -5.80911,
+            432.102
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 1,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "gastrocnemius-left",
+      "group_id": "gastrocnemius",
+      "side": "left",
+      "element_ids": [
+        "FJ1394M",
+        "FJ1397M"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA45958",
+          "name_en": "medial head of left gastrocnemius",
+          "element_ids": [
+            "FJ1397M"
+          ]
+        },
+        {
+          "concept_id": "FMA45961",
+          "name_en": "lateral head of left gastrocnemius",
+          "element_ids": [
+            "FJ1394M"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 2,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 4010,
+        "faces": 6894,
+        "valid_faces": 6894,
+        "triangles_if_fan_triangulated": 6894,
+        "degenerate_triangles": 0,
+        "boundary_edges": 1196,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            21.7597,
+            -92.6934,
+            122.833
+          ],
+          "max": [
+            116.992,
+            -5.80911,
+            432.102
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 1,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "soleus-right",
+      "group_id": "soleus",
+      "side": "right",
+      "element_ids": [
+        "FJ1437"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA22558",
+          "name_en": "right soleus",
+          "element_ids": [
+            "FJ1437"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 2674,
+        "faces": 4418,
+        "valid_faces": 4418,
+        "triangles_if_fan_triangulated": 4418,
+        "degenerate_triangles": 0,
+        "boundary_edges": 910,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            -115.785,
+            -91.1189,
+            32.464
+          ],
+          "max": [
+            -35.6001,
+            -32.1986,
+            358.617
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 1,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "soleus-left",
+      "group_id": "soleus",
+      "side": "left",
+      "element_ids": [
+        "FJ1437M"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA22559",
+          "name_en": "left soleus",
+          "element_ids": [
+            "FJ1437M"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 2674,
+        "faces": 4418,
+        "valid_faces": 4418,
+        "triangles_if_fan_triangulated": 4418,
+        "degenerate_triangles": 0,
+        "boundary_edges": 910,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            35.6001,
+            -91.1189,
+            32.464
+          ],
+          "max": [
+            115.785,
+            -32.1986,
+            358.617
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 1,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "tibialis-anterior-right",
+      "group_id": "tibialis-anterior",
+      "side": "right",
+      "element_ids": [
+        "FJ1439"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA22544",
+          "name_en": "right tibialis anterior",
+          "element_ids": [
+            "FJ1439"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 2204,
+        "faces": 2510,
+        "valid_faces": 2510,
+        "triangles_if_fan_triangulated": 2510,
+        "degenerate_triangles": 0,
+        "boundary_edges": 1516,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            -116.779,
+            -149.6,
+            -38.8064
+          ],
+          "max": [
+            -66.967,
+            -72.8246,
+            355.269
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 1,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "tibialis-anterior-left",
+      "group_id": "tibialis-anterior",
+      "side": "left",
+      "element_ids": [
+        "FJ1439M"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA22545",
+          "name_en": "left tibialis anterior",
+          "element_ids": [
+            "FJ1439M"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 2206,
+        "faces": 2510,
+        "valid_faces": 2510,
+        "triangles_if_fan_triangulated": 2510,
+        "degenerate_triangles": 0,
+        "boundary_edges": 1518,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            66.967,
+            -149.6,
+            -38.8064
+          ],
+          "max": [
+            116.779,
+            -72.8246,
+            355.269
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 1,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "sartorius-right",
+      "group_id": "sartorius",
+      "side": "right",
+      "element_ids": [
+        "FJ1434"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA22354",
+          "name_en": "right sartorius",
+          "element_ids": [
+            "FJ1434"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 2630,
+        "faces": 3444,
+        "valid_faces": 3444,
+        "triangles_if_fan_triangulated": 3444,
+        "degenerate_triangles": 0,
+        "boundary_edges": 1538,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            -131.186,
+            -140.956,
+            274.19
+          ],
+          "max": [
+            -20.6605,
+            -83.9907,
+            901.792
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 1,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "sartorius-left",
+      "group_id": "sartorius",
+      "side": "left",
+      "element_ids": [
+        "FJ1434M"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA22355",
+          "name_en": "left sartorius",
+          "element_ids": [
+            "FJ1434M"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 2633,
+        "faces": 3444,
+        "valid_faces": 3444,
+        "triangles_if_fan_triangulated": 3444,
+        "degenerate_triangles": 0,
+        "boundary_edges": 1542,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            20.6605,
+            -140.956,
+            274.19
+          ],
+          "max": [
+            131.186,
+            -83.9907,
+            901.792
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 1,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "tensor-fasciae-latae-right",
+      "group_id": "tensor-fasciae-latae",
+      "side": "right",
+      "element_ids": [
+        "FJ1438"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA22425",
+          "name_en": "right tensor fasciae latae",
+          "element_ids": [
+            "FJ1438"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 1087,
+        "faces": 1254,
+        "valid_faces": 1254,
+        "triangles_if_fan_triangulated": 1254,
+        "degenerate_triangles": 0,
+        "boundary_edges": 804,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            -160.033,
+            -133.305,
+            759.846
+          ],
+          "max": [
+            -128.202,
+            -93.8767,
+            918.714
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 0,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "tensor-fasciae-latae-left",
+      "group_id": "tensor-fasciae-latae",
+      "side": "left",
+      "element_ids": [
+        "FJ1438M"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA22426",
+          "name_en": "left tensor fasciae latae",
+          "element_ids": [
+            "FJ1438M"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 1087,
+        "faces": 1254,
+        "valid_faces": 1254,
+        "triangles_if_fan_triangulated": 1254,
+        "degenerate_triangles": 0,
+        "boundary_edges": 804,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            128.202,
+            -133.305,
+            759.846
+          ],
+          "max": [
+            160.033,
+            -93.8767,
+            918.714
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 0,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "adductor-longus-right",
+      "group_id": "adductor-longus",
+      "side": "right",
+      "element_ids": [
+        "FJ1402"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA22456",
+          "name_en": "right adductor longus",
+          "element_ids": [
+            "FJ1402"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 1536,
+        "faces": 2616,
+        "valid_faces": 2616,
+        "triangles_if_fan_triangulated": 2616,
+        "degenerate_triangles": 0,
+        "boundary_edges": 460,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            -94.1022,
+            -136.972,
+            510.204
+          ],
+          "max": [
+            -17.0401,
+            -89.3758,
+            799.665
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 0,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "adductor-longus-left",
+      "group_id": "adductor-longus",
+      "side": "left",
+      "element_ids": [
+        "FJ1402M"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA22457",
+          "name_en": "left adductor longus",
+          "element_ids": [
+            "FJ1402M"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 1536,
+        "faces": 2616,
+        "valid_faces": 2616,
+        "triangles_if_fan_triangulated": 2616,
+        "degenerate_triangles": 0,
+        "boundary_edges": 460,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            17.0402,
+            -136.971,
+            510.204
+          ],
+          "max": [
+            94.1022,
+            -89.3758,
+            799.665
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 0,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "gracilis-right",
+      "group_id": "gracilis",
+      "side": "right",
+      "element_ids": [
+        "FJ1421"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA43883",
+          "name_en": "right gracilis",
+          "element_ids": [
+            "FJ1421"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 2086,
+        "faces": 3172,
+        "valid_faces": 3172,
+        "triangles_if_fan_triangulated": 3172,
+        "degenerate_triangles": 0,
+        "boundary_edges": 984,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            -70.4152,
+            -132.533,
+            283.014
+          ],
+          "max": [
+            -12.0663,
+            -65.3504,
+            797.563
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 1,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "gracilis-left",
+      "group_id": "gracilis",
+      "side": "left",
+      "element_ids": [
+        "FJ1421M"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA43884",
+          "name_en": "left gracilis",
+          "element_ids": [
+            "FJ1421M"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 2085,
+        "faces": 3172,
+        "valid_faces": 3172,
+        "triangles_if_fan_triangulated": 3172,
+        "degenerate_triangles": 0,
+        "boundary_edges": 984,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            12.0663,
+            -132.533,
+            283.014
+          ],
+          "max": [
+            70.4152,
+            -65.3504,
+            797.563
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 1,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "brachioradialis-right",
+      "group_id": "brachioradialis",
+      "side": "right",
+      "element_ids": [
+        "FJ1487"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA38486",
+          "name_en": "right brachioradialis",
+          "element_ids": [
+            "FJ1487"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 3270,
+        "faces": 4874,
+        "valid_faces": 4874,
+        "triangles_if_fan_triangulated": 4874,
+        "degenerate_triangles": 0,
+        "boundary_edges": 1776,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            -280.586,
+            -122.878,
+            809.712
+          ],
+          "max": [
+            -208.159,
+            -55.8244,
+            1147.61
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 0,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "brachioradialis-left",
+      "group_id": "brachioradialis",
+      "side": "left",
+      "element_ids": [
+        "FJ1487M"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA38487",
+          "name_en": "left brachioradialis",
+          "element_ids": [
+            "FJ1487M"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 3272,
+        "faces": 4874,
+        "valid_faces": 4874,
+        "triangles_if_fan_triangulated": 4874,
+        "degenerate_triangles": 0,
+        "boundary_edges": 1778,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            208.159,
+            -122.878,
+            809.712
+          ],
+          "max": [
+            280.586,
+            -55.8244,
+            1147.61
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 0,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "sternocleidomastoid-right",
+      "group_id": "sternocleidomastoid",
+      "side": "right",
+      "element_ids": [
+        "FJ1595"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA13408",
+          "name_en": "right sternocleidomastoid",
+          "element_ids": [
+            "FJ1595"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 6642,
+        "faces": 10344,
+        "valid_faces": 10344,
+        "triangles_if_fan_triangulated": 10344,
+        "degenerate_triangles": 0,
+        "boundary_edges": 2648,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            -63.04,
+            -156.907,
+            1301.97
+          ],
+          "max": [
+            61.405,
+            -37.2539,
+            1503.19
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 1,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "sternocleidomastoid-left",
+      "group_id": "sternocleidomastoid",
+      "side": "left",
+      "element_ids": [
+        "FJ1573"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA13409",
+          "name_en": "left sternocleidomastoid",
+          "element_ids": [
+            "FJ1573"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 6210,
+        "faces": 10224,
+        "valid_faces": 10224,
+        "triangles_if_fan_triangulated": 10224,
+        "degenerate_triangles": 0,
+        "boundary_edges": 2110,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            0.579663,
+            -156.806,
+            1301.99
+          ],
+          "max": [
+            61.6655,
+            -37.3911,
+            1503.02
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 0,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "flexor-carpi-radialis-right",
+      "group_id": "flexor-carpi-radialis",
+      "side": "right",
+      "element_ids": [
+        "FJ1496"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA38460",
+          "name_en": "right flexor carpi radialis",
+          "element_ids": [
+            "FJ1496"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 819,
+        "faces": 1148,
+        "valid_faces": 1148,
+        "triangles_if_fan_triangulated": 1148,
+        "degenerate_triangles": 0,
+        "boundary_edges": 460,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            -272.111,
+            -136.406,
+            780.697
+          ],
+          "max": [
+            -184.36,
+            -70.8677,
+            1057.48
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 1,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "flexor-carpi-radialis-left",
+      "group_id": "flexor-carpi-radialis",
+      "side": "left",
+      "element_ids": [
+        "FJ1496M"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA38461",
+          "name_en": "left flexor carpi radialis",
+          "element_ids": [
+            "FJ1496M"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 819,
+        "faces": 1148,
+        "valid_faces": 1148,
+        "triangles_if_fan_triangulated": 1148,
+        "degenerate_triangles": 0,
+        "boundary_edges": 460,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            184.36,
+            -136.407,
+            780.697
+          ],
+          "max": [
+            272.111,
+            -70.8677,
+            1057.48
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 1,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "extensor-carpi-radialis-longus-right",
+      "group_id": "extensor-carpi-radialis-longus",
+      "side": "right",
+      "element_ids": [
+        "FJ1490"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA38495",
+          "name_en": "right extensor carpi radialis longus",
+          "element_ids": [
+            "FJ1490"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 1696,
+        "faces": 2474,
+        "valid_faces": 2474,
+        "triangles_if_fan_triangulated": 2474,
+        "degenerate_triangles": 0,
+        "boundary_edges": 886,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            -277.863,
+            -120.979,
+            779.144
+          ],
+          "max": [
+            -220.086,
+            -53.2059,
+            1101.61
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 1,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "extensor-carpi-radialis-longus-left",
+      "group_id": "extensor-carpi-radialis-longus",
+      "side": "left",
+      "element_ids": [
+        "FJ1490M"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA38496",
+          "name_en": "left extensor carpi radialis longus",
+          "element_ids": [
+            "FJ1490M"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 1702,
+        "faces": 2474,
+        "valid_faces": 2474,
+        "triangles_if_fan_triangulated": 2474,
+        "degenerate_triangles": 0,
+        "boundary_edges": 892,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            220.068,
+            -120.979,
+            779.144
+          ],
+          "max": [
+            277.863,
+            -53.2059,
+            1101.61
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 1,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "extensor-carpi-radialis-brevis-right",
+      "group_id": "extensor-carpi-radialis-brevis",
+      "side": "right",
+      "element_ids": [
+        "FJ1489"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA38498",
+          "name_en": "right extensor carpi radialis brevis",
+          "element_ids": [
+            "FJ1489"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 1564,
+        "faces": 2098,
+        "valid_faces": 2098,
+        "triangles_if_fan_triangulated": 2098,
+        "degenerate_triangles": 0,
+        "boundary_edges": 996,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            -272.638,
+            -115.743,
+            776.055
+          ],
+          "max": [
+            -228.364,
+            -50.2609,
+            1078.71
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 1,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "extensor-carpi-radialis-brevis-left",
+      "group_id": "extensor-carpi-radialis-brevis",
+      "side": "left",
+      "element_ids": [
+        "FJ1489M"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA38499",
+          "name_en": "left extensor carpi radialis brevis",
+          "element_ids": [
+            "FJ1489M"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 1564,
+        "faces": 2098,
+        "valid_faces": 2098,
+        "triangles_if_fan_triangulated": 2098,
+        "degenerate_triangles": 0,
+        "boundary_edges": 996,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            228.364,
+            -115.743,
+            776.055
+          ],
+          "max": [
+            272.638,
+            -50.2609,
+            1078.71
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 1,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "extensor-carpi-ulnaris-right",
+      "group_id": "extensor-carpi-ulnaris",
+      "side": "right",
+      "element_ids": [
+        "FJ1472",
+        "FJ1517"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA38507",
+          "name_en": "right extensor carpi ulnaris",
+          "element_ids": [
+            "FJ1472",
+            "FJ1517"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 2,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 4089,
+        "faces": 3394,
+        "valid_faces": 3394,
+        "triangles_if_fan_triangulated": 3394,
+        "degenerate_triangles": 0,
+        "boundary_edges": 3500,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            -237.43,
+            -126.798,
+            771.166
+          ],
+          "max": [
+            -219.476,
+            -49.6848,
+            1058.87
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 1,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "extensor-carpi-ulnaris-left",
+      "group_id": "extensor-carpi-ulnaris",
+      "side": "left",
+      "element_ids": [
+        "FJ1472M",
+        "FJ1517M"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA38508",
+          "name_en": "left extensor carpi ulnaris",
+          "element_ids": [
+            "FJ1472M",
+            "FJ1517M"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 2,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 4099,
+        "faces": 3394,
+        "valid_faces": 3394,
+        "triangles_if_fan_triangulated": 3394,
+        "degenerate_triangles": 0,
+        "boundary_edges": 3512,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            219.476,
+            -126.799,
+            771.166
+          ],
+          "max": [
+            237.43,
+            -49.6848,
+            1058.87
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 1,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "extensor-digitorum-right",
+      "group_id": "extensor-digitorum",
+      "side": "right",
+      "element_ids": [
+        "FJ1492"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA38501",
+          "name_en": "right extensor digitorum",
+          "element_ids": [
+            "FJ1492"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 3355,
+        "faces": 4294,
+        "valid_faces": 4294,
+        "triangles_if_fan_triangulated": 4294,
+        "degenerate_triangles": 0,
+        "boundary_edges": 2250,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            -305.054,
+            -162.529,
+            677.981
+          ],
+          "max": [
+            -222.476,
+            -45.3127,
+            1059.96
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 0,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "extensor-digitorum-left",
+      "group_id": "extensor-digitorum",
+      "side": "left",
+      "element_ids": [
+        "FJ1492M"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA38502",
+          "name_en": "left extensor digitorum",
+          "element_ids": [
+            "FJ1492M"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 3350,
+        "faces": 4294,
+        "valid_faces": 4294,
+        "triangles_if_fan_triangulated": 4294,
+        "degenerate_triangles": 0,
+        "boundary_edges": 2242,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            222.477,
+            -162.529,
+            677.981
+          ],
+          "max": [
+            305.054,
+            -45.3127,
+            1059.96
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 0,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "fibularis-longus-right",
+      "group_id": "fibularis-longus",
+      "side": "right",
+      "element_ids": [
+        "FJ1410"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA22552",
+          "name_en": "right fibularis longus",
+          "element_ids": [
+            "FJ1410"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 2946,
+        "faces": 3860,
+        "valid_faces": 3860,
+        "triangles_if_fan_triangulated": 3860,
+        "degenerate_triangles": 0,
+        "boundary_edges": 1736,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            -126.428,
+            -136.529,
+            -52.8049
+          ],
+          "max": [
+            -82.4042,
+            -40.8001,
+            351.77
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 1,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "fibularis-longus-left",
+      "group_id": "fibularis-longus",
+      "side": "left",
+      "element_ids": [
+        "FJ1410M"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA22553",
+          "name_en": "left fibularis longus",
+          "element_ids": [
+            "FJ1410M"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 2947,
+        "faces": 3860,
+        "valid_faces": 3860,
+        "triangles_if_fan_triangulated": 3860,
+        "degenerate_triangles": 0,
+        "boundary_edges": 1736,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            82.4042,
+            -136.529,
+            -52.8049
+          ],
+          "max": [
+            126.428,
+            -40.8001,
+            351.77
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 1,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "extensor-digitorum-longus-right",
+      "group_id": "extensor-digitorum-longus",
+      "side": "right",
+      "element_ids": [
+        "FJ1406"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA22548",
+          "name_en": "right extensor digitorum longus",
+          "element_ids": [
+            "FJ1406"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 3964,
+        "faces": 4546,
+        "valid_faces": 4546,
+        "triangles_if_fan_triangulated": 4546,
+        "degenerate_triangles": 0,
+        "boundary_edges": 2870,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            -166.069,
+            -223.662,
+            -67.0626
+          ],
+          "max": [
+            -89.3483,
+            -58.3178,
+            359.356
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 1,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    },
+    {
+      "id": "extensor-digitorum-longus-left",
+      "group_id": "extensor-digitorum-longus",
+      "side": "left",
+      "element_ids": [
+        "FJ1406M"
+      ],
+      "component_identities": [
+        {
+          "concept_id": "FMA22549",
+          "name_en": "left extensor digitorum longus",
+          "element_ids": [
+            "FJ1406M"
+          ]
+        }
+      ],
+      "geometry": {
+        "element_count": 1,
+        "all_element_ids_present_in_archive": true,
+        "vertices": 3965,
+        "faces": 4546,
+        "valid_faces": 4546,
+        "triangles_if_fan_triangulated": 4546,
+        "degenerate_triangles": 0,
+        "boundary_edges": 2872,
+        "nonmanifold_edges": 0,
+        "inconsistent_winding_edges": 0,
+        "elements_with_structural_issues": [],
+        "elements_with_degenerate_triangles": [],
+        "bounds": {
+          "min": [
+            89.3483,
+            -223.662,
+            -67.0626
+          ],
+          "max": [
+            166.069,
+            -58.3178,
+            359.356
+          ]
+        },
+        "exact_position_weld_diagnostic": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "inconsistent_winding_edges": 0,
+          "collapsed_edges": 0,
+          "elements_with_multiple_components": 1,
+          "elements_with_nonmanifold_edges": []
+        }
+      },
+      "anatomical_and_visual_approval": false
+    }
+  ]
+}

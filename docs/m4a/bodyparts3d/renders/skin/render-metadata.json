@@ -1,0 +1,66 @@
+{
+  "source_archive_sha256": "40665852c49f218326590e204db91064a1ecfc3c6f8cbd7bbbcaac62c7cd409e",
+  "mode": "skin",
+  "source_element_ids": [
+    "FJ2810"
+  ],
+  "source_skin_bounds": {
+    "min": [
+      -334.1189880371094,
+      -246.7830047607422,
+      -78.11119842529297
+    ],
+    "max": [
+      332.82501220703125,
+      45.24760055541992,
+      1641.3599853515625
+    ]
+  },
+  "source_axes": {
+    "+Z": "superior",
+    "-Y": "anterior",
+    "+X": "anatomical left"
+  },
+  "transform": {
+    "translation_before_scale": [
+      0.6469879150390625,
+      100.7677001953125,
+      78.11119842529297
+    ],
+    "uniform_scale": 0.0010468334782129127
+  },
+  "exact_coordinate_weld_within_each_source_element": true,
+  "smooth_face_normals": true,
+  "denoising": false,
+  "subdivision_levels": 0,
+  "orange_pectorals": false,
+  "counts": {
+    "objects": 1,
+    "vertices": 101691,
+    "polygons": 203382,
+    "source_vertices_before_exact_weld": 102467
+  },
+  "frames": [
+    {
+      "view": "front",
+      "camera_yaw_degrees": 0,
+      "path": "front.png"
+    },
+    {
+      "view": "three-quarter",
+      "camera_yaw_degrees": -35,
+      "path": "three-quarter.png"
+    },
+    {
+      "view": "side",
+      "camera_yaw_degrees": -90,
+      "path": "side.png"
+    },
+    {
+      "view": "back",
+      "camera_yaw_degrees": 180,
+      "path": "back.png"
+    }
+  ],
+  "note": "Audit candidate, no visual approval. Skin and muscle renders show the source as separate alternatives, not an invented complete mannequin."
+}

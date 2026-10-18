@@ -1,0 +1,87 @@
+selection_id	side	concept_id	representation_id	official_name	element_id	isa_element_parts_line
+pectoralis-major-right	right	FMA34690	BP5582	clavicular part of right pectoralis major	FJ1447	5011
+pectoralis-major-right	right	FMA79979	BP5613	sternocostal part of right pectoralis major	FJ1464	25324
+pectoralis-major-right	right	FMA45874	BP5615	abdominal part of right pectoralis major	FJ1446	5946
+pectoralis-major-left	left	FMA34691	BP9095	clavicular part of left pectoralis major	FJ1447M	5012
+pectoralis-major-left	left	FMA79980	BP8323	sternocostal part of left pectoralis major	FJ1464M	25325
+pectoralis-major-left	left	FMA45875	BP7862	abdominal part of left pectoralis major	FJ1446M	5947
+deltoid-right	right	FMA34680	BP7573	clavicular part of right deltoid	FJ1468	4999
+deltoid-right	right	FMA34682	BP7571	acromial part of right deltoid	FJ1467	5001
+deltoid-right	right	FMA34684	BP5607	spinal part of right deltoid	FJ1513	5003
+deltoid-left	left	FMA34681	BP8259	clavicular part of left deltoid	FJ1468M	5000
+deltoid-left	left	FMA34683	BP9075	acromial part of left deltoid	FJ1467M	5002
+deltoid-left	left	FMA34685	BP8151	spinal part of left deltoid	FJ1513M	5004
+trapezius-right	right	FMA33581	BP5638	ascending part of right trapezius	FJ1520	4981
+trapezius-right	right	FMA33584	BP5610	transverse part of right trapezius	FJ1554	4983
+trapezius-right	right	FMA33586	BP5636	descending part of right trapezius	FJ1521	4985
+trapezius-left	left	FMA33583	BP8225	ascending part of left trapezius	FJ1520M	4982
+trapezius-left	left	FMA33585	BP8252	transverse part of left trapezius	FJ1554M	4984
+trapezius-left	left	FMA33587	BP8267	descending part of left trapezius	FJ1521M	4986
+biceps-brachii-right	right	FMA37684	BP5558	short head of right biceps brachii	FJ1512	5395
+biceps-brachii-right	right	FMA37686	BP5566	long head of right biceps brachii	FJ1478	5397
+biceps-brachii-left	left	FMA37685	BP9153	short head of left biceps brachii	FJ1512M	5396
+biceps-brachii-left	left	FMA37687	BP8816	long head of left biceps brachii	FJ1478M	5398
+triceps-brachii-right	right	FMA37695	BP5562	medial head of right triceps brachii	FJ1480	5405
+triceps-brachii-right	right	FMA37697	BP5550	lateral head of right triceps brachii	FJ1477	5407
+triceps-brachii-right	right	FMA37699	BP5564	long head of right triceps brachii	FJ1479	5409
+triceps-brachii-left	left	FMA37696	BP8257	medial head of left triceps brachii	FJ1480M	5406
+triceps-brachii-left	left	FMA37698	BP8525	lateral head of left triceps brachii	FJ1477M	5408
+triceps-brachii-left	left	FMA37700	BP8344	long head of left triceps brachii	FJ1479M	5410
+external-oblique-right	right	FMA13336	BP4967	right external oblique	FJ1452	2418
+external-oblique-left	left	FMA13337	BP8154	left external oblique	FJ1452M	2419
+serratus-anterior-right	right	FMA13398	BP4782	right serratus anterior	FJ1459	2479
+serratus-anterior-left	left	FMA13399	BP8760	left serratus anterior	FJ1459M	2480
+gluteus-maximus-right	right	FMA22328	BP5065	right gluteus maximus	FJ1418	3454
+gluteus-maximus-left	left	FMA22329	BP8401	left gluteus maximus	FJ1418M	3455
+gluteus-medius-right	right	FMA22330	BP5063	right gluteus medius	FJ1419	3456
+gluteus-medius-left	left	FMA22331	BP9213	left gluteus medius	FJ1419M	3457
+rectus-femoris-right	right	FMA38928	BP5598	right rectus femoris	FJ1433	5605
+rectus-femoris-left	left	FMA38929	BP8094	left rectus femoris	FJ1433M	5606
+vastus-lateralis-right	right	FMA38930	BP5602	right vastus lateralis	FJ1442	5607
+vastus-lateralis-left	left	FMA38931	BP8754	left vastus lateralis	FJ1442M	5608
+vastus-medialis-right	right	FMA38932	BP5600	right vastus medialis	FJ1443	5609
+vastus-medialis-left	left	FMA38933	BP9128	left vastus medialis	FJ1443M	5610
+biceps-femoris-right	right	FMA45888	BP5575	long head of right biceps femoris	FJ1395	5954
+biceps-femoris-right	right	FMA45891	BP5573	short head of right biceps femoris	FJ1444	5958
+biceps-femoris-left	left	FMA45889	BP8331	long head of left biceps femoris	FJ1395M	5955
+biceps-femoris-left	left	FMA45892	BP8616	short head of left biceps femoris	FJ1444M	5959
+semitendinosus-right	right	FMA22358	BP4991	right semitendinosus	FJ1436	3476
+semitendinosus-left	left	FMA22359	BP9066	left semitendinosus	FJ1436M	3477
+semimembranosus-right	right	FMA22448	BP4989	right semimembranosus	FJ1435	3526
+semimembranosus-left	left	FMA22449	BP7829	left semimembranosus	FJ1435M	3527
+gastrocnemius-right	right	FMA45957	BP5539	medial head of right gastrocnemius	FJ1397	5966
+gastrocnemius-right	right	FMA45960	BP5541	lateral head of right gastrocnemius	FJ1394	5970
+gastrocnemius-left	left	FMA45958	BP9217	medial head of left gastrocnemius	FJ1397M	5967
+gastrocnemius-left	left	FMA45961	BP7939	lateral head of left gastrocnemius	FJ1394M	5971
+soleus-right	right	FMA22558	BP4999	right soleus	FJ1437	3644
+soleus-left	left	FMA22559	BP8819	left soleus	FJ1437M	3645
+tibialis-anterior-right	right	FMA22544	BP5018	right tibialis anterior	FJ1439	3632
+tibialis-anterior-left	left	FMA22545	BP8720	left tibialis anterior	FJ1439M	3633
+sartorius-right	right	FMA22354	BP4994	right sartorius	FJ1434	3472
+sartorius-left	left	FMA22355	BP8876	left sartorius	FJ1434M	3473
+tensor-fasciae-latae-right	right	FMA22425	BP5072	right tensor fasciae latae	FJ1438	3482
+tensor-fasciae-latae-left	left	FMA22426	BP9184	left tensor fasciae latae	FJ1438M	3483
+adductor-longus-right	right	FMA22456	BP4984	right adductor longus	FJ1402	3532
+adductor-longus-left	left	FMA22457	BP8604	left adductor longus	FJ1402M	3533
+gracilis-right	right	FMA43883	BP4976	right gracilis	FJ1421	5643
+gracilis-left	left	FMA43884	BP8926	left gracilis	FJ1421M	5644
+brachioradialis-right	right	FMA38486	BP4833	right brachioradialis	FJ1487	5495
+brachioradialis-left	left	FMA38487	BP8244	left brachioradialis	FJ1487M	5496
+sternocleidomastoid-right	right	FMA13408	BP4909	right sternocleidomastoid	FJ1595	2495
+sternocleidomastoid-left	left	FMA13409	BP4910	left sternocleidomastoid	FJ1573	2496
+flexor-carpi-radialis-right	right	FMA38460	BP4841	right flexor carpi radialis	FJ1496	5457
+flexor-carpi-radialis-left	left	FMA38461	BP8940	left flexor carpi radialis	FJ1496M	5458
+extensor-carpi-radialis-longus-right	right	FMA38495	BP4831	right extensor carpi radialis longus	FJ1490	5537
+extensor-carpi-radialis-longus-left	left	FMA38496	BP9280	left extensor carpi radialis longus	FJ1490M	5538
+extensor-carpi-radialis-brevis-right	right	FMA38498	BP4823	right extensor carpi radialis brevis	FJ1489	5541
+extensor-carpi-radialis-brevis-left	left	FMA38499	BP9287	left extensor carpi radialis brevis	FJ1489M	5542
+extensor-carpi-ulnaris-right	right	FMA38507	BP4829	right extensor carpi ulnaris	FJ1472	5555
+extensor-carpi-ulnaris-right	right	FMA38507	BP4829	right extensor carpi ulnaris	FJ1517	5556
+extensor-carpi-ulnaris-left	left	FMA38508	BP7970	left extensor carpi ulnaris	FJ1472M	5557
+extensor-carpi-ulnaris-left	left	FMA38508	BP7970	left extensor carpi ulnaris	FJ1517M	5558
+extensor-digitorum-right	right	FMA38501	BP4827	right extensor digitorum	FJ1492	5545
+extensor-digitorum-left	left	FMA38502	BP8560	left extensor digitorum	FJ1492M	5546
+fibularis-longus-right	right	FMA22552	BP5013	right fibularis longus	FJ1410	3640
+fibularis-longus-left	left	FMA22553	BP8846	left fibularis longus	FJ1410M	3641
+extensor-digitorum-longus-right	right	FMA22548	BP5024	right extensor digitorum longus	FJ1406	3636
+extensor-digitorum-longus-left	left	FMA22549	BP8162	left extensor digitorum longus	FJ1406M	3637
