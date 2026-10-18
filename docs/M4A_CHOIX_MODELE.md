@@ -1,14 +1,14 @@
 # M4A — Étude d’une nouvelle base 3D
 
-État du **18 octobre 2026** : étude en cours, **comparaison des 2–3 meilleures bases non encore complète**. Aucun modèle retenu ni intégré ; le moteur interactif et M4B ne sont pas commencés. Suite à la décision utilisateur, la reconstruction de BodyParts3D est abandonnée pour cette étape. L’audit précédent reste dans [AUDIT_M4A_ANATOMIE.md](AUDIT_M4A_ANATOMIE.md).
+État du **18 octobre 2026**, reprise depuis `1da5ba6` : **trois candidats réels comparés, neuf vues disponibles ; attente du choix utilisateur**. Aucun modèle retenu ni intégré ; le moteur interactif et M4B ne sont pas commencés. Suite à la décision utilisateur, la reconstruction de BodyParts3D est abandonnée pour cette étape. L’audit précédent reste dans [AUDIT_M4A_ANATOMIE.md](AUDIT_M4A_ANATOMIE.md).
 
 ## Critères et protocole
 
 Corps masculin entier, athlétique et anatomiquement crédible ; muscles lisibles, surface relativement lisse ; matière satinée gris bleuté sur bleu nuit. La segmentation doit pouvoir suivre les vrais groupes musculaires gauche/droite, avec une géométrie optimisable pour iPhone. Les droits doivent autoriser adaptations et redistribution au sein de Logbook, application commerciale propriétaire.
 
-Les comparaisons finales utiliseront le même moteur, matériau, éclairage, cadrage normalisé et angles : face **0°**, trois quarts **−35°**, dos **180°**. Les poses natives seront documentées ; aucune retouche d’image ne doit simuler une meilleure anatomie. Les images de vendeurs ne remplacent pas les rendus des fichiers réellement obtenus.
+Les neuf vues utilisent le même moteur, matériau, éclairage, cadrage normalisé et angles : face **0°**, trois quarts **−35°**, dos **180°**. Les poses natives seront documentées ; aucune retouche d’image ne doit simuler une meilleure anatomie. Les images de vendeurs ne remplacent pas les rendus des fichiers réellement obtenus.
 
-## MakeHuman / MPFB — premier candidat effectivement rendu
+## A — MakeHuman / MPFB, rendus sauvegardés conservés
 
 Source : [MPFB officiel, commit épinglé](https://github.com/makehumancommunity/mpfb2/tree/3af0cd5a2ffba072e93a34e5f6f494fdc4813ddf). MPFB est le générateur Blender de l’écosystème MakeHuman ; ils ne constituent pas deux bases indépendantes. Seuls les assets de base officiels sont utilisés, avec les yeux low-poly du [dépôt MakeHuman](https://github.com/makehumancommunity/makehuman/tree/a8bc2d54ff0ac92e78ff71431b1023eda42bf482/makehuman/data/eyes/low-poly).
 
@@ -26,15 +26,74 @@ Source : [MPFB officiel, commit épinglé](https://github.com/makehumancommunity
 
 **Optimisation.** Corps source mesuré : **13 380 sommets, 13 378 quads, 26 756 triangles**. La géométrie de base est raisonnable pour une future scène mobile ; l’optimisation géométrique serait de difficulté faible. Les rendus utilisent une subdivision commune de comparaison, pas un budget mobile validé. Aucun FPS iPhone ou résultat GPU n’est annoncé. [Paramètres, provenance et empreintes](m4a/alternatives/mpfb-athletic/provenance.json) ; [métadonnées des rendus](m4a/alternatives/mpfb-athletic/render-metadata.json).
 
+## B — Blender Studio, corps masculin réaliste
+
+Collection réelle `Body Male - Realistic`, **Dan Ulrich**, dans le bundle officiel
+Human Base Meshes v1.4.1. Corps `GEO-body_male_realistic` et ses deux yeux, sans
+rig, matériau source ni déformation ajoutée. Les trois niveaux Multires sculptés
+sont conservés ; aucune subdivision supplémentaire n'est ajoutée.
+
+| Face | Trois quarts | Dos |
+| --- | --- | --- |
+| ![B réaliste, face](m4a/alternatives/studio-realistic/front.png) | ![B réaliste, trois quarts](m4a/alternatives/studio-realistic/three-quarter.png) | ![B réaliste, dos](m4a/alternatives/studio-realistic/back.png) |
+
+**Corps de base mesuré : 10 582 sommets, 10 590 faces, 21 160 triangles**, sans
+les yeux. Il s'agit d'une enveloppe continue, une composante connectée, aucun
+groupe de sommets musculaire nommé. Les **102 face sets numériques** facilitent
+le travail de sculpture, mais aucune table ne les identifie comme les groupes
+musculaires attendus par Logbook. Une segmentation anatomique reste à dessiner
+et vérifier ; difficulté élevée, avec un relief plus exploitable que MPFB.
+
+La base est raisonnable pour un futur essai mobile. Le détail du rendu est porté
+par le **Multires 3 : 677 442 sommets et 1 354 880 triangles** pour le corps évalué : conserver ce niveau en production
+ne constituerait pas une optimisation. Un transfert du détail vers des normales
+et un budget de géométrie adapté seraient à étudier après choix. Aucun test GPU
+ou FPS iPhone n'a été réalisé.
+
+## C — Blender Studio, corps masculin stylisé
+
+Collection réelle `Body Male - Stylized`, **Julien Kaspar**, basée sur **Snow**.
+Corps `GEO-body_male_stylized` et ses deux yeux. La source n'a pas de modificateur ;
+un niveau de subdivision de comparaison est ajouté, comme pour MPFB.
+
+| Face | Trois quarts | Dos |
+| --- | --- | --- |
+| ![C stylisé, face](m4a/alternatives/studio-stylized/front.png) | ![C stylisé, trois quarts](m4a/alternatives/studio-stylized/three-quarter.png) | ![C stylisé, dos](m4a/alternatives/studio-stylized/back.png) |
+
+**Corps de base mesuré : 12 502 sommets, 12 500 faces, 25 000 triangles**, sans
+les yeux. Enveloppe continue, une composante connectée, aucun groupe musculaire
+nommé ; **42 face sets numériques**, sans nomenclature anatomique associée.
+La segmentation serait difficile sur cette surface douce et stylisée. Géométrie
+de base raisonnable, mais un travail artistique supplémentaire serait nécessaire
+pour obtenir une forte définition musculaire. Aucune modification de cette nature
+n'a été entreprise avant le choix utilisateur.
+
+## Sources et licences Blender Studio contrôlées
+
+L'accès réel au domaine officiel réussit désormais : **HTTP 200** via le proxy,
+TLS vérifié. La configuration du runtime indique les révisions **2/2** et le
+fichier de politique réseau contient le domaine. Le statut agrégé de politique
+reste `unknown` ; la preuve d'accès est le téléchargement réellement terminé,
+pas une supposition à partir de ce statut.
+
+ZIP officiel : **50 643 039 octets**, tous les CRC conformes, SHA-256
+`811f43accbb31a88266d932f8f5563b2d13586fca0ba2693aad1f5fe582b3515`.
+Les métadonnées des deux collections et le README embarqué déclarent **CC0**.
+Un autre bloc texte concerne le **Rain Rig sous CC BY 4.0** : conservé dans les
+preuves, sans utiliser ce rig ni un asset Rain. Voir [licences](m4a/alternatives/blender-studio/LICENSE.ASSETS.md),
+[inventaire reproduit indépendamment](m4a/alternatives/blender-studio/inventory.json)
+et [provenance / reprise réseau](m4a/alternatives/blender-studio/provenance.json).
+Les originaux du bundle restent dans le dossier de travail, hors runtime Logbook.
+
 ## Autres bases examinées
 
 | Base réelle | Licence / disponibilité vérifiée | Segmentation et optimisation | État de l’évaluation |
 | --- | --- | --- | --- |
-| **Blender Studio Human Base Meshes v1.4.1**, corps masculin réaliste et variante sculptée | Collection annoncée CC0 par la [page officielle](https://www.blender.org/download/demo-files/) ; [archive officielle](https://download.blender.org/demo/asset-bundles/human-base-meshes/human-base-meshes-bundle-v1.4.1.zip), 50 643 039 octets annoncés dans l’index | À déterminer depuis les vrais objets, leurs groupes et niveaux de subdivision. Aucun chiffre inventé à partir de captures | **À récupérer et rendre**. Le proxy de la machine attachée refuse encore le domaine ; la nouvelle configuration publiée n’y est pas appliquée au dernier contrôle. Ne pas annoncer la licence interne ou la qualité des fichiers comme déjà inspectées |
+| **Blender Studio Human Base Meshes v1.4.1**, réaliste et stylisé | Bundle officiel acquis et vérifié ; CC0 dans le README et les deux collections | Corps continus ; face sets numériques non anatomiquement nommés. Multires 3 conservé pour le réaliste | **Deux candidats rendus**, trois vues chacun, ci-dessus |
 | **Muscular Male Basemesh**, alexlashko, CGTrader | [Fiche officielle](https://www.cgtrader.com/3d-models/character/man/muscular-male-basemesh), 49 USD affichés le 18/10, Royalty Free (no AI), OBJ/ZTL, niveau bas annoncé 18 002 polygones | Polygroups annoncés, sans preuve qu’ils correspondent aux muscles. Bas niveau intéressant ; détails élevés à transférer plutôt que livrer la version 18 millions de polygones | Piste payante ; fichier non acheté et non inspecté. Aucun rendu comparable produit. Les restrictions d’incorporation et de récupération de l’asset doivent être vérifiées pour la distribution de Logbook |
 | **Stylized Muscular Male Anatomy Basemeshes**, -Sako-, CGTrader | [Fiche officielle](https://www.cgtrader.com/3d-models/character/human-anatomy/stylized-muscular-male-anatomy-basemeshes), 15 USD affichés le 18/10, Royalty Free, BLEND/FBX/OBJ ; version basse annoncée 34 000 polygones | Rig annoncé, sans segmentation musculaire attestée. Proportions stylisées à comparer à la référence ; nomenclature et détails à contrôler dans les fichiers | Piste payante ; source non acquise et non rendue. Les chiffres sont ceux du vendeur, pas des mesures locales |
 
-Ces pistes ne constituent pas encore la sélection finale de 2–3 modèles rendus. Aucun achat ou contact de vendeur n’a été effectué.
+Les pistes payantes restent documentées à titre de contexte ; elles ne sont pas rendues et ne remplacent aucune colonne. Aucun achat ou contact de vendeur n’a été effectué.
 
 ### Pistes écartées et contraintes de licence
 
@@ -42,14 +101,42 @@ Ces pistes ne constituent pas encore la sélection finale de 2–3 modèles rend
 - **Fab / PolyOne Male Base Mesh** : la [fiche](https://www.fab.com/listings/6ea2f53a-fe66-4c16-8a6b-7ffa2037075c) décrit un corps de base à faible densité, pas une musculature fortement définie. La page n’expose pas suffisamment la licence sélectionnée et le fichier n’a pas été acquis ; aucune conformité supposée du seul fait qu’il est gratuit.
 - **Licences marketplace** : « royalty free » n’autorise pas automatiquement la redistribution d’un GLB librement récupérable. Les [conditions CGTrader](https://help.cgtrader.com/hc/en-us/articles/360015124437-Royalty-Free-License) imposent une incorporation et des mesures empêchant la récupération de l’asset. Les [conditions Fab Standard](https://www.fab.com/eula) autorisent les projets commerciaux et adaptations, mais pas la redistribution autonome de l’asset. Ce point est concret pour une application qui embarque un modèle ; aucun paiement ou droit supplémentaire n’est présumé.
 
-## Point de reprise
+## Comparaison proposée au choix
 
-Le [guide de sauvegarde et redémarrage](M4A_REPRISE_ENVIRONNEMENT.md) fournit
-l’archive autonome des sources/fichiers Blender/rendus, sa vérification et les
-commandes de restauration. Aucun redémarrage n’a été déclenché lors de sa publication.
+![Planche commune à neuf vues](m4a/alternatives/comparaison.png)
 
-Les trois vues MPFB sont sauvegardées. Pour terminer la comparaison gratuite sans substitut approximatif, il faut appliquer à la machine attachée la configuration publiée autorisant **`download.blender.org`**, puis télécharger et vérifier le bundle Blender Studio, inventorier les vrais corps masculins et les rendre avec le même protocole. Au dernier contrôle, le runtime indique toujours l’ancienne liste de domaines et le téléchargement échoue en `CONNECT 403`.
+| Candidat | Lecture visuelle | Limite pour M4A |
+| --- | --- | --- |
+| **A — MPFB** | Corps cohérent, silhouette athlétique modérée ; paramètres maximaux de muscle déjà évalués | Relief des abdominaux, bras, dos et cuisses trop doux dans l'étude précédente |
+| **B — Blender réaliste** | Volumes corporels naturels et davantage de relief visible au torse et aux bras | Définition encore modérée ; pas un écorché ni un mannequin aux muscles individuellement découpés ; détail Multires à transférer pour mobile |
+| **C — Blender stylisé** | Surface propre, tête plus grande et proportions stylisées | Torse lisse, séparation musculaire faible ; une direction artistique différente |
 
-Les scripts de rendu restent des outils d’audit. Aucune difficulté rencontrée ne justifie actuellement Astra Ultra : génération via API officielle, inventaire et rendu standard restent des tâches courantes. Aucun changement de modèle n’a été déclenché. Si une reconstruction anatomique ou une segmentation difficile devient nécessaire après votre choix, le problème et la tâche exacte seront présentés avant tout travail coûteux.
+Les poses natives sont conservées (bras écartés vers le bas, ouvertures des jambes
+et des mains différentes). Tous les candidats sont ramenés uniformément à 1,8 unité
+de haut ; même caméra 2,30, résolution 900 × 1400, angles 0° / −35° / 180°,
+matériau satin gris bleuté, quatre lumières et fond bleu nuit, Cycles CPU 128 samples
+sans débruitage. Les différences de pose ne sont pas des différences de zoom.
+Les neuf vues cadrent le corps entier : aucun nouveau cadrage MPFB n'est nécessaire.
+Les six nouveaux rendus sont enregistrés avec leurs métadonnées dans
+[studio-realistic](m4a/alternatives/studio-realistic/render-metadata.json) et
+[studio-stylized](m4a/alternatives/studio-stylized/render-metadata.json).
 
-**La comparaison n’est pas encore prête pour le choix final du modèle.** La prochaine livraison doit comporter 2–3 bases réellement rendues sous les trois angles identiques, puis s’arrêter pour votre sélection.
+**Avis pour le choix : B est la base gratuite la plus prometteuse parmi ces trois
+candidats pour une direction athlétique réaliste.** Cela ne valide pas sa fidélité
+à la référence ni une future segmentation. L'image d'origine n'est pas accessible
+dans cette reprise : la joindre à nouveau avant de valider cet aspect.
+Il est possible de choisir A, B, C ou aucun si le relief reste insuffisant.
+
+## Reprise et arrêt avant intégration
+
+La sauvegarde de `1da5ba6` a été restaurée dans `/workspace/work/m4a-alternatives/` :
+**3 606 fichiers / 97 888 638 octets**, tailles et SHA-256 conformes. Les trois PNG
+MPFB déjà terminés sont réutilisés à l'identique. Aucun nouvel audit BodyParts3D
+ni génération MPFB n'a été relancé. Le [guide initial](M4A_REPRISE_ENVIRONNEMENT.md)
+reste la procédure de récupération ; les scripts d'acquisition/inventaire/rendu
+complètent maintenant la [procédure de reproduction](../tools/m4a/alternatives/README.md).
+
+**Arrêt pour le choix utilisateur.** Aucun modèle sélectionné automatiquement,
+aucune intégration, moteur interactif, M4B, modification SQLite ou fusion.
+La PR #11 reste en brouillon, sur la même branche. Aucun recours à Astra Ultra ;
+un problème qui le justifierait serait présenté avant toute tâche coûteuse.

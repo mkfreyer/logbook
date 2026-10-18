@@ -32,7 +32,14 @@ for ob in loaded:
     for vertex in mesh.vertices:vertex.co=rotation @ (ob.matrix_world @ vertex.co)
     mesh.calc_loop_triangles()
     assert all(math.isfinite(c) for v in mesh.vertices for c in v.co)
-    records.append({'object':ob.name,'vertices':len(mesh.vertices),'polygons':len(mesh.polygons),'triangles':len(mesh.loop_triangles),'source_modifiers':[{'name':m.name,'type':m.type} for m in ob.modifiers],'vertex_group_names':[g.name for g in ob.vertex_groups]})
+    modifiers=[]
+    for m in ob.modifiers:
+        record={'name':m.name,'type':m.type,'show_viewport':m.show_viewport,'show_render':m.show_render}
+        for key in ('levels','render_levels','sculpt_levels','total_levels'):
+            if hasattr(m,key):record[key]=getattr(m,key)
+        modifiers.append(record)
+    ob.data.calc_loop_triangles()
+    records.append({'object':ob.name,'vertices':len(mesh.vertices),'polygons':len(mesh.polygons),'triangles':len(mesh.loop_triangles),'base_mesh':{'vertices':len(ob.data.vertices),'polygons':len(ob.data.polygons),'triangles':len(ob.data.loop_triangles)},'source_modifiers':modifiers,'vertex_group_names':[g.name for g in ob.vertex_groups]})
     meshes.append((ob.name,mesh))
 for ob in list(bpy.data.objects):bpy.data.objects.remove(ob,do_unlink=True)
 coords=[v.co for _,m in meshes for v in m.vertices]

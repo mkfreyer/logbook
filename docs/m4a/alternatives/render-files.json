@@ -1,0 +1,68 @@
+{
+  "mpfb_images_reused_unchanged_from": "1da5ba6",
+  "files": [
+    {
+      "path": "mpfb-athletic/front.png",
+      "bytes": 1306275,
+      "sha256": "7fc0219510a855614ed45a554ff9b281f6b6569d7e9f02e95eb03257708db724",
+      "width": 900,
+      "height": 1400
+    },
+    {
+      "path": "mpfb-athletic/three-quarter.png",
+      "bytes": 1301981,
+      "sha256": "975ab57b772840be68730659b6bab276c1f4ac94788a31fe947edaf5d26b94b1",
+      "width": 900,
+      "height": 1400
+    },
+    {
+      "path": "mpfb-athletic/back.png",
+      "bytes": 1275561,
+      "sha256": "3af4b08ed131ce2a8addeb9a5578086985f5f5994d16a0ee11e8c70890ae3d8d",
+      "width": 900,
+      "height": 1400
+    },
+    {
+      "path": "studio-realistic/front.png",
+      "bytes": 1336927,
+      "sha256": "e5bd174fbefee5186e04a22b8930269de528ea7061b81fb4531016f31975b211",
+      "width": 900,
+      "height": 1400
+    },
+    {
+      "path": "studio-realistic/three-quarter.png",
+      "bytes": 1330620,
+      "sha256": "240f14bd3fbe31479e42bc09e46b7fd29c4c07f73be230cad8666c8932153e99",
+      "width": 900,
+      "height": 1400
+    },
+    {
+      "path": "studio-realistic/back.png",
+      "bytes": 1290716,
+      "sha256": "f5ed5d04f1aa00ad0388f3e08286b399b6da1c9e66e7e86ca9610ee60609e1e3",
+      "width": 900,
+      "height": 1400
+    },
+    {
+      "path": "studio-stylized/front.png",
+      "bytes": 1318499,
+      "sha256": "cd8ad7eb6e44a711c327a6b64686f14981b615cab7956a9550b44b6408b5e53e",
+      "width": 900,
+      "height": 1400
+    },
+    {
+      "path": "studio-stylized/three-quarter.png",
+      "bytes": 1310866,
+      "sha256": "3d61bdbe1859f83d0fa07b508333a1123b28c56fa02d88dc556ed3fd5467dc8b",
+      "width": 900,
+      "height": 1400
+    },
+    {
+      "path": "studio-stylized/back.png",
+      "bytes": 1284080,
+      "sha256": "37916f1fed4255a8fa114ebb757766afb08e7fe0f9035aa6de6eccb8e041d1d3",
+      "width": 900,
+      "height": 1400
+    }
+  ]
+}

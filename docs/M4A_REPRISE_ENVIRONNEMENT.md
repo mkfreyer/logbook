@@ -1,5 +1,12 @@
 # M4A — Sauvegarde et reprise après changement réseau
 
+> **Reprise effectuée le 18 octobre 2026 depuis `1da5ba6` :** restauration des
+> 3 606 fichiers vérifiée ; domaine Blender accessible (HTTP 200), bundle officiel
+> récupéré et contrôlé. Les trois candidats et leurs neuf vues sont maintenant
+> dans [M4A_CHOIX_MODELE.md](M4A_CHOIX_MODELE.md). **Étape courante : choix
+> utilisateur, aucune intégration.** Les instructions et constats ci-dessous
+> décrivent la sauvegarde initiale et restent utiles à sa restauration.
+
 Sauvegarde du **18 octobre 2026**, avant tout redémarrage, sur
 `feat/m4a-prototype-carte-musculaire-3d`, dans la
 [PR #11 en brouillon](https://github.com/mkfreyer/logbook/pull/11).

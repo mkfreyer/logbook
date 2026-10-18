@@ -49,8 +49,9 @@ est ignoré : la géométrie seule est chargée, puis reçoit le matériau commu
 - Satin gris bleuté : couleur linéaire `(0.23, 0.30, 0.41)`, rugosité 0,37,
   métallisation 0,12 ; fond bleu nuit et quatre éclairages fixes identiques.
 - Matériaux et textures des sources remplacés pour comparer le relief géométrique.
-  Normales lissées et un niveau de subdivision de comparaison, documentés dans
-  les métadonnées. Pas de sculpture, déformation anatomique inventée ou retouche d’image.
+  Normales lissées ; un niveau de subdivision pour MPFB et le stylisé,
+  Multires source niveau 3 sans subdivision supplémentaire pour le réaliste,
+  documentés dans les métadonnées. Pas de sculpture, déformation anatomique inventée ou retouche d’image.
 - Pose native conservée ; les éventuelles différences de pose entre modèles
   doivent être signalées. Le cadrage sera contrôlé pour chaque modèle ajouté.
 
@@ -60,12 +61,54 @@ Le SHA du `.blend` local identifie l’exécution ; la reproduction de la géom�
 repose sur les sources épinglées et paramètres, pas sur l’égalité binaire de deux
 fichiers Blender contenant des métadonnées de sauvegarde.
 
-## Acquisition Blender Studio en attente
+## Acquisition et inventaire Blender Studio vérifiés
 
-Source officielle prévue :
+Source officielle acquise lors de la reprise depuis `1da5ba6` :
 `https://download.blender.org/demo/asset-bundles/human-base-meshes/human-base-meshes-bundle-v1.4.1.zip`.
-Le téléchargement exige une politique réseau active autorisant ce domaine.
-Après récupération : vérifier taille/SHA/CRC, lire les licences internes, lister
-les collections/objets masculins et leurs modificateurs, puis utiliser le même
-script avec les vrais noms d’objets. Aucun modèle de substitution ne doit être
-inventé pour remplir une colonne de la comparaison.
+Taille **50 643 039 octets**, SHA-256 et CRC vérifiés ; licence et inventaire
+conservés dans [blender-studio](../../../docs/m4a/alternatives/blender-studio/).
+Le fichier original reste dans `/workspace/work/m4a-alternatives/sources/blender-studio/`.
+
+```sh
+python3 tools/m4a/alternatives/acquire_studio.py \
+  --destination /workspace/work/m4a-alternatives/sources/blender-studio
+
+blender --background --factory-startup --disable-autoexec --threads 2 \
+  --python-exit-code 1 --python tools/m4a/alternatives/inspect_studio.py -- \
+  --blend /workspace/work/m4a-alternatives/sources/blender-studio/extracted/human-base-meshes-bundle-v1.4.1/human_base_meshes_bundle.blend \
+  --output /workspace/work/m4a-alternatives/studio-selected-inventory.json
+```
+
+Pour les rendus, réutiliser `render_comparison.py`, `--samples 128`, et le même
+fichier source. Le réaliste utilise `--candidate studio-realistic`,
+`--objects GEO-body_male_realistic GEO-body_male_realistic.eye.L GEO-body_male_realistic.eye.R`
+et **`--subdivision 0`** : son Multires source niveau 3 est déjà évalué en entier.
+Le stylisé utilise `--candidate studio-stylized`,
+`--objects GEO-body_male_stylized GEO-body_male_stylized.eye.L GEO-body_male_stylized.eye.R`
+et **`--subdivision 1`**, comme MPFB. Ajouter `--disable-autoexec` au lancement.
+Les modificateurs source, niveaux et décomptes de base/évalués sont consignés
+dans les nouvelles métadonnées. Les trois images MPFB sont reprises telles quelles.
+
+Les corps du bundle ont des face sets numériques de sculpture (102 réaliste,
+42 stylisé), sans correspondance musculaire nommée. Ils ne dispensent pas d'une
+segmentation anatomique après choix. Aucun script ne modifie SQLite ou le runtime.
+
+## Planche et contrôles de la comparaison
+
+La planche est une mise en page des PNG, avec réduction uniforme et légendes,
+sans retouche de l'anatomie. Pillow est utilisé uniquement comme outil d'audit
+externe, sans dépendance ajoutée à Logbook :
+
+```sh
+python3 tools/m4a/alternatives/build_sheet.py \
+  --renders-root docs/m4a/alternatives \
+  --output /workspace/work/m4a-alternatives/comparaison.png
+```
+
+Les neuf empreintes des images sont conservées dans
+[render-files.json](../../../docs/m4a/alternatives/render-files.json).
+À cette reprise : dimensions/protocoles contrôlés, trois PNG MPFB identiques à
+`1da5ba6`, inventaire Blender reproduit indépendamment à l'identique, planche
+reproduite pixel pour pixel, JSON/liens/syntaxe Python et `git diff --check` validés.
+Les tests applicatifs n'ont pas été relancés localement pour cette livraison
+documentaire ; aucun code de l'application ni fichier SQLite n'a changé.
