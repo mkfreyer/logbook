@@ -1,0 +1,68 @@
+{
+  "candidate": "ecorche",
+  "counts": {
+    "objects": 362,
+    "vertices": 358236,
+    "triangles": 726468
+  },
+  "prepared_sha256": "b625d59782d81aa9be52395e75bbb5f3191bd082ab3d1fd98fddb467dee23bc5",
+  "protocol": {
+    "blender": "4.3.2",
+    "engine": "CYCLES_CPU",
+    "samples": 128,
+    "resolution": [
+      600,
+      1000
+    ],
+    "denoising": false,
+    "orthographic_scale": 2.3,
+    "camera_target": [
+      0,
+      0,
+      0.9
+    ],
+    "material": {
+      "base_color_linear": [
+        0.23,
+        0.3,
+        0.41
+      ],
+      "roughness": 0.37,
+      "metallic": 0.12
+    },
+    "source_textures_vertex_colors_replaced": true,
+    "subdivision": 0,
+    "anatomical_geometry_synthesized": false
+  },
+  "orange_selection": [
+    "Abdominal part of left pectoralis major",
+    "Clavicular part of left pectoralis major",
+    "Sternocostal part of left pectoralis major"
+  ],
+  "frames": [
+    {
+      "view": "front",
+      "yaw_degrees": 0,
+      "path": "front.png",
+      "sha256": "f59c05a7875744076545a2a28055f4ca80c00202780d06c93974e487281379b7"
+    },
+    {
+      "view": "three-quarter",
+      "yaw_degrees": -35,
+      "path": "three-quarter.png",
+      "sha256": "5d8bdd23cc6b271f876ac4bd3fab8159603825df31fd3c03b644e5f14f843dc8"
+    },
+    {
+      "view": "back",
+      "yaw_degrees": 180,
+      "path": "back.png",
+      "sha256": "e60e41a6ef35e6883accba44d79b9866ef54d34190f81428961419069b264eb8"
+    },
+    {
+      "view": "selection",
+      "yaw_degrees": -35,
+      "path": "selection.png",
+      "sha256": "9785e6ad17d4cf275ef66359feaf7042ae334a8d1ccb0a25e7404303e5136cb4"
+    }
+  ]
+}

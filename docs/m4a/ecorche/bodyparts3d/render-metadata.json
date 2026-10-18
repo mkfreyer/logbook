@@ -1,0 +1,68 @@
+{
+  "candidate": "bodyparts3d",
+  "counts": {
+    "objects": 425,
+    "vertices": 1205641,
+    "triangles": 2404604
+  },
+  "prepared_sha256": "ac11f7b3e8422630d096aa64ef0028fd87411e0ceb16509defa506535e4300b7",
+  "protocol": {
+    "blender": "4.3.2",
+    "engine": "CYCLES_CPU",
+    "samples": 128,
+    "resolution": [
+      600,
+      1000
+    ],
+    "denoising": false,
+    "orthographic_scale": 2.3,
+    "camera_target": [
+      0,
+      0,
+      0.9
+    ],
+    "material": {
+      "base_color_linear": [
+        0.23,
+        0.3,
+        0.41
+      ],
+      "roughness": 0.37,
+      "metallic": 0.12
+    },
+    "source_textures_vertex_colors_replaced": true,
+    "subdivision": 0,
+    "anatomical_geometry_synthesized": false
+  },
+  "orange_selection": [
+    "FJ1446M",
+    "FJ1447M",
+    "FJ1464M"
+  ],
+  "frames": [
+    {
+      "view": "front",
+      "yaw_degrees": 0,
+      "path": "front.png",
+      "sha256": "a2b1080687418b372b6bd6f9bb2dcbb34c18daf3a9d9fc7862b4e2508a36277a"
+    },
+    {
+      "view": "three-quarter",
+      "yaw_degrees": -35,
+      "path": "three-quarter.png",
+      "sha256": "5abdc2ff25412fa42773e3a4d128b960a975cf5e099b30d5131dd6a14ba21d85"
+    },
+    {
+      "view": "back",
+      "yaw_degrees": 180,
+      "path": "back.png",
+      "sha256": "0480375980bee341938418c8a025af898fb65d4a2d028c8c90befd773d73cd43"
+    },
+    {
+      "view": "selection",
+      "yaw_degrees": -35,
+      "path": "selection.png",
+      "sha256": "b6e1114be06bf277197aa5d8d0a9be1c2e73c57befc57a438a16dbe0be94f693"
+    }
+  ]
+}

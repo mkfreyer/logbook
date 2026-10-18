@@ -1,0 +1,134 @@
+[
+  {
+    "repo": "Z-Anatomy/Models-of-human-anatomy",
+    "commit": "0fee499c81db03fcbafecbe7ace68d5d5a18aa92",
+    "path": "License.txt",
+    "url": "https://raw.githubusercontent.com/Z-Anatomy/Models-of-human-anatomy/0fee499c81db03fcbafecbe7ace68d5d5a18aa92/License.txt",
+    "bytes": 2754,
+    "sha256": "196b66b56551a862e59872f7cdb70e6d9a6ad84e9105962fca8ec28c14e97520",
+    "local_path": "Z-Anatomy--Models-of-human-anatomy/License.txt"
+  },
+  {
+    "repo": "Z-Anatomy/Models-of-human-anatomy",
+    "commit": "0fee499c81db03fcbafecbe7ace68d5d5a18aa92",
+    "path": "Readme.md",
+    "url": "https://raw.githubusercontent.com/Z-Anatomy/Models-of-human-anatomy/0fee499c81db03fcbafecbe7ace68d5d5a18aa92/Readme.md",
+    "bytes": 4243,
+    "sha256": "2439e8ccea759c644bbaf2f6fd48551fe054bfda30fd3d97d8384f75273466b3",
+    "local_path": "Z-Anatomy--Models-of-human-anatomy/Readme.md"
+  },
+  {
+    "repo": "Z-Anatomy/Models-of-human-anatomy",
+    "commit": "0fee499c81db03fcbafecbe7ace68d5d5a18aa92",
+    "path": "Z-Anatomy.zip",
+    "url": "https://raw.githubusercontent.com/Z-Anatomy/Models-of-human-anatomy/0fee499c81db03fcbafecbe7ace68d5d5a18aa92/Z-Anatomy.zip",
+    "bytes": 86734957,
+    "sha256": "e029688545627bd0214b269e1063143abb580aad72b2c2445d6d8a9a0d9da736",
+    "local_path": "Z-Anatomy--Models-of-human-anatomy/Z-Anatomy.zip"
+  },
+  {
+    "repo": "Charleeh/ecorche",
+    "commit": "320805e06aee51e2e6f6b22533eb2a59d43f2d4d",
+    "path": "LICENSE.md",
+    "url": "https://raw.githubusercontent.com/Charleeh/ecorche/320805e06aee51e2e6f6b22533eb2a59d43f2d4d/LICENSE.md",
+    "bytes": 984,
+    "sha256": "e6667796c721c8e6d25bb474de56ca5ed8436e097c36eb1d813e12e267ceb30e",
+    "local_path": "Charleeh--ecorche/LICENSE.md"
+  },
+  {
+    "repo": "Charleeh/ecorche",
+    "commit": "320805e06aee51e2e6f6b22533eb2a59d43f2d4d",
+    "path": "ATTRIBUTION.md",
+    "url": "https://raw.githubusercontent.com/Charleeh/ecorche/320805e06aee51e2e6f6b22533eb2a59d43f2d4d/ATTRIBUTION.md",
+    "bytes": 4731,
+    "sha256": "a8ab15675197a2423728b50ef641f1a5be0be736bfe6737318bacd0c34efb431",
+    "local_path": "Charleeh--ecorche/ATTRIBUTION.md"
+  },
+  {
+    "repo": "Charleeh/ecorche",
+    "commit": "320805e06aee51e2e6f6b22533eb2a59d43f2d4d",
+    "path": "README.md",
+    "url": "https://raw.githubusercontent.com/Charleeh/ecorche/320805e06aee51e2e6f6b22533eb2a59d43f2d4d/README.md",
+    "bytes": 8247,
+    "sha256": "4563a1da83d7528e0765ccd78cf7f9ccd8def3cc8eb8ccfa1e773696b5c119aa",
+    "local_path": "Charleeh--ecorche/README.md"
+  },
+  {
+    "repo": "Charleeh/ecorche",
+    "commit": "320805e06aee51e2e6f6b22533eb2a59d43f2d4d",
+    "path": "model/ecorche.glb",
+    "url": "https://raw.githubusercontent.com/Charleeh/ecorche/320805e06aee51e2e6f6b22533eb2a59d43f2d4d/model/ecorche.glb",
+    "bytes": 14314536,
+    "sha256": "9744d3dffced835961104447d23a781ad469588289ce322d84d000e0d498326c",
+    "local_path": "Charleeh--ecorche/model/ecorche.glb"
+  },
+  {
+    "repo": "Charleeh/ecorche",
+    "commit": "320805e06aee51e2e6f6b22533eb2a59d43f2d4d",
+    "path": "tools/fetch-sources.mjs",
+    "url": "https://raw.githubusercontent.com/Charleeh/ecorche/320805e06aee51e2e6f6b22533eb2a59d43f2d4d/tools/fetch-sources.mjs",
+    "bytes": 1847,
+    "sha256": "de048640c064f4a6b193db1bc0a8dcacdcc440885c4510a5c75c3293e0de6e86",
+    "local_path": "Charleeh--ecorche/tools/fetch-sources.mjs"
+  },
+  {
+    "repo": "Charleeh/ecorche",
+    "commit": "320805e06aee51e2e6f6b22533eb2a59d43f2d4d",
+    "path": "tools/README.md",
+    "url": "https://raw.githubusercontent.com/Charleeh/ecorche/320805e06aee51e2e6f6b22533eb2a59d43f2d4d/tools/README.md",
+    "bytes": 2967,
+    "sha256": "7b3984bbbbc9e15eed0bc4e32e5b4d27fb3f9eda97ef7d9a9c54b1e3caec54b1",
+    "local_path": "Charleeh--ecorche/tools/README.md"
+  },
+  {
+    "repo": "Charleeh/ecorche",
+    "commit": "320805e06aee51e2e6f6b22533eb2a59d43f2d4d",
+    "path": "LICENSES/CC-BY-SA-4.0.txt",
+    "url": "https://raw.githubusercontent.com/Charleeh/ecorche/320805e06aee51e2e6f6b22533eb2a59d43f2d4d/LICENSES/CC-BY-SA-4.0.txt",
+    "bytes": 20210,
+    "sha256": "258ed63e18dedbb7183b2098bdc04e363301ba58bc6aaaf90dd00f4faf198680",
+    "local_path": "Charleeh--ecorche/LICENSES/CC-BY-SA-4.0.txt"
+  },
+  {
+    "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_BP3D_4.0_obj_99.zip",
+    "bytes": 142903898,
+    "sha256": "40665852c49f218326590e204db91064a1ecfc3c6f8cbd7bbbcaac62c7cd409e",
+    "local_path": "bodyparts3d/isa_BP3D_4.0_obj_99.zip"
+  },
+  {
+    "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_parts_list_e.txt",
+    "bytes": 128086,
+    "sha256": "ab7796deedd49205e77f3609a1cb8c53e2bbee14ecb5c9a6ca05227469780513",
+    "local_path": "bodyparts3d/isa_parts_list_e.txt"
+  },
+  {
+    "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_element_parts.txt",
+    "bytes": 1142159,
+    "sha256": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf",
+    "local_path": "bodyparts3d/isa_element_parts.txt"
+  },
+  {
+    "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_inclusion_relation_list.txt",
+    "bytes": 207664,
+    "sha256": "26e7d818e03a8c909fe09c561f38d0d513423c87681f9450a803bc38f5b07564",
+    "local_path": "bodyparts3d/isa_inclusion_relation_list.txt"
+  },
+  {
+    "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/partof_parts_list_e.txt",
+    "bytes": 59351,
+    "sha256": "9224080557053e6f1322f1e13ab27f0ecde0db19bb3b505f0631afad230eeebd",
+    "local_path": "bodyparts3d/partof_parts_list_e.txt"
+  },
+  {
+    "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/partof_element_parts.txt",
+    "bytes": 651179,
+    "sha256": "3f5f6df1028eb122b30de77c711597b6bb8e5541658e5985859fd228adbf88ea",
+    "local_path": "bodyparts3d/partof_element_parts.txt"
+  },
+  {
+    "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/partof_inclusion_relation_list.txt",
+    "bytes": 91241,
+    "sha256": "1b40738270931e3c1d955ce34e0fce0d8d10d8c5ad543463e40b4b4c0243007c",
+    "local_path": "bodyparts3d/partof_inclusion_relation_list.txt"
+  }
+]

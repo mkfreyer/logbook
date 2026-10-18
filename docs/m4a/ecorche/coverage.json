@@ -1,0 +1,467 @@
+{
+  "bodyparts3d": {
+    "counts": {
+      "objects": 425,
+      "vertices": 1205641,
+      "triangles": 2404604
+    },
+    "geometry": {
+      "objects": 425,
+      "triangles": 2404604,
+      "nonfinite_coordinates": 0,
+      "near_collapsed_triangles": 16,
+      "objects_negative_signed_volume": 0
+    },
+    "groups": {
+      "pectorals": {
+        "left": [
+          "FJ1446M",
+          "FJ1447M",
+          "FJ1464M"
+        ],
+        "right": [
+          "FJ1446",
+          "FJ1447",
+          "FJ1464"
+        ],
+        "unspecified": []
+      },
+      "deltoids": {
+        "left": [
+          "FJ1467M",
+          "FJ1468M",
+          "FJ1513M"
+        ],
+        "right": [
+          "FJ1467",
+          "FJ1468",
+          "FJ1513"
+        ],
+        "unspecified": []
+      },
+      "biceps": {
+        "left": [
+          "FJ1478M",
+          "FJ1512M"
+        ],
+        "right": [
+          "FJ1478",
+          "FJ1512"
+        ],
+        "unspecified": []
+      },
+      "triceps": {
+        "left": [
+          "FJ1477M",
+          "FJ1479M",
+          "FJ1480M"
+        ],
+        "right": [
+          "FJ1477",
+          "FJ1479",
+          "FJ1480"
+        ],
+        "unspecified": []
+      },
+      "lats": {
+        "left": [],
+        "right": [],
+        "unspecified": []
+      },
+      "trapezius": {
+        "left": [
+          "FJ1520M",
+          "FJ1521M",
+          "FJ1554M"
+        ],
+        "right": [
+          "FJ1520",
+          "FJ1521",
+          "FJ1554"
+        ],
+        "unspecified": []
+      },
+      "abs-rectus": {
+        "left": [],
+        "right": [],
+        "unspecified": []
+      },
+      "quadriceps": {
+        "left": [
+          "FJ1433M",
+          "FJ1442M",
+          "FJ1443M"
+        ],
+        "right": [
+          "FJ1433",
+          "FJ1442",
+          "FJ1443"
+        ],
+        "unspecified": []
+      },
+      "hamstrings": {
+        "left": [
+          "FJ1395M",
+          "FJ1435M",
+          "FJ1436M",
+          "FJ1444M"
+        ],
+        "right": [
+          "FJ1395",
+          "FJ1435",
+          "FJ1436",
+          "FJ1444"
+        ],
+        "unspecified": []
+      },
+      "glutes": {
+        "left": [
+          "FJ1418M",
+          "FJ1419M"
+        ],
+        "right": [
+          "FJ1418",
+          "FJ1419"
+        ],
+        "unspecified": []
+      },
+      "calves": {
+        "left": [
+          "FJ1394M",
+          "FJ1397M",
+          "FJ1437M"
+        ],
+        "right": [
+          "FJ1394",
+          "FJ1397",
+          "FJ1437"
+        ],
+        "unspecified": []
+      }
+    },
+    "orange_left_pec_objects": [
+      "FJ1446M",
+      "FJ1447M",
+      "FJ1464M"
+    ],
+    "named_side_centroid_sign_mismatches": []
+  },
+  "z-anatomy": {
+    "counts": {
+      "objects": 457,
+      "vertices": 974393,
+      "triangles": 1948068
+    },
+    "geometry": {
+      "objects": 457,
+      "triangles": 1948068,
+      "nonfinite_coordinates": 0,
+      "near_collapsed_triangles": 0,
+      "objects_negative_signed_volume": 228
+    },
+    "groups": {
+      "pectorals": {
+        "left": [
+          "Clavicular head of pectoralis major muscle.l",
+          "Sternocostal head of pectoralis major muscle.l",
+          "(Abdominal part of pectoralis major muscle).l"
+        ],
+        "right": [
+          "Clavicular head of pectoralis major muscle.r",
+          "Sternocostal head of pectoralis major muscle.r",
+          "(Abdominal part of pectoralis major muscle).r"
+        ],
+        "unspecified": []
+      },
+      "deltoids": {
+        "left": [
+          "Acromial part of deltoid muscle.l",
+          "Clavicular part of deltoid muscle.l",
+          "Scapular spinal part of deltoid muscle.l"
+        ],
+        "right": [
+          "Acromial part of deltoid muscle.r",
+          "Clavicular part of deltoid muscle.r",
+          "Scapular spinal part of deltoid muscle.r"
+        ],
+        "unspecified": []
+      },
+      "biceps": {
+        "left": [
+          "Long head of biceps brachii.l",
+          "Short head of biceps brachii.l"
+        ],
+        "right": [
+          "Long head of biceps brachii.r",
+          "Short head of biceps brachii.r"
+        ],
+        "unspecified": []
+      },
+      "triceps": {
+        "left": [
+          "Medial head of triceps brachii.l",
+          "Lateral head of triceps brachii.l",
+          "Long head of triceps brachii.l"
+        ],
+        "right": [
+          "Medial head of triceps brachii.r",
+          "Lateral head of triceps brachii.r",
+          "Long head of triceps brachii.r"
+        ],
+        "unspecified": []
+      },
+      "lats": {
+        "left": [
+          "Latissimus dorsi muscle.l"
+        ],
+        "right": [
+          "Latissimus dorsi muscle.r"
+        ],
+        "unspecified": []
+      },
+      "trapezius": {
+        "left": [
+          "Ascending part of trapezius muscle.l",
+          "Descending part of trapezius muscle.l",
+          "Transverse part of trapezius muscle.l"
+        ],
+        "right": [
+          "Ascending part of trapezius muscle.r",
+          "Descending part of trapezius muscle.r",
+          "Transverse part of trapezius muscle.r"
+        ],
+        "unspecified": []
+      },
+      "abs-rectus": {
+        "left": [
+          "Rectus abdominis muscle.l"
+        ],
+        "right": [
+          "Rectus abdominis muscle.r"
+        ],
+        "unspecified": []
+      },
+      "quadriceps": {
+        "left": [
+          "Rectus femoris muscle.l",
+          "Vastus lateralis muscle.l",
+          "Vastus medialis muscle.l",
+          "Vastus intermedius muscle.l"
+        ],
+        "right": [
+          "Rectus femoris muscle.r",
+          "Vastus lateralis muscle.r",
+          "Vastus medialis muscle.r",
+          "Vastus intermedius muscle.r"
+        ],
+        "unspecified": []
+      },
+      "hamstrings": {
+        "left": [
+          "Long head of biceps femoris.l",
+          "Short head of biceps femoris.l",
+          "Semimembranosus muscle.l",
+          "Semitendinosus muscle.l"
+        ],
+        "right": [
+          "Long head of biceps femoris.r",
+          "Short head of biceps femoris.r",
+          "Semimembranosus muscle.r",
+          "Semitendinosus muscle.r"
+        ],
+        "unspecified": []
+      },
+      "glutes": {
+        "left": [
+          "Gluteus medius muscle.l",
+          "Gluteus maximus muscle.l",
+          "Gluteus minimus muscle.l"
+        ],
+        "right": [
+          "Gluteus medius muscle.r",
+          "Gluteus maximus muscle.r",
+          "Gluteus minimus muscle.r"
+        ],
+        "unspecified": []
+      },
+      "calves": {
+        "left": [
+          "Lateral head of gastrocnemius.l",
+          "Medial head of gastrocnemius.l",
+          "Soleus muscle.l"
+        ],
+        "right": [
+          "Lateral head of gastrocnemius.r",
+          "Medial head of gastrocnemius.r",
+          "Soleus muscle.r"
+        ],
+        "unspecified": []
+      }
+    },
+    "orange_left_pec_objects": [
+      "Clavicular head of pectoralis major muscle.l",
+      "Sternocostal head of pectoralis major muscle.l",
+      "(Abdominal part of pectoralis major muscle).l"
+    ],
+    "named_side_centroid_sign_mismatches": []
+  },
+  "ecorche": {
+    "counts": {
+      "objects": 362,
+      "vertices": 358236,
+      "triangles": 726468
+    },
+    "geometry": {
+      "objects": 362,
+      "triangles": 726468,
+      "nonfinite_coordinates": 0,
+      "near_collapsed_triangles": 236,
+      "objects_negative_signed_volume": 2
+    },
+    "groups": {
+      "pectorals": {
+        "left": [
+          "Abdominal part of left pectoralis major",
+          "Clavicular part of left pectoralis major",
+          "Sternocostal part of left pectoralis major"
+        ],
+        "right": [
+          "Abdominal part of right pectoralis major",
+          "Clavicular part of right pectoralis major",
+          "Sternocostal part of right pectoralis major"
+        ],
+        "unspecified": []
+      },
+      "deltoids": {
+        "left": [
+          "Acromial part of left deltoid",
+          "Clavicular part of left deltoid",
+          "Spinal part of left deltoid"
+        ],
+        "right": [
+          "Acromial part of right deltoid",
+          "Clavicular part of right deltoid",
+          "Spinal part of right deltoid"
+        ],
+        "unspecified": []
+      },
+      "biceps": {
+        "left": [
+          "Long head of left biceps brachii",
+          "Short head of left biceps brachii"
+        ],
+        "right": [
+          "Long head of right biceps brachii",
+          "Short head of right biceps brachii"
+        ],
+        "unspecified": []
+      },
+      "triceps": {
+        "left": [
+          "Lateral head of left triceps brachii",
+          "Long head of left triceps brachii",
+          "Medial head of left triceps brachii"
+        ],
+        "right": [
+          "Lateral head of right triceps brachii",
+          "Long head of right triceps brachii",
+          "Medial head of right triceps brachii"
+        ],
+        "unspecified": []
+      },
+      "lats": {
+        "left": [
+          "Left latissimus dorsi"
+        ],
+        "right": [
+          "Right latissimus dorsi"
+        ],
+        "unspecified": []
+      },
+      "trapezius": {
+        "left": [
+          "Ascending part of left trapezius",
+          "Descending part of left trapezius",
+          "Transverse part of left trapezius"
+        ],
+        "right": [
+          "Ascending part of right trapezius",
+          "Descending part of right trapezius",
+          "Transverse part of right trapezius"
+        ],
+        "unspecified": []
+      },
+      "abs-rectus": {
+        "left": [
+          "Left rectus abdominis"
+        ],
+        "right": [
+          "Right rectus abdominis"
+        ],
+        "unspecified": []
+      },
+      "quadriceps": {
+        "left": [
+          "Left vastus intermedius",
+          "Left rectus femoris",
+          "Left vastus lateralis",
+          "Left vastus medialis"
+        ],
+        "right": [
+          "Right vastus intermedius",
+          "Right rectus femoris",
+          "Right vastus lateralis",
+          "Right vastus medialis"
+        ],
+        "unspecified": []
+      },
+      "hamstrings": {
+        "left": [
+          "Short head of left biceps femoris",
+          "Left semimembranosus",
+          "Left semitendinosus",
+          "Long head of left biceps femoris"
+        ],
+        "right": [
+          "Short head of right biceps femoris",
+          "Long head of right biceps femoris",
+          "Right semimembranosus",
+          "Right semitendinosus"
+        ],
+        "unspecified": []
+      },
+      "glutes": {
+        "left": [
+          "Left gluteus minimus",
+          "Left gluteus maximus",
+          "Left gluteus medius"
+        ],
+        "right": [
+          "Right gluteus minimus",
+          "Right gluteus maximus",
+          "Right gluteus medius"
+        ],
+        "unspecified": []
+      },
+      "calves": {
+        "left": [
+          "Lateral head of left gastrocnemius",
+          "Left soleus",
+          "Medial head of left gastrocnemius"
+        ],
+        "right": [
+          "Lateral head of right gastrocnemius",
+          "Medial head of right gastrocnemius",
+          "Right soleus"
+        ],
+        "unspecified": []
+      }
+    },
+    "orange_left_pec_objects": [
+      "Abdominal part of left pectoralis major",
+      "Clavicular part of left pectoralis major",
+      "Sternocostal part of left pectoralis major"
+    ],
+    "named_side_centroid_sign_mismatches": []
+  }
+}

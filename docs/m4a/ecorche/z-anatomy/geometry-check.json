@@ -1,0 +1,3669 @@
+{
+  "scope": "Prepared scene only, unchanged topology. No exhaustive intersection, watertightness, raycasting, rig or iPhone performance test.",
+  "winding_caveat": "Signed volume is indicative for open/nonmanifold surfaces; negative volume is not proof of a closed inward shell. Source winding is preserved.",
+  "objects": [
+    {
+      "object": "Lateral rectus muscle.l",
+      "triangles": 1600,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.413468871679122e-08,
+      "signed_volume_m3": -6.132623083495553e-07
+    },
+    {
+      "object": "Lateral rectus muscle.r",
+      "triangles": 1600,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.4133615635796965e-08,
+      "signed_volume_m3": 6.13262356817654e-07
+    },
+    {
+      "object": "Superior oblique muscle.l",
+      "triangles": 1750,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.545862206360399e-08,
+      "signed_volume_m3": -6.128900797106103e-07
+    },
+    {
+      "object": "Superior oblique muscle.r",
+      "triangles": 1750,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.545862206360399e-08,
+      "signed_volume_m3": 6.128900638663668e-07
+    },
+    {
+      "object": "Inferior oblique muscle.r",
+      "triangles": 1148,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.6826914564119977e-08,
+      "signed_volume_m3": 3.8631293127571236e-07
+    },
+    {
+      "object": "Inferior rectus muscle.r",
+      "triangles": 1736,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.7430435699957807e-08,
+      "signed_volume_m3": 7.414891181219901e-07
+    },
+    {
+      "object": "Levator palpebrae superioris.r",
+      "triangles": 2152,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.07078654447636e-09,
+      "signed_volume_m3": 9.291317304957271e-07
+    },
+    {
+      "object": "Medial rectus muscle.r",
+      "triangles": 1252,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.5700658412642076e-08,
+      "signed_volume_m3": 5.295545133120608e-07
+    },
+    {
+      "object": "Superior rectus muscle.r",
+      "triangles": 1284,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.8236139429077947e-08,
+      "signed_volume_m3": 5.877789998628714e-07
+    },
+    {
+      "object": "Inferior oblique muscle.l",
+      "triangles": 1148,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.6826914564119977e-08,
+      "signed_volume_m3": -3.8631292847430304e-07
+    },
+    {
+      "object": "Inferior rectus muscle.l",
+      "triangles": 1736,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.7430423829078043e-08,
+      "signed_volume_m3": -7.414891024493103e-07
+    },
+    {
+      "object": "Levator palpebrae superioris.l",
+      "triangles": 2152,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.071086881211968e-09,
+      "signed_volume_m3": -9.29131734578181e-07
+    },
+    {
+      "object": "Medial rectus muscle.l",
+      "triangles": 1252,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.5700658412642076e-08,
+      "signed_volume_m3": -5.295545173562398e-07
+    },
+    {
+      "object": "Superior rectus muscle.l",
+      "triangles": 1284,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.8236139429077947e-08,
+      "signed_volume_m3": -5.877789938751163e-07
+    },
+    {
+      "object": "Frontalis muscle.r",
+      "triangles": 5874,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.710755325064665e-09,
+      "signed_volume_m3": 1.0399692200221166e-05
+    },
+    {
+      "object": "Occipitalis muscle.r",
+      "triangles": 2602,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.9464176300332848e-09,
+      "signed_volume_m3": 3.601657237518496e-06
+    },
+    {
+      "object": "Epicranial aponeurosis.r",
+      "triangles": 20118,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.9724549226403923e-10,
+      "signed_volume_m3": 4.465599156305171e-05
+    },
+    {
+      "object": "Frontalis muscle.l",
+      "triangles": 5874,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.710755325064665e-09,
+      "signed_volume_m3": -1.0399692253791501e-05
+    },
+    {
+      "object": "Occipitalis muscle.l",
+      "triangles": 2602,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.9464176300332848e-09,
+      "signed_volume_m3": -3.6016574701188585e-06
+    },
+    {
+      "object": "Epicranial aponeurosis.l",
+      "triangles": 20118,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.9724549226403923e-10,
+      "signed_volume_m3": -4.465599220458269e-05
+    },
+    {
+      "object": "Temporoparietalis muscle.r",
+      "triangles": 11972,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.290504130477572e-09,
+      "signed_volume_m3": 2.6130790615193372e-05
+    },
+    {
+      "object": "Temporoparietalis muscle.l",
+      "triangles": 11972,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.290052134631373e-09,
+      "signed_volume_m3": -2.6130791021504014e-05
+    },
+    {
+      "object": "Nasalis muscle.r",
+      "triangles": 704,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.6620313495407965e-09,
+      "signed_volume_m3": 5.493219406124623e-07
+    },
+    {
+      "object": "Nasalis muscle.l",
+      "triangles": 704,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.6620313495407965e-09,
+      "signed_volume_m3": -5.493219138100754e-07
+    },
+    {
+      "object": "Orbital part of orbicularis oculi.r",
+      "triangles": 2390,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.950083851394479e-08,
+      "signed_volume_m3": 5.206723537713433e-06
+    },
+    {
+      "object": "Palpebral part of orbicularis oculi.r",
+      "triangles": 830,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.66319544053317e-08,
+      "signed_volume_m3": 8.925637254982981e-07
+    },
+    {
+      "object": "Orbital part of orbicularis oculi.l",
+      "triangles": 2390,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.950083851394479e-08,
+      "signed_volume_m3": -5.206723611031927e-06
+    },
+    {
+      "object": "Palpebral part of orbicularis oculi.l",
+      "triangles": 830,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.663333562506415e-08,
+      "signed_volume_m3": -8.925637303421065e-07
+    },
+    {
+      "object": "Orbicularis oris muscle.r",
+      "triangles": 1880,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.2211412314200471e-08,
+      "signed_volume_m3": 3.7532681840673793e-06
+    },
+    {
+      "object": "Orbicularis oris muscle.l",
+      "triangles": 1880,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.2211412314200471e-08,
+      "signed_volume_m3": -3.7532682271971717e-06
+    },
+    {
+      "object": "Zygomaticus major muscle.r",
+      "triangles": 798,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 9.381841931905538e-09,
+      "signed_volume_m3": 8.535913744185652e-07
+    },
+    {
+      "object": "Corrugator supercilii.r",
+      "triangles": 278,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.5868808326018187e-08,
+      "signed_volume_m3": 2.5254939248043e-07
+    },
+    {
+      "object": "Depressor anguli oris.r",
+      "triangles": 594,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.391876722765514e-08,
+      "signed_volume_m3": 1.117560453958297e-06
+    },
+    {
+      "object": "Depressor labii inferioris.r",
+      "triangles": 832,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.4741413113738905e-08,
+      "signed_volume_m3": 1.1762679560328292e-06
+    },
+    {
+      "object": "Levator anguli oris.r",
+      "triangles": 330,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.7014739410317738e-09,
+      "signed_volume_m3": 2.5331160621814263e-07
+    },
+    {
+      "object": "Procerus muscle.r",
+      "triangles": 546,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.685955757013881e-08,
+      "signed_volume_m3": 4.947829063395815e-07
+    },
+    {
+      "object": "Risorius muscle.r",
+      "triangles": 592,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.483255013662155e-08,
+      "signed_volume_m3": 8.421658546665934e-07
+    },
+    {
+      "object": "Zygomaticus minor muscle.r",
+      "triangles": 432,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.295511707115195e-08,
+      "signed_volume_m3": 3.708748921759888e-07
+    },
+    {
+      "object": "Levator labii superioris.r",
+      "triangles": 540,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.3241140426057815e-08,
+      "signed_volume_m3": 4.737249919005379e-07
+    },
+    {
+      "object": "Depressor septi nasi.r",
+      "triangles": 276,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.7203568636008204e-07,
+      "signed_volume_m3": 2.3911074275422526e-07
+    },
+    {
+      "object": "Mentalis muscle.r",
+      "triangles": 166,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.2155688040494466e-07,
+      "signed_volume_m3": 1.6535191581231425e-07
+    },
+    {
+      "object": "Levator nasolabialis.r",
+      "triangles": 172,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.4128127697661223e-07,
+      "signed_volume_m3": 1.1764673604973608e-07
+    },
+    {
+      "object": "Bucinator.r",
+      "triangles": 884,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.1037373226128233e-07,
+      "signed_volume_m3": 1.695764143260527e-06
+    },
+    {
+      "object": "Zygomaticus major muscle.l",
+      "triangles": 798,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 9.381841931905538e-09,
+      "signed_volume_m3": -8.53591288374777e-07
+    },
+    {
+      "object": "Corrugator supercilii.l",
+      "triangles": 278,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.5868265658016492e-08,
+      "signed_volume_m3": -2.5254936350593557e-07
+    },
+    {
+      "object": "Depressor anguli oris.l",
+      "triangles": 594,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.391876722765514e-08,
+      "signed_volume_m3": -1.1175603817228825e-06
+    },
+    {
+      "object": "Depressor labii inferioris.l",
+      "triangles": 832,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.474105816105879e-08,
+      "signed_volume_m3": -1.1762679502361283e-06
+    },
+    {
+      "object": "Levator anguli oris.l",
+      "triangles": 330,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.7013178610858453e-09,
+      "signed_volume_m3": -2.5331171359737925e-07
+    },
+    {
+      "object": "Procerus muscle.l",
+      "triangles": 546,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.6859562934579893e-08,
+      "signed_volume_m3": -4.94782921775352e-07
+    },
+    {
+      "object": "Risorius muscle.l",
+      "triangles": 592,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.4832672669199385e-08,
+      "signed_volume_m3": -8.421659384647953e-07
+    },
+    {
+      "object": "Zygomaticus minor muscle.l",
+      "triangles": 432,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.2953758136787825e-08,
+      "signed_volume_m3": -3.7087485056437567e-07
+    },
+    {
+      "object": "Levator labii superioris.l",
+      "triangles": 540,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.3241140426057815e-08,
+      "signed_volume_m3": -4.737250728525098e-07
+    },
+    {
+      "object": "Depressor septi nasi.l",
+      "triangles": 276,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.7203553234811732e-07,
+      "signed_volume_m3": -2.391107380737192e-07
+    },
+    {
+      "object": "Mentalis muscle.l",
+      "triangles": 166,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.2155688040494466e-07,
+      "signed_volume_m3": -1.6535190878146642e-07
+    },
+    {
+      "object": "Levator nasolabialis.l",
+      "triangles": 172,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.4128127697661223e-07,
+      "signed_volume_m3": -1.176467271574967e-07
+    },
+    {
+      "object": "Bucinator.l",
+      "triangles": 884,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.1037555162361913e-07,
+      "signed_volume_m3": -1.6957639518296926e-06
+    },
+    {
+      "object": "Superficial part of masseter.r",
+      "triangles": 1404,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.0868638906853293e-08,
+      "signed_volume_m3": 6.026184442194447e-06
+    },
+    {
+      "object": "Deep part of masseter.r",
+      "triangles": 994,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.209857921761016e-08,
+      "signed_volume_m3": 5.171408091865681e-06
+    },
+    {
+      "object": "Superficial part of masseter.l",
+      "triangles": 1404,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.0867920791587286e-08,
+      "signed_volume_m3": -6.026184542312895e-06
+    },
+    {
+      "object": "Deep part of masseter.l",
+      "triangles": 994,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.20973097636088e-08,
+      "signed_volume_m3": -5.17140851293574e-06
+    },
+    {
+      "object": "Medial pterygoid muscle.r",
+      "triangles": 496,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.5292720209238032e-07,
+      "signed_volume_m3": 3.3111816544948823e-06
+    },
+    {
+      "object": "Medial pterygoid muscle.l",
+      "triangles": 496,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.5292720209238032e-07,
+      "signed_volume_m3": -3.3111818020997813e-06
+    },
+    {
+      "object": "Inferior head of lateral pterygoid muscle.r",
+      "triangles": 326,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.556228265429857e-09,
+      "signed_volume_m3": 5.342473520614313e-07
+    },
+    {
+      "object": "Superior head of lateral pterygoid muscle.r",
+      "triangles": 226,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.9328342244331515e-07,
+      "signed_volume_m3": 1.060886712764081e-06
+    },
+    {
+      "object": "Inferior head of lateral pterygoid muscle.l",
+      "triangles": 326,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.556228265429857e-09,
+      "signed_volume_m3": -5.342473608442005e-07
+    },
+    {
+      "object": "Superior head of lateral pterygoid muscle.l",
+      "triangles": 226,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.9328342244331515e-07,
+      "signed_volume_m3": -1.060886680909313e-06
+    },
+    {
+      "object": "Temporalis muscle.r",
+      "triangles": 10260,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.783796933573017e-09,
+      "signed_volume_m3": 2.408754015327259e-05
+    },
+    {
+      "object": "Temporalis muscle.l",
+      "triangles": 10260,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.783589003894799e-09,
+      "signed_volume_m3": -2.4087541882816374e-05
+    },
+    {
+      "object": "Palatopharyngeus muscle.r",
+      "triangles": 15282,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.598858757571311e-09,
+      "signed_volume_m3": 3.295242136024223e-06
+    },
+    {
+      "object": "Palatopharyngeus muscle.l",
+      "triangles": 15282,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.5988826938921438e-09,
+      "signed_volume_m3": -3.2952421429982093e-06
+    },
+    {
+      "object": "Sternocleidomastoid muscle.r",
+      "triangles": 4952,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 8.464084373879267e-09,
+      "signed_volume_m3": 5.0287146140318076e-05
+    },
+    {
+      "object": "Sternocleidomastoid muscle.l",
+      "triangles": 4952,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 8.464138432018944e-09,
+      "signed_volume_m3": -5.028714396965064e-05
+    },
+    {
+      "object": "Intermediate tendon of digastric muscle.r",
+      "triangles": 228,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.507109073492092e-08,
+      "signed_volume_m3": 4.9829628650010606e-08
+    },
+    {
+      "object": "Intermediate tendon of digastric muscle.l",
+      "triangles": 228,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.5071125013565742e-08,
+      "signed_volume_m3": -4.9829617903701924e-08
+    },
+    {
+      "object": "Mylohyoid muscle.r",
+      "triangles": 1122,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.676800451682335e-09,
+      "signed_volume_m3": 2.485965885075301e-06
+    },
+    {
+      "object": "Stylohyoid muscle.r",
+      "triangles": 694,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.6672692891460435e-08,
+      "signed_volume_m3": 1.058099609653776e-06
+    },
+    {
+      "object": "Geniohyoid muscle.r",
+      "triangles": 530,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.001013592936906e-08,
+      "signed_volume_m3": 1.0846640825846701e-06
+    },
+    {
+      "object": "Mylohyoid muscle.l",
+      "triangles": 1122,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.676800451682335e-09,
+      "signed_volume_m3": -2.485965866489401e-06
+    },
+    {
+      "object": "Stylohyoid muscle.l",
+      "triangles": 694,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.6672692891460435e-08,
+      "signed_volume_m3": -1.0580995515346007e-06
+    },
+    {
+      "object": "Geniohyoid muscle.l",
+      "triangles": 530,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.001013592936906e-08,
+      "signed_volume_m3": -1.0846640850114312e-06
+    },
+    {
+      "object": "Omohyoid muscle.r",
+      "triangles": 2706,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.259022519033134e-08,
+      "signed_volume_m3": 5.498274066648246e-06
+    },
+    {
+      "object": "Omohyoid muscle.l",
+      "triangles": 2706,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.259022519033134e-08,
+      "signed_volume_m3": -5.49827426168613e-06
+    },
+    {
+      "object": "Sternohyoid muscle.r",
+      "triangles": 1394,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.28579192277098e-08,
+      "signed_volume_m3": 4.696830996793297e-06
+    },
+    {
+      "object": "Sternothyroid muscle.r",
+      "triangles": 1088,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.993765832658639e-08,
+      "signed_volume_m3": 4.796330727861096e-06
+    },
+    {
+      "object": "Thyrohyoid muscle.r",
+      "triangles": 700,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.2684875036946264e-08,
+      "signed_volume_m3": 8.60214039549473e-07
+    },
+    {
+      "object": "Sternohyoid muscle.l",
+      "triangles": 1394,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.285825963057864e-08,
+      "signed_volume_m3": -4.69683102930204e-06
+    },
+    {
+      "object": "Sternothyroid muscle.l",
+      "triangles": 1088,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.9937039081742036e-08,
+      "signed_volume_m3": -4.796330776639984e-06
+    },
+    {
+      "object": "Thyrohyoid muscle.l",
+      "triangles": 700,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.2684875036946264e-08,
+      "signed_volume_m3": -8.602139891657215e-07
+    },
+    {
+      "object": "Superior pharyngeal constrictor.r",
+      "triangles": 5334,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.064743455089937e-08,
+      "signed_volume_m3": 5.076938797111758e-06
+    },
+    {
+      "object": "Superior pharyngeal constrictor.l",
+      "triangles": 5334,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.064743455089937e-08,
+      "signed_volume_m3": -5.076938767354089e-06
+    },
+    {
+      "object": "Middle pharyngeal constrictor.r",
+      "triangles": 2948,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.3195002566888104e-08,
+      "signed_volume_m3": 3.126421247032933e-06
+    },
+    {
+      "object": "Middle pharyngeal constrictor.l",
+      "triangles": 2948,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.3195002566888104e-08,
+      "signed_volume_m3": -3.1264212326476873e-06
+    },
+    {
+      "object": "Inferior pharyngeal constrictor.r",
+      "triangles": 3696,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.2021538037482977e-08,
+      "signed_volume_m3": 3.499520047171471e-06
+    },
+    {
+      "object": "Inferior pharyngeal constrictor.l",
+      "triangles": 3696,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.2021538037482977e-08,
+      "signed_volume_m3": -3.4995200499680315e-06
+    },
+    {
+      "object": "Stylopharyngeus muscle.r",
+      "triangles": 9478,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.973903607202635e-09,
+      "signed_volume_m3": 1.36252782389718e-06
+    },
+    {
+      "object": "Stylopharyngeus muscle.l",
+      "triangles": 9478,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.972858508393438e-09,
+      "signed_volume_m3": -1.3625277432297166e-06
+    },
+    {
+      "object": "Oblique part of cricothyroid muscle.r",
+      "triangles": 2060,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.523620803676966e-09,
+      "signed_volume_m3": 6.981731981779218e-08
+    },
+    {
+      "object": "Straight part of cricothyroid muscle.r",
+      "triangles": 1180,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.122173082873475e-09,
+      "signed_volume_m3": 5.232815008390086e-08
+    },
+    {
+      "object": "Oblique part of cricothyroid muscle.l",
+      "triangles": 2060,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.52221167562763e-09,
+      "signed_volume_m3": -6.98172748869771e-08
+    },
+    {
+      "object": "Straight part of cricothyroid muscle.l",
+      "triangles": 1180,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.122173082873475e-09,
+      "signed_volume_m3": -5.2328168008928466e-08
+    },
+    {
+      "object": "Platysma.r",
+      "triangles": 6548,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.1335806378883687e-07,
+      "signed_volume_m3": 4.0998357457431374e-05
+    },
+    {
+      "object": "Scalenus medius muscle.r",
+      "triangles": 2078,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.4318313091447163e-08,
+      "signed_volume_m3": 5.707414855616511e-06
+    },
+    {
+      "object": "Scalenus posterior muscle.r",
+      "triangles": 1326,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.898416194475127e-08,
+      "signed_volume_m3": 2.741518036483552e-06
+    },
+    {
+      "object": "Scalenus anterior muscle.r",
+      "triangles": 1386,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.5769372804103416e-09,
+      "signed_volume_m3": 3.2543921571551785e-06
+    },
+    {
+      "object": "Longus capitis muscle.r",
+      "triangles": 1980,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.137218090078141e-08,
+      "signed_volume_m3": 5.17628593371002e-06
+    },
+    {
+      "object": "Longus colli muscle.r",
+      "triangles": 6294,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.162943348545624e-08,
+      "signed_volume_m3": 1.317116436138957e-05
+    },
+    {
+      "object": "Rectus anterior capitis muscle.r",
+      "triangles": 396,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 9.65699098009772e-08,
+      "signed_volume_m3": 7.436910100816273e-07
+    },
+    {
+      "object": "Rectus lateralis capitis muscle.r",
+      "triangles": 360,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.363279906382834e-08,
+      "signed_volume_m3": 6.12190766387924e-07
+    },
+    {
+      "object": "Platysma.l",
+      "triangles": 6548,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.1335474860959692e-07,
+      "signed_volume_m3": -4.09983779561293e-05
+    },
+    {
+      "object": "Scalenus medius muscle.l",
+      "triangles": 2078,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.431531858116551e-08,
+      "signed_volume_m3": -5.70741607043812e-06
+    },
+    {
+      "object": "Scalenus posterior muscle.l",
+      "triangles": 1326,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.898416194475127e-08,
+      "signed_volume_m3": -2.741517034269817e-06
+    },
+    {
+      "object": "Scalenus anterior muscle.l",
+      "triangles": 1386,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.576782814291216e-09,
+      "signed_volume_m3": -3.2543925135725023e-06
+    },
+    {
+      "object": "Longus capitis muscle.l",
+      "triangles": 1980,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.1369628938569077e-08,
+      "signed_volume_m3": -5.17628544350013e-06
+    },
+    {
+      "object": "Longus colli muscle.l",
+      "triangles": 6294,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.1629438965468514e-08,
+      "signed_volume_m3": -1.3171163293022866e-05
+    },
+    {
+      "object": "Rectus anterior capitis muscle.l",
+      "triangles": 396,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 9.65699098009772e-08,
+      "signed_volume_m3": -7.436910100816273e-07
+    },
+    {
+      "object": "Rectus lateralis capitis muscle.l",
+      "triangles": 360,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.363279906382834e-08,
+      "signed_volume_m3": -6.12190766387924e-07
+    },
+    {
+      "object": "Obliquus inferior capitis muscle.r",
+      "triangles": 540,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.0878031864690216e-08,
+      "signed_volume_m3": 2.852833399890759e-06
+    },
+    {
+      "object": "Obliquus superior capitis muscle.r",
+      "triangles": 654,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.141612316122705e-09,
+      "signed_volume_m3": 1.4152948311839273e-06
+    },
+    {
+      "object": "Rectus posterior major capitis muscle.r",
+      "triangles": 788,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.164207311035083e-08,
+      "signed_volume_m3": 5.167608346270799e-06
+    },
+    {
+      "object": "Rectus posterior minor capitis muscle.r",
+      "triangles": 432,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.262361924708753e-09,
+      "signed_volume_m3": 1.6991417875965581e-06
+    },
+    {
+      "object": "Obliquus inferior capitis muscle.l",
+      "triangles": 540,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.087128740468071e-08,
+      "signed_volume_m3": -2.8528330759569205e-06
+    },
+    {
+      "object": "Obliquus superior capitis muscle.l",
+      "triangles": 654,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.141621564479359e-09,
+      "signed_volume_m3": -1.4152944938274233e-06
+    },
+    {
+      "object": "Rectus posterior major capitis muscle.l",
+      "triangles": 788,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.164179395522836e-08,
+      "signed_volume_m3": -5.167609077093878e-06
+    },
+    {
+      "object": "Rectus posterior minor capitis muscle.l",
+      "triangles": 432,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.263515487144297e-09,
+      "signed_volume_m3": -1.6991417605759994e-06
+    },
+    {
+      "object": "Iliocostalis lumborum muscle.r",
+      "triangles": 10038,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.8101312212771115e-08,
+      "signed_volume_m3": 7.118696754435524e-05
+    },
+    {
+      "object": "Iliocostalis thoracis muscle.r",
+      "triangles": 5772,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.9623569365431483e-08,
+      "signed_volume_m3": 3.18557864106527e-05
+    },
+    {
+      "object": "Iliocostalis colli muscle.r",
+      "triangles": 2050,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.103803710778944e-08,
+      "signed_volume_m3": 8.361827608935774e-06
+    },
+    {
+      "object": "Iliocostalis lumborum muscle.l",
+      "triangles": 10038,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.809508087480763e-08,
+      "signed_volume_m3": -7.118693491259351e-05
+    },
+    {
+      "object": "Iliocostalis thoracis muscle.l",
+      "triangles": 5772,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.964879712080042e-08,
+      "signed_volume_m3": -3.1855770465148826e-05
+    },
+    {
+      "object": "Iliocostalis colli muscle",
+      "triangles": 2050,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.103876691185648e-08,
+      "signed_volume_m3": -8.361821389926173e-06
+    },
+    {
+      "object": "Longissimus thoracis muscle.r",
+      "triangles": 9652,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.284680066140387e-09,
+      "signed_volume_m3": 0.00015427329515945736
+    },
+    {
+      "object": "Longissimus thoracis muscle.l",
+      "triangles": 9652,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.284379716001484e-09,
+      "signed_volume_m3": -0.00015427328496492104
+    },
+    {
+      "object": "Longissimus capitis muscle.r",
+      "triangles": 1574,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.285279777492468e-09,
+      "signed_volume_m3": 5.194160536913812e-06
+    },
+    {
+      "object": "Longissimus colli muscle.r",
+      "triangles": 1826,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.00590661801151e-08,
+      "signed_volume_m3": 7.158030939995122e-06
+    },
+    {
+      "object": "Longissimus capitis muscle.l",
+      "triangles": 1574,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.285279777492468e-09,
+      "signed_volume_m3": -5.194160931025506e-06
+    },
+    {
+      "object": "Longissimus colli muscle.l",
+      "triangles": 1826,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.006227166128062e-08,
+      "signed_volume_m3": -7.158030141543494e-06
+    },
+    {
+      "object": "Spinalis capitis muscle.r",
+      "triangles": 2560,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.011207469497653e-09,
+      "signed_volume_m3": 1.0668474949031474e-05
+    },
+    {
+      "object": "Spinalis colli muscle.r",
+      "triangles": 596,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.123225851632975e-08,
+      "signed_volume_m3": 1.6705899319165023e-06
+    },
+    {
+      "object": "Spinalis thoracis muscle.r",
+      "triangles": 5532,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.8889159185733503e-08,
+      "signed_volume_m3": 1.0114941451614594e-05
+    },
+    {
+      "object": "Spinalis capitis muscle.l",
+      "triangles": 2560,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.013493466215477e-09,
+      "signed_volume_m3": -1.0668474628697205e-05
+    },
+    {
+      "object": "Spinalis colli muscle.l",
+      "triangles": 596,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.123225851632975e-08,
+      "signed_volume_m3": -1.67058974799227e-06
+    },
+    {
+      "object": "Spinalis thoracis muscle.l",
+      "triangles": 5532,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.8889169237885834e-08,
+      "signed_volume_m3": -1.0114941920570529e-05
+    },
+    {
+      "object": "Splenius capitis muscle.r",
+      "triangles": 5262,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.0764055612624786e-08,
+      "signed_volume_m3": 3.549186898364234e-05
+    },
+    {
+      "object": "Splenius colli muscle.r",
+      "triangles": 4314,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.5988199063938653e-09,
+      "signed_volume_m3": 1.6901825611875486e-05
+    },
+    {
+      "object": "Splenius capitis muscle.l",
+      "triangles": 5262,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.0755417041234848e-08,
+      "signed_volume_m3": -3.5491866449151884e-05
+    },
+    {
+      "object": "Splenius colli muscle.l",
+      "triangles": 4314,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.5988199063938653e-09,
+      "signed_volume_m3": -1.6901819837323778e-05
+    },
+    {
+      "object": "Multifidus colli muscle.r",
+      "triangles": 1390,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.4489580248495215e-08,
+      "signed_volume_m3": 3.2000004769084893e-06
+    },
+    {
+      "object": "Multifidus thoracis muscle.r",
+      "triangles": 3902,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.072724565613443e-09,
+      "signed_volume_m3": 9.51266357991248e-06
+    },
+    {
+      "object": "Multifidus lumborum muscle.r",
+      "triangles": 2820,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.206978616818205e-08,
+      "signed_volume_m3": 6.732392853399753e-06
+    },
+    {
+      "object": "Multifidus colli muscle.l",
+      "triangles": 1390,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.4489580248495215e-08,
+      "signed_volume_m3": -3.200000350368861e-06
+    },
+    {
+      "object": "Multifidus thoracis muscle.l",
+      "triangles": 3902,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.072720432181046e-09,
+      "signed_volume_m3": -9.512664682637189e-06
+    },
+    {
+      "object": "Multifidus lumborum muscle.l",
+      "triangles": 2820,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.2069898062027544e-08,
+      "signed_volume_m3": -6.732392226065341e-06
+    },
+    {
+      "object": "Semispinalis thoracis muscle.r",
+      "triangles": 4972,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.0767191889003442e-08,
+      "signed_volume_m3": 1.9322694293812586e-05
+    },
+    {
+      "object": "Semispinalis colli muscle.r",
+      "triangles": 2584,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.029787008271367e-09,
+      "signed_volume_m3": 7.969551092562451e-06
+    },
+    {
+      "object": "Semispinalis thoracis muscle.l",
+      "triangles": 4972,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.0763457600575897e-08,
+      "signed_volume_m3": -1.932268325456411e-05
+    },
+    {
+      "object": "Semispinalis colli muscle.l",
+      "triangles": 2584,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.026810907334204e-09,
+      "signed_volume_m3": -7.969546277209323e-06
+    },
+    {
+      "object": "Rotatores.l",
+      "triangles": 6518,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.333117311599469e-09,
+      "signed_volume_m3": -4.808343013794203e-05
+    },
+    {
+      "object": "Rotatores.r",
+      "triangles": 6518,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.327145809721267e-09,
+      "signed_volume_m3": 4.808341962258824e-05
+    },
+    {
+      "object": "Interspinales colli muscles.r",
+      "triangles": 444,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 9.991919699266207e-08,
+      "signed_volume_m3": 6.767168087642255e-07
+    },
+    {
+      "object": "Interspinales thoracis muscles.r",
+      "triangles": 198,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.9891647883360625e-07,
+      "signed_volume_m3": 4.4145530411835024e-07
+    },
+    {
+      "object": "Interspinales lumborum muscles.r",
+      "triangles": 562,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.162170737670936e-09,
+      "signed_volume_m3": 1.299158304401705e-06
+    },
+    {
+      "object": "Interspinales colli muscles.l",
+      "triangles": 444,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 9.991930233633049e-08,
+      "signed_volume_m3": -6.767167738596233e-07
+    },
+    {
+      "object": "Interspinales thoracis muscles.l",
+      "triangles": 198,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.989164599494951e-07,
+      "signed_volume_m3": -4.4145535063478566e-07
+    },
+    {
+      "object": "Interspinales lumborum muscles.l",
+      "triangles": 562,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.1622713379034275e-09,
+      "signed_volume_m3": -1.2991583805409222e-06
+    },
+    {
+      "object": "Ascending part of trapezius muscle.r",
+      "triangles": 4596,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.261070456265965e-08,
+      "signed_volume_m3": 0.00010218996466100195
+    },
+    {
+      "object": "Descending part of trapezius muscle.r",
+      "triangles": 6760,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.5895178047152e-08,
+      "signed_volume_m3": 0.0001656850518066338
+    },
+    {
+      "object": "Transverse part of trapezius muscle.r",
+      "triangles": 2992,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.0833329673078044e-07,
+      "signed_volume_m3": 5.6535333184287756e-05
+    },
+    {
+      "object": "Ascending part of trapezius muscle.l",
+      "triangles": 4596,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.2610916865985142e-08,
+      "signed_volume_m3": -0.0001021899645487178
+    },
+    {
+      "object": "Descending part of trapezius muscle.l",
+      "triangles": 6760,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.5895178047152e-08,
+      "signed_volume_m3": -0.00016568505025665883
+    },
+    {
+      "object": "Transverse part of trapezius muscle.l",
+      "triangles": 2992,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.0833329351015925e-07,
+      "signed_volume_m3": -5.653533403893583e-05
+    },
+    {
+      "object": "Dorsal parts of lateral intertransversarii lumborum muscles.r",
+      "triangles": 720,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.0795779453376501e-08,
+      "signed_volume_m3": 6.855842447011582e-06
+    },
+    {
+      "object": "Ventral parts of lateral intertransversarii lumborum muscles.r",
+      "triangles": 996,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.120989226522981e-08,
+      "signed_volume_m3": 2.8471235555847566e-06
+    },
+    {
+      "object": "Dorsal parts of lateral intertransversarii lumborum muscles.l",
+      "triangles": 720,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.0795779453376501e-08,
+      "signed_volume_m3": -6.855842048551094e-06
+    },
+    {
+      "object": "Ventral parts of lateral intertransversarii lumborum muscles.l",
+      "triangles": 996,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.1208756066163405e-08,
+      "signed_volume_m3": -2.8471236256716703e-06
+    },
+    {
+      "object": "Levator scapulae.r",
+      "triangles": 3082,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.5020352999863345e-08,
+      "signed_volume_m3": 1.605447741988723e-05
+    },
+    {
+      "object": "Rhomboid major muscle.r",
+      "triangles": 4800,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.674305565207664e-08,
+      "signed_volume_m3": 2.539138774115273e-05
+    },
+    {
+      "object": "Rhomboid minor muscle.r",
+      "triangles": 1494,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.8486439164306743e-09,
+      "signed_volume_m3": 7.088154306575626e-06
+    },
+    {
+      "object": "Latissimus dorsi muscle.r",
+      "triangles": 21580,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 9.77360568369206e-09,
+      "signed_volume_m3": 0.0004654844117197381
+    },
+    {
+      "object": "Serratus posterior inferior muscle.r",
+      "triangles": 8958,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.3592102173906396e-09,
+      "signed_volume_m3": 7.75608097785913e-05
+    },
+    {
+      "object": "Serratus posterior superior muscle.r",
+      "triangles": 5518,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.1937838293520761e-08,
+      "signed_volume_m3": 2.592791578030831e-05
+    },
+    {
+      "object": "Levator scapulae.l",
+      "triangles": 3082,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.5018762784864753e-08,
+      "signed_volume_m3": -1.6054475941430065e-05
+    },
+    {
+      "object": "Rhomboid major muscle.l",
+      "triangles": 4800,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.674305565207664e-08,
+      "signed_volume_m3": -2.5391390538502448e-05
+    },
+    {
+      "object": "Rhomboid minor muscle.l",
+      "triangles": 1494,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.8487232692298716e-09,
+      "signed_volume_m3": -7.088155366922593e-06
+    },
+    {
+      "object": "Latissimus dorsi muscle.l",
+      "triangles": 21580,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 9.817167552334457e-09,
+      "signed_volume_m3": -0.0004654844028849743
+    },
+    {
+      "object": "Serratus posterior inferior muscle.l",
+      "triangles": 8958,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.3594708694812993e-09,
+      "signed_volume_m3": -7.756081338084752e-05
+    },
+    {
+      "object": "Serratus posterior superior muscle.l",
+      "triangles": 5518,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.1936364865962837e-08,
+      "signed_volume_m3": -2.5927918093366e-05
+    },
+    {
+      "object": "Clavicular head of pectoralis major muscle.r",
+      "triangles": 850,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.490961727495312e-08,
+      "signed_volume_m3": 6.162007090991293e-05
+    },
+    {
+      "object": "Sternocostal head of pectoralis major muscle.r",
+      "triangles": 3222,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.82527021068179e-08,
+      "signed_volume_m3": 0.0005305178855694357
+    },
+    {
+      "object": "(Abdominal part of pectoralis major muscle).r",
+      "triangles": 1508,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.027038266214312e-08,
+      "signed_volume_m3": 3.276633218956373e-05
+    },
+    {
+      "object": "Clavicular head of pectoralis major muscle.l",
+      "triangles": 850,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.491176780147603e-08,
+      "signed_volume_m3": -6.1620202741695e-05
+    },
+    {
+      "object": "Sternocostal head of pectoralis major muscle.l",
+      "triangles": 3222,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.82526744410168e-08,
+      "signed_volume_m3": -0.0005305183909646642
+    },
+    {
+      "object": "(Abdominal part of pectoralis major muscle).l",
+      "triangles": 1508,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.026932387020011e-08,
+      "signed_volume_m3": -3.2766401838439217e-05
+    },
+    {
+      "object": "Levatores longi costarum.r",
+      "triangles": 5930,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.9175995683259317e-10,
+      "signed_volume_m3": 1.7817434759879796e-05
+    },
+    {
+      "object": "Levatores breves costarum.r",
+      "triangles": 2690,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.31875491473378e-10,
+      "signed_volume_m3": 7.484838415380915e-06
+    },
+    {
+      "object": "Levatores longi costarum.l",
+      "triangles": 5930,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.925627436293813e-10,
+      "signed_volume_m3": -1.7817450495604002e-05
+    },
+    {
+      "object": "Levatores breves costarum.l",
+      "triangles": 2690,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.316212778594459e-10,
+      "signed_volume_m3": -7.484846746522615e-06
+    },
+    {
+      "object": "Pectoralis minor muscle.r",
+      "triangles": 4142,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.726275956169102e-09,
+      "signed_volume_m3": 4.565709245259075e-05
+    },
+    {
+      "object": "External intercostal muscles.r",
+      "triangles": 41410,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.9184233753957445e-09,
+      "signed_volume_m3": 0.00010421383783087004
+    },
+    {
+      "object": "Internal intercostal muscles.r",
+      "triangles": 40184,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.5063364844880432e-08,
+      "signed_volume_m3": 8.595657935673098e-05
+    },
+    {
+      "object": "Serratus anterior muscle.r",
+      "triangles": 25240,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.803899161694613e-09,
+      "signed_volume_m3": 0.00019424605747368553
+    },
+    {
+      "object": "Innermost intercostal muscles.r",
+      "triangles": 38254,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.0904148695090043e-09,
+      "signed_volume_m3": 8.495994467249195e-05
+    },
+    {
+      "object": "Subclavius muscle.r",
+      "triangles": 794,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.551102915055955e-08,
+      "signed_volume_m3": 3.883292091082994e-06
+    },
+    {
+      "object": "Transversus thoracis muscle.r",
+      "triangles": 1670,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 9.177733195692734e-08,
+      "signed_volume_m3": 1.3220829642540506e-05
+    },
+    {
+      "object": "Pectoralis minor muscle.l",
+      "triangles": 4142,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.7277962592844206e-09,
+      "signed_volume_m3": -4.565710544814228e-05
+    },
+    {
+      "object": "External intercostal muscles.l",
+      "triangles": 41410,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.933784535841184e-09,
+      "signed_volume_m3": -0.00010421386975685642
+    },
+    {
+      "object": "Internal intercostal muscles.l",
+      "triangles": 40184,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.5216766496233807e-08,
+      "signed_volume_m3": -8.595660635014092e-05
+    },
+    {
+      "object": "Serratus anterior muscle.l",
+      "triangles": 25240,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.799527635508319e-09,
+      "signed_volume_m3": -0.0001942461533389699
+    },
+    {
+      "object": "Innermost intercostal muscles.l",
+      "triangles": 38254,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.0903162817044176e-09,
+      "signed_volume_m3": -8.496000432431482e-05
+    },
+    {
+      "object": "Subclavius muscle.l",
+      "triangles": 794,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.5515684676850502e-08,
+      "signed_volume_m3": -3.8832955213867645e-06
+    },
+    {
+      "object": "Transversus thoracis muscle.l",
+      "triangles": 1670,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 9.177737853703827e-08,
+      "signed_volume_m3": -1.3220842393226345e-05
+    },
+    {
+      "object": "Diaphragm",
+      "triangles": 38868,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.918840578808167e-07,
+      "signed_volume_m3": 0.0007457619285213493
+    },
+    {
+      "object": "Rectus abdominis muscle.r",
+      "triangles": 20604,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.519776071544905e-09,
+      "signed_volume_m3": 0.00030177254946276696
+    },
+    {
+      "object": "Rectus abdominis muscle.l",
+      "triangles": 20604,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.54051295910157e-09,
+      "signed_volume_m3": -0.00030177271694996664
+    },
+    {
+      "object": "External abdominal oblique muscle.r",
+      "triangles": 29622,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.4836812595268182e-08,
+      "signed_volume_m3": 0.00030509147765079783
+    },
+    {
+      "object": "External abdominal oblique muscle.l",
+      "triangles": 29622,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.478287777761583e-08,
+      "signed_volume_m3": -0.0003050917091207901
+    },
+    {
+      "object": "Internal abdominal oblique muscle.r",
+      "triangles": 28869,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.5650345642538712e-10,
+      "signed_volume_m3": 0.00021570703736864492
+    },
+    {
+      "object": "Internal abdominal oblique muscle.l",
+      "triangles": 28869,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.5220884881814583e-10,
+      "signed_volume_m3": -0.00021570711884384125
+    },
+    {
+      "object": "Transversus abdominis muscle.r",
+      "triangles": 34328,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.7568698224181288e-08,
+      "signed_volume_m3": 0.0003825250164706121
+    },
+    {
+      "object": "Transversus abdominis muscle.l",
+      "triangles": 34328,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.756693041713194e-08,
+      "signed_volume_m3": -0.000382525123206954
+    },
+    {
+      "object": "Pyramidalis muscle.r",
+      "triangles": 1112,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.232747983579218e-08,
+      "signed_volume_m3": 2.5570834035608265e-06
+    },
+    {
+      "object": "Quadratus lumborum muscle.r",
+      "triangles": 2832,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.0726318685658009e-07,
+      "signed_volume_m3": 0.00010284893773617398
+    },
+    {
+      "object": "Pyramidalis muscle.l",
+      "triangles": 1112,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.2328591164427696e-08,
+      "signed_volume_m3": -2.5570848983338323e-06
+    },
+    {
+      "object": "Quadratus lumborum muscle.l",
+      "triangles": 2832,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.0726318685658009e-07,
+      "signed_volume_m3": -0.00010284893728459645
+    },
+    {
+      "object": "Coccygeus muscle.r",
+      "triangles": 1034,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.25793363429805e-08,
+      "signed_volume_m3": 4.264955122482333e-06
+    },
+    {
+      "object": "Iliococcygeus muscle.r",
+      "triangles": 1962,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.2782264515644846e-08,
+      "signed_volume_m3": 8.759121316925474e-06
+    },
+    {
+      "object": "Pubo-analis muscle.r",
+      "triangles": 1440,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.4195910372622557e-08,
+      "signed_volume_m3": 7.372772392208324e-06
+    },
+    {
+      "object": "Pubococcygeus muscle.r",
+      "triangles": 2512,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.304111265188119e-09,
+      "signed_volume_m3": 7.539667624521906e-06
+    },
+    {
+      "object": "Coccygeus muscle.l",
+      "triangles": 1034,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.25793363429805e-08,
+      "signed_volume_m3": -4.264955100872667e-06
+    },
+    {
+      "object": "Iliococcygeus muscle.l",
+      "triangles": 1962,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.2782264515644846e-08,
+      "signed_volume_m3": -8.75912143649713e-06
+    },
+    {
+      "object": "Pubo-analis muscle.l",
+      "triangles": 1440,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.4195910372622557e-08,
+      "signed_volume_m3": -7.372772260871171e-06
+    },
+    {
+      "object": "Pubococcygeus muscle.l",
+      "triangles": 2512,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.304111265188119e-09,
+      "signed_volume_m3": -7.539667597193013e-06
+    },
+    {
+      "object": "Acromial part of deltoid muscle.r",
+      "triangles": 2964,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.482574149030041e-08,
+      "signed_volume_m3": 0.00012041768708408094
+    },
+    {
+      "object": "Clavicular part of deltoid muscle.r",
+      "triangles": 2902,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.0719373631734554e-07,
+      "signed_volume_m3": 8.534083080217804e-05
+    },
+    {
+      "object": "Scapular spinal part of deltoid muscle.r",
+      "triangles": 4378,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.8906109377875016e-08,
+      "signed_volume_m3": 0.00022592195654347192
+    },
+    {
+      "object": "Acromial part of deltoid muscle.l",
+      "triangles": 2964,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.482472418817184e-08,
+      "signed_volume_m3": -0.00012041774513659797
+    },
+    {
+      "object": "Clavicular part of deltoid muscle.l",
+      "triangles": 2902,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.0719432520253554e-07,
+      "signed_volume_m3": -8.534086041730542e-05
+    },
+    {
+      "object": "Scapular spinal part of deltoid muscle.l",
+      "triangles": 4378,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.890596216578275e-08,
+      "signed_volume_m3": -0.0002259220315405016
+    },
+    {
+      "object": "Subscapularis muscle.r",
+      "triangles": 2954,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.1224983136300252e-09,
+      "signed_volume_m3": 4.648848392392157e-05
+    },
+    {
+      "object": "Supraspinatus muscle.r",
+      "triangles": 1430,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.7183752903144998e-07,
+      "signed_volume_m3": 3.842655355531538e-05
+    },
+    {
+      "object": "Teres minor muscle.r",
+      "triangles": 1522,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.4834619717421146e-08,
+      "signed_volume_m3": 4.9234213717384884e-05
+    },
+    {
+      "object": "Infraspinatus muscle.r",
+      "triangles": 3166,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.237085690888997e-08,
+      "signed_volume_m3": 0.00014401218882406866
+    },
+    {
+      "object": "Subscapularis muscle.l",
+      "triangles": 2954,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.1224701342862373e-09,
+      "signed_volume_m3": -4.648850430402689e-05
+    },
+    {
+      "object": "Supraspinatus muscle.l",
+      "triangles": 1430,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.718380422871983e-07,
+      "signed_volume_m3": -3.842654861736751e-05
+    },
+    {
+      "object": "Teres minor muscle.l",
+      "triangles": 1522,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.4838495666456534e-08,
+      "signed_volume_m3": -4.923425041632818e-05
+    },
+    {
+      "object": "Infraspinatus muscle.l",
+      "triangles": 3166,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.237085690888997e-08,
+      "signed_volume_m3": -0.00014401221988793566
+    },
+    {
+      "object": "Teres major muscle.r",
+      "triangles": 1154,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.4783721643153014e-07,
+      "signed_volume_m3": 1.7349716460407355e-05
+    },
+    {
+      "object": "Teres major muscle.l",
+      "triangles": 1154,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.4782711179055022e-07,
+      "signed_volume_m3": -1.73497161255135e-05
+    },
+    {
+      "object": "Long head of biceps brachii.r",
+      "triangles": 3218,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.846152796930097e-08,
+      "signed_volume_m3": 0.00012998762946107972
+    },
+    {
+      "object": "Short head of biceps brachii.r",
+      "triangles": 2696,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.4433529709848263e-08,
+      "signed_volume_m3": 9.88387677524795e-05
+    },
+    {
+      "object": "Long head of biceps brachii.l",
+      "triangles": 3218,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.8490423405285706e-08,
+      "signed_volume_m3": -0.00012998767058568025
+    },
+    {
+      "object": "Short head of biceps brachii.l",
+      "triangles": 2696,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.443264757750553e-08,
+      "signed_volume_m3": -9.883879993021948e-05
+    },
+    {
+      "object": "Brachialis muscle.r",
+      "triangles": 3478,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.2183438320985894e-07,
+      "signed_volume_m3": 9.917411904338089e-05
+    },
+    {
+      "object": "Coracobrachialis muscle.r",
+      "triangles": 1160,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.4528415098261252e-07,
+      "signed_volume_m3": 2.788557147098561e-05
+    },
+    {
+      "object": "Brachialis muscle.l",
+      "triangles": 3478,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.2183998039107891e-07,
+      "signed_volume_m3": -9.917409143209254e-05
+    },
+    {
+      "object": "Coracobrachialis muscle.l",
+      "triangles": 1160,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.4528575935224172e-07,
+      "signed_volume_m3": -2.788556540832532e-05
+    },
+    {
+      "object": "Medial head of triceps brachii.r",
+      "triangles": 2686,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.2305445212951264e-07,
+      "signed_volume_m3": 8.6158240459593e-05
+    },
+    {
+      "object": "Lateral head of triceps brachii.r",
+      "triangles": 3628,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.8409614997356254e-07,
+      "signed_volume_m3": 0.00017188626795155005
+    },
+    {
+      "object": "Long head of triceps brachii.r",
+      "triangles": 3950,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.9302317732634115e-08,
+      "signed_volume_m3": 0.00018427112294301394
+    },
+    {
+      "object": "Medial head of triceps brachii.l",
+      "triangles": 2686,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.230160690178613e-07,
+      "signed_volume_m3": -8.615822202273891e-05
+    },
+    {
+      "object": "Lateral head of triceps brachii.l",
+      "triangles": 3628,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.8408847788702975e-07,
+      "signed_volume_m3": -0.0001718861746305767
+    },
+    {
+      "object": "Long head of triceps brachii.l",
+      "triangles": 3950,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.92938994009689e-08,
+      "signed_volume_m3": -0.0001842710666394171
+    },
+    {
+      "object": "Superficial head of pronator teres.r",
+      "triangles": 2546,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.127532987590624e-08,
+      "signed_volume_m3": 1.613706914752448e-05
+    },
+    {
+      "object": "Deep head of pronator teres.r",
+      "triangles": 1114,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.5584036508349063e-07,
+      "signed_volume_m3": 6.635513225476234e-06
+    },
+    {
+      "object": "Superficial head of pronator teres.l",
+      "triangles": 2546,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.128034845038042e-08,
+      "signed_volume_m3": -1.6137066716391236e-05
+    },
+    {
+      "object": "Deep head of pronator teres.l",
+      "triangles": 1114,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.5584749206206548e-07,
+      "signed_volume_m3": -6.635512695925596e-06
+    },
+    {
+      "object": "Humeral head of flexor carpi ulnaris.r",
+      "triangles": 3912,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.404605187254992e-08,
+      "signed_volume_m3": 3.441959300553418e-05
+    },
+    {
+      "object": "Ulnar head of flexor carpi ulnaris.r",
+      "triangles": 1466,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.429322677610503e-08,
+      "signed_volume_m3": 2.73207905480051e-05
+    },
+    {
+      "object": "Humeral head of flexor carpi ulnaris.l",
+      "triangles": 3912,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.402944057006625e-08,
+      "signed_volume_m3": -3.4419585887601066e-05
+    },
+    {
+      "object": "Ulnar head of flexor carpi ulnaris.l",
+      "triangles": 1466,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.429322677610503e-08,
+      "signed_volume_m3": -2.732078106473664e-05
+    },
+    {
+      "object": "Humero-ulnar head of flexor digitorum superficialis.r",
+      "triangles": 12798,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.4354314671121042e-08,
+      "signed_volume_m3": 6.254302572217039e-05
+    },
+    {
+      "object": "Humero-ulnar head of flexor digitorum superficialis.l",
+      "triangles": 12798,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.4354314671121042e-08,
+      "signed_volume_m3": -6.254300926525102e-05
+    },
+    {
+      "object": "Flexor carpi radialis.r",
+      "triangles": 1666,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.9932956472828828e-07,
+      "signed_volume_m3": 2.9321590208970695e-05
+    },
+    {
+      "object": "Palmaris longus muscle.r",
+      "triangles": 4374,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.1267179693564218e-09,
+      "signed_volume_m3": 2.0639999021731185e-05
+    },
+    {
+      "object": "Flexor carpi radialis.l",
+      "triangles": 1666,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.9932924003403383e-07,
+      "signed_volume_m3": -2.9321591496910492e-05
+    },
+    {
+      "object": "Palmaris longus muscle.l",
+      "triangles": 4374,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.1309890042642166e-09,
+      "signed_volume_m3": -2.0639988919052997e-05
+    },
+    {
+      "object": "Radial head of flexor digitorum superficialis.r",
+      "triangles": 1276,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.0579863518622734e-07,
+      "signed_volume_m3": 2.3034793930343868e-05
+    },
+    {
+      "object": "Flexor digitorum profundus.r",
+      "triangles": 7110,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.2184921246188576e-08,
+      "signed_volume_m3": 7.223415164921856e-05
+    },
+    {
+      "object": "Flexor pollicis longus.r",
+      "triangles": 1666,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.399595066185096e-08,
+      "signed_volume_m3": 7.190332000187105e-06
+    },
+    {
+      "object": "Pronator quadratus.r",
+      "triangles": 1020,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.5170848070021436e-07,
+      "signed_volume_m3": 8.590677321940787e-06
+    },
+    {
+      "object": "Radial head of flexor digitorum superficialis.l",
+      "triangles": 1276,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.057827802774105e-07,
+      "signed_volume_m3": -2.3034777737208118e-05
+    },
+    {
+      "object": "Flexor digitorum profundus.l",
+      "triangles": 7110,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.2187843720079626e-08,
+      "signed_volume_m3": -7.223414185779356e-05
+    },
+    {
+      "object": "Flexor pollicis longus.l",
+      "triangles": 1666,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.407376867419543e-08,
+      "signed_volume_m3": -7.190326504148321e-06
+    },
+    {
+      "object": "Pronator quadratus.l",
+      "triangles": 1020,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.5171227979902638e-07,
+      "signed_volume_m3": -8.590676189092164e-06
+    },
+    {
+      "object": "Extensor digitorum.r",
+      "triangles": 6410,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.640587268109704e-08,
+      "signed_volume_m3": 3.917526431486348e-05
+    },
+    {
+      "object": "Extensor digitorum.l",
+      "triangles": 6410,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.6391558161104274e-08,
+      "signed_volume_m3": -3.9175249384515524e-05
+    },
+    {
+      "object": "Ulnar head of extensor carpi ulnaris.r",
+      "triangles": 582,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.78821686422132e-08,
+      "signed_volume_m3": 7.602692733032585e-06
+    },
+    {
+      "object": "Humeral head of extensor carpi ulnaris.r",
+      "triangles": 830,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.628016248702865e-08,
+      "signed_volume_m3": 1.2116483304407317e-05
+    },
+    {
+      "object": "Ulnar head of extensor carpi ulnaris.l",
+      "triangles": 582,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.788296106660313e-08,
+      "signed_volume_m3": -7.602694878222033e-06
+    },
+    {
+      "object": "Humeral head of extensor carpi ulnaris.l",
+      "triangles": 830,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.628016248702865e-08,
+      "signed_volume_m3": -1.2116473914822259e-05
+    },
+    {
+      "object": "Brachioradialis muscle.r",
+      "triangles": 7312,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.64123207245885e-08,
+      "signed_volume_m3": 0.0001038248124034972
+    },
+    {
+      "object": "Extensor carpi radialis longus.r",
+      "triangles": 3706,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.385926876359529e-08,
+      "signed_volume_m3": 3.344882070961641e-05
+    },
+    {
+      "object": "Extensor carpi radialis brevis.r",
+      "triangles": 3142,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.490782442580779e-08,
+      "signed_volume_m3": 2.6245109204719303e-05
+    },
+    {
+      "object": "Anconeus muscle.r",
+      "triangles": 1442,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.037528461413247e-08,
+      "signed_volume_m3": 9.87640678650786e-06
+    },
+    {
+      "object": "Extensor digiti minimi.r",
+      "triangles": 2152,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.397950095447256e-08,
+      "signed_volume_m3": 9.036094543249668e-06
+    },
+    {
+      "object": "Brachioradialis muscle.l",
+      "triangles": 7312,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.6454049141274126e-08,
+      "signed_volume_m3": -0.00010382479345677557
+    },
+    {
+      "object": "Extensor carpi radialis longus.l",
+      "triangles": 3706,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.3859366160365916e-08,
+      "signed_volume_m3": -3.3448819548582206e-05
+    },
+    {
+      "object": "Extensor carpi radialis brevis.l",
+      "triangles": 3142,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.490782442580779e-08,
+      "signed_volume_m3": -2.6245096324671296e-05
+    },
+    {
+      "object": "Anconeus muscle.l",
+      "triangles": 1442,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.037734575669088e-08,
+      "signed_volume_m3": -9.876402784904076e-06
+    },
+    {
+      "object": "Extensor digiti minimi.l",
+      "triangles": 2152,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.397782845431884e-08,
+      "signed_volume_m3": -9.03609158709274e-06
+    },
+    {
+      "object": "Supinator.r",
+      "triangles": 2754,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.514829824757741e-08,
+      "signed_volume_m3": 1.5271266470625188e-05
+    },
+    {
+      "object": "Supinator.l",
+      "triangles": 2754,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.514617271889145e-08,
+      "signed_volume_m3": -1.5271258925904236e-05
+    },
+    {
+      "object": "Abductor pollicis longus.r",
+      "triangles": 2462,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.56427534191695e-08,
+      "signed_volume_m3": 2.1277483353247668e-05
+    },
+    {
+      "object": "Extensor indicis.r",
+      "triangles": 1142,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.696719416417939e-08,
+      "signed_volume_m3": 4.09100067258627e-06
+    },
+    {
+      "object": "Extensor pollicis brevis.r",
+      "triangles": 1176,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.7919726062828064e-08,
+      "signed_volume_m3": 4.766257841170427e-06
+    },
+    {
+      "object": "Extensor pollicis longus.r",
+      "triangles": 1602,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.947500377734655e-08,
+      "signed_volume_m3": 6.613780098784508e-06
+    },
+    {
+      "object": "Abductor pollicis longus.l",
+      "triangles": 2462,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.564109520991846e-08,
+      "signed_volume_m3": -2.1277480185458795e-05
+    },
+    {
+      "object": "Extensor indicis.l",
+      "triangles": 1142,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.696342052953536e-08,
+      "signed_volume_m3": -4.090997239446023e-06
+    },
+    {
+      "object": "Extensor pollicis brevis.l",
+      "triangles": 1176,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.791525123711286e-08,
+      "signed_volume_m3": -4.766255110328793e-06
+    },
+    {
+      "object": "Extensor pollicis longus.l",
+      "triangles": 1602,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.947006721606848e-08,
+      "signed_volume_m3": -6.61377369513932e-06
+    },
+    {
+      "object": "Superficial head of flexor pollicis brevis.r",
+      "triangles": 276,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.9072841872285667e-08,
+      "signed_volume_m3": 1.2977439220551105e-06
+    },
+    {
+      "object": "Deep head of flexor pollicis brevis.r",
+      "triangles": 746,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.5746013240959196e-09,
+      "signed_volume_m3": 2.548541788867791e-06
+    },
+    {
+      "object": "Superficial head of flexor pollicis brevis.l",
+      "triangles": 276,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.9072841872285667e-08,
+      "signed_volume_m3": -1.297743576535555e-06
+    },
+    {
+      "object": "Deep head of flexor pollicis brevis.l",
+      "triangles": 746,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.5746013240959196e-09,
+      "signed_volume_m3": -2.5485418607542202e-06
+    },
+    {
+      "object": "Oblique head of adductor pollicis.r",
+      "triangles": 450,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.4115192023837108e-08,
+      "signed_volume_m3": 1.5866314698269012e-06
+    },
+    {
+      "object": "Transverse head of adductor pollicis.r",
+      "triangles": 1014,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.926227805518548e-08,
+      "signed_volume_m3": 4.020354634996264e-06
+    },
+    {
+      "object": "Oblique head of adductor pollicis.l",
+      "triangles": 450,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.4115192023837108e-08,
+      "signed_volume_m3": -1.5866312103008643e-06
+    },
+    {
+      "object": "Transverse head of adductor pollicis.l",
+      "triangles": 1014,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.926227805518548e-08,
+      "signed_volume_m3": -4.0203548623811475e-06
+    },
+    {
+      "object": "Abductor pollicis brevis.r",
+      "triangles": 624,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.8375537578827098e-08,
+      "signed_volume_m3": 2.494990803479382e-06
+    },
+    {
+      "object": "Opponens pollicis muscle.r",
+      "triangles": 384,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.3574420791274226e-08,
+      "signed_volume_m3": 1.1640434096632327e-06
+    },
+    {
+      "object": "Abductor digiti minimi of hand.r",
+      "triangles": 672,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.821540529510585e-08,
+      "signed_volume_m3": 2.6505764141502106e-06
+    },
+    {
+      "object": "Flexor digiti minimi of hand.r",
+      "triangles": 308,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.752668451224261e-08,
+      "signed_volume_m3": 9.382203099252318e-07
+    },
+    {
+      "object": "Opponens digiti minimi muscle of hand.r",
+      "triangles": 420,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.1239973778319025e-08,
+      "signed_volume_m3": 1.4251410551188763e-06
+    },
+    {
+      "object": "Lumbrical muscles of hand.r",
+      "triangles": 1368,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.9638132415003154e-08,
+      "signed_volume_m3": 3.111239305482583e-06
+    },
+    {
+      "object": "Dorsal interossei muscles of hand.r",
+      "triangles": 1364,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.6750833544041095e-08,
+      "signed_volume_m3": 5.498199331222888e-06
+    },
+    {
+      "object": "Palmar interossei muscles.r",
+      "triangles": 174,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.937803695971106e-09,
+      "signed_volume_m3": 3.1280190343190873e-07
+    },
+    {
+      "object": "Abductor pollicis brevis.l",
+      "triangles": 624,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.8375537578827098e-08,
+      "signed_volume_m3": -2.4949909212906355e-06
+    },
+    {
+      "object": "Opponens pollicis muscle.l",
+      "triangles": 384,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.358629164635057e-08,
+      "signed_volume_m3": -1.1640435068765847e-06
+    },
+    {
+      "object": "Abductor digiti minimi of hand.l",
+      "triangles": 672,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.821540529510585e-08,
+      "signed_volume_m3": -2.650575741253245e-06
+    },
+    {
+      "object": "Flexor digiti minimi of hand.l",
+      "triangles": 308,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.752668451224261e-08,
+      "signed_volume_m3": -9.382203557883841e-07
+    },
+    {
+      "object": "Opponens digiti minimi muscle of hand.l",
+      "triangles": 420,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.1239973778319025e-08,
+      "signed_volume_m3": -1.4251423868637713e-06
+    },
+    {
+      "object": "Lumbrical muscles of hand.l",
+      "triangles": 1368,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.9637129664387416e-08,
+      "signed_volume_m3": -3.111237986193595e-06
+    },
+    {
+      "object": "Dorsal interossei muscles of hand.l",
+      "triangles": 1364,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.674847044165454e-08,
+      "signed_volume_m3": -5.4981980108936125e-06
+    },
+    {
+      "object": "Palmar interossei muscles.l",
+      "triangles": 174,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.937803695971106e-09,
+      "signed_volume_m3": -3.128012496279621e-07
+    },
+    {
+      "object": "Palmar aponeurosis.r",
+      "triangles": 1284,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.5587358255080477e-07,
+      "signed_volume_m3": 8.765046476925156e-07
+    },
+    {
+      "object": "Palmar aponeurosis.l",
+      "triangles": 1284,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.5587358255080477e-07,
+      "signed_volume_m3": -8.765046476925156e-07
+    },
+    {
+      "object": "Iliacus muscle.r",
+      "triangles": 4354,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.6726349128081572e-08,
+      "signed_volume_m3": 0.00016615199008061205
+    },
+    {
+      "object": "Psoas major.r",
+      "triangles": 5474,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.840926170192328e-08,
+      "signed_volume_m3": 0.00023226961099156006
+    },
+    {
+      "object": "Iliacus muscle.l",
+      "triangles": 4354,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.6725554470689834e-08,
+      "signed_volume_m3": -0.00016615199280234184
+    },
+    {
+      "object": "Psoas major.l",
+      "triangles": 5474,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.843000318824468e-08,
+      "signed_volume_m3": -0.00023226963306798143
+    },
+    {
+      "object": "Gluteus medius muscle.r",
+      "triangles": 5176,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.437931114046071e-07,
+      "signed_volume_m3": 0.0002736751507346343
+    },
+    {
+      "object": "Gluteus maximus muscle.r",
+      "triangles": 3326,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.0312731082982818e-07,
+      "signed_volume_m3": 0.0004966240536170787
+    },
+    {
+      "object": "Gluteus minimus muscle.r",
+      "triangles": 6250,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.607359196899549e-08,
+      "signed_volume_m3": 0.0001500643581789267
+    },
+    {
+      "object": "Tensor fasciae latae.r",
+      "triangles": 1862,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.513048695520354e-07,
+      "signed_volume_m3": 7.026958467583094e-05
+    },
+    {
+      "object": "Gluteus medius muscle.l",
+      "triangles": 5176,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.4378918037141612e-07,
+      "signed_volume_m3": -0.0002736752891128672
+    },
+    {
+      "object": "Gluteus maximus muscle.l",
+      "triangles": 3326,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.0313248680522815e-07,
+      "signed_volume_m3": -0.0004966242743569002
+    },
+    {
+      "object": "Gluteus minimus muscle.l",
+      "triangles": 6250,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.607881975278244e-08,
+      "signed_volume_m3": -0.00015006440255975242
+    },
+    {
+      "object": "Tensor fasciae latae.l",
+      "triangles": 1862,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.5133110677630406e-07,
+      "signed_volume_m3": -7.02696211400912e-05
+    },
+    {
+      "object": "Piriformis muscle.r",
+      "triangles": 1500,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.7163582830853996e-07,
+      "signed_volume_m3": 3.657111778701476e-05
+    },
+    {
+      "object": "Quadratus femoris muscle.r",
+      "triangles": 1646,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.1408552978245044e-08,
+      "signed_volume_m3": 1.526854836757538e-05
+    },
+    {
+      "object": "Inferior gemellus muscle.r",
+      "triangles": 976,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.637744500478492e-08,
+      "signed_volume_m3": 5.505878936472895e-06
+    },
+    {
+      "object": "Obturator internus.r",
+      "triangles": 3760,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.47006647422913e-08,
+      "signed_volume_m3": 2.2707438565166955e-05
+    },
+    {
+      "object": "Superior gemellus muscle.r",
+      "triangles": 404,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.1944521060053287e-07,
+      "signed_volume_m3": 6.392383002137018e-06
+    },
+    {
+      "object": "Piriformis muscle.l",
+      "triangles": 1500,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.7156852996229232e-07,
+      "signed_volume_m3": -3.6571164705738895e-05
+    },
+    {
+      "object": "Quadratus femoris muscle.l",
+      "triangles": 1646,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.141180331827352e-08,
+      "signed_volume_m3": -1.526855177846753e-05
+    },
+    {
+      "object": "Inferior gemellus muscle.l",
+      "triangles": 976,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.637603883708589e-08,
+      "signed_volume_m3": -5.505885691087003e-06
+    },
+    {
+      "object": "Obturator internus.l",
+      "triangles": 3760,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.470803354361899e-08,
+      "signed_volume_m3": -2.2707448846370076e-05
+    },
+    {
+      "object": "Superior gemellus muscle.l",
+      "triangles": 404,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.1944143312937525e-07,
+      "signed_volume_m3": -6.3923783941923105e-06
+    },
+    {
+      "object": "Rectus femoris muscle.r",
+      "triangles": 8276,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.763277606551268e-08,
+      "signed_volume_m3": 0.00039938774693300326
+    },
+    {
+      "object": "Vastus lateralis muscle.r",
+      "triangles": 9356,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.561465349605853e-08,
+      "signed_volume_m3": 0.0005654722814225261
+    },
+    {
+      "object": "Vastus medialis muscle.r",
+      "triangles": 6460,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 9.590086518552734e-08,
+      "signed_volume_m3": 0.0003590228095892237
+    },
+    {
+      "object": "Vastus intermedius muscle.r",
+      "triangles": 6164,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.6369030643616976e-09,
+      "signed_volume_m3": 0.0003104892170023668
+    },
+    {
+      "object": "Rectus femoris muscle.l",
+      "triangles": 8276,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.762841007082441e-08,
+      "signed_volume_m3": -0.0003993882103414722
+    },
+    {
+      "object": "Vastus lateralis muscle.l",
+      "triangles": 9356,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.561456727692542e-08,
+      "signed_volume_m3": -0.0005654729374690458
+    },
+    {
+      "object": "Vastus medialis muscle.l",
+      "triangles": 6460,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 9.585772456437514e-08,
+      "signed_volume_m3": -0.00035902324071460085
+    },
+    {
+      "object": "Vastus intermedius muscle.l",
+      "triangles": 6164,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.63509355239429e-09,
+      "signed_volume_m3": -0.00031048958967083105
+    },
+    {
+      "object": "Sartorius muscle.r",
+      "triangles": 4966,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.0564981343611695e-09,
+      "signed_volume_m3": 8.668750614348001e-05
+    },
+    {
+      "object": "Sartorius muscle.l",
+      "triangles": 4966,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.044243205081317e-09,
+      "signed_volume_m3": -8.668760677489524e-05
+    },
+    {
+      "object": "Adductor magnus.r",
+      "triangles": 8192,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.786315482594945e-08,
+      "signed_volume_m3": 0.0005556060124251246
+    },
+    {
+      "object": "Adductor longus.r",
+      "triangles": 3714,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.41063865965319e-08,
+      "signed_volume_m3": 0.00015989521087903587
+    },
+    {
+      "object": "Pectineus muscle.r",
+      "triangles": 1952,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.5785924433154563e-08,
+      "signed_volume_m3": 6.731144686292563e-05
+    },
+    {
+      "object": "Adductor brevis.r",
+      "triangles": 2132,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.3047425245972495e-09,
+      "signed_volume_m3": 5.938326715907761e-05
+    },
+    {
+      "object": "(Adductor minimus).r",
+      "triangles": 948,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.2867995027038243e-07,
+      "signed_volume_m3": 1.6441445902129806e-05
+    },
+    {
+      "object": "Gracilis muscle.r",
+      "triangles": 4812,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.529447483642272e-09,
+      "signed_volume_m3": 0.0001336227049552599
+    },
+    {
+      "object": "Obturator externus.r",
+      "triangles": 1156,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.7460470709985747e-07,
+      "signed_volume_m3": 2.3557694589116816e-05
+    },
+    {
+      "object": "Adductor magnus.l",
+      "triangles": 8192,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.7864596147708135e-08,
+      "signed_volume_m3": -0.0005556066757435401
+    },
+    {
+      "object": "Adductor longus.l",
+      "triangles": 3714,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.403645819405793e-08,
+      "signed_volume_m3": -0.0001598954102671745
+    },
+    {
+      "object": "Pectineus muscle.l",
+      "triangles": 1952,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.5786274038545394e-08,
+      "signed_volume_m3": -6.731152186759141e-05
+    },
+    {
+      "object": "Adductor brevis.l",
+      "triangles": 2132,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.3046561925412435e-09,
+      "signed_volume_m3": -5.938334608237134e-05
+    },
+    {
+      "object": "(Adductor minimus).l",
+      "triangles": 948,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.2867087150020767e-07,
+      "signed_volume_m3": -1.6441451274391198e-05
+    },
+    {
+      "object": "Gracilis muscle.l",
+      "triangles": 4812,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.529447483642272e-09,
+      "signed_volume_m3": -0.0001336228656717216
+    },
+    {
+      "object": "Obturator externus.l",
+      "triangles": 1156,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.74606750560704e-07,
+      "signed_volume_m3": -2.35577334355333e-05
+    },
+    {
+      "object": "Long head of biceps femoris.r",
+      "triangles": 7258,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.591852912597448e-08,
+      "signed_volume_m3": 0.00046101412200040586
+    },
+    {
+      "object": "Short head of biceps femoris.r",
+      "triangles": 2476,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.94999692725427e-08,
+      "signed_volume_m3": 7.684309475680091e-05
+    },
+    {
+      "object": "Long head of biceps femoris.l",
+      "triangles": 7258,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.591949108326836e-08,
+      "signed_volume_m3": -0.0004610146707975075
+    },
+    {
+      "object": "Short head of biceps femoris.l",
+      "triangles": 2476,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.950862133931739e-08,
+      "signed_volume_m3": -7.684318555107389e-05
+    },
+    {
+      "object": "Semimembranosus muscle.r",
+      "triangles": 7442,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.032443544097813e-08,
+      "signed_volume_m3": 0.00039636581373198276
+    },
+    {
+      "object": "Semitendinosus muscle.r",
+      "triangles": 4316,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.317484725843419e-08,
+      "signed_volume_m3": 0.00015796150167916837
+    },
+    {
+      "object": "Semimembranosus muscle.l",
+      "triangles": 7442,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.033007918317167e-08,
+      "signed_volume_m3": -0.00039636629207035254
+    },
+    {
+      "object": "Semitendinosus muscle.l",
+      "triangles": 4316,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.3160805320726804e-08,
+      "signed_volume_m3": -0.00015796169309431745
+    },
+    {
+      "object": "Extensor digitorum longus.r",
+      "triangles": 3176,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.914788958114445e-09,
+      "signed_volume_m3": 3.446735004840122e-05
+    },
+    {
+      "object": "Tendon of extensor digitorum longus.r",
+      "triangles": 5184,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 8.35520473104281e-07,
+      "signed_volume_m3": 6.012884753619573e-06
+    },
+    {
+      "object": "Extensor digitorum longus.l",
+      "triangles": 3176,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.91041324939971e-09,
+      "signed_volume_m3": -3.446739031868868e-05
+    },
+    {
+      "object": "Tendon of extensor digitorum longus.l",
+      "triangles": 5184,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 8.355055007070622e-07,
+      "signed_volume_m3": -6.012888436233151e-06
+    },
+    {
+      "object": "Tibialis anterior muscle.r",
+      "triangles": 3526,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.1726618922837805e-08,
+      "signed_volume_m3": 0.00012197518376676023
+    },
+    {
+      "object": "Fibularis tertius muscle.r",
+      "triangles": 586,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.273094566310863e-08,
+      "signed_volume_m3": 1.512872140537231e-06
+    },
+    {
+      "object": "Extensor hallucis longus.r",
+      "triangles": 2362,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.504295774465727e-08,
+      "signed_volume_m3": 9.69788874532177e-06
+    },
+    {
+      "object": "Tibialis anterior muscle.l",
+      "triangles": 3526,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.172644785788384e-08,
+      "signed_volume_m3": -0.00012197531712657891
+    },
+    {
+      "object": "Fibularis tertius muscle.l",
+      "triangles": 586,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.273099324054624e-08,
+      "signed_volume_m3": -1.5128739286927853e-06
+    },
+    {
+      "object": "Extensor hallucis longus.l",
+      "triangles": 2362,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.503326384435626e-08,
+      "signed_volume_m3": -9.697899082757206e-06
+    },
+    {
+      "object": "Fibularis longus muscle.r",
+      "triangles": 5522,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.2365145006649288e-09,
+      "signed_volume_m3": 7.631125785999969e-05
+    },
+    {
+      "object": "Fibularis brevis muscle.r",
+      "triangles": 3446,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.80443724268946e-09,
+      "signed_volume_m3": 2.05656104389142e-05
+    },
+    {
+      "object": "Fibularis longus muscle.l",
+      "triangles": 5522,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.2365145006649288e-09,
+      "signed_volume_m3": -7.631135719971217e-05
+    },
+    {
+      "object": "Fibularis brevis muscle.l",
+      "triangles": 3446,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.8040195304823816e-09,
+      "signed_volume_m3": -2.0565634605331694e-05
+    },
+    {
+      "object": "Lateral head of gastrocnemius.r",
+      "triangles": 4908,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.199546528364112e-08,
+      "signed_volume_m3": 0.00024584295488471467
+    },
+    {
+      "object": "Medial head of gastrocnemius.r",
+      "triangles": 6462,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.5987160175426305e-08,
+      "signed_volume_m3": 0.0003672155817386052
+    },
+    {
+      "object": "Calcaneal tendon.r",
+      "triangles": 4377,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.5057471762516753e-08,
+      "signed_volume_m3": 2.8526156531488408e-05
+    },
+    {
+      "object": "Lateral head of gastrocnemius.l",
+      "triangles": 4908,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.1996453408843977e-08,
+      "signed_volume_m3": -0.00024584325695054427
+    },
+    {
+      "object": "Medial head of gastrocnemius.l",
+      "triangles": 6462,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.5985234827568808e-08,
+      "signed_volume_m3": -0.00036721602828517955
+    },
+    {
+      "object": "Calcaneal tendon.l",
+      "triangles": 4377,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.506199508680271e-08,
+      "signed_volume_m3": -2.8526191200884895e-05
+    },
+    {
+      "object": "Soleus muscle.r",
+      "triangles": 6774,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.005307583485395e-08,
+      "signed_volume_m3": 0.0003636985416680116
+    },
+    {
+      "object": "Soleus muscle.l",
+      "triangles": 6774,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.0062545573978074e-08,
+      "signed_volume_m3": -0.0003636989725954028
+    },
+    {
+      "object": "Plantaris muscle.r",
+      "triangles": 4698,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.70754362473612e-08,
+      "signed_volume_m3": 3.6185140119829686e-05
+    },
+    {
+      "object": "Plantaris muscle.l",
+      "triangles": 4698,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.707144525025446e-08,
+      "signed_volume_m3": -3.618517806660309e-05
+    },
+    {
+      "object": "Flexor digitorum longus.r",
+      "triangles": 6836,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.3745128454341237e-08,
+      "signed_volume_m3": 5.507320359996959e-05
+    },
+    {
+      "object": "Popliteus muscle.r",
+      "triangles": 1132,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 8.16600930218233e-08,
+      "signed_volume_m3": 2.501637267968227e-05
+    },
+    {
+      "object": "Tibialis posterior muscle.r",
+      "triangles": 5526,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.9399307464843233e-09,
+      "signed_volume_m3": 6.176934803251578e-05
+    },
+    {
+      "object": "Flexor hallucis longus.r",
+      "triangles": 5878,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 9.40504630488588e-09,
+      "signed_volume_m3": 6.175488752191912e-05
+    },
+    {
+      "object": "Flexor digitorum longus.l",
+      "triangles": 6836,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.3741096871366995e-08,
+      "signed_volume_m3": -5.507326756763492e-05
+    },
+    {
+      "object": "Popliteus muscle.l",
+      "triangles": 1132,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 8.17912515335101e-08,
+      "signed_volume_m3": -2.5016403611367698e-05
+    },
+    {
+      "object": "Tibialis posterior muscle.l",
+      "triangles": 5526,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.9386482390907537e-09,
+      "signed_volume_m3": -6.176942530326735e-05
+    },
+    {
+      "object": "Flexor hallucis longus.l",
+      "triangles": 5878,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 9.403715402222915e-09,
+      "signed_volume_m3": -6.175496091958444e-05
+    },
+    {
+      "object": "Medial head of flexor hallucis brevis.r",
+      "triangles": 514,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.3681211288257956e-07,
+      "signed_volume_m3": 3.1118001097501297e-06
+    },
+    {
+      "object": "Lateral head of flexor hallucis brevis.r",
+      "triangles": 966,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.969768435510137e-09,
+      "signed_volume_m3": 6.60594499689836e-06
+    },
+    {
+      "object": "Medial head of flexor hallucis brevis.l",
+      "triangles": 514,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.3681605527428217e-07,
+      "signed_volume_m3": -3.111803028555069e-06
+    },
+    {
+      "object": "Lateral head of flexor hallucis brevis.l",
+      "triangles": 966,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.9689847906704886e-09,
+      "signed_volume_m3": -6.6059515530619984e-06
+    },
+    {
+      "object": "Oblique head of adductor hallucis.r",
+      "triangles": 904,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.1046776472793515e-07,
+      "signed_volume_m3": 6.102150587925592e-06
+    },
+    {
+      "object": "Transverse head of adductor hallucis.r",
+      "triangles": 366,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.989663359776444e-09,
+      "signed_volume_m3": 1.2384247722787003e-06
+    },
+    {
+      "object": "Oblique head of adductor hallucis.l",
+      "triangles": 904,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.1047024699304613e-07,
+      "signed_volume_m3": -6.102158176651424e-06
+    },
+    {
+      "object": "Transverse head of adductor hallucis.l",
+      "triangles": 366,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.991529545074438e-09,
+      "signed_volume_m3": -1.2384261629429326e-06
+    },
+    {
+      "object": "Abductor digiti minimi of foot.r",
+      "triangles": 1280,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.485924732671549e-08,
+      "signed_volume_m3": 5.844156122938349e-06
+    },
+    {
+      "object": "Abductor digiti minimi of foot.l",
+      "triangles": 1280,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.485953747196694e-08,
+      "signed_volume_m3": -5.844160721104532e-06
+    },
+    {
+      "object": "Abductor hallucis.r",
+      "triangles": 1688,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.23359389228027e-08,
+      "signed_volume_m3": 1.1889556629608507e-05
+    },
+    {
+      "object": "Extensor digitorum brevis.r",
+      "triangles": 3184,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.329614891187176e-08,
+      "signed_volume_m3": 1.174075220406271e-05
+    },
+    {
+      "object": "Extensor hallucis brevis.r",
+      "triangles": 1118,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.639061183564519e-08,
+      "signed_volume_m3": 5.54354833712837e-06
+    },
+    {
+      "object": "Dorsal interossei muscles of foot.r",
+      "triangles": 1946,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.2216117753917414e-09,
+      "signed_volume_m3": 4.712696090820643e-06
+    },
+    {
+      "object": "Flexor digitorum brevis.r",
+      "triangles": 3224,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.3904125188298887e-08,
+      "signed_volume_m3": 1.9154737922812563e-05
+    },
+    {
+      "object": "Flexor digiti minimi of foot.r",
+      "triangles": 464,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.569246061753049e-09,
+      "signed_volume_m3": 1.6430924759633184e-06
+    },
+    {
+      "object": "Lumbrical muscles of foot.r",
+      "triangles": 418,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.921953518110458e-08,
+      "signed_volume_m3": 1.619073743403897e-06
+    },
+    {
+      "object": "(Opponens digiti minimi muscle of foot).r",
+      "triangles": 236,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.853483974480489e-08,
+      "signed_volume_m3": 6.06473177978737e-07
+    },
+    {
+      "object": "Plantar interossei muscles.r",
+      "triangles": 1242,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.289668198564897e-08,
+      "signed_volume_m3": 1.5893556947634598e-06
+    },
+    {
+      "object": "Quadratus plantae muscle.r",
+      "triangles": 1176,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 9.008039926993748e-08,
+      "signed_volume_m3": 5.667038586684957e-06
+    },
+    {
+      "object": "Abductor hallucis.l",
+      "triangles": 1688,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.233665012936793e-08,
+      "signed_volume_m3": -1.1889566700889936e-05
+    },
+    {
+      "object": "Extensor digitorum brevis.l",
+      "triangles": 3184,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.328916404426059e-08,
+      "signed_volume_m3": -1.1740761168182044e-05
+    },
+    {
+      "object": "Extensor hallucis brevis.l",
+      "triangles": 1118,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.639218810322768e-08,
+      "signed_volume_m3": -5.543551866053277e-06
+    },
+    {
+      "object": "Dorsal interossei muscles of foot.l",
+      "triangles": 1946,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.221785916945587e-09,
+      "signed_volume_m3": -4.712700418527208e-06
+    },
+    {
+      "object": "Flexor digitorum brevis.l",
+      "triangles": 3224,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.3903406825420113e-08,
+      "signed_volume_m3": -1.9154752917926346e-05
+    },
+    {
+      "object": "Flexor digiti minimi of foot.l",
+      "triangles": 464,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.569261731501434e-09,
+      "signed_volume_m3": -1.6430942019499127e-06
+    },
+    {
+      "object": "Lumbrical muscles of foot.l",
+      "triangles": 418,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.922029797742933e-08,
+      "signed_volume_m3": -1.6190750030311062e-06
+    },
+    {
+      "object": "(Opponens digiti minimi muscle of foot).l",
+      "triangles": 236,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.8537438719466815e-08,
+      "signed_volume_m3": -6.064738813428017e-07
+    },
+    {
+      "object": "Plantar interossei muscles.l",
+      "triangles": 1242,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.289726893875759e-08,
+      "signed_volume_m3": -1.589356930377741e-06
+    },
+    {
+      "object": "Quadratus plantae muscle.l",
+      "triangles": 1176,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 9.008079924102587e-08,
+      "signed_volume_m3": -5.6670438547777424e-06
+    },
+    {
+      "object": "Iliotibial tract.r",
+      "triangles": 48612,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.761689504174516e-09,
+      "signed_volume_m3": 9.596455015316141e-05
+    },
+    {
+      "object": "Iliotibial tract.l",
+      "triangles": 48612,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.761689820440414e-09,
+      "signed_volume_m3": -9.596454485077292e-05
+    },
+    {
+      "object": "Plantar aponeurosis.r",
+      "triangles": 406,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.4891056024836363e-06,
+      "signed_volume_m3": -2.8287355448820424e-06
+    },
+    {
+      "object": "Plantar aponeurosis.l",
+      "triangles": 406,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.489106785279051e-06,
+      "signed_volume_m3": 2.828737197434673e-06
+    },
+    {
+      "object": "External anal sphincter.r",
+      "triangles": 202,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.176753536133071e-07,
+      "signed_volume_m3": 5.641962096825098e-07
+    },
+    {
+      "object": "External anal sphincter.l",
+      "triangles": 202,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.176753366800687e-07,
+      "signed_volume_m3": -5.641962116112708e-07
+    }
+  ],
+  "totals": {
+    "objects": 457,
+    "triangles": 1948068,
+    "nonfinite_coordinates": 0,
+    "near_collapsed_triangles": 0,
+    "objects_negative_signed_volume": 228
+  }
+}

@@ -1,6 +1,11 @@
 # M4A — Sauvegarde et reprise après changement réseau
 
-> **Étape courante : B+ validé comme base visuelle, [B+ V2 proposé](M4A_B_PLUS_V2.md).**
+> **Nouvelle direction du 18 octobre 2026 : [écorché stylisé](M4A_ECORCHE.md).**
+> Les variantes à peau lisse ci-dessous sont conservées comme historique.
+> Arrêt pour choix utilisateur après la comparaison des bases anatomiques,
+> avant toute intégration. PR #11 toujours en brouillon.
+
+> **Historique B+ : B+ validé comme base visuelle, [B+ V2 proposé](M4A_B_PLUS_V2.md).**
 > Attendre la validation de cette variante avant toute intégration ou suite technique.
 > Les sauvegardes et consignes de restauration ci-dessous restent conservées.
 
