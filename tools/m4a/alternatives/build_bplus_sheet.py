@@ -10,6 +10,9 @@ parser.add_argument('--variant-root', type=Path, required=True)
 parser.add_argument('--output', type=Path, required=True)
 parser.add_argument('--detail-output', type=Path)
 parser.add_argument('--font', default='/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf')
+parser.add_argument('--title', default='M4A — B original / B+ modérément athlétique')
+parser.add_argument('--original-label', default='B original')
+parser.add_argument('--variant-label', default='B+ proposé')
 args = parser.parse_args()
 font = lambda size: ImageFont.truetype(args.font, size)
 background, foreground, muted = '#0c1422', '#edf3ff', '#b8c6dc'
@@ -17,10 +20,10 @@ views = [('front', 'Face · 0°'), ('three-quarter', 'Trois quarts · −35°'),
          ('back', 'Dos · 180°'), ('side', 'Profil · 90°')]
 canvas = Image.new('RGB', (1236, 4156), background)
 draw = ImageDraw.Draw(canvas)
-draw.text((20, 16), 'M4A — B original / B+ modérément athlétique', font=font(29), fill=foreground)
+draw.text((20, 16), args.title, font=font(29), fill=foreground)
 draw.text((20, 62), 'Même pose, cadrage, matière et lumière · Rendus de vraies géométries', font=font(21), fill=muted)
-draw.text((20, 102), 'B original', font=font(24), fill=foreground)
-draw.text((632, 102), 'B+ proposé', font=font(24), fill=foreground)
+draw.text((20, 102), args.original_label, font=font(24), fill=foreground)
+draw.text((632, 102), args.variant_label, font=font(24), fill=foreground)
 for row, (view, label) in enumerate(views):
     y = 146 + row * 989
     draw.text((20, y), label, font=font(24), fill=muted)
@@ -37,7 +40,7 @@ if args.detail_output:
     detail = Image.new('RGB', (1236, 740), background)
     d = ImageDraw.Draw(detail)
     d.text((20, 14), 'Détail du torse — même découpe des rendus de face', font=font(28), fill=foreground)
-    for col, (title, root) in enumerate([('B original', args.original_root), ('B+ proposé', args.variant_root)]):
+    for col, (title, root) in enumerate([(args.original_label, args.original_root), (args.variant_label, args.variant_root)]):
         d.text((20 + col * 612, 62), title, font=font(24), fill=foreground)
         image = Image.open(root / 'front.png').convert('RGB')
         detail.paste(image.crop((225, 300, 675, 775)).resize((600, 633), Image.Resampling.LANCZOS), (12 + col * 612, 102))

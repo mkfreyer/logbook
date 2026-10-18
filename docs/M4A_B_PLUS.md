@@ -1,5 +1,9 @@
 # M4A — B original et variante B+ modérément athlétique
 
+> **Décision utilisateur suivante : B+ validé comme base visuelle.** La
+> [variante supplémentaire B+ V2](M4A_B_PLUS_V2.md) est proposée pour renforcer
+> encore légèrement les volumes. Cette étude B/B+ est conservée comme historique.
+
 Itération du **18 octobre 2026**, après `7c3688a`, sur la même branche et la
 [PR #11 en brouillon](https://github.com/mkfreyer/logbook/pull/11).
 Le choix provisoire de l’utilisateur est B ; C est écarté, A reste trop doux.

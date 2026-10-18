@@ -158,3 +158,53 @@ ni une segmentation anatomique ni l'absence exhaustive d'auto-intersections.
 Les rapports détaillent les petits effets du fondu Multires hors des volumes ciblés.
 Les trois PNG B existants restent identiques ; son profil est calculé séparément.
 Aucun export GLB, test iPhone, code applicatif ou SQLite n'est nécessaire ici.
+
+## B+ V2 : variante supplémentaire depuis B+ validé
+
+Lire [M4A_B_PLUS_V2.md](../../../docs/M4A_B_PLUS_V2.md).
+`generate_bplus_v2.py` exige le SHA exact du fichier B+ publié et conserve ses
+shape keys. La nouvelle clé `B+ V2 premium volumes` est relative à
+`B+ moderate athletic` : cette dernière reste à 1 ; basculer seulement la nouvelle
+clé entre 0 et 1 compare B+ et V2. Aucun sommet ou polygone n'est ajouté.
+
+```sh
+blender --background --factory-startup --disable-autoexec --threads 2 \
+  --python-exit-code 1 --python tools/m4a/alternatives/generate_bplus_v2.py -- \
+  --blend docs/m4a/alternatives/studio-realistic-plus/B-plus.blend \
+  --settings docs/m4a/alternatives/studio-realistic-plus-v2/settings.json \
+  --output /workspace/work/m4a-bplus-v2/B-plus-v2-reproduction.blend \
+  --report /workspace/work/m4a-bplus-v2/generation-reproduction.json
+
+blender --background --factory-startup --disable-autoexec --threads 2 \
+  --python-exit-code 1 --python tools/m4a/alternatives/validate_bplus.py -- \
+  --source docs/m4a/alternatives/studio-realistic-plus/B-plus.blend \
+  --variant docs/m4a/alternatives/studio-realistic-plus-v2/B-plus-v2.blend \
+  --source-shape-key 'B+ moderate athletic' \
+  --variant-shape-key 'B+ V2 premium volumes' --orientation-mode native-faces \
+  --output /workspace/work/m4a-bplus-v2/geometry-validation.json
+
+blender --background --factory-startup --disable-autoexec --threads 2 \
+  --python-exit-code 1 --python tools/m4a/alternatives/render_comparison.py -- \
+  --blend docs/m4a/alternatives/studio-realistic-plus-v2/B-plus-v2.blend \
+  --objects GEO-body_male_realistic GEO-body_male_realistic.eye.L GEO-body_male_realistic.eye.R \
+  --candidate studio-realistic-plus-v2 --output /workspace/work/m4a-bplus-v2/renders-reproduction \
+  --samples 128 --subdivision 0 --views front,three-quarter,back,side \
+  --normalization-from docs/m4a/alternatives/studio-realistic-plus/render-metadata.json
+
+python3 tools/m4a/alternatives/build_bplus_sheet.py \
+  --original-root docs/m4a/alternatives/studio-realistic-plus \
+  --original-side-root docs/m4a/alternatives/studio-realistic-plus \
+  --variant-root docs/m4a/alternatives/studio-realistic-plus-v2 \
+  --output /workspace/work/m4a-bplus-v2/comparaison.png \
+  --detail-output /workspace/work/m4a-bplus-v2/detail-torse.png \
+  --title 'M4A — B+ validé / B+ V2 premium' \
+  --original-label 'B+ validé' --variant-label 'B+ V2 proposé'
+```
+
+Le mode d'orientation historique `common-triangles` reste le défaut pour B/B+.
+Pour V2, quelques quads non plans changent de diagonale : `native-faces` contrôle
+les normales des faces complètes et l'absence de **nouvelle** face problématique
+dans la triangulation réellement calculée, en comparant les problèmes hérités à
+ceux de B+. Les différences avec les anciennes diagonales restent consignées.
+Ce contrôle ne certifie pas l'absence exhaustive d'auto-intersections ou la qualité
+anatomique. Les quatre PNG du B+ validé sont réutilisés sans nouveau calcul.

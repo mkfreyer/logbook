@@ -1,5 +1,9 @@
 # M4A — Sauvegarde et reprise après changement réseau
 
+> **Étape courante : B+ validé comme base visuelle, [B+ V2 proposé](M4A_B_PLUS_V2.md).**
+> Attendre la validation de cette variante avant toute intégration ou suite technique.
+> Les sauvegardes et consignes de restauration ci-dessous restent conservées.
+
 > **Reprise effectuée le 18 octobre 2026 depuis `1da5ba6` :** restauration des
 > 3 606 fichiers vérifiée ; domaine Blender accessible (HTTP 200), bundle officiel
 > récupéré et contrôlé. Les trois candidats et leurs neuf vues sont maintenant

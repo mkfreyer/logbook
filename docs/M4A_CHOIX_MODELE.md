@@ -1,5 +1,9 @@
 # M4A — Étude d’une nouvelle base 3D
 
+> **Décision courante : B+ validé comme base visuelle.** Voir la
+> [comparaison B+ / B+ V2](M4A_B_PLUS_V2.md), nouvelle proposition encore à valider.
+> Les comparaisons précédentes ci-dessous restent conservées.
+
 > **Itération suivante :** B est choisi provisoirement, C écarté. La
 > [comparaison B / B+](M4A_B_PLUS.md) renforce modérément B selon le retour produit.
 > Verdict proposé : B+, encore soumis au choix visuel utilisateur. L’étude A/B/C

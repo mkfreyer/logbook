@@ -1,0 +1,193 @@
+{
+  "source_sha256": "0a57656c3c496a28587d84a111762063b1f5dfd5882cbf724151f974c15a0309",
+  "settings_sha256": "2934353b721dea7da74fc5d0b856f77f3f30af544b03c6e32250fbdadb317df5",
+  "variant_sha256": "2d256e5efea5e294cb21ce564e32f5bc97ae942968cda0b266f42956afa9f2d7",
+  "settings": {
+    "schema_version": 1,
+    "variant": "B+ V2 premium volumes",
+    "source_blend_sha256": "0a57656c3c496a28587d84a111762063b1f5dfd5882cbf724151f974c15a0309",
+    "source_shape_key": "B+ moderate athletic",
+    "source_shape_key_sha256": "07b5639ed65269ee836a0aaa4c9ce760b92b1ab5b8c83ebd38d2dbe5076ad701",
+    "variant_shape_key": "B+ V2 premium volumes",
+    "normalization": {
+      "height": 1.8,
+      "center": [
+        -2.2643768787384033,
+        -0.033877987414598465,
+        -0.005640706978738308
+      ],
+      "scale": 1.06503615750482
+    },
+    "regions": [
+      {
+        "name": "upper pectoral fullness",
+        "center": [
+          0.111,
+          -0.103,
+          1.385
+        ],
+        "radii": [
+          0.092,
+          0.09,
+          0.1
+        ],
+        "delta": [
+          0.002,
+          -0.006,
+          0.001
+        ],
+        "z_support": [
+          1.2,
+          1.27,
+          1.44,
+          1.5
+        ]
+      },
+      {
+        "name": "rounded shoulder caps",
+        "center": [
+          0.23,
+          0.028,
+          1.432
+        ],
+        "radii": [
+          0.07,
+          0.125,
+          0.088
+        ],
+        "delta": [
+          0.009,
+          0,
+          0.004
+        ],
+        "radial_y": 0.075,
+        "z_support": [
+          1.24,
+          1.32,
+          1.46,
+          1.53
+        ]
+      },
+      {
+        "name": "additional upper arm volume",
+        "center": [
+          0.278,
+          0.03,
+          1.276
+        ],
+        "radii": [
+          0.07,
+          0.125,
+          0.14
+        ],
+        "delta": [
+          0,
+          0,
+          0
+        ],
+        "arm_radial_scale": 0.085,
+        "z_support": [
+          1.08,
+          1.16,
+          1.36,
+          1.44
+        ]
+      },
+      {
+        "name": "upper torso V silhouette",
+        "center": [
+          0.15,
+          0.115,
+          1.262
+        ],
+        "radii": [
+          0.09,
+          0.105,
+          0.16
+        ],
+        "delta": [
+          0.01,
+          0.004,
+          0
+        ],
+        "z_support": [
+          1.05,
+          1.15,
+          1.37,
+          1.45
+        ]
+      },
+      {
+        "name": "upper back transition",
+        "center": [
+          0.1,
+          0.13,
+          1.418
+        ],
+        "radii": [
+          0.085,
+          0.08,
+          0.09
+        ],
+        "delta": [
+          0.001,
+          0.003,
+          0.001
+        ],
+        "z_support": [
+          1.25,
+          1.33,
+          1.46,
+          1.51
+        ]
+      },
+      {
+        "name": "additional quadriceps fullness",
+        "center": [
+          0.14,
+          -0.048,
+          0.736
+        ],
+        "radii": [
+          0.08,
+          0.095,
+          0.17
+        ],
+        "delta": [
+          0.003,
+          -0.006,
+          0
+        ],
+        "z_support": [
+          0.49,
+          0.57,
+          0.84,
+          0.95
+        ]
+      }
+    ],
+    "intent": "Additional broad volume refinement relative to validated B+, not absolute changes from B. More V silhouette by widening upper torso only; no waist reduction, abdominal engraving, striations, remeshing or added triangles. Influence regions are artistic masks, not anatomical segmentation."
+  },
+  "method": "additional symmetric volume fields on shape key relative to unchanged validated B+; before original Multires 3",
+  "source_shape_key": "B+ moderate athletic",
+  "variant_shape_key": "B+ V2 premium volumes",
+  "variant_relative_key": "B+ moderate athletic",
+  "preserved_shape_keys": {
+    "B original \u2014 unchanged basis": {
+      "sha256": "a8e3752bb44fb91b9049616cd877897a8ecd40aad945aa08e09bd6a187e5a953",
+      "value": 0.0
+    },
+    "B+ moderate athletic": {
+      "sha256": "07b5639ed65269ee836a0aaa4c9ce760b92b1ab5b8c83ebd38d2dbe5076ad701",
+      "value": 1.0
+    }
+  },
+  "shape_key_sha256": "3736fa727ee09c710632aef7b76a2874a50aa3ba96a639c30e93865943cd634a",
+  "vertices": 10582,
+  "faces": 10590,
+  "maximum_additional_cage_displacement_at_height_1_8": 0.010206564934794864,
+  "changed_vertices_above_1e_6": 2020,
+  "new_vertices": 0,
+  "new_faces": 0,
+  "application_integrated": false
+}

@@ -2,7 +2,9 @@
 
 ## État de la livraison du 18 octobre 2026
 
-**Itération courante : [B original / B+](M4A_B_PLUS.md).** B est le choix provisoire utilisateur ; C est écarté. Une variante B+ légèrement plus athlétique est proposée sous quatre angles. Validation visuelle attendue avant toute intégration.
+**Dernière itération : [B+ validé / B+ V2](M4A_B_PLUS_V2.md).** B+ est validé comme base visuelle ; une variante légèrement plus musclée est proposée, en attente de validation. Aucune segmentation complète ou intégration.
+
+**Itération précédente : [B original / B+](M4A_B_PLUS.md).** Le B+ issu de cette étude est maintenant la base visuelle validée par l’utilisateur ; les comparatifs et sources restent conservés.
 
 **L’accès officiel BodyParts3D est débloqué et l’archive a été intégralement inspectée. L’intégration du prototype reste suspendue au contrôle qualité du modèle.** Les vrais rendus ne correspondent pas au mannequin athlétique de référence. Aucun écran 3D n’est présenté comme prêt à tester dans Logbook.
 

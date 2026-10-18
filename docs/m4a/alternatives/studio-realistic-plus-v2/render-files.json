@@ -1,0 +1,77 @@
+{
+  "validated_base_frames_reused_from": "536f047",
+  "files": [
+    {
+      "path": "studio-realistic-plus/front.png",
+      "bytes": 1339334,
+      "sha256": "f26f25ef390f7db5f00d590a551a1d9fb36a82d081db0700206a2407dfedb2fa",
+      "resolution": [
+        900,
+        1400
+      ]
+    },
+    {
+      "path": "studio-realistic-plus/three-quarter.png",
+      "bytes": 1331587,
+      "sha256": "a50bd21e74e6e77f9e3981e615ffc172c7467ec914599d6e3abaad2a2cc3a451",
+      "resolution": [
+        900,
+        1400
+      ]
+    },
+    {
+      "path": "studio-realistic-plus/back.png",
+      "bytes": 1291443,
+      "sha256": "3bc4aeaee2d6ac42dbddb083b9e051fa635c1adfa1aefddde2bba8f407e025de",
+      "resolution": [
+        900,
+        1400
+      ]
+    },
+    {
+      "path": "studio-realistic-plus/side.png",
+      "bytes": 1238945,
+      "sha256": "65f55cc6a6dc3ad8a81f866813b72cbc7ba415e4944df24036da42b100dcac21",
+      "resolution": [
+        900,
+        1400
+      ]
+    },
+    {
+      "path": "studio-realistic-plus-v2/front.png",
+      "bytes": 1341348,
+      "sha256": "0a1747af71acb5edb7cbb91c4e5f346d2db31db43b9f67959a6bb3ed220301a4",
+      "resolution": [
+        900,
+        1400
+      ]
+    },
+    {
+      "path": "studio-realistic-plus-v2/three-quarter.png",
+      "bytes": 1333724,
+      "sha256": "ce2552d8f67c81acb4271c921346d5db685f46ecdc0875dceb5e0cbbbc9e4f33",
+      "resolution": [
+        900,
+        1400
+      ]
+    },
+    {
+      "path": "studio-realistic-plus-v2/back.png",
+      "bytes": 1291610,
+      "sha256": "508271ad1919ec3f06c1d2555d91123469652041f9d58407621906a73dd7a538",
+      "resolution": [
+        900,
+        1400
+      ]
+    },
+    {
+      "path": "studio-realistic-plus-v2/side.png",
+      "bytes": 1238893,
+      "sha256": "2f13743ce741bf0a5f1c9a466d43c455dc62636ebcac1a976a2cbe28de44941d",
+      "resolution": [
+        900,
+        1400
+      ]
+    }
+  ]
+}
