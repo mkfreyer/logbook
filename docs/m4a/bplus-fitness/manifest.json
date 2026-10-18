@@ -1,0 +1,271 @@
+{
+  "algorithm": "SHA-256",
+  "source_geometry_license": "CC0",
+  "files": [
+    {
+      "path": "docs/M4A_B_PLUS_ECORCHE.md",
+      "bytes": 9879,
+      "sha256": "8b8fd466e9a8dbfd495400da3e94de15a6ad65f47b99438abd45874d5cfc80ea"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/PROVENANCE.md",
+      "bytes": 1373,
+      "sha256": "8a2c5c978b2ee00b261b7ec980a12d7927fd616a986392202a42d49aedcf5664"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/README.md",
+      "bytes": 4500,
+      "sha256": "09e518651bf18d7cdf1b86bc9f7e0f8e8e50c40872330632278a0d1427e67cb9"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/SOURCE_LICENSE.md",
+      "bytes": 1482,
+      "sha256": "a4c843d679bcef942e2368c4e14de11cb3d6a5b0f6b4cedbaa7c7126bcbc94d8"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/baseline/back.png",
+      "bytes": 876482,
+      "sha256": "829ef33f49d40b00cf6269f074b12e66ab012c0f886ad42e5c4a306dfe1a96ec"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/baseline/construction.json",
+      "bytes": 4397,
+      "sha256": "7d84e6311ae690b061e41bfa4fafcc7140a17d0556133d46b1d1736df36d7780"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/baseline/front.png",
+      "bytes": 910201,
+      "sha256": "f5b57dc1bbb87841fdf50b1b9cdf4d064083921b087002df60b9d3ad7f2e63b2"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/baseline/geometry-check.json",
+      "bytes": 8293,
+      "sha256": "37c76975980b0c4466aaee9864c722c7b42c59d34b17d74f5119c15be342b9d1"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/baseline/model.blend",
+      "bytes": 4557922,
+      "sha256": "8539f4ab4ad0f0b58507c9e912e50fd06db166f87d2c56f9d10669cce136e28a"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/baseline/render-metadata.json",
+      "bytes": 3011,
+      "sha256": "e5193ca4dfc86975e11c0885fd34fa1831a8a78f72f1b28f1444d5574a8b793a"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/baseline/scene-review.blend",
+      "bytes": 4562411,
+      "sha256": "1c208387286b6e07b6d59823405d14022d612d66b2b529bec01dca8d5cd33499"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/baseline/selection.png",
+      "bytes": 911239,
+      "sha256": "3d4f159a705ce2327ea8ef7de28e3fc8b2229c8fade6b265966f3d1156bc8384"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/baseline/side.png",
+      "bytes": 835011,
+      "sha256": "bc10d2ae0e194bf566915fa5708ef787c4f1ed58f368d7647752a4f232763867"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/baseline/three-quarter.png",
+      "bytes": 904050,
+      "sha256": "a052f3ab7b31e9db729aa83d0d045b7c127321b5ac65bc9f0df8d7753b33465c"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/comparaison-back.png",
+      "bytes": 1043981,
+      "sha256": "8714bc4b38a921ebbc3101ce3ce99636d84f01140bd58639d7eb42b9fd9f066f"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/comparaison-front.png",
+      "bytes": 1118141,
+      "sha256": "3a36bd74567f857f10b228c593fe956dfa69ef8c2ad44b6ee5afd4db917f8ae6"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/comparaison-selection.png",
+      "bytes": 1114424,
+      "sha256": "bca1505e6aedcaeb932f5dd2f608e5a1cabe8611fee331822503097de8a33498"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/comparaison-side.png",
+      "bytes": 857765,
+      "sha256": "7fdcb1fae3dbfc4af35a74aefc22e4a6bf4aef95c4666400b3164050dd0b4c40"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/comparaison-three-quarter.png",
+      "bytes": 1101725,
+      "sha256": "4b082ef8a9e8a62d9dd49fde5ddb6b50139944277b261c900993eb49e988ebf4"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/comparaison.png",
+      "bytes": 1272379,
+      "sha256": "513e0968440a3e40b276ba4f1c7f355e9e50bd1b1904ed4ca8963fd9c75be929"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/detail-torse.png",
+      "bytes": 1070761,
+      "sha256": "1ec95d01c0e6a883e76f19fd2d773888803040967f121e9e2c1888c02685f13c"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/inventory.json",
+      "bytes": 7298,
+      "sha256": "4ff7ad517ac6938733b4a741282389c95450811577285381b3055bdfc68d1549"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/native-contact-check.json",
+      "bytes": 4825,
+      "sha256": "8525130e132069a6ea97fab864581a151ca4d26f2c3f94045acdf2149bb2f1b8"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/premium/back.png",
+      "bytes": 881129,
+      "sha256": "82a4e1bf70a2c317ede55f6e6146eb2407c3d55a421cf95ef856037151c1a50c"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/premium/construction.json",
+      "bytes": 4470,
+      "sha256": "92b14afe24a8f54c856639e56b9cdaec1f3fd4286ea4d9c0d3a538fc66c14cb3"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/premium/front.png",
+      "bytes": 915844,
+      "sha256": "92aae133d24b109f8e4765f3b7ac65bb3b1aaa73f14f0df130a6bb5fc73b98c2"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/premium/geometry-check.json",
+      "bytes": 8292,
+      "sha256": "fed5605555dc2f22409b3e9f9e17a61571f27dbc21a6bffbeabe1b449ee45cf3"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/premium/model.blend",
+      "bytes": 4555169,
+      "sha256": "e090ed9972ab36534dc64d448ee478e5b3f6066a330b0098cae6278a18d17db6"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/premium/render-metadata.json",
+      "bytes": 3010,
+      "sha256": "915ec53ffb4c7da9f3ccfc4701354834a45b0e8f7f0d7ed13566cb752bcc28eb"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/premium/scene-review.blend",
+      "bytes": 4558943,
+      "sha256": "ed6da72773e2a02653020c0998331218bb6465ef3760d584e4b44f3093d38090"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/premium/selection.png",
+      "bytes": 917572,
+      "sha256": "07664700296c46a41eba615f357339918a0fc4b54577ae69be5e140bf06987ca"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/premium/side.png",
+      "bytes": 837938,
+      "sha256": "27ab7125e6997fdccfd1a061c7fd8335d4d436f1ec7672486e0d03e144f06838"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/premium/three-quarter.png",
+      "bytes": 910575,
+      "sha256": "18a7b78f21f80de9f5e370b0b2ad781c6e05cb1c9b3417e7ad99914e13661d3f"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/review-validation.json",
+      "bytes": 901,
+      "sha256": "cffa6065231fa13ceac091a0597a878ff929bbb7c1b9663f576b7d4d50d3b429"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/sheets-metadata.json",
+      "bytes": 2184,
+      "sha256": "9162ac82949fc570a3b5c5c366f3b36ecbb617d9b9d89d4d17a46750bf44da64"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/soft/back.png",
+      "bytes": 879001,
+      "sha256": "568022f5fab5269311fb04a268a00938867e732fe7f0487455bca0ae3eae7532"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/soft/construction.json",
+      "bytes": 4437,
+      "sha256": "9c6233d77317991e567f06fa555a6f1eadde61463547843675275cb701f96589"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/soft/front.png",
+      "bytes": 912707,
+      "sha256": "e35d5ff7513fb23810222bcc132f533293ec79d029172159f9f6a38f6178a3a8"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/soft/geometry-check.json",
+      "bytes": 8289,
+      "sha256": "11a9efec5464ffd03541832461dd543166892a93f0c429aac6b2f21e53f83b29"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/soft/model.blend",
+      "bytes": 4564688,
+      "sha256": "69add316a8df7f55c8ef3068f6093e26292cb85f13ccd95cc4c99e7394a36c00"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/soft/render-metadata.json",
+      "bytes": 3007,
+      "sha256": "f3095dd6a8dc10d029f9f1a18db41781bd631c1797f6e186839cfeb3bdc03d0a"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/soft/scene-review.blend",
+      "bytes": 4559510,
+      "sha256": "d1854f0c3220edff44b03e8d48988620b2eec295bb0ce2ba41b434278d9dbb58"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/soft/selection.png",
+      "bytes": 914126,
+      "sha256": "1a24c8f091cbfa318aaa8cdf1ef47a01d6617d9d0f8a9d18aa82bf514d606108"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/soft/side.png",
+      "bytes": 836508,
+      "sha256": "7bd3730386e3d3bfdaea6857601b2f4a18e6a679f360ac241536c2ab6b264807"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/soft/three-quarter.png",
+      "bytes": 906903,
+      "sha256": "35808d7bdd79f39fe6e5a5d4f91f8e98997315de5cc64e7b4da11cdb4f989775"
+    },
+    {
+      "path": "docs/m4a/bplus-fitness/validation.json",
+      "bytes": 2584,
+      "sha256": "a0cd78789bfbd6776cc91d61afebb2f63c0c19d4bf9eb27e3dadea4884551e9b"
+    },
+    {
+      "path": "tools/m4a/audit_bplus_fitness_review.py",
+      "bytes": 2735,
+      "sha256": "a169d76f30b3f204b1cae3d897ee67b5db177816068243f79736b263103adb62"
+    },
+    {
+      "path": "tools/m4a/build_bplus_fitness.py",
+      "bytes": 14516,
+      "sha256": "ad3f1d127b56ed89fec7fc380394724ec94e49d108e939a649b8497e5fe70ad8"
+    },
+    {
+      "path": "tools/m4a/check_bplus_fitness.py",
+      "bytes": 5880,
+      "sha256": "7e7ab7a8ee4111551282e4a3488965121469a2ab5f82ed8de96091074a062b59"
+    },
+    {
+      "path": "tools/m4a/check_bplus_native_contacts.py",
+      "bytes": 2036,
+      "sha256": "f529f50f049c9cc4c3d261d8d89f1700793f7ada3195fedf101077b976ffb53b"
+    },
+    {
+      "path": "tools/m4a/make_bplus_fitness_sheets.py",
+      "bytes": 3433,
+      "sha256": "cb4bc5b573aeed62454b5c3d4781aed3e8739540817811ccda755d475b73f852"
+    },
+    {
+      "path": "tools/m4a/render_bplus_fitness.py",
+      "bytes": 5458,
+      "sha256": "1ca6ed0ad5623e0c30bb4ef620e24afbdaaecdabe0a3a60ebb11a2139d2f58ea"
+    },
+    {
+      "path": "tools/m4a/validate_bplus_fitness_delivery.py",
+      "bytes": 6754,
+      "sha256": "ad305f0e9ef085f557e1e962089810236d6706033673c31510eabeb373c2ab43"
+    }
+  ]
+}

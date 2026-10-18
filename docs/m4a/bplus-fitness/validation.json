@@ -1,0 +1,96 @@
+{
+  "baseline": "70ceacba5b9e204e6069496c582ea0964b68a558",
+  "historical_files_verified_unchanged": 253,
+  "variants": {
+    "baseline": {
+      "triangles": 112176,
+      "objects": 3,
+      "demo_surface_zones": 2,
+      "max_relief_mm": 0.0,
+      "self_crossings_by_region": {
+        "feet": 239,
+        "head": 81,
+        "hands": 0,
+        "sculptable_body": 0
+      },
+      "all_objects_closed": true,
+      "body_bounds": [
+        [
+          -0.47026127576828003,
+          -0.15545713901519775,
+          -2.1992520942148985e-06
+        ],
+        [
+          0.4702027440071106,
+          0.16143099963665009,
+          1.8000000715255737
+        ]
+      ]
+    },
+    "soft": {
+      "triangles": 112176,
+      "objects": 3,
+      "demo_surface_zones": 2,
+      "max_relief_mm": 3.871239314813052,
+      "self_crossings_by_region": {
+        "feet": 231,
+        "head": 82,
+        "hands": 0,
+        "sculptable_body": 0
+      },
+      "all_objects_closed": true,
+      "body_bounds": [
+        [
+          -0.47026127576828003,
+          -0.15545713901519775,
+          -2.1992520942148985e-06
+        ],
+        [
+          0.4702027440071106,
+          0.16348384320735931,
+          1.8000000715255737
+        ]
+      ]
+    },
+    "premium": {
+      "triangles": 112176,
+      "objects": 3,
+      "demo_surface_zones": 2,
+      "max_relief_mm": 7.279126547854957,
+      "self_crossings_by_region": {
+        "feet": 226,
+        "head": 78,
+        "hands": 0,
+        "sculptable_body": 0
+      },
+      "all_objects_closed": true,
+      "body_bounds": [
+        [
+          -0.47026127576828003,
+          -0.15545713901519775,
+          -2.1992520942148985e-06
+        ],
+        [
+          0.4702027440071106,
+          0.16549670696258545,
+          1.8000000715255737
+        ]
+      ]
+    }
+  },
+  "same_original_B_plus_source": true,
+  "source_review_geometry_normals_surface_masks_identical": true,
+  "common_blender_protocol": true,
+  "blender_pngs_verified": 15,
+  "comparison_sheets_verified": 7,
+  "source_geometry_license": "CC0",
+  "application_integration": false,
+  "M4B": false,
+  "mobile_benchmark": false,
+  "limitations": [
+    "Head/foot self-crossings exist in the original B+ and all proxies; no globally intersection-free claim.",
+    "No crossings detected in sculpted proxy regions by this non-coplanar triangle check; no full highres body intersection audit.",
+    "Two demonstration surface masks, not a completed anatomical segmentation.",
+    "No rig, medical validation, iPhone runtime measurement, bake or app export."
+  ]
+}

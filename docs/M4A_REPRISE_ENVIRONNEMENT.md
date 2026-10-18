@@ -1,8 +1,12 @@
 # M4A — Sauvegarde et reprise après changement réseau
 
-> **Étape actuelle : [S1 / S2 / S3 — nouvelles bases anatomiques](M4A_S1_S2_S3.md).**
-> L1 / L2 / L3 sont abandonnés comme base principale, conservés en historique.
-> Arrêt pour choix visuel ; PR #11 en brouillon, sans application, SQLite ou M4B.
+> **Étape actuelle : [B+ Écorché doux / premium — deux reliefs continus](M4A_B_PLUS_ECORCHE.md).**
+> Retour au B+ original comme fondation ; L1 / L2 / L3 et S1 / S2 / S3 sont conservés en historique.
+> Quinze rendus Blender, deux variantes et un témoin ; arrêt pour choix utilisateur.
+> PR #11 en brouillon, sans intégration, SQLite, M4B ou fusion.
+
+> **Historique : [S1 / S2 / S3 — nouvelles bases anatomiques](M4A_S1_S2_S3.md).**
+> Ces variantes sont abandonnées comme base finale ; sources et rendus préservés.
 
 > **Historique : [L3 — exploration anatomique](M4A_L3.md).**
 > Les sources et cinq vues comparatives Blender sont dans `docs/m4a/l3/`.

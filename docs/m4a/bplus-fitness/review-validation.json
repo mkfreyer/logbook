@@ -1,0 +1,26 @@
+{
+  "baseline": {
+    "source_review_geometry_normals_surface_masks_identical": true,
+    "geometry_signature_sha256": "3c8346719e26a4adbb6daf4657f14a301428cebd007b130ed6ed985ef52124c5",
+    "studio_lights": 4,
+    "camera_count": 1,
+    "neutral_material_restored": true,
+    "visible_objects": 3
+  },
+  "soft": {
+    "source_review_geometry_normals_surface_masks_identical": true,
+    "geometry_signature_sha256": "42ec7c3093639b522455a128eb58576cf9620c6b5fcf47ad259e1f5ca84ed2db",
+    "studio_lights": 4,
+    "camera_count": 1,
+    "neutral_material_restored": true,
+    "visible_objects": 3
+  },
+  "premium": {
+    "source_review_geometry_normals_surface_masks_identical": true,
+    "geometry_signature_sha256": "0083371cafc90f7d4a091a2f1688cc8eb0568aad956a8fde4ad18830db1cd4f1",
+    "studio_lights": 4,
+    "camera_count": 1,
+    "neutral_material_restored": true,
+    "visible_objects": 3
+  }
+}
