@@ -10,6 +10,10 @@ Reprise depuis `96fa0e9` sur `feat/m4a-prototype-carte-musculaire-3d`, [PR #11](
 
 L’image jointe à la reprise a bien été consultée : corps masculin entier athlétique, muscles définis, surface satinée relativement lisse, gris bleuté sur bleu nuit. Elle sert de référence ; elle n’a pas été remplacée par une image générée.
 
+Le [guide de sauvegarde et reprise réseau](M4A_REPRISE_ENVIRONNEMENT.md) conserve
+les sources, fichiers Blender et rendus de la comparaison avant redémarrage,
+avec une archive autonome vérifiée et la prochaine tâche exacte.
+
 ## Résultat de l’audit
 
 - Pages officielles de téléchargement et licence : **HTTP 200**. La politique active autorise désormais `dbarchive.biosciencedbc.jp`.

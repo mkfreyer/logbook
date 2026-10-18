@@ -4,6 +4,11 @@ Outils hors application. Ils génèrent et rendent de vraies géométries ; aucu
 segmentation musculaire ou scène interactive n’est créée. La comparaison reste
 en cours dans [M4A_CHOIX_MODELE.md](../../../docs/M4A_CHOIX_MODELE.md).
 
+Pour restaurer les sources, fichiers Blender et rendus après redémarrage, lire
+le [guide de reprise](../../../docs/M4A_REPRISE_ENVIRONNEMENT.md).
+`restore_checkpoint.py` utilise uniquement la bibliothèque standard Python 3.11+,
+vérifie les empreintes et refuse tout écrasement d’un dossier de travail existant.
+
 ## Source MPFB
 
 - MPFB : `https://github.com/makehumancommunity/mpfb2`, commit

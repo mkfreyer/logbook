@@ -44,6 +44,10 @@ Ces pistes ne constituent pas encore la sélection finale de 2–3 modèles rend
 
 ## Point de reprise
 
+Le [guide de sauvegarde et redémarrage](M4A_REPRISE_ENVIRONNEMENT.md) fournit
+l’archive autonome des sources/fichiers Blender/rendus, sa vérification et les
+commandes de restauration. Aucun redémarrage n’a été déclenché lors de sa publication.
+
 Les trois vues MPFB sont sauvegardées. Pour terminer la comparaison gratuite sans substitut approximatif, il faut appliquer à la machine attachée la configuration publiée autorisant **`download.blender.org`**, puis télécharger et vérifier le bundle Blender Studio, inventorier les vrais corps masculins et les rendre avec le même protocole. Au dernier contrôle, le runtime indique toujours l’ancienne liste de domaines et le téléchargement échoue en `CONNECT 403`.
 
 Les scripts de rendu restent des outils d’audit. Aucune difficulté rencontrée ne justifie actuellement Astra Ultra : génération via API officielle, inventaire et rendu standard restent des tâches courantes. Aucun changement de modèle n’a été déclenché. Si une reconstruction anatomique ou une segmentation difficile devient nécessaire après votre choix, le problème et la tâche exacte seront présentés avant tout travail coûteux.
