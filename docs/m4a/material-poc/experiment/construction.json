@@ -1,0 +1,36 @@
+{
+  "variant": "material-poc",
+  "source_path": "docs/m4a/bplus-power/power/model.blend",
+  "source_sha256": "6d6f73fae7e74976563db4b60cf084474ccade208cc5705bfdd41319d7bbe85a",
+  "preparer_sha256": "e9b355895e27f1a1bcef50da1a2cbb1e6fc4e5d9649484d6b781dfa6bfad15fd",
+  "geometry_changes": false,
+  "added_triangles": 0,
+  "visible_triangles": 112176,
+  "objects": 3,
+  "new_uv_sets": [
+    "M4A_visual_pectoral",
+    "M4A_visual_deltoid"
+  ],
+  "preserved_original_uv": "UVMap",
+  "material": "Blue silver base, two regional tangent-space normal maps, two packed surface maps, scalar regional coverage and independent selection ID",
+  "selection_ids": {
+    "0": "none",
+    "1": "pectoralis.left",
+    "2": "pectoralis.right",
+    "3": "deltoid.left",
+    "4": "deltoid.right"
+  },
+  "selection_masks": {
+    "m4a_mat_pec_L": 678,
+    "m4a_mat_pec_R": 669,
+    "m4a_mat_delt_L": 955,
+    "m4a_mat_delt_R": 1027
+  },
+  "commercial_cost_eur": 0,
+  "third_party_anatomy": false,
+  "limitations": [
+    "Layered Blender shader is not a mobile material export; atlas consolidation or shader port remains future work.",
+    "Normal maps affect shading, not silhouette, cast shadows or actual muscle geometry.",
+    "No mobile FPS benchmark or final anatomical segmentation."
+  ]
+}

@@ -1,8 +1,11 @@
 # M4A — Sauvegarde et reprise après changement réseau
 
-> **Étape actuelle : [PoC local pectoraux / deltoïde — méthode insuffisante](M4A_POC_ECORCHE_PECTORAUX.md).**
-> Un seul essai visuel, non retenu ; arrêt de la modélisation, aucune V2 automatique.
-> B+ Puissance reste le guide de proportions. PR #11 en brouillon, sans intégration, SQLite, M4B ou fusion.
+> **Étape actuelle : [POC matériaux / normal maps — approche insuffisante](M4A_POC_MATERIAUX_ECORCHE.md).**
+> B+ Puissance inchangé, zéro triangle ajouté ; un seul matériau testé, non retenu au critère mobile.
+> Arrêt après publication, sans nouvelle itération automatique. PR #11 en brouillon, sans intégration, SQLite, M4B ou fusion.
+
+> **Historique : [PoC géométrique pectoraux / deltoïde — méthode insuffisante](M4A_POC_ECORCHE_PECTORAUX.md).**
+> Essai archivé, non utilisé comme source du POC de matériaux.
 
 > **Historique : [B+ Écorché Premium Puissance](M4A_B_PLUS_PREMIUM_PUISSANCE.md).**
 > Direction de proportions conservée ; véritable lecture d'écorché non validée.

@@ -1,0 +1,31 @@
+{
+  "verdict": "approche insuffisante",
+  "source_prepared_geometry_normals_original_UV_identical": true,
+  "geometry_signature_sha256": "d29728ffd1d5f8201742db4a57db130f2ffd6f15e6e520f4b656708ccb8ba894",
+  "source_review_all_geometry_UV_masks_identical": true,
+  "visible_triangles": 112176,
+  "added_triangles": 0,
+  "objects": 3,
+  "original_UV_preserved": true,
+  "added_UV_sets": 2,
+  "packed_noncolor_maps_verified": 4,
+  "normal_maps": 2,
+  "surface_maps": 2,
+  "regional_masks": {
+    "m4a_mat_pec_L": 678,
+    "m4a_mat_pec_R": 669,
+    "m4a_mat_delt_L": 955,
+    "m4a_mat_delt_R": 1027
+  },
+  "selection_ids": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "no_source_mesh_self_intersections_changed": true,
+  "source_geometry_audit": "../bplus-power/power/geometry-check.json",
+  "mobile_runtime_measured": false,
+  "application_integration": false,
+  "commercial_cost_eur": 0
+}

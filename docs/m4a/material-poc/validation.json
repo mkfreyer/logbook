@@ -1,0 +1,55 @@
+{
+  "verdict": "approche insuffisante",
+  "historical_files_verified_unchanged": 355,
+  "new_blender_frames": 4,
+  "reused_reference_frames": 2,
+  "comparison_sheets": 2,
+  "comparison_column_px": 390,
+  "visible_triangles": 112176,
+  "added_triangles": 0,
+  "source_geometry_exactly_preserved": true,
+  "textures": 4,
+  "texture_resolution": [
+    1024,
+    1024
+  ],
+  "commercial_cost_eur": 0,
+  "one_material_attempt_only": true,
+  "application_integration": false,
+  "M4B": false,
+  "mobile_runtime_measured": false,
+  "sources": [
+    {
+      "file": "docs/m4a/material-poc/renders/front.png",
+      "sha256": "b0b2e21cfa70f4e8e05cb310b9f28482c542b7418e778e1eccc9ef073d0f08c3"
+    },
+    {
+      "file": "docs/m4a/material-poc/renders/three-quarter.png",
+      "sha256": "5c460f23b1a91e288618424e9028ef2c7f0fe0b99f476905b689a0cc3497b098"
+    },
+    {
+      "file": "docs/m4a/material-poc/renders/detail.png",
+      "sha256": "a86354183db667f54d9919b08ffafb63fa89cf3fbbd4f22c1b98487bf1085312"
+    },
+    {
+      "file": "docs/m4a/material-poc/renders/selection.png",
+      "sha256": "4626d7c4f972263ff98adb2a911ad8a0ec1dea5bc50cc4e876b51c7da89f9c59"
+    },
+    {
+      "file": "docs/m4a/bplus-power/power/front.png",
+      "sha256": "d1d36e835189c0894f045c2789c1db673117cce9140c8357c2799e641b8a85df"
+    },
+    {
+      "file": "docs/m4a/material-poc/renders/front.png",
+      "sha256": "b0b2e21cfa70f4e8e05cb310b9f28482c542b7418e778e1eccc9ef073d0f08c3"
+    },
+    {
+      "file": "docs/m4a/bplus-power/power/three-quarter.png",
+      "sha256": "6ba6e671986d68960ad54e6778bcb68c2ac3c1b5c22d41acd3e1b4015b7e4613"
+    },
+    {
+      "file": "docs/m4a/material-poc/renders/three-quarter.png",
+      "sha256": "5c460f23b1a91e288618424e9028ef2c7f0fe0b99f476905b689a0cc3497b098"
+    }
+  ]
+}

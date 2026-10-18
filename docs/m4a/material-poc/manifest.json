@@ -1,0 +1,125 @@
+{
+  "algorithm": "SHA-256",
+  "files": [
+    {
+      "path": "docs/M4A_POC_MATERIAUX_ECORCHE.md",
+      "bytes": 5094,
+      "sha256": "8e8351f1f7b4a764766b84fea0608ecb1d16ae04c1b571b314b7825cbdff53b5"
+    },
+    {
+      "path": "docs/m4a/material-poc/README.md",
+      "bytes": 2936,
+      "sha256": "064b1549ae9226532dbbfa05e0ffb281e529148e2a69b134952dfadaed875b98"
+    },
+    {
+      "path": "docs/m4a/material-poc/audit.json",
+      "bytes": 878,
+      "sha256": "ff02aa2a42a5b9e9381818effda04e3b55064ca82140c1253803c00412b6608c"
+    },
+    {
+      "path": "docs/m4a/material-poc/comparaison-front.png",
+      "bytes": 257648,
+      "sha256": "e8672d259b69ccce1bf845a0198a5d2c967189f97cd356be254cca31097078d6"
+    },
+    {
+      "path": "docs/m4a/material-poc/comparaison-three-quarter.png",
+      "bytes": 253591,
+      "sha256": "a671bcab34a67bd78c77dc5aa6246b3a37ad2ed87d64bee99277d98436134512"
+    },
+    {
+      "path": "docs/m4a/material-poc/experiment/construction.json",
+      "bytes": 1275,
+      "sha256": "539fb7a4086708d8622ba30b5373f2b1d1a8d4ffc15282e1578e3a8f8b22169e"
+    },
+    {
+      "path": "docs/m4a/material-poc/experiment/model.blend",
+      "bytes": 8773860,
+      "sha256": "601acce3ad077f37e8ba08bba1a7b6f888a8df0eeda359319c91ff6245de0b2f"
+    },
+    {
+      "path": "docs/m4a/material-poc/experiment/textures/deltoid-normal.png",
+      "bytes": 560417,
+      "sha256": "ae604a1f48666d9dd3a38952aa90941392bf2be06ed395168b4e3f54b2de88bc"
+    },
+    {
+      "path": "docs/m4a/material-poc/experiment/textures/deltoid-surface.png",
+      "bytes": 679193,
+      "sha256": "4ed2dd3012cf32e182440113cafe432b63a903e23a97fcb17481fe1109550509"
+    },
+    {
+      "path": "docs/m4a/material-poc/experiment/textures/pectoral-normal.png",
+      "bytes": 323248,
+      "sha256": "0e52b9579d7abfab00e57cda0da4ddd59a162d8468069f7a84df986b0f3db347"
+    },
+    {
+      "path": "docs/m4a/material-poc/experiment/textures/pectoral-surface.png",
+      "bytes": 361413,
+      "sha256": "0d29dd1f397598f998f8a817766b44bc4d995ae1210830402e6cb0f1bceb13d8"
+    },
+    {
+      "path": "docs/m4a/material-poc/experiment/textures/textures.json",
+      "bytes": 1418,
+      "sha256": "8d5ce5a5027a2ca7e67d5169f3f6d792578477dc1c2881a72ff2a524e19352f7"
+    },
+    {
+      "path": "docs/m4a/material-poc/renders/detail.png",
+      "bytes": 1094437,
+      "sha256": "a86354183db667f54d9919b08ffafb63fa89cf3fbbd4f22c1b98487bf1085312"
+    },
+    {
+      "path": "docs/m4a/material-poc/renders/front.png",
+      "bytes": 925518,
+      "sha256": "b0b2e21cfa70f4e8e05cb310b9f28482c542b7418e778e1eccc9ef073d0f08c3"
+    },
+    {
+      "path": "docs/m4a/material-poc/renders/render-metadata.json",
+      "bytes": 3047,
+      "sha256": "1c63e9f0749afa5937aa7b0a87b778ac3e378aebf14cc9a4fcae028fded4808e"
+    },
+    {
+      "path": "docs/m4a/material-poc/renders/scene-review.blend",
+      "bytes": 8774909,
+      "sha256": "50405aa6931983914a69141d4ad8991f631500c94e70a05997c93c35f7ef9f98"
+    },
+    {
+      "path": "docs/m4a/material-poc/renders/selection.png",
+      "bytes": 1114256,
+      "sha256": "4626d7c4f972263ff98adb2a911ad8a0ec1dea5bc50cc4e876b51c7da89f9c59"
+    },
+    {
+      "path": "docs/m4a/material-poc/renders/three-quarter.png",
+      "bytes": 919477,
+      "sha256": "5c460f23b1a91e288618424e9028ef2c7f0fe0b99f476905b689a0cc3497b098"
+    },
+    {
+      "path": "docs/m4a/material-poc/validation.json",
+      "bytes": 1789,
+      "sha256": "2e65ba7e066d81f45fac6f64a9fe30ae5698dc73533e01779618e5221588fd64"
+    },
+    {
+      "path": "tools/m4a/audit_material_poc.py",
+      "bytes": 3805,
+      "sha256": "dba3841deaaa84eead9e1238d42c4cad57435c511893c3f4edb432482bb8be44"
+    },
+    {
+      "path": "tools/m4a/finish_material_poc.py",
+      "bytes": 5700,
+      "sha256": "09b040c518a505eda7a3ed13f24b72b3c2ac9a018122d5cad11d645302162192"
+    },
+    {
+      "path": "tools/m4a/make_material_poc_textures.py",
+      "bytes": 3666,
+      "sha256": "ed123dc8467dac534317677a87ad9ccb6b8d95b43b4c2ba612edabdf776b1525"
+    },
+    {
+      "path": "tools/m4a/prepare_material_poc.py",
+      "bytes": 7509,
+      "sha256": "e9b355895e27f1a1bcef50da1a2cbb1e6fc4e5d9649484d6b781dfa6bfad15fd"
+    },
+    {
+      "path": "tools/m4a/render_material_poc.py",
+      "bytes": 4142,
+      "sha256": "8fa5d59bb0922b749e616e71d6fcdf5a4a72a8cf2951f209186439179ee08528"
+    }
+  ]
+}
