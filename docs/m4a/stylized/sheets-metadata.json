@@ -1,0 +1,76 @@
+{
+  "sources": [
+    {
+      "file": "s1/front.png",
+      "sha256": "3645672f7d67d22fc79d4bcbe67b09e1aa841aed4a11b357e358212c746ff079"
+    },
+    {
+      "file": "s2/front.png",
+      "sha256": "db5b85a8a460ab5eb2014c7aad9de22b8323c96d99e8bc3918f58c8bb0c8f2fe"
+    },
+    {
+      "file": "s3/front.png",
+      "sha256": "4379bf0ebd00007a28417ff1045c405e1a1d601bb0d494b199fba55873353e6d"
+    },
+    {
+      "file": "s1/three-quarter.png",
+      "sha256": "3cb48b11d224d680adf09a7ce1202e03dde4078ac2e07952169c58ca2ed7bbae"
+    },
+    {
+      "file": "s2/three-quarter.png",
+      "sha256": "caba0bdcf5d3873788548ae18d18a1491f88a0815abd574db9aa7649b29dc484"
+    },
+    {
+      "file": "s3/three-quarter.png",
+      "sha256": "aad9b4b485b7566d7a8bdc0b4b5ca9903311df1578b706b379eacaf91f34fd91"
+    },
+    {
+      "file": "s1/back.png",
+      "sha256": "31e6da7a3bbda70ed492d25ccf219e0a1faaf854a3c5326c66311224737d44fd"
+    },
+    {
+      "file": "s2/back.png",
+      "sha256": "5a0ffa6ddf7964e7407799232973096075536e8dc01bc2741f5f8da571791557"
+    },
+    {
+      "file": "s3/back.png",
+      "sha256": "be4d8957fd03a863c6170a5e714ebebece5c6841d75c80bf7fe4a442972a951c"
+    },
+    {
+      "file": "s1/side.png",
+      "sha256": "65f947a6b79daedfffc515a2e8c88bae8451b7cae37970078e64edc1c378f91a"
+    },
+    {
+      "file": "s2/side.png",
+      "sha256": "e9bfc34986e24bae4cc94f04d04567c838584c05597a46bc66f21386384fcf13"
+    },
+    {
+      "file": "s3/side.png",
+      "sha256": "d0a600fd6cc942798a43d932c61b1a156da02c5d2982e601542c2f02e155b5fd"
+    },
+    {
+      "file": "s1/selection.png",
+      "sha256": "8b061be5503a477b1349c903e5b234a926c2755045d7fbdc32132cbf9a51991e"
+    },
+    {
+      "file": "s2/selection.png",
+      "sha256": "08807ebfcc4b2f5ac6a83cbf100f83bc80b1b3e7a0f067944851f9e1c59f23ea"
+    },
+    {
+      "file": "s3/selection.png",
+      "sha256": "68823516cb5c088ca660b296f7de81364d8ab7b9b2f172f47c9ca365538f84e8"
+    }
+  ],
+  "full_comparison_size": [
+    2160,
+    1340
+  ],
+  "detail_crop": [
+    150,
+    210,
+    570,
+    620
+  ],
+  "anatomy_repainted": false,
+  "license": "CC-BY-SA-4.0"
+}

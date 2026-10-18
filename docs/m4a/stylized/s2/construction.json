@@ -1,0 +1,1001 @@
+{
+  "variant": "s2",
+  "method": "grouped rounded muscle masses over recessed support",
+  "settings": {
+    "width": 1.18,
+    "bulk": 0.24,
+    "waist": 0.13,
+    "method": "grouped rounded muscle masses over recessed support",
+    "voxel": 0.0026,
+    "smooth": 5,
+    "budget": 100000
+  },
+  "blender": "4.3.2",
+  "source": "/workspace/work/m4a-ecorche/prepared/ecorche/muscles-only.blend",
+  "source_sha256": "b625d59782d81aa9be52395e75bbb5f3191bd082ab3d1fd98fddb467dee23bc5",
+  "source_origin": "Charleeh/ecorche 320805e06aee51e2e6f6b22533eb2a59d43f2d4d, audited muscles-only checkpoint",
+  "generator_sha256": "69cd3c03ad4b09601ed34de3df1f7e884556ee76d83da004063fe017ea2545c4",
+  "license": "CC-BY-SA-4.0",
+  "L1_L2_L3_assets_read": false,
+  "skeleton_organs_face_muscles_read_into_output": false,
+  "source_left_structures": [
+    {
+      "name": "Abdominal part of left pectoralis major",
+      "family": "pectoralis",
+      "original_open_edges": 0
+    },
+    {
+      "name": "Acromial part of left deltoid",
+      "family": "deltoid",
+      "original_open_edges": 0
+    },
+    {
+      "name": "Ascending part of left trapezius",
+      "family": "trapezius",
+      "original_open_edges": 5
+    },
+    {
+      "name": "Clavicular part of left deltoid",
+      "family": "deltoid",
+      "original_open_edges": 60
+    },
+    {
+      "name": "Clavicular part of left pectoralis major",
+      "family": "pectoralis",
+      "original_open_edges": 3
+    },
+    {
+      "name": "Descending part of left trapezius",
+      "family": "trapezius",
+      "original_open_edges": 0
+    },
+    {
+      "name": "Humeral head of left flexor carpi ulnaris",
+      "family": "forearm-flexors",
+      "original_open_edges": 28
+    },
+    {
+      "name": "Humeral head of left pronator teres",
+      "family": "forearm-flexors",
+      "original_open_edges": 19
+    },
+    {
+      "name": "Lateral head of left gastrocnemius",
+      "family": "calf",
+      "original_open_edges": 0
+    },
+    {
+      "name": "Lateral head of left triceps brachii",
+      "family": "triceps",
+      "original_open_edges": 0
+    },
+    {
+      "name": "Left adductor longus",
+      "family": "adductors",
+      "original_open_edges": 2
+    },
+    {
+      "name": "Left adductor magnus",
+      "family": "adductors",
+      "original_open_edges": 3
+    },
+    {
+      "name": "Left brachialis",
+      "family": "brachialis",
+      "original_open_edges": 0
+    },
+    {
+      "name": "Left brachioradialis",
+      "family": "forearm-extensors",
+      "original_open_edges": 32
+    },
+    {
+      "name": "Left coracobrachialis",
+      "family": "brachialis",
+      "original_open_edges": 0
+    },
+    {
+      "name": "Left extensor carpi radialis brevis",
+      "family": "forearm-extensors",
+      "original_open_edges": 22
+    },
+    {
+      "name": "Left extensor carpi radialis longus",
+      "family": "forearm-extensors",
+      "original_open_edges": 21
+    },
+    {
+      "name": "Left extensor carpi ulnaris",
+      "family": "forearm-extensors",
+      "original_open_edges": 36
+    },
+    {
+      "name": "Left extensor carpi ulnaris (2)",
+      "family": "forearm-extensors",
+      "original_open_edges": 24
+    },
+    {
+      "name": "Left extensor digitorum",
+      "family": "forearm-extensors",
+      "original_open_edges": 46
+    },
+    {
+      "name": "Left external oblique",
+      "family": "oblique",
+      "original_open_edges": 2074
+    },
+    {
+      "name": "Left fibularis longus",
+      "family": "fibularis",
+      "original_open_edges": 20
+    },
+    {
+      "name": "Left flexor carpi radialis",
+      "family": "forearm-flexors",
+      "original_open_edges": 16
+    },
+    {
+      "name": "Left flexor digitorum superficialis",
+      "family": "forearm-flexors",
+      "original_open_edges": 41
+    },
+    {
+      "name": "Left flexor digitorum superficialis (2)",
+      "family": "forearm-flexors",
+      "original_open_edges": 16
+    },
+    {
+      "name": "Left gluteus maximus",
+      "family": "gluteal",
+      "original_open_edges": 0
+    },
+    {
+      "name": "Left gluteus medius",
+      "family": "gluteal",
+      "original_open_edges": 0
+    },
+    {
+      "name": "Left gracilis",
+      "family": "adductors",
+      "original_open_edges": 1
+    },
+    {
+      "name": "Left infraspinatus muscle",
+      "family": "scapular",
+      "original_open_edges": 3
+    },
+    {
+      "name": "Left latissimus dorsi",
+      "family": "latissimus",
+      "original_open_edges": 6
+    },
+    {
+      "name": "Left rectus abdominis",
+      "family": "rectus-abdominis",
+      "original_open_edges": 219
+    },
+    {
+      "name": "Left rectus femoris",
+      "family": "quadriceps-rectus",
+      "original_open_edges": 4
+    },
+    {
+      "name": "Left sartorius",
+      "family": "sartorius",
+      "original_open_edges": 17
+    },
+    {
+      "name": "Left semimembranosus",
+      "family": "hamstrings-medial",
+      "original_open_edges": 3
+    },
+    {
+      "name": "Left semitendinosus",
+      "family": "hamstrings-medial",
+      "original_open_edges": 4
+    },
+    {
+      "name": "Left serratus anterior",
+      "family": "serratus",
+      "original_open_edges": 1649
+    },
+    {
+      "name": "Left soleus",
+      "family": "soleus",
+      "original_open_edges": 6
+    },
+    {
+      "name": "Left tensor fasciae latae",
+      "family": "hip-abductors",
+      "original_open_edges": 4
+    },
+    {
+      "name": "Left teres major",
+      "family": "scapular",
+      "original_open_edges": 3
+    },
+    {
+      "name": "Left teres minor",
+      "family": "scapular",
+      "original_open_edges": 0
+    },
+    {
+      "name": "Left tibialis anterior",
+      "family": "tibialis",
+      "original_open_edges": 26
+    },
+    {
+      "name": "Left vastus lateralis",
+      "family": "quadriceps-lateral",
+      "original_open_edges": 0
+    },
+    {
+      "name": "Left vastus medialis",
+      "family": "quadriceps-medial",
+      "original_open_edges": 0
+    },
+    {
+      "name": "Long head of left biceps brachii",
+      "family": "biceps",
+      "original_open_edges": 0
+    },
+    {
+      "name": "Long head of left biceps femoris",
+      "family": "hamstrings-lateral",
+      "original_open_edges": 0
+    },
+    {
+      "name": "Long head of left triceps brachii",
+      "family": "triceps",
+      "original_open_edges": 0
+    },
+    {
+      "name": "Medial head of left gastrocnemius",
+      "family": "calf",
+      "original_open_edges": 0
+    },
+    {
+      "name": "Medial head of left triceps brachii",
+      "family": "triceps",
+      "original_open_edges": 0
+    },
+    {
+      "name": "Short head of left biceps brachii",
+      "family": "biceps",
+      "original_open_edges": 11
+    },
+    {
+      "name": "Spinal part of left deltoid",
+      "family": "deltoid",
+      "original_open_edges": 9
+    },
+    {
+      "name": "Sternocostal part of left pectoralis major",
+      "family": "pectoralis",
+      "original_open_edges": 12
+    },
+    {
+      "name": "Transverse part of left trapezius",
+      "family": "trapezius",
+      "original_open_edges": 9
+    },
+    {
+      "name": "Ulnar head of left flexor carpi ulnaris",
+      "family": "forearm-flexors",
+      "original_open_edges": 38
+    },
+    {
+      "name": "Ulnar head of left pronator teres",
+      "family": "forearm-flexors",
+      "original_open_edges": 6
+    }
+  ],
+  "excluded_count": 308,
+  "modifications": [
+    "Superficial subset only; central oblique sheath clipped to expose rectus.",
+    "Bilateral reflection; global athletic width, tapered waist and local belly enlargement.",
+    "Arms abducted 11 degrees; neutral closed head/hands/joints built in atlas frame.",
+    "Central abdominal sheath and distal threadlike tendons trimmed; rounded abdominal plates authored over source rectus. Source fibres smoothed; topology simplified; S2 grouped masses remeshed, S1 all volumes unioned.",
+    "S1 regions are exploratory nearest-source surface patches, not a final segmentation.",
+    "S2/S3 retain intersecting source masses over a cover; not a nonoverlapping final skin partition."
+  ],
+  "counts": {
+    "visible_objects": 53,
+    "vertices": 50067,
+    "triangles": 99946,
+    "selectable_objects": 52,
+    "selectable_zone_ids": 52
+  },
+  "objects": [
+    {
+      "object": "S2.pectoralis.left",
+      "zone": "pectoralis.left",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 2136,
+      "vertices": 1070,
+      "source_names": [
+        "Abdominal part of left pectoralis major",
+        "Clavicular part of left pectoralis major",
+        "Sternocostal part of left pectoralis major"
+      ],
+      "reflected_from_left": false
+    },
+    {
+      "object": "S2.deltoid.left",
+      "zone": "deltoid.left",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 1786,
+      "vertices": 895,
+      "source_names": [
+        "Acromial part of left deltoid",
+        "Clavicular part of left deltoid",
+        "Spinal part of left deltoid"
+      ],
+      "reflected_from_left": false
+    },
+    {
+      "object": "S2.trapezius.left",
+      "zone": "trapezius.left",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 2268,
+      "vertices": 1136,
+      "source_names": [
+        "Ascending part of left trapezius",
+        "Descending part of left trapezius",
+        "Transverse part of left trapezius"
+      ],
+      "reflected_from_left": false
+    },
+    {
+      "object": "S2.forearm-flexors.left",
+      "zone": "forearm-flexors.left",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 1518,
+      "vertices": 761,
+      "source_names": [
+        "Humeral head of left flexor carpi ulnaris",
+        "Humeral head of left pronator teres",
+        "Left flexor carpi radialis",
+        "Left flexor digitorum superficialis",
+        "Left flexor digitorum superficialis (2)",
+        "Ulnar head of left flexor carpi ulnaris",
+        "Ulnar head of left pronator teres"
+      ],
+      "reflected_from_left": false
+    },
+    {
+      "object": "S2.calf.left",
+      "zone": "calf.left",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 2016,
+      "vertices": 1010,
+      "source_names": [
+        "Lateral head of left gastrocnemius",
+        "Medial head of left gastrocnemius"
+      ],
+      "reflected_from_left": false
+    },
+    {
+      "object": "S2.triceps.left",
+      "zone": "triceps.left",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 1516,
+      "vertices": 760,
+      "source_names": [
+        "Lateral head of left triceps brachii",
+        "Long head of left triceps brachii",
+        "Medial head of left triceps brachii"
+      ],
+      "reflected_from_left": false
+    },
+    {
+      "object": "S2.adductors.left",
+      "zone": "adductors.left",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 2296,
+      "vertices": 1148,
+      "source_names": [
+        "Left adductor longus",
+        "Left adductor magnus",
+        "Left gracilis"
+      ],
+      "reflected_from_left": false
+    },
+    {
+      "object": "S2.brachialis.left",
+      "zone": "brachialis.left",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 1294,
+      "vertices": 649,
+      "source_names": [
+        "Left brachialis",
+        "Left coracobrachialis"
+      ],
+      "reflected_from_left": false
+    },
+    {
+      "object": "S2.forearm-extensors.left",
+      "zone": "forearm-extensors.left",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 1634,
+      "vertices": 815,
+      "source_names": [
+        "Left brachioradialis",
+        "Left extensor carpi radialis brevis",
+        "Left extensor carpi radialis longus",
+        "Left extensor carpi ulnaris",
+        "Left extensor carpi ulnaris (2)",
+        "Left extensor digitorum"
+      ],
+      "reflected_from_left": false
+    },
+    {
+      "object": "S2.oblique.left",
+      "zone": "oblique.left",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 2518,
+      "vertices": 1261,
+      "source_names": [
+        "Left external oblique"
+      ],
+      "reflected_from_left": false
+    },
+    {
+      "object": "S2.fibularis.left",
+      "zone": "fibularis.left",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 1080,
+      "vertices": 542,
+      "source_names": [
+        "Left fibularis longus"
+      ],
+      "reflected_from_left": false
+    },
+    {
+      "object": "S2.gluteal.left",
+      "zone": "gluteal.left",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 2220,
+      "vertices": 1112,
+      "source_names": [
+        "Left gluteus maximus",
+        "Left gluteus medius"
+      ],
+      "reflected_from_left": false
+    },
+    {
+      "object": "S2.scapular.left",
+      "zone": "scapular.left",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 1416,
+      "vertices": 710,
+      "source_names": [
+        "Left infraspinatus muscle",
+        "Left teres major",
+        "Left teres minor"
+      ],
+      "reflected_from_left": false
+    },
+    {
+      "object": "S2.latissimus.left",
+      "zone": "latissimus.left",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 2528,
+      "vertices": 1266,
+      "source_names": [
+        "Left latissimus dorsi"
+      ],
+      "reflected_from_left": false
+    },
+    {
+      "object": "S2.rectus-abdominis.left",
+      "zone": "rectus-abdominis.left",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 1818,
+      "vertices": 913,
+      "source_names": [
+        "Left rectus abdominis"
+      ],
+      "reflected_from_left": false
+    },
+    {
+      "object": "S2.quadriceps-rectus.left",
+      "zone": "quadriceps-rectus.left",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 1870,
+      "vertices": 935,
+      "source_names": [
+        "Left rectus femoris"
+      ],
+      "reflected_from_left": false
+    },
+    {
+      "object": "S2.sartorius.left",
+      "zone": "sartorius.left",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 1560,
+      "vertices": 782,
+      "source_names": [
+        "Left sartorius"
+      ],
+      "reflected_from_left": false
+    },
+    {
+      "object": "S2.hamstrings-medial.left",
+      "zone": "hamstrings-medial.left",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 1936,
+      "vertices": 970,
+      "source_names": [
+        "Left semimembranosus",
+        "Left semitendinosus"
+      ],
+      "reflected_from_left": false
+    },
+    {
+      "object": "S2.serratus.left",
+      "zone": "serratus.left",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 2088,
+      "vertices": 1046,
+      "source_names": [
+        "Left serratus anterior"
+      ],
+      "reflected_from_left": false
+    },
+    {
+      "object": "S2.soleus.left",
+      "zone": "soleus.left",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 1740,
+      "vertices": 872,
+      "source_names": [
+        "Left soleus"
+      ],
+      "reflected_from_left": false
+    },
+    {
+      "object": "S2.hip-abductors.left",
+      "zone": "hip-abductors.left",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 880,
+      "vertices": 442,
+      "source_names": [
+        "Left tensor fasciae latae"
+      ],
+      "reflected_from_left": false
+    },
+    {
+      "object": "S2.tibialis.left",
+      "zone": "tibialis.left",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 1232,
+      "vertices": 618,
+      "source_names": [
+        "Left tibialis anterior"
+      ],
+      "reflected_from_left": false
+    },
+    {
+      "object": "S2.quadriceps-lateral.left",
+      "zone": "quadriceps-lateral.left",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 1982,
+      "vertices": 993,
+      "source_names": [
+        "Left vastus lateralis"
+      ],
+      "reflected_from_left": false
+    },
+    {
+      "object": "S2.quadriceps-medial.left",
+      "zone": "quadriceps-medial.left",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 1580,
+      "vertices": 792,
+      "source_names": [
+        "Left vastus medialis"
+      ],
+      "reflected_from_left": false
+    },
+    {
+      "object": "S2.biceps.left",
+      "zone": "biceps.left",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 1320,
+      "vertices": 662,
+      "source_names": [
+        "Long head of left biceps brachii",
+        "Short head of left biceps brachii"
+      ],
+      "reflected_from_left": false
+    },
+    {
+      "object": "S2.hamstrings-lateral.left",
+      "zone": "hamstrings-lateral.left",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 1808,
+      "vertices": 906,
+      "source_names": [
+        "Long head of left biceps femoris"
+      ],
+      "reflected_from_left": false
+    },
+    {
+      "object": "S2.pectoralis.left.001",
+      "zone": "pectoralis.right",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 2136,
+      "vertices": 1070,
+      "source_names": [
+        "Abdominal part of left pectoralis major",
+        "Clavicular part of left pectoralis major",
+        "Sternocostal part of left pectoralis major"
+      ],
+      "reflected_from_left": true
+    },
+    {
+      "object": "S2.deltoid.left.001",
+      "zone": "deltoid.right",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 1786,
+      "vertices": 895,
+      "source_names": [
+        "Acromial part of left deltoid",
+        "Clavicular part of left deltoid",
+        "Spinal part of left deltoid"
+      ],
+      "reflected_from_left": true
+    },
+    {
+      "object": "S2.trapezius.left.001",
+      "zone": "trapezius.right",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 2268,
+      "vertices": 1136,
+      "source_names": [
+        "Ascending part of left trapezius",
+        "Descending part of left trapezius",
+        "Transverse part of left trapezius"
+      ],
+      "reflected_from_left": true
+    },
+    {
+      "object": "S2.forearm-flexors.left.001",
+      "zone": "forearm-flexors.right",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 1518,
+      "vertices": 761,
+      "source_names": [
+        "Humeral head of left flexor carpi ulnaris",
+        "Humeral head of left pronator teres",
+        "Left flexor carpi radialis",
+        "Left flexor digitorum superficialis",
+        "Left flexor digitorum superficialis (2)",
+        "Ulnar head of left flexor carpi ulnaris",
+        "Ulnar head of left pronator teres"
+      ],
+      "reflected_from_left": true
+    },
+    {
+      "object": "S2.calf.left.001",
+      "zone": "calf.right",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 2016,
+      "vertices": 1010,
+      "source_names": [
+        "Lateral head of left gastrocnemius",
+        "Medial head of left gastrocnemius"
+      ],
+      "reflected_from_left": true
+    },
+    {
+      "object": "S2.triceps.left.001",
+      "zone": "triceps.right",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 1516,
+      "vertices": 760,
+      "source_names": [
+        "Lateral head of left triceps brachii",
+        "Long head of left triceps brachii",
+        "Medial head of left triceps brachii"
+      ],
+      "reflected_from_left": true
+    },
+    {
+      "object": "S2.adductors.left.001",
+      "zone": "adductors.right",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 2296,
+      "vertices": 1148,
+      "source_names": [
+        "Left adductor longus",
+        "Left adductor magnus",
+        "Left gracilis"
+      ],
+      "reflected_from_left": true
+    },
+    {
+      "object": "S2.brachialis.left.001",
+      "zone": "brachialis.right",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 1294,
+      "vertices": 649,
+      "source_names": [
+        "Left brachialis",
+        "Left coracobrachialis"
+      ],
+      "reflected_from_left": true
+    },
+    {
+      "object": "S2.forearm-extensors.left.001",
+      "zone": "forearm-extensors.right",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 1634,
+      "vertices": 815,
+      "source_names": [
+        "Left brachioradialis",
+        "Left extensor carpi radialis brevis",
+        "Left extensor carpi radialis longus",
+        "Left extensor carpi ulnaris",
+        "Left extensor carpi ulnaris (2)",
+        "Left extensor digitorum"
+      ],
+      "reflected_from_left": true
+    },
+    {
+      "object": "S2.oblique.left.001",
+      "zone": "oblique.right",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 2518,
+      "vertices": 1261,
+      "source_names": [
+        "Left external oblique"
+      ],
+      "reflected_from_left": true
+    },
+    {
+      "object": "S2.fibularis.left.001",
+      "zone": "fibularis.right",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 1080,
+      "vertices": 542,
+      "source_names": [
+        "Left fibularis longus"
+      ],
+      "reflected_from_left": true
+    },
+    {
+      "object": "S2.gluteal.left.001",
+      "zone": "gluteal.right",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 2220,
+      "vertices": 1112,
+      "source_names": [
+        "Left gluteus maximus",
+        "Left gluteus medius"
+      ],
+      "reflected_from_left": true
+    },
+    {
+      "object": "S2.scapular.left.001",
+      "zone": "scapular.right",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 1416,
+      "vertices": 710,
+      "source_names": [
+        "Left infraspinatus muscle",
+        "Left teres major",
+        "Left teres minor"
+      ],
+      "reflected_from_left": true
+    },
+    {
+      "object": "S2.latissimus.left.001",
+      "zone": "latissimus.right",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 2528,
+      "vertices": 1266,
+      "source_names": [
+        "Left latissimus dorsi"
+      ],
+      "reflected_from_left": true
+    },
+    {
+      "object": "S2.rectus-abdominis.left.001",
+      "zone": "rectus-abdominis.right",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 1818,
+      "vertices": 913,
+      "source_names": [
+        "Left rectus abdominis"
+      ],
+      "reflected_from_left": true
+    },
+    {
+      "object": "S2.quadriceps-rectus.left.001",
+      "zone": "quadriceps-rectus.right",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 1870,
+      "vertices": 935,
+      "source_names": [
+        "Left rectus femoris"
+      ],
+      "reflected_from_left": true
+    },
+    {
+      "object": "S2.sartorius.left.001",
+      "zone": "sartorius.right",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 1560,
+      "vertices": 782,
+      "source_names": [
+        "Left sartorius"
+      ],
+      "reflected_from_left": true
+    },
+    {
+      "object": "S2.hamstrings-medial.left.001",
+      "zone": "hamstrings-medial.right",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 1936,
+      "vertices": 970,
+      "source_names": [
+        "Left semimembranosus",
+        "Left semitendinosus"
+      ],
+      "reflected_from_left": true
+    },
+    {
+      "object": "S2.serratus.left.001",
+      "zone": "serratus.right",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 2088,
+      "vertices": 1046,
+      "source_names": [
+        "Left serratus anterior"
+      ],
+      "reflected_from_left": true
+    },
+    {
+      "object": "S2.soleus.left.001",
+      "zone": "soleus.right",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 1740,
+      "vertices": 872,
+      "source_names": [
+        "Left soleus"
+      ],
+      "reflected_from_left": true
+    },
+    {
+      "object": "S2.hip-abductors.left.001",
+      "zone": "hip-abductors.right",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 880,
+      "vertices": 442,
+      "source_names": [
+        "Left tensor fasciae latae"
+      ],
+      "reflected_from_left": true
+    },
+    {
+      "object": "S2.tibialis.left.001",
+      "zone": "tibialis.right",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 1232,
+      "vertices": 618,
+      "source_names": [
+        "Left tibialis anterior"
+      ],
+      "reflected_from_left": true
+    },
+    {
+      "object": "S2.quadriceps-lateral.left.001",
+      "zone": "quadriceps-lateral.right",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 1982,
+      "vertices": 993,
+      "source_names": [
+        "Left vastus lateralis"
+      ],
+      "reflected_from_left": true
+    },
+    {
+      "object": "S2.quadriceps-medial.left.001",
+      "zone": "quadriceps-medial.right",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 1580,
+      "vertices": 792,
+      "source_names": [
+        "Left vastus medialis"
+      ],
+      "reflected_from_left": true
+    },
+    {
+      "object": "S2.biceps.left.001",
+      "zone": "biceps.right",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 1320,
+      "vertices": 662,
+      "source_names": [
+        "Long head of left biceps brachii",
+        "Short head of left biceps brachii"
+      ],
+      "reflected_from_left": true
+    },
+    {
+      "object": "S2.hamstrings-lateral.left.001",
+      "zone": "hamstrings-lateral.right",
+      "selectable": true,
+      "role": "muscle",
+      "triangles": 1808,
+      "vertices": 906,
+      "source_names": [
+        "Long head of left biceps femoris"
+      ],
+      "reflected_from_left": true
+    },
+    {
+      "object": "S.s2.neutral-support",
+      "zone": "support",
+      "selectable": false,
+      "role": "cover",
+      "triangles": 7866,
+      "vertices": 3935,
+      "source_names": [],
+      "reflected_from_left": false
+    }
+  ]
+}

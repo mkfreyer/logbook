@@ -1,0 +1,266 @@
+{
+  "algorithm": "SHA-256",
+  "license_for_derived_assets": "CC-BY-SA-4.0",
+  "files": [
+    {
+      "path": "docs/M4A_S1_S2_S3.md",
+      "bytes": 7142,
+      "sha256": "797d7f0d25a96e2fbd5255b2105d947d37fdbce805fcf50e72af6869bf291168"
+    },
+    {
+      "path": "docs/m4a/stylized/ATTRIBUTION.md",
+      "bytes": 2642,
+      "sha256": "51c775b1ee8b2bf2af2688a361d20d1261adcae31b47aee0989985a848e8dd88"
+    },
+    {
+      "path": "docs/m4a/stylized/README.md",
+      "bytes": 6030,
+      "sha256": "f976e84c84c4f3b58711e7e76db8b28e5e864d26ffe8ca57acf41f4eeea698cf"
+    },
+    {
+      "path": "docs/m4a/stylized/comparaison-back.png",
+      "bytes": 1350483,
+      "sha256": "e823b2e5fd382edeaf97a767378ebc1e4619c488b347990a4358c96c5bedd58c"
+    },
+    {
+      "path": "docs/m4a/stylized/comparaison-front.png",
+      "bytes": 1443307,
+      "sha256": "d87dc27f58cce69a615f233f71042bcde8e5eaf2b6eb0ad7d8f4f492c31a7454"
+    },
+    {
+      "path": "docs/m4a/stylized/comparaison-selection.png",
+      "bytes": 1420004,
+      "sha256": "c3b6a6b99be07d610a5012b268ba87f8c9bd4bd1aac41264cb5862c71f71f66b"
+    },
+    {
+      "path": "docs/m4a/stylized/comparaison-side.png",
+      "bytes": 1010338,
+      "sha256": "f6db67a833943dfc921db87ec10f3e504337965ddb9656d2a2273364561b97ad"
+    },
+    {
+      "path": "docs/m4a/stylized/comparaison-three-quarter.png",
+      "bytes": 1407315,
+      "sha256": "96a2d7a3a5a4c1bb689d3c5c5b93b20a0e93fa98f8cd0d9c7963c8e4f75ca252"
+    },
+    {
+      "path": "docs/m4a/stylized/comparaison.png",
+      "bytes": 1637074,
+      "sha256": "4e685de617e91ef7322f474769bb8308b1c6d35eff18526626024e22147007e6"
+    },
+    {
+      "path": "docs/m4a/stylized/detail-torse.png",
+      "bytes": 1388104,
+      "sha256": "5fde5a9ffa618ff4d499eb34bc60e8e2b922181ad29e0e7a73866ce2e0e8d2dc"
+    },
+    {
+      "path": "docs/m4a/stylized/licenses/CC-BY-SA-4.0.txt",
+      "bytes": 20210,
+      "sha256": "258ed63e18dedbb7183b2098bdc04e363301ba58bc6aaaf90dd00f4faf198680"
+    },
+    {
+      "path": "docs/m4a/stylized/licenses/Ecorche-ATTRIBUTION.md",
+      "bytes": 4731,
+      "sha256": "a8ab15675197a2423728b50ef641f1a5be0be736bfe6737318bacd0c34efb431"
+    },
+    {
+      "path": "docs/m4a/stylized/licenses/Ecorche-LICENSE.md",
+      "bytes": 984,
+      "sha256": "e6667796c721c8e6d25bb474de56ca5ed8436e097c36eb1d813e12e267ceb30e"
+    },
+    {
+      "path": "docs/m4a/stylized/review-validation.json",
+      "bytes": 880,
+      "sha256": "dd2f47ae079a708f60d9b475e1eaeaf27328ec90e25e9659043694fff7e9041e"
+    },
+    {
+      "path": "docs/m4a/stylized/s1/back.png",
+      "bytes": 925239,
+      "sha256": "31e6da7a3bbda70ed492d25ccf219e0a1faaf854a3c5326c66311224737d44fd"
+    },
+    {
+      "path": "docs/m4a/stylized/s1/construction.json",
+      "bytes": 22145,
+      "sha256": "2f8a59099d7a62c6255a396d09583e572f2683d0b7e8dc1f7bb39186ac0f4f7e"
+    },
+    {
+      "path": "docs/m4a/stylized/s1/front.png",
+      "bytes": 960785,
+      "sha256": "3645672f7d67d22fc79d4bcbe67b09e1aa841aed4a11b357e358212c746ff079"
+    },
+    {
+      "path": "docs/m4a/stylized/s1/geometry-check.json",
+      "bytes": 48938,
+      "sha256": "4ec2b935a87dc0e1985def66ad0884455d28bbdfa55b0665fe2e73c57e4aa580"
+    },
+    {
+      "path": "docs/m4a/stylized/s1/model.blend",
+      "bytes": 3709446,
+      "sha256": "3a27f562382db9e7b68a3be1024413979807fc09f97813c4ba41eca2620e7f68"
+    },
+    {
+      "path": "docs/m4a/stylized/s1/render-metadata.json",
+      "bytes": 3105,
+      "sha256": "e7ff6d903e557fd8f93fb45f813104ead8ca955df877a97969bb65791a083256"
+    },
+    {
+      "path": "docs/m4a/stylized/s1/scene-review.blend",
+      "bytes": 3720350,
+      "sha256": "debe2a54868f987c4dacee361954bae4f433ff41018b0ae90efca905a719847a"
+    },
+    {
+      "path": "docs/m4a/stylized/s1/selection.png",
+      "bytes": 966063,
+      "sha256": "8b061be5503a477b1349c903e5b234a926c2755045d7fbdc32132cbf9a51991e"
+    },
+    {
+      "path": "docs/m4a/stylized/s1/side.png",
+      "bytes": 855438,
+      "sha256": "65f947a6b79daedfffc515a2e8c88bae8451b7cae37970078e64edc1c378f91a"
+    },
+    {
+      "path": "docs/m4a/stylized/s1/three-quarter.png",
+      "bytes": 956249,
+      "sha256": "3cb48b11d224d680adf09a7ce1202e03dde4078ac2e07952169c58ca2ed7bbae"
+    },
+    {
+      "path": "docs/m4a/stylized/s2/back.png",
+      "bytes": 942095,
+      "sha256": "5a0ffa6ddf7964e7407799232973096075536e8dc01bc2741f5f8da571791557"
+    },
+    {
+      "path": "docs/m4a/stylized/s2/construction.json",
+      "bytes": 25851,
+      "sha256": "1d7fe7785a0f3ee62e62b3dc268d89629b8de10743f99f9262d785ccec779549"
+    },
+    {
+      "path": "docs/m4a/stylized/s2/front.png",
+      "bytes": 980956,
+      "sha256": "db5b85a8a460ab5eb2014c7aad9de22b8323c96d99e8bc3918f58c8bb0c8f2fe"
+    },
+    {
+      "path": "docs/m4a/stylized/s2/geometry-check.json",
+      "bytes": 44549,
+      "sha256": "bbb97764a13b80a8afa5ddea199729c68178f5be52547fb448b75befd08c232f"
+    },
+    {
+      "path": "docs/m4a/stylized/s2/model.blend",
+      "bytes": 2151867,
+      "sha256": "77eaab0c36259ad1f957e2c7ccb95f2546d34d8193b639882ce5f726d8f6a83c"
+    },
+    {
+      "path": "docs/m4a/stylized/s2/render-metadata.json",
+      "bytes": 3108,
+      "sha256": "6f51162d5e20c4557f549fbd769a6bc92462800b01238c4614e98dd49266d9de"
+    },
+    {
+      "path": "docs/m4a/stylized/s2/scene-review.blend",
+      "bytes": 2155772,
+      "sha256": "ef9d564df18c06551fe7429d3cc97140c430f3406903e59aa88d52f0924dce96"
+    },
+    {
+      "path": "docs/m4a/stylized/s2/selection.png",
+      "bytes": 983466,
+      "sha256": "08807ebfcc4b2f5ac6a83cbf100f83bc80b1b3e7a0f067944851f9e1c59f23ea"
+    },
+    {
+      "path": "docs/m4a/stylized/s2/side.png",
+      "bytes": 863553,
+      "sha256": "e9bfc34986e24bae4cc94f04d04567c838584c05597a46bc66f21386384fcf13"
+    },
+    {
+      "path": "docs/m4a/stylized/s2/three-quarter.png",
+      "bytes": 973476,
+      "sha256": "caba0bdcf5d3873788548ae18d18a1491f88a0815abd574db9aa7649b29dc484"
+    },
+    {
+      "path": "docs/m4a/stylized/s3/back.png",
+      "bytes": 949906,
+      "sha256": "be4d8957fd03a863c6170a5e714ebebece5c6841d75c80bf7fe4a442972a951c"
+    },
+    {
+      "path": "docs/m4a/stylized/s3/construction.json",
+      "bytes": 41547,
+      "sha256": "a253dab85df317c7614da7b6bb75f16e7d188888445e9604a4c3fae8e12d4afb"
+    },
+    {
+      "path": "docs/m4a/stylized/s3/front.png",
+      "bytes": 985403,
+      "sha256": "4379bf0ebd00007a28417ff1045c405e1a1d601bb0d494b199fba55873353e6d"
+    },
+    {
+      "path": "docs/m4a/stylized/s3/geometry-check.json",
+      "bytes": 92190,
+      "sha256": "ab2d594bed7cb3bd2274813534d257e9bef17c73a5c900d020ca6ac3782c1934"
+    },
+    {
+      "path": "docs/m4a/stylized/s3/model.blend",
+      "bytes": 2844732,
+      "sha256": "5c1a608de5f89ecff4036bf892bdcc0677b4a15cb8638a788f609554037753df"
+    },
+    {
+      "path": "docs/m4a/stylized/s3/render-metadata.json",
+      "bytes": 3370,
+      "sha256": "73887ae8290bb16dc2ceb620a1374223febbe3166f880ed458442ca631bf7aae"
+    },
+    {
+      "path": "docs/m4a/stylized/s3/scene-review.blend",
+      "bytes": 2831307,
+      "sha256": "75abf1b539c7f0dea77296bf80893efd3ea2fa60ed77e361bc16dbb55872e58a"
+    },
+    {
+      "path": "docs/m4a/stylized/s3/selection.png",
+      "bytes": 987807,
+      "sha256": "68823516cb5c088ca660b296f7de81364d8ab7b9b2f172f47c9ca365538f84e8"
+    },
+    {
+      "path": "docs/m4a/stylized/s3/side.png",
+      "bytes": 867861,
+      "sha256": "d0a600fd6cc942798a43d932c61b1a156da02c5d2982e601542c2f02e155b5fd"
+    },
+    {
+      "path": "docs/m4a/stylized/s3/three-quarter.png",
+      "bytes": 977825,
+      "sha256": "aad9b4b485b7566d7a8bdc0b4b5ca9903311df1578b706b379eacaf91f34fd91"
+    },
+    {
+      "path": "docs/m4a/stylized/sheets-metadata.json",
+      "bytes": 2112,
+      "sha256": "29f0dbf436870f443c3668d634ea44825cc0843c32cf22b77f52865bfa6713b8"
+    },
+    {
+      "path": "docs/m4a/stylized/validation.json",
+      "bytes": 1333,
+      "sha256": "40682d3c907c6ddca274a4427172e5c42b9163419d27dc5a2c89febc79286333"
+    },
+    {
+      "path": "tools/m4a/audit_stylized_review.py",
+      "bytes": 2382,
+      "sha256": "3366d6f1e26bd26c5386010b2453d6385e460ac425112e6052a617097d1e931d"
+    },
+    {
+      "path": "tools/m4a/build_stylized_anatomy.py",
+      "bytes": 20433,
+      "sha256": "69cd3c03ad4b09601ed34de3df1f7e884556ee76d83da004063fe017ea2545c4"
+    },
+    {
+      "path": "tools/m4a/check_stylized_anatomy.py",
+      "bytes": 4465,
+      "sha256": "ee8e251db2caaa2d8de3446cca9b25189e7ed1344315fd0c09df6edb88a0c677"
+    },
+    {
+      "path": "tools/m4a/make_stylized_sheets.py",
+      "bytes": 3376,
+      "sha256": "ebae10b3017a254fe06e40b61cc462327133a35d916ff1a057c6342ff09b920d"
+    },
+    {
+      "path": "tools/m4a/render_stylized_anatomy.py",
+      "bytes": 6188,
+      "sha256": "7564012bc10330bd24b6c3a76e2eb5a3785545412ccb3d9053757cb15f357c36"
+    },
+    {
+      "path": "tools/m4a/validate_stylized_delivery.py",
+      "bytes": 5894,
+      "sha256": "94a011bb3916e1bb7e775e356a006a6bbeb6f0c7a16633330678dc77525ddbb1"
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "source_sha256": "3a27f562382db9e7b68a3be1024413979807fc09f97813c4ba41eca2620e7f68",
+  "variant": "s1",
+  "protocol": {
+    "renderer_sha256": "7564012bc10330bd24b6c3a76e2eb5a3785545412ccb3d9053757cb15f357c36",
+    "blender": "4.3.2",
+    "engine": "CYCLES_CPU",
+    "samples": 96,
+    "resolution": [
+      720,
+      1152
+    ],
+    "seed": 0,
+    "denoising": false,
+    "orthographic_scale": 2.15,
+    "camera_target": [
+      0,
+      0,
+      0.9
+    ],
+    "lights": [
+      [
+        "Key",
+        [
+          -2,
+          -2.5,
+          3.2
+        ],
+        230,
+        2.2,
+        [
+          0.81,
+          0.88,
+          1
+        ]
+      ],
+      [
+        "Fill",
+        [
+          2.6,
+          -1.7,
+          1.6
+        ],
+        85,
+        2.5,
+        [
+          0.56,
+          0.69,
+          1
+        ]
+      ],
+      [
+        "Rim",
+        [
+          1.6,
+          2.3,
+          2.8
+        ],
+        310,
+        2,
+        [
+          0.58,
+          0.72,
+          1
+        ]
+      ],
+      [
+        "Back fill",
+        [
+          -2,
+          2,
+          1.3
+        ],
+        90,
+        2.5,
+        [
+          0.75,
+          0.82,
+          1
+        ]
+      ]
+    ],
+    "satin": {
+      "base_color_linear": [
+        0.17,
+        0.245,
+        0.38
+      ],
+      "roughness": 0.42,
+      "metallic": 0.18,
+      "coat": 0.1,
+      "subsurface_weight": 0,
+      "subsurface_radius": [
+        0.8,
+        0.55,
+        0.35
+      ],
+      "subsurface_scale_m": 0.006,
+      "transmission_weight": 0,
+      "ior": 1.44
+    },
+    "source_geometry_changed_by_renderer": false,
+    "license": "CC-BY-SA-4.0",
+    "AI_generated_images": false
+  },
+  "orange_zones": [
+    "pectoralis.left",
+    "pectoralis.right"
+  ],
+  "frames": [
+    {
+      "view": "front",
+      "yaw_degrees": 0,
+      "path": "front.png",
+      "sha256": "3645672f7d67d22fc79d4bcbe67b09e1aa841aed4a11b357e358212c746ff079",
+      "orange_objects": []
+    },
+    {
+      "view": "three-quarter",
+      "yaw_degrees": 35,
+      "path": "three-quarter.png",
+      "sha256": "3cb48b11d224d680adf09a7ce1202e03dde4078ac2e07952169c58ca2ed7bbae",
+      "orange_objects": []
+    },
+    {
+      "view": "back",
+      "yaw_degrees": 180,
+      "path": "back.png",
+      "sha256": "31e6da7a3bbda70ed492d25ccf219e0a1faaf854a3c5326c66311224737d44fd",
+      "orange_objects": []
+    },
+    {
+      "view": "side",
+      "yaw_degrees": 90,
+      "path": "side.png",
+      "sha256": "65f947a6b79daedfffc515a2e8c88bae8451b7cae37970078e64edc1c378f91a",
+      "orange_objects": []
+    },
+    {
+      "view": "selection",
+      "yaw_degrees": 35,
+      "path": "selection.png",
+      "sha256": "8b061be5503a477b1349c903e5b234a926c2755045d7fbdc32132cbf9a51991e",
+      "orange_objects": [
+        "S1.pectoralis.right",
+        "S1.pectoralis.left"
+      ]
+    }
+  ],
+  "review_scene": {
+    "path": "scene-review.blend",
+    "sha256": "debe2a54868f987c4dacee361954bae4f433ff41018b0ae90efca905a719847a",
+    "neutral_materials_restored": true,
+    "camera_view": "three-quarter"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "s1": {
+    "source_review_geometry_normals_semantics_identical": true,
+    "geometry_signature_sha256": "65da744c3094cf2bd75af54b5d01fee6c16eb834fd0cd1ebea1b922c54fc09ed",
+    "studio_lights": 4,
+    "camera_count": 1,
+    "neutral_material_restored": true,
+    "visible_objects": 55
+  },
+  "s2": {
+    "source_review_geometry_normals_semantics_identical": true,
+    "geometry_signature_sha256": "0cffe8deb3ac4873aa1dffc3ff58c1f356e850ec5a5ccaaa4a038e8e3c63ae62",
+    "studio_lights": 4,
+    "camera_count": 1,
+    "neutral_material_restored": true,
+    "visible_objects": 53
+  },
+  "s3": {
+    "source_review_geometry_normals_semantics_identical": true,
+    "geometry_signature_sha256": "2bf5cc31d731b485753f341fd589da204c10bd0b0dbcd8033e072d227b3d716c",
+    "studio_lights": 4,
+    "camera_count": 1,
+    "neutral_material_restored": true,
+    "visible_objects": 111
+  }
+}

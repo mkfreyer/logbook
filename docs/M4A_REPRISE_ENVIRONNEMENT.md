@@ -1,6 +1,10 @@
 # M4A — Sauvegarde et reprise après changement réseau
 
-> **Étape actuelle : [L3 — atlas fitness stylisé à valider](M4A_L3.md).**
+> **Étape actuelle : [S1 / S2 / S3 — nouvelles bases anatomiques](M4A_S1_S2_S3.md).**
+> L1 / L2 / L3 sont abandonnés comme base principale, conservés en historique.
+> Arrêt pour choix visuel ; PR #11 en brouillon, sans application, SQLite ou M4B.
+
+> **Historique : [L3 — exploration anatomique](M4A_L3.md).**
 > Les sources et cinq vues comparatives Blender sont dans `docs/m4a/l3/`.
 > Arrêt pour validation visuelle, aucune intégration, M4B ou modification SQLite.
 
