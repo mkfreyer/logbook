@@ -1,0 +1,124 @@
+{
+  "kind": "before",
+  "source_sha256": "6d6f73fae7e74976563db4b60cf084474ccade208cc5705bfdd41319d7bbe85a",
+  "protocol": {
+    "blender": "4.3.2",
+    "renderer_sha256": "c2a2c9434a133761f56b971b6da2459d7283f1c337c11deab13c0c195989a3f6",
+    "engine": "CYCLES_CPU",
+    "samples": 96,
+    "denoising": false,
+    "seed": 0,
+    "lights": [
+      [
+        "Key",
+        [
+          -2,
+          -2.5,
+          3.2
+        ],
+        230,
+        3,
+        [
+          0.81,
+          0.88,
+          1
+        ]
+      ],
+      [
+        "Fill",
+        [
+          2.6,
+          -1.7,
+          1.6
+        ],
+        110,
+        2.5,
+        [
+          0.56,
+          0.69,
+          1
+        ]
+      ],
+      [
+        "Rim",
+        [
+          1.6,
+          2.3,
+          2.8
+        ],
+        310,
+        2,
+        [
+          0.58,
+          0.72,
+          1
+        ]
+      ],
+      [
+        "Back fill",
+        [
+          -2,
+          2,
+          1.3
+        ],
+        90,
+        2.5,
+        [
+          0.75,
+          0.82,
+          1
+        ]
+      ]
+    ],
+    "material": {
+      "color": [
+        0.23,
+        0.3,
+        0.41
+      ],
+      "roughness": 0.37,
+      "metallic": 0.12,
+      "coat": 0.08,
+      "bump_strength": 0.55,
+      "bump_attribute": "m4a_poc_fibre_height"
+    },
+    "AI_generated_images": false,
+    "anatomy_repainted": false
+  },
+  "frames": [
+    {
+      "view": "front",
+      "yaw": 0,
+      "target": [
+        0,
+        0,
+        0.9
+      ],
+      "ortho_scale": 2.299999952316284,
+      "resolution": [
+        720,
+        1152
+      ],
+      "path": "front.png",
+      "sha256": "93d828656439f9fd263f89f1eccd4a738c5b8b51273dc7d77d958cbb745db9bf",
+      "orange_zones": []
+    },
+    {
+      "view": "three-quarter",
+      "yaw": -35,
+      "target": [
+        0,
+        0,
+        0.9
+      ],
+      "ortho_scale": 2.299999952316284,
+      "resolution": [
+        720,
+        1152
+      ],
+      "path": "three-quarter.png",
+      "sha256": "26d74fd6c72d481daf4e46649fb2d426aaaad7b10f5d5fcb56335445c4d26c66",
+      "orange_zones": []
+    }
+  ]
+}

@@ -1,8 +1,11 @@
 # M4A — Sauvegarde et reprise après changement réseau
 
-> **Étape actuelle : [B+ Écorché Premium Puissance — une seule itération](M4A_B_PLUS_PREMIUM_PUISSANCE.md).**
-> Premium validé comme direction ; volumes et reliefs renforcés, comparés au témoin exact.
-> Arrêt pour validation visuelle. PR #11 en brouillon, sans intégration, SQLite, M4B ou fusion.
+> **Étape actuelle : [PoC local pectoraux / deltoïde — méthode insuffisante](M4A_POC_ECORCHE_PECTORAUX.md).**
+> Un seul essai visuel, non retenu ; arrêt de la modélisation, aucune V2 automatique.
+> B+ Puissance reste le guide de proportions. PR #11 en brouillon, sans intégration, SQLite, M4B ou fusion.
+
+> **Historique : [B+ Écorché Premium Puissance](M4A_B_PLUS_PREMIUM_PUISSANCE.md).**
+> Direction de proportions conservée ; véritable lecture d'écorché non validée.
 
 > **Historique : [B+ Écorché doux / premium](M4A_B_PLUS_ECORCHE.md).**
 > Premium choisi comme base ; sources et rendus préservés.

@@ -1,0 +1,337 @@
+{
+  "variant": "pectoral-poc",
+  "source_sha256": "045cfcbd39ca9c5e427c3ab0233614d3d3c3980b96e3b63a1813dfefcd3c19d5",
+  "objects": [
+    {
+      "object": "BPF.body",
+      "role": "body",
+      "vertices": 66937,
+      "triangles": 133870,
+      "components": 1,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "loose_vertices": 0,
+      "nonfinite_coordinates": 0,
+      "near_degenerate_triangles": 0,
+      "minimum_double_triangle_area_m2": 4.313573575151227e-08,
+      "euler": 2,
+      "genus": 0,
+      "signed_volume_m3": 0.0914717504448309,
+      "bounds_min": [
+        -0.47026127576828003,
+        -0.15549910068511963,
+        -2.1992520942148985e-06
+      ],
+      "bounds_max": [
+        0.4702027440071106,
+        0.17039017379283905,
+        1.8000000715255737
+      ],
+      "self_crossing_check": {
+        "crossings_by_region": {
+          "feet": 226,
+          "head": 78,
+          "hands": 0,
+          "sculptable_body": 0
+        },
+        "crossing_centers_min": [
+          -0.28396869202454883,
+          -0.11636398484309514,
+          0.010670106547574202
+        ],
+        "crossing_centers_max": [
+          0.2843409826358159,
+          -0.04017718508839607,
+          1.6896505157152812
+        ],
+        "nonadjacent_BVH_candidates": 304,
+        "proper_triangle_crossings": 304,
+        "coplanar_candidates": 0,
+        "examples": [
+          {
+            "faces": [
+              39329,
+              102963
+            ],
+            "center": [
+              0.2816227674484253,
+              -0.04037748960157236,
+              0.017861217260360718
+            ]
+          },
+          {
+            "faces": [
+              35899,
+              106575
+            ],
+            "center": [
+              0.2839844226837158,
+              -0.04271548924346765,
+              0.01797767324994008
+            ]
+          },
+          {
+            "faces": [
+              35899,
+              39320
+            ],
+            "center": [
+              0.28357640902201336,
+              -0.042437013859550156,
+              0.018074901774525642
+            ]
+          },
+          {
+            "faces": [
+              35898,
+              106406
+            ],
+            "center": [
+              0.2828775296608607,
+              -0.04096446931362152,
+              0.01895728800445795
+            ]
+          },
+          {
+            "faces": [
+              35898,
+              39325
+            ],
+            "center": [
+              0.2829859256744385,
+              -0.041299909353256226,
+              0.018739117309451103
+            ]
+          },
+          {
+            "faces": [
+              35898,
+              39320
+            ],
+            "center": [
+              0.28319961329301196,
+              -0.04196234544118246,
+              0.018366921382645767
+            ]
+          },
+          {
+            "faces": [
+              35898,
+              39323
+            ],
+            "center": [
+              0.28302235901355743,
+              -0.041943964237968125,
+              0.01826408226042986
+            ]
+          },
+          {
+            "faces": [
+              35897,
+              106406
+            ],
+            "center": [
+              0.2828730543454488,
+              -0.04109376979370912,
+              0.01807554066181183
+            ]
+          },
+          {
+            "faces": [
+              35897,
+              39327
+            ],
+            "center": [
+              0.2825759748617808,
+              -0.0412029984096686,
+              0.0178452314188083
+            ]
+          },
+          {
+            "faces": [
+              35897,
+              39326
+            ],
+            "center": [
+              0.282411461075147,
+              -0.04137991555035114,
+              0.017486664466559887
+            ]
+          },
+          {
+            "faces": [
+              39326,
+              102963
+            ],
+            "center": [
+              0.2819959769646327,
+              -0.04099618395169576,
+              0.017702126875519753
+            ]
+          },
+          {
+            "faces": [
+              102962,
+              106333
+            ],
+            "center": [
+              0.28133806586265564,
+              -0.041328717644015946,
+              0.016015838986883562
+            ]
+          },
+          {
+            "faces": [
+              102959,
+              106575
+            ],
+            "center": [
+              0.2842455009619395,
+              -0.04313673327366511,
+              0.017136973328888416
+            ]
+          },
+          {
+            "faces": [
+              102959,
+              106404
+            ],
+            "center": [
+              0.2843409826358159,
+              -0.04334076742331187,
+              0.01692802955706914
+            ]
+          },
+          {
+            "faces": [
+              102959,
+              106403
+            ],
+            "center": [
+              0.2840256442626317,
+              -0.04336551701029142,
+              0.016583016607910395
+            ]
+          },
+          {
+            "faces": [
+              102958,
+              106336
+            ],
+            "center": [
+              0.2835241307814916,
+              -0.0432654203226169,
+              0.014863498198489348
+            ]
+          },
+          {
+            "faces": [
+              102958,
+              106337
+            ],
+            "center": [
+              0.2837624301513036,
+              -0.043418956299622856,
+              0.015028800970564285
+            ]
+          },
+          {
+            "faces": [
+              35892,
+              39319
+            ],
+            "center": [
+              0.28415900468826294,
+              -0.04366161425908407,
+              0.01572073344141245
+            ]
+          },
+          {
+            "faces": [
+              35892,
+              106340
+            ],
+            "center": [
+              0.2841421167055766,
+              -0.04373934989174207,
+              0.015394389008482298
+            ]
+          },
+          {
+            "faces": [
+              35892,
+              106337
+            ],
+            "center": [
+              0.28402798374493915,
+              -0.04371089984973272,
+              0.015069848392158747
+            ]
+          }
+        ]
+      },
+      "demo_mask_attributes_present": true
+    },
+    {
+      "object": "BPF.eye.L",
+      "role": "eye",
+      "vertices": 546,
+      "triangles": 1088,
+      "components": 1,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "loose_vertices": 0,
+      "nonfinite_coordinates": 0,
+      "near_degenerate_triangles": 0,
+      "minimum_double_triangle_area_m2": 2.7371344217375174e-07,
+      "euler": 2,
+      "genus": 0,
+      "signed_volume_m3": 8.167543766087264e-06,
+      "bounds_min": [
+        0.022296324372291565,
+        -0.1063833087682724,
+        1.6692582368850708
+      ],
+      "bounds_max": [
+        0.04785488545894623,
+        -0.08093302696943283,
+        1.6948424577713013
+      ]
+    },
+    {
+      "object": "BPF.eye.R",
+      "role": "eye",
+      "vertices": 546,
+      "triangles": 1088,
+      "components": 1,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "loose_vertices": 0,
+      "nonfinite_coordinates": 0,
+      "near_degenerate_triangles": 0,
+      "minimum_double_triangle_area_m2": 2.7358149386094425e-07,
+      "euler": 2,
+      "genus": 0,
+      "signed_volume_m3": 8.16756802482061e-06,
+      "bounds_min": [
+        -0.04773806780576706,
+        -0.10640241205692291,
+        1.6692582368850708
+      ],
+      "bounds_max": [
+        -0.022172173485159874,
+        -0.08092919737100601,
+        1.6948424577713013
+      ]
+    }
+  ],
+  "continuous_body": true,
+  "separate_muscle_objects": 0,
+  "all_objects_closed_single_component_genus_zero": true,
+  "limitations": [
+    "Self-crossing audit is on the research proxy, not every high-resolution authoring triangle.",
+    "Non-coplanar crossings use segment/triangle narrow phase; coplanar candidates are reported, not classified.",
+    "Eyes are intentionally separate fitted meshes; body/eye contact is not classified as an error.",
+    "No rig, medical validation, application integration or iPhone performance test."
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "algorithm": "SHA-256",
+  "files": [
+    {
+      "path": "docs/M4A_POC_ECORCHE_PECTORAUX.md",
+      "bytes": 5213,
+      "sha256": "f706c9c4e781b796f11c7ece66ead95188ea3bf7209364895e963a3fff53b3de"
+    },
+    {
+      "path": "docs/m4a/pectoral-poc/README.md",
+      "bytes": 3277,
+      "sha256": "807f1b9657d51c8eaf16962b163046128ac83b4af9521e00ca2a6d20fe33f24b"
+    },
+    {
+      "path": "docs/m4a/pectoral-poc/after/detail.png",
+      "bytes": 1055673,
+      "sha256": "2a8c5fca15a1bd8b62f2d6589d10d48e987d853a157bcafdc41a0559993136c3"
+    },
+    {
+      "path": "docs/m4a/pectoral-poc/after/front.png",
+      "bytes": 922427,
+      "sha256": "a72f1af6a43ec320e68456b8ae8f201a41de46e9f16aaa464df2cca1cf0c6d9b"
+    },
+    {
+      "path": "docs/m4a/pectoral-poc/after/render-metadata.json",
+      "bytes": 3051,
+      "sha256": "358e2bcdc43fbbf9c4bbb3cc33a353daf5051a6ea41dc7f38d3dc0fe61882026"
+    },
+    {
+      "path": "docs/m4a/pectoral-poc/after/scene-review.blend",
+      "bytes": 4102771,
+      "sha256": "5899c4e817981a4844cde4a8fad69de4c035a9c1d52a13fa2a75797031e913fe"
+    },
+    {
+      "path": "docs/m4a/pectoral-poc/after/selection.png",
+      "bytes": 1069705,
+      "sha256": "fdff34c40966baead3be0341c2ffc3479a4bd66c5ecabd8eb9830f1d3db35b79"
+    },
+    {
+      "path": "docs/m4a/pectoral-poc/after/three-quarter.png",
+      "bytes": 916164,
+      "sha256": "3185adbabd0359026208454d0b771655fb538d6807acca8cba12f5ab9e34e93a"
+    },
+    {
+      "path": "docs/m4a/pectoral-poc/audit.json",
+      "bytes": 1033,
+      "sha256": "6d79d38cfdb31fd2332ee26e61cddb866c2c13ce1a6238536e43cbf6a1590b9e"
+    },
+    {
+      "path": "docs/m4a/pectoral-poc/before/front.png",
+      "bytes": 921728,
+      "sha256": "93d828656439f9fd263f89f1eccd4a738c5b8b51273dc7d77d958cbb745db9bf"
+    },
+    {
+      "path": "docs/m4a/pectoral-poc/before/render-metadata.json",
+      "bytes": 2131,
+      "sha256": "486cdb03104219099aae54350d006eefb074011743b70fa4cb90f9af40f3c423"
+    },
+    {
+      "path": "docs/m4a/pectoral-poc/before/three-quarter.png",
+      "bytes": 915031,
+      "sha256": "26d74fd6c72d481daf4e46649fb2d426aaaad7b10f5d5fcb56335445c4d26c66"
+    },
+    {
+      "path": "docs/m4a/pectoral-poc/comparaison-front.png",
+      "bytes": 258662,
+      "sha256": "8220af0e3e1a9428d30e63a73df441509abfbbe0f0cb40142e0b5b000fe448c4"
+    },
+    {
+      "path": "docs/m4a/pectoral-poc/comparaison-three-quarter.png",
+      "bytes": 255775,
+      "sha256": "7a0d36630e6addbf774667f049b6bdea03d447e8dbf5ba9168d3ea65c6d92870"
+    },
+    {
+      "path": "docs/m4a/pectoral-poc/experiment/construction.json",
+      "bytes": 1561,
+      "sha256": "ba32bdf37e13e6e4301ed40d8fe5ad13714665b87715437b583636461f40f9eb"
+    },
+    {
+      "path": "docs/m4a/pectoral-poc/experiment/geometry-check.json",
+      "bytes": 8317,
+      "sha256": "bdeeff105c1c89a83bb17f0d49819afd57b0a7c1150cc48d697fbd394c3ce7dc"
+    },
+    {
+      "path": "docs/m4a/pectoral-poc/experiment/model.blend",
+      "bytes": 4096741,
+      "sha256": "045cfcbd39ca9c5e427c3ab0233614d3d3c3980b96e3b63a1813dfefcd3c19d5"
+    },
+    {
+      "path": "docs/m4a/pectoral-poc/validation.json",
+      "bytes": 1298,
+      "sha256": "3ef256e1c502f1fcfcda62d91e1bb344ce0ee219b5689821b25a7a99f561838a"
+    },
+    {
+      "path": "tools/m4a/audit_pectoral_poc.py",
+      "bytes": 4080,
+      "sha256": "2200592b16e41a895770c019b4fcddde61b04962635d8d12142ef0fa11509825"
+    },
+    {
+      "path": "tools/m4a/build_pectoral_poc.py",
+      "bytes": 10644,
+      "sha256": "fb7c3a55bf753903046faefd5b50316820d07b0ad3ea5bc98366860806091331"
+    },
+    {
+      "path": "tools/m4a/finish_pectoral_poc.py",
+      "bytes": 5165,
+      "sha256": "b92b15a7b346e165e309ef585fd1823e619a95ae64aa4623473a88912a7bebf6"
+    },
+    {
+      "path": "tools/m4a/render_pectoral_poc.py",
+      "bytes": 6001,
+      "sha256": "c2a2c9434a133761f56b971b6da2459d7283f1c337c11deab13c0c195989a3f6"
+    }
+  ]
+}

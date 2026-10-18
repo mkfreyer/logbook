@@ -1,0 +1,39 @@
+{
+  "variant": "pectoral-poc",
+  "source_path": "docs/m4a/bplus-power/power/model.blend",
+  "source_sha256": "6d6f73fae7e74976563db4b60cf084474ccade208cc5705bfdd41319d7bbe85a",
+  "generator_sha256": "fb7c3a55bf753903046faefd5b50316820d07b0ad3ea5bc98366860806091331",
+  "counts": {
+    "body_triangles": 133870,
+    "body_vertices": 66937,
+    "visible_triangles": 136046,
+    "objects": 3,
+    "demo_surface_zones": 3
+  },
+  "method": "Original curved pectoral fan lofts and one wrapped three-head deltoid loft; integrated coordinates on a locally subdivided continuous body; unequal converging fascicle profiles plus scalar normal detail.",
+  "local_subdivision_passes": 1,
+  "bounded_step": 0.08589934592000005,
+  "minimum_triangle_normal_dot": 0.10905512420979491,
+  "max_displacement_m": 0.006079302218010376,
+  "outside_scope_unchanged": true,
+  "vertices_outside_scope": 50900,
+  "changed_vertices": 14984,
+  "source_geometry_license": "CC0",
+  "third_party_anatomy_loaded": false,
+  "full_segmentation": false,
+  "zone_triangles": {
+    "pectoralis.left": 4659,
+    "pectoralis.right": 4559,
+    "deltoid.right": 5600
+  },
+  "selectable_zones": {
+    "pectoralis.left": "m4a_poc_pectoral_L",
+    "pectoralis.right": "m4a_poc_pectoral_R",
+    "deltoid.right": "m4a_poc_deltoid_R"
+  },
+  "limitations": [
+    "Single experimental anatomy construction, not medically validated.",
+    "Inherited head/foot contacts remain; separate geometry and visual reviews required.",
+    "Surface masks are demonstration regions, not final anatomical partitions."
+  ]
+}
