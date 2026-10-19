@@ -1,0 +1,337 @@
+{
+  "variant": "soft",
+  "source_sha256": "69add316a8df7f55c8ef3068f6093e26292cb85f13ccd95cc4c99e7394a36c00",
+  "objects": [
+    {
+      "object": "BPF.body",
+      "role": "body",
+      "vertices": 55002,
+      "triangles": 110000,
+      "components": 1,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "loose_vertices": 0,
+      "nonfinite_coordinates": 0,
+      "near_degenerate_triangles": 0,
+      "minimum_double_triangle_area_m2": 4.313573575151227e-08,
+      "euler": 2,
+      "genus": 0,
+      "signed_volume_m3": 0.08547155303201415,
+      "bounds_min": [
+        -0.47026127576828003,
+        -0.15545713901519775,
+        -2.1992520942148985e-06
+      ],
+      "bounds_max": [
+        0.4702027440071106,
+        0.16348384320735931,
+        1.8000000715255737
+      ],
+      "self_crossing_check": {
+        "crossings_by_region": {
+          "feet": 231,
+          "head": 82,
+          "hands": 0,
+          "sculptable_body": 0
+        },
+        "crossing_centers_min": [
+          -0.28403618931770325,
+          -0.11623761430382729,
+          0.010670106547574202
+        ],
+        "crossing_centers_max": [
+          0.2843409826358159,
+          -0.0403439619888862,
+          1.689852277437846
+        ],
+        "nonadjacent_BVH_candidates": 313,
+        "proper_triangle_crossings": 313,
+        "coplanar_candidates": 0,
+        "examples": [
+          {
+            "faces": [
+              32000,
+              83557
+            ],
+            "center": [
+              0.2816227674484253,
+              -0.04037748960157236,
+              0.017861217260360718
+            ]
+          },
+          {
+            "faces": [
+              28439,
+              87117
+            ],
+            "center": [
+              0.28282442192236584,
+              -0.040996973713239036,
+              0.01892129456003507
+            ]
+          },
+          {
+            "faces": [
+              28439,
+              31995
+            ],
+            "center": [
+              0.2829328179359436,
+              -0.04133241375287374,
+              0.01870312386502822
+            ]
+          },
+          {
+            "faces": [
+              28439,
+              31990
+            ],
+            "center": [
+              0.28319961329301196,
+              -0.04196234544118246,
+              0.018366921382645767
+            ]
+          },
+          {
+            "faces": [
+              28439,
+              31993
+            ],
+            "center": [
+              0.28302235901355743,
+              -0.041943964237968125,
+              0.01826408226042986
+            ]
+          },
+          {
+            "faces": [
+              28440,
+              31990
+            ],
+            "center": [
+              0.28357640902201336,
+              -0.042437013859550156,
+              0.018074901774525642
+            ]
+          },
+          {
+            "faces": [
+              28440,
+              87289
+            ],
+            "center": [
+              0.2839844226837158,
+              -0.04271548924346765,
+              0.01797767324994008
+            ]
+          },
+          {
+            "faces": [
+              28438,
+              87117
+            ],
+            "center": [
+              0.2828199466069539,
+              -0.04112627419332663,
+              0.018039547217388947
+            ]
+          },
+          {
+            "faces": [
+              28438,
+              31998
+            ],
+            "center": [
+              0.2825759748617808,
+              -0.0412029984096686,
+              0.0178452314188083
+            ]
+          },
+          {
+            "faces": [
+              28438,
+              31997
+            ],
+            "center": [
+              0.282411461075147,
+              -0.04137991555035114,
+              0.017486664466559887
+            ]
+          },
+          {
+            "faces": [
+              31997,
+              83557
+            ],
+            "center": [
+              0.2819959769646327,
+              -0.04099618395169576,
+              0.017702126875519753
+            ]
+          },
+          {
+            "faces": [
+              83552,
+              87045
+            ],
+            "center": [
+              0.2837624301513036,
+              -0.043418956299622856,
+              0.015028800970564285
+            ]
+          },
+          {
+            "faces": [
+              83552,
+              87044
+            ],
+            "center": [
+              0.2835241307814916,
+              -0.0432654203226169,
+              0.014863498198489348
+            ]
+          },
+          {
+            "faces": [
+              28435,
+              87047
+            ],
+            "center": [
+              0.2831391493479411,
+              -0.04330816554526488,
+              0.014481188263744116
+            ]
+          },
+          {
+            "faces": [
+              28435,
+              87044
+            ],
+            "center": [
+              0.28349677721659344,
+              -0.04357362166047096,
+              0.014268806048979362
+            ]
+          },
+          {
+            "faces": [
+              83555,
+              87047
+            ],
+            "center": [
+              0.2827157477537791,
+              -0.04292301957805952,
+              0.01453871512785554
+            ]
+          },
+          {
+            "faces": [
+              83555,
+              87043
+            ],
+            "center": [
+              0.28240301211675006,
+              -0.04263206819693247,
+              0.014281483211865028
+            ]
+          },
+          {
+            "faces": [
+              83555,
+              87037
+            ],
+            "center": [
+              0.28199392557144165,
+              -0.0422005665798982,
+              0.014323852180192867
+            ]
+          },
+          {
+            "faces": [
+              28437,
+              32000
+            ],
+            "center": [
+              0.28153515855471295,
+              -0.040601348504424095,
+              0.016997769009321928
+            ]
+          },
+          {
+            "faces": [
+              28437,
+              87120
+            ],
+            "center": [
+              0.2812627702951431,
+              -0.0403439619888862,
+              0.01679522559667627
+            ]
+          }
+        ]
+      },
+      "demo_mask_attributes_present": true
+    },
+    {
+      "object": "BPF.eye.L",
+      "role": "eye",
+      "vertices": 546,
+      "triangles": 1088,
+      "components": 1,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "loose_vertices": 0,
+      "nonfinite_coordinates": 0,
+      "near_degenerate_triangles": 0,
+      "minimum_double_triangle_area_m2": 2.7371344217375174e-07,
+      "euler": 2,
+      "genus": 0,
+      "signed_volume_m3": 8.167543766087264e-06,
+      "bounds_min": [
+        0.022296324372291565,
+        -0.1063833087682724,
+        1.6692582368850708
+      ],
+      "bounds_max": [
+        0.04785488545894623,
+        -0.08093302696943283,
+        1.6948424577713013
+      ]
+    },
+    {
+      "object": "BPF.eye.R",
+      "role": "eye",
+      "vertices": 546,
+      "triangles": 1088,
+      "components": 1,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "loose_vertices": 0,
+      "nonfinite_coordinates": 0,
+      "near_degenerate_triangles": 0,
+      "minimum_double_triangle_area_m2": 2.7358149386094425e-07,
+      "euler": 2,
+      "genus": 0,
+      "signed_volume_m3": 8.16756802482061e-06,
+      "bounds_min": [
+        -0.04773806780576706,
+        -0.10640241205692291,
+        1.6692582368850708
+      ],
+      "bounds_max": [
+        -0.022172173485159874,
+        -0.08092919737100601,
+        1.6948424577713013
+      ]
+    }
+  ],
+  "continuous_body": true,
+  "separate_muscle_objects": 0,
+  "all_objects_closed_single_component_genus_zero": true,
+  "limitations": [
+    "Self-crossing audit is on the research proxy, not every high-resolution authoring triangle.",
+    "Non-coplanar crossings use segment/triangle narrow phase; coplanar candidates are reported, not classified.",
+    "Eyes are intentionally separate fitted meshes; body/eye contact is not classified as an error.",
+    "No rig, medical validation, application integration or iPhone performance test."
+  ]
+}

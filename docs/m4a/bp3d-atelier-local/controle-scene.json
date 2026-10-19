@@ -1,0 +1,453 @@
+{
+  "file_sha256": "d662e52c707e818c73e4f846d212b1a8ffd2d96de57940ee2adadcb3e26fadaa",
+  "bundle_sha256": "f1a8c79625c15137c5d87cbe8f80168d37ade1d49cb6adeffa2e7774c9d7b2ae",
+  "scope": "Editing preparation only, not a visually approved prototype",
+  "source_originals_preserved": 15,
+  "work_meshes": [
+    {
+      "element_id": "FJ1447M",
+      "muscle_id": "pectoralis-major-left",
+      "fma": "FMA34691",
+      "source_vertices": 1495,
+      "editable_vertices": 949,
+      "triangles": 1846,
+      "source_OBJ_and_raw_mesh_preserved": true,
+      "work_positions_equal_normalized_source": true,
+      "components": 13,
+      "component_vertices": [
+        906,
+        6,
+        6,
+        4,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_triangles": 0,
+      "signed_volume_scene_units_cubed": 5.418000582773457e-05,
+      "bounds_min": [
+        0.028328243643045425,
+        -0.04640433192253113,
+        1.3740959167480469
+      ],
+      "bounds_max": [
+        0.20403724908828735,
+        0.01964665949344635,
+        1.4802342653274536
+      ],
+      "centroid": [
+        0.12460947036743164,
+        -0.015204451978206635,
+        1.4419505596160889
+      ]
+    },
+    {
+      "element_id": "FJ1464M",
+      "muscle_id": "pectoralis-major-left",
+      "fma": "FMA79980",
+      "source_vertices": 5466,
+      "editable_vertices": 3565,
+      "triangles": 7114,
+      "source_OBJ_and_raw_mesh_preserved": true,
+      "work_positions_equal_normalized_source": true,
+      "components": 7,
+      "component_vertices": [
+        3147,
+        402,
+        4,
+        3,
+        3,
+        3,
+        3
+      ],
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_triangles": 0,
+      "signed_volume_scene_units_cubed": 0.0004555466335584031,
+      "bounds_min": [
+        0.005718388129025698,
+        -0.12413905560970306,
+        1.2757982015609741
+      ],
+      "bounds_max": [
+        0.19732287526130676,
+        0.020693495869636536,
+        1.4570993185043335
+      ],
+      "centroid": [
+        0.08948169648647308,
+        -0.06927498430013657,
+        1.3816651105880737
+      ]
+    },
+    {
+      "element_id": "FJ1446M",
+      "muscle_id": "pectoralis-major-left",
+      "fma": "FMA45875",
+      "source_vertices": 1019,
+      "editable_vertices": 774,
+      "triangles": 1536,
+      "source_OBJ_and_raw_mesh_preserved": true,
+      "work_positions_equal_normalized_source": true,
+      "components": 3,
+      "component_vertices": [
+        768,
+        3,
+        3
+      ],
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_triangles": 0,
+      "signed_volume_scene_units_cubed": 2.879961125160416e-05,
+      "bounds_min": [
+        0.05092529207468033,
+        -0.11814594268798828,
+        1.2382901906967163
+      ],
+      "bounds_max": [
+        0.19004526734352112,
+        0.019901670515537262,
+        1.4195597171783447
+      ],
+      "centroid": [
+        0.11973922699689865,
+        -0.06526647508144379,
+        1.3208262920379639
+      ]
+    },
+    {
+      "element_id": "FJ1447",
+      "muscle_id": "pectoralis-major-right",
+      "fma": "FMA34690",
+      "source_vertices": 1492,
+      "editable_vertices": 949,
+      "triangles": 1846,
+      "source_OBJ_and_raw_mesh_preserved": true,
+      "work_positions_equal_normalized_source": true,
+      "components": 13,
+      "component_vertices": [
+        906,
+        6,
+        6,
+        4,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_triangles": 0,
+      "signed_volume_scene_units_cubed": 5.4183833170144814e-05,
+      "bounds_min": [
+        -0.20268267393112183,
+        -0.04640433192253113,
+        1.3740959167480469
+      ],
+      "bounds_max": [
+        -0.0269736647605896,
+        0.01964665949344635,
+        1.4802342653274536
+      ],
+      "centroid": [
+        -0.12325486540794373,
+        -0.015204327180981636,
+        1.441950798034668
+      ]
+    },
+    {
+      "element_id": "FJ1464",
+      "muscle_id": "pectoralis-major-right",
+      "fma": "FMA79979",
+      "source_vertices": 5480,
+      "editable_vertices": 3565,
+      "triangles": 7114,
+      "source_OBJ_and_raw_mesh_preserved": true,
+      "work_positions_equal_normalized_source": true,
+      "components": 7,
+      "component_vertices": [
+        3147,
+        402,
+        4,
+        3,
+        3,
+        3,
+        3
+      ],
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_triangles": 0,
+      "signed_volume_scene_units_cubed": 0.00045555229573020277,
+      "bounds_min": [
+        -0.19596830010414124,
+        -0.12413905560970306,
+        1.2757982015609741
+      ],
+      "bounds_max": [
+        -0.004363811109215021,
+        0.020693495869636536,
+        1.4570993185043335
+      ],
+      "centroid": [
+        -0.0881272479891777,
+        -0.06927509605884552,
+        1.3816667795181274
+      ]
+    },
+    {
+      "element_id": "FJ1446",
+      "muscle_id": "pectoralis-major-right",
+      "fma": "FMA45874",
+      "source_vertices": 1019,
+      "editable_vertices": 774,
+      "triangles": 1536,
+      "source_OBJ_and_raw_mesh_preserved": true,
+      "work_positions_equal_normalized_source": true,
+      "components": 3,
+      "component_vertices": [
+        768,
+        3,
+        3
+      ],
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_triangles": 0,
+      "signed_volume_scene_units_cubed": 2.879953604406962e-05,
+      "bounds_min": [
+        -0.1886906921863556,
+        -0.11814594268798828,
+        1.2382901906967163
+      ],
+      "bounds_max": [
+        -0.0495707169175148,
+        0.019901670515537262,
+        1.4195597171783447
+      ],
+      "centroid": [
+        -0.11838466674089432,
+        -0.06526646018028259,
+        1.3208270072937012
+      ]
+    },
+    {
+      "element_id": "FJ1468M",
+      "muscle_id": "deltoid-left",
+      "fma": "FMA34681",
+      "source_vertices": 2604,
+      "editable_vertices": 1053,
+      "triangles": 2206,
+      "source_OBJ_and_raw_mesh_preserved": true,
+      "work_positions_equal_normalized_source": true,
+      "components": 1,
+      "component_vertices": [
+        1053
+      ],
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_triangles": 0,
+      "signed_volume_scene_units_cubed": 6.308423020205719e-05,
+      "bounds_min": [
+        0.09337962418794632,
+        -0.02152635157108307,
+        1.341999888420105
+      ],
+      "bounds_max": [
+        0.21383246779441833,
+        0.02684342861175537,
+        1.5006370544433594
+      ],
+      "centroid": [
+        0.1547357141971588,
+        0.0066018253564834595,
+        1.4597431421279907
+      ]
+    },
+    {
+      "element_id": "FJ1467M",
+      "muscle_id": "deltoid-left",
+      "fma": "FMA34683",
+      "source_vertices": 918,
+      "editable_vertices": 656,
+      "triangles": 1300,
+      "source_OBJ_and_raw_mesh_preserved": true,
+      "work_positions_equal_normalized_source": true,
+      "components": 4,
+      "component_vertices": [
+        647,
+        3,
+        3,
+        3
+      ],
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_triangles": 0,
+      "signed_volume_scene_units_cubed": 0.00010688200403933607,
+      "bounds_min": [
+        0.15412841737270355,
+        -0.0026896223425865173,
+        1.3432979583740234
+      ],
+      "bounds_max": [
+        0.2385471612215042,
+        0.0627373605966568,
+        1.494178056716919
+      ],
+      "centroid": [
+        0.1991935521364212,
+        0.032950129359960556,
+        1.44474196434021
+      ]
+    },
+    {
+      "element_id": "FJ1513M",
+      "muscle_id": "deltoid-left",
+      "fma": "FMA34685",
+      "source_vertices": 1678,
+      "editable_vertices": 982,
+      "triangles": 1900,
+      "source_OBJ_and_raw_mesh_preserved": true,
+      "work_positions_equal_normalized_source": true,
+      "components": 20,
+      "component_vertices": [
+        923,
+        4,
+        4,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_triangles": 0,
+      "signed_volume_scene_units_cubed": 0.00019531649701227502,
+      "bounds_min": [
+        0.08739079535007477,
+        0.02252231538295746,
+        1.325145959854126
+      ],
+      "bounds_max": [
+        0.23011283576488495,
+        0.1026342585682869,
+        1.484358787536621
+      ],
+      "centroid": [
+        0.17135858535766602,
+        0.06603042781352997,
+        1.4242180585861206
+      ]
+    }
+  ],
+  "total_work_triangles": 26398,
+  "selection_demonstrations": [
+    {
+      "scene": "02_DEMO_PEC_G",
+      "muscle_id": "pectoralis-major-left",
+      "whole_portions_orange": [
+        "FJ1447M",
+        "FJ1464M",
+        "FJ1446M"
+      ],
+      "other_portions_blue": 6,
+      "projected_face_mask": false
+    },
+    {
+      "scene": "03_DEMO_PEC_D",
+      "muscle_id": "pectoralis-major-right",
+      "whole_portions_orange": [
+        "FJ1447",
+        "FJ1464",
+        "FJ1446"
+      ],
+      "other_portions_blue": 6,
+      "projected_face_mask": false
+    },
+    {
+      "scene": "04_DEMO_DELTOIDE_G",
+      "muscle_id": "deltoid-left",
+      "whole_portions_orange": [
+        "FJ1468M",
+        "FJ1467M",
+        "FJ1513M"
+      ],
+      "other_portions_blue": 6,
+      "projected_face_mask": false
+    }
+  ],
+  "contact_candidates_between_source_portions": [
+    {
+      "a": "FJ1447M",
+      "b": "FJ1464M",
+      "BVH_candidates": 445
+    },
+    {
+      "a": "FJ1464M",
+      "b": "FJ1446M",
+      "BVH_candidates": 571
+    },
+    {
+      "a": "FJ1447",
+      "b": "FJ1464",
+      "BVH_candidates": 447
+    },
+    {
+      "a": "FJ1464",
+      "b": "FJ1446",
+      "BVH_candidates": 567
+    },
+    {
+      "a": "FJ1468M",
+      "b": "FJ1467M",
+      "BVH_candidates": 108
+    },
+    {
+      "a": "FJ1467M",
+      "b": "FJ1513M",
+      "BVH_candidates": 167
+    }
+  ],
+  "contact_interpretation": "BVH candidates are not a narrow-phase anatomical collision verdict. Contacts may be intentional overlaps; inspect manually.",
+  "raw_source_topology_untouched": true,
+  "each_work_object_exact_weld_only": true,
+  "work_and_source_datablocks_independent": true,
+  "demos_share_editable_geometry": true,
+  "all_empty_shape_keys_equal_basis": true,
+  "automatic_sculpt_variants": 0,
+  "modifiers_or_voxel_union": 0,
+  "startup_scripts_or_drivers": 0,
+  "sculpture_performed": false,
+  "visual_validation": false,
+  "attachment_and_fiber_direction_validation": "Not established by identity tables. Manual review required.",
+  "limitations": [
+    "Only nine muscle portions and six bone references; no complete torso/body or target athletic reconstruction.",
+    "Signed volumes are scene-unit diagnostics, not physical measurements or training volume.",
+    "Source pose and all component intersections are preserved, not medically or artistically corrected.",
+    "No touch engine, production segmentation, rig, glTF export or iPhone performance validation."
+  ]
+}

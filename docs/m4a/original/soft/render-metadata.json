@@ -1,0 +1,133 @@
+{
+  "source_sha256": "27b5b6c9c7400473f26f4935e53dd1a29186f0bf417f0811df0a0aca42223d80",
+  "variant": "soft",
+  "protocol": {
+    "blender": "4.3.2",
+    "engine": "CYCLES_CPU",
+    "samples": 128,
+    "resolution": [
+      800,
+      1280
+    ],
+    "seed": 0,
+    "denoising": false,
+    "orthographic_scale": 2.15,
+    "camera_target": [
+      0,
+      0,
+      0.9
+    ],
+    "lights": [
+      [
+        "Key",
+        [
+          -2,
+          -2.5,
+          3.2
+        ],
+        230,
+        3,
+        [
+          0.81,
+          0.88,
+          1
+        ]
+      ],
+      [
+        "Fill",
+        [
+          2.6,
+          -1.7,
+          1.6
+        ],
+        110,
+        2.5,
+        [
+          0.56,
+          0.69,
+          1
+        ]
+      ],
+      [
+        "Rim",
+        [
+          1.6,
+          2.3,
+          2.8
+        ],
+        310,
+        2,
+        [
+          0.58,
+          0.72,
+          1
+        ]
+      ],
+      [
+        "Back fill",
+        [
+          -2,
+          2,
+          1.3
+        ],
+        90,
+        2.5,
+        [
+          0.75,
+          0.82,
+          1
+        ]
+      ]
+    ],
+    "satin": {
+      "base_color_linear": [
+        0.21,
+        0.28,
+        0.4
+      ],
+      "roughness": 0.34,
+      "metallic": 0.2
+    },
+    "source_geometry_changed_by_renderer": false,
+    "AI_generated_images": false
+  },
+  "orange_zone": "pectoralis.left",
+  "frames": [
+    {
+      "view": "front",
+      "yaw_degrees": 0,
+      "path": "front.png",
+      "sha256": "e777a1b29fcf3f11fe891a126aadc96960f8cfb17a1a29837ac609cf09b50db5"
+    },
+    {
+      "view": "three-quarter",
+      "yaw_degrees": 35,
+      "path": "three-quarter.png",
+      "sha256": "e904563ce354de2b9a9f6a05b001f3a66772e75cfac8b5d45e585f1610e973e5"
+    },
+    {
+      "view": "back",
+      "yaw_degrees": 180,
+      "path": "back.png",
+      "sha256": "56726003d06b2bb2622773657ba00045a4bd043c51a50a5c15cd0ae61dbed128"
+    },
+    {
+      "view": "side",
+      "yaw_degrees": 90,
+      "path": "side.png",
+      "sha256": "bfeb6725019eaeeb19cdeec24854e6562e3d0fc57426a1d6b396ebf914271fbe"
+    },
+    {
+      "view": "selection",
+      "yaw_degrees": 35,
+      "path": "selection.png",
+      "sha256": "6f7e4fd34272309a981d36c93be3c6fa62d03deb76ba0f2417feeadc3bb1bab8"
+    }
+  ],
+  "review_scene": {
+    "path": "scene-review.blend",
+    "sha256": "9d4ed8dbd21be367d67c8906976f5293ea21bd571796492c2706d13cf91a9753",
+    "neutral_materials_restored": true,
+    "camera_view": "three-quarter"
+  }
+}

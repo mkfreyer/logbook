@@ -1,0 +1,141 @@
+{
+  "variant": "defined",
+  "source_sha256": "4989868d00c575845576d75d2e9fd6f6da6b505907b71fdd122667d29247726d",
+  "protocol": {
+    "renderer_sha256": "45e42b645fe14e39d484ad53cbfc9d1587440fcbb776868c3afccd8e4aba01f7",
+    "blender": "4.3.2",
+    "engine": "CYCLES_CPU",
+    "samples": 96,
+    "resolution": [
+      720,
+      1152
+    ],
+    "denoising": false,
+    "seed": 0,
+    "ortho_scale": 2.3,
+    "camera_target": [
+      0,
+      0,
+      0.9
+    ],
+    "lights": [
+      [
+        "Key",
+        [
+          -2,
+          -2.5,
+          3.2
+        ],
+        230,
+        3,
+        [
+          0.81,
+          0.88,
+          1
+        ]
+      ],
+      [
+        "Fill",
+        [
+          2.6,
+          -1.7,
+          1.6
+        ],
+        110,
+        2.5,
+        [
+          0.56,
+          0.69,
+          1
+        ]
+      ],
+      [
+        "Rim",
+        [
+          1.6,
+          2.3,
+          2.8
+        ],
+        310,
+        2,
+        [
+          0.58,
+          0.72,
+          1
+        ]
+      ],
+      [
+        "Back fill",
+        [
+          -2,
+          2,
+          1.3
+        ],
+        90,
+        2.5,
+        [
+          0.75,
+          0.82,
+          1
+        ]
+      ]
+    ],
+    "material": {
+      "base_color_linear": [
+        0.19,
+        0.28,
+        0.42
+      ],
+      "roughness": 0.37,
+      "metallic": 0.12,
+      "coat": 0.08
+    },
+    "geometry_changed_by_renderer": false,
+    "AI_generated_images": false
+  },
+  "selection": {
+    "mode": "Integer face zone, provisionally transferred from retained anatomical surfaces; shader color only",
+    "attribute": "m4a_fitness_zone",
+    "selected_id": 1,
+    "logical_regions": [
+      "pectoraux.left"
+    ],
+    "separate_muscle_objects": 0,
+    "application_interaction": false
+  },
+  "frames": [
+    {
+      "view": "front",
+      "yaw": 0,
+      "path": "front.png",
+      "sha256": "b4f1fc19905aab88b744c8e18a0c982b824d7605d03c9b05bda421ce834d6a97",
+      "selection_enabled": false
+    },
+    {
+      "view": "three-quarter",
+      "yaw": -35,
+      "path": "three-quarter.png",
+      "sha256": "348df056c7388ecf3d6419e9ac94b46c6b22554e7ef65c720ba679ffb8606a90",
+      "selection_enabled": false
+    },
+    {
+      "view": "back",
+      "yaw": 180,
+      "path": "back.png",
+      "sha256": "b5b470f50a3846d19e76288f089ae738640702dac6a6392e5fee7bc78bc9c157",
+      "selection_enabled": false
+    },
+    {
+      "view": "selection",
+      "yaw": -35,
+      "path": "selection.png",
+      "sha256": "1dc299095544d0ff7daea12f04e1667ed1997ed3ba2517cb971d117b6ce0500b",
+      "selection_enabled": true
+    }
+  ],
+  "review_scene": {
+    "path": "scene-review.blend",
+    "sha256": "4abdb286bc82e80e1fb321ebc162db45c9f72d525e2c2d059061253bb7df5118",
+    "selection_disabled": true
+  }
+}

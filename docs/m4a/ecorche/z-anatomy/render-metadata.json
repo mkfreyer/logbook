@@ -1,0 +1,68 @@
+{
+  "candidate": "z-anatomy",
+  "counts": {
+    "objects": 457,
+    "vertices": 974393,
+    "triangles": 1948068
+  },
+  "prepared_sha256": "80f005f64b5d6d18007bbcd4956a0807b980c3c8b793820ed79c858b24605c5c",
+  "protocol": {
+    "blender": "4.3.2",
+    "engine": "CYCLES_CPU",
+    "samples": 128,
+    "resolution": [
+      600,
+      1000
+    ],
+    "denoising": false,
+    "orthographic_scale": 2.3,
+    "camera_target": [
+      0,
+      0,
+      0.9
+    ],
+    "material": {
+      "base_color_linear": [
+        0.23,
+        0.3,
+        0.41
+      ],
+      "roughness": 0.37,
+      "metallic": 0.12
+    },
+    "source_textures_vertex_colors_replaced": true,
+    "subdivision": 0,
+    "anatomical_geometry_synthesized": false
+  },
+  "orange_selection": [
+    "Clavicular head of pectoralis major muscle.l",
+    "Sternocostal head of pectoralis major muscle.l",
+    "(Abdominal part of pectoralis major muscle).l"
+  ],
+  "frames": [
+    {
+      "view": "front",
+      "yaw_degrees": 0,
+      "path": "front.png",
+      "sha256": "95c61e1e028a647be4b89171ce66b5240d0fb72f5ae49ba17f374548f3d0de24"
+    },
+    {
+      "view": "three-quarter",
+      "yaw_degrees": -35,
+      "path": "three-quarter.png",
+      "sha256": "accde791332a6a90a4a56acd57ec5fab3f93882126b6aef99cec3c94d7a57d50"
+    },
+    {
+      "view": "back",
+      "yaw_degrees": 180,
+      "path": "back.png",
+      "sha256": "d94933e494464f3d9124b40bf28e64c55096b8cae32b1930875decd71c640b5c"
+    },
+    {
+      "view": "selection",
+      "yaw_degrees": -35,
+      "path": "selection.png",
+      "sha256": "40263dfb8da99264ec5acb23daf4e3609fb06e4fb4ed7e269eb49afe3b77c4c9"
+    }
+  ]
+}

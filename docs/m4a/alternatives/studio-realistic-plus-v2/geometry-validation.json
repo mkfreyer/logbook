@@ -1,0 +1,97 @@
+{
+  "source_original_basis_preserved": true,
+  "base_topology_and_material_indices_identical": true,
+  "uv_layers_identical": true,
+  "face_sets_identical": true,
+  "eyes_geometry_and_transforms_identical": [
+    true,
+    true
+  ],
+  "source_and_variant_at_strength_zero_identical_evaluated_geometry": true,
+  "base_vertices": 10582,
+  "base_faces": 10590,
+  "base_triangles": 21160,
+  "evaluated_vertices": 677442,
+  "evaluated_triangles": 1354880,
+  "original_boundary_edges": 0,
+  "original_nonmanifold_edges_over_two_faces": 0,
+  "topology_changes": 0,
+  "new_degenerate_triangles_threshold_1e_12": 0,
+  "triangle_normal_reversals_over_90_degrees": 2,
+  "base_edge_length_ratio_min": 0.9672598242759705,
+  "base_edge_length_ratio_max": 1.0882818698883057,
+  "maximum_evaluated_displacement_at_height_1_8": 0.009806794114410877,
+  "fixed_landmark_max_displacements": {
+    "head": 6.327481401058321e-07,
+    "feet": 0.0,
+    "hands_and_wrists": 0.0
+  },
+  "fixed_landmark_tolerance": 1e-06,
+  "lower_leg_falloff_max_below_z_0_49": 6.288415170274675e-05,
+  "source_evaluated_position_sha256": "47105936eeedbeee0844225e3268d0843b668bfcfd7ebbecc180881e07493f82",
+  "variant_evaluated_position_sha256": "1bfac0f06b171bb93bbea6d981a4f040401711a86214e5f871bb3ce10fb0704a",
+  "shape_key_position_sha256": "3736fa727ee09c710632aef7b76a2874a50aa3ba96a639c30e93865943cd634a",
+  "sections": [
+    {
+      "region": "upper_chest",
+      "sampled_vertices": 13097,
+      "source_space_width_before": 0.3566964268684387,
+      "source_space_width_after": 0.3700396418571472,
+      "source_space_depth_before": 0.2692264914512634,
+      "source_space_depth_after": 0.2755536437034607
+    },
+    {
+      "region": "deltoids",
+      "sampled_vertices": 8778,
+      "source_space_width_before": 0.5240991711616516,
+      "source_space_width_after": 0.5350247621536255,
+      "source_space_depth_before": 0.19764479994773865,
+      "source_space_depth_after": 0.20601783692836761
+    },
+    {
+      "region": "upper_arms",
+      "sampled_vertices": 16188,
+      "source_space_width_before": 0.638459324836731,
+      "source_space_width_after": 0.640873908996582,
+      "source_space_depth_before": 0.13409370183944702,
+      "source_space_depth_after": 0.14113807678222656
+    },
+    {
+      "region": "back_torso",
+      "sampled_vertices": 16546,
+      "source_space_width_before": 0.37555378675460815,
+      "source_space_width_after": 0.3880157470703125,
+      "source_space_depth_before": 0.2693778872489929,
+      "source_space_depth_after": 0.27556002140045166
+    },
+    {
+      "region": "quadriceps",
+      "sampled_vertices": 9232,
+      "source_space_width_before": 0.3849741816520691,
+      "source_space_width_after": 0.3871596157550812,
+      "source_space_depth_before": 0.2052992284297943,
+      "source_space_depth_after": 0.20887699723243713
+    }
+  ],
+  "limits": [
+    "No anatomical segmentation or medical validation",
+    "No exhaustive self-intersection or rig deformation test",
+    "No mobile GPU, FPS, GLB or interactive integration test"
+  ],
+  "source_comparison_shape_key": "B+ moderate athletic",
+  "variant_comparison_shape_key": "B+ V2 premium volumes",
+  "source_shape_keys_preserved": true,
+  "evaluated_face_loop_topology_identical": true,
+  "native_triangulation_triangle_records_changed": 8,
+  "normal_comparison_uses_common_source_diagonals": true,
+  "variant_native_degenerate_triangles_threshold_1e_12": 0,
+  "evaluated_whole_face_normal_reversals": 0,
+  "source_native_triangles_opposed_to_own_face_normal": 7,
+  "variant_native_triangles_opposed_to_own_face_normal": 6,
+  "new_native_problematic_faces": [],
+  "resolved_native_problematic_faces": [
+    582586
+  ],
+  "orientation_mode": "native-faces",
+  "orientation_acceptance": "unchanged face-loop topology, no reversed whole face, no new native problematic face; common-diagonal triangle changes are recorded separately"
+}

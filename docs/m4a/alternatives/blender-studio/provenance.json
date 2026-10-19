@@ -1,0 +1,56 @@
+{
+  "acquired_at_utc": "2026-10-18T06:20:59.699825+00:00",
+  "url": "https://download.blender.org/demo/asset-bundles/human-base-meshes/human-base-meshes-bundle-v1.4.1.zip",
+  "bytes": 50643039,
+  "sha256": "811f43accbb31a88266d932f8f5563b2d13586fca0ba2693aad1f5fe582b3515",
+  "zip_crc_all_entries_verified": true,
+  "source_blend_sha256": "3c121505651140ceb4d69fd1d8923f7788ffadd81672f5be14845a5f2c75c137",
+  "network": {
+    "environment_spec_revision": "2",
+    "environment_observed_spec_revision": "2",
+    "environment_connectivity": "connected",
+    "environment_policy_reported_state": "unknown",
+    "executor_policy_version": 1,
+    "executor_policy_contains_download_blender_org": true,
+    "http_root_test": 200,
+    "download_success": true,
+    "proxy_used": true,
+    "tls_verification": true
+  },
+  "checkpoint_restoration": {
+    "commit": "1da5ba6cee8edc93c5700184cad6e4f54c838a45",
+    "verified_files": 3606,
+    "verified_uncompressed_bytes": 97888638,
+    "archive_sha256": "d7d423d5f27781af5b5ea581de180e04b721cb92b6797eb658af0131fb9e6947"
+  },
+  "selected_collections": [
+    "Body Male - Realistic",
+    "Body Male - Stylized"
+  ],
+  "assets_license": "CC0 per embedded README and each selected collection.asset_data.license",
+  "embedded_other_license": "A text block named License concerns the Rain Rig (CC BY 4.0). No rig or Rain asset is used in this comparison. Full statements preserved in inventory.json.",
+  "application_integrated": false,
+  "reference_image_available_in_resumed_thread": false,
+  "http_root_get_test": {
+    "status": 200,
+    "bytes": 9199,
+    "tls_verify_result": 0
+  },
+  "inventory_reproduced_identically": true,
+  "validation": {
+    "inventory_reproduction_identical": true,
+    "checkpoint_reverified_after_work": true,
+    "new_renders_visually_inspected": 6,
+    "total_comparison_frames": 9,
+    "mpfb_original_pngs_unchanged": true,
+    "frame_resolution": [
+      900,
+      1400
+    ],
+    "contact_sheet_pixel_reproduction_identical": true,
+    "application_tests_run_locally": false,
+    "application_files_changed": false,
+    "sqlite_operations_performed": false,
+    "user_model_choice_pending": true
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-18",
+  "variants": {
+    "soft": {
+      "triangles": 80850,
+      "visible_vertices": 44918,
+      "selectable_continuous_zones": 22,
+      "source_sha256": "27b5b6c9c7400473f26f4935e53dd1a29186f0bf417f0811df0a0aca42223d80",
+      "requested_seam_depth_m": 0.00065,
+      "effective_seam_depth_m": 0.00065
+    },
+    "defined": {
+      "triangles": 81036,
+      "visible_vertices": 45092,
+      "selectable_continuous_zones": 22,
+      "source_sha256": "70f08420aeb8832bcbc5c107e2fcecd7a7774dc7cca04e87982217f58ffd9709",
+      "requested_seam_depth_m": 0.00135,
+      "effective_seam_depth_m": 0.0003375
+    }
+  },
+  "original_geometry_without_external_asset": true,
+  "render_protocol_identical": true,
+  "blender_renders": 10,
+  "comparison_sheets": 7,
+  "PNG_dimensions": [
+    800,
+    1280
+  ],
+  "source_render_review_hashes_verified": true,
+  "review_geometry_normals_and_zone_attributes_verified": true,
+  "same_shared_borders_no_lost_or_duplicated_source_face": true,
+  "python_AST_and_JSON_checked": true,
+  "preservation": {
+    "baseline": "ac427a41954d8a1d5ae899b0c4483728fabe83c6",
+    "historical_files_verified_byte_identical": 129
+  },
+  "scope": "M4A authoring and visual validation only. No runtime, engine, SQLite, dependencies, M4B, purchases, merge or Astra Ultra. No iPhone benchmark or medical certification."
+}

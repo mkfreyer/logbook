@@ -1,0 +1,143 @@
+{
+  "candidate": "studio-realistic-plus-v2",
+  "source_blend_sha256": "2d256e5efea5e294cb21ce564e32f5bc97ae942968cda0b266f42956afa9f2d7",
+  "source_objects": [
+    {
+      "object": "GEO-body_male_realistic",
+      "vertices": 677442,
+      "polygons": 677440,
+      "triangles": 1354880,
+      "base_mesh": {
+        "vertices": 10582,
+        "polygons": 10590,
+        "triangles": 21160
+      },
+      "source_modifiers": [
+        {
+          "name": "Multires",
+          "type": "MULTIRES",
+          "show_viewport": true,
+          "show_render": true,
+          "levels": 3,
+          "render_levels": 3,
+          "sculpt_levels": 3,
+          "total_levels": 3
+        }
+      ],
+      "source_variant": "B+ V2 premium volumes",
+      "source_shape_keys": [
+        {
+          "name": "B original — unchanged basis",
+          "value": 0.0
+        },
+        {
+          "name": "B+ moderate athletic",
+          "value": 1.0
+        },
+        {
+          "name": "B+ V2 premium volumes",
+          "value": 1.0
+        }
+      ],
+      "vertex_group_names": []
+    },
+    {
+      "object": "GEO-body_male_realistic.eye.L",
+      "vertices": 546,
+      "polygons": 544,
+      "triangles": 1088,
+      "base_mesh": {
+        "vertices": 546,
+        "polygons": 544,
+        "triangles": 1088
+      },
+      "source_modifiers": [],
+      "source_variant": null,
+      "source_shape_keys": [],
+      "vertex_group_names": []
+    },
+    {
+      "object": "GEO-body_male_realistic.eye.R",
+      "vertices": 546,
+      "polygons": 544,
+      "triangles": 1088,
+      "base_mesh": {
+        "vertices": 546,
+        "polygons": 544,
+        "triangles": 1088
+      },
+      "source_modifiers": [],
+      "source_variant": null,
+      "source_shape_keys": [],
+      "vertex_group_names": []
+    }
+  ],
+  "source_bounds": {
+    "min": [
+      -2.705880880355835,
+      -0.17982545495033264,
+      -0.005640706978738308
+    ],
+    "max": [
+      -1.8228728771209717,
+      0.12128560245037079,
+      1.6844427585601807
+    ]
+  },
+  "transform": {
+    "rotation_z": 0,
+    "center": [
+      -2.2643768787384033,
+      -0.033877987414598465,
+      -0.005640706978738308
+    ],
+    "uniform_scale": 1.06503615750482
+  },
+  "protocol": {
+    "blender": "4.3.2",
+    "render_engine": "CYCLES_CPU",
+    "samples": 128,
+    "resolution": [
+      900,
+      1400
+    ],
+    "subdivision": 0,
+    "denoising": false,
+    "orthographic_scale": 2.3,
+    "material": {
+      "base_color_linear": [
+        0.23,
+        0.3,
+        0.41
+      ],
+      "roughness": 0.37,
+      "metallic": 0.12
+    },
+    "source_materials_and_textures_replaced": true,
+    "sculpting_or_geometry_invention": true,
+    "geometry_modified_in_renderer": false
+  },
+  "frames": [
+    {
+      "view": "front",
+      "yaw_degrees": 0,
+      "path": "front.png"
+    },
+    {
+      "view": "three-quarter",
+      "yaw_degrees": -35,
+      "path": "three-quarter.png"
+    },
+    {
+      "view": "back",
+      "yaw_degrees": 180,
+      "path": "back.png"
+    },
+    {
+      "view": "side",
+      "yaw_degrees": 90,
+      "path": "side.png"
+    }
+  ],
+  "normalization_reference_sha256": "aeb3e33df6f798b6639ef10d300a27ae09ea0525ef5dd8c236e8bc5b1b72075a"
+}

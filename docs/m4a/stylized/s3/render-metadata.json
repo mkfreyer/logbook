@@ -1,0 +1,160 @@
+{
+  "source_sha256": "5c1a608de5f89ecff4036bf892bdcc0677b4a15cb8638a788f609554037753df",
+  "variant": "s3",
+  "protocol": {
+    "renderer_sha256": "7564012bc10330bd24b6c3a76e2eb5a3785545412ccb3d9053757cb15f357c36",
+    "blender": "4.3.2",
+    "engine": "CYCLES_CPU",
+    "samples": 96,
+    "resolution": [
+      720,
+      1152
+    ],
+    "seed": 0,
+    "denoising": false,
+    "orthographic_scale": 2.15,
+    "camera_target": [
+      0,
+      0,
+      0.9
+    ],
+    "lights": [
+      [
+        "Key",
+        [
+          -2,
+          -2.5,
+          3.2
+        ],
+        230,
+        2.2,
+        [
+          0.81,
+          0.88,
+          1
+        ]
+      ],
+      [
+        "Fill",
+        [
+          2.6,
+          -1.7,
+          1.6
+        ],
+        85,
+        2.5,
+        [
+          0.56,
+          0.69,
+          1
+        ]
+      ],
+      [
+        "Rim",
+        [
+          1.6,
+          2.3,
+          2.8
+        ],
+        310,
+        2,
+        [
+          0.58,
+          0.72,
+          1
+        ]
+      ],
+      [
+        "Back fill",
+        [
+          -2,
+          2,
+          1.3
+        ],
+        90,
+        2.5,
+        [
+          0.75,
+          0.82,
+          1
+        ]
+      ]
+    ],
+    "satin": {
+      "base_color_linear": [
+        0.17,
+        0.245,
+        0.38
+      ],
+      "roughness": 0.42,
+      "metallic": 0.18,
+      "coat": 0.1,
+      "subsurface_weight": 0,
+      "subsurface_radius": [
+        0.8,
+        0.55,
+        0.35
+      ],
+      "subsurface_scale_m": 0.006,
+      "transmission_weight": 0,
+      "ior": 1.44
+    },
+    "source_geometry_changed_by_renderer": false,
+    "license": "CC-BY-SA-4.0",
+    "AI_generated_images": false
+  },
+  "orange_zones": [
+    "pectoralis.left",
+    "pectoralis.right"
+  ],
+  "frames": [
+    {
+      "view": "front",
+      "yaw_degrees": 0,
+      "path": "front.png",
+      "sha256": "4379bf0ebd00007a28417ff1045c405e1a1d601bb0d494b199fba55873353e6d",
+      "orange_objects": []
+    },
+    {
+      "view": "three-quarter",
+      "yaw_degrees": 35,
+      "path": "three-quarter.png",
+      "sha256": "aad9b4b485b7566d7a8bdc0b4b5ca9903311df1578b706b379eacaf91f34fd91",
+      "orange_objects": []
+    },
+    {
+      "view": "back",
+      "yaw_degrees": 180,
+      "path": "back.png",
+      "sha256": "be4d8957fd03a863c6170a5e714ebebece5c6841d75c80bf7fe4a442972a951c",
+      "orange_objects": []
+    },
+    {
+      "view": "side",
+      "yaw_degrees": 90,
+      "path": "side.png",
+      "sha256": "d0a600fd6cc942798a43d932c61b1a156da02c5d2982e601542c2f02e155b5fd",
+      "orange_objects": []
+    },
+    {
+      "view": "selection",
+      "yaw_degrees": 35,
+      "path": "selection.png",
+      "sha256": "68823516cb5c088ca660b296f7de81364d8ab7b9b2f172f47c9ca365538f84e8",
+      "orange_objects": [
+        "Abdominal part of left pectoralis major",
+        "Clavicular part of left pectoralis major",
+        "Sternocostal part of left pectoralis major",
+        "Abdominal part of left pectoralis major.001",
+        "Clavicular part of left pectoralis major.001",
+        "Sternocostal part of left pectoralis major.001"
+      ]
+    }
+  ],
+  "review_scene": {
+    "path": "scene-review.blend",
+    "sha256": "75abf1b539c7f0dea77296bf80893efd3ea2fa60ed77e361bc16dbb55872e58a",
+    "neutral_materials_restored": true,
+    "camera_view": "three-quarter"
+  }
+}

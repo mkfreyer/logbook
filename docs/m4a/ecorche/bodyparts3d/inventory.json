@@ -1,0 +1,7266 @@
+{
+  "candidate": "bodyparts3d",
+  "blender": "4.3.2",
+  "normalization_reference": "original skin bounds, skin not rendered",
+  "source_bounds": {
+    "min": [
+      -334.1189880371094,
+      -246.7830047607422,
+      -78.11119842529297
+    ],
+    "max": [
+      332.82501220703125,
+      45.24760055541992,
+      1641.3599853515625
+    ]
+  },
+  "transform": {
+    "center": [
+      -0.6469879150390625,
+      -100.7677001953125,
+      -78.11119842529297
+    ],
+    "uniform_scale": 0.0010468334782129127,
+    "reference_height": 1.8
+  },
+  "axes": {
+    "+Z": "superior",
+    "-Y": "anterior",
+    "+X": "anatomical left"
+  },
+  "geometry_changes": "world transforms baked, uniform scale/translation; exact-position weld per BodyParts3D OBJ only; smooth face shading. No sculpting, no subdivisions, no invented fillers.",
+  "objects": [
+    {
+      "object": "FJ1294",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1182,
+      "triangles": 2360,
+      "centroid": [
+        0.03386535833695314,
+        -0.05313835735550992,
+        1.6625777513242614
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1295",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1782,
+      "triangles": 3560,
+      "centroid": [
+        0.02533119977697496,
+        -0.04442038331975205,
+        1.6639748941500714
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1304",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1660,
+      "triangles": 3316,
+      "centroid": [
+        0.038736732086413594,
+        -0.04708579222234078,
+        1.6749313500272223
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1306",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2182,
+      "triangles": 4360,
+      "centroid": [
+        0.029590718221947154,
+        -0.05558973056965061,
+        1.684254070796844
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1308",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1290,
+      "triangles": 2576,
+      "centroid": [
+        0.01789350835389869,
+        -0.048219136508225006,
+        1.6739335962044177
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1322",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1804,
+      "triangles": 3604,
+      "centroid": [
+        0.02530158198688452,
+        -0.048100944441183575,
+        1.6827032641402369
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1323",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1420,
+      "triangles": 2836,
+      "centroid": [
+        0.028230379135544662,
+        -0.049104846831621,
+        1.6829596633642492
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1345",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1173,
+      "triangles": 2342,
+      "centroid": [
+        -0.03437084703764164,
+        -0.05290678096498472,
+        1.6627114602671864
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1346",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1773,
+      "triangles": 3542,
+      "centroid": [
+        -0.0254398979429414,
+        -0.044428462167866674,
+        1.6638591505347573
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1355",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1640,
+      "triangles": 3276,
+      "centroid": [
+        -0.03839326748715305,
+        -0.04597526351671393,
+        1.6751165216288915
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1357",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2184,
+      "triangles": 4360,
+      "centroid": [
+        -0.02966072433670785,
+        -0.05613919541976609,
+        1.684048632835294
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1359",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1276,
+      "triangles": 2548,
+      "centroid": [
+        -0.01804617605665494,
+        -0.04898819695942127,
+        1.673839381963108
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1373",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1775,
+      "triangles": 3546,
+      "centroid": [
+        -0.0242848545475535,
+        -0.04841351145065167,
+        1.6830486520579164
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1374",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1408,
+      "triangles": 2812,
+      "centroid": [
+        -0.027945728090178982,
+        -0.04857974874241997,
+        1.6829730094495146
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1383",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 321,
+      "triangles": 646,
+      "centroid": [
+        -0.09775219855371665,
+        -0.04571026136860762,
+        0.021864705315770762
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1383M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 321,
+      "triangles": 646,
+      "centroid": [
+        0.09910656964388963,
+        -0.045709990543774635,
+        0.02186498319515465
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1384",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 339,
+      "triangles": 674,
+      "centroid": [
+        -0.12054791044344944,
+        -0.0587442446511052,
+        0.03020950270525474
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1384M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 339,
+      "triangles": 674,
+      "centroid": [
+        0.121902481358839,
+        -0.058744291343608084,
+        0.030209500870082232
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1385",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 137,
+      "triangles": 266,
+      "centroid": [
+        -0.11367891391698462,
+        -0.05657587823097723,
+        0.01779170659282347
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1385M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 137,
+      "triangles": 266,
+      "centroid": [
+        0.11503354421932332,
+        -0.056575847844029,
+        0.017791701949806542
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1386",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 322,
+      "triangles": 632,
+      "centroid": [
+        -0.12840102987815133,
+        -0.050326150170995954,
+        0.027719918783083095
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1386M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 322,
+      "triangles": 632,
+      "centroid": [
+        0.12975563289400954,
+        -0.05032619896998502,
+        0.027719918135206523
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1387",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 180,
+      "triangles": 368,
+      "centroid": [
+        -0.11759401199718317,
+        -0.042312054863820475,
+        0.01899591972016626
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1387M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 180,
+      "triangles": 368,
+      "centroid": [
+        0.11894826922151777,
+        -0.042311351063350836,
+        0.018996187837587462
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1388",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 386,
+      "triangles": 772,
+      "centroid": [
+        -0.13695135008099782,
+        -0.03961664966399265,
+        0.02156628397838671
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1388M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 386,
+      "triangles": 772,
+      "centroid": [
+        0.13830529493062607,
+        -0.039615630092572206,
+        0.021566663936282378
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1389",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 178,
+      "triangles": 328,
+      "centroid": [
+        -0.12663995901520333,
+        -0.03641485097409969,
+        0.0166935894920836
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1389M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 178,
+      "triangles": 328,
+      "centroid": [
+        0.12799453584665663,
+        -0.0364148040835777,
+        0.016693592443015805
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1390",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 644,
+      "triangles": 1276,
+      "centroid": [
+        -0.1063260312267342,
+        0.014289717051114342,
+        0.017784777084388626
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1390M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 644,
+      "triangles": 1276,
+      "centroid": [
+        0.1076806141121417,
+        0.014289710874007096,
+        0.017784779217464398
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1391",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 391,
+      "triangles": 786,
+      "centroid": [
+        -0.13568345306779417,
+        -0.025807477903756006,
+        0.015970312934273572
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1391M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 391,
+      "triangles": 786,
+      "centroid": [
+        0.13703801690617487,
+        -0.02580746966800468,
+        0.01597031423479052
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1393",
+      "audit_identity": "head of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 947,
+      "triangles": 1742,
+      "centroid": [
+        -0.08977346607693397,
+        -0.04828260676520301,
+        0.028314860154104584
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1393M",
+      "audit_identity": "head of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 947,
+      "triangles": 1742,
+      "centroid": [
+        0.09112803619099268,
+        -0.04828263223839977,
+        0.02831486334243382
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1394",
+      "audit_identity": "lateral head of right gastrocnemius",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 1528,
+      "triangles": 3052,
+      "centroid": [
+        -0.09544494284404666,
+        0.06632117725938012,
+        0.3932235122546163
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1394M",
+      "audit_identity": "lateral head of left gastrocnemius",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 1528,
+      "triangles": 3052,
+      "centroid": [
+        0.09679953093733151,
+        0.06632117520413161,
+        0.39322351091858293
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1395",
+      "audit_identity": "long head of right biceps femoris",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 2557,
+      "triangles": 5110,
+      "centroid": [
+        -0.09846873302704709,
+        0.055740861268768704,
+        0.6593476516057329
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1395M",
+      "audit_identity": "long head of left biceps femoris",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 2557,
+      "triangles": 5110,
+      "centroid": [
+        0.09982330879465322,
+        0.05574085994007697,
+        0.6593476599158838
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1396",
+      "audit_identity": "head of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 492,
+      "triangles": 992,
+      "centroid": [
+        -0.08270855955173814,
+        -0.0537298115735071,
+        0.029373733781096412
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1396M",
+      "audit_identity": "head of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 492,
+      "triangles": 992,
+      "centroid": [
+        0.08406313667755301,
+        -0.05372983694636846,
+        0.02937373298795788
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1397",
+      "audit_identity": "medial head of right gastrocnemius",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 1929,
+      "triangles": 3842,
+      "centroid": [
+        -0.05358127768196363,
+        0.05239865660547685,
+        0.37682537066312327
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1397M",
+      "audit_identity": "medial head of left gastrocnemius",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 1929,
+      "triangles": 3842,
+      "centroid": [
+        0.05493585493931225,
+        0.05239865802780775,
+        0.3768253973755211
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1398",
+      "audit_identity": "head of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 523,
+      "triangles": 1054,
+      "centroid": [
+        -0.10665307684051831,
+        -0.032765578827598126,
+        0.03184973863425378
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1398M",
+      "audit_identity": "head of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 523,
+      "triangles": 1054,
+      "centroid": [
+        0.10800766369352834,
+        -0.03276555276125043,
+        0.03184973981665949
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1399",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 104,
+      "triangles": 200,
+      "centroid": [
+        -0.12648610240564898,
+        -0.011945551769153658,
+        0.021239741947143696
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1399M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 104,
+      "triangles": 200,
+      "centroid": [
+        0.12784067921053904,
+        -0.01194555174760563,
+        0.021239743039656717
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1400",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 536,
+      "triangles": 1068,
+      "centroid": [
+        -0.0726569004273459,
+        -0.017680839119368182,
+        0.026546443322562237
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1400M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 536,
+      "triangles": 1068,
+      "centroid": [
+        0.07401147934455257,
+        -0.017680848547163112,
+        0.026546443096681763
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1401",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 734,
+      "triangles": 1464,
+      "centroid": [
+        -0.0813953603798021,
+        0.005671820267650518,
+        0.8048253281889559
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1401M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 734,
+      "triangles": 1464,
+      "centroid": [
+        0.0827499376153142,
+        0.005671807615342602,
+        0.8048253442675931
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1402",
+      "audit_identity": "right adductor longus",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1308,
+      "triangles": 2616,
+      "centroid": [
+        -0.062181595158948354,
+        -0.010802517133799138,
+        0.7611739794048694
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1402M",
+      "audit_identity": "left adductor longus",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1308,
+      "triangles": 2616,
+      "centroid": [
+        0.0635361719922097,
+        -0.010802523685531962,
+        0.761173977673236
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1403",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2988,
+      "triangles": 5972,
+      "centroid": [
+        -0.06850855292283607,
+        0.01989436567294998,
+        0.7010489751197089
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1403M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2988,
+      "triangles": 5972,
+      "centroid": [
+        0.06986313101734562,
+        0.019894366590723276,
+        0.7010489782714939
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1404",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 981,
+      "triangles": 1958,
+      "centroid": [
+        -0.08832069238596553,
+        0.018156032675412503,
+        0.8167751784475329
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1404M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 981,
+      "triangles": 1958,
+      "centroid": [
+        0.08967520897708658,
+        0.01815595189587685,
+        0.8167753913473038
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1406",
+      "audit_identity": "right extensor digitorum longus",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2297,
+      "triangles": 4546,
+      "centroid": [
+        -0.12213686276283998,
+        -0.01688561316414777,
+        0.18116053917660538
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1406M",
+      "audit_identity": "left extensor digitorum longus",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2297,
+      "triangles": 4546,
+      "centroid": [
+        0.12349149065792016,
+        -0.01688564768568097,
+        0.18116057311250794
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1407",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 619,
+      "triangles": 1230,
+      "centroid": [
+        -0.10000377776694028,
+        -0.037830118146053214,
+        0.049639979142677614
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1407M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 619,
+      "triangles": 1230,
+      "centroid": [
+        0.10135838261809989,
+        -0.03783104239682018,
+        0.049639320497510894
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1408",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 834,
+      "triangles": 1668,
+      "centroid": [
+        -0.09833972370453017,
+        0.001427219974609414,
+        0.15312788840517294
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1408M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 834,
+      "triangles": 1668,
+      "centroid": [
+        0.0996935985428538,
+        0.0014265909856703183,
+        0.15312700364649368
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1409",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 901,
+      "triangles": 1766,
+      "centroid": [
+        -0.10071610259956842,
+        0.04358308643183271,
+        0.13666694145753036
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1409M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 901,
+      "triangles": 1766,
+      "centroid": [
+        0.10207067377096275,
+        0.043583086632361656,
+        0.13666693758132653
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1410",
+      "audit_identity": "right fibularis longus",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1962,
+      "triangles": 3860,
+      "centroid": [
+        -0.10879193724842247,
+        0.03751061796173353,
+        0.2203126990660706
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1410M",
+      "audit_identity": "left fibularis longus",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1962,
+      "triangles": 3860,
+      "centroid": [
+        0.11014651010813577,
+        0.037510735491129814,
+        0.22031278966638382
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1411",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 712,
+      "triangles": 1416,
+      "centroid": [
+        -0.1099151207887557,
+        0.016192266701956327,
+        0.07843418362330687
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1411M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 712,
+      "triangles": 1416,
+      "centroid": [
+        0.11126972241013237,
+        0.01619227757227788,
+        0.07843416384578253
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1412",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 423,
+      "triangles": 842,
+      "centroid": [
+        -0.09055429335956595,
+        0.010977546808083627,
+        0.024151295995951828
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1412M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 423,
+      "triangles": 842,
+      "centroid": [
+        0.0919088676360482,
+        0.010977542341746506,
+        0.02415129793785847
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1413",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1214,
+      "triangles": 2436,
+      "centroid": [
+        -0.1189108477135172,
+        -0.04616561110931639,
+        0.011952483036157965
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1413M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1214,
+      "triangles": 2436,
+      "centroid": [
+        0.12026530638018,
+        -0.04616548572131839,
+        0.011952543030899552
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1414",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2004,
+      "triangles": 4004,
+      "centroid": [
+        -0.09692589239126254,
+        -0.014555686223762158,
+        0.10970337104592323
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1414M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2004,
+      "triangles": 4004,
+      "centroid": [
+        0.09828046632339497,
+        -0.014555709546096363,
+        0.10970336566688474
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1415",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1381,
+      "triangles": 2758,
+      "centroid": [
+        -0.09252971851527907,
+        0.00895512182726724,
+        0.1507216047267662
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1415M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1381,
+      "triangles": 2758,
+      "centroid": [
+        0.09388429566052493,
+        0.00895511656781678,
+        0.1507216005445816
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1416",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 323,
+      "triangles": 642,
+      "centroid": [
+        -0.08376953103824665,
+        0.06167914142872527,
+        0.9115819798165431
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1416M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 323,
+      "triangles": 642,
+      "centroid": [
+        0.08512410774088866,
+        0.06167914550001776,
+        0.9115819672681967
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1417",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 235,
+      "triangles": 402,
+      "centroid": [
+        -0.07937171370425122,
+        0.05648203934443758,
+        0.9313374590366444
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1417M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 235,
+      "triangles": 402,
+      "centroid": [
+        0.08072627787577345,
+        0.05648204474214544,
+        0.9313374950530681
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1418",
+      "audit_identity": "right gluteus maximus",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1200,
+      "triangles": 2376,
+      "centroid": [
+        -0.08049295397699249,
+        0.07648449860978872,
+        0.9292068690061569
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1418M",
+      "audit_identity": "left gluteus maximus",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1200,
+      "triangles": 2376,
+      "centroid": [
+        0.0818474765199782,
+        0.0764845093448336,
+        0.929206979572773
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1419",
+      "audit_identity": "right gluteus medius",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1684,
+      "triangles": 3356,
+      "centroid": [
+        -0.11830236112606002,
+        0.04940473340497302,
+        0.9978274120783296
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1419M",
+      "audit_identity": "left gluteus medius",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1684,
+      "triangles": 3356,
+      "centroid": [
+        0.11965699103216236,
+        0.049404732320682515,
+        0.9978272305390048
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1420",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2106,
+      "triangles": 4208,
+      "centroid": [
+        -0.11932001342503433,
+        0.032967797769049983,
+        0.9822507299419142
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1420M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2106,
+      "triangles": 4208,
+      "centroid": [
+        0.1206746094409953,
+        0.03296781582746892,
+        0.982250631676327
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1421",
+      "audit_identity": "right gracilis",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1586,
+      "triangles": 3172,
+      "centroid": [
+        -0.030613070510064743,
+        0.0037832398911494852,
+        0.6640848900939598
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1421M",
+      "audit_identity": "left gracilis",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1586,
+      "triangles": 3172,
+      "centroid": [
+        0.031967648728967915,
+        0.0037832369327409905,
+        0.6640848927246817
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1422",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1459,
+      "triangles": 2862,
+      "centroid": [
+        -0.09828908556103298,
+        0.01407431664951888,
+        0.9957125773978937
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1422M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1459,
+      "triangles": 2862,
+      "centroid": [
+        0.09964403617333026,
+        0.014075115287151956,
+        0.9957120569704982
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1425",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 424,
+      "triangles": 784,
+      "centroid": [
+        -0.06730924156617443,
+        0.026791556412889512,
+        0.9000095272401594
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1425M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 424,
+      "triangles": 784,
+      "centroid": [
+        0.06866382505252676,
+        0.026791558134683105,
+        0.900009534409586
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1426",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1239,
+      "triangles": 2466,
+      "centroid": [
+        -0.05286414241771529,
+        0.03268390106483459,
+        0.9183458987025122
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1426M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1239,
+      "triangles": 2466,
+      "centroid": [
+        0.054218696834725466,
+        0.032683823326672704,
+        0.9183458947096264
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1427",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 692,
+      "triangles": 1380,
+      "centroid": [
+        -0.06546903153170826,
+        -0.010732338854701883,
+        0.8768473357995811
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1427M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 692,
+      "triangles": 1380,
+      "centroid": [
+        0.06682377048052116,
+        -0.010732200286234056,
+        0.8768474078075045
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1428",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 554,
+      "triangles": 1092,
+      "centroid": [
+        -0.07871305959346277,
+        0.05883747287134939,
+        0.9574405229263787
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1428M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 554,
+      "triangles": 1092,
+      "centroid": [
+        0.08006763961233387,
+        0.05883747307644209,
+        0.9574405186227943
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1429",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1258,
+      "triangles": 2512,
+      "centroid": [
+        -0.07182052808803387,
+        0.046899257962731124,
+        0.355408609245085
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1429M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1258,
+      "triangles": 2512,
+      "centroid": [
+        0.07317510619167304,
+        0.04689925946854203,
+        0.3554086026873303
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1430",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 431,
+      "triangles": 858,
+      "centroid": [
+        -0.08202129626633672,
+        0.030805890744426686,
+        0.4308536719280163
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1430M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 431,
+      "triangles": 858,
+      "centroid": [
+        0.08337587704168949,
+        0.03080589051753836,
+        0.4308536628006229
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1431",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2468,
+      "triangles": 4900,
+      "centroid": [
+        -0.0465682276227999,
+        0.018779942610357366,
+        1.075050267181095
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1431M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2468,
+      "triangles": 4900,
+      "centroid": [
+        0.04792288641786471,
+        0.01877992427890645,
+        1.0750500708576927
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1432",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 600,
+      "triangles": 1196,
+      "centroid": [
+        -0.10336840554450949,
+        0.05361648184557756,
+        0.8858366929491361
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1432M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 600,
+      "triangles": 1196,
+      "centroid": [
+        0.104722961888959,
+        0.05361648466438055,
+        0.8858366751670838
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1433",
+      "audit_identity": "right rectus femoris",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA10474",
+      "vertices": 2842,
+      "triangles": 5688,
+      "centroid": [
+        -0.11197875424391111,
+        -0.0186083240332792,
+        0.7271145278303494
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1433M",
+      "audit_identity": "left rectus femoris",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA10474",
+      "vertices": 2842,
+      "triangles": 5688,
+      "centroid": [
+        0.11333332701280116,
+        -0.018608329069825322,
+        0.727114533482514
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1434",
+      "audit_identity": "right sartorius",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1736,
+      "triangles": 3444,
+      "centroid": [
+        -0.07091309090063388,
+        -0.01994428010022431,
+        0.7044184444652449
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1434M",
+      "audit_identity": "left sartorius",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1736,
+      "triangles": 3444,
+      "centroid": [
+        0.07226758990393874,
+        -0.019944172380426253,
+        0.7044179423579148
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1435",
+      "audit_identity": "right semimembranosus",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2308,
+      "triangles": 4612,
+      "centroid": [
+        -0.041913205783965915,
+        0.03958141039386976,
+        0.6434205633102298
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1435M",
+      "audit_identity": "left semimembranosus",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2308,
+      "triangles": 4612,
+      "centroid": [
+        0.043267783348124145,
+        0.03958140980534945,
+        0.6434205639687733
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1436",
+      "audit_identity": "right semitendinosus",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1358,
+      "triangles": 2712,
+      "centroid": [
+        -0.049349043438751496,
+        0.04811679054461749,
+        0.6256542500322452
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1436M",
+      "audit_identity": "left semitendinosus",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1358,
+      "triangles": 2712,
+      "centroid": [
+        0.05070362061081078,
+        0.04811679110972043,
+        0.6256542519195792
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1437",
+      "audit_identity": "right soleus",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2211,
+      "triangles": 4418,
+      "centroid": [
+        -0.08174819883072015,
+        0.04710276977275762,
+        0.3076869850377592
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1437M",
+      "audit_identity": "left soleus",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2211,
+      "triangles": 4418,
+      "centroid": [
+        0.08310278250668611,
+        0.04710276999979645,
+        0.3076869784734304
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1438",
+      "audit_identity": "right tensor fasciae latae",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 627,
+      "triangles": 1254,
+      "centroid": [
+        -0.15180423767848067,
+        -0.009798279667208271,
+        0.9523691042568505
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1438M",
+      "audit_identity": "left tensor fasciae latae",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 627,
+      "triangles": 1254,
+      "centroid": [
+        0.15315880941336996,
+        -0.009798274337725978,
+        0.9523691286881004
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1439",
+      "audit_identity": "right tibialis anterior",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1301,
+      "triangles": 2510,
+      "centroid": [
+        -0.09255954493796431,
+        -0.0036910657094383708,
+        0.216890944873801
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1439M",
+      "audit_identity": "left tibialis anterior",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1301,
+      "triangles": 2510,
+      "centroid": [
+        0.0939140799501875,
+        -0.0036910190245006903,
+        0.21689099718248908
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1440",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2526,
+      "triangles": 5136,
+      "centroid": [
+        -0.0808635619531665,
+        0.00994152788318751,
+        0.15744751732227166
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1440M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2526,
+      "triangles": 5136,
+      "centroid": [
+        0.08221813860723214,
+        0.009941527529940632,
+        0.15744751677660365
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1441",
+      "audit_identity": "zone of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA10474",
+      "vertices": 2132,
+      "triangles": 4260,
+      "centroid": [
+        -0.10965462841834404,
+        -0.009374751457016828,
+        0.650754829243133
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1441M",
+      "audit_identity": "zone of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA10474",
+      "vertices": 2132,
+      "triangles": 4260,
+      "centroid": [
+        0.11100910400262358,
+        -0.009374786180562577,
+        0.6507543903298494
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1442",
+      "audit_identity": "right vastus lateralis",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA10474",
+      "vertices": 3350,
+      "triangles": 6688,
+      "centroid": [
+        -0.12907940072132582,
+        8.13878954491585e-05,
+        0.6493087243677965
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1442M",
+      "audit_identity": "left vastus lateralis",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA10474",
+      "vertices": 3350,
+      "triangles": 6688,
+      "centroid": [
+        0.13043398310666654,
+        8.137674116070813e-05,
+        0.6493087180959645
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1443",
+      "audit_identity": "right vastus medialis",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA10474",
+      "vertices": 2280,
+      "triangles": 4552,
+      "centroid": [
+        -0.07646817436703203,
+        -0.01894930291049317,
+        0.6287710554244226
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1443M",
+      "audit_identity": "left vastus medialis",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA10474",
+      "vertices": 2280,
+      "triangles": 4552,
+      "centroid": [
+        0.07782275067936432,
+        -0.018949308874266137,
+        0.6287710723777612
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1444",
+      "audit_identity": "short head of right biceps femoris",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 866,
+      "triangles": 1728,
+      "centroid": [
+        -0.10673401446251615,
+        0.03197233692052458,
+        0.5697846197228509
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1444M",
+      "audit_identity": "short head of left biceps femoris",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 866,
+      "triangles": 1728,
+      "centroid": [
+        0.10808864267710726,
+        0.03197230720531204,
+        0.5697846490089667
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1445",
+      "audit_identity": "head of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 425,
+      "triangles": 818,
+      "centroid": [
+        -0.12553777307271957,
+        -0.06748001223977874,
+        0.016442835212630385
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1445M",
+      "audit_identity": "head of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 425,
+      "triangles": 818,
+      "centroid": [
+        0.12689231539473814,
+        -0.06747988426510025,
+        0.01644282707834945
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1446",
+      "audit_identity": "abdominal part of right pectoralis major",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA10474",
+      "vertices": 774,
+      "triangles": 1536,
+      "centroid": [
+        -0.11838466856503517,
+        -0.06526644605629872,
+        1.3208271260409392
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1446M",
+      "audit_identity": "abdominal part of left pectoralis major",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": true,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA10474",
+      "vertices": 774,
+      "triangles": 1536,
+      "centroid": [
+        0.11973923811501311,
+        -0.06526647284866836,
+        1.3208258413837246
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1447",
+      "audit_identity": "clavicular part of right pectoralis major",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 949,
+      "triangles": 1846,
+      "centroid": [
+        -0.12325491389559996,
+        -0.015204325533648097,
+        1.441951840896124
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1447M",
+      "audit_identity": "clavicular part of left pectoralis major",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": true,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 949,
+      "triangles": 1846,
+      "centroid": [
+        0.12460944633950549,
+        -0.015204451819615293,
+        1.4419510800418913
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1449M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1050,
+      "triangles": 2088,
+      "centroid": [
+        0.025886519066102447,
+        0.0860222799153555,
+        0.9356704560347966
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1450",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 186,
+      "triangles": 368,
+      "centroid": [
+        -0.007414630412684893,
+        0.07566540960663108,
+        0.8811344549220096
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1450M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 186,
+      "triangles": 368,
+      "centroid": [
+        0.00876921098629233,
+        0.07566540568105636,
+        0.8811345004266308
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1451",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 49662,
+      "triangles": 98928,
+      "centroid": [
+        -0.09894881753121859,
+        0.027149259064638054,
+        1.344190062321388
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1451M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 49662,
+      "triangles": 98928,
+      "centroid": [
+        0.10030343597104849,
+        0.027149179141911475,
+        1.3441877012899768
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1452",
+      "audit_identity": "right external oblique",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 55991,
+      "triangles": 111826,
+      "centroid": [
+        -0.06520529672734943,
+        -0.0746824748832367,
+        1.1385088489480215
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1452M",
+      "audit_identity": "left external oblique",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 55991,
+      "triangles": 111826,
+      "centroid": [
+        0.06655986880031876,
+        -0.07468246180359085,
+        1.138506774186675
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1453M",
+      "audit_identity": "zone of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA10474",
+      "vertices": 1935,
+      "triangles": 3862,
+      "centroid": [
+        0.03261504004864643,
+        0.062058028064725934,
+        0.9149062425283191
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1454",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 43617,
+      "triangles": 87218,
+      "centroid": [
+        -0.11206271995203948,
+        0.01605277608553447,
+        1.2998856838865074
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1454M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 43617,
+      "triangles": 87218,
+      "centroid": [
+        0.11341733522126424,
+        0.01605287168592155,
+        1.2998855938611782
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1455",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 44915,
+      "triangles": 89838,
+      "centroid": [
+        -0.10584136594883532,
+        0.0018267143672129065,
+        1.302126857752154
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1455M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 44915,
+      "triangles": 89838,
+      "centroid": [
+        0.10719597429525617,
+        0.0018266824229717126,
+        1.3021269102636934
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1456",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 4766,
+      "triangles": 9468,
+      "centroid": [
+        -0.10952390582338632,
+        -0.03801379062638733,
+        1.3974863153968695
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1456M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 4766,
+      "triangles": 9468,
+      "centroid": [
+        0.1108784350577118,
+        -0.03801392890757086,
+        1.3974861963376546
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1457M",
+      "audit_identity": "zone of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA10474",
+      "vertices": 2302,
+      "triangles": 4616,
+      "centroid": [
+        0.020714721733260798,
+        0.05297982906811188,
+        0.9059098902005511
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1458M",
+      "audit_identity": "zone of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA10474",
+      "vertices": 1855,
+      "triangles": 3634,
+      "centroid": [
+        0.019927106158571906,
+        0.0333963132250363,
+        0.8975755177739495
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1459",
+      "audit_identity": "right serratus anterior",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 24600,
+      "triangles": 49212,
+      "centroid": [
+        -0.11692431091308231,
+        0.03288980105316771,
+        1.3657268386885402
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1459M",
+      "audit_identity": "left serratus anterior",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 24600,
+      "triangles": 49212,
+      "centroid": [
+        0.11827888411734767,
+        0.03288980263751088,
+        1.3657253906445774
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1460",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 830,
+      "triangles": 1640,
+      "centroid": [
+        -0.07120096487363418,
+        -0.01136320345315883,
+        1.470451847760074
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1460M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 830,
+      "triangles": 1640,
+      "centroid": [
+        0.0725551741938275,
+        -0.011363265758814398,
+        1.4704525915973157
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1461",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2074,
+      "triangles": 4188,
+      "centroid": [
+        -0.031573206265551275,
+        -0.09120797315969877,
+        1.348026703213312
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1461M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2074,
+      "triangles": 4188,
+      "centroid": [
+        0.03292766394214426,
+        -0.09120794641448539,
+        1.3480260823363852
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1462",
+      "audit_identity": "musculature",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA32558",
+      "vertices": 3093,
+      "triangles": 6050,
+      "centroid": [
+        -0.04623138148613416,
+        0.07952510149871844,
+        1.3443172946162798
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1462M",
+      "audit_identity": "musculature",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA32558",
+      "vertices": 3093,
+      "triangles": 6050,
+      "centroid": [
+        0.04758607217547599,
+        0.07952499539358616,
+        1.3443178022482076
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1463",
+      "audit_identity": "musculature",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA32558",
+      "vertices": 6137,
+      "triangles": 12210,
+      "centroid": [
+        -0.04952819479323762,
+        0.08246980014601465,
+        1.3622196589927245
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1463M",
+      "audit_identity": "musculature",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA32558",
+      "vertices": 6137,
+      "triangles": 12210,
+      "centroid": [
+        0.0508827232674228,
+        0.08246979816773194,
+        1.3622178628504111
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1464",
+      "audit_identity": "sternocostal part of right pectoralis major",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA10474",
+      "vertices": 3565,
+      "triangles": 7114,
+      "centroid": [
+        -0.08812710788769734,
+        -0.06927505441710735,
+        1.3816668920396589
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1464M",
+      "audit_identity": "sternocostal part of left pectoralis major",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": true,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA10474",
+      "vertices": 3565,
+      "triangles": 7114,
+      "centroid": [
+        0.08948179387473103,
+        -0.06927496211438662,
+        1.3816655971224814
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1466",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 246,
+      "triangles": 508,
+      "centroid": [
+        -0.23866806839539753,
+        -0.041510469454333065,
+        0.8785960228462529
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1466M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 246,
+      "triangles": 508,
+      "centroid": [
+        0.24002262011049239,
+        -0.04151046957548072,
+        0.8785960022511521
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1467",
+      "audit_identity": "acromial part of right deltoid",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA10474",
+      "vertices": 656,
+      "triangles": 1300,
+      "centroid": [
+        -0.19783881302105216,
+        0.0329498867872339,
+        1.4447417824370106
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1467M",
+      "audit_identity": "acromial part of left deltoid",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA10474",
+      "vertices": 656,
+      "triangles": 1300,
+      "centroid": [
+        0.19919350502512803,
+        0.032950106336543064,
+        1.4447408407563116
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1468",
+      "audit_identity": "clavicular part of right deltoid",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA10474",
+      "vertices": 1053,
+      "triangles": 2206,
+      "centroid": [
+        -0.15338101923635541,
+        0.00660198733574168,
+        1.4597434772272282
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1468M",
+      "audit_identity": "clavicular part of left deltoid",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA10474",
+      "vertices": 1053,
+      "triangles": 2206,
+      "centroid": [
+        0.15473569138550464,
+        0.006601818746790743,
+        1.4597434374907983
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1469",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 381,
+      "triangles": 714,
+      "centroid": [
+        -0.2852495145297113,
+        -0.03492504659932586,
+        0.903954303327195
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1469M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 381,
+      "triangles": 714,
+      "centroid": [
+        0.28660409140774584,
+        -0.03492507965761063,
+        0.9039542698484706
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1470",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 172,
+      "triangles": 328,
+      "centroid": [
+        -0.24401762414463732,
+        -0.041775425982683204,
+        0.8777381750040276
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1470M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 172,
+      "triangles": 328,
+      "centroid": [
+        0.24537218266794847,
+        -0.041775407659453014,
+        0.8777381791624912
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1472",
+      "audit_identity": "right extensor carpi ulnaris",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1189,
+      "triangles": 2186,
+      "centroid": [
+        -0.23822348225858656,
+        0.017233638432771016,
+        1.0254789164228737
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1472M",
+      "audit_identity": "left extensor carpi ulnaris",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1189,
+      "triangles": 2186,
+      "centroid": [
+        0.23957811559169007,
+        0.01723332243471915,
+        1.0254781334414214
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1473",
+      "audit_identity": "head of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 1326,
+      "triangles": 2656,
+      "centroid": [
+        -0.21401892823825955,
+        0.005775973017785203,
+        1.048158704874922
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1473M",
+      "audit_identity": "head of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 1326,
+      "triangles": 2656,
+      "centroid": [
+        0.21537391704311917,
+        0.005775532975265373,
+        1.048157190125812
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1474",
+      "audit_identity": "head of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 909,
+      "triangles": 1846,
+      "centroid": [
+        -0.24355648003920208,
+        0.010796457892999947,
+        1.1132990280524864
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1474M",
+      "audit_identity": "head of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 909,
+      "triangles": 1846,
+      "centroid": [
+        0.24491124369851563,
+        0.010796152479780427,
+        1.113298863205317
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1475",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 4345,
+      "triangles": 8698,
+      "centroid": [
+        -0.2436071022573357,
+        -0.021050641211471648,
+        0.9696404636386349
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1475M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 4345,
+      "triangles": 8698,
+      "centroid": [
+        0.24496168220207798,
+        -0.02105065177448252,
+        0.9696403798903366
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1477",
+      "audit_identity": "lateral head of right triceps brachii",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 1309,
+      "triangles": 2606,
+      "centroid": [
+        -0.2147519730196553,
+        0.059009611040262706,
+        1.2892738584346495
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1477M",
+      "audit_identity": "lateral head of left triceps brachii",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 1309,
+      "triangles": 2606,
+      "centroid": [
+        0.21610653601911253,
+        0.05900961161513562,
+        1.2892736750217317
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1478",
+      "audit_identity": "long head of right biceps brachii",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 717,
+      "triangles": 1426,
+      "centroid": [
+        -0.20737731494165365,
+        0.013419157647215366,
+        1.3008366271209184
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1478M",
+      "audit_identity": "long head of left biceps brachii",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 717,
+      "triangles": 1426,
+      "centroid": [
+        0.20873166315226374,
+        0.013419136788293063,
+        1.3008370788526336
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1479",
+      "audit_identity": "long head of right triceps brachii",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 798,
+      "triangles": 1588,
+      "centroid": [
+        -0.18834777865418814,
+        0.06002244222582432,
+        1.2943998103153735
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1479M",
+      "audit_identity": "long head of left triceps brachii",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 798,
+      "triangles": 1588,
+      "centroid": [
+        0.18970236361474918,
+        0.06002244444325902,
+        1.2943998376528423
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1480",
+      "audit_identity": "medial head of right triceps brachii",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 420,
+      "triangles": 832,
+      "centroid": [
+        -0.20251024532176198,
+        0.047175121529116515,
+        1.2338772015912192
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1480M",
+      "audit_identity": "medial head of left triceps brachii",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 420,
+      "triangles": 832,
+      "centroid": [
+        0.20386525910525094,
+        0.04717495635684047,
+        1.2338768516268048
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1481",
+      "audit_identity": "head of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 349,
+      "triangles": 658,
+      "centroid": [
+        -0.2871134573204128,
+        -0.034678987721061295,
+        0.8950645337815271
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1481M",
+      "audit_identity": "head of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 349,
+      "triangles": 658,
+      "centroid": [
+        0.28846807295408494,
+        -0.03467899382669468,
+        0.8950645283163448
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1482",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 256,
+      "triangles": 484,
+      "centroid": [
+        -0.24349380732746795,
+        -0.03630830122710904,
+        0.8772437744773924
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1482M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 256,
+      "triangles": 484,
+      "centroid": [
+        0.2448484095511958,
+        -0.03630830541078467,
+        0.8772437795996666
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1483",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 376,
+      "triangles": 744,
+      "centroid": [
+        -0.29120155423879623,
+        -0.04113357165392409,
+        0.9122190629231169
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1483M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 376,
+      "triangles": 744,
+      "centroid": [
+        0.29255565961307667,
+        -0.041134523990702755,
+        0.9122181894614342
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1484",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 935,
+      "triangles": 1874,
+      "centroid": [
+        -0.2646441463002547,
+        0.008279308537371459,
+        1.0045610531128664
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1484M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 935,
+      "triangles": 1874,
+      "centroid": [
+        0.26599834687250823,
+        0.008279480805901006,
+        1.0045617670298899
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1485",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 641,
+      "triangles": 1278,
+      "centroid": [
+        -0.22837281524670106,
+        0.05187322567805485,
+        1.1440468184103645
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1485M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 641,
+      "triangles": 1278,
+      "centroid": [
+        0.22972738254646802,
+        0.05187322585240541,
+        1.1440468113433553
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1486",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 877,
+      "triangles": 1746,
+      "centroid": [
+        -0.21782148793390702,
+        0.02604198519102252,
+        1.2355528706971433
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1486M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 877,
+      "triangles": 1746,
+      "centroid": [
+        0.21917684938643922,
+        0.026042779085641576,
+        1.235546962836993
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1487",
+      "audit_identity": "right brachioradialis",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2439,
+      "triangles": 4874,
+      "centroid": [
+        -0.2615770657820602,
+        0.011229259679034188,
+        1.114190669101787
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1487M",
+      "audit_identity": "left brachioradialis",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2439,
+      "triangles": 4874,
+      "centroid": [
+        0.26293158920366483,
+        0.01122923680858844,
+        1.114190629023223
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1488",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 228,
+      "triangles": 444,
+      "centroid": [
+        -0.16729776058019252,
+        0.017167999704964274,
+        1.3900478069196667
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1488M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 228,
+      "triangles": 444,
+      "centroid": [
+        0.1686523794605021,
+        0.017167991867672913,
+        1.3900475313788967
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1489",
+      "audit_identity": "right extensor carpi radialis brevis",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1055,
+      "triangles": 2098,
+      "centroid": [
+        -0.264458568302376,
+        0.021926834400670416,
+        1.0535818746869599
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1489M",
+      "audit_identity": "left extensor carpi radialis brevis",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1055,
+      "triangles": 2098,
+      "centroid": [
+        0.26581309941990117,
+        0.021926942563911467,
+        1.0535825767788276
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1490",
+      "audit_identity": "right extensor carpi radialis longus",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1251,
+      "triangles": 2474,
+      "centroid": [
+        -0.2664170743440457,
+        0.023126804469691904,
+        1.092149406790638
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1490M",
+      "audit_identity": "left extensor carpi radialis longus",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1251,
+      "triangles": 2474,
+      "centroid": [
+        0.26777156856324935,
+        0.02312671611032305,
+        1.0921495294304107
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1491",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 723,
+      "triangles": 1434,
+      "centroid": [
+        -0.24651806145123262,
+        0.012281090207272269,
+        1.003481807303132
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1491M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 723,
+      "triangles": 1434,
+      "centroid": [
+        0.2478733102109587,
+        0.012280819655920804,
+        1.0034822244532047
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1492",
+      "audit_identity": "right extensor digitorum",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2131,
+      "triangles": 4294,
+      "centroid": [
+        -0.26446330585791883,
+        -0.008292250679175384,
+        0.9267157916170171
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1492M",
+      "audit_identity": "left extensor digitorum",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2131,
+      "triangles": 4294,
+      "centroid": [
+        0.2658180511582351,
+        -0.008292360632600092,
+        0.9267155495063624
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1493",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 370,
+      "triangles": 720,
+      "centroid": [
+        -0.27075318589403824,
+        -0.01729297333742481,
+        0.911941831337439
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1493M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 370,
+      "triangles": 720,
+      "centroid": [
+        0.27210779314911043,
+        -0.017292980240145462,
+        0.9119418495410198
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1494",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 501,
+      "triangles": 998,
+      "centroid": [
+        -0.2792235813038554,
+        -0.01008921330474608,
+        0.9511726634231156
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1494M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 501,
+      "triangles": 998,
+      "centroid": [
+        0.2805781685068698,
+        -0.010089216470542832,
+        0.9511726324905654
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1495",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 659,
+      "triangles": 1326,
+      "centroid": [
+        -0.2782509450621236,
+        -0.01468148647089932,
+        0.9442190703383346
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1495M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 659,
+      "triangles": 1326,
+      "centroid": [
+        0.279605620208568,
+        -0.014681536862337925,
+        0.9442183478468286
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1496",
+      "audit_identity": "right flexor carpi radialis",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 586,
+      "triangles": 1148,
+      "centroid": [
+        -0.23184792608429547,
+        -0.008056489023805992,
+        1.0660059747028676
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1496M",
+      "audit_identity": "left flexor carpi radialis",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 586,
+      "triangles": 1148,
+      "centroid": [
+        0.2332024748974286,
+        -0.008056492010474845,
+        1.066005976737156
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1497",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2425,
+      "triangles": 4838,
+      "centroid": [
+        -0.2561065434549273,
+        -0.02481173569666183,
+        0.940034925249434
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1497M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2425,
+      "triangles": 4838,
+      "centroid": [
+        0.2574609281967596,
+        -0.024811553401381314,
+        0.9400351657818273
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1498",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 713,
+      "triangles": 1442,
+      "centroid": [
+        -0.2797636059315308,
+        -0.014859927521370064,
+        0.973699549220889
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1498M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 713,
+      "triangles": 1442,
+      "centroid": [
+        0.28111816401401374,
+        -0.014859916814711693,
+        0.9736995597541082
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1499",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 435,
+      "triangles": 866,
+      "centroid": [
+        -0.25143628836363213,
+        -0.005042308215694181,
+        1.0372722080384178
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1499M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 435,
+      "triangles": 866,
+      "centroid": [
+        0.25279084139171687,
+        -0.00504230147952899,
+        1.0372721913217129
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1500",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 435,
+      "triangles": 866,
+      "centroid": [
+        -0.13483531784223415,
+        0.06754768189342543,
+        1.4341036484159273
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1500M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 435,
+      "triangles": 866,
+      "centroid": [
+        0.1361928377514598,
+        0.06754388727418993,
+        1.4341046826592807
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1501",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 498,
+      "triangles": 956,
+      "centroid": [
+        -0.292952990615703,
+        -0.03999653909295558,
+        0.9098942042833351
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1501M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 498,
+      "triangles": 956,
+      "centroid": [
+        0.29430755164967964,
+        -0.039996551779888,
+        0.9098941732841324
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1502",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2458,
+      "triangles": 4968,
+      "centroid": [
+        -0.25224195511070474,
+        -0.03040042364020642,
+        0.9452930296262751
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1502M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2458,
+      "triangles": 4968,
+      "centroid": [
+        0.25359660367639786,
+        -0.030400512110509485,
+        0.9452922263215284
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1503",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 949,
+      "triangles": 1838,
+      "centroid": [
+        -0.2512459153558733,
+        -0.011139487904114736,
+        0.973577040452726
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1503M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 949,
+      "triangles": 1838,
+      "centroid": [
+        0.25260047763743065,
+        -0.011139448223664014,
+        0.9735770765044289
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1504",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 990,
+      "triangles": 2092,
+      "centroid": [
+        -0.1039739480524352,
+        0.06497979024184088,
+        1.4143345304209776
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1504M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 990,
+      "triangles": 2092,
+      "centroid": [
+        0.10532867349307946,
+        0.06497968207460339,
+        1.414334488757933
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1505",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1565,
+      "triangles": 3110,
+      "centroid": [
+        -0.2501454568709047,
+        0.026917663424873884,
+        1.1197080817847207
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1505M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1565,
+      "triangles": 3110,
+      "centroid": [
+        0.2515002839957563,
+        0.026917334025303205,
+        1.119707516130929
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1506",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 445,
+      "triangles": 878,
+      "centroid": [
+        -0.14147845839851358,
+        0.04777590520052093,
+        1.4686967788117655
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1506M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 445,
+      "triangles": 878,
+      "centroid": [
+        0.14283307794104802,
+        0.04777600270894806,
+        1.4686955794859469
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1507",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 545,
+      "triangles": 1042,
+      "centroid": [
+        -0.1402583032299619,
+        0.06224039108791483,
+        1.3783823157669208
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1507M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 545,
+      "triangles": 1042,
+      "centroid": [
+        0.14161266878657386,
+        0.06224045007395635,
+        1.378382411353085
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1508",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 255,
+      "triangles": 506,
+      "centroid": [
+        -0.1515570805937636,
+        0.06248393741746743,
+        1.4161594213223925
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1508M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 255,
+      "triangles": 506,
+      "centroid": [
+        0.1529116497612467,
+        0.0624843266518677,
+        1.4161597929748835
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1509",
+      "audit_identity": "musculature",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA32558",
+      "vertices": 1547,
+      "triangles": 2618,
+      "centroid": [
+        -0.2765265983404771,
+        -0.02763417365936094,
+        0.8636170742044775
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1509M",
+      "audit_identity": "musculature",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA32558",
+      "vertices": 1547,
+      "triangles": 2618,
+      "centroid": [
+        0.2778811791614324,
+        -0.02763417636844406,
+        0.8636170683480419
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1510",
+      "audit_identity": "musculature",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA32558",
+      "vertices": 1378,
+      "triangles": 2668,
+      "centroid": [
+        -0.27392373264311703,
+        -0.04082714436989391,
+        0.8486300125523472
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1510M",
+      "audit_identity": "musculature",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA32558",
+      "vertices": 1378,
+      "triangles": 2668,
+      "centroid": [
+        0.2752781127767397,
+        -0.040827002404703716,
+        0.8486304261947405
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1511",
+      "audit_identity": "musculature",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA32558",
+      "vertices": 533,
+      "triangles": 966,
+      "centroid": [
+        -0.2697240097717317,
+        -0.03617646084927148,
+        0.8609366036713906
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1511M",
+      "audit_identity": "musculature",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA32558",
+      "vertices": 533,
+      "triangles": 966,
+      "centroid": [
+        0.2710785907998989,
+        -0.03617647857410487,
+        0.8609366033359048
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1512",
+      "audit_identity": "short head of right biceps brachii",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 932,
+      "triangles": 1856,
+      "centroid": [
+        -0.18502308789624677,
+        0.009539875782806035,
+        1.3274208037382544
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1512M",
+      "audit_identity": "short head of left biceps brachii",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 932,
+      "triangles": 1856,
+      "centroid": [
+        0.1863775998513842,
+        0.009539786967117771,
+        1.3274208711452238
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1513",
+      "audit_identity": "spinal part of right deltoid",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA10474",
+      "vertices": 982,
+      "triangles": 1900,
+      "centroid": [
+        -0.17000427295106735,
+        0.06603119574115439,
+        1.424221104007146
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1513M",
+      "audit_identity": "spinal part of left deltoid",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA10474",
+      "vertices": 982,
+      "triangles": 1900,
+      "centroid": [
+        0.17135849488091082,
+        0.06603042745503716,
+        1.4242195147118113
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1514",
+      "audit_identity": "head of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 381,
+      "triangles": 726,
+      "centroid": [
+        -0.2845484607332335,
+        -0.044520703933917945,
+        0.9036502508040801
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1514M",
+      "audit_identity": "head of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 381,
+      "triangles": 726,
+      "centroid": [
+        0.2859030211065698,
+        -0.044520725835887155,
+        0.903650261598622
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1515",
+      "audit_identity": "head of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 377,
+      "triangles": 754,
+      "centroid": [
+        -0.2866568047582945,
+        -0.03290179547722839,
+        0.8778208557427404
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1515M",
+      "audit_identity": "head of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 377,
+      "triangles": 754,
+      "centroid": [
+        0.2880113973067357,
+        -0.032901801277614086,
+        0.877820844043155
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1516",
+      "audit_identity": "head of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 532,
+      "triangles": 1040,
+      "centroid": [
+        -0.2465669169069681,
+        0.012423021335914535,
+        1.104461797422036
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1516M",
+      "audit_identity": "head of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 532,
+      "triangles": 1040,
+      "centroid": [
+        0.24792157892221794,
+        0.012423027484919316,
+        1.1044615386123944
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1517",
+      "audit_identity": "right extensor carpi ulnaris",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 600,
+      "triangles": 1208,
+      "centroid": [
+        -0.23997008855144183,
+        0.009941547372004606,
+        0.9953329337636629
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1517M",
+      "audit_identity": "left extensor carpi ulnaris",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 600,
+      "triangles": 1208,
+      "centroid": [
+        0.24132461316883563,
+        0.009941711690194097,
+        0.995332771440347
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1518",
+      "audit_identity": "head of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 743,
+      "triangles": 1538,
+      "centroid": [
+        -0.21593858373838992,
+        0.024134418017129164,
+        1.0689826292433295
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1518M",
+      "audit_identity": "head of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA85453",
+      "vertices": 743,
+      "triangles": 1538,
+      "centroid": [
+        0.217293162545638,
+        0.02413442125204146,
+        1.0689825225486087
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1520",
+      "audit_identity": "ascending part of right trapezius",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "vertices": 5297,
+      "triangles": 10530,
+      "centroid": [
+        -0.03741810162295309,
+        0.10531067282062714,
+        1.383749453306243
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1520M",
+      "audit_identity": "ascending part of left trapezius",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "vertices": 5297,
+      "triangles": 10530,
+      "centroid": [
+        0.038772718536906566,
+        0.1053106294512715,
+        1.3837495031099354
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1521",
+      "audit_identity": "descending part of right trapezius",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "vertices": 3561,
+      "triangles": 7108,
+      "centroid": [
+        -0.03672930761141701,
+        0.06129855545292027,
+        1.5553537699922488
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1521M",
+      "audit_identity": "descending part of left trapezius",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "vertices": 3561,
+      "triangles": 7108,
+      "centroid": [
+        0.03808387868474673,
+        0.061298570437943976,
+        1.555352140999483
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1522",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2367,
+      "triangles": 4742,
+      "centroid": [
+        -0.017365773718070306,
+        0.047091348829353015,
+        1.1436055570803063
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1522M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2367,
+      "triangles": 4742,
+      "centroid": [
+        0.018720411829611844,
+        0.047091209464621885,
+        1.1436068299051372
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1524",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1747,
+      "triangles": 3534,
+      "centroid": [
+        -0.011022172256163427,
+        0.045204191335914606,
+        1.56638256256145
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1524M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1747,
+      "triangles": 3534,
+      "centroid": [
+        0.0123768489029754,
+        0.045204251309463345,
+        1.5663826946674515
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1525",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 5509,
+      "triangles": 11062,
+      "centroid": [
+        -0.012537751527246925,
+        0.07449349923775123,
+        1.3726373964568668
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1525M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 5509,
+      "triangles": 11062,
+      "centroid": [
+        0.01389216074329188,
+        0.07449369205820905,
+        1.3726379395093864
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1526",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1546,
+      "triangles": 3072,
+      "centroid": [
+        -0.053774934496976345,
+        0.06285381303885698,
+        1.4808842960798108
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1526M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1546,
+      "triangles": 3072,
+      "centroid": [
+        0.05512952507096421,
+        0.0628538893145373,
+        1.4808834491232543
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1527",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 7966,
+      "triangles": 15872,
+      "centroid": [
+        -0.05132230464754869,
+        0.09305116482791725,
+        1.1259383129439042
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1527M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 7966,
+      "triangles": 15872,
+      "centroid": [
+        0.05267688197214947,
+        0.09305115191332815,
+        1.125938382732069
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1528",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 4199,
+      "triangles": 8386,
+      "centroid": [
+        -0.0724482306783385,
+        0.08540082563430773,
+        1.3490412373518939
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1528M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 4199,
+      "triangles": 8386,
+      "centroid": [
+        0.0738029018812774,
+        0.08540083101464187,
+        1.3490412771545668
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1532",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2365,
+      "triangles": 4718,
+      "centroid": [
+        -0.04767531054704814,
+        0.05311073305254633,
+        1.529070813257649
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1532M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2365,
+      "triangles": 4718,
+      "centroid": [
+        0.04902994370848004,
+        0.05311078097096331,
+        1.5290708895717564
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1533",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1136,
+      "triangles": 2260,
+      "centroid": [
+        -0.03585331146703692,
+        0.03644083644112598,
+        1.5650369488227536
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1533M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1136,
+      "triangles": 2260,
+      "centroid": [
+        0.0372080354767681,
+        0.03644076942689192,
+        1.5650366447131399
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1534",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1412,
+      "triangles": 2816,
+      "centroid": [
+        -0.03125424080768405,
+        0.05408504726655423,
+        1.5034569002920102
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1534M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1412,
+      "triangles": 2816,
+      "centroid": [
+        0.03260894753592928,
+        0.05408498417670514,
+        1.5034571453802308
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1535",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 7508,
+      "triangles": 15068,
+      "centroid": [
+        -0.03322193394460975,
+        0.07823267890131483,
+        1.2502663177842464
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1535M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 7508,
+      "triangles": 15068,
+      "centroid": [
+        0.03457639533077549,
+        0.07823263160779191,
+        1.2502666605188926
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1536",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 3611,
+      "triangles": 7202,
+      "centroid": [
+        -0.033189565556091635,
+        0.10055284407603644,
+        1.4271872934625605
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1536M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 3611,
+      "triangles": 7202,
+      "centroid": [
+        0.034544039929767345,
+        0.10055284616822385,
+        1.4271895543454725
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1537",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1107,
+      "triangles": 2206,
+      "centroid": [
+        -0.030436914448923123,
+        0.08880866615079822,
+        1.480788252110296
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1537M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1107,
+      "triangles": 2206,
+      "centroid": [
+        0.03179149291382702,
+        0.08880866511431275,
+        1.4807882419877367
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1538",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 902,
+      "triangles": 1912,
+      "centroid": [
+        -0.025138675947384517,
+        0.06408244259903277,
+        1.6077281474538494
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1538M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 902,
+      "triangles": 1912,
+      "centroid": [
+        0.02649317134095319,
+        0.06408271504908866,
+        1.6077285539813158
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1539",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1709,
+      "triangles": 3406,
+      "centroid": [
+        -0.015463779385191294,
+        0.06359259463354047,
+        1.5087532653942521
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1539M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1709,
+      "triangles": 3406,
+      "centroid": [
+        0.016818206352160955,
+        0.06359239935552327,
+        1.5087533686996693
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1540",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2562,
+      "triangles": 5176,
+      "centroid": [
+        -0.01496851918764051,
+        0.0883882728017791,
+        1.3644417869588716
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1540M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2562,
+      "triangles": 5176,
+      "centroid": [
+        0.01632292719698936,
+        0.08838828308922206,
+        1.364442432606062
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1541",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 6582,
+      "triangles": 13164,
+      "centroid": [
+        -0.043169733928751126,
+        0.08235983528871461,
+        1.178961661549478
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1541M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 6582,
+      "triangles": 13164,
+      "centroid": [
+        0.044524349645987914,
+        0.08235984791406416,
+        1.1789619770683224
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1542",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 4559,
+      "triangles": 9066,
+      "centroid": [
+        -0.04692209166102927,
+        0.07509593037064333,
+        1.4731476527866916
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1542M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 4559,
+      "triangles": 9066,
+      "centroid": [
+        0.04827658617600536,
+        0.0750960356372638,
+        1.473147838464508
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1543",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 600,
+      "triangles": 1192,
+      "centroid": [
+        -0.0024545678648246394,
+        0.07320882621531685,
+        1.5281353096167247
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1543M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 600,
+      "triangles": 1192,
+      "centroid": [
+        0.0038092486094683407,
+        0.07320904348045587,
+        1.5281353090206782
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1544",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 3727,
+      "triangles": 7422,
+      "centroid": [
+        -0.004389212485094204,
+        0.09103636315273861,
+        1.2975245524194818
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1544M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 3727,
+      "triangles": 7422,
+      "centroid": [
+        0.0057437606718038275,
+        0.09103633410606943,
+        1.2975247338082345
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1545",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 3914,
+      "triangles": 7808,
+      "centroid": [
+        -0.01850587663734963,
+        0.0691858838489836,
+        1.5426617067080708
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1545M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 3914,
+      "triangles": 7808,
+      "centroid": [
+        0.01986036973425164,
+        0.06918571846522524,
+        1.542661522350935
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1546",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 3140,
+      "triangles": 6256,
+      "centroid": [
+        -0.01458085161127815,
+        0.08600192652054274,
+        1.4562650297477746
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1546M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 3140,
+      "triangles": 6256,
+      "centroid": [
+        0.015935361545864467,
+        0.08600192528668862,
+        1.4562631093013059
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1547",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 723,
+      "triangles": 1362,
+      "centroid": [
+        -0.03235250966749663,
+        0.04361898792626782,
+        1.149242254048792
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1547M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 723,
+      "triangles": 1362,
+      "centroid": [
+        0.03370706750180464,
+        0.04361901776465803,
+        1.1492422253594194
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1548",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 884,
+      "triangles": 1736,
+      "centroid": [
+        -0.03410734684202331,
+        0.037382465726127044,
+        1.1228650078784286
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1548M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 884,
+      "triangles": 1736,
+      "centroid": [
+        0.035462008645901315,
+        0.03738240748896723,
+        1.1228653379964613
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1549",
+      "audit_identity": "musculature",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA32558",
+      "vertices": 582,
+      "triangles": 1152,
+      "centroid": [
+        -0.02327509444123742,
+        0.02244885550184604,
+        1.575331771906299
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1549M",
+      "audit_identity": "musculature",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA32558",
+      "vertices": 582,
+      "triangles": 1152,
+      "centroid": [
+        0.02462955709879648,
+        0.022448706573445054,
+        1.575331897874878
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1550",
+      "audit_identity": "musculature",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA32558",
+      "vertices": 399,
+      "triangles": 774,
+      "centroid": [
+        -0.000902038694521577,
+        0.06635161843104172,
+        1.1127235626517082
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1550M",
+      "audit_identity": "musculature",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA32558",
+      "vertices": 399,
+      "triangles": 774,
+      "centroid": [
+        0.0022566105631763654,
+        0.06635165489967305,
+        1.1127236089610815
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1551",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 207,
+      "triangles": 410,
+      "centroid": [
+        -0.0018659494058597748,
+        0.09027874358178337,
+        1.4744719157472326
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1551M",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 207,
+      "triangles": 410,
+      "centroid": [
+        0.003220726913043662,
+        0.09027945865755496,
+        1.4744711048937074
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1552",
+      "audit_identity": "musculature",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA32558",
+      "vertices": 623,
+      "triangles": 1210,
+      "centroid": [
+        -0.002271986352017724,
+        0.06402918389052105,
+        1.5637423234422172
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1552M",
+      "audit_identity": "musculature",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA32558",
+      "vertices": 623,
+      "triangles": 1210,
+      "centroid": [
+        0.0036266244776364718,
+        0.06402925630944689,
+        1.5637430459691473
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1553",
+      "audit_identity": "musculature",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA32558",
+      "vertices": 549,
+      "triangles": 1090,
+      "centroid": [
+        -0.02826319819482515,
+        0.027188182854261556,
+        1.570609290091718
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1553M",
+      "audit_identity": "musculature",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA32558",
+      "vertices": 549,
+      "triangles": 1090,
+      "centroid": [
+        0.029618295007987534,
+        0.027188428292536128,
+        1.5706092143102204
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1554",
+      "audit_identity": "transverse part of right trapezius",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA10474",
+      "vertices": 2260,
+      "triangles": 4460,
+      "centroid": [
+        -0.05235159734436833,
+        0.08876826097710734,
+        1.4895459070669865
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1554M",
+      "audit_identity": "transverse part of left trapezius",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA10474",
+      "vertices": 2260,
+      "triangles": 4460,
+      "centroid": [
+        0.0537059466077648,
+        0.08876841324093067,
+        1.489544550454722
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1555",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 327,
+      "triangles": 650,
+      "centroid": [
+        0.009024188531967113,
+        -0.04598987821933873,
+        1.580422425124259
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1556",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 344,
+      "triangles": 680,
+      "centroid": [
+        -0.010093371561852955,
+        -0.0442121232654033,
+        1.5811515530181486
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1557",
+      "audit_identity": "zone of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA10474",
+      "vertices": 982,
+      "triangles": 1960,
+      "centroid": [
+        0.010977783027937723,
+        0.020253187340405408,
+        1.494122789372252
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1558",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 6698,
+      "triangles": 13396,
+      "centroid": [
+        0.04459752696537953,
+        -0.017026486366008613,
+        1.5285794610548604
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1559",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 368,
+      "triangles": 732,
+      "centroid": [
+        0.0033135747766723594,
+        -0.03897477743094382,
+        1.5796838308806005
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1560",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 196,
+      "triangles": 392,
+      "centroid": [
+        0.01281400204978275,
+        -0.02339989386917073,
+        1.5816758871078491
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1561",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1949,
+      "triangles": 3898,
+      "centroid": [
+        0.0185954228991245,
+        0.01320906865624104,
+        1.5859104183284118
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1562",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 971,
+      "triangles": 1938,
+      "centroid": [
+        0.008838403705846083,
+        -0.03971127176275582,
+        1.586023457141173
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1563",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 524,
+      "triangles": 1044,
+      "centroid": [
+        0.023366246357576153,
+        0.049595624521260956,
+        1.6028796850724985
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1564",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 679,
+      "triangles": 1418,
+      "centroid": [
+        0.04072289642862789,
+        0.059629062676201515,
+        1.6344868919108508
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1565",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2681,
+      "triangles": 5358,
+      "centroid": [
+        0.06514898072810081,
+        0.025444374425195575,
+        1.5065445371280628
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1566",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 408,
+      "triangles": 816,
+      "centroid": [
+        0.015900110679235784,
+        0.018696808087292547,
+        1.6321922382887672
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1567",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 789,
+      "triangles": 1566,
+      "centroid": [
+        0.021088809699409714,
+        0.06740614075416697,
+        1.618714571754591
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1568",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 432,
+      "triangles": 860,
+      "centroid": [
+        0.01238683261396579,
+        0.07544139101756392,
+        1.6313283368945122
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1569",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 362,
+      "triangles": 720,
+      "centroid": [
+        0.03725392143988148,
+        0.031050059301212678,
+        1.6282360827066622
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1570",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1298,
+      "triangles": 2596,
+      "centroid": [
+        0.03606956353689471,
+        0.013004439891544163,
+        1.5262373342352398
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1571",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2039,
+      "triangles": 4074,
+      "centroid": [
+        0.03708446972609268,
+        0.02347007782261064,
+        1.5379854778029745
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1572",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1380,
+      "triangles": 2756,
+      "centroid": [
+        0.0486668494179089,
+        0.0312520379996926,
+        1.5166268933510434
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1573",
+      "audit_identity": "left sternocleidomastoid",
+      "audit_side": "left",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 5114,
+      "triangles": 10224,
+      "centroid": [
+        0.03997901900579274,
+        -0.0040288515758098095,
+        1.5460393512952966
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1574",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1541,
+      "triangles": 3078,
+      "centroid": [
+        0.013427407992369146,
+        -0.020406748703937785,
+        1.5083326558491226
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1575",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1297,
+      "triangles": 2590,
+      "centroid": [
+        0.013922757270035772,
+        -0.017508672504808025,
+        1.4873985862768697
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1576",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 630,
+      "triangles": 1248,
+      "centroid": [
+        0.02377095701586869,
+        -0.009956178610018613,
+        1.6000853020047385
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1577",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 722,
+      "triangles": 1436,
+      "centroid": [
+        0.014248107979203112,
+        -0.0101640664941951,
+        1.5649783350424094
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1578",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1125,
+      "triangles": 2242,
+      "centroid": [
+        0.03939817846732007,
+        0.012086182154896152,
+        1.6209042627546522
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1579",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1144,
+      "triangles": 2272,
+      "centroid": [
+        -0.03995306629010222,
+        0.011951929835418554,
+        1.6213256811553782
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1580",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 366,
+      "triangles": 728,
+      "centroid": [
+        -0.003716853383504385,
+        -0.036681032388425266,
+        1.5791082470143427
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1582",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1976,
+      "triangles": 3956,
+      "centroid": [
+        -0.01877414884336994,
+        0.013041775346298133,
+        1.586743727929679
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1583",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 980,
+      "triangles": 1956,
+      "centroid": [
+        -0.009006481355897955,
+        -0.03982926274516753,
+        1.5860947199013768
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1584",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 518,
+      "triangles": 1032,
+      "centroid": [
+        -0.020763827999784077,
+        0.04980004244415687,
+        1.6028524786809237
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1585",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 677,
+      "triangles": 1410,
+      "centroid": [
+        -0.03934117223918878,
+        0.0602860585174233,
+        1.6349570724777491
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1586",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2711,
+      "triangles": 5414,
+      "centroid": [
+        -0.06406332746358352,
+        0.02441449071086361,
+        1.507575623226623
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1587",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 6888,
+      "triangles": 13780,
+      "centroid": [
+        -0.04230549119383233,
+        -0.018474233050327957,
+        1.528576727060906
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1588",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 411,
+      "triangles": 804,
+      "centroid": [
+        -0.01570323748013272,
+        0.01860880947597053,
+        1.6314597350257447
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1589",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 788,
+      "triangles": 1572,
+      "centroid": [
+        -0.0210957957928175,
+        0.06697955679356447,
+        1.6211751222913036
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1590",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 439,
+      "triangles": 886,
+      "centroid": [
+        -0.010514060568986185,
+        0.07522447971554987,
+        1.6310804517502666
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1591",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 339,
+      "triangles": 674,
+      "centroid": [
+        -0.03739744798997335,
+        0.030406238110104143,
+        1.629547965210096
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1592",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1316,
+      "triangles": 2632,
+      "centroid": [
+        -0.035694886538225556,
+        0.013225250391609468,
+        1.5273905902829215
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1593",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2053,
+      "triangles": 4102,
+      "centroid": [
+        -0.03703950828914809,
+        0.023415255079502255,
+        1.539610554285881
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1594",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1391,
+      "triangles": 2778,
+      "centroid": [
+        -0.04928438595377611,
+        0.03137929099769279,
+        1.5162810781377412
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1595",
+      "audit_identity": "right sternocleidomastoid",
+      "audit_side": "right",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 5178,
+      "triangles": 10344,
+      "centroid": [
+        -0.040140908009822486,
+        -0.0025751447407149027,
+        1.5482023508680425
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1596",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1560,
+      "triangles": 3116,
+      "centroid": [
+        -0.012980508697159493,
+        -0.020625866875231554,
+        1.5072823287584842
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1597",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1308,
+      "triangles": 2608,
+      "centroid": [
+        -0.014135028792236182,
+        -0.01692559302379057,
+        1.4885884712960014
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1598",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 622,
+      "triangles": 1236,
+      "centroid": [
+        -0.024541566164870642,
+        -0.009085358991615652,
+        1.601381074002318
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1599",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 747,
+      "triangles": 1450,
+      "centroid": [
+        -0.013944017672175704,
+        -0.0085236094740613,
+        1.5638116144910554
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1600",
+      "audit_identity": "zone of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA10474",
+      "vertices": 1102,
+      "triangles": 2200,
+      "centroid": [
+        0.018003057229805417,
+        0.01728472143864621,
+        1.5903398067894952
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ1601",
+      "audit_identity": "zone of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA10474",
+      "vertices": 1503,
+      "triangles": 3002,
+      "centroid": [
+        0.006485642016118954,
+        0.014647069217975506,
+        1.556056853698558
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2542",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1043,
+      "triangles": 2082,
+      "centroid": [
+        0.025540590091596857,
+        0.08650108886845159,
+        0.9350238277836705
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2543",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 184,
+      "triangles": 364,
+      "centroid": [
+        0.008555299820094977,
+        0.07705915476316991,
+        0.8821316999585732
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2544",
+      "audit_identity": "zone of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA10474",
+      "vertices": 1919,
+      "triangles": 3846,
+      "centroid": [
+        0.03335845776705713,
+        0.061818858680915655,
+        0.9156142431910675
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2545",
+      "audit_identity": "zone of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA10474",
+      "vertices": 2335,
+      "triangles": 4670,
+      "centroid": [
+        0.020650775266344592,
+        0.053037773582080235,
+        0.9056653226979029
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2546",
+      "audit_identity": "zone of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA10474",
+      "vertices": 1795,
+      "triangles": 3618,
+      "centroid": [
+        0.019812763591029767,
+        0.0392283918572999,
+        0.8970363312444979
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2547",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1045,
+      "triangles": 2086,
+      "centroid": [
+        -0.024351935478096658,
+        0.08602639310525365,
+        0.935174206854624
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2548",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 186,
+      "triangles": 368,
+      "centroid": [
+        -0.007414633796239893,
+        0.07566540568105636,
+        0.8811345004266308
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2549",
+      "audit_identity": "zone of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA10474",
+      "vertices": 1946,
+      "triangles": 3864,
+      "centroid": [
+        -0.030344869472486408,
+        0.06203555124682611,
+        0.9150709754884059
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2550",
+      "audit_identity": "zone of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA10474",
+      "vertices": 2320,
+      "triangles": 4616,
+      "centroid": [
+        -0.01847057092226319,
+        0.05193931310926112,
+        0.9056945622738065
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2551",
+      "audit_identity": "zone of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA10474",
+      "vertices": 1913,
+      "triangles": 3638,
+      "centroid": [
+        -0.015535680415650165,
+        0.03141284742283057,
+        0.8973153544793375
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2738",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 4109,
+      "triangles": 8214,
+      "centroid": [
+        0.0031082052819677492,
+        -0.04141771885976431,
+        1.5936222864375205
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2739",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1446,
+      "triangles": 2888,
+      "centroid": [
+        0.009684020660773826,
+        -0.03528513973978133,
+        1.5858608861022305
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2740",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 3713,
+      "triangles": 7422,
+      "centroid": [
+        0.008666872914809604,
+        0.009394517622059572,
+        1.5549894308035759
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2741",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 6161,
+      "triangles": 12318,
+      "centroid": [
+        0.01862803609012914,
+        -0.0015853654087593584,
+        1.6369220924114294
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2742",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2954,
+      "triangles": 5904,
+      "centroid": [
+        0.01180289227038891,
+        -0.0007423100149801397,
+        1.594162286215726
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2743",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 20702,
+      "triangles": 41400,
+      "centroid": [
+        0.009110523099915252,
+        0.004852269132241922,
+        1.5789325355147523
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2745",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 4578,
+      "triangles": 9152,
+      "centroid": [
+        0.013346464239921812,
+        -0.0005774885378476829,
+        1.6322283378434836
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2746",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1638,
+      "triangles": 3268,
+      "centroid": [
+        0.023631763193069505,
+        0.0009742106987353589,
+        1.604202405800895
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2747",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 5353,
+      "triangles": 10702,
+      "centroid": [
+        0.014976915002221931,
+        -0.004828982144330491,
+        1.6237786956174605
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2748",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 6938,
+      "triangles": 13872,
+      "centroid": [
+        0.010954309318981942,
+        -0.00838118262473176,
+        1.6320840896945688
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2750",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 3799,
+      "triangles": 7594,
+      "centroid": [
+        -0.004019269763715705,
+        -0.041439936909394126,
+        1.593670519065405
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2751",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 1439,
+      "triangles": 2874,
+      "centroid": [
+        -0.009743397743806833,
+        -0.03477234518397509,
+        1.5856869668907552
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2752",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 3726,
+      "triangles": 7448,
+      "centroid": [
+        -0.00872990950053534,
+        0.009456117477198153,
+        1.5543079416213084
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2753",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 6158,
+      "triangles": 12312,
+      "centroid": [
+        -0.01852996721177127,
+        -0.0017251888830128912,
+        1.6368351725836627
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2754",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2958,
+      "triangles": 5912,
+      "centroid": [
+        -0.01165280956123699,
+        -0.0007762549982121364,
+        1.5939336437643823
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2755",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 20702,
+      "triangles": 41400,
+      "centroid": [
+        -0.009173682053544494,
+        0.004846338823099725,
+        1.5790906217395135
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2757",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 4578,
+      "triangles": 9152,
+      "centroid": [
+        -0.013416589286370392,
+        -0.0005347972892126152,
+        1.6326424207370736
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2758",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 12878,
+      "triangles": 25752,
+      "centroid": [
+        -0.022348796849424406,
+        0.0012473095757993332,
+        1.596117757088391
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2759",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 5353,
+      "triangles": 10702,
+      "centroid": [
+        -0.01506391174970775,
+        -0.004770061714905977,
+        1.6233379127332124
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2760",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 6938,
+      "triangles": 13872,
+      "centroid": [
+        -0.011029190051334603,
+        -0.008437259536745238,
+        1.6318956162339158
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2762",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 818,
+      "triangles": 1632,
+      "centroid": [
+        -8.005647320263659e-05,
+        0.0009102763580306185,
+        1.6239287382524579
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2774",
+      "audit_identity": "zone of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA10474",
+      "vertices": 2153,
+      "triangles": 4510,
+      "centroid": [
+        0.006775742880325233,
+        -0.0033667892258458345,
+        1.5710800296475154
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2778",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 3109,
+      "triangles": 6214,
+      "centroid": [
+        0.01013950790356798,
+        -0.0007148049588436914,
+        1.5477914652973175
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2780",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 3152,
+      "triangles": 6304,
+      "centroid": [
+        0.0005099194947213268,
+        0.0061918086872251735,
+        1.5542781062915845
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2781",
+      "audit_identity": "zone of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA10474",
+      "vertices": 2792,
+      "triangles": 5580,
+      "centroid": [
+        0.010805903253129504,
+        -0.00031719152687384607,
+        1.5415588806898342
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2782",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2423,
+      "triangles": 4842,
+      "centroid": [
+        0.005889682237259134,
+        0.006612991242662988,
+        1.5432880651936076
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2783",
+      "audit_identity": "zone of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA10474",
+      "vertices": 1637,
+      "triangles": 3270,
+      "centroid": [
+        0.007295425435404134,
+        -0.008515467018710544,
+        1.5415582878966847
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2784",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 3048,
+      "triangles": 6092,
+      "centroid": [
+        0.005163977399750752,
+        -0.003645050908803533,
+        1.5544391557222277
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2785",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 4645,
+      "triangles": 9290,
+      "centroid": [
+        0.005579631097642263,
+        -0.005006106104365372,
+        1.5652351204109398
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2788",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 578,
+      "triangles": 1152,
+      "centroid": [
+        0.0027492907334112637,
+        -0.005361698451137253,
+        1.5518370639906622
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2791",
+      "audit_identity": "zone of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA10474",
+      "vertices": 2200,
+      "triangles": 4366,
+      "centroid": [
+        -0.006545152632223273,
+        -0.0031884401532228037,
+        1.5706756896322425
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2796",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 3101,
+      "triangles": 6198,
+      "centroid": [
+        -0.01009572553140541,
+        -0.0007021852228067683,
+        1.547863138948322
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2798",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 3042,
+      "triangles": 6084,
+      "centroid": [
+        -0.00047998787096911847,
+        0.006163731995629567,
+        1.5542746499758813
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2799",
+      "audit_identity": "zone of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA10474",
+      "vertices": 2785,
+      "triangles": 5566,
+      "centroid": [
+        -0.010981919815934379,
+        -6.8653878119649e-05,
+        1.541731478752739
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2800",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 2408,
+      "triangles": 4812,
+      "centroid": [
+        -0.00586965059335738,
+        0.006571682952549401,
+        1.543400290895538
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2801",
+      "audit_identity": "zone of muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA10474",
+      "vertices": 1628,
+      "triangles": 3232,
+      "centroid": [
+        -0.007333395057240575,
+        -0.008461293275582465,
+        1.541687640057149
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2802",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 3048,
+      "triangles": 6092,
+      "centroid": [
+        -0.00527521396150386,
+        -0.003222906352420736,
+        1.5545436346859445
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2803",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 5325,
+      "triangles": 10650,
+      "centroid": [
+        -0.005595487509321678,
+        -0.005098103764696194,
+        1.565182874034828
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2806",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 576,
+      "triangles": 1148,
+      "centroid": [
+        -0.0027260450915491674,
+        -0.005988610011008354,
+        1.5518275602824159
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ2809",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 3294,
+      "triangles": 6580,
+      "centroid": [
+        -6.220984481392277e-05,
+        0.004732126464293144,
+        1.554315659517799
+      ],
+      "source_modifiers": []
+    },
+    {
+      "object": "FJ3131",
+      "audit_identity": "muscle organ",
+      "audit_side": "see original FMA tables",
+      "audit_role": "muscle",
+      "audit_orange": false,
+      "audit_source": "BodyParts3D",
+      "fma": "FMA5022",
+      "vertices": 34266,
+      "triangles": 68522,
+      "centroid": [
+        -0.006313260960205948,
+        -0.0032000271077714517,
+        1.2480360382507625
+      ],
+      "source_modifiers": []
+    }
+  ],
+  "excluded": [],
+  "counts": {
+    "objects": 425,
+    "vertices": 1205641,
+    "triangles": 2404604
+  },
+  "orange_selection": [
+    "FJ1446M",
+    "FJ1447M",
+    "FJ1464M"
+  ]
+}

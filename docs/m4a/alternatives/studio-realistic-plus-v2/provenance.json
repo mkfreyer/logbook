@@ -1,0 +1,47 @@
+{
+  "source": "User-validated B+ from commit 536f047",
+  "source_blend_sha256": "0a57656c3c496a28587d84a111762063b1f5dfd5882cbf724151f974c15a0309",
+  "derived_file_sha256": "2d256e5efea5e294cb21ce564e32f5bc97ae942968cda0b266f42956afa9f2d7",
+  "shape_key_sha256": "3736fa727ee09c710632aef7b76a2874a50aa3ba96a639c30e93865943cd634a",
+  "reproduction_shape_key_sha256": "3736fa727ee09c710632aef7b76a2874a50aa3ba96a639c30e93865943cd634a",
+  "reproduction_identical": true,
+  "source_shape_keys_preserved": true,
+  "new_variant_visual_approval_pending": true,
+  "reference": {
+    "source": "image attached to user prompt requesting further premium styling",
+    "visually_examined": true,
+    "comparison": "qualitative volume and style reference; not a matched camera, no back or side view inferred",
+    "image_not_regenerated_or_redistributed": true
+  },
+  "licence": "CC0, derived from Dan Ulrich / Blender Studio Human Base Meshes v1.4.1; embedded notices retained",
+  "new_vertices": 0,
+  "new_faces": 0,
+  "material_lighting_and_camera_unchanged": true,
+  "full_muscle_segmentation_performed": false,
+  "application_integrated": false,
+  "sqlite_operations_performed": false,
+  "m4b_started": false,
+  "astra_used": false,
+  "legacy_validator_mode_regression_passed": true,
+  "orientation_check": "native-faces; old diagonals and inherited native concavities retained in geometry-validation.json",
+  "tool_sha256": {
+    "generate_bplus_v2.py": "4bf59d2f867a5f8517f5c3ff0a0d5abd8848d2e1f43626c105ee7341b253a9cb",
+    "generate_bplus.py": "a54fa1555589f79fbb80eb4a5f91b38276234392132278d1ace236e45d70e846",
+    "validate_bplus.py": "8f23a941665a29b78f60533710e0dc51ab5b232498e8dcd0f547115fffabbb8a",
+    "render_comparison.py": "c86aca145d4ff5e5bd74d01c3dd773ca34b61c646bd8dfd718493fed1c8d95a9",
+    "build_bplus_sheet.py": "3204f328d16625a7482b0dafd9ea3425880bda46313e43803e3b20daa9800b5a"
+  },
+  "validation": {
+    "all_previous_published_alternative_artifact_files_byte_identical": 39,
+    "comparison_frames": 8,
+    "new_final_renders_visually_inspected": 4,
+    "exact_common_normalization_and_protocol_verified": true,
+    "independent_shape_key_reproduction_identical": true,
+    "legacy_validator_mode_passed": true,
+    "geometry_report": "geometry-validation.json",
+    "python_json_links_verified": true,
+    "application_tests_run_locally": false,
+    "sheets_pixel_reproduction_identical": true,
+    "legacy_sheet_default_arguments_identical": true
+  }
+}

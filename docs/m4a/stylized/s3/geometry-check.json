@@ -1,0 +1,3428 @@
+{
+  "variant": "s3",
+  "source_blend_sha256": "5c1a608de5f89ecff4036bf892bdcc0677b4a15cb8638a788f609554037753df",
+  "visible_triangles": 107862,
+  "visible_objects": 111,
+  "bounds_min": [
+    -0.49476030468940735,
+    -0.18979059159755707,
+    0.004575690720230341
+  ],
+  "bounds_max": [
+    0.49431461095809937,
+    0.15428388118743896,
+    1.8011600971221924
+  ],
+  "surface_zone_ids": [
+    "adductors.left",
+    "adductors.right",
+    "biceps.left",
+    "biceps.right",
+    "brachialis.left",
+    "brachialis.right",
+    "calf.left",
+    "calf.right",
+    "deltoid.left",
+    "deltoid.right",
+    "fibularis.left",
+    "fibularis.right",
+    "forearm-extensors.left",
+    "forearm-extensors.right",
+    "forearm-flexors.left",
+    "forearm-flexors.right",
+    "gluteal.left",
+    "gluteal.right",
+    "hamstrings-lateral.left",
+    "hamstrings-lateral.right",
+    "hamstrings-medial.left",
+    "hamstrings-medial.right",
+    "hip-abductors.left",
+    "hip-abductors.right",
+    "latissimus.left",
+    "latissimus.right",
+    "neck.left",
+    "neck.right",
+    "oblique.left",
+    "oblique.right",
+    "pectoralis.left",
+    "pectoralis.right",
+    "quadriceps-lateral.left",
+    "quadriceps-lateral.right",
+    "quadriceps-medial.left",
+    "quadriceps-medial.right",
+    "quadriceps-rectus.left",
+    "quadriceps-rectus.right",
+    "rectus-abdominis.left",
+    "rectus-abdominis.right",
+    "sartorius.left",
+    "sartorius.right",
+    "scapular.left",
+    "scapular.right",
+    "serratus.left",
+    "serratus.right",
+    "soleus.left",
+    "soleus.right",
+    "tibialis.left",
+    "tibialis.right",
+    "trapezius.left",
+    "trapezius.right",
+    "triceps.left",
+    "triceps.right"
+  ],
+  "objects": [
+    {
+      "object": "Abdominal part of left pectoralis major",
+      "zone": "pectoralis.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 272,
+      "triangles": 540,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        272
+      ],
+      "minimum_double_area_m2": 2.713045852601563e-06,
+      "signed_volume_m3": 6.299787804053307e-05,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.053891249001026154,
+        -0.13191884756088257,
+        1.2420380115509033
+      ],
+      "bounds_max": [
+        0.2194117158651352,
+        0.026124102994799614,
+        1.4228311777114868
+      ]
+    },
+    {
+      "object": "Acromial part of left deltoid",
+      "zone": "deltoid.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 325,
+      "triangles": 646,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        325
+      ],
+      "minimum_double_area_m2": 1.566681499048882e-06,
+      "signed_volume_m3": 0.00019356516964502723,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.17296664416790009,
+        -0.005598561838269234,
+        1.3534862995147705
+      ],
+      "bounds_max": [
+        0.29357045888900757,
+        0.07329225540161133,
+        1.4916683435440063
+      ]
+    },
+    {
+      "object": "Ascending part of left trapezius",
+      "zone": "trapezius.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 685,
+      "triangles": 1370,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 10,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 2,
+      "component_vertex_counts": [
+        378,
+        307
+      ],
+      "minimum_double_area_m2": 1.8187850266958675e-08,
+      "signed_volume_m3": 0.0006275919639672819,
+      "euler_characteristic": 6,
+      "bounds_min": [
+        -0.009641176089644432,
+        0.06276921182870865,
+        1.1866027116775513
+      ],
+      "bounds_max": [
+        0.1809729039669037,
+        0.15428388118743896,
+        1.490878701210022
+      ]
+    },
+    {
+      "object": "Clavicular part of left deltoid",
+      "zone": "deltoid.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 331,
+      "triangles": 848,
+      "boundary_edges": 40,
+      "nonmanifold_edges": 204,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        331
+      ],
+      "minimum_double_area_m2": 9.080668652120426e-09,
+      "signed_volume_m3": 0.00022129310365559594,
+      "euler_characteristic": -1,
+      "bounds_min": [
+        0.1044858768582344,
+        -0.028841452673077583,
+        1.352581262588501
+      ],
+      "bounds_max": [
+        0.2682747542858124,
+        0.03435384854674339,
+        1.4925696849822998
+      ]
+    },
+    {
+      "object": "Clavicular part of left pectoralis major",
+      "zone": "pectoralis.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 425,
+      "triangles": 844,
+      "boundary_edges": 4,
+      "nonmanifold_edges": 8,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        425
+      ],
+      "minimum_double_area_m2": 6.251048272080486e-07,
+      "signed_volume_m3": 0.00022295964397849038,
+      "euler_characteristic": 3,
+      "bounds_min": [
+        0.027776146307587624,
+        -0.05548090860247612,
+        1.3774077892303467
+      ],
+      "bounds_max": [
+        0.23822258412837982,
+        0.026789188385009766,
+        1.4837727546691895
+      ]
+    },
+    {
+      "object": "Descending part of left trapezius",
+      "zone": "trapezius.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 396,
+      "triangles": 788,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        396
+      ],
+      "minimum_double_area_m2": 1.4483588024705226e-06,
+      "signed_volume_m3": 0.00018222011258950957,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.008057937026023865,
+        0.002516377018764615,
+        1.4875717163085938
+      ],
+      "bounds_max": [
+        0.15822508931159973,
+        0.11029908061027527,
+        1.663403868675232
+      ]
+    },
+    {
+      "object": "Humeral head of left flexor carpi ulnaris",
+      "zone": "forearm-flexors.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 343,
+      "triangles": 698,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 4,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        343
+      ],
+      "minimum_double_area_m2": 3.8529284884082296e-07,
+      "signed_volume_m3": 3.969400515094286e-05,
+      "euler_characteristic": -2,
+      "bounds_min": [
+        0.2739713788032532,
+        -0.029488153755664825,
+        0.9557430148124695
+      ],
+      "bounds_max": [
+        0.38704913854599,
+        0.05066555738449097,
+        1.1888822317123413
+      ]
+    },
+    {
+      "object": "Humeral head of left pronator teres",
+      "zone": "forearm-flexors.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 264,
+      "triangles": 574,
+      "boundary_edges": 12,
+      "nonmanifold_edges": 68,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        264
+      ],
+      "minimum_double_area_m2": 3.946619117251998e-08,
+      "signed_volume_m3": 7.97827422733461e-05,
+      "euler_characteristic": 7,
+      "bounds_min": [
+        0.27862051129341125,
+        -0.0026960379909723997,
+        1.0679415464401245
+      ],
+      "bounds_max": [
+        0.39135533571243286,
+        0.04226488247513771,
+        1.206611156463623
+      ]
+    },
+    {
+      "object": "Lateral head of left gastrocnemius",
+      "zone": "calf.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 445,
+      "triangles": 886,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        445
+      ],
+      "minimum_double_area_m2": 3.7526808900985095e-06,
+      "signed_volume_m3": 0.0004643312850381844,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.07834558933973312,
+        0.025735603645443916,
+        0.21801936626434326
+      ],
+      "bounds_max": [
+        0.15995590388774872,
+        0.11896520107984543,
+        0.5244439244270325
+      ]
+    },
+    {
+      "object": "Lateral head of left triceps brachii",
+      "zone": "triceps.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 353,
+      "triangles": 702,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        353
+      ],
+      "minimum_double_area_m2": 1.5376319690866012e-06,
+      "signed_volume_m3": 0.0002740491261016321,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.22064827382564545,
+        0.03872763365507126,
+        1.1798336505889893
+      ],
+      "bounds_max": [
+        0.31946247816085815,
+        0.10121377557516098,
+        1.4377793073654175
+      ]
+    },
+    {
+      "object": "Left adductor longus",
+      "zone": "adductors.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 546,
+      "triangles": 1100,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 8,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 2,
+      "component_vertex_counts": [
+        298,
+        248
+      ],
+      "minimum_double_area_m2": 1.6788758582633417e-07,
+      "signed_volume_m3": 0.0006190266335495284,
+      "euler_characteristic": 4,
+      "bounds_min": [
+        0.023200541734695435,
+        -0.03822675719857216,
+        0.6133222579956055
+      ],
+      "bounds_max": [
+        0.13262838125228882,
+        0.022061996161937714,
+        0.9246970415115356
+      ]
+    },
+    {
+      "object": "Left adductor magnus",
+      "zone": "adductors.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 822,
+      "triangles": 1638,
+      "boundary_edges": 2,
+      "nonmanifold_edges": 4,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        822
+      ],
+      "minimum_double_area_m2": 1.484563698431393e-06,
+      "signed_volume_m3": 0.0019317583289697147,
+      "euler_characteristic": 3,
+      "bounds_min": [
+        0.018709417432546616,
+        -0.019821828231215477,
+        0.477275550365448
+      ],
+      "bounds_max": [
+        0.14943058788776398,
+        0.058443911373615265,
+        0.8982136845588684
+      ]
+    },
+    {
+      "object": "Left brachialis",
+      "zone": "brachialis.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 343,
+      "triangles": 682,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        343
+      ],
+      "minimum_double_area_m2": 2.343945395793269e-06,
+      "signed_volume_m3": 0.00017286173384381944,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.24692685902118683,
+        0.017309138551354408,
+        1.1397432088851929
+      ],
+      "bounds_max": [
+        0.33377552032470703,
+        0.05195486173033714,
+        1.3651468753814697
+      ]
+    },
+    {
+      "object": "Left brachioradialis",
+      "zone": "forearm-extensors.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 483,
+      "triangles": 964,
+      "boundary_edges": 2,
+      "nonmanifold_edges": 4,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        483
+      ],
+      "minimum_double_area_m2": 3.258945097232458e-07,
+      "signed_volume_m3": 7.522988338502329e-05,
+      "euler_characteristic": 1,
+      "bounds_min": [
+        0.28627809882164,
+        -0.02447836846113205,
+        0.9664444327354431
+      ],
+      "bounds_max": [
+        0.44086727499961853,
+        0.05740978941321373,
+        1.294610857963562
+      ]
+    },
+    {
+      "object": "Left coracobrachialis",
+      "zone": "brachialis.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 204,
+      "triangles": 404,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        204
+      ],
+      "minimum_double_area_m2": 7.807388435251854e-07,
+      "signed_volume_m3": 4.73068430616085e-05,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.15892183780670166,
+        -0.0048462520353496075,
+        1.3151456117630005
+      ],
+      "bounds_max": [
+        0.25626251101493835,
+        0.044257812201976776,
+        1.463425636291504
+      ]
+    },
+    {
+      "object": "Left extensor carpi radialis brevis",
+      "zone": "forearm-extensors.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 331,
+      "triangles": 660,
+      "boundary_edges": 4,
+      "nonmanifold_edges": 8,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        331
+      ],
+      "minimum_double_area_m2": 6.006987283779716e-07,
+      "signed_volume_m3": 3.628761978554376e-05,
+      "euler_characteristic": 1,
+      "bounds_min": [
+        0.32092607021331787,
+        -0.011267116293311119,
+        0.9647506475448608
+      ],
+      "bounds_max": [
+        0.42903709411621094,
+        0.06153421476483345,
+        1.2274712324142456
+      ]
+    },
+    {
+      "object": "Left extensor carpi radialis longus",
+      "zone": "forearm-extensors.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 355,
+      "triangles": 706,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        355
+      ],
+      "minimum_double_area_m2": 5.787227076271381e-07,
+      "signed_volume_m3": 4.088845606676578e-05,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.30981531739234924,
+        -0.0131116583943367,
+        0.9650498628616333
+      ],
+      "bounds_max": [
+        0.43272924423217773,
+        0.060187969356775284,
+        1.251058578491211
+      ]
+    },
+    {
+      "object": "Left extensor carpi ulnaris",
+      "zone": "forearm-extensors.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 279,
+      "triangles": 594,
+      "boundary_edges": 16,
+      "nonmanifold_edges": 64,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        279
+      ],
+      "minimum_double_area_m2": 4.3250165194001624e-08,
+      "signed_volume_m3": 3.449624200094104e-05,
+      "euler_characteristic": 0,
+      "bounds_min": [
+        0.3221597969532013,
+        -0.006884885486215353,
+        0.9571955800056458
+      ],
+      "bounds_max": [
+        0.3918791711330414,
+        0.06385841965675354,
+        1.2078406810760498
+      ]
+    },
+    {
+      "object": "Left extensor carpi ulnaris (2)",
+      "zone": "forearm-extensors.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 229,
+      "triangles": 456,
+      "boundary_edges": 4,
+      "nonmanifold_edges": 8,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        229
+      ],
+      "minimum_double_area_m2": 2.366430595671028e-07,
+      "signed_volume_m3": 1.714476711460486e-05,
+      "euler_characteristic": 1,
+      "bounds_min": [
+        0.34292319416999817,
+        -0.00885495450347662,
+        0.9567123055458069
+      ],
+      "bounds_max": [
+        0.39102575182914734,
+        0.04239976778626442,
+        1.105773687362671
+      ]
+    },
+    {
+      "object": "Left extensor digitorum",
+      "zone": "forearm-extensors.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 357,
+      "triangles": 710,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        357
+      ],
+      "minimum_double_area_m2": 6.002373819911366e-07,
+      "signed_volume_m3": 4.119270604661043e-05,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.32662615180015564,
+        -0.0039057349786162376,
+        0.959295392036438
+      ],
+      "bounds_max": [
+        0.4156036972999573,
+        0.07052931189537048,
+        1.2098346948623657
+      ]
+    },
+    {
+      "object": "Left external oblique",
+      "zone": "oblique.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 763,
+      "triangles": 1522,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        763
+      ],
+      "minimum_double_area_m2": 2.2336103102346802e-06,
+      "signed_volume_m3": 0.0008719630089090987,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.061635542660951614,
+        -0.14598090946674347,
+        1.0102205276489258
+      ],
+      "bounds_max": [
+        0.16399072110652924,
+        0.09796346724033356,
+        1.3548698425292969
+      ]
+    },
+    {
+      "object": "Left fibularis longus",
+      "zone": "fibularis.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 449,
+      "triangles": 898,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        449
+      ],
+      "minimum_double_area_m2": 2.192218981182125e-06,
+      "signed_volume_m3": 6.510673830055368e-05,
+      "euler_characteristic": 0,
+      "bounds_min": [
+        0.12650808691978455,
+        0.029395850375294685,
+        0.14019864797592163
+      ],
+      "bounds_max": [
+        0.17005886137485504,
+        0.07665467262268066,
+        0.44958147406578064
+      ]
+    },
+    {
+      "object": "Left flexor carpi radialis",
+      "zone": "forearm-flexors.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 343,
+      "triangles": 682,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        343
+      ],
+      "minimum_double_area_m2": 1.4568929217265923e-06,
+      "signed_volume_m3": 3.819871281679868e-05,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.2761954069137573,
+        -0.03603312000632286,
+        0.9623591899871826
+      ],
+      "bounds_max": [
+        0.41522783041000366,
+        0.036733478307724,
+        1.1956723928451538
+      ]
+    },
+    {
+      "object": "Left flexor digitorum superficialis",
+      "zone": "forearm-flexors.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 414,
+      "triangles": 834,
+      "boundary_edges": 2,
+      "nonmanifold_edges": 12,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        414
+      ],
+      "minimum_double_area_m2": 1.236350026760146e-07,
+      "signed_volume_m3": 5.459309131905702e-05,
+      "euler_characteristic": 1,
+      "bounds_min": [
+        0.2723064720630646,
+        -0.036145735532045364,
+        0.9590669274330139
+      ],
+      "bounds_max": [
+        0.4066692292690277,
+        0.04307243227958679,
+        1.1904244422912598
+      ]
+    },
+    {
+      "object": "Left flexor digitorum superficialis (2)",
+      "zone": "forearm-flexors.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 302,
+      "triangles": 600,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        302
+      ],
+      "minimum_double_area_m2": 1.6909180236568694e-06,
+      "signed_volume_m3": 2.7990237923791896e-05,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.337313711643219,
+        -0.035572197288274765,
+        0.9605071544647217
+      ],
+      "bounds_max": [
+        0.4053334593772888,
+        0.02545374259352684,
+        1.1398836374282837
+      ]
+    },
+    {
+      "object": "Left gluteus maximus",
+      "zone": "gluteal.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 572,
+      "triangles": 1140,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        572
+      ],
+      "minimum_double_area_m2": 1.9744868554014836e-06,
+      "signed_volume_m3": 0.000775055427092068,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.022667167708277702,
+        0.02918994426727295,
+        0.7824646234512329
+      ],
+      "bounds_max": [
+        0.18798503279685974,
+        0.15010099112987518,
+        1.0591650009155273
+      ]
+    },
+    {
+      "object": "Left gluteus medius",
+      "zone": "gluteal.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 416,
+      "triangles": 828,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        416
+      ],
+      "minimum_double_area_m2": 2.6142728779246808e-06,
+      "signed_volume_m3": 0.0004229135688662602,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.05809910595417023,
+        -0.004474639892578125,
+        0.9100360870361328
+      ],
+      "bounds_max": [
+        0.189498633146286,
+        0.10573399811983109,
+        1.0782397985458374
+      ]
+    },
+    {
+      "object": "Left gracilis",
+      "zone": "adductors.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 614,
+      "triangles": 1228,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 4,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 2,
+      "component_vertex_counts": [
+        352,
+        262
+      ],
+      "minimum_double_area_m2": 1.7791223880021058e-07,
+      "signed_volume_m3": 0.000531487825935554,
+      "euler_characteristic": 4,
+      "bounds_min": [
+        0.018226535990834236,
+        -0.03588452562689781,
+        0.3765454590320587
+      ],
+      "bounds_max": [
+        0.09869835525751114,
+        0.05084391310811043,
+        0.9182896018028259
+      ]
+    },
+    {
+      "object": "Left infraspinatus muscle",
+      "zone": "scapular.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 466,
+      "triangles": 926,
+      "boundary_edges": 4,
+      "nonmanifold_edges": 8,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        466
+      ],
+      "minimum_double_area_m2": 1.2926892276348003e-07,
+      "signed_volume_m3": 0.0004298356879537114,
+      "euler_characteristic": 3,
+      "bounds_min": [
+        0.057497307658195496,
+        0.028263138607144356,
+        1.3501298427581787
+      ],
+      "bounds_max": [
+        0.23208986222743988,
+        0.1306677758693695,
+        1.4800938367843628
+      ]
+    },
+    {
+      "object": "Left latissimus dorsi",
+      "zone": "latissimus.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 1200,
+      "triangles": 2380,
+      "boundary_edges": 2,
+      "nonmanifold_edges": 6,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 5,
+      "component_vertex_counts": [
+        533,
+        249,
+        227,
+        96,
+        95
+      ],
+      "minimum_double_area_m2": 1.1254023486387225e-06,
+      "signed_volume_m3": 0.0004387980920355269,
+      "euler_characteristic": 11,
+      "bounds_min": [
+        -0.017871208488941193,
+        0.024770228192210197,
+        0.9862332344055176
+      ],
+      "bounds_max": [
+        0.22386866807937622,
+        0.14750955998897552,
+        1.4086477756500244
+      ]
+    },
+    {
+      "object": "Authored rounded rectus plates over source",
+      "zone": "rectus-abdominis.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 567,
+      "triangles": 1130,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 2,
+      "component_vertex_counts": [
+        501,
+        66
+      ],
+      "minimum_double_area_m2": 6.110244529755028e-06,
+      "signed_volume_m3": 0.0004381915346100112,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.0021902956068515778,
+        -0.14625899493694305,
+        1.0102477073669434
+      ],
+      "bounds_max": [
+        0.09782076627016068,
+        -0.03520066663622856,
+        1.320495843887329
+      ]
+    },
+    {
+      "object": "Left rectus femoris",
+      "zone": "quadriceps-rectus.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 779,
+      "triangles": 1568,
+      "boundary_edges": 2,
+      "nonmanifold_edges": 6,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        779
+      ],
+      "minimum_double_area_m2": 2.369025024938929e-06,
+      "signed_volume_m3": 0.001402896733206678,
+      "euler_characteristic": -3,
+      "bounds_min": [
+        0.08561684191226959,
+        -0.06558630615472794,
+        0.40913307666778564
+      ],
+      "bounds_max": [
+        0.2020764797925949,
+        0.02244553714990616,
+        0.9951542615890503
+      ]
+    },
+    {
+      "object": "Left sartorius",
+      "zone": "sartorius.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 634,
+      "triangles": 1286,
+      "boundary_edges": 20,
+      "nonmanifold_edges": 56,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        634
+      ],
+      "minimum_double_area_m2": 1.544590337239194e-08,
+      "signed_volume_m3": 0.0003904123498372372,
+      "euler_characteristic": -1,
+      "bounds_min": [
+        0.026734942570328712,
+        -0.05053006485104561,
+        0.36580565571784973
+      ],
+      "bounds_max": [
+        0.15380866825580597,
+        0.027220100164413452,
+        1.0274114608764648
+      ]
+    },
+    {
+      "object": "Left semimembranosus",
+      "zone": "hamstrings-medial.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 734,
+      "triangles": 1462,
+      "boundary_edges": 2,
+      "nonmanifold_edges": 4,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        734
+      ],
+      "minimum_double_area_m2": 3.562843084880177e-08,
+      "signed_volume_m3": 0.001338937401392983,
+      "euler_characteristic": 3,
+      "bounds_min": [
+        0.018260138109326363,
+        -0.002163487719371915,
+        0.40908482670783997
+      ],
+      "bounds_max": [
+        0.10472556203603745,
+        0.08120405673980713,
+        0.8722646236419678
+      ]
+    },
+    {
+      "object": "Left semitendinosus",
+      "zone": "hamstrings-medial.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 589,
+      "triangles": 1176,
+      "boundary_edges": 4,
+      "nonmanifold_edges": 12,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        589
+      ],
+      "minimum_double_area_m2": 1.7812332248897393e-08,
+      "signed_volume_m3": 0.0005949187572530291,
+      "euler_characteristic": 5,
+      "bounds_min": [
+        0.03882644325494766,
+        0.0038274971302598715,
+        0.37449395656585693
+      ],
+      "bounds_max": [
+        0.09608573466539383,
+        0.09676460921764374,
+        0.8824350237846375
+      ]
+    },
+    {
+      "object": "Left serratus anterior",
+      "zone": "serratus.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 633,
+      "triangles": 1262,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        633
+      ],
+      "minimum_double_area_m2": 2.3439585788111905e-06,
+      "signed_volume_m3": 0.0006443020342968711,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.06172158196568489,
+        -0.08481036871671677,
+        1.2111799716949463
+      ],
+      "bounds_max": [
+        0.1824461817741394,
+        0.14059293270111084,
+        1.4996815919876099
+      ]
+    },
+    {
+      "object": "Left soleus",
+      "zone": "soleus.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 738,
+      "triangles": 1470,
+      "boundary_edges": 2,
+      "nonmanifold_edges": 5,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        738
+      ],
+      "minimum_double_area_m2": 3.4767183380637433e-07,
+      "signed_volume_m3": 0.001364457808554167,
+      "euler_characteristic": 4,
+      "bounds_min": [
+        0.042758677154779434,
+        0.004511407110840082,
+        0.1111762672662735
+      ],
+      "bounds_max": [
+        0.1594182401895523,
+        0.08841025829315186,
+        0.4553339183330536
+      ]
+    },
+    {
+      "object": "Left sternocleidomastoid",
+      "zone": "neck.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 301,
+      "triangles": 598,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        301
+      ],
+      "minimum_double_area_m2": 8.18784488089018e-07,
+      "signed_volume_m3": 0.00011587255936980352,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -1.7541755369165912e-05,
+        -0.06179754436016083,
+        1.4480561017990112
+      ],
+      "bounds_max": [
+        0.07540788501501083,
+        0.07614731788635254,
+        1.6601535081863403
+      ]
+    },
+    {
+      "object": "Left tensor fasciae latae",
+      "zone": "hip-abductors.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 370,
+      "triangles": 734,
+      "boundary_edges": 4,
+      "nonmanifold_edges": 8,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        370
+      ],
+      "minimum_double_area_m2": 3.9003009010054187e-07,
+      "signed_volume_m3": 0.00021834163820244333,
+      "euler_characteristic": 3,
+      "bounds_min": [
+        0.14757488667964935,
+        -0.03938695415854454,
+        0.8764868378639221
+      ],
+      "bounds_max": [
+        0.20128099620342255,
+        0.015855327248573303,
+        1.0443599224090576
+      ]
+    },
+    {
+      "object": "Left teres major",
+      "zone": "scapular.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 348,
+      "triangles": 690,
+      "boundary_edges": 4,
+      "nonmanifold_edges": 8,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        348
+      ],
+      "minimum_double_area_m2": 8.419042163392484e-08,
+      "signed_volume_m3": 0.00017437016234241775,
+      "euler_characteristic": 3,
+      "bounds_min": [
+        0.10151390731334686,
+        0.020681237801909447,
+        1.3287113904953003
+      ],
+      "bounds_max": [
+        0.2135017365217209,
+        0.12587013840675354,
+        1.4312596321105957
+      ]
+    },
+    {
+      "object": "Left teres minor",
+      "zone": "scapular.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 223,
+      "triangles": 442,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        223
+      ],
+      "minimum_double_area_m2": 1.1016868988488957e-06,
+      "signed_volume_m3": 6.945059032637426e-05,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.12758611142635345,
+        0.026186373084783554,
+        1.3635601997375488
+      ],
+      "bounds_max": [
+        0.23179388046264648,
+        0.10688444972038269,
+        1.4628312587738037
+      ]
+    },
+    {
+      "object": "Left tibialis anterior",
+      "zone": "tibialis.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 512,
+      "triangles": 1020,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        512
+      ],
+      "minimum_double_area_m2": 1.3415961901598374e-06,
+      "signed_volume_m3": 8.613714674069354e-05,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.10803210735321045,
+        -0.014776523225009441,
+        0.13994500041007996
+      ],
+      "bounds_max": [
+        0.15903499722480774,
+        0.03898067772388458,
+        0.453010231256485
+      ]
+    },
+    {
+      "object": "Left vastus lateralis",
+      "zone": "quadriceps-lateral.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 602,
+      "triangles": 1200,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        602
+      ],
+      "minimum_double_area_m2": 7.071034518527337e-06,
+      "signed_volume_m3": 0.0010724928309932384,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.11249668896198273,
+        -0.04795212298631668,
+        0.4127946197986603
+      ],
+      "bounds_max": [
+        0.2093127965927124,
+        0.05914151296019554,
+        0.9072643518447876
+      ]
+    },
+    {
+      "object": "Left vastus medialis",
+      "zone": "quadriceps-medial.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 481,
+      "triangles": 958,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        481
+      ],
+      "minimum_double_area_m2": 4.172436677934881e-06,
+      "signed_volume_m3": 0.0006001591692747893,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.04667547717690468,
+        -0.05731857195496559,
+        0.43698474764823914
+      ],
+      "bounds_max": [
+        0.13383692502975464,
+        0.018449990078806877,
+        0.8545719981193542
+      ]
+    },
+    {
+      "object": "Long head of left biceps brachii",
+      "zone": "biceps.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 335,
+      "triangles": 666,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        335
+      ],
+      "minimum_double_area_m2": 3.1633371277785405e-06,
+      "signed_volume_m3": 0.00019922779193418404,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.1659834384918213,
+        -0.009930571541190147,
+        1.1423158645629883
+      ],
+      "bounds_max": [
+        0.3406597673892975,
+        0.03976118192076683,
+        1.4822781085968018
+      ]
+    },
+    {
+      "object": "Long head of left biceps femoris",
+      "zone": "hamstrings-lateral.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 547,
+      "triangles": 1090,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        547
+      ],
+      "minimum_double_area_m2": 2.4502311546665438e-06,
+      "signed_volume_m3": 0.0009748901379915543,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.06558497250080109,
+        0.033289916813373566,
+        0.42433369159698486
+      ],
+      "bounds_max": [
+        0.17253923416137695,
+        0.10339224338531494,
+        0.8824344873428345
+      ]
+    },
+    {
+      "object": "Long head of left triceps brachii",
+      "zone": "triceps.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 360,
+      "triangles": 716,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        360
+      ],
+      "minimum_double_area_m2": 1.5661243129908704e-06,
+      "signed_volume_m3": 0.0002871138084202458,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.1721787005662918,
+        0.044892530888319016,
+        1.1778843402862549
+      ],
+      "bounds_max": [
+        0.31775179505348206,
+        0.10294926911592484,
+        1.4349970817565918
+      ]
+    },
+    {
+      "object": "Medial head of left gastrocnemius",
+      "zone": "calf.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 484,
+      "triangles": 964,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        484
+      ],
+      "minimum_double_area_m2": 2.7956500459489883e-06,
+      "signed_volume_m3": 0.0006570044982888758,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.030925238505005836,
+        0.005207504145801067,
+        0.2076224982738495
+      ],
+      "bounds_max": [
+        0.1041671633720398,
+        0.11131976544857025,
+        0.5329259634017944
+      ]
+    },
+    {
+      "object": "Medial head of left triceps brachii",
+      "zone": "triceps.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 308,
+      "triangles": 612,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        308
+      ],
+      "minimum_double_area_m2": 2.3522009932140925e-06,
+      "signed_volume_m3": 0.0001382100802692645,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.22283101081848145,
+        0.03626130521297455,
+        1.171593427658081
+      ],
+      "bounds_max": [
+        0.32585009932518005,
+        0.06765031069517136,
+        1.396186351776123
+      ]
+    },
+    {
+      "object": "Short head of left biceps brachii",
+      "zone": "biceps.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 426,
+      "triangles": 884,
+      "boundary_edges": 8,
+      "nonmanifold_edges": 36,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        426
+      ],
+      "minimum_double_area_m2": 2.7961869209003772e-08,
+      "signed_volume_m3": 0.00033927301893956483,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.1654902547597885,
+        -0.01330270990729332,
+        1.2099374532699585
+      ],
+      "bounds_max": [
+        0.30802926421165466,
+        0.037011437118053436,
+        1.460189700126648
+      ]
+    },
+    {
+      "object": "Spinal part of left deltoid",
+      "zone": "deltoid.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 547,
+      "triangles": 1104,
+      "boundary_edges": 12,
+      "nonmanifold_edges": 32,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        547
+      ],
+      "minimum_double_area_m2": 8.445847934533859e-09,
+      "signed_volume_m3": 0.0007206829167891646,
+      "euler_characteristic": -1,
+      "bounds_min": [
+        0.09774820506572723,
+        0.020270152017474174,
+        1.3349586725234985
+      ],
+      "bounds_max": [
+        0.29149341583251953,
+        0.12211611121892929,
+        1.4841217994689941
+      ]
+    },
+    {
+      "object": "Sternocostal part of left pectoralis major",
+      "zone": "pectoralis.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 815,
+      "triangles": 1630,
+      "boundary_edges": 8,
+      "nonmanifold_edges": 20,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 2,
+      "component_vertex_counts": [
+        728,
+        87
+      ],
+      "minimum_double_area_m2": 7.895760843522992e-07,
+      "signed_volume_m3": 0.0016761685372549122,
+      "euler_characteristic": 4,
+      "bounds_min": [
+        -0.012138894759118557,
+        -0.14854708313941956,
+        1.2773821353912354
+      ],
+      "bounds_max": [
+        0.247762992978096,
+        0.036084942519664764,
+        1.4612038135528564
+      ]
+    },
+    {
+      "object": "Transverse part of left trapezius",
+      "zone": "trapezius.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 477,
+      "triangles": 966,
+      "boundary_edges": 4,
+      "nonmanifold_edges": 14,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        477
+      ],
+      "minimum_double_area_m2": 3.400890992551191e-07,
+      "signed_volume_m3": 0.00024106668084101018,
+      "euler_characteristic": 0,
+      "bounds_min": [
+        -0.012745610438287258,
+        0.02711687982082367,
+        1.4482921361923218
+      ],
+      "bounds_max": [
+        0.2228005826473236,
+        0.1348438709974289,
+        1.533896803855896
+      ]
+    },
+    {
+      "object": "Ulnar head of left flexor carpi ulnaris",
+      "zone": "forearm-flexors.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 286,
+      "triangles": 674,
+      "boundary_edges": 28,
+      "nonmanifold_edges": 116,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        286
+      ],
+      "minimum_double_area_m2": 1.561162386182437e-08,
+      "signed_volume_m3": 0.00011660521381037282,
+      "euler_characteristic": -5,
+      "bounds_min": [
+        0.29072305560112,
+        -0.01612904481589794,
+        0.9716380834579468
+      ],
+      "bounds_max": [
+        0.37542641162872314,
+        0.06548413634300232,
+        1.1850404739379883
+      ]
+    },
+    {
+      "object": "Ulnar head of left pronator teres",
+      "zone": "forearm-flexors.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 197,
+      "triangles": 398,
+      "boundary_edges": 8,
+      "nonmanifold_edges": 24,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        197
+      ],
+      "minimum_double_area_m2": 8.279087159462401e-08,
+      "signed_volume_m3": 2.6888717362922988e-05,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.30591949820518494,
+        0.0010548142017796636,
+        1.0794965028762817
+      ],
+      "bounds_max": [
+        0.388261079788208,
+        0.03592217341065407,
+        1.1672419309616089
+      ]
+    },
+    {
+      "object": "Abdominal part of left pectoralis major.001",
+      "zone": "pectoralis.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 272,
+      "triangles": 540,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        272
+      ],
+      "minimum_double_area_m2": 2.8353505762469883e-06,
+      "signed_volume_m3": 6.285266658438562e-05,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.2195032387971878,
+        -0.13196472823619843,
+        1.2419997453689575
+      ],
+      "bounds_max": [
+        -0.053829126060009,
+        0.02586868777871132,
+        1.4225845336914062
+      ]
+    },
+    {
+      "object": "Acromial part of left deltoid.001",
+      "zone": "deltoid.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 325,
+      "triangles": 646,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        325
+      ],
+      "minimum_double_area_m2": 1.6240339059157577e-06,
+      "signed_volume_m3": 0.00019365600981990414,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.29371246695518494,
+        -0.005422055255621672,
+        1.3532772064208984
+      ],
+      "bounds_max": [
+        -0.17286092042922974,
+        0.07328689843416214,
+        1.4916620254516602
+      ]
+    },
+    {
+      "object": "Ascending part of left trapezius.001",
+      "zone": "trapezius.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 685,
+      "triangles": 1370,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 10,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 2,
+      "component_vertex_counts": [
+        378,
+        307
+      ],
+      "minimum_double_area_m2": 1.8187850266958675e-08,
+      "signed_volume_m3": 0.0006275919465025028,
+      "euler_characteristic": 6,
+      "bounds_min": [
+        -0.1809729039669037,
+        0.06276920437812805,
+        1.1866027116775513
+      ],
+      "bounds_max": [
+        0.009641177952289581,
+        0.15428388118743896,
+        1.4908785820007324
+      ]
+    },
+    {
+      "object": "Clavicular part of left deltoid.001",
+      "zone": "deltoid.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 331,
+      "triangles": 848,
+      "boundary_edges": 40,
+      "nonmanifold_edges": 204,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        331
+      ],
+      "minimum_double_area_m2": 9.080668652120426e-09,
+      "signed_volume_m3": 0.00022803279906334007,
+      "euler_characteristic": -1,
+      "bounds_min": [
+        -0.2685869038105011,
+        -0.029391856864094734,
+        1.3590048551559448
+      ],
+      "bounds_max": [
+        -0.10299323499202728,
+        0.03440573811531067,
+        1.4926340579986572
+      ]
+    },
+    {
+      "object": "Clavicular part of left pectoralis major.001",
+      "zone": "pectoralis.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 425,
+      "triangles": 844,
+      "boundary_edges": 4,
+      "nonmanifold_edges": 8,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        425
+      ],
+      "minimum_double_area_m2": 3.2927018268073286e-07,
+      "signed_volume_m3": 0.00022287980606749361,
+      "euler_characteristic": 3,
+      "bounds_min": [
+        -0.23832108080387115,
+        -0.05594224855303764,
+        1.3768335580825806
+      ],
+      "bounds_max": [
+        -0.027623286470770836,
+        0.026755061000585556,
+        1.483755350112915
+      ]
+    },
+    {
+      "object": "Descending part of left trapezius.001",
+      "zone": "trapezius.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 396,
+      "triangles": 788,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        396
+      ],
+      "minimum_double_area_m2": 1.7916392047414887e-06,
+      "signed_volume_m3": 0.00018289940403873035,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.15795055031776428,
+        0.0023562456481158733,
+        1.4877474308013916
+      ],
+      "bounds_max": [
+        0.008046675473451614,
+        0.1104801818728447,
+        1.663509726524353
+      ]
+    },
+    {
+      "object": "Humeral head of left flexor carpi ulnaris.001",
+      "zone": "forearm-flexors.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 343,
+      "triangles": 698,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 4,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        343
+      ],
+      "minimum_double_area_m2": 4.793612492587669e-07,
+      "signed_volume_m3": 3.987828318421166e-05,
+      "euler_characteristic": -2,
+      "bounds_min": [
+        -0.38705578446388245,
+        -0.02930425852537155,
+        0.9557865262031555
+      ],
+      "bounds_max": [
+        -0.2738034129142761,
+        0.05064505338668823,
+        1.188730001449585
+      ]
+    },
+    {
+      "object": "Humeral head of left pronator teres.001",
+      "zone": "forearm-flexors.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 264,
+      "triangles": 574,
+      "boundary_edges": 12,
+      "nonmanifold_edges": 68,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        264
+      ],
+      "minimum_double_area_m2": 4.157733322651642e-08,
+      "signed_volume_m3": 7.969710827544409e-05,
+      "euler_characteristic": 7,
+      "bounds_min": [
+        -0.39135533571243286,
+        -0.002686064224690199,
+        1.0678856372833252
+      ],
+      "bounds_max": [
+        -0.27871468663215637,
+        0.04224550351500511,
+        1.2066318988800049
+      ]
+    },
+    {
+      "object": "Lateral head of left gastrocnemius.001",
+      "zone": "calf.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 445,
+      "triangles": 886,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        445
+      ],
+      "minimum_double_area_m2": 1.3993907987223937e-06,
+      "signed_volume_m3": 0.00046378890582856295,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.15998947620391846,
+        0.025169482454657555,
+        0.2177979052066803
+      ],
+      "bounds_max": [
+        -0.07842017710208893,
+        0.1188226267695427,
+        0.52437424659729
+      ]
+    },
+    {
+      "object": "Lateral head of left triceps brachii.001",
+      "zone": "triceps.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 353,
+      "triangles": 702,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        353
+      ],
+      "minimum_double_area_m2": 2.0728799431398323e-06,
+      "signed_volume_m3": 0.00027392862586387564,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.31967082619667053,
+        0.03900791332125664,
+        1.1802475452423096
+      ],
+      "bounds_max": [
+        -0.2203909158706665,
+        0.10117775946855545,
+        1.4378015995025635
+      ]
+    },
+    {
+      "object": "Left adductor longus.001",
+      "zone": "adductors.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 546,
+      "triangles": 1100,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 8,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 2,
+      "component_vertex_counts": [
+        300,
+        246
+      ],
+      "minimum_double_area_m2": 5.263982680168048e-08,
+      "signed_volume_m3": 0.0006189384859217766,
+      "euler_characteristic": 4,
+      "bounds_min": [
+        -0.1327478140592575,
+        -0.03826009854674339,
+        0.6133007407188416
+      ],
+      "bounds_max": [
+        -0.023266449570655823,
+        0.022222056984901428,
+        0.9246978163719177
+      ]
+    },
+    {
+      "object": "Left adductor magnus.001",
+      "zone": "adductors.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 822,
+      "triangles": 1638,
+      "boundary_edges": 2,
+      "nonmanifold_edges": 4,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        822
+      ],
+      "minimum_double_area_m2": 1.4851835673904045e-06,
+      "signed_volume_m3": 0.0019317583359585123,
+      "euler_characteristic": 3,
+      "bounds_min": [
+        -0.14943058788776398,
+        -0.019821828231215477,
+        0.477275550365448
+      ],
+      "bounds_max": [
+        -0.018709417432546616,
+        0.058443907648324966,
+        0.8982136845588684
+      ]
+    },
+    {
+      "object": "Left brachialis.001",
+      "zone": "brachialis.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 343,
+      "triangles": 682,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        343
+      ],
+      "minimum_double_area_m2": 2.5558451833153265e-06,
+      "signed_volume_m3": 0.00017250805193363573,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.33378446102142334,
+        0.017354004085063934,
+        1.139758586883545
+      ],
+      "bounds_max": [
+        -0.24700555205345154,
+        0.051795028150081635,
+        1.3653465509414673
+      ]
+    },
+    {
+      "object": "Left brachioradialis.001",
+      "zone": "forearm-extensors.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 483,
+      "triangles": 964,
+      "boundary_edges": 2,
+      "nonmanifold_edges": 4,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        483
+      ],
+      "minimum_double_area_m2": 1.5870308099149672e-06,
+      "signed_volume_m3": 7.523380615272338e-05,
+      "euler_characteristic": 1,
+      "bounds_min": [
+        -0.4408808946609497,
+        -0.024492595344781876,
+        0.9664414525032043
+      ],
+      "bounds_max": [
+        -0.28627809882164,
+        0.05740979313850403,
+        1.294610857963562
+      ]
+    },
+    {
+      "object": "Left coracobrachialis.001",
+      "zone": "brachialis.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 204,
+      "triangles": 404,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        204
+      ],
+      "minimum_double_area_m2": 9.615113537765903e-07,
+      "signed_volume_m3": 4.7245995612017416e-05,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.25619253516197205,
+        -0.004752999637275934,
+        1.3155344724655151
+      ],
+      "bounds_max": [
+        -0.1587955802679062,
+        0.04428396746516228,
+        1.4635474681854248
+      ]
+    },
+    {
+      "object": "Left extensor carpi radialis brevis.001",
+      "zone": "forearm-extensors.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 331,
+      "triangles": 660,
+      "boundary_edges": 4,
+      "nonmanifold_edges": 8,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        331
+      ],
+      "minimum_double_area_m2": 5.386996836638989e-07,
+      "signed_volume_m3": 3.625238606588092e-05,
+      "euler_characteristic": 1,
+      "bounds_min": [
+        -0.42902687191963196,
+        -0.01123070064932108,
+        0.9648511409759521
+      ],
+      "bounds_max": [
+        -0.32070595026016235,
+        0.06151361018419266,
+        1.2267154455184937
+      ]
+    },
+    {
+      "object": "Left extensor carpi radialis longus.001",
+      "zone": "forearm-extensors.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 355,
+      "triangles": 706,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        355
+      ],
+      "minimum_double_area_m2": 1.8173143078623285e-06,
+      "signed_volume_m3": 4.062904006777028e-05,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.43271318078041077,
+        -0.012902502901852131,
+        0.965114176273346
+      ],
+      "bounds_max": [
+        -0.3097946345806122,
+        0.06010492518544197,
+        1.2512286901474
+      ]
+    },
+    {
+      "object": "Left extensor carpi ulnaris.001",
+      "zone": "forearm-extensors.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 279,
+      "triangles": 594,
+      "boundary_edges": 16,
+      "nonmanifold_edges": 64,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        279
+      ],
+      "minimum_double_area_m2": 4.0681378893766885e-08,
+      "signed_volume_m3": 3.384951216815508e-05,
+      "euler_characteristic": 0,
+      "bounds_min": [
+        -0.39165738224983215,
+        -0.006921263877302408,
+        0.9572238922119141
+      ],
+      "bounds_max": [
+        -0.32144594192504883,
+        0.0630970150232315,
+        1.2079877853393555
+      ]
+    },
+    {
+      "object": "Left extensor carpi ulnaris (2).001",
+      "zone": "forearm-extensors.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 229,
+      "triangles": 456,
+      "boundary_edges": 4,
+      "nonmanifold_edges": 8,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        229
+      ],
+      "minimum_double_area_m2": 1.782620287142182e-07,
+      "signed_volume_m3": 1.704037706308096e-05,
+      "euler_characteristic": 1,
+      "bounds_min": [
+        -0.3910589814186096,
+        -0.00888729840517044,
+        0.9568300843238831
+      ],
+      "bounds_max": [
+        -0.34295329451560974,
+        0.0423920713365078,
+        1.105892300605774
+      ]
+    },
+    {
+      "object": "Left extensor digitorum.001",
+      "zone": "forearm-extensors.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 357,
+      "triangles": 710,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        357
+      ],
+      "minimum_double_area_m2": 8.158727586229463e-07,
+      "signed_volume_m3": 4.1379495037202404e-05,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.41566380858421326,
+        -0.003938245587050915,
+        0.9594444632530212
+      ],
+      "bounds_max": [
+        -0.3265167772769928,
+        0.07073218375444412,
+        1.2098257541656494
+      ]
+    },
+    {
+      "object": "Left external oblique.001",
+      "zone": "oblique.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 763,
+      "triangles": 1522,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        763
+      ],
+      "minimum_double_area_m2": 9.857700450113192e-06,
+      "signed_volume_m3": 0.0008713721833408591,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.16400893032550812,
+        -0.14587341248989105,
+        1.0104092359542847
+      ],
+      "bounds_max": [
+        -0.06172919273376465,
+        0.09821314364671707,
+        1.3552873134613037
+      ]
+    },
+    {
+      "object": "Left fibularis longus.001",
+      "zone": "fibularis.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 449,
+      "triangles": 898,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        449
+      ],
+      "minimum_double_area_m2": 2.8356770002550783e-07,
+      "signed_volume_m3": 6.465321145920042e-05,
+      "euler_characteristic": 0,
+      "bounds_min": [
+        -0.1698383241891861,
+        0.02915607951581478,
+        0.14010225236415863
+      ],
+      "bounds_max": [
+        -0.1262034773826599,
+        0.07703473418951035,
+        0.44966766238212585
+      ]
+    },
+    {
+      "object": "Left flexor carpi radialis.001",
+      "zone": "forearm-flexors.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 343,
+      "triangles": 682,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        343
+      ],
+      "minimum_double_area_m2": 1.7600552192406956e-06,
+      "signed_volume_m3": 3.8193758175575305e-05,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.41522595286369324,
+        -0.036045823246240616,
+        0.9623600244522095
+      ],
+      "bounds_max": [
+        -0.2761874198913574,
+        0.03672347962856293,
+        1.1956651210784912
+      ]
+    },
+    {
+      "object": "Left flexor digitorum superficialis.001",
+      "zone": "forearm-flexors.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 414,
+      "triangles": 834,
+      "boundary_edges": 2,
+      "nonmanifold_edges": 12,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        414
+      ],
+      "minimum_double_area_m2": 1.236350026760146e-07,
+      "signed_volume_m3": 5.4520747490986446e-05,
+      "euler_characteristic": 1,
+      "bounds_min": [
+        -0.4066818356513977,
+        -0.0361349880695343,
+        0.9590354561805725
+      ],
+      "bounds_max": [
+        -0.2723064720630646,
+        0.04307243227958679,
+        1.1904244422912598
+      ]
+    },
+    {
+      "object": "Left flexor digitorum superficialis (2).001",
+      "zone": "forearm-flexors.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 302,
+      "triangles": 600,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        302
+      ],
+      "minimum_double_area_m2": 1.4764641296384275e-06,
+      "signed_volume_m3": 2.799365759584372e-05,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.4053293764591217,
+        -0.03573782742023468,
+        0.9605111479759216
+      ],
+      "bounds_max": [
+        -0.33739998936653137,
+        0.026042155921459198,
+        1.1396474838256836
+      ]
+    },
+    {
+      "object": "Left gluteus maximus.001",
+      "zone": "gluteal.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 572,
+      "triangles": 1140,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        572
+      ],
+      "minimum_double_area_m2": 2.5628366607238776e-06,
+      "signed_volume_m3": 0.000775189058146399,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.18772178888320923,
+        0.02884213998913765,
+        0.7825071811676025
+      ],
+      "bounds_max": [
+        0.022575048729777336,
+        0.15022063255310059,
+        1.0591332912445068
+      ]
+    },
+    {
+      "object": "Left gluteus medius.001",
+      "zone": "gluteal.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 416,
+      "triangles": 828,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        416
+      ],
+      "minimum_double_area_m2": 1.6973694470950308e-06,
+      "signed_volume_m3": 0.00042275045636799136,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.18947604298591614,
+        -0.004564717877656221,
+        0.9100467562675476
+      ],
+      "bounds_max": [
+        -0.058168649673461914,
+        0.10611195117235184,
+        1.0783019065856934
+      ]
+    },
+    {
+      "object": "Left gracilis.001",
+      "zone": "adductors.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 614,
+      "triangles": 1228,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 4,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 2,
+      "component_vertex_counts": [
+        345,
+        269
+      ],
+      "minimum_double_area_m2": 1.7540958896340976e-07,
+      "signed_volume_m3": 0.0005311347999770379,
+      "euler_characteristic": 4,
+      "bounds_min": [
+        -0.09896287322044373,
+        -0.03578394278883934,
+        0.3764379620552063
+      ],
+      "bounds_max": [
+        -0.018179740756750107,
+        0.05081721022725105,
+        0.9182022213935852
+      ]
+    },
+    {
+      "object": "Left infraspinatus muscle.001",
+      "zone": "scapular.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 466,
+      "triangles": 926,
+      "boundary_edges": 4,
+      "nonmanifold_edges": 8,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        466
+      ],
+      "minimum_double_area_m2": 2.0117131684758987e-07,
+      "signed_volume_m3": 0.0004300196481955367,
+      "euler_characteristic": 3,
+      "bounds_min": [
+        -0.23209799826145172,
+        0.028406227007508278,
+        1.3498908281326294
+      ],
+      "bounds_max": [
+        -0.057499516755342484,
+        0.1307014524936676,
+        1.4800807237625122
+      ]
+    },
+    {
+      "object": "Left latissimus dorsi.001",
+      "zone": "latissimus.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 1200,
+      "triangles": 2380,
+      "boundary_edges": 2,
+      "nonmanifold_edges": 6,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 5,
+      "component_vertex_counts": [
+        533,
+        249,
+        227,
+        96,
+        95
+      ],
+      "minimum_double_area_m2": 1.1596324413351855e-06,
+      "signed_volume_m3": 0.0004387978885655275,
+      "euler_characteristic": 11,
+      "bounds_min": [
+        -0.22386865317821503,
+        0.024770228192210197,
+        0.9862332344055176
+      ],
+      "bounds_max": [
+        0.017871202901005745,
+        0.14750954508781433,
+        1.4086477756500244
+      ]
+    },
+    {
+      "object": "Authored rounded rectus plates over source.001",
+      "zone": "rectus-abdominis.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 567,
+      "triangles": 1130,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 2,
+      "component_vertex_counts": [
+        498,
+        69
+      ],
+      "minimum_double_area_m2": 4.544961081608996e-06,
+      "signed_volume_m3": 0.00043871956278801385,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.0980028361082077,
+        -0.14633961021900177,
+        1.0103015899658203
+      ],
+      "bounds_max": [
+        -0.0022768278140574694,
+        -0.03595265746116638,
+        1.320865273475647
+      ]
+    },
+    {
+      "object": "Left rectus femoris.001",
+      "zone": "quadriceps-rectus.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 779,
+      "triangles": 1568,
+      "boundary_edges": 2,
+      "nonmanifold_edges": 6,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        779
+      ],
+      "minimum_double_area_m2": 2.369025024938929e-06,
+      "signed_volume_m3": 0.001402896790691888,
+      "euler_characteristic": -3,
+      "bounds_min": [
+        -0.2020764797925949,
+        -0.06558631360530853,
+        0.40913307666778564
+      ],
+      "bounds_max": [
+        -0.08561684191226959,
+        0.022537564858794212,
+        0.9951542615890503
+      ]
+    },
+    {
+      "object": "Left sartorius.001",
+      "zone": "sartorius.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 634,
+      "triangles": 1286,
+      "boundary_edges": 20,
+      "nonmanifold_edges": 56,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        634
+      ],
+      "minimum_double_area_m2": 1.521777263947641e-08,
+      "signed_volume_m3": 0.000390412653350667,
+      "euler_characteristic": -1,
+      "bounds_min": [
+        -0.15409059822559357,
+        -0.05058284103870392,
+        0.36580565571784973
+      ],
+      "bounds_max": [
+        -0.026689259335398674,
+        0.02705046534538269,
+        1.0268758535385132
+      ]
+    },
+    {
+      "object": "Left semimembranosus.001",
+      "zone": "hamstrings-medial.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 734,
+      "triangles": 1462,
+      "boundary_edges": 2,
+      "nonmanifold_edges": 4,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        734
+      ],
+      "minimum_double_area_m2": 3.562843084880177e-08,
+      "signed_volume_m3": 0.0013389373772505488,
+      "euler_characteristic": 3,
+      "bounds_min": [
+        -0.10472555458545685,
+        -0.002163484925404191,
+        0.4090847969055176
+      ],
+      "bounds_max": [
+        -0.018260138109326363,
+        0.08120405673980713,
+        0.8722646236419678
+      ]
+    },
+    {
+      "object": "Left semitendinosus.001",
+      "zone": "hamstrings-medial.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 589,
+      "triangles": 1176,
+      "boundary_edges": 4,
+      "nonmanifold_edges": 12,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        589
+      ],
+      "minimum_double_area_m2": 1.876340078214871e-08,
+      "signed_volume_m3": 0.0005943322317665163,
+      "euler_characteristic": 5,
+      "bounds_min": [
+        -0.09616070240736008,
+        0.0037951890844851732,
+        0.37449395656585693
+      ],
+      "bounds_max": [
+        -0.03878120705485344,
+        0.0967572033405304,
+        0.8819360136985779
+      ]
+    },
+    {
+      "object": "Left serratus anterior.001",
+      "zone": "serratus.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 633,
+      "triangles": 1262,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        633
+      ],
+      "minimum_double_area_m2": 1.1268021574807934e-05,
+      "signed_volume_m3": 0.000643913839871732,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.1829412430524826,
+        -0.08487515151500702,
+        1.2111482620239258
+      ],
+      "bounds_max": [
+        -0.061753157526254654,
+        0.14048095047473907,
+        1.4996209144592285
+      ]
+    },
+    {
+      "object": "Left soleus.001",
+      "zone": "soleus.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 738,
+      "triangles": 1470,
+      "boundary_edges": 2,
+      "nonmanifold_edges": 5,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        738
+      ],
+      "minimum_double_area_m2": 3.5873051040356327e-07,
+      "signed_volume_m3": 0.0013644578247910958,
+      "euler_characteristic": 4,
+      "bounds_min": [
+        -0.1594182401895523,
+        0.0045114075765013695,
+        0.1111762672662735
+      ],
+      "bounds_max": [
+        -0.042758673429489136,
+        0.08841025829315186,
+        0.4553339183330536
+      ]
+    },
+    {
+      "object": "Left sternocleidomastoid.001",
+      "zone": "neck.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 301,
+      "triangles": 598,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        301
+      ],
+      "minimum_double_area_m2": 8.184049607957493e-07,
+      "signed_volume_m3": 0.00011587253794413306,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.07540787756443024,
+        -0.06179754436016083,
+        1.4480561017990112
+      ],
+      "bounds_max": [
+        1.7542033674544655e-05,
+        0.07614731043577194,
+        1.6601535081863403
+      ]
+    },
+    {
+      "object": "Left tensor fasciae latae.001",
+      "zone": "hip-abductors.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 370,
+      "triangles": 734,
+      "boundary_edges": 4,
+      "nonmanifold_edges": 8,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        370
+      ],
+      "minimum_double_area_m2": 2.600997657466183e-07,
+      "signed_volume_m3": 0.00021841684265990955,
+      "euler_characteristic": 3,
+      "bounds_min": [
+        -0.20114944875240326,
+        -0.03963253274559975,
+        0.8762964010238647
+      ],
+      "bounds_max": [
+        -0.14767423272132874,
+        0.015855327248573303,
+        1.0442805290222168
+      ]
+    },
+    {
+      "object": "Left teres major.001",
+      "zone": "scapular.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 348,
+      "triangles": 690,
+      "boundary_edges": 4,
+      "nonmanifold_edges": 8,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        348
+      ],
+      "minimum_double_area_m2": 1.7840928726706007e-07,
+      "signed_volume_m3": 0.00017444946992230018,
+      "euler_characteristic": 3,
+      "bounds_min": [
+        -0.213455468416214,
+        0.020667249336838722,
+        1.3289530277252197
+      ],
+      "bounds_max": [
+        -0.10150566697120667,
+        0.1257227659225464,
+        1.4312331676483154
+      ]
+    },
+    {
+      "object": "Left teres minor.001",
+      "zone": "scapular.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 223,
+      "triangles": 442,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        223
+      ],
+      "minimum_double_area_m2": 1.974326570845533e-06,
+      "signed_volume_m3": 6.93906764064933e-05,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.23185060918331146,
+        0.026155317202210426,
+        1.363292932510376
+      ],
+      "bounds_max": [
+        -0.12748007476329803,
+        0.10689640790224075,
+        1.4628796577453613
+      ]
+    },
+    {
+      "object": "Left tibialis anterior.001",
+      "zone": "tibialis.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 512,
+      "triangles": 1020,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        512
+      ],
+      "minimum_double_area_m2": 1.3063077344603266e-06,
+      "signed_volume_m3": 8.59899746464232e-05,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.159261092543602,
+        -0.014679640531539917,
+        0.1398877054452896
+      ],
+      "bounds_max": [
+        -0.10806453973054886,
+        0.03881192207336426,
+        0.4527309238910675
+      ]
+    },
+    {
+      "object": "Left vastus lateralis.001",
+      "zone": "quadriceps-lateral.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 602,
+      "triangles": 1200,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        602
+      ],
+      "minimum_double_area_m2": 7.3060736686822994e-06,
+      "signed_volume_m3": 0.0010729473391933597,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.20943894982337952,
+        -0.04787948727607727,
+        0.41244223713874817
+      ],
+      "bounds_max": [
+        -0.11239901930093765,
+        0.05919625237584114,
+        0.9071225523948669
+      ]
+    },
+    {
+      "object": "Left vastus medialis.001",
+      "zone": "quadriceps-medial.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 481,
+      "triangles": 958,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        481
+      ],
+      "minimum_double_area_m2": 5.755358727544508e-06,
+      "signed_volume_m3": 0.0006001612723425495,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.13384702801704407,
+        -0.05745586007833481,
+        0.43689000606536865
+      ],
+      "bounds_max": [
+        -0.04677676782011986,
+        0.018433740362524986,
+        0.8545798659324646
+      ]
+    },
+    {
+      "object": "Long head of left biceps brachii.001",
+      "zone": "biceps.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 335,
+      "triangles": 666,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        335
+      ],
+      "minimum_double_area_m2": 1.567693918852235e-06,
+      "signed_volume_m3": 0.0001992945503409401,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.34068551659584045,
+        -0.009820324368774891,
+        1.142341136932373
+      ],
+      "bounds_max": [
+        -0.16593880951404572,
+        0.039890605956315994,
+        1.4822406768798828
+      ]
+    },
+    {
+      "object": "Long head of left biceps femoris.001",
+      "zone": "hamstrings-lateral.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 547,
+      "triangles": 1090,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        547
+      ],
+      "minimum_double_area_m2": 4.0636478639099506e-07,
+      "signed_volume_m3": 0.0009753365162829198,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.17242856323719025,
+        0.03328360989689827,
+        0.4243798553943634
+      ],
+      "bounds_max": [
+        -0.06573178619146347,
+        0.10334818810224533,
+        0.8824719786643982
+      ]
+    },
+    {
+      "object": "Long head of left triceps brachii.001",
+      "zone": "triceps.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 360,
+      "triangles": 716,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        360
+      ],
+      "minimum_double_area_m2": 1.6553313447822748e-06,
+      "signed_volume_m3": 0.00028719103985826297,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.3176909387111664,
+        0.04497828707098961,
+        1.1778783798217773
+      ],
+      "bounds_max": [
+        -0.17216794192790985,
+        0.10251352190971375,
+        1.4350720643997192
+      ]
+    },
+    {
+      "object": "Medial head of left gastrocnemius.001",
+      "zone": "calf.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 484,
+      "triangles": 964,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        484
+      ],
+      "minimum_double_area_m2": 2.2703215396825095e-06,
+      "signed_volume_m3": 0.0006574730187806777,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.10407022386789322,
+        0.005497056990861893,
+        0.2079153060913086
+      ],
+      "bounds_max": [
+        -0.030639080330729485,
+        0.11126408725976944,
+        0.5331392884254456
+      ]
+    },
+    {
+      "object": "Medial head of left triceps brachii.001",
+      "zone": "triceps.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 308,
+      "triangles": 612,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        308
+      ],
+      "minimum_double_area_m2": 1.6818825978120797e-06,
+      "signed_volume_m3": 0.00013799856620069225,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.32585757970809937,
+        0.03620648384094238,
+        1.1715773344039917
+      ],
+      "bounds_max": [
+        -0.2227662205696106,
+        0.06764726340770721,
+        1.3962657451629639
+      ]
+    },
+    {
+      "object": "Short head of left biceps brachii.001",
+      "zone": "biceps.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 426,
+      "triangles": 884,
+      "boundary_edges": 8,
+      "nonmanifold_edges": 36,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        426
+      ],
+      "minimum_double_area_m2": 2.3050005590269516e-07,
+      "signed_volume_m3": 0.0003397635990977145,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.30756455659866333,
+        -0.013322706334292889,
+        1.2099924087524414
+      ],
+      "bounds_max": [
+        -0.16550108790397644,
+        0.037068311125040054,
+        1.460320234298706
+      ]
+    },
+    {
+      "object": "Spinal part of left deltoid.001",
+      "zone": "deltoid.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 547,
+      "triangles": 1104,
+      "boundary_edges": 12,
+      "nonmanifold_edges": 32,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        547
+      ],
+      "minimum_double_area_m2": 8.445847934533859e-09,
+      "signed_volume_m3": 0.0007243005246796143,
+      "euler_characteristic": -1,
+      "bounds_min": [
+        -0.2914304733276367,
+        0.020510241389274597,
+        1.3350001573562622
+      ],
+      "bounds_max": [
+        -0.09774820506572723,
+        0.12198078632354736,
+        1.484386920928955
+      ]
+    },
+    {
+      "object": "Sternocostal part of left pectoralis major.001",
+      "zone": "pectoralis.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 815,
+      "triangles": 1630,
+      "boundary_edges": 8,
+      "nonmanifold_edges": 20,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 2,
+      "component_vertex_counts": [
+        728,
+        87
+      ],
+      "minimum_double_area_m2": 7.895805684153692e-07,
+      "signed_volume_m3": 0.001676168335144449,
+      "euler_characteristic": 4,
+      "bounds_min": [
+        -0.24776291847229004,
+        -0.14854708313941956,
+        1.2773821353912354
+      ],
+      "bounds_max": [
+        0.012138893827795982,
+        0.036084942519664764,
+        1.4612038135528564
+      ]
+    },
+    {
+      "object": "Transverse part of left trapezius.001",
+      "zone": "trapezius.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 477,
+      "triangles": 966,
+      "boundary_edges": 4,
+      "nonmanifold_edges": 14,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        477
+      ],
+      "minimum_double_area_m2": 5.161601827853081e-07,
+      "signed_volume_m3": 0.00024108585597300744,
+      "euler_characteristic": 0,
+      "bounds_min": [
+        -0.2228006273508072,
+        0.02711687982082367,
+        1.4482921361923218
+      ],
+      "bounds_max": [
+        0.012745607644319534,
+        0.1348438709974289,
+        1.5338969230651855
+      ]
+    },
+    {
+      "object": "Ulnar head of left flexor carpi ulnaris.001",
+      "zone": "forearm-flexors.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 286,
+      "triangles": 674,
+      "boundary_edges": 28,
+      "nonmanifold_edges": 116,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        286
+      ],
+      "minimum_double_area_m2": 4.5816906274654664e-08,
+      "signed_volume_m3": 0.00011473460142295861,
+      "euler_characteristic": -5,
+      "bounds_min": [
+        -0.3755771815776825,
+        -0.01612904481589794,
+        0.9722439050674438
+      ],
+      "bounds_max": [
+        -0.290740042924881,
+        0.06536588072776794,
+        1.1853487491607666
+      ]
+    },
+    {
+      "object": "Ulnar head of left pronator teres.001",
+      "zone": "forearm-flexors.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 197,
+      "triangles": 398,
+      "boundary_edges": 8,
+      "nonmanifold_edges": 24,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        197
+      ],
+      "minimum_double_area_m2": 8.279087159462401e-08,
+      "signed_volume_m3": 2.7123220175111515e-05,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.38845258951187134,
+        0.0011466311989352107,
+        1.0794965028762817
+      ],
+      "bounds_max": [
+        -0.30587461590766907,
+        0.03576260060071945,
+        1.1672624349594116
+      ]
+    },
+    {
+      "object": "S.s3.neutral-support",
+      "zone": "support",
+      "role": "cover",
+      "selectable": false,
+      "vertices": 2385,
+      "triangles": 4766,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        2385
+      ],
+      "minimum_double_area_m2": 4.58368461459331e-06,
+      "signed_volume_m3": 0.043375311603085116,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.49476030468940735,
+        -0.18979059159755707,
+        0.004575690720230341
+      ],
+      "bounds_max": [
+        0.49431461095809937,
+        0.11335325241088867,
+        1.8011600971221924
+      ]
+    }
+  ],
+  "limitations": [
+    "Surface labels are provisional, not full medical or final product segmentation.",
+    "No exhaustive self-intersection, occlusion, rig, raycast or iPhone benchmark.",
+    "S2/S3 retain overlapping closed anatomical masses; no final nonoverlapping skin partition."
+  ],
+  "nonmanifold_visible_edges": 1522
+}

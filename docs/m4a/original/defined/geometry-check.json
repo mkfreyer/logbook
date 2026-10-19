@@ -1,0 +1,402 @@
+{
+  "variant": "defined",
+  "blender": "4.3.2",
+  "source_blend_sha256": "70f08420aeb8832bcbc5c107e2fcecd7a7774dc7cca04e87982217f58ffd9709",
+  "continuous_shell": {
+    "vertices": 40520,
+    "triangles": 81036,
+    "connected_components": 1,
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "loose_vertices": 0,
+    "nonfinite_coordinates": 0,
+    "near_degenerate_triangles": 0,
+    "minimum_double_triangle_area_m2": 7.342821640097669e-10,
+    "signed_volume_m3": 0.06355209115456417,
+    "euler_characteristic": 2,
+    "surface_genus": 0.0,
+    "bounds_min": [
+      -0.4099554717540741,
+      -0.18749232590198517,
+      0.013055071234703064
+    ],
+    "bounds_max": [
+      0.4099554717540741,
+      0.11775698512792587,
+      1.8018529415130615
+    ]
+  },
+  "surface_zones": {
+    "selectable": 22,
+    "support_objects": 1,
+    "all_source_faces_used_once": true,
+    "duplicated_source_faces": 0,
+    "lost_source_faces": 0,
+    "shared_border_positions_identical": true,
+    "named_sides_centroids_correct": true,
+    "zones": [
+      {
+        "zone": "support",
+        "vertices": 24960,
+        "triangles": 45845,
+        "centroid": [
+          2.0498647121593957e-05,
+          -0.020243009524820645,
+          0.8696263421580974
+        ],
+        "selectable": false,
+        "connected_components": 11,
+        "component_vertex_counts": [
+          19170,
+          4637,
+          800,
+          108,
+          108,
+          38,
+          38,
+          22,
+          19,
+          12,
+          8
+        ]
+      },
+      {
+        "zone": "pectoralis.left",
+        "vertices": 504,
+        "triangles": 852,
+        "centroid": [
+          0.08240673773264187,
+          -0.0902278692505899,
+          1.365398953121806
+        ],
+        "selectable": true,
+        "connected_components": 1,
+        "component_vertex_counts": [
+          504
+        ]
+      },
+      {
+        "zone": "pectoralis.right",
+        "vertices": 501,
+        "triangles": 853,
+        "centroid": [
+          -0.08224912243755814,
+          -0.09035697509488184,
+          1.3654534995198964
+        ],
+        "selectable": true,
+        "connected_components": 1,
+        "component_vertex_counts": [
+          501
+        ]
+      },
+      {
+        "zone": "deltoid.left",
+        "vertices": 1439,
+        "triangles": 2577,
+        "centroid": [
+          0.21369064481743846,
+          0.000694138024986383,
+          1.4188618219254994
+        ],
+        "selectable": true,
+        "connected_components": 1,
+        "component_vertex_counts": [
+          1439
+        ]
+      },
+      {
+        "zone": "deltoid.right",
+        "vertices": 1431,
+        "triangles": 2567,
+        "centroid": [
+          -0.2140049929493045,
+          0.0010120218728260162,
+          1.4188074999801934
+        ],
+        "selectable": true,
+        "connected_components": 1,
+        "component_vertex_counts": [
+          1431
+        ]
+      },
+      {
+        "zone": "biceps.left",
+        "vertices": 816,
+        "triangles": 1421,
+        "centroid": [
+          0.26807675572733086,
+          -0.03850226878535514,
+          1.2738152708785206
+        ],
+        "selectable": true,
+        "connected_components": 1,
+        "component_vertex_counts": [
+          816
+        ]
+      },
+      {
+        "zone": "biceps.right",
+        "vertices": 818,
+        "triangles": 1424,
+        "centroid": [
+          -0.26822600459046936,
+          -0.03855449974555112,
+          1.2739102132163014
+        ],
+        "selectable": true,
+        "connected_components": 1,
+        "component_vertex_counts": [
+          818
+        ]
+      },
+      {
+        "zone": "triceps.left",
+        "vertices": 711,
+        "triangles": 1224,
+        "centroid": [
+          0.265724621430228,
+          0.03689007695146041,
+          1.2758918544578821
+        ],
+        "selectable": true,
+        "connected_components": 1,
+        "component_vertex_counts": [
+          711
+        ]
+      },
+      {
+        "zone": "triceps.right",
+        "vertices": 715,
+        "triangles": 1229,
+        "centroid": [
+          -0.26534274716477296,
+          0.03684071069387915,
+          1.2761703237786994
+        ],
+        "selectable": true,
+        "connected_components": 1,
+        "component_vertex_counts": [
+          715
+        ]
+      },
+      {
+        "zone": "latissimus.left",
+        "vertices": 615,
+        "triangles": 1024,
+        "centroid": [
+          0.12075125100772555,
+          0.06036689892047789,
+          1.2425924471723355
+        ],
+        "selectable": true,
+        "connected_components": 1,
+        "component_vertex_counts": [
+          615
+        ]
+      },
+      {
+        "zone": "latissimus.right",
+        "vertices": 615,
+        "triangles": 1026,
+        "centroid": [
+          -0.1207476889396586,
+          0.060370416191171825,
+          1.2425606239132765
+        ],
+        "selectable": true,
+        "connected_components": 1,
+        "component_vertex_counts": [
+          615
+        ]
+      },
+      {
+        "zone": "oblique.left",
+        "vertices": 566,
+        "triangles": 946,
+        "centroid": [
+          0.11151450932315508,
+          -0.05783871952575951,
+          1.1886769320434059
+        ],
+        "selectable": true,
+        "connected_components": 1,
+        "component_vertex_counts": [
+          566
+        ]
+      },
+      {
+        "zone": "oblique.right",
+        "vertices": 564,
+        "triangles": 943,
+        "centroid": [
+          -0.11142192096680614,
+          -0.057885886863508124,
+          1.1887386170684868
+        ],
+        "selectable": true,
+        "connected_components": 1,
+        "component_vertex_counts": [
+          564
+        ]
+      },
+      {
+        "zone": "quadriceps.left",
+        "vertices": 1080,
+        "triangles": 1902,
+        "centroid": [
+          0.11748816690718135,
+          -0.059315431913085005,
+          0.7532233726647165
+        ],
+        "selectable": true,
+        "connected_components": 1,
+        "component_vertex_counts": [
+          1080
+        ]
+      },
+      {
+        "zone": "quadriceps.right",
+        "vertices": 1080,
+        "triangles": 1903,
+        "centroid": [
+          -0.11727756031064523,
+          -0.059357458227141585,
+          0.7531717032194137
+        ],
+        "selectable": true,
+        "connected_components": 1,
+        "component_vertex_counts": [
+          1080
+        ]
+      },
+      {
+        "zone": "hamstrings.left",
+        "vertices": 926,
+        "triangles": 1628,
+        "centroid": [
+          0.11875159408068425,
+          0.06311540869235606,
+          0.7723755871889143
+        ],
+        "selectable": true,
+        "connected_components": 1,
+        "component_vertex_counts": [
+          926
+        ]
+      },
+      {
+        "zone": "hamstrings.right",
+        "vertices": 927,
+        "triangles": 1632,
+        "centroid": [
+          -0.11861185306339588,
+          0.06314482553756545,
+          0.7722457309756849
+        ],
+        "selectable": true,
+        "connected_components": 1,
+        "component_vertex_counts": [
+          927
+        ]
+      },
+      {
+        "zone": "gluteal.left",
+        "vertices": 890,
+        "triangles": 1516,
+        "centroid": [
+          0.07420156829251495,
+          0.08525590822937783,
+          0.9974137353093436
+        ],
+        "selectable": true,
+        "connected_components": 1,
+        "component_vertex_counts": [
+          890
+        ]
+      },
+      {
+        "zone": "gluteal.right",
+        "vertices": 885,
+        "triangles": 1508,
+        "centroid": [
+          -0.07433251817116907,
+          0.0850414678075556,
+          0.9970354448604045
+        ],
+        "selectable": true,
+        "connected_components": 1,
+        "component_vertex_counts": [
+          885
+        ]
+      },
+      {
+        "zone": "calf.left",
+        "vertices": 1197,
+        "triangles": 2135,
+        "centroid": [
+          0.11376823314349653,
+          0.03017087957252189,
+          0.31471534897460474
+        ],
+        "selectable": true,
+        "connected_components": 1,
+        "component_vertex_counts": [
+          1197
+        ]
+      },
+      {
+        "zone": "calf.right",
+        "vertices": 1197,
+        "triangles": 2135,
+        "centroid": [
+          -0.11378564706746,
+          0.03015411592225327,
+          0.31479620694516597
+        ],
+        "selectable": true,
+        "connected_components": 1,
+        "component_vertex_counts": [
+          1197
+        ]
+      },
+      {
+        "zone": "trapezius.midline",
+        "vertices": 1582,
+        "triangles": 2818,
+        "centroid": [
+          9.55623831412068e-05,
+          0.07583423193035513,
+          1.39701370614217
+        ],
+        "selectable": true,
+        "connected_components": 1,
+        "component_vertex_counts": [
+          1582
+        ]
+      },
+      {
+        "zone": "rectus-abdominis.midline",
+        "vertices": 1073,
+        "triangles": 1928,
+        "centroid": [
+          -3.964660912977038e-07,
+          -0.08821960235880784,
+          1.1812450919102422
+        ],
+        "selectable": true,
+        "connected_components": 1,
+        "component_vertex_counts": [
+          1073
+        ]
+      }
+    ]
+  },
+  "limitations": [
+    "Surface zones are stylised design regions, not anatomical muscle organs.",
+    "Individual patches have open borders by design; the aggregated source shell is closed.",
+    "No exhaustive self-intersection/occlusion/medical test.",
+    "Voxel/decimated triangles are a research mesh, not animation-ready quad retopology.",
+    "No interactive engine, raycast, rig, GLB export or iPhone benchmark."
+  ]
+}

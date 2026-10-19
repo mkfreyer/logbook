@@ -1,0 +1,133 @@
+{
+  "variant": "premium",
+  "source_blend_sha256": "0a57656c3c496a28587d84a111762063b1f5dfd5882cbf724151f974c15a0309",
+  "source_path": "docs/m4a/alternatives/studio-realistic-plus/B-plus.blend",
+  "source_name": "B+ moderate athletic v1; Dan Ulrich / Blender Studio Human Base Meshes v1.4.1, CC0",
+  "generator_sha256": "ad3f1d127b56ed89fec7fc380394724ec94e49d108e939a649b8497e5fe70ad8",
+  "normalization": {
+    "rotation_z": 0,
+    "center": [
+      -2.2643768787384033,
+      -0.033877987414598465,
+      -0.005640706978738308
+    ],
+    "uniform_scale": 1.06503615750482
+  },
+  "L_and_S_geometry_read": false,
+  "separate_muscles_added": false,
+  "counts": {
+    "objects": 3,
+    "body_triangles": 110000,
+    "body_vertices": 55002,
+    "visible_triangles": 112176,
+    "demo_surface_zones": 2,
+    "separate_muscle_objects": 0
+  },
+  "relief": {
+    "strength": 1.25,
+    "fibre_amplitude_m": 0.00055,
+    "requested_max_displacement_m": 0.008,
+    "orientation_guard": "local damping with five-ring feather, preserving healthy regions",
+    "orientation_guard_iterations": 2,
+    "orientation_guard_min_scale": 0.42250000000000004,
+    "orientation_guard_mean_scale": 0.9981520608406328,
+    "minimum_highres_normal_dot": 0.8506546246035899,
+    "max_highres_displacement_m": 0.007279126547854957,
+    "mean_highres_displacement_m": 0.00017809629745232477,
+    "regions": [
+      {
+        "name": "pectoralis fan",
+        "height_m_before_strength": 0.0034,
+        "border_depth_m_before_strength": 0.0018
+      },
+      {
+        "name": "rectus abdominis 1.105",
+        "height_m_before_strength": 0.0022,
+        "border_depth_m_before_strength": 0.0015
+      },
+      {
+        "name": "rectus abdominis 1.167",
+        "height_m_before_strength": 0.0022,
+        "border_depth_m_before_strength": 0.0015
+      },
+      {
+        "name": "rectus abdominis 1.228",
+        "height_m_before_strength": 0.0022,
+        "border_depth_m_before_strength": 0.0015
+      },
+      {
+        "name": "external oblique",
+        "height_m_before_strength": 0.002,
+        "border_depth_m_before_strength": 0.0017
+      },
+      {
+        "name": "biceps",
+        "height_m_before_strength": 0.004,
+        "border_depth_m_before_strength": 0.0015
+      },
+      {
+        "name": "triceps",
+        "height_m_before_strength": 0.0042,
+        "border_depth_m_before_strength": 0.0015
+      },
+      {
+        "name": "deltoid",
+        "height_m_before_strength": 0.0022,
+        "border_depth_m_before_strength": 0.0016999999932941338
+      },
+      {
+        "name": "latissimus dorsi",
+        "height_m_before_strength": 0.0034,
+        "border_depth_m_before_strength": 0.0
+      },
+      {
+        "name": "trapezius",
+        "height_m_before_strength": 0.0024,
+        "border_depth_m_before_strength": 0.0
+      },
+      {
+        "name": "quadriceps rectus",
+        "height_m_before_strength": 0.0034,
+        "border_depth_m_before_strength": 0.0007
+      },
+      {
+        "name": "quadriceps vastus lateralis",
+        "height_m_before_strength": 0.0026,
+        "border_depth_m_before_strength": 0.0007
+      },
+      {
+        "name": "quadriceps vastus medialis",
+        "height_m_before_strength": 0.0031,
+        "border_depth_m_before_strength": 0.0007
+      },
+      {
+        "name": "hamstrings lateral",
+        "height_m_before_strength": 0.003,
+        "border_depth_m_before_strength": 0.0017
+      },
+      {
+        "name": "hamstrings medial",
+        "height_m_before_strength": 0.003,
+        "border_depth_m_before_strength": 0.0017
+      },
+      {
+        "name": "gastrocnemius 0.117",
+        "height_m_before_strength": 0.0025,
+        "border_depth_m_before_strength": 0.0017
+      },
+      {
+        "name": "gastrocnemius 0.163",
+        "height_m_before_strength": 0.0025,
+        "border_depth_m_before_strength": 0.0017
+      }
+    ]
+  },
+  "highres_triangles_before_proxy": 1354880,
+  "source_geometry_normalized_sha256": "ce8bef52eed8db0f0dd7453b66019661c92b215d726ec221715686d6f860461c",
+  "demo_selection": "Two procedural pectoral surface masks on the single continuous body; no final segmentation.",
+  "limitations": [
+    "Proxy decimation changes topology and approximates fine scan/fibre detail.",
+    "No exhaustive intersection/medical/rig/mobile-engine validation, bake or application export.",
+    "Authoring source is the preserved B+ BLEND and this generator; output is a static research scene."
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "same_body_topology_and_three_surface_masks": true,
+  "topology_masks_sha256": "a8e2b2b1168ffc9ad89b75d8cf9ba94f97c50e299a226ad85715e9a825c35774",
+  "protected_head_hands_feet_vertices_unchanged": true,
+  "protected_vertices": 25098,
+  "source_bounds": [
+    [
+      -0.47026127576828003,
+      -0.15545713901519775,
+      -2.1992520942148985e-06
+    ],
+    [
+      0.4702027440071106,
+      0.16549670696258545,
+      1.8000000715255737
+    ]
+  ],
+  "target_bounds": [
+    [
+      -0.47026127576828003,
+      -0.15549910068511963,
+      -2.1992520942148985e-06
+    ],
+    [
+      0.4702027440071106,
+      0.17039017379283905,
+      1.8000000715255737
+    ]
+  ],
+  "region_metrics": {
+    "pectorals": {
+      "samples": 746,
+      "mean_outward_offset_mm": 7.270585759213695,
+      "max_displacement_mm": 15.85524079338237
+    },
+    "deltoids": {
+      "samples": 914,
+      "mean_outward_offset_mm": 9.792082245083265,
+      "max_displacement_mm": 17.9535327937261
+    },
+    "upper_arms": {
+      "samples": 1755,
+      "mean_outward_offset_mm": 7.424766534544807,
+      "max_displacement_mm": 16.378552149622703
+    },
+    "forearms": {
+      "samples": 995,
+      "mean_outward_offset_mm": 5.971175584412211,
+      "max_displacement_mm": 11.183681924323148
+    },
+    "latissimus": {
+      "samples": 1010,
+      "mean_outward_offset_mm": 4.837831415087354,
+      "max_displacement_mm": 14.917880213994204
+    },
+    "trapezius": {
+      "samples": 831,
+      "mean_outward_offset_mm": 6.655512557231152,
+      "max_displacement_mm": 12.334729805455627
+    },
+    "abdomen_obliques": {
+      "samples": 1343,
+      "mean_outward_offset_mm": 0.762569752557525,
+      "max_displacement_mm": 3.7638346580862314
+    },
+    "quadriceps": {
+      "samples": 1420,
+      "mean_outward_offset_mm": 6.768323516800776,
+      "max_displacement_mm": 17.583798193988844
+    },
+    "hamstrings": {
+      "samples": 1222,
+      "mean_outward_offset_mm": 5.254855979980976,
+      "max_displacement_mm": 13.671496549745287
+    },
+    "calves": {
+      "samples": 1840,
+      "mean_outward_offset_mm": 2.6884042707264824,
+      "max_displacement_mm": 12.910948175805425
+    }
+  },
+  "method": "Corresponding original proxy vertices in fixed reference-coordinate windows; normal offsets are not circumference or muscle-volume measurements."
+}

@@ -1,0 +1,130 @@
+{
+  "variant": "defined",
+  "source_sha256": "4989868d00c575845576d75d2e9fd6f6da6b505907b71fdd122667d29247726d",
+  "objects": [
+    {
+      "object": "BPF.eye.L",
+      "role": "eye",
+      "vertices": 546,
+      "triangles": 1088,
+      "components": 1,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "loose_vertices": 0,
+      "coordinates_finite": true,
+      "near_degenerate_triangles": 0,
+      "euler": 2,
+      "genus_if_closed_orientable": 0,
+      "signed_volume": 8.167545562905419e-06,
+      "geometry_signature": "0039e50e809639d5ade1217d37b5c2d30fda26f67ca5327ac5b538b1fc021d2c"
+    },
+    {
+      "object": "BPF.eye.R",
+      "role": "eye",
+      "vertices": 546,
+      "triangles": 1088,
+      "components": 1,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "loose_vertices": 0,
+      "coordinates_finite": true,
+      "near_degenerate_triangles": 0,
+      "euler": 2,
+      "genus_if_closed_orientable": 0,
+      "signed_volume": 8.167569821776667e-06,
+      "geometry_signature": "21201039ba686b4b4d0d2feffec94db2bfc86658a3af18c1b4b419ef72138989"
+    },
+    {
+      "object": "BP3D fitness continuous body",
+      "role": "body",
+      "vertices": 59990,
+      "triangles": 120000,
+      "components": 1,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "loose_vertices": 0,
+      "coordinates_finite": true,
+      "near_degenerate_triangles": 0,
+      "euler": -10,
+      "genus_if_closed_orientable": 6,
+      "signed_volume": 0.09089612838479988,
+      "self_crossing_check": {
+        "crossings_by_region": {
+          "feet": 1,
+          "head": 0,
+          "hands": 0,
+          "sculptable_body": 0
+        },
+        "crossing_centers_min": [
+          0.19368974367777506,
+          -0.12067511429389317,
+          0.02065083757042885
+        ],
+        "crossing_centers_max": [
+          0.19368974367777506,
+          -0.12067511429389317,
+          0.02065083757042885
+        ],
+        "nonadjacent_BVH_candidates": 1,
+        "proper_triangle_crossings": 1,
+        "coplanar_candidates": 0,
+        "examples": [
+          {
+            "faces": [
+              31355,
+              31357
+            ],
+            "center": [
+              0.19368974367777506,
+              -0.12067511429389317,
+              0.02065083757042885
+            ]
+          }
+        ]
+      },
+      "region_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "geometry_signature": "8a8e4fb389f0cb10ea47259a9b3ed3b0af5b2a9a3e976f6c34aa1ede06d8e364"
+    }
+  ],
+  "segmentation": "Provisional face labels; not a final anatomical partition.",
+  "limitations": [
+    "A closed connected mesh can retain handles or anatomically poor junctions.",
+    "Nonadjacent triangle intersections use segment/triangle narrow phase; coplanar candidates are reported, not classified.",
+    "Separate fitted eyes are intentional; body/eye contacts are not tested.",
+    "No rig, iPhone performance or medical validation."
+  ],
+  "review_scene_geometry_and_labels_unchanged": true,
+  "review_scene_sha256": "4abdb286bc82e80e1fb321ebc162db45c9f72d525e2c2d059061253bb7df5118"
+}

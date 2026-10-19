@@ -1,0 +1,55 @@
+{
+  "sources": [
+    {
+      "file": "l2/front.png",
+      "sha256": "739b81a3e7c114aaecca612d0f56be0c34c5569065359935259d15beff766535"
+    },
+    {
+      "file": "l3/front.png",
+      "sha256": "d1de8356abe63390e1f447bfe579e2e40c4fb963872db427c565d82bffec24ca"
+    },
+    {
+      "file": "l2/three-quarter.png",
+      "sha256": "fe091ff99bb8462a63d4def7616ef68dc1249c02e2c5b94a377faf094e8f0cd8"
+    },
+    {
+      "file": "l3/three-quarter.png",
+      "sha256": "c6e4210d9b25da2ccd1336d17da739d7cad2e2e13b5538253fb20e9e7356f157"
+    },
+    {
+      "file": "l2/back.png",
+      "sha256": "1bf56e3cc112f261be77fc5453a7b840c8d4fcef1a86526c2da88138fcff0c43"
+    },
+    {
+      "file": "l3/back.png",
+      "sha256": "b3b3152fc9cfd2af0541028ac94c6b4d57c6c96789a34fbcc467d11450d94e28"
+    },
+    {
+      "file": "l2/side.png",
+      "sha256": "7c3b6f52d064f9139db3734e5de92066fb72d828f7dece72b57384c00849f58e"
+    },
+    {
+      "file": "l3/side.png",
+      "sha256": "7d4c938f42d856b44954045ad115fa7aaf892982720113762f1c489e7eae15f4"
+    },
+    {
+      "file": "l2/selection.png",
+      "sha256": "d2b3887fef5169054e6ca3690833ec2253d8058edc46a26121850698cbcc6276"
+    },
+    {
+      "file": "l3/selection.png",
+      "sha256": "4ba81f5c00eabde7e54a599863151c8147dce5ac85aeaa35b0c15692f34add0a"
+    }
+  ],
+  "full_comparison_size": [
+    1600,
+    1470
+  ],
+  "detail_crop": [
+    190,
+    260,
+    610,
+    680
+  ],
+  "geometry_or_anatomy_repainted": false
+}

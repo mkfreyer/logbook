@@ -1,0 +1,81 @@
+{
+  "source_original_basis_preserved": true,
+  "base_topology_and_material_indices_identical": true,
+  "uv_layers_identical": true,
+  "face_sets_identical": true,
+  "eyes_geometry_and_transforms_identical": [
+    true,
+    true
+  ],
+  "source_and_variant_at_strength_zero_identical_evaluated_geometry": true,
+  "base_vertices": 10582,
+  "base_faces": 10590,
+  "base_triangles": 21160,
+  "evaluated_vertices": 677442,
+  "evaluated_triangles": 1354880,
+  "original_boundary_edges": 0,
+  "original_nonmanifold_edges_over_two_faces": 0,
+  "topology_changes": 0,
+  "new_degenerate_triangles_threshold_1e_12": 0,
+  "triangle_normal_reversals_over_90_degrees": 0,
+  "base_edge_length_ratio_min": 0.9617838263511658,
+  "base_edge_length_ratio_max": 1.1136714220046997,
+  "maximum_evaluated_displacement_at_height_1_8": 0.014874985441565514,
+  "fixed_landmark_max_displacements": {
+    "head": 3.743657259747124e-07,
+    "feet": 0.0,
+    "hands_and_wrists": 0.0
+  },
+  "fixed_landmark_tolerance": 1e-06,
+  "lower_leg_falloff_max_below_z_0_49": 8.005096606211737e-05,
+  "source_evaluated_position_sha256": "008474102efd35bc0505eab6cbd3bde96800cc95cc31c0869b37298f62d06363",
+  "variant_evaluated_position_sha256": "47105936eeedbeee0844225e3268d0843b668bfcfd7ebbecc180881e07493f82",
+  "shape_key_position_sha256": "07b5639ed65269ee836a0aaa4c9ce760b92b1ab5b8c83ebd38d2dbe5076ad701",
+  "sections": [
+    {
+      "region": "upper_chest",
+      "sampled_vertices": 13598,
+      "source_space_width_before": 0.35676056146621704,
+      "source_space_width_after": 0.37046945095062256,
+      "source_space_depth_before": 0.25574636459350586,
+      "source_space_depth_after": 0.2692264914512634
+    },
+    {
+      "region": "deltoids",
+      "sampled_vertices": 8268,
+      "source_space_width_before": 0.5132341384887695,
+      "source_space_width_after": 0.5240991711616516,
+      "source_space_depth_before": 0.17937929928302765,
+      "source_space_depth_after": 0.19145172834396362
+    },
+    {
+      "region": "upper_arms",
+      "sampled_vertices": 16355,
+      "source_space_width_before": 0.638460636138916,
+      "source_space_width_after": 0.6402847170829773,
+      "source_space_depth_before": 0.12682001292705536,
+      "source_space_depth_after": 0.13404223322868347
+    },
+    {
+      "region": "back_torso",
+      "sampled_vertices": 16934,
+      "source_space_width_before": 0.37554436922073364,
+      "source_space_width_after": 0.3853125274181366,
+      "source_space_depth_before": 0.25663742423057556,
+      "source_space_depth_after": 0.2693778872489929
+    },
+    {
+      "region": "quadriceps",
+      "sampled_vertices": 9183,
+      "source_space_width_before": 0.3822818398475647,
+      "source_space_width_after": 0.3849741816520691,
+      "source_space_depth_before": 0.20007677376270294,
+      "source_space_depth_after": 0.2052992284297943
+    }
+  ],
+  "limits": [
+    "No anatomical segmentation or medical validation",
+    "No exhaustive self-intersection or rig deformation test",
+    "No mobile GPU, FPS, GLB or interactive integration test"
+  ]
+}

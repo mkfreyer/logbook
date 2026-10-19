@@ -1,0 +1,1943 @@
+{
+  "groups": [
+    {
+      "zone_id": 1,
+      "family": "pectoraux",
+      "side": "left",
+      "source_status": "verified_BP3D",
+      "sources": [
+        {
+          "id": "pectoralis-major-left",
+          "group_id": "pectoralis-major",
+          "side": "left",
+          "name_fr": "Grand pectoral gauche",
+          "components": [
+            {
+              "concept_id": "FMA34691",
+              "representation_id": "BP9095",
+              "name_en": "clavicular part of left pectoralis major",
+              "parts_list_line": 1335,
+              "elements": [
+                {
+                  "element_id": "FJ1447M",
+                  "obj_filename": "FJ1447M.obj",
+                  "element_parts_line": 5012
+                }
+              ]
+            },
+            {
+              "concept_id": "FMA79980",
+              "representation_id": "BP8323",
+              "name_en": "sternocostal part of left pectoralis major",
+              "parts_list_line": 2778,
+              "elements": [
+                {
+                  "element_id": "FJ1464M",
+                  "obj_filename": "FJ1464M.obj",
+                  "element_parts_line": 25325
+                }
+              ]
+            },
+            {
+              "concept_id": "FMA45875",
+              "representation_id": "BP7862",
+              "name_en": "abdominal part of left pectoralis major",
+              "parts_list_line": 1635,
+              "elements": [
+                {
+                  "element_id": "FJ1446M",
+                  "obj_filename": "FJ1446M.obj",
+                  "element_parts_line": 5947
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1446M",
+            "FJ1447M",
+            "FJ1464M"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        }
+      ],
+      "element_ids": [
+        "FJ1446M",
+        "FJ1447M",
+        "FJ1464M"
+      ]
+    },
+    {
+      "zone_id": 2,
+      "family": "pectoraux",
+      "side": "right",
+      "source_status": "verified_BP3D",
+      "sources": [
+        {
+          "id": "pectoralis-major-right",
+          "group_id": "pectoralis-major",
+          "side": "right",
+          "name_fr": "Grand pectoral droit",
+          "components": [
+            {
+              "concept_id": "FMA34690",
+              "representation_id": "BP5582",
+              "name_en": "clavicular part of right pectoralis major",
+              "parts_list_line": 1334,
+              "elements": [
+                {
+                  "element_id": "FJ1447",
+                  "obj_filename": "FJ1447.obj",
+                  "element_parts_line": 5011
+                }
+              ]
+            },
+            {
+              "concept_id": "FMA79979",
+              "representation_id": "BP5613",
+              "name_en": "sternocostal part of right pectoralis major",
+              "parts_list_line": 2777,
+              "elements": [
+                {
+                  "element_id": "FJ1464",
+                  "obj_filename": "FJ1464.obj",
+                  "element_parts_line": 25324
+                }
+              ]
+            },
+            {
+              "concept_id": "FMA45874",
+              "representation_id": "BP5615",
+              "name_en": "abdominal part of right pectoralis major",
+              "parts_list_line": 1634,
+              "elements": [
+                {
+                  "element_id": "FJ1446",
+                  "obj_filename": "FJ1446.obj",
+                  "element_parts_line": 5946
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1446",
+            "FJ1447",
+            "FJ1464"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        }
+      ],
+      "element_ids": [
+        "FJ1446",
+        "FJ1447",
+        "FJ1464"
+      ]
+    },
+    {
+      "zone_id": 3,
+      "family": "deltoides",
+      "side": "left",
+      "source_status": "verified_BP3D",
+      "sources": [
+        {
+          "id": "deltoid-left",
+          "group_id": "deltoid",
+          "side": "left",
+          "name_fr": "Deltoïde gauche",
+          "components": [
+            {
+              "concept_id": "FMA34681",
+              "representation_id": "BP8259",
+              "name_en": "clavicular part of left deltoid",
+              "parts_list_line": 1327,
+              "elements": [
+                {
+                  "element_id": "FJ1468M",
+                  "obj_filename": "FJ1468M.obj",
+                  "element_parts_line": 5000
+                }
+              ]
+            },
+            {
+              "concept_id": "FMA34683",
+              "representation_id": "BP9075",
+              "name_en": "acromial part of left deltoid",
+              "parts_list_line": 1329,
+              "elements": [
+                {
+                  "element_id": "FJ1467M",
+                  "obj_filename": "FJ1467M.obj",
+                  "element_parts_line": 5002
+                }
+              ]
+            },
+            {
+              "concept_id": "FMA34685",
+              "representation_id": "BP8151",
+              "name_en": "spinal part of left deltoid",
+              "parts_list_line": 1331,
+              "elements": [
+                {
+                  "element_id": "FJ1513M",
+                  "obj_filename": "FJ1513M.obj",
+                  "element_parts_line": 5004
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1467M",
+            "FJ1468M",
+            "FJ1513M"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        }
+      ],
+      "element_ids": [
+        "FJ1467M",
+        "FJ1468M",
+        "FJ1513M"
+      ]
+    },
+    {
+      "zone_id": 4,
+      "family": "deltoides",
+      "side": "right",
+      "source_status": "verified_BP3D",
+      "sources": [
+        {
+          "id": "deltoid-right",
+          "group_id": "deltoid",
+          "side": "right",
+          "name_fr": "Deltoïde droit",
+          "components": [
+            {
+              "concept_id": "FMA34680",
+              "representation_id": "BP7573",
+              "name_en": "clavicular part of right deltoid",
+              "parts_list_line": 1326,
+              "elements": [
+                {
+                  "element_id": "FJ1468",
+                  "obj_filename": "FJ1468.obj",
+                  "element_parts_line": 4999
+                }
+              ]
+            },
+            {
+              "concept_id": "FMA34682",
+              "representation_id": "BP7571",
+              "name_en": "acromial part of right deltoid",
+              "parts_list_line": 1328,
+              "elements": [
+                {
+                  "element_id": "FJ1467",
+                  "obj_filename": "FJ1467.obj",
+                  "element_parts_line": 5001
+                }
+              ]
+            },
+            {
+              "concept_id": "FMA34684",
+              "representation_id": "BP5607",
+              "name_en": "spinal part of right deltoid",
+              "parts_list_line": 1330,
+              "elements": [
+                {
+                  "element_id": "FJ1513",
+                  "obj_filename": "FJ1513.obj",
+                  "element_parts_line": 5003
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1467",
+            "FJ1468",
+            "FJ1513"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        }
+      ],
+      "element_ids": [
+        "FJ1467",
+        "FJ1468",
+        "FJ1513"
+      ]
+    },
+    {
+      "zone_id": 5,
+      "family": "biceps",
+      "side": "left",
+      "source_status": "verified_BP3D",
+      "sources": [
+        {
+          "id": "biceps-brachii-left",
+          "group_id": "biceps-brachii",
+          "side": "left",
+          "name_fr": "Biceps brachial gauche",
+          "components": [
+            {
+              "concept_id": "FMA37685",
+              "representation_id": "BP9153",
+              "name_en": "short head of left biceps brachii",
+              "parts_list_line": 1408,
+              "elements": [
+                {
+                  "element_id": "FJ1512M",
+                  "obj_filename": "FJ1512M.obj",
+                  "element_parts_line": 5396
+                }
+              ]
+            },
+            {
+              "concept_id": "FMA37687",
+              "representation_id": "BP8816",
+              "name_en": "long head of left biceps brachii",
+              "parts_list_line": 1410,
+              "elements": [
+                {
+                  "element_id": "FJ1478M",
+                  "obj_filename": "FJ1478M.obj",
+                  "element_parts_line": 5398
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1478M",
+            "FJ1512M"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        }
+      ],
+      "element_ids": [
+        "FJ1478M",
+        "FJ1512M"
+      ]
+    },
+    {
+      "zone_id": 6,
+      "family": "biceps",
+      "side": "right",
+      "source_status": "verified_BP3D",
+      "sources": [
+        {
+          "id": "biceps-brachii-right",
+          "group_id": "biceps-brachii",
+          "side": "right",
+          "name_fr": "Biceps brachial droit",
+          "components": [
+            {
+              "concept_id": "FMA37684",
+              "representation_id": "BP5558",
+              "name_en": "short head of right biceps brachii",
+              "parts_list_line": 1407,
+              "elements": [
+                {
+                  "element_id": "FJ1512",
+                  "obj_filename": "FJ1512.obj",
+                  "element_parts_line": 5395
+                }
+              ]
+            },
+            {
+              "concept_id": "FMA37686",
+              "representation_id": "BP5566",
+              "name_en": "long head of right biceps brachii",
+              "parts_list_line": 1409,
+              "elements": [
+                {
+                  "element_id": "FJ1478",
+                  "obj_filename": "FJ1478.obj",
+                  "element_parts_line": 5397
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1478",
+            "FJ1512"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        }
+      ],
+      "element_ids": [
+        "FJ1478",
+        "FJ1512"
+      ]
+    },
+    {
+      "zone_id": 7,
+      "family": "triceps",
+      "side": "left",
+      "source_status": "verified_BP3D",
+      "sources": [
+        {
+          "id": "triceps-brachii-left",
+          "group_id": "triceps-brachii",
+          "side": "left",
+          "name_fr": "Triceps brachial gauche",
+          "components": [
+            {
+              "concept_id": "FMA37696",
+              "representation_id": "BP8257",
+              "name_en": "medial head of left triceps brachii",
+              "parts_list_line": 1415,
+              "elements": [
+                {
+                  "element_id": "FJ1480M",
+                  "obj_filename": "FJ1480M.obj",
+                  "element_parts_line": 5406
+                }
+              ]
+            },
+            {
+              "concept_id": "FMA37698",
+              "representation_id": "BP8525",
+              "name_en": "lateral head of left triceps brachii",
+              "parts_list_line": 1417,
+              "elements": [
+                {
+                  "element_id": "FJ1477M",
+                  "obj_filename": "FJ1477M.obj",
+                  "element_parts_line": 5408
+                }
+              ]
+            },
+            {
+              "concept_id": "FMA37700",
+              "representation_id": "BP8344",
+              "name_en": "long head of left triceps brachii",
+              "parts_list_line": 1419,
+              "elements": [
+                {
+                  "element_id": "FJ1479M",
+                  "obj_filename": "FJ1479M.obj",
+                  "element_parts_line": 5410
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1477M",
+            "FJ1479M",
+            "FJ1480M"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        }
+      ],
+      "element_ids": [
+        "FJ1477M",
+        "FJ1479M",
+        "FJ1480M"
+      ]
+    },
+    {
+      "zone_id": 8,
+      "family": "triceps",
+      "side": "right",
+      "source_status": "verified_BP3D",
+      "sources": [
+        {
+          "id": "triceps-brachii-right",
+          "group_id": "triceps-brachii",
+          "side": "right",
+          "name_fr": "Triceps brachial droit",
+          "components": [
+            {
+              "concept_id": "FMA37695",
+              "representation_id": "BP5562",
+              "name_en": "medial head of right triceps brachii",
+              "parts_list_line": 1414,
+              "elements": [
+                {
+                  "element_id": "FJ1480",
+                  "obj_filename": "FJ1480.obj",
+                  "element_parts_line": 5405
+                }
+              ]
+            },
+            {
+              "concept_id": "FMA37697",
+              "representation_id": "BP5550",
+              "name_en": "lateral head of right triceps brachii",
+              "parts_list_line": 1416,
+              "elements": [
+                {
+                  "element_id": "FJ1477",
+                  "obj_filename": "FJ1477.obj",
+                  "element_parts_line": 5407
+                }
+              ]
+            },
+            {
+              "concept_id": "FMA37699",
+              "representation_id": "BP5564",
+              "name_en": "long head of right triceps brachii",
+              "parts_list_line": 1418,
+              "elements": [
+                {
+                  "element_id": "FJ1479",
+                  "obj_filename": "FJ1479.obj",
+                  "element_parts_line": 5409
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1477",
+            "FJ1479",
+            "FJ1480"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        }
+      ],
+      "element_ids": [
+        "FJ1477",
+        "FJ1479",
+        "FJ1480"
+      ]
+    },
+    {
+      "zone_id": 9,
+      "family": "avant-bras",
+      "side": "left",
+      "source_status": "verified_BP3D",
+      "sources": [
+        {
+          "id": "brachioradialis-left",
+          "group_id": "brachioradialis",
+          "side": "left",
+          "name_fr": "Brachio-radial gauche",
+          "components": [
+            {
+              "concept_id": "FMA38487",
+              "representation_id": "BP8244",
+              "name_en": "left brachioradialis",
+              "parts_list_line": 1461,
+              "elements": [
+                {
+                  "element_id": "FJ1487M",
+                  "obj_filename": "FJ1487M.obj",
+                  "element_parts_line": 5496
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1487M"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        },
+        {
+          "id": "flexor-carpi-radialis-left",
+          "group_id": "flexor-carpi-radialis",
+          "side": "left",
+          "name_fr": "Fléchisseur radial du carpe gauche",
+          "components": [
+            {
+              "concept_id": "FMA38461",
+              "representation_id": "BP8940",
+              "name_en": "left flexor carpi radialis",
+              "parts_list_line": 1444,
+              "elements": [
+                {
+                  "element_id": "FJ1496M",
+                  "obj_filename": "FJ1496M.obj",
+                  "element_parts_line": 5458
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1496M"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        },
+        {
+          "id": "extensor-carpi-radialis-longus-left",
+          "group_id": "extensor-carpi-radialis-longus",
+          "side": "left",
+          "name_fr": "Long extenseur radial du carpe gauche",
+          "components": [
+            {
+              "concept_id": "FMA38496",
+              "representation_id": "BP9280",
+              "name_en": "left extensor carpi radialis longus",
+              "parts_list_line": 1466,
+              "elements": [
+                {
+                  "element_id": "FJ1490M",
+                  "obj_filename": "FJ1490M.obj",
+                  "element_parts_line": 5538
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1490M"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        },
+        {
+          "id": "extensor-carpi-radialis-brevis-left",
+          "group_id": "extensor-carpi-radialis-brevis",
+          "side": "left",
+          "name_fr": "Court extenseur radial du carpe gauche",
+          "components": [
+            {
+              "concept_id": "FMA38499",
+              "representation_id": "BP9287",
+              "name_en": "left extensor carpi radialis brevis",
+              "parts_list_line": 1469,
+              "elements": [
+                {
+                  "element_id": "FJ1489M",
+                  "obj_filename": "FJ1489M.obj",
+                  "element_parts_line": 5542
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1489M"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        },
+        {
+          "id": "extensor-carpi-ulnaris-left",
+          "group_id": "extensor-carpi-ulnaris",
+          "side": "left",
+          "name_fr": "Extenseur ulnaire du carpe gauche",
+          "components": [
+            {
+              "concept_id": "FMA38508",
+              "representation_id": "BP7970",
+              "name_en": "left extensor carpi ulnaris",
+              "parts_list_line": 1478,
+              "elements": [
+                {
+                  "element_id": "FJ1472M",
+                  "obj_filename": "FJ1472M.obj",
+                  "element_parts_line": 5557
+                },
+                {
+                  "element_id": "FJ1517M",
+                  "obj_filename": "FJ1517M.obj",
+                  "element_parts_line": 5558
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1472M",
+            "FJ1517M"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        },
+        {
+          "id": "extensor-digitorum-left",
+          "group_id": "extensor-digitorum",
+          "side": "left",
+          "name_fr": "Extenseur des doigts gauche",
+          "components": [
+            {
+              "concept_id": "FMA38502",
+              "representation_id": "BP8560",
+              "name_en": "left extensor digitorum",
+              "parts_list_line": 1472,
+              "elements": [
+                {
+                  "element_id": "FJ1492M",
+                  "obj_filename": "FJ1492M.obj",
+                  "element_parts_line": 5546
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1492M"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        }
+      ],
+      "element_ids": [
+        "FJ1472M",
+        "FJ1487M",
+        "FJ1489M",
+        "FJ1490M",
+        "FJ1492M",
+        "FJ1496M",
+        "FJ1517M"
+      ]
+    },
+    {
+      "zone_id": 10,
+      "family": "avant-bras",
+      "side": "right",
+      "source_status": "verified_BP3D",
+      "sources": [
+        {
+          "id": "brachioradialis-right",
+          "group_id": "brachioradialis",
+          "side": "right",
+          "name_fr": "Brachio-radial droit",
+          "components": [
+            {
+              "concept_id": "FMA38486",
+              "representation_id": "BP4833",
+              "name_en": "right brachioradialis",
+              "parts_list_line": 1460,
+              "elements": [
+                {
+                  "element_id": "FJ1487",
+                  "obj_filename": "FJ1487.obj",
+                  "element_parts_line": 5495
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1487"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        },
+        {
+          "id": "flexor-carpi-radialis-right",
+          "group_id": "flexor-carpi-radialis",
+          "side": "right",
+          "name_fr": "Fléchisseur radial du carpe droit",
+          "components": [
+            {
+              "concept_id": "FMA38460",
+              "representation_id": "BP4841",
+              "name_en": "right flexor carpi radialis",
+              "parts_list_line": 1443,
+              "elements": [
+                {
+                  "element_id": "FJ1496",
+                  "obj_filename": "FJ1496.obj",
+                  "element_parts_line": 5457
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1496"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        },
+        {
+          "id": "extensor-carpi-radialis-longus-right",
+          "group_id": "extensor-carpi-radialis-longus",
+          "side": "right",
+          "name_fr": "Long extenseur radial du carpe droit",
+          "components": [
+            {
+              "concept_id": "FMA38495",
+              "representation_id": "BP4831",
+              "name_en": "right extensor carpi radialis longus",
+              "parts_list_line": 1465,
+              "elements": [
+                {
+                  "element_id": "FJ1490",
+                  "obj_filename": "FJ1490.obj",
+                  "element_parts_line": 5537
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1490"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        },
+        {
+          "id": "extensor-carpi-radialis-brevis-right",
+          "group_id": "extensor-carpi-radialis-brevis",
+          "side": "right",
+          "name_fr": "Court extenseur radial du carpe droit",
+          "components": [
+            {
+              "concept_id": "FMA38498",
+              "representation_id": "BP4823",
+              "name_en": "right extensor carpi radialis brevis",
+              "parts_list_line": 1468,
+              "elements": [
+                {
+                  "element_id": "FJ1489",
+                  "obj_filename": "FJ1489.obj",
+                  "element_parts_line": 5541
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1489"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        },
+        {
+          "id": "extensor-carpi-ulnaris-right",
+          "group_id": "extensor-carpi-ulnaris",
+          "side": "right",
+          "name_fr": "Extenseur ulnaire du carpe droit",
+          "components": [
+            {
+              "concept_id": "FMA38507",
+              "representation_id": "BP4829",
+              "name_en": "right extensor carpi ulnaris",
+              "parts_list_line": 1477,
+              "elements": [
+                {
+                  "element_id": "FJ1472",
+                  "obj_filename": "FJ1472.obj",
+                  "element_parts_line": 5555
+                },
+                {
+                  "element_id": "FJ1517",
+                  "obj_filename": "FJ1517.obj",
+                  "element_parts_line": 5556
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1472",
+            "FJ1517"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        },
+        {
+          "id": "extensor-digitorum-right",
+          "group_id": "extensor-digitorum",
+          "side": "right",
+          "name_fr": "Extenseur des doigts droit",
+          "components": [
+            {
+              "concept_id": "FMA38501",
+              "representation_id": "BP4827",
+              "name_en": "right extensor digitorum",
+              "parts_list_line": 1471,
+              "elements": [
+                {
+                  "element_id": "FJ1492",
+                  "obj_filename": "FJ1492.obj",
+                  "element_parts_line": 5545
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1492"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        }
+      ],
+      "element_ids": [
+        "FJ1472",
+        "FJ1487",
+        "FJ1489",
+        "FJ1490",
+        "FJ1492",
+        "FJ1496",
+        "FJ1517"
+      ]
+    },
+    {
+      "zone_id": 11,
+      "family": "trapezes",
+      "side": "left",
+      "source_status": "verified_BP3D",
+      "sources": [
+        {
+          "id": "trapezius-left",
+          "group_id": "trapezius",
+          "side": "left",
+          "name_fr": "Trapèze gauche",
+          "components": [
+            {
+              "concept_id": "FMA33583",
+              "representation_id": "BP8225",
+              "name_en": "ascending part of left trapezius",
+              "parts_list_line": 1317,
+              "elements": [
+                {
+                  "element_id": "FJ1520M",
+                  "obj_filename": "FJ1520M.obj",
+                  "element_parts_line": 4982
+                }
+              ]
+            },
+            {
+              "concept_id": "FMA33585",
+              "representation_id": "BP8252",
+              "name_en": "transverse part of left trapezius",
+              "parts_list_line": 1319,
+              "elements": [
+                {
+                  "element_id": "FJ1554M",
+                  "obj_filename": "FJ1554M.obj",
+                  "element_parts_line": 4984
+                }
+              ]
+            },
+            {
+              "concept_id": "FMA33587",
+              "representation_id": "BP8267",
+              "name_en": "descending part of left trapezius",
+              "parts_list_line": 1321,
+              "elements": [
+                {
+                  "element_id": "FJ1521M",
+                  "obj_filename": "FJ1521M.obj",
+                  "element_parts_line": 4986
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1520M",
+            "FJ1521M",
+            "FJ1554M"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        }
+      ],
+      "element_ids": [
+        "FJ1520M",
+        "FJ1521M",
+        "FJ1554M"
+      ]
+    },
+    {
+      "zone_id": 12,
+      "family": "trapezes",
+      "side": "right",
+      "source_status": "verified_BP3D",
+      "sources": [
+        {
+          "id": "trapezius-right",
+          "group_id": "trapezius",
+          "side": "right",
+          "name_fr": "Trapèze droit",
+          "components": [
+            {
+              "concept_id": "FMA33581",
+              "representation_id": "BP5638",
+              "name_en": "ascending part of right trapezius",
+              "parts_list_line": 1316,
+              "elements": [
+                {
+                  "element_id": "FJ1520",
+                  "obj_filename": "FJ1520.obj",
+                  "element_parts_line": 4981
+                }
+              ]
+            },
+            {
+              "concept_id": "FMA33584",
+              "representation_id": "BP5610",
+              "name_en": "transverse part of right trapezius",
+              "parts_list_line": 1318,
+              "elements": [
+                {
+                  "element_id": "FJ1554",
+                  "obj_filename": "FJ1554.obj",
+                  "element_parts_line": 4983
+                }
+              ]
+            },
+            {
+              "concept_id": "FMA33586",
+              "representation_id": "BP5636",
+              "name_en": "descending part of right trapezius",
+              "parts_list_line": 1320,
+              "elements": [
+                {
+                  "element_id": "FJ1521",
+                  "obj_filename": "FJ1521.obj",
+                  "element_parts_line": 4985
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1520",
+            "FJ1521",
+            "FJ1554"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        }
+      ],
+      "element_ids": [
+        "FJ1520",
+        "FJ1521",
+        "FJ1554"
+      ]
+    },
+    {
+      "zone_id": 13,
+      "family": "dorsaux",
+      "side": "left",
+      "source_status": "original_artistic_complement_no_verified_BP3D_identity",
+      "sources": [],
+      "element_ids": []
+    },
+    {
+      "zone_id": 14,
+      "family": "dorsaux",
+      "side": "right",
+      "source_status": "original_artistic_complement_no_verified_BP3D_identity",
+      "sources": [],
+      "element_ids": []
+    },
+    {
+      "zone_id": 15,
+      "family": "abdominaux",
+      "side": "left",
+      "source_status": "original_artistic_complement_no_verified_BP3D_identity",
+      "sources": [],
+      "element_ids": []
+    },
+    {
+      "zone_id": 16,
+      "family": "abdominaux",
+      "side": "right",
+      "source_status": "original_artistic_complement_no_verified_BP3D_identity",
+      "sources": [],
+      "element_ids": []
+    },
+    {
+      "zone_id": 17,
+      "family": "obliques",
+      "side": "left",
+      "source_status": "verified_BP3D",
+      "sources": [
+        {
+          "id": "external-oblique-left",
+          "group_id": "external-oblique",
+          "side": "left",
+          "name_fr": "Oblique externe gauche",
+          "components": [
+            {
+              "concept_id": "FMA13337",
+              "representation_id": "BP8154",
+              "name_en": "left external oblique",
+              "parts_list_line": 408,
+              "elements": [
+                {
+                  "element_id": "FJ1452M",
+                  "obj_filename": "FJ1452M.obj",
+                  "element_parts_line": 2419
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1452M"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        }
+      ],
+      "element_ids": [
+        "FJ1452M"
+      ]
+    },
+    {
+      "zone_id": 18,
+      "family": "obliques",
+      "side": "right",
+      "source_status": "verified_BP3D",
+      "sources": [
+        {
+          "id": "external-oblique-right",
+          "group_id": "external-oblique",
+          "side": "right",
+          "name_fr": "Oblique externe droit",
+          "components": [
+            {
+              "concept_id": "FMA13336",
+              "representation_id": "BP4967",
+              "name_en": "right external oblique",
+              "parts_list_line": 407,
+              "elements": [
+                {
+                  "element_id": "FJ1452",
+                  "obj_filename": "FJ1452.obj",
+                  "element_parts_line": 2418
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1452"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        }
+      ],
+      "element_ids": [
+        "FJ1452"
+      ]
+    },
+    {
+      "zone_id": 19,
+      "family": "fessiers",
+      "side": "left",
+      "source_status": "verified_BP3D",
+      "sources": [
+        {
+          "id": "gluteus-maximus-left",
+          "group_id": "gluteus-maximus",
+          "side": "left",
+          "name_fr": "Grand fessier gauche",
+          "components": [
+            {
+              "concept_id": "FMA22329",
+              "representation_id": "BP8401",
+              "name_en": "left gluteus maximus",
+              "parts_list_line": 786,
+              "elements": [
+                {
+                  "element_id": "FJ1418M",
+                  "obj_filename": "FJ1418M.obj",
+                  "element_parts_line": 3455
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1418M"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        },
+        {
+          "id": "gluteus-medius-left",
+          "group_id": "gluteus-medius",
+          "side": "left",
+          "name_fr": "Moyen fessier gauche",
+          "components": [
+            {
+              "concept_id": "FMA22331",
+              "representation_id": "BP9213",
+              "name_en": "left gluteus medius",
+              "parts_list_line": 788,
+              "elements": [
+                {
+                  "element_id": "FJ1419M",
+                  "obj_filename": "FJ1419M.obj",
+                  "element_parts_line": 3457
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1419M"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        }
+      ],
+      "element_ids": [
+        "FJ1418M",
+        "FJ1419M"
+      ]
+    },
+    {
+      "zone_id": 20,
+      "family": "fessiers",
+      "side": "right",
+      "source_status": "verified_BP3D",
+      "sources": [
+        {
+          "id": "gluteus-maximus-right",
+          "group_id": "gluteus-maximus",
+          "side": "right",
+          "name_fr": "Grand fessier droit",
+          "components": [
+            {
+              "concept_id": "FMA22328",
+              "representation_id": "BP5065",
+              "name_en": "right gluteus maximus",
+              "parts_list_line": 785,
+              "elements": [
+                {
+                  "element_id": "FJ1418",
+                  "obj_filename": "FJ1418.obj",
+                  "element_parts_line": 3454
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1418"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        },
+        {
+          "id": "gluteus-medius-right",
+          "group_id": "gluteus-medius",
+          "side": "right",
+          "name_fr": "Moyen fessier droit",
+          "components": [
+            {
+              "concept_id": "FMA22330",
+              "representation_id": "BP5063",
+              "name_en": "right gluteus medius",
+              "parts_list_line": 787,
+              "elements": [
+                {
+                  "element_id": "FJ1419",
+                  "obj_filename": "FJ1419.obj",
+                  "element_parts_line": 3456
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1419"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        }
+      ],
+      "element_ids": [
+        "FJ1418",
+        "FJ1419"
+      ]
+    },
+    {
+      "zone_id": 21,
+      "family": "quadriceps",
+      "side": "left",
+      "source_status": "verified_BP3D",
+      "sources": [
+        {
+          "id": "rectus-femoris-left",
+          "group_id": "rectus-femoris",
+          "side": "left",
+          "name_fr": "Droit fémoral gauche",
+          "components": [
+            {
+              "concept_id": "FMA38929",
+              "representation_id": "BP8094",
+              "name_en": "left rectus femoris",
+              "parts_list_line": 1508,
+              "elements": [
+                {
+                  "element_id": "FJ1433M",
+                  "obj_filename": "FJ1433M.obj",
+                  "element_parts_line": 5606
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1433M"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        },
+        {
+          "id": "vastus-lateralis-left",
+          "group_id": "vastus-lateralis",
+          "side": "left",
+          "name_fr": "Vaste latéral gauche",
+          "components": [
+            {
+              "concept_id": "FMA38931",
+              "representation_id": "BP8754",
+              "name_en": "left vastus lateralis",
+              "parts_list_line": 1510,
+              "elements": [
+                {
+                  "element_id": "FJ1442M",
+                  "obj_filename": "FJ1442M.obj",
+                  "element_parts_line": 5608
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1442M"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        },
+        {
+          "id": "vastus-medialis-left",
+          "group_id": "vastus-medialis",
+          "side": "left",
+          "name_fr": "Vaste médial gauche",
+          "components": [
+            {
+              "concept_id": "FMA38933",
+              "representation_id": "BP9128",
+              "name_en": "left vastus medialis",
+              "parts_list_line": 1512,
+              "elements": [
+                {
+                  "element_id": "FJ1443M",
+                  "obj_filename": "FJ1443M.obj",
+                  "element_parts_line": 5610
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1443M"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        }
+      ],
+      "element_ids": [
+        "FJ1433M",
+        "FJ1442M",
+        "FJ1443M"
+      ]
+    },
+    {
+      "zone_id": 22,
+      "family": "quadriceps",
+      "side": "right",
+      "source_status": "verified_BP3D",
+      "sources": [
+        {
+          "id": "rectus-femoris-right",
+          "group_id": "rectus-femoris",
+          "side": "right",
+          "name_fr": "Droit fémoral droit",
+          "components": [
+            {
+              "concept_id": "FMA38928",
+              "representation_id": "BP5598",
+              "name_en": "right rectus femoris",
+              "parts_list_line": 1507,
+              "elements": [
+                {
+                  "element_id": "FJ1433",
+                  "obj_filename": "FJ1433.obj",
+                  "element_parts_line": 5605
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1433"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        },
+        {
+          "id": "vastus-lateralis-right",
+          "group_id": "vastus-lateralis",
+          "side": "right",
+          "name_fr": "Vaste latéral droit",
+          "components": [
+            {
+              "concept_id": "FMA38930",
+              "representation_id": "BP5602",
+              "name_en": "right vastus lateralis",
+              "parts_list_line": 1509,
+              "elements": [
+                {
+                  "element_id": "FJ1442",
+                  "obj_filename": "FJ1442.obj",
+                  "element_parts_line": 5607
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1442"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        },
+        {
+          "id": "vastus-medialis-right",
+          "group_id": "vastus-medialis",
+          "side": "right",
+          "name_fr": "Vaste médial droit",
+          "components": [
+            {
+              "concept_id": "FMA38932",
+              "representation_id": "BP5600",
+              "name_en": "right vastus medialis",
+              "parts_list_line": 1511,
+              "elements": [
+                {
+                  "element_id": "FJ1443",
+                  "obj_filename": "FJ1443.obj",
+                  "element_parts_line": 5609
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1443"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        }
+      ],
+      "element_ids": [
+        "FJ1433",
+        "FJ1442",
+        "FJ1443"
+      ]
+    },
+    {
+      "zone_id": 23,
+      "family": "ischios",
+      "side": "left",
+      "source_status": "verified_BP3D",
+      "sources": [
+        {
+          "id": "biceps-femoris-left",
+          "group_id": "biceps-femoris",
+          "side": "left",
+          "name_fr": "Biceps fémoral gauche",
+          "components": [
+            {
+              "concept_id": "FMA45889",
+              "representation_id": "BP8331",
+              "name_en": "long head of left biceps femoris",
+              "parts_list_line": 1639,
+              "elements": [
+                {
+                  "element_id": "FJ1395M",
+                  "obj_filename": "FJ1395M.obj",
+                  "element_parts_line": 5955
+                }
+              ]
+            },
+            {
+              "concept_id": "FMA45892",
+              "representation_id": "BP8616",
+              "name_en": "short head of left biceps femoris",
+              "parts_list_line": 1642,
+              "elements": [
+                {
+                  "element_id": "FJ1444M",
+                  "obj_filename": "FJ1444M.obj",
+                  "element_parts_line": 5959
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1395M",
+            "FJ1444M"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        },
+        {
+          "id": "semitendinosus-left",
+          "group_id": "semitendinosus",
+          "side": "left",
+          "name_fr": "Semi-tendineux gauche",
+          "components": [
+            {
+              "concept_id": "FMA22359",
+              "representation_id": "BP9066",
+              "name_en": "left semitendinosus",
+              "parts_list_line": 806,
+              "elements": [
+                {
+                  "element_id": "FJ1436M",
+                  "obj_filename": "FJ1436M.obj",
+                  "element_parts_line": 3477
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1436M"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        },
+        {
+          "id": "semimembranosus-left",
+          "group_id": "semimembranosus",
+          "side": "left",
+          "name_fr": "Semi-membraneux gauche",
+          "components": [
+            {
+              "concept_id": "FMA22449",
+              "representation_id": "BP7829",
+              "name_en": "left semimembranosus",
+              "parts_list_line": 824,
+              "elements": [
+                {
+                  "element_id": "FJ1435M",
+                  "obj_filename": "FJ1435M.obj",
+                  "element_parts_line": 3527
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1435M"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        }
+      ],
+      "element_ids": [
+        "FJ1395M",
+        "FJ1435M",
+        "FJ1436M",
+        "FJ1444M"
+      ]
+    },
+    {
+      "zone_id": 24,
+      "family": "ischios",
+      "side": "right",
+      "source_status": "verified_BP3D",
+      "sources": [
+        {
+          "id": "biceps-femoris-right",
+          "group_id": "biceps-femoris",
+          "side": "right",
+          "name_fr": "Biceps fémoral droit",
+          "components": [
+            {
+              "concept_id": "FMA45888",
+              "representation_id": "BP5575",
+              "name_en": "long head of right biceps femoris",
+              "parts_list_line": 1638,
+              "elements": [
+                {
+                  "element_id": "FJ1395",
+                  "obj_filename": "FJ1395.obj",
+                  "element_parts_line": 5954
+                }
+              ]
+            },
+            {
+              "concept_id": "FMA45891",
+              "representation_id": "BP5573",
+              "name_en": "short head of right biceps femoris",
+              "parts_list_line": 1641,
+              "elements": [
+                {
+                  "element_id": "FJ1444",
+                  "obj_filename": "FJ1444.obj",
+                  "element_parts_line": 5958
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1395",
+            "FJ1444"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        },
+        {
+          "id": "semitendinosus-right",
+          "group_id": "semitendinosus",
+          "side": "right",
+          "name_fr": "Semi-tendineux droit",
+          "components": [
+            {
+              "concept_id": "FMA22358",
+              "representation_id": "BP4991",
+              "name_en": "right semitendinosus",
+              "parts_list_line": 805,
+              "elements": [
+                {
+                  "element_id": "FJ1436",
+                  "obj_filename": "FJ1436.obj",
+                  "element_parts_line": 3476
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1436"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        },
+        {
+          "id": "semimembranosus-right",
+          "group_id": "semimembranosus",
+          "side": "right",
+          "name_fr": "Semi-membraneux droit",
+          "components": [
+            {
+              "concept_id": "FMA22448",
+              "representation_id": "BP4989",
+              "name_en": "right semimembranosus",
+              "parts_list_line": 823,
+              "elements": [
+                {
+                  "element_id": "FJ1435",
+                  "obj_filename": "FJ1435.obj",
+                  "element_parts_line": 3526
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1435"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        }
+      ],
+      "element_ids": [
+        "FJ1395",
+        "FJ1435",
+        "FJ1436",
+        "FJ1444"
+      ]
+    },
+    {
+      "zone_id": 25,
+      "family": "mollets",
+      "side": "left",
+      "source_status": "verified_BP3D",
+      "sources": [
+        {
+          "id": "gastrocnemius-left",
+          "group_id": "gastrocnemius",
+          "side": "left",
+          "name_fr": "Gastrocnémien gauche",
+          "components": [
+            {
+              "concept_id": "FMA45958",
+              "representation_id": "BP9217",
+              "name_en": "medial head of left gastrocnemius",
+              "parts_list_line": 1646,
+              "elements": [
+                {
+                  "element_id": "FJ1397M",
+                  "obj_filename": "FJ1397M.obj",
+                  "element_parts_line": 5967
+                }
+              ]
+            },
+            {
+              "concept_id": "FMA45961",
+              "representation_id": "BP7939",
+              "name_en": "lateral head of left gastrocnemius",
+              "parts_list_line": 1649,
+              "elements": [
+                {
+                  "element_id": "FJ1394M",
+                  "obj_filename": "FJ1394M.obj",
+                  "element_parts_line": 5971
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1394M",
+            "FJ1397M"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        },
+        {
+          "id": "soleus-left",
+          "group_id": "soleus",
+          "side": "left",
+          "name_fr": "Soléaire gauche",
+          "components": [
+            {
+              "concept_id": "FMA22559",
+              "representation_id": "BP8819",
+              "name_en": "left soleus",
+              "parts_list_line": 865,
+              "elements": [
+                {
+                  "element_id": "FJ1437M",
+                  "obj_filename": "FJ1437M.obj",
+                  "element_parts_line": 3645
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1437M"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        }
+      ],
+      "element_ids": [
+        "FJ1394M",
+        "FJ1397M",
+        "FJ1437M"
+      ]
+    },
+    {
+      "zone_id": 26,
+      "family": "mollets",
+      "side": "right",
+      "source_status": "verified_BP3D",
+      "sources": [
+        {
+          "id": "gastrocnemius-right",
+          "group_id": "gastrocnemius",
+          "side": "right",
+          "name_fr": "Gastrocnémien droit",
+          "components": [
+            {
+              "concept_id": "FMA45957",
+              "representation_id": "BP5539",
+              "name_en": "medial head of right gastrocnemius",
+              "parts_list_line": 1645,
+              "elements": [
+                {
+                  "element_id": "FJ1397",
+                  "obj_filename": "FJ1397.obj",
+                  "element_parts_line": 5966
+                }
+              ]
+            },
+            {
+              "concept_id": "FMA45960",
+              "representation_id": "BP5541",
+              "name_en": "lateral head of right gastrocnemius",
+              "parts_list_line": 1648,
+              "elements": [
+                {
+                  "element_id": "FJ1394",
+                  "obj_filename": "FJ1394.obj",
+                  "element_parts_line": 5970
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1394",
+            "FJ1397"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        },
+        {
+          "id": "soleus-right",
+          "group_id": "soleus",
+          "side": "right",
+          "name_fr": "Soléaire droit",
+          "components": [
+            {
+              "concept_id": "FMA22558",
+              "representation_id": "BP4999",
+              "name_en": "right soleus",
+              "parts_list_line": 864,
+              "elements": [
+                {
+                  "element_id": "FJ1437",
+                  "obj_filename": "FJ1437.obj",
+                  "element_parts_line": 3644
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1437"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        }
+      ],
+      "element_ids": [
+        "FJ1394",
+        "FJ1397",
+        "FJ1437"
+      ]
+    },
+    {
+      "zone_id": 27,
+      "family": "adducteurs",
+      "side": "left",
+      "source_status": "verified_BP3D",
+      "sources": [
+        {
+          "id": "adductor-longus-left",
+          "group_id": "adductor-longus",
+          "side": "left",
+          "name_fr": "Long adducteur gauche",
+          "components": [
+            {
+              "concept_id": "FMA22457",
+              "representation_id": "BP8604",
+              "name_en": "left adductor longus",
+              "parts_list_line": 830,
+              "elements": [
+                {
+                  "element_id": "FJ1402M",
+                  "obj_filename": "FJ1402M.obj",
+                  "element_parts_line": 3533
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1402M"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        },
+        {
+          "id": "gracilis-left",
+          "group_id": "gracilis",
+          "side": "left",
+          "name_fr": "Gracile gauche",
+          "components": [
+            {
+              "concept_id": "FMA43884",
+              "representation_id": "BP8926",
+              "name_en": "left gracilis",
+              "parts_list_line": 1531,
+              "elements": [
+                {
+                  "element_id": "FJ1421M",
+                  "obj_filename": "FJ1421M.obj",
+                  "element_parts_line": 5644
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1421M"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        }
+      ],
+      "element_ids": [
+        "FJ1402M",
+        "FJ1421M"
+      ]
+    },
+    {
+      "zone_id": 28,
+      "family": "adducteurs",
+      "side": "right",
+      "source_status": "verified_BP3D",
+      "sources": [
+        {
+          "id": "adductor-longus-right",
+          "group_id": "adductor-longus",
+          "side": "right",
+          "name_fr": "Long adducteur droit",
+          "components": [
+            {
+              "concept_id": "FMA22456",
+              "representation_id": "BP4984",
+              "name_en": "right adductor longus",
+              "parts_list_line": 829,
+              "elements": [
+                {
+                  "element_id": "FJ1402",
+                  "obj_filename": "FJ1402.obj",
+                  "element_parts_line": 3532
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1402"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        },
+        {
+          "id": "gracilis-right",
+          "group_id": "gracilis",
+          "side": "right",
+          "name_fr": "Gracile droit",
+          "components": [
+            {
+              "concept_id": "FMA43883",
+              "representation_id": "BP4976",
+              "name_en": "right gracilis",
+              "parts_list_line": 1530,
+              "elements": [
+                {
+                  "element_id": "FJ1421",
+                  "obj_filename": "FJ1421.obj",
+                  "element_parts_line": 5643
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1421"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        }
+      ],
+      "element_ids": [
+        "FJ1402",
+        "FJ1421"
+      ]
+    },
+    {
+      "zone_id": 29,
+      "family": "tibial-anterieur",
+      "side": "left",
+      "source_status": "verified_BP3D",
+      "sources": [
+        {
+          "id": "tibialis-anterior-left",
+          "group_id": "tibialis-anterior",
+          "side": "left",
+          "name_fr": "Tibial antérieur gauche",
+          "components": [
+            {
+              "concept_id": "FMA22545",
+              "representation_id": "BP8720",
+              "name_en": "left tibialis anterior",
+              "parts_list_line": 853,
+              "elements": [
+                {
+                  "element_id": "FJ1439M",
+                  "obj_filename": "FJ1439M.obj",
+                  "element_parts_line": 3633
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1439M"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        }
+      ],
+      "element_ids": [
+        "FJ1439M"
+      ]
+    },
+    {
+      "zone_id": 30,
+      "family": "tibial-anterieur",
+      "side": "right",
+      "source_status": "verified_BP3D",
+      "sources": [
+        {
+          "id": "tibialis-anterior-right",
+          "group_id": "tibialis-anterior",
+          "side": "right",
+          "name_fr": "Tibial antérieur droit",
+          "components": [
+            {
+              "concept_id": "FMA22544",
+              "representation_id": "BP5018",
+              "name_en": "right tibialis anterior",
+              "parts_list_line": 852,
+              "elements": [
+                {
+                  "element_id": "FJ1439",
+                  "obj_filename": "FJ1439.obj",
+                  "element_parts_line": 3632
+                }
+              ]
+            }
+          ],
+          "element_ids": [
+            "FJ1439"
+          ],
+          "status": "metadata_identity_verified_not_approved_for_product"
+        }
+      ],
+      "element_ids": [
+        "FJ1439"
+      ]
+    }
+  ],
+  "anatomical_source": "BodyParts3D 4.0 audited IS-A metadata",
+  "excluded": "bones, organs, deep layers, facial muscles, finger/toe tendons; no Z-Anatomy or Ecorche meshes loaded",
+  "selection_status": "provisional fitness zones, not final segmentation"
+}

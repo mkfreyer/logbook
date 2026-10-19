@@ -1,0 +1,141 @@
+{
+  "algorithm": "SHA-256",
+  "source_geometry_license": "CC0",
+  "files": [
+    {
+      "path": "docs/M4A_B_PLUS_PREMIUM_PUISSANCE.md",
+      "bytes": 8732,
+      "sha256": "94b7c577a61a20a9f3f9c3783dbbee627a4a503cda750903a22cfb8edc0aee5c"
+    },
+    {
+      "path": "docs/m4a/bplus-power/README.md",
+      "bytes": 3826,
+      "sha256": "c05dc052b3bd2881056a2c6298562052119eb8af73d2317e601175c325e1eedc"
+    },
+    {
+      "path": "docs/m4a/bplus-power/comparaison-back.png",
+      "bytes": 882860,
+      "sha256": "b1c67e333f50cf5496d89d60c1433515e89ce376cc5f387e8711e5311d76c45c"
+    },
+    {
+      "path": "docs/m4a/bplus-power/comparaison-front.png",
+      "bytes": 944142,
+      "sha256": "f34102eb792c48cac106817d56ebcd9a15b32830e2bbc962adf3687c1bd47519"
+    },
+    {
+      "path": "docs/m4a/bplus-power/comparaison-selection.png",
+      "bytes": 942456,
+      "sha256": "65ec2afede0a49e1005eed95af7a1f1402909196b2078d79160b8a25bf7762a6"
+    },
+    {
+      "path": "docs/m4a/bplus-power/comparaison-side.png",
+      "bytes": 759158,
+      "sha256": "401dfe2056725dd06b38af57860b8029e89e25d06b923e2d7056b3ee70db4aae"
+    },
+    {
+      "path": "docs/m4a/bplus-power/comparaison-three-quarter.png",
+      "bytes": 935964,
+      "sha256": "787d6768fcd4f833d872240dc2aa774ac88041e8bd30557ddcb66b863e6451c8"
+    },
+    {
+      "path": "docs/m4a/bplus-power/comparaison.png",
+      "bytes": 1070029,
+      "sha256": "b3c6a766fa54d7c9bd17284dba140edcd559562de7aecaf0c559a4fea7a619c4"
+    },
+    {
+      "path": "docs/m4a/bplus-power/comparison-geometry.json",
+      "bytes": 2335,
+      "sha256": "66a2bf556ac3713d1e6b5a6ffad6a12158cdf4e555656be0666b2128552e1264"
+    },
+    {
+      "path": "docs/m4a/bplus-power/detail-torse.png",
+      "bytes": 807856,
+      "sha256": "ac7ed63111957312579c6ac10aefc89556a91d1734d02f7babdf8bf27703715c"
+    },
+    {
+      "path": "docs/m4a/bplus-power/power/back.png",
+      "bytes": 885071,
+      "sha256": "0a2e3b2221863d21fec4014a5f84bbac1857b2a2a98dfa7f6394ad540117ddf3"
+    },
+    {
+      "path": "docs/m4a/bplus-power/power/construction.json",
+      "bytes": 4903,
+      "sha256": "beed7819dafffc9b7cd972b70a148fd02c858a238767a49900b39b81eeb301e1"
+    },
+    {
+      "path": "docs/m4a/bplus-power/power/front.png",
+      "bytes": 921758,
+      "sha256": "d1d36e835189c0894f045c2789c1db673117cce9140c8357c2799e641b8a85df"
+    },
+    {
+      "path": "docs/m4a/bplus-power/power/geometry-check.json",
+      "bytes": 8291,
+      "sha256": "93c7d7b32a06ecbdc543cf1575815710188f3a463b8e3353c20598899b4d0682"
+    },
+    {
+      "path": "docs/m4a/bplus-power/power/model.blend",
+      "bytes": 4555043,
+      "sha256": "6d6f73fae7e74976563db4b60cf084474ccade208cc5705bfdd41319d7bbe85a"
+    },
+    {
+      "path": "docs/m4a/bplus-power/power/render-metadata.json",
+      "bytes": 3008,
+      "sha256": "215ec0bafc0b5a5c86286eedb8e348a50993586118c8b887e15b4cd1be23fefe"
+    },
+    {
+      "path": "docs/m4a/bplus-power/power/scene-review.blend",
+      "bytes": 4558633,
+      "sha256": "84e8f10209367417f0cc2ae22ee2af94cfcc974191c3bbbc8ca8540e26c2cf70"
+    },
+    {
+      "path": "docs/m4a/bplus-power/power/selection.png",
+      "bytes": 922748,
+      "sha256": "9adb76ccb5e518c747ebc084c1086feea86265d7ad1de04e7e11e2d086af49a6"
+    },
+    {
+      "path": "docs/m4a/bplus-power/power/side.png",
+      "bytes": 840620,
+      "sha256": "2447c0f3f9062a0ee8a234e3c0343181a6edc6e1e17b319f3ec318eb853b5161"
+    },
+    {
+      "path": "docs/m4a/bplus-power/power/three-quarter.png",
+      "bytes": 914992,
+      "sha256": "6ba6e671986d68960ad54e6778bcb68c2ac3c1b5c22d41acd3e1b4015b7e4613"
+    },
+    {
+      "path": "docs/m4a/bplus-power/review-validation.json",
+      "bytes": 618,
+      "sha256": "d3c554d7f4a4701a85fc02b172e3a3f0f9f2cbccd050bd3fb73a6fcf08c07a2f"
+    },
+    {
+      "path": "docs/m4a/bplus-power/sheets-metadata.json",
+      "bytes": 1604,
+      "sha256": "6a441aee13c3b3ba99e9b6c7cede1d4b5bd2795102bced08a89597ced2788833"
+    },
+    {
+      "path": "docs/m4a/bplus-power/validation.json",
+      "bytes": 1341,
+      "sha256": "645bc7f34a7eb9d2eb99481b8640ff8b1b7de8a6c46ace35281752757319e8e6"
+    },
+    {
+      "path": "tools/m4a/audit_bplus_power_review.py",
+      "bytes": 5429,
+      "sha256": "9db831a0371589cffaee3d20a6f825f7fbd248062b55ae09013c19b86c440bc6"
+    },
+    {
+      "path": "tools/m4a/build_bplus_power.py",
+      "bytes": 19467,
+      "sha256": "501077ba0a3eeb5d003ed6155693d17accf3e78977b4b8cdda8b2539e4ef032b"
+    },
+    {
+      "path": "tools/m4a/make_bplus_power_sheets.py",
+      "bytes": 3378,
+      "sha256": "777b3af1598739cf4873b88b047ef899c2e99deb3114c072f012573eb3d5e17b"
+    },
+    {
+      "path": "tools/m4a/validate_bplus_power_delivery.py",
+      "bytes": 5832,
+      "sha256": "81aef2e2512b52609f5f264b5f3b813ef5417e8a3f8b77aff64d1f4bcbb1b21d"
+    }
+  ]
+}

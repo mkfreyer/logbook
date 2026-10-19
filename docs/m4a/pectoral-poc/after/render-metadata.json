@@ -1,0 +1,165 @@
+{
+  "kind": "after",
+  "source_sha256": "045cfcbd39ca9c5e427c3ab0233614d3d3c3980b96e3b63a1813dfefcd3c19d5",
+  "protocol": {
+    "blender": "4.3.2",
+    "renderer_sha256": "c2a2c9434a133761f56b971b6da2459d7283f1c337c11deab13c0c195989a3f6",
+    "engine": "CYCLES_CPU",
+    "samples": 96,
+    "denoising": false,
+    "seed": 0,
+    "lights": [
+      [
+        "Key",
+        [
+          -2,
+          -2.5,
+          3.2
+        ],
+        230,
+        3,
+        [
+          0.81,
+          0.88,
+          1
+        ]
+      ],
+      [
+        "Fill",
+        [
+          2.6,
+          -1.7,
+          1.6
+        ],
+        110,
+        2.5,
+        [
+          0.56,
+          0.69,
+          1
+        ]
+      ],
+      [
+        "Rim",
+        [
+          1.6,
+          2.3,
+          2.8
+        ],
+        310,
+        2,
+        [
+          0.58,
+          0.72,
+          1
+        ]
+      ],
+      [
+        "Back fill",
+        [
+          -2,
+          2,
+          1.3
+        ],
+        90,
+        2.5,
+        [
+          0.75,
+          0.82,
+          1
+        ]
+      ]
+    ],
+    "material": {
+      "color": [
+        0.23,
+        0.3,
+        0.41
+      ],
+      "roughness": 0.37,
+      "metallic": 0.12,
+      "coat": 0.08,
+      "bump_strength": 0.55,
+      "bump_attribute": "m4a_poc_fibre_height"
+    },
+    "AI_generated_images": false,
+    "anatomy_repainted": false
+  },
+  "frames": [
+    {
+      "view": "front",
+      "yaw": 0,
+      "target": [
+        0,
+        0,
+        0.9
+      ],
+      "ortho_scale": 2.299999952316284,
+      "resolution": [
+        720,
+        1152
+      ],
+      "path": "front.png",
+      "sha256": "a72f1af6a43ec320e68456b8ae8f201a41de46e9f16aaa464df2cca1cf0c6d9b",
+      "orange_zones": []
+    },
+    {
+      "view": "three-quarter",
+      "yaw": -35,
+      "target": [
+        0,
+        0,
+        0.9
+      ],
+      "ortho_scale": 2.299999952316284,
+      "resolution": [
+        720,
+        1152
+      ],
+      "path": "three-quarter.png",
+      "sha256": "3185adbabd0359026208454d0b771655fb538d6807acca8cba12f5ab9e34e93a",
+      "orange_zones": []
+    },
+    {
+      "view": "detail",
+      "yaw": -25,
+      "target": [
+        0,
+        0,
+        1.39
+      ],
+      "ortho_scale": 0.699999988079071,
+      "resolution": [
+        1024,
+        768
+      ],
+      "path": "detail.png",
+      "sha256": "2a8c5fca15a1bd8b62f2d6589d10d48e987d853a157bcafdc41a0559993136c3",
+      "orange_zones": []
+    },
+    {
+      "view": "selection",
+      "yaw": -35,
+      "target": [
+        0,
+        0,
+        1.39
+      ],
+      "ortho_scale": 0.699999988079071,
+      "resolution": [
+        1024,
+        768
+      ],
+      "path": "selection.png",
+      "sha256": "fdff34c40966baead3be0341c2ffc3479a4bd66c5ecabd8eb9830f1d3db35b79",
+      "orange_zones": [
+        "pectoralis.left"
+      ]
+    }
+  ],
+  "review_scene": {
+    "path": "scene-review.blend",
+    "sha256": "5899c4e817981a4844cde4a8fad69de4c035a9c1d52a13fa2a75797031e913fe",
+    "neutral_selection_restored": true
+  }
+}

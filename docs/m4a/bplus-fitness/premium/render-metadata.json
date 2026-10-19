@@ -1,0 +1,149 @@
+{
+  "variant": "premium",
+  "source_sha256": "e090ed9972ab36534dc64d448ee478e5b3f6066a330b0098cae6278a18d17db6",
+  "protocol": {
+    "renderer_sha256": "1ca6ed0ad5623e0c30bb4ef620e24afbdaaecdabe0a3a60ebb11a2139d2f58ea",
+    "blender": "4.3.2",
+    "engine": "CYCLES_CPU",
+    "samples": 96,
+    "resolution": [
+      720,
+      1152
+    ],
+    "denoising": false,
+    "seed": 0,
+    "ortho_scale": 2.3,
+    "camera_target": [
+      0,
+      0,
+      0.9
+    ],
+    "lights": [
+      [
+        "Key",
+        [
+          -2,
+          -2.5,
+          3.2
+        ],
+        230,
+        3,
+        [
+          0.81,
+          0.88,
+          1
+        ]
+      ],
+      [
+        "Fill",
+        [
+          2.6,
+          -1.7,
+          1.6
+        ],
+        110,
+        2.5,
+        [
+          0.56,
+          0.69,
+          1
+        ]
+      ],
+      [
+        "Rim",
+        [
+          1.6,
+          2.3,
+          2.8
+        ],
+        310,
+        2,
+        [
+          0.58,
+          0.72,
+          1
+        ]
+      ],
+      [
+        "Back fill",
+        [
+          -2,
+          2,
+          1.3
+        ],
+        90,
+        2.5,
+        [
+          0.75,
+          0.82,
+          1
+        ]
+      ]
+    ],
+    "material": {
+      "base_color_linear": [
+        0.23,
+        0.3,
+        0.41
+      ],
+      "roughness": 0.37,
+      "metallic": 0.12,
+      "coat": 0.08
+    },
+    "geometry_changed_by_renderer": false,
+    "AI_generated_images": false
+  },
+  "selection": {
+    "mode": "Interpolated 3D scalar attribute threshold within mesh faces, shader color only",
+    "attribute": "m4a_pectoral_mask",
+    "threshold": 0.5,
+    "logical_regions": [
+      "pectoralis.left",
+      "pectoralis.right"
+    ],
+    "separate_muscle_objects": 0,
+    "application_interaction": false
+  },
+  "frames": [
+    {
+      "view": "front",
+      "yaw": 0,
+      "path": "front.png",
+      "sha256": "92aae133d24b109f8e4765f3b7ac65bb3b1aaa73f14f0df130a6bb5fc73b98c2",
+      "selection_enabled": false
+    },
+    {
+      "view": "three-quarter",
+      "yaw": -35,
+      "path": "three-quarter.png",
+      "sha256": "18a7b78f21f80de9f5e370b0b2ad781c6e05cb1c9b3417e7ad99914e13661d3f",
+      "selection_enabled": false
+    },
+    {
+      "view": "back",
+      "yaw": 180,
+      "path": "back.png",
+      "sha256": "82a4e1bf70a2c317ede55f6e6146eb2407c3d55a421cf95ef856037151c1a50c",
+      "selection_enabled": false
+    },
+    {
+      "view": "side",
+      "yaw": 90,
+      "path": "side.png",
+      "sha256": "27ab7125e6997fdccfd1a061c7fd8335d4d436f1ec7672486e0d03e144f06838",
+      "selection_enabled": false
+    },
+    {
+      "view": "selection",
+      "yaw": -35,
+      "path": "selection.png",
+      "sha256": "07664700296c46a41eba615f357339918a0fc4b54577ae69be5e140bf06987ca",
+      "selection_enabled": true
+    }
+  ],
+  "review_scene": {
+    "path": "scene-review.blend",
+    "sha256": "ed6da72773e2a02653020c0998331218bb6465ef3760d584e4b44f3093d38090",
+    "selection_disabled": true
+  }
+}

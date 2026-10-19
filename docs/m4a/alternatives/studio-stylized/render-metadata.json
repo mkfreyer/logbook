@@ -1,0 +1,106 @@
+{
+  "candidate": "studio-stylized",
+  "source_blend_sha256": "3c121505651140ceb4d69fd1d8923f7788ffadd81672f5be14845a5f2c75c137",
+  "source_objects": [
+    {
+      "object": "GEO-body_male_stylized",
+      "vertices": 12502,
+      "polygons": 12500,
+      "triangles": 25000,
+      "base_mesh": {
+        "vertices": 12502,
+        "polygons": 12500,
+        "triangles": 25000
+      },
+      "source_modifiers": [],
+      "vertex_group_names": []
+    },
+    {
+      "object": "GEO-body_male_stylized.eye.L",
+      "vertices": 802,
+      "polygons": 832,
+      "triangles": 1600,
+      "base_mesh": {
+        "vertices": 802,
+        "polygons": 832,
+        "triangles": 1600
+      },
+      "source_modifiers": [],
+      "vertex_group_names": []
+    },
+    {
+      "object": "GEO-body_male_stylized.eye.R",
+      "vertices": 802,
+      "polygons": 832,
+      "triangles": 1600,
+      "base_mesh": {
+        "vertices": 802,
+        "polygons": 832,
+        "triangles": 1600
+      },
+      "source_modifiers": [],
+      "vertex_group_names": []
+    }
+  ],
+  "source_bounds": {
+    "min": [
+      -0.7099827527999878,
+      -0.19439518451690674,
+      -0.003781557083129883
+    ],
+    "max": [
+      0.16929611563682556,
+      0.11402518302202225,
+      1.7941797971725464
+    ]
+  },
+  "transform": {
+    "rotation_z": 0,
+    "center": [
+      -0.2703433036804199,
+      -0.040185000747442245,
+      -0.003781557083129883
+    ],
+    "uniform_scale": 1.001133865163174
+  },
+  "protocol": {
+    "blender": "4.3.2",
+    "render_engine": "CYCLES_CPU",
+    "samples": 128,
+    "resolution": [
+      900,
+      1400
+    ],
+    "subdivision": 1,
+    "denoising": false,
+    "orthographic_scale": 2.3,
+    "material": {
+      "base_color_linear": [
+        0.23,
+        0.3,
+        0.41
+      ],
+      "roughness": 0.37,
+      "metallic": 0.12
+    },
+    "source_materials_and_textures_replaced": true,
+    "sculpting_or_geometry_invention": false
+  },
+  "frames": [
+    {
+      "view": "front",
+      "yaw_degrees": 0,
+      "path": "front.png"
+    },
+    {
+      "view": "three-quarter",
+      "yaw_degrees": -35,
+      "path": "three-quarter.png"
+    },
+    {
+      "view": "back",
+      "yaw_degrees": 180,
+      "path": "back.png"
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "official_archive_sha256": "40665852c49f218326590e204db91064a1ecfc3c6f8cbd7bbbcaac62c7cd409e",
+  "muscle_ids": [
+    "pectoralis-major-left",
+    "pectoralis-major-right",
+    "deltoid-left"
+  ],
+  "transform": {
+    "center": [
+      -0.6469879150390625,
+      -100.7677001953125,
+      -78.11119842529297
+    ],
+    "uniform_scale": 0.0010468334782129127,
+    "reference_height": 1.8
+  },
+  "axes": {
+    "+X": "anatomical left",
+    "-Y": "anterior",
+    "+Z": "superior"
+  },
+  "pose": "Unchanged BP3D source pose. No athletic volume or attachment correction performed.",
+  "table_sha256": {
+    "isa_parts_list_e.txt": "ab7796deedd49205e77f3609a1cb8c53e2bbee14ecb5c9a6ca05227469780513",
+    "isa_element_parts.txt": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf"
+  },
+  "objects": [
+    {
+      "role": "muscle",
+      "muscle_id": "pectoralis-major-left",
+      "side": "left",
+      "concept_id": "FMA34691",
+      "representation_id": "BP9095",
+      "name_en": "clavicular part of left pectoralis major",
+      "parts_list_line": 1335,
+      "element_id": "FJ1447M",
+      "obj_filename": "FJ1447M.obj",
+      "element_parts_line": 5012,
+      "obj_sha256": "aab8ea03eed46a79b3f765ef539df785deb333e5079c21f8c7bec14444768a18",
+      "obj_bytes": 140158
+    },
+    {
+      "role": "muscle",
+      "muscle_id": "pectoralis-major-left",
+      "side": "left",
+      "concept_id": "FMA79980",
+      "representation_id": "BP8323",
+      "name_en": "sternocostal part of left pectoralis major",
+      "parts_list_line": 2778,
+      "element_id": "FJ1464M",
+      "obj_filename": "FJ1464M.obj",
+      "element_parts_line": 25325,
+      "obj_sha256": "a2ffa047e9cff27df3ed7cb5f305491ce921f236cfe60ee90334cc5fead271c3",
+      "obj_bytes": 551361
+    },
+    {
+      "role": "muscle",
+      "muscle_id": "pectoralis-major-left",
+      "side": "left",
+      "concept_id": "FMA45875",
+      "representation_id": "BP7862",
+      "name_en": "abdominal part of left pectoralis major",
+      "parts_list_line": 1635,
+      "element_id": "FJ1446M",
+      "obj_filename": "FJ1446M.obj",
+      "element_parts_line": 5947,
+      "obj_sha256": "3f9dbd5c3f6fdf043454f251d69ea96547dca4bc1efbf7bffd85315fc1a9fd34",
+      "obj_bytes": 103977
+    },
+    {
+      "role": "muscle",
+      "muscle_id": "pectoralis-major-right",
+      "side": "right",
+      "concept_id": "FMA34690",
+      "representation_id": "BP5582",
+      "name_en": "clavicular part of right pectoralis major",
+      "parts_list_line": 1334,
+      "element_id": "FJ1447",
+      "obj_filename": "FJ1447.obj",
+      "element_parts_line": 5011,
+      "obj_sha256": "e239a63adf99dfc094ece7efcd91ec7cd9ac802e9d7581141b311a7842fbbbe6",
+      "obj_bytes": 141480
+    },
+    {
+      "role": "muscle",
+      "muscle_id": "pectoralis-major-right",
+      "side": "right",
+      "concept_id": "FMA79979",
+      "representation_id": "BP5613",
+      "name_en": "sternocostal part of right pectoralis major",
+      "parts_list_line": 2777,
+      "element_id": "FJ1464",
+      "obj_filename": "FJ1464.obj",
+      "element_parts_line": 25324,
+      "obj_sha256": "f446df845d19385cdbd5b86457c8690981cbc914f8f9595b50bdc4a44505aab7",
+      "obj_bytes": 556794
+    },
+    {
+      "role": "muscle",
+      "muscle_id": "pectoralis-major-right",
+      "side": "right",
+      "concept_id": "FMA45874",
+      "representation_id": "BP5615",
+      "name_en": "abdominal part of right pectoralis major",
+      "parts_list_line": 1634,
+      "element_id": "FJ1446",
+      "obj_filename": "FJ1446.obj",
+      "element_parts_line": 5946,
+      "obj_sha256": "7a0d77a63b06d4212998bec86f84853287c3a21696ec7afc92c7767c987a726d",
+      "obj_bytes": 105002
+    },
+    {
+      "role": "muscle",
+      "muscle_id": "deltoid-left",
+      "side": "left",
+      "concept_id": "FMA34681",
+      "representation_id": "BP8259",
+      "name_en": "clavicular part of left deltoid",
+      "parts_list_line": 1327,
+      "element_id": "FJ1468M",
+      "obj_filename": "FJ1468M.obj",
+      "element_parts_line": 5000,
+      "obj_sha256": "75340ac9157ea6c64baaa74c0bbfd6173114dcff0d30ea814702c288b002f104",
+      "obj_bytes": 222006
+    },
+    {
+      "role": "muscle",
+      "muscle_id": "deltoid-left",
+      "side": "left",
+      "concept_id": "FMA34683",
+      "representation_id": "BP9075",
+      "name_en": "acromial part of left deltoid",
+      "parts_list_line": 1329,
+      "element_id": "FJ1467M",
+      "obj_filename": "FJ1467M.obj",
+      "element_parts_line": 5002,
+      "obj_sha256": "a523b5f2ab862ad6505787f4936098fbcfe3f28a3742b57aac34307fe752f8eb",
+      "obj_bytes": 91869
+    },
+    {
+      "role": "muscle",
+      "muscle_id": "deltoid-left",
+      "side": "left",
+      "concept_id": "FMA34685",
+      "representation_id": "BP8151",
+      "name_en": "spinal part of left deltoid",
+      "parts_list_line": 1331,
+      "element_id": "FJ1513M",
+      "obj_filename": "FJ1513M.obj",
+      "element_parts_line": 5004,
+      "obj_sha256": "a806a9a20b68009f0071c22411b009f4baef3de118f00a37cc4a3be8cdf7ce2e",
+      "obj_bytes": 156732
+    },
+    {
+      "role": "bone_reference",
+      "concept_id": "FMA7486",
+      "representation_id": "BP8562",
+      "name_en": "manubrium",
+      "element_id": "FJ3290",
+      "obj_filename": "FJ3290.obj",
+      "parts_list_line": 162,
+      "element_parts_line": 1083,
+      "obj_sha256": "e94f731d044131260947146ab79fa7c4712865e1aac36a1410003358b96e0692",
+      "obj_bytes": 164755
+    },
+    {
+      "role": "bone_reference",
+      "concept_id": "FMA7487",
+      "representation_id": "BP8989",
+      "name_en": "body of sternum",
+      "element_id": "FJ3178",
+      "obj_filename": "FJ3178.obj",
+      "parts_list_line": 163,
+      "element_parts_line": 1084,
+      "obj_sha256": "ec90f03f2ce1edebc8793a9e9973229b198d6367eb5eab1dff6e238110e94d9d",
+      "obj_bytes": 374292
+    },
+    {
+      "role": "bone_reference",
+      "concept_id": "FMA13322",
+      "representation_id": "BP9271",
+      "name_en": "right clavicle",
+      "element_id": "FJ3362",
+      "obj_filename": "FJ3362.obj",
+      "parts_list_line": 398,
+      "element_parts_line": 2406,
+      "obj_sha256": "9a111cac8351e79dd1315aea90108fe56f78e4bf0159473e6ad727ba91b60e6d",
+      "obj_bytes": 68321
+    },
+    {
+      "role": "bone_reference",
+      "concept_id": "FMA13323",
+      "representation_id": "BP8841",
+      "name_en": "left clavicle",
+      "element_id": "FJ3237",
+      "obj_filename": "FJ3237.obj",
+      "parts_list_line": 399,
+      "element_parts_line": 2407,
+      "obj_sha256": "2491009d53eaed99ccb2a802b29402eec715eb8d207fb819fad67b0720195cf2",
+      "obj_bytes": 69709
+    },
+    {
+      "role": "bone_reference",
+      "concept_id": "FMA13396",
+      "representation_id": "BP9121",
+      "name_en": "left scapula",
+      "element_id": "FJ3279",
+      "obj_filename": "FJ3279.obj",
+      "parts_list_line": 443,
+      "element_parts_line": 2476,
+      "obj_sha256": "e63a5675c6cdbe942322305920241b4a63762d7a65879572400f444fa3d42739",
+      "obj_bytes": 1865738
+    },
+    {
+      "role": "bone_reference",
+      "concept_id": "FMA23131",
+      "representation_id": "BP9191",
+      "name_en": "left humerus",
+      "element_id": "FJ3262",
+      "obj_filename": "FJ3262.obj",
+      "parts_list_line": 1080,
+      "element_parts_line": 4206,
+      "obj_sha256": "4a07066d7c7f17dfeb61797dc31c529d0d6fd3fda8136912ebd8a92ccc1ac6fc",
+      "obj_bytes": 247429
+    }
+  ]
+}

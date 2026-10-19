@@ -1,0 +1,114 @@
+{
+  "candidate": "studio-realistic-side",
+  "source_blend_sha256": "3c121505651140ceb4d69fd1d8923f7788ffadd81672f5be14845a5f2c75c137",
+  "source_objects": [
+    {
+      "object": "GEO-body_male_realistic",
+      "vertices": 677442,
+      "polygons": 677440,
+      "triangles": 1354880,
+      "base_mesh": {
+        "vertices": 10582,
+        "polygons": 10590,
+        "triangles": 21160
+      },
+      "source_modifiers": [
+        {
+          "name": "Multires",
+          "type": "MULTIRES",
+          "show_viewport": true,
+          "show_render": true,
+          "levels": 3,
+          "render_levels": 3,
+          "sculpt_levels": 3,
+          "total_levels": 3
+        }
+      ],
+      "source_variant": null,
+      "source_shape_keys": [],
+      "vertex_group_names": []
+    },
+    {
+      "object": "GEO-body_male_realistic.eye.L",
+      "vertices": 546,
+      "polygons": 544,
+      "triangles": 1088,
+      "base_mesh": {
+        "vertices": 546,
+        "polygons": 544,
+        "triangles": 1088
+      },
+      "source_modifiers": [],
+      "source_variant": null,
+      "source_shape_keys": [],
+      "vertex_group_names": []
+    },
+    {
+      "object": "GEO-body_male_realistic.eye.R",
+      "vertices": 546,
+      "polygons": 544,
+      "triangles": 1088,
+      "base_mesh": {
+        "vertices": 546,
+        "polygons": 544,
+        "triangles": 1088
+      },
+      "source_modifiers": [],
+      "source_variant": null,
+      "source_shape_keys": [],
+      "vertex_group_names": []
+    }
+  ],
+  "source_bounds": {
+    "min": [
+      -2.705880880355835,
+      -0.17982545495033264,
+      -0.005640706978738308
+    ],
+    "max": [
+      -1.8228728771209717,
+      0.11206948012113571,
+      1.6844427585601807
+    ]
+  },
+  "transform": {
+    "rotation_z": 0,
+    "center": [
+      -2.2643768787384033,
+      -0.033877987414598465,
+      -0.005640706978738308
+    ],
+    "uniform_scale": 1.06503615750482
+  },
+  "protocol": {
+    "blender": "4.3.2",
+    "render_engine": "CYCLES_CPU",
+    "samples": 128,
+    "resolution": [
+      900,
+      1400
+    ],
+    "subdivision": 0,
+    "denoising": false,
+    "orthographic_scale": 2.3,
+    "material": {
+      "base_color_linear": [
+        0.23,
+        0.3,
+        0.41
+      ],
+      "roughness": 0.37,
+      "metallic": 0.12
+    },
+    "source_materials_and_textures_replaced": true,
+    "sculpting_or_geometry_invention": false,
+    "geometry_modified_in_renderer": false
+  },
+  "frames": [
+    {
+      "view": "side",
+      "yaw_degrees": 90,
+      "path": "side.png"
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "purpose": "M4A selected anatomical research scenes, no application integration",
+  "archive": {
+    "file": "m4a-ecorche-2026-10-18.tar.xz",
+    "bytes": 50663380,
+    "sha256": "97feaef22b280362851e3d3bb7dc141797c71c8cddccff2cd6cfaf8e4c3b8536"
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 4382,
+      "sha256": "23de7c7fa092d6210bb452f4814a5de2211081d2a4d1a126151d96a604f294b1"
+    },
+    {
+      "path": "docs/m4a/bodyparts3d/selection-candidate.json",
+      "bytes": 115789,
+      "sha256": "063dd2864458f7400461b3a5ee3efdb46b8a5d798b35b77202a58f94694ed865"
+    },
+    {
+      "path": "docs/m4a/ecorche/ATTRIBUTION.md",
+      "bytes": 3269,
+      "sha256": "6beeb98b3b4a855b8f09926cc2ad457a30f6eecc2fdcb34fa09b3d5433b9ca26"
+    },
+    {
+      "path": "docs/m4a/ecorche/licenses/CC-BY-SA-4.0.txt",
+      "bytes": 20210,
+      "sha256": "258ed63e18dedbb7183b2098bdc04e363301ba58bc6aaaf90dd00f4faf198680"
+    },
+    {
+      "path": "docs/m4a/ecorche/licenses/Ecorche-ATTRIBUTION.md",
+      "bytes": 4731,
+      "sha256": "a8ab15675197a2423728b50ef641f1a5be0be736bfe6737318bacd0c34efb431"
+    },
+    {
+      "path": "docs/m4a/ecorche/licenses/Ecorche-LICENSE.md",
+      "bytes": 984,
+      "sha256": "e6667796c721c8e6d25bb474de56ca5ed8436e097c36eb1d813e12e267ceb30e"
+    },
+    {
+      "path": "docs/m4a/ecorche/licenses/Z-Anatomy-License.txt",
+      "bytes": 2754,
+      "sha256": "196b66b56551a862e59872f7cdb70e6d9a6ad84e9105962fca8ec28c14e97520"
+    },
+    {
+      "path": "docs/m4a/ecorche/sources.json",
+      "bytes": 6109,
+      "sha256": "6fc37e357578d284a1d306d80a0b39ed7d2419199ceb0864905e071b8943fc23"
+    },
+    {
+      "path": "prepared/bodyparts3d/checkpoint-origin.json",
+      "bytes": 554,
+      "sha256": "9912a42194aee3c8e5f837179e913bf317a2b313eb487909fba5b1b6150bcab9"
+    },
+    {
+      "path": "prepared/bodyparts3d/geometry-check.json",
+      "bytes": 105840,
+      "sha256": "1a861eaa0297a2edba3c4752ba3ffccf0987fcccb184d8b578566a201b2f11a9"
+    },
+    {
+      "path": "prepared/bodyparts3d/inventory.json",
+      "bytes": 187778,
+      "sha256": "2ab24561182cb2049e27e81d1f9718b9c1e1c5fb369f5c841c64cbabf2a7ccd3"
+    },
+    {
+      "path": "prepared/bodyparts3d/muscles-only.blend",
+      "bytes": 123080880,
+      "sha256": "8fdf840abdfd8df31a950e063835ed26062d45f9e0a353c356b00e44d6b05bd3"
+    },
+    {
+      "path": "prepared/ecorche/checkpoint-origin.json",
+      "bytes": 554,
+      "sha256": "0621620810123a9f4f399b98027bb79894cccf02dffe531c4ded3caa412d663f"
+    },
+    {
+      "path": "prepared/ecorche/geometry-check.json",
+      "bytes": 97043,
+      "sha256": "3c920aa6e3a257eb2bfbed49eaec28f07d292e6e8c068c43474324f73fddf56c"
+    },
+    {
+      "path": "prepared/ecorche/inventory.json",
+      "bytes": 208384,
+      "sha256": "a8ec0271735aa791451a77720c57af8e0bf86385909f234f8452b8ab0c1d059e"
+    },
+    {
+      "path": "prepared/ecorche/muscles-only.blend",
+      "bytes": 56294976,
+      "sha256": "2aed2eb66c2f16dcb2d185b404f0036b05d77d0fb97c76805e0db4ebc8c4299e"
+    },
+    {
+      "path": "prepared/z-anatomy/checkpoint-origin.json",
+      "bytes": 554,
+      "sha256": "4c1db2e95c1be5d3e8c68602a7cf471cf45b04accf26a2107998b1c488af68b8"
+    },
+    {
+      "path": "prepared/z-anatomy/geometry-check.json",
+      "bytes": 123488,
+      "sha256": "086aa8a9b1dd7d970dadfdd93ca4b569cdefd3a717d771be524bd8390256c65c"
+    },
+    {
+      "path": "prepared/z-anatomy/inventory.json",
+      "bytes": 264780,
+      "sha256": "7c1469035236376989c0dad80ae4867fba70e8fdac93bceb337d4c0410150a89"
+    },
+    {
+      "path": "prepared/z-anatomy/muscles-only.blend",
+      "bytes": 103120028,
+      "sha256": "4159f1a29dda5d3a2b28310998d94e7a38982f475fc2ede8d29c28c2af7be4c1"
+    },
+    {
+      "path": "tools/m4a/acquire_ecorche.py",
+      "bytes": 3461,
+      "sha256": "8e6cc82ea3945e2fdf0b3834aa98cb790c871bdd31f80b784a20b83fd4caa398"
+    },
+    {
+      "path": "tools/m4a/check_ecorche_geometry.py",
+      "bytes": 2467,
+      "sha256": "20b9461c610ae6f9f43c958c8d232ae70828209f9f7d5dcc06efc6fd5758c1a0"
+    },
+    {
+      "path": "tools/m4a/checkpoint_ecorche.py",
+      "bytes": 2822,
+      "sha256": "c0013c0ac85a4a1b032d4fab2aa2817239c113c530090b826becb5910b84f519"
+    },
+    {
+      "path": "tools/m4a/make_ecorche_sheets.py",
+      "bytes": 2679,
+      "sha256": "105a4997cc759bf12312b05862c64f43678543b757db421c3410fc1aec6d236b"
+    },
+    {
+      "path": "tools/m4a/prepare_ecorche.py",
+      "bytes": 9500,
+      "sha256": "ed6ab44d6fe6b23b7295c3c8ae2e563e14ef83c59e7e7550bec026f0ba3c38a3"
+    },
+    {
+      "path": "tools/m4a/render_ecorche.py",
+      "bytes": 4730,
+      "sha256": "21dd4e5735b1394fdd8b95c8a228df44b07f32fdb6ef47f2198f6dd87c740a72"
+    },
+    {
+      "path": "tools/m4a/restore_ecorche_checkpoint.py",
+      "bytes": 3334,
+      "sha256": "2c8bb45bc7140e57787bff1e81629c79a822195586d124a29d305e6d63a63c76"
+    }
+  ]
+}

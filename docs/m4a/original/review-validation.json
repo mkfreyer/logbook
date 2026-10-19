@@ -1,0 +1,18 @@
+{
+  "soft": {
+    "source_review_meshes_and_zone_attributes_identical": true,
+    "geometry_and_semantics_sha256": "6014ebee563dc23a818ae704b3e29c11676b5b2e7205e4f90ca31cfc94ddc9d1",
+    "studio_lights": 4,
+    "camera_count": 1,
+    "neutral_materials_restored": true,
+    "hidden_construction_not_rendered": true
+  },
+  "defined": {
+    "source_review_meshes_and_zone_attributes_identical": true,
+    "geometry_and_semantics_sha256": "e7aa215068dbd61750dc8a99a108bce1e2b0cac7c2451e77e3a2be5efb2aefbb",
+    "studio_lights": 4,
+    "camera_count": 1,
+    "neutral_materials_restored": true,
+    "hidden_construction_not_rendered": true
+  }
+}

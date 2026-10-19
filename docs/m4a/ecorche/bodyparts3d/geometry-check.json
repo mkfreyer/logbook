@@ -1,0 +1,3413 @@
+{
+  "scope": "Prepared scene only, unchanged topology. No exhaustive intersection, watertightness, raycasting, rig or iPhone performance test.",
+  "winding_caveat": "Signed volume is indicative for open/nonmanifold surfaces; negative volume is not proof of a closed inward shell. Source winding is preserved.",
+  "objects": [
+    {
+      "object": "FJ1294",
+      "triangles": 2360,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 9.376878336713015e-09,
+      "signed_volume_m3": 3.7442154330312877e-07
+    },
+    {
+      "object": "FJ1295",
+      "triangles": 3560,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.791221739464801e-09,
+      "signed_volume_m3": 7.175829658791475e-07
+    },
+    {
+      "object": "FJ1304",
+      "triangles": 3316,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.0042320845179715e-09,
+      "signed_volume_m3": 5.947556670003828e-07
+    },
+    {
+      "object": "FJ1306",
+      "triangles": 4360,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.679277677590039e-09,
+      "signed_volume_m3": 9.023768702505774e-07
+    },
+    {
+      "object": "FJ1308",
+      "triangles": 2576,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 9.27299475439664e-09,
+      "signed_volume_m3": 5.147250633432821e-07
+    },
+    {
+      "object": "FJ1322",
+      "triangles": 3604,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.371434268859481e-09,
+      "signed_volume_m3": 5.943958742650813e-07
+    },
+    {
+      "object": "FJ1323",
+      "triangles": 2836,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.443575318911401e-09,
+      "signed_volume_m3": 5.6970756424078e-07
+    },
+    {
+      "object": "FJ1345",
+      "triangles": 2342,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.0881450471585954e-09,
+      "signed_volume_m3": 3.75195495717231e-07
+    },
+    {
+      "object": "FJ1346",
+      "triangles": 3542,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.710089660349266e-09,
+      "signed_volume_m3": 7.187231302882154e-07
+    },
+    {
+      "object": "FJ1355",
+      "triangles": 3276,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.607767052139114e-09,
+      "signed_volume_m3": 5.947559867884216e-07
+    },
+    {
+      "object": "FJ1357",
+      "triangles": 4360,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.407079052958481e-09,
+      "signed_volume_m3": 9.011213381228485e-07
+    },
+    {
+      "object": "FJ1359",
+      "triangles": 2548,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.378564650662681e-09,
+      "signed_volume_m3": 5.137140570809448e-07
+    },
+    {
+      "object": "FJ1373",
+      "triangles": 3546,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.074275991613303e-09,
+      "signed_volume_m3": 5.946383581786851e-07
+    },
+    {
+      "object": "FJ1374",
+      "triangles": 2812,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.296745447461207e-09,
+      "signed_volume_m3": 5.70199873689936e-07
+    },
+    {
+      "object": "FJ1383",
+      "triangles": 646,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.645516043834146e-11,
+      "signed_volume_m3": 1.1711892764295308e-06
+    },
+    {
+      "object": "FJ1383M",
+      "triangles": 646,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.773892284160414e-11,
+      "signed_volume_m3": 1.1711584611601764e-06
+    },
+    {
+      "object": "FJ1384",
+      "triangles": 674,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.0178414424089544e-08,
+      "signed_volume_m3": 4.842503201255596e-07
+    },
+    {
+      "object": "FJ1384M",
+      "triangles": 674,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.0177071902934543e-08,
+      "signed_volume_m3": 4.842474464366546e-07
+    },
+    {
+      "object": "FJ1385",
+      "triangles": 266,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.14006259823703e-09,
+      "signed_volume_m3": 8.037030429125397e-07
+    },
+    {
+      "object": "FJ1385M",
+      "triangles": 266,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.14006259823703e-09,
+      "signed_volume_m3": 8.03721802036221e-07
+    },
+    {
+      "object": "FJ1386",
+      "triangles": 632,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.8217702898655786e-09,
+      "signed_volume_m3": 4.998946326419978e-07
+    },
+    {
+      "object": "FJ1386M",
+      "triangles": 632,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.82154364857213e-09,
+      "signed_volume_m3": 4.998780272439015e-07
+    },
+    {
+      "object": "FJ1387",
+      "triangles": 368,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.2780812781681126e-11,
+      "signed_volume_m3": 8.7102835009028e-07
+    },
+    {
+      "object": "FJ1387M",
+      "triangles": 368,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.2780812781681126e-11,
+      "signed_volume_m3": 8.710858168089921e-07
+    },
+    {
+      "object": "FJ1388",
+      "triangles": 772,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.6451253738903303e-08,
+      "signed_volume_m3": 3.86478323910475e-07
+    },
+    {
+      "object": "FJ1388M",
+      "triangles": 772,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.6452205876741873e-08,
+      "signed_volume_m3": 3.865170316878702e-07
+    },
+    {
+      "object": "FJ1389",
+      "triangles": 328,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.2229496460287622e-09,
+      "signed_volume_m3": 7.571776232962463e-07
+    },
+    {
+      "object": "FJ1389M",
+      "triangles": 328,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.2229153499069983e-09,
+      "signed_volume_m3": 7.5722596904337e-07
+    },
+    {
+      "object": "FJ1390",
+      "triangles": 1276,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.4362347297944133e-10,
+      "signed_volume_m3": 4.9463150293153484e-06
+    },
+    {
+      "object": "FJ1390M",
+      "triangles": 1276,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.4372204903233685e-10,
+      "signed_volume_m3": 4.946280937472264e-06
+    },
+    {
+      "object": "FJ1391",
+      "triangles": 786,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.921353359698307e-10,
+      "signed_volume_m3": 1.3963930961409408e-06
+    },
+    {
+      "object": "FJ1391M",
+      "triangles": 786,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.921353359698307e-10,
+      "signed_volume_m3": 1.3964452155582583e-06
+    },
+    {
+      "object": "FJ1393",
+      "triangles": 1742,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.000882534356758e-11,
+      "signed_volume_m3": 5.728268131707284e-06
+    },
+    {
+      "object": "FJ1393M",
+      "triangles": 1742,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.5911846792226778e-12,
+      "signed_volume_m3": 5.728317178749371e-06
+    },
+    {
+      "object": "FJ1394",
+      "triangles": 3052,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.594437074579344e-09,
+      "signed_volume_m3": 0.00024751563851648075
+    },
+    {
+      "object": "FJ1394M",
+      "triangles": 3052,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 8.175574432935199e-09,
+      "signed_volume_m3": 0.0002475167368970424
+    },
+    {
+      "object": "FJ1395",
+      "triangles": 5110,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.47888487885864e-08,
+      "signed_volume_m3": 0.0005455316189768156
+    },
+    {
+      "object": "FJ1395M",
+      "triangles": 5110,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.447383604000834e-08,
+      "signed_volume_m3": 0.0005455319211648498
+    },
+    {
+      "object": "FJ1396",
+      "triangles": 992,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 8.084017306209157e-10,
+      "signed_volume_m3": 2.6649603435368628e-06
+    },
+    {
+      "object": "FJ1396M",
+      "triangles": 992,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 8.084017306209157e-10,
+      "signed_volume_m3": 2.6649716412112393e-06
+    },
+    {
+      "object": "FJ1397",
+      "triangles": 3842,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.477632036363254e-11,
+      "signed_volume_m3": 0.0003542237423165342
+    },
+    {
+      "object": "FJ1397M",
+      "triangles": 3842,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.4769314603197954e-11,
+      "signed_volume_m3": 0.00035422368480397424
+    },
+    {
+      "object": "FJ1398",
+      "triangles": 1054,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.8848349278121162e-09,
+      "signed_volume_m3": 5.299218087451468e-06
+    },
+    {
+      "object": "FJ1398M",
+      "triangles": 1054,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.885013088736837e-09,
+      "signed_volume_m3": 5.299226287962756e-06
+    },
+    {
+      "object": "FJ1399",
+      "triangles": 200,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.551504872878108e-09,
+      "signed_volume_m3": 4.5308675901622485e-07
+    },
+    {
+      "object": "FJ1399M",
+      "triangles": 200,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.551504872878108e-09,
+      "signed_volume_m3": 4.5309537419268634e-07
+    },
+    {
+      "object": "FJ1400",
+      "triangles": 1068,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.561044975507853e-10,
+      "signed_volume_m3": 1.0102083569329033e-05
+    },
+    {
+      "object": "FJ1400M",
+      "triangles": 1068,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.561044975507853e-10,
+      "signed_volume_m3": 1.0102118631136392e-05
+    },
+    {
+      "object": "FJ1401",
+      "triangles": 1464,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.708157894030996e-08,
+      "signed_volume_m3": 5.693362770438419e-05
+    },
+    {
+      "object": "FJ1401M",
+      "triangles": 1464,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.7081755084598556e-08,
+      "signed_volume_m3": 5.693375918477302e-05
+    },
+    {
+      "object": "FJ1402",
+      "triangles": 2616,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.583044254736835e-09,
+      "signed_volume_m3": 0.00016359021275656583
+    },
+    {
+      "object": "FJ1402M",
+      "triangles": 2616,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.5824766726830955e-09,
+      "signed_volume_m3": 0.00016359043532584042
+    },
+    {
+      "object": "FJ1403",
+      "triangles": 5972,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.9319288858993584e-08,
+      "signed_volume_m3": 0.0005558442567272862
+    },
+    {
+      "object": "FJ1403M",
+      "triangles": 5972,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.925380461398565e-08,
+      "signed_volume_m3": 0.0005558433852214467
+    },
+    {
+      "object": "FJ1404",
+      "triangles": 1958,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.6453892338783386e-08,
+      "signed_volume_m3": 1.7472098811521436e-05
+    },
+    {
+      "object": "FJ1404M",
+      "triangles": 1958,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.633354137397166e-08,
+      "signed_volume_m3": 1.7472116503144034e-05
+    },
+    {
+      "object": "FJ1406",
+      "triangles": 4546,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.856995706730418e-12,
+      "signed_volume_m3": 4.509114952648372e-05
+    },
+    {
+      "object": "FJ1406M",
+      "triangles": 4546,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.856995706730418e-12,
+      "signed_volume_m3": 4.5090940337073205e-05
+    },
+    {
+      "object": "FJ1407",
+      "triangles": 1230,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.500640810836882e-11,
+      "signed_volume_m3": 4.409568684055591e-06
+    },
+    {
+      "object": "FJ1407M",
+      "triangles": 1230,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.500640810836882e-11,
+      "signed_volume_m3": 4.409717168521361e-06
+    },
+    {
+      "object": "FJ1408",
+      "triangles": 1668,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.254005207629615e-12,
+      "signed_volume_m3": 8.422940146696997e-06
+    },
+    {
+      "object": "FJ1408M",
+      "triangles": 1668,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.2361409445540404e-12,
+      "signed_volume_m3": 8.422720021500364e-06
+    },
+    {
+      "object": "FJ1409",
+      "triangles": 1766,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.952241778332971e-11,
+      "signed_volume_m3": 1.4585948978176224e-05
+    },
+    {
+      "object": "FJ1409M",
+      "triangles": 1766,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.946511832477799e-11,
+      "signed_volume_m3": 1.4586159621094316e-05
+    },
+    {
+      "object": "FJ1410",
+      "triangles": 3860,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.0681304433946143e-12,
+      "signed_volume_m3": 7.153816365142309e-05
+    },
+    {
+      "object": "FJ1410M",
+      "triangles": 3860,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.058953895316799e-12,
+      "signed_volume_m3": 7.153768756172685e-05
+    },
+    {
+      "object": "FJ1411",
+      "triangles": 1416,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.926805163988968e-12,
+      "signed_volume_m3": 1.9044285749762277e-06
+    },
+    {
+      "object": "FJ1411M",
+      "triangles": 1416,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.926805163988968e-12,
+      "signed_volume_m3": 1.9044524011505056e-06
+    },
+    {
+      "object": "FJ1412",
+      "triangles": 842,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.261619132889408e-09,
+      "signed_volume_m3": 4.881626918985529e-06
+    },
+    {
+      "object": "FJ1412M",
+      "triangles": 842,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.261797588056273e-09,
+      "signed_volume_m3": 4.881630318515098e-06
+    },
+    {
+      "object": "FJ1413",
+      "triangles": 2436,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.13885113306798e-12,
+      "signed_volume_m3": 1.6771516887347e-05
+    },
+    {
+      "object": "FJ1413M",
+      "triangles": 2436,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.13885113306798e-12,
+      "signed_volume_m3": 1.677144349017394e-05
+    },
+    {
+      "object": "FJ1414",
+      "triangles": 4004,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.0636512216139578e-10,
+      "signed_volume_m3": 5.0603451124027135e-05
+    },
+    {
+      "object": "FJ1414M",
+      "triangles": 4004,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.0638822851748095e-10,
+      "signed_volume_m3": 5.0603545292650636e-05
+    },
+    {
+      "object": "FJ1415",
+      "triangles": 2758,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.3279958832525517e-08,
+      "signed_volume_m3": 6.274532855937523e-05
+    },
+    {
+      "object": "FJ1415M",
+      "triangles": 2758,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.3279958832525517e-08,
+      "signed_volume_m3": 6.274542615120594e-05
+    },
+    {
+      "object": "FJ1416",
+      "triangles": 642,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.4022607834868214e-08,
+      "signed_volume_m3": 4.774847882124023e-06
+    },
+    {
+      "object": "FJ1416M",
+      "triangles": 642,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.402281251336645e-08,
+      "signed_volume_m3": 4.774853834190197e-06
+    },
+    {
+      "object": "FJ1417",
+      "triangles": 402,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.0681780017014818e-11,
+      "signed_volume_m3": 5.245545893397443e-06
+    },
+    {
+      "object": "FJ1417M",
+      "triangles": 402,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.0720452793851743e-11,
+      "signed_volume_m3": 5.245546650090568e-06
+    },
+    {
+      "object": "FJ1418",
+      "triangles": 2376,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.5058312879282774e-11,
+      "signed_volume_m3": 0.00041743482121559954
+    },
+    {
+      "object": "FJ1418M",
+      "triangles": 2376,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.5058312879282774e-11,
+      "signed_volume_m3": 0.0004174353727676229
+    },
+    {
+      "object": "FJ1419",
+      "triangles": 3356,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.719611051904683e-10,
+      "signed_volume_m3": 0.00024231933307565244
+    },
+    {
+      "object": "FJ1419M",
+      "triangles": 3356,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.719611051904683e-10,
+      "signed_volume_m3": 0.00024231922750888514
+    },
+    {
+      "object": "FJ1420",
+      "triangles": 4208,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.2467456102701525e-09,
+      "signed_volume_m3": 0.00013387218806396536
+    },
+    {
+      "object": "FJ1420M",
+      "triangles": 4208,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.2467456102701525e-09,
+      "signed_volume_m3": 0.00013387234143344545
+    },
+    {
+      "object": "FJ1421",
+      "triangles": 3172,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.822599799834081e-09,
+      "signed_volume_m3": 0.00012634886955401
+    },
+    {
+      "object": "FJ1421M",
+      "triangles": 3172,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.822599799834081e-09,
+      "signed_volume_m3": 0.000126348790704123
+    },
+    {
+      "object": "FJ1422",
+      "triangles": 2862,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.2857047415113223e-10,
+      "signed_volume_m3": 0.00014063104957369622
+    },
+    {
+      "object": "FJ1422M",
+      "triangles": 2862,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.312542960524993e-10,
+      "signed_volume_m3": 0.00014062817507905464
+    },
+    {
+      "object": "FJ1425",
+      "triangles": 784,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.438947143236174e-11,
+      "signed_volume_m3": 2.0365684051250674e-05
+    },
+    {
+      "object": "FJ1425M",
+      "triangles": 784,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.438947143236174e-11,
+      "signed_volume_m3": 2.0365539556935957e-05
+    },
+    {
+      "object": "FJ1426",
+      "triangles": 2466,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 8.132896418014546e-10,
+      "signed_volume_m3": 1.9675486355992542e-05
+    },
+    {
+      "object": "FJ1426M",
+      "triangles": 2466,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 8.132101206803201e-10,
+      "signed_volume_m3": 1.9675330017536282e-05
+    },
+    {
+      "object": "FJ1427",
+      "triangles": 1380,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.865764198748567e-08,
+      "signed_volume_m3": 6.347007754571857e-05
+    },
+    {
+      "object": "FJ1427M",
+      "triangles": 1380,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.865830194763395e-08,
+      "signed_volume_m3": 6.34693242429014e-05
+    },
+    {
+      "object": "FJ1428",
+      "triangles": 1092,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.0968209206451906e-10,
+      "signed_volume_m3": 3.35359417477247e-05
+    },
+    {
+      "object": "FJ1428M",
+      "triangles": 1092,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.0969353480650952e-10,
+      "signed_volume_m3": 3.353603016882322e-05
+    },
+    {
+      "object": "FJ1429",
+      "triangles": 2512,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.533014957906636e-08,
+      "signed_volume_m3": 3.768394968460969e-05
+    },
+    {
+      "object": "FJ1429M",
+      "triangles": 2512,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.5350654858881276e-08,
+      "signed_volume_m3": 3.768386083013489e-05
+    },
+    {
+      "object": "FJ1430",
+      "triangles": 858,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.756276726653595e-08,
+      "signed_volume_m3": 3.0826615301451004e-05
+    },
+    {
+      "object": "FJ1430M",
+      "triangles": 858,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.756398423669806e-08,
+      "signed_volume_m3": 3.082654475883376e-05
+    },
+    {
+      "object": "FJ1431",
+      "triangles": 4900,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.105795022143343e-11,
+      "signed_volume_m3": 0.00019924570618119983
+    },
+    {
+      "object": "FJ1431M",
+      "triangles": 4900,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.105795022143343e-11,
+      "signed_volume_m3": 0.00019924424137743446
+    },
+    {
+      "object": "FJ1432",
+      "triangles": 1196,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.247538499696918e-11,
+      "signed_volume_m3": 1.482288147042025e-05
+    },
+    {
+      "object": "FJ1432M",
+      "triangles": 1196,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.247538499696918e-11,
+      "signed_volume_m3": 1.4822793378250929e-05
+    },
+    {
+      "object": "FJ1433",
+      "triangles": 5688,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.480917723200302e-08,
+      "signed_volume_m3": 0.00039879341094693153
+    },
+    {
+      "object": "FJ1433M",
+      "triangles": 5688,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.481124232603827e-08,
+      "signed_volume_m3": 0.0003987926376913555
+    },
+    {
+      "object": "FJ1434",
+      "triangles": 3444,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.3054171209365368e-10,
+      "signed_volume_m3": 8.057182758400756e-05
+    },
+    {
+      "object": "FJ1434M",
+      "triangles": 3444,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.305134246549925e-10,
+      "signed_volume_m3": 8.057270616538809e-05
+    },
+    {
+      "object": "FJ1435",
+      "triangles": 4612,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 8.473687429910942e-08,
+      "signed_volume_m3": 0.0003686336499046754
+    },
+    {
+      "object": "FJ1435M",
+      "triangles": 4612,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 8.4758101334048e-08,
+      "signed_volume_m3": 0.00036863371879380675
+    },
+    {
+      "object": "FJ1436",
+      "triangles": 2712,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.4533184619867434e-08,
+      "signed_volume_m3": 0.00015230010259856196
+    },
+    {
+      "object": "FJ1436M",
+      "triangles": 2712,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.4533184619867434e-08,
+      "signed_volume_m3": 0.00015230021401498552
+    },
+    {
+      "object": "FJ1437",
+      "triangles": 4418,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.5965908515687173e-09,
+      "signed_volume_m3": 0.00036763886073339904
+    },
+    {
+      "object": "FJ1437M",
+      "triangles": 4418,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.5945117838428926e-09,
+      "signed_volume_m3": 0.0003676390079510295
+    },
+    {
+      "object": "FJ1438",
+      "triangles": 1254,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.3301757553259937e-08,
+      "signed_volume_m3": 5.658419386229508e-05
+    },
+    {
+      "object": "FJ1438M",
+      "triangles": 1254,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.3301757553259937e-08,
+      "signed_volume_m3": 5.6584500181550874e-05
+    },
+    {
+      "object": "FJ1439",
+      "triangles": 2510,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 9.445296374867895e-12,
+      "signed_volume_m3": 0.0001288283316370566
+    },
+    {
+      "object": "FJ1439M",
+      "triangles": 2510,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 9.425862135821775e-12,
+      "signed_volume_m3": 0.00012882807952201237
+    },
+    {
+      "object": "FJ1440",
+      "triangles": 5136,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.7006812458660934e-12,
+      "signed_volume_m3": 5.7835641006697406e-05
+    },
+    {
+      "object": "FJ1440M",
+      "triangles": 5136,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.7102986377538256e-12,
+      "signed_volume_m3": 5.783579595491592e-05
+    },
+    {
+      "object": "FJ1441",
+      "triangles": 4260,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.481901935409006e-08,
+      "signed_volume_m3": 0.00028934106598437674
+    },
+    {
+      "object": "FJ1441M",
+      "triangles": 4260,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.4831095219566467e-08,
+      "signed_volume_m3": 0.000289340363837806
+    },
+    {
+      "object": "FJ1442",
+      "triangles": 6688,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.3395845955515445e-09,
+      "signed_volume_m3": 0.0005768637027065951
+    },
+    {
+      "object": "FJ1442M",
+      "triangles": 6688,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.339927698702604e-09,
+      "signed_volume_m3": 0.0005768622702837599
+    },
+    {
+      "object": "FJ1443",
+      "triangles": 4552,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.749787705521439e-08,
+      "signed_volume_m3": 0.0003201564048175667
+    },
+    {
+      "object": "FJ1443M",
+      "triangles": 4552,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.726633432350312e-08,
+      "signed_volume_m3": 0.00032015717230586847
+    },
+    {
+      "object": "FJ1444",
+      "triangles": 1728,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.301724474362909e-08,
+      "signed_volume_m3": 7.869802000790783e-05
+    },
+    {
+      "object": "FJ1444M",
+      "triangles": 1728,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 8.501250475193719e-09,
+      "signed_volume_m3": 7.869794578519954e-05
+    },
+    {
+      "object": "FJ1445",
+      "triangles": 818,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.2269142422764003e-09,
+      "signed_volume_m3": 1.0565536245567491e-06
+    },
+    {
+      "object": "FJ1445M",
+      "triangles": 818,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.2269142422764003e-09,
+      "signed_volume_m3": 1.056545048656502e-06
+    },
+    {
+      "object": "FJ1446",
+      "triangles": 1536,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.6212388349133112e-09,
+      "signed_volume_m3": 2.879953207341963e-05
+    },
+    {
+      "object": "FJ1446M",
+      "triangles": 1536,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.6212388349133112e-09,
+      "signed_volume_m3": 2.8799602263334063e-05
+    },
+    {
+      "object": "FJ1447",
+      "triangles": 1846,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.497776081009846e-10,
+      "signed_volume_m3": 5.418386295340336e-05
+    },
+    {
+      "object": "FJ1447M",
+      "triangles": 1846,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.497776081009846e-10,
+      "signed_volume_m3": 5.418005115748672e-05
+    },
+    {
+      "object": "FJ1449M",
+      "triangles": 2088,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.0606298993530725e-09,
+      "signed_volume_m3": 4.087971820297616e-06
+    },
+    {
+      "object": "FJ1450",
+      "triangles": 368,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.829895568035476e-08,
+      "signed_volume_m3": 4.7469743922170734e-07
+    },
+    {
+      "object": "FJ1450M",
+      "triangles": 368,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.829898494914096e-08,
+      "signed_volume_m3": 4.747055735624572e-07
+    },
+    {
+      "object": "FJ1451",
+      "triangles": 98928,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.6397994073713562e-12,
+      "signed_volume_m3": 9.278889598970677e-05
+    },
+    {
+      "object": "FJ1451M",
+      "triangles": 98928,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.663225113190947e-12,
+      "signed_volume_m3": 9.278571937039688e-05
+    },
+    {
+      "object": "FJ1452",
+      "triangles": 111826,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.438887444029353e-12,
+      "signed_volume_m3": 0.00030236434614321533
+    },
+    {
+      "object": "FJ1452M",
+      "triangles": 111826,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.438887444029353e-12,
+      "signed_volume_m3": 0.0003023634342011777
+    },
+    {
+      "object": "FJ1453M",
+      "triangles": 3862,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.542510265860216e-11,
+      "signed_volume_m3": 8.254578295176485e-06
+    },
+    {
+      "object": "FJ1454",
+      "triangles": 87218,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.34965388759656e-12,
+      "signed_volume_m3": 7.329243210087376e-05
+    },
+    {
+      "object": "FJ1454M",
+      "triangles": 87218,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.34965388759656e-12,
+      "signed_volume_m3": 7.329486926435934e-05
+    },
+    {
+      "object": "FJ1455",
+      "triangles": 89838,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.3412837003628156e-11,
+      "signed_volume_m3": 7.493678911213074e-05
+    },
+    {
+      "object": "FJ1455M",
+      "triangles": 89838,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.495215311095535e-11,
+      "signed_volume_m3": 7.493690503383722e-05
+    },
+    {
+      "object": "FJ1456",
+      "triangles": 9468,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.2577331505851659e-10,
+      "signed_volume_m3": 4.2711176632289834e-05
+    },
+    {
+      "object": "FJ1456M",
+      "triangles": 9468,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.2577331505851659e-10,
+      "signed_volume_m3": 4.271173417951686e-05
+    },
+    {
+      "object": "FJ1457M",
+      "triangles": 4616,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.8188196232800235e-09,
+      "signed_volume_m3": 6.605055838121342e-06
+    },
+    {
+      "object": "FJ1458M",
+      "triangles": 3634,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.1166758889111927e-10,
+      "signed_volume_m3": 6.546943336657145e-06
+    },
+    {
+      "object": "FJ1459",
+      "triangles": 49212,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.8264439436386514e-10,
+      "signed_volume_m3": 0.00016316788388329694
+    },
+    {
+      "object": "FJ1459M",
+      "triangles": 49212,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.8264439436386514e-10,
+      "signed_volume_m3": 0.0001631679575262512
+    },
+    {
+      "object": "FJ1460",
+      "triangles": 1640,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.693379981359691e-09,
+      "signed_volume_m3": 3.5101576870102633e-06
+    },
+    {
+      "object": "FJ1460M",
+      "triangles": 1640,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.6935546750103491e-09,
+      "signed_volume_m3": 3.5106967268404514e-06
+    },
+    {
+      "object": "FJ1461",
+      "triangles": 4188,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.1697792996788986e-10,
+      "signed_volume_m3": 1.2944583548960193e-05
+    },
+    {
+      "object": "FJ1461M",
+      "triangles": 4188,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.2567394881464224e-12,
+      "signed_volume_m3": 1.2945074013864875e-05
+    },
+    {
+      "object": "FJ1462",
+      "triangles": 6050,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.6295354782490676e-12,
+      "signed_volume_m3": 6.708038588982744e-06
+    },
+    {
+      "object": "FJ1462M",
+      "triangles": 6050,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.6353919047039653e-12,
+      "signed_volume_m3": 6.7080549473668215e-06
+    },
+    {
+      "object": "FJ1463",
+      "triangles": 12210,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.4198976156242225e-11,
+      "signed_volume_m3": 1.6411872283368392e-05
+    },
+    {
+      "object": "FJ1463M",
+      "triangles": 12210,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.4198976156242225e-11,
+      "signed_volume_m3": 1.6411658084831616e-05
+    },
+    {
+      "object": "FJ1464",
+      "triangles": 7114,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.6615500642025438e-09,
+      "signed_volume_m3": 0.00045555228169919383
+    },
+    {
+      "object": "FJ1464M",
+      "triangles": 7114,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.6615500642025438e-09,
+      "signed_volume_m3": 0.000455546669562855
+    },
+    {
+      "object": "FJ1466",
+      "triangles": 508,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 8.701854620906636e-10,
+      "signed_volume_m3": 2.0382676724175445e-06
+    },
+    {
+      "object": "FJ1466M",
+      "triangles": 508,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 8.701854620906636e-10,
+      "signed_volume_m3": 2.0383014094719794e-06
+    },
+    {
+      "object": "FJ1467",
+      "triangles": 1300,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.232785289990602e-09,
+      "signed_volume_m3": 0.00010688327494078964
+    },
+    {
+      "object": "FJ1467M",
+      "triangles": 1300,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.2323781434518963e-09,
+      "signed_volume_m3": 0.0001068820797860004
+    },
+    {
+      "object": "FJ1468",
+      "triangles": 2206,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.4258687027764796e-09,
+      "signed_volume_m3": 6.308770042483541e-05
+    },
+    {
+      "object": "FJ1468M",
+      "triangles": 2206,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.4257997750764383e-09,
+      "signed_volume_m3": 6.308426939249386e-05
+    },
+    {
+      "object": "FJ1469",
+      "triangles": 714,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 8.069251397269611e-11,
+      "signed_volume_m3": 9.73605267650326e-07
+    },
+    {
+      "object": "FJ1469M",
+      "triangles": 714,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 8.055171558728329e-11,
+      "signed_volume_m3": 9.73597721574842e-07
+    },
+    {
+      "object": "FJ1470",
+      "triangles": 328,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.781310560617473e-10,
+      "signed_volume_m3": 7.419913867912775e-07
+    },
+    {
+      "object": "FJ1470M",
+      "triangles": 328,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.778961291667027e-10,
+      "signed_volume_m3": 7.419062487209899e-07
+    },
+    {
+      "object": "FJ1472",
+      "triangles": 2186,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.4687148673514816e-12,
+      "signed_volume_m3": 1.179703313725859e-05
+    },
+    {
+      "object": "FJ1472M",
+      "triangles": 2186,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.4687148673514816e-12,
+      "signed_volume_m3": 1.1797668294028983e-05
+    },
+    {
+      "object": "FJ1473",
+      "triangles": 2656,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.2060273170507977e-08,
+      "signed_volume_m3": 2.98855353074456e-05
+    },
+    {
+      "object": "FJ1473M",
+      "triangles": 2656,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.2060273170507977e-08,
+      "signed_volume_m3": 2.989292038208263e-05
+    },
+    {
+      "object": "FJ1474",
+      "triangles": 1846,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.052760108457791e-10,
+      "signed_volume_m3": 1.3930954548000557e-05
+    },
+    {
+      "object": "FJ1474M",
+      "triangles": 1846,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.052760108457791e-10,
+      "signed_volume_m3": 1.3932296438031472e-05
+    },
+    {
+      "object": "FJ1475",
+      "triangles": 8698,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.698682221533253e-10,
+      "signed_volume_m3": 5.468227495578078e-05
+    },
+    {
+      "object": "FJ1475M",
+      "triangles": 8698,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.698682221533253e-10,
+      "signed_volume_m3": 5.468196421826592e-05
+    },
+    {
+      "object": "FJ1477",
+      "triangles": 2606,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.5636283049439563e-09,
+      "signed_volume_m3": 0.00014901056003509272
+    },
+    {
+      "object": "FJ1477M",
+      "triangles": 2606,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.5636283049439563e-09,
+      "signed_volume_m3": 0.00014900957440353276
+    },
+    {
+      "object": "FJ1478",
+      "triangles": 1426,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.466516128649346e-12,
+      "signed_volume_m3": 0.00010950588876741305
+    },
+    {
+      "object": "FJ1478M",
+      "triangles": 1426,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.7090998595299425e-12,
+      "signed_volume_m3": 0.00010950587336797548
+    },
+    {
+      "object": "FJ1479",
+      "triangles": 1588,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.449764100627162e-10,
+      "signed_volume_m3": 0.00015285684728359866
+    },
+    {
+      "object": "FJ1479M",
+      "triangles": 1588,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.449764100627162e-10,
+      "signed_volume_m3": 0.00015285840829215211
+    },
+    {
+      "object": "FJ1480",
+      "triangles": 832,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.056514812311687e-09,
+      "signed_volume_m3": 7.35878326022114e-05
+    },
+    {
+      "object": "FJ1480M",
+      "triangles": 832,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.0567514140985928e-09,
+      "signed_volume_m3": 7.358972701600376e-05
+    },
+    {
+      "object": "FJ1481",
+      "triangles": 658,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.333244682341569e-12,
+      "signed_volume_m3": 1.3616078834539441e-06
+    },
+    {
+      "object": "FJ1481M",
+      "triangles": 658,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.386684225765088e-12,
+      "signed_volume_m3": 1.3615754385869227e-06
+    },
+    {
+      "object": "FJ1482",
+      "triangles": 484,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.87623817366904e-12,
+      "signed_volume_m3": 1.1232759039809777e-06
+    },
+    {
+      "object": "FJ1482M",
+      "triangles": 484,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.87623817366904e-12,
+      "signed_volume_m3": 1.1232853646927897e-06
+    },
+    {
+      "object": "FJ1483",
+      "triangles": 744,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.492840928942901e-11,
+      "signed_volume_m3": 2.0934417688922133e-06
+    },
+    {
+      "object": "FJ1483M",
+      "triangles": 744,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.514401831368713e-11,
+      "signed_volume_m3": 2.0930884968954656e-06
+    },
+    {
+      "object": "FJ1484",
+      "triangles": 1874,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.919677038809712e-09,
+      "signed_volume_m3": 1.828179214663104e-05
+    },
+    {
+      "object": "FJ1484M",
+      "triangles": 1874,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.919677038809712e-09,
+      "signed_volume_m3": 1.828204330425126e-05
+    },
+    {
+      "object": "FJ1485",
+      "triangles": 1278,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.313724911981789e-09,
+      "signed_volume_m3": 8.563694396093763e-06
+    },
+    {
+      "object": "FJ1485M",
+      "triangles": 1278,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.313639288536761e-09,
+      "signed_volume_m3": 8.563320585926111e-06
+    },
+    {
+      "object": "FJ1486",
+      "triangles": 1746,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 9.465424335641363e-09,
+      "signed_volume_m3": 8.800183240201784e-05
+    },
+    {
+      "object": "FJ1486M",
+      "triangles": 1746,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 9.465854874622602e-09,
+      "signed_volume_m3": 8.801620726898052e-05
+    },
+    {
+      "object": "FJ1487",
+      "triangles": 4874,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.486637830632228e-11,
+      "signed_volume_m3": 9.073657935521973e-05
+    },
+    {
+      "object": "FJ1487M",
+      "triangles": 4874,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.486637830632228e-11,
+      "signed_volume_m3": 9.073539380656768e-05
+    },
+    {
+      "object": "FJ1488",
+      "triangles": 444,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.250149427007739e-09,
+      "signed_volume_m3": 2.415209444305415e-05
+    },
+    {
+      "object": "FJ1488M",
+      "triangles": 444,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.250149427007739e-09,
+      "signed_volume_m3": 2.4151965677465777e-05
+    },
+    {
+      "object": "FJ1489",
+      "triangles": 2098,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.822212437664653e-10,
+      "signed_volume_m3": 2.2683292419666592e-05
+    },
+    {
+      "object": "FJ1489M",
+      "triangles": 2098,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.8226811872795856e-10,
+      "signed_volume_m3": 2.2683320467997187e-05
+    },
+    {
+      "object": "FJ1490",
+      "triangles": 2474,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.9956839692306337e-10,
+      "signed_volume_m3": 2.900225355356537e-05
+    },
+    {
+      "object": "FJ1490M",
+      "triangles": 2474,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.9871986152721904e-10,
+      "signed_volume_m3": 2.900216785664221e-05
+    },
+    {
+      "object": "FJ1491",
+      "triangles": 1434,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.7684241512121816e-09,
+      "signed_volume_m3": 7.69938507383593e-06
+    },
+    {
+      "object": "FJ1491M",
+      "triangles": 1434,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.7682308148250116e-09,
+      "signed_volume_m3": 7.70327180751293e-06
+    },
+    {
+      "object": "FJ1492",
+      "triangles": 4294,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.8194220742259306e-09,
+      "signed_volume_m3": 3.340298315821868e-05
+    },
+    {
+      "object": "FJ1492M",
+      "triangles": 4294,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.8189210831908135e-09,
+      "signed_volume_m3": 3.340166290201489e-05
+    },
+    {
+      "object": "FJ1493",
+      "triangles": 720,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.5182847435919377e-10,
+      "signed_volume_m3": 3.463847621254226e-06
+    },
+    {
+      "object": "FJ1493M",
+      "triangles": 720,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.519701491004117e-10,
+      "signed_volume_m3": 3.463895109740353e-06
+    },
+    {
+      "object": "FJ1494",
+      "triangles": 998,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.857684444252379e-08,
+      "signed_volume_m3": 4.2109834793510154e-06
+    },
+    {
+      "object": "FJ1494M",
+      "triangles": 998,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.856868738796124e-08,
+      "signed_volume_m3": 4.210954077663442e-06
+    },
+    {
+      "object": "FJ1495",
+      "triangles": 1326,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.397857072522786e-09,
+      "signed_volume_m3": 5.72651546144231e-06
+    },
+    {
+      "object": "FJ1495M",
+      "triangles": 1326,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.397857072522786e-09,
+      "signed_volume_m3": 5.726527314639198e-06
+    },
+    {
+      "object": "FJ1496",
+      "triangles": 1148,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.230914265130653e-11,
+      "signed_volume_m3": 2.519468627732702e-05
+    },
+    {
+      "object": "FJ1496M",
+      "triangles": 1148,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.230914265130653e-11,
+      "signed_volume_m3": 2.5195060195636346e-05
+    },
+    {
+      "object": "FJ1497",
+      "triangles": 4838,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.5292058256265164e-11,
+      "signed_volume_m3": 6.191215790057478e-05
+    },
+    {
+      "object": "FJ1497M",
+      "triangles": 4838,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.5292058256265164e-11,
+      "signed_volume_m3": 6.19127575563757e-05
+    },
+    {
+      "object": "FJ1498",
+      "triangles": 1442,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.412589171626811e-11,
+      "signed_volume_m3": 6.252129317618941e-06
+    },
+    {
+      "object": "FJ1498M",
+      "triangles": 1442,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.412589171626811e-11,
+      "signed_volume_m3": 6.252280594815352e-06
+    },
+    {
+      "object": "FJ1499",
+      "triangles": 866,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.0162073037129617e-07,
+      "signed_volume_m3": 1.923367069370898e-05
+    },
+    {
+      "object": "FJ1499M",
+      "triangles": 866,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.0161889345144969e-07,
+      "signed_volume_m3": 1.92335664718209e-05
+    },
+    {
+      "object": "FJ1500",
+      "triangles": 866,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.306035403684144e-08,
+      "signed_volume_m3": 0.00012191899786806767
+    },
+    {
+      "object": "FJ1500M",
+      "triangles": 866,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.306035403684144e-08,
+      "signed_volume_m3": 0.00012196525723538634
+    },
+    {
+      "object": "FJ1501",
+      "triangles": 956,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.3185175096834328e-10,
+      "signed_volume_m3": 2.3150287514021154e-06
+    },
+    {
+      "object": "FJ1501M",
+      "triangles": 956,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.3203337369818005e-10,
+      "signed_volume_m3": 2.315048232289172e-06
+    },
+    {
+      "object": "FJ1502",
+      "triangles": 4968,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.769487093208458e-09,
+      "signed_volume_m3": 1.8062069269122774e-05
+    },
+    {
+      "object": "FJ1502M",
+      "triangles": 4968,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.777926881220556e-09,
+      "signed_volume_m3": 1.8060758867539293e-05
+    },
+    {
+      "object": "FJ1503",
+      "triangles": 1838,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.7183813471795415e-12,
+      "signed_volume_m3": 7.518210297318155e-06
+    },
+    {
+      "object": "FJ1503M",
+      "triangles": 1838,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.7503355291692347e-12,
+      "signed_volume_m3": 7.517988393505484e-06
+    },
+    {
+      "object": "FJ1504",
+      "triangles": 2092,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 9.863632066508444e-11,
+      "signed_volume_m3": 5.333272728738183e-05
+    },
+    {
+      "object": "FJ1504M",
+      "triangles": 2092,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 8.149703134563424e-12,
+      "signed_volume_m3": 5.3332854015980144e-05
+    },
+    {
+      "object": "FJ1505",
+      "triangles": 3110,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 8.023010001968711e-10,
+      "signed_volume_m3": 1.2957482073397324e-05
+    },
+    {
+      "object": "FJ1505M",
+      "triangles": 3110,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 8.023010001968711e-10,
+      "signed_volume_m3": 1.295642816607359e-05
+    },
+    {
+      "object": "FJ1506",
+      "triangles": 878,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.209332964994928e-12,
+      "signed_volume_m3": 3.860064927107069e-05
+    },
+    {
+      "object": "FJ1506M",
+      "triangles": 878,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.567601935041466e-12,
+      "signed_volume_m3": 3.859218049346726e-05
+    },
+    {
+      "object": "FJ1507",
+      "triangles": 1042,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.2340812280609594e-10,
+      "signed_volume_m3": 4.294957930397222e-05
+    },
+    {
+      "object": "FJ1507M",
+      "triangles": 1042,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.234595598125324e-10,
+      "signed_volume_m3": 4.295089688635798e-05
+    },
+    {
+      "object": "FJ1508",
+      "triangles": 506,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.320016597485799e-07,
+      "signed_volume_m3": 3.760673347788931e-05
+    },
+    {
+      "object": "FJ1508M",
+      "triangles": 506,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.2201818124703517e-07,
+      "signed_volume_m3": 3.760487478566751e-05
+    },
+    {
+      "object": "FJ1509",
+      "triangles": 2618,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.685559550229959e-12,
+      "signed_volume_m3": 4.668151264793695e-06
+    },
+    {
+      "object": "FJ1509M",
+      "triangles": 2618,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.694805816853951e-12,
+      "signed_volume_m3": 4.668119423706385e-06
+    },
+    {
+      "object": "FJ1510",
+      "triangles": 2668,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.2394079036650313e-11,
+      "signed_volume_m3": 2.6506783049018177e-06
+    },
+    {
+      "object": "FJ1510M",
+      "triangles": 2668,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.245356692667055e-11,
+      "signed_volume_m3": 2.6510727087820562e-06
+    },
+    {
+      "object": "FJ1511",
+      "triangles": 966,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.178671495646891e-11,
+      "signed_volume_m3": 9.725644062548323e-07
+    },
+    {
+      "object": "FJ1511M",
+      "triangles": 966,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.178671495646891e-11,
+      "signed_volume_m3": 9.726055529859585e-07
+    },
+    {
+      "object": "FJ1512",
+      "triangles": 1856,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.1717490686905807e-10,
+      "signed_volume_m3": 8.489800517338567e-05
+    },
+    {
+      "object": "FJ1512M",
+      "triangles": 1856,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.1717490686905807e-10,
+      "signed_volume_m3": 8.489876254746537e-05
+    },
+    {
+      "object": "FJ1513",
+      "triangles": 1900,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.5504341974460312e-10,
+      "signed_volume_m3": 0.00019532568872840253
+    },
+    {
+      "object": "FJ1513M",
+      "triangles": 1900,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.5504341974460312e-10,
+      "signed_volume_m3": 0.0001953165476803469
+    },
+    {
+      "object": "FJ1514",
+      "triangles": 726,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.6626334830818037e-12,
+      "signed_volume_m3": 1.1022059491742634e-06
+    },
+    {
+      "object": "FJ1514M",
+      "triangles": 726,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.5869143076434417e-12,
+      "signed_volume_m3": 1.102269974171923e-06
+    },
+    {
+      "object": "FJ1515",
+      "triangles": 754,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.320045049767522e-09,
+      "signed_volume_m3": 3.48221901294461e-06
+    },
+    {
+      "object": "FJ1515M",
+      "triangles": 754,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.316731713104911e-09,
+      "signed_volume_m3": 3.48214699062836e-06
+    },
+    {
+      "object": "FJ1516",
+      "triangles": 1040,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.495908090584876e-11,
+      "signed_volume_m3": 5.663266890388564e-06
+    },
+    {
+      "object": "FJ1516M",
+      "triangles": 1040,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.495908090584876e-11,
+      "signed_volume_m3": 5.663191739340246e-06
+    },
+    {
+      "object": "FJ1517",
+      "triangles": 1208,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.1226290110750486e-08,
+      "signed_volume_m3": 7.263047900316184e-06
+    },
+    {
+      "object": "FJ1517M",
+      "triangles": 1208,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.122423705605468e-08,
+      "signed_volume_m3": 7.264305581180924e-06
+    },
+    {
+      "object": "FJ1518",
+      "triangles": 1538,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.8072294309597216e-09,
+      "signed_volume_m3": 2.331450093556587e-05
+    },
+    {
+      "object": "FJ1518M",
+      "triangles": 1538,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.8072294309597216e-09,
+      "signed_volume_m3": 2.331465184947597e-05
+    },
+    {
+      "object": "FJ1520",
+      "triangles": 10530,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.818367926873179e-12,
+      "signed_volume_m3": 0.00016031396464384208
+    },
+    {
+      "object": "FJ1520M",
+      "triangles": 10530,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.815259302404229e-12,
+      "signed_volume_m3": 0.00016031168308500894
+    },
+    {
+      "object": "FJ1521",
+      "triangles": 7108,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.042444322673646e-12,
+      "signed_volume_m3": 8.950758629962061e-05
+    },
+    {
+      "object": "FJ1521M",
+      "triangles": 7108,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.042444322673646e-12,
+      "signed_volume_m3": 8.950929110174057e-05
+    },
+    {
+      "object": "FJ1522",
+      "triangles": 4742,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.8102520310824275e-12,
+      "signed_volume_m3": 4.158918032771344e-06
+    },
+    {
+      "object": "FJ1522M",
+      "triangles": 4742,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.8102520310824275e-12,
+      "signed_volume_m3": 4.159086744031162e-06
+    },
+    {
+      "object": "FJ1524",
+      "triangles": 3534,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.3305328890901146e-11,
+      "signed_volume_m3": 2.8513261801598455e-06
+    },
+    {
+      "object": "FJ1524M",
+      "triangles": 3534,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.3358390462815853e-11,
+      "signed_volume_m3": 2.851073759744183e-06
+    },
+    {
+      "object": "FJ1525",
+      "triangles": 11062,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.5861145498378477e-11,
+      "signed_volume_m3": 1.0078103162864026e-05
+    },
+    {
+      "object": "FJ1525M",
+      "triangles": 11062,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.585638050026327e-11,
+      "signed_volume_m3": 1.0078529679737196e-05
+    },
+    {
+      "object": "FJ1526",
+      "triangles": 3072,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.3489356454229021e-09,
+      "signed_volume_m3": 7.605575212901179e-06
+    },
+    {
+      "object": "FJ1526M",
+      "triangles": 3072,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.3488634357091293e-09,
+      "signed_volume_m3": 7.605478828677856e-06
+    },
+    {
+      "object": "FJ1527",
+      "triangles": 15872,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.641762814682535e-10,
+      "signed_volume_m3": 5.9868690401033594e-05
+    },
+    {
+      "object": "FJ1527M",
+      "triangles": 15872,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.641762814682535e-10,
+      "signed_volume_m3": 5.986842039546356e-05
+    },
+    {
+      "object": "FJ1528",
+      "triangles": 8386,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.444519289254289e-10,
+      "signed_volume_m3": 2.9247599629882365e-05
+    },
+    {
+      "object": "FJ1528M",
+      "triangles": 8386,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.4444838205031277e-10,
+      "signed_volume_m3": 2.9248011844905684e-05
+    },
+    {
+      "object": "FJ1532",
+      "triangles": 4718,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 8.27185946595479e-11,
+      "signed_volume_m3": 1.4875349444746987e-05
+    },
+    {
+      "object": "FJ1532M",
+      "triangles": 4718,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 8.270431262651943e-11,
+      "signed_volume_m3": 1.4874170002161046e-05
+    },
+    {
+      "object": "FJ1533",
+      "triangles": 2260,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.582669844742804e-09,
+      "signed_volume_m3": 4.015869976489581e-06
+    },
+    {
+      "object": "FJ1533M",
+      "triangles": 2260,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.583095308695711e-09,
+      "signed_volume_m3": 4.015697740151515e-06
+    },
+    {
+      "object": "FJ1534",
+      "triangles": 2816,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.65288123489479e-11,
+      "signed_volume_m3": 6.196916210978139e-06
+    },
+    {
+      "object": "FJ1534M",
+      "triangles": 2816,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.653776897033138e-11,
+      "signed_volume_m3": 6.195854114825199e-06
+    },
+    {
+      "object": "FJ1535",
+      "triangles": 15068,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.9720336474904343e-12,
+      "signed_volume_m3": 0.0001290283266229611
+    },
+    {
+      "object": "FJ1535M",
+      "triangles": 15068,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.2536417176866053e-12,
+      "signed_volume_m3": 0.00012903096677954035
+    },
+    {
+      "object": "FJ1536",
+      "triangles": 7202,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.435032775945861e-10,
+      "signed_volume_m3": 2.344449451993629e-05
+    },
+    {
+      "object": "FJ1536M",
+      "triangles": 7202,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.435032775945861e-10,
+      "signed_volume_m3": 2.3444701816831868e-05
+    },
+    {
+      "object": "FJ1537",
+      "triangles": 2206,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.393529867058126e-08,
+      "signed_volume_m3": 6.101471225643136e-06
+    },
+    {
+      "object": "FJ1537M",
+      "triangles": 2206,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.409860352046117e-08,
+      "signed_volume_m3": 6.101201291126385e-06
+    },
+    {
+      "object": "FJ1538",
+      "triangles": 1912,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.843373690674838e-10,
+      "signed_volume_m3": 8.225758229913655e-06
+    },
+    {
+      "object": "FJ1538M",
+      "triangles": 1912,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.739991620902785e-10,
+      "signed_volume_m3": 8.225632478570014e-06
+    },
+    {
+      "object": "FJ1539",
+      "triangles": 3406,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.400281097135145e-10,
+      "signed_volume_m3": 6.636784854028965e-06
+    },
+    {
+      "object": "FJ1539M",
+      "triangles": 3406,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.400281097135145e-10,
+      "signed_volume_m3": 6.6369235458885775e-06
+    },
+    {
+      "object": "FJ1540",
+      "triangles": 5176,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.3561903256540404e-12,
+      "signed_volume_m3": 1.666684680788396e-05
+    },
+    {
+      "object": "FJ1540M",
+      "triangles": 5176,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.3561903256540404e-12,
+      "signed_volume_m3": 1.6651704213285986e-05
+    },
+    {
+      "object": "FJ1541",
+      "triangles": 13164,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.2651381826433436e-10,
+      "signed_volume_m3": 6.644251454546822e-05
+    },
+    {
+      "object": "FJ1541M",
+      "triangles": 13164,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.2651381826433436e-10,
+      "signed_volume_m3": 6.644237522080556e-05
+    },
+    {
+      "object": "FJ1542",
+      "triangles": 9066,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.078332076271476e-10,
+      "signed_volume_m3": 2.297361454708513e-05
+    },
+    {
+      "object": "FJ1542M",
+      "triangles": 9066,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.0774116144475616e-10,
+      "signed_volume_m3": 2.297408571497527e-05
+    },
+    {
+      "object": "FJ1543",
+      "triangles": 1192,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.618217607977478e-10,
+      "signed_volume_m3": 1.4348126476272265e-06
+    },
+    {
+      "object": "FJ1543M",
+      "triangles": 1192,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.618232696685655e-10,
+      "signed_volume_m3": 1.4348880490185995e-06
+    },
+    {
+      "object": "FJ1544",
+      "triangles": 7422,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 2,
+      "minimum_double_area_m2": 6.772082894457299e-13,
+      "signed_volume_m3": 9.118573512933221e-06
+    },
+    {
+      "object": "FJ1544M",
+      "triangles": 7422,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 1,
+      "minimum_double_area_m2": 8.054390487899354e-13,
+      "signed_volume_m3": 9.118959135214077e-06
+    },
+    {
+      "object": "FJ1545",
+      "triangles": 7808,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.141376089718585e-10,
+      "signed_volume_m3": 2.987513869173183e-05
+    },
+    {
+      "object": "FJ1545M",
+      "triangles": 7808,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.141376089718585e-10,
+      "signed_volume_m3": 2.987334398492221e-05
+    },
+    {
+      "object": "FJ1546",
+      "triangles": 6256,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 9.04362001952208e-11,
+      "signed_volume_m3": 1.3310842172631227e-05
+    },
+    {
+      "object": "FJ1546M",
+      "triangles": 6256,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 9.04362001952208e-11,
+      "signed_volume_m3": 1.3311062856959135e-05
+    },
+    {
+      "object": "FJ1547",
+      "triangles": 1362,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 9.38956690177406e-11,
+      "signed_volume_m3": 4.5879491196753814e-06
+    },
+    {
+      "object": "FJ1547M",
+      "triangles": 1362,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 9.38956690177406e-11,
+      "signed_volume_m3": 4.588175595883831e-06
+    },
+    {
+      "object": "FJ1548",
+      "triangles": 1736,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.223534270739407e-12,
+      "signed_volume_m3": 2.734892533505832e-06
+    },
+    {
+      "object": "FJ1548M",
+      "triangles": 1736,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.223534270739407e-12,
+      "signed_volume_m3": 2.735024385174628e-06
+    },
+    {
+      "object": "FJ1549",
+      "triangles": 1152,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.6340416791072395e-08,
+      "signed_volume_m3": 9.131992335911322e-07
+    },
+    {
+      "object": "FJ1549M",
+      "triangles": 1152,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.634081907069188e-08,
+      "signed_volume_m3": 9.131829149904895e-07
+    },
+    {
+      "object": "FJ1550",
+      "triangles": 774,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.035718800529944e-09,
+      "signed_volume_m3": 6.475044825514445e-07
+    },
+    {
+      "object": "FJ1550M",
+      "triangles": 774,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.035716782764875e-09,
+      "signed_volume_m3": 6.474851124719685e-07
+    },
+    {
+      "object": "FJ1551",
+      "triangles": 410,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.1894711687304812e-08,
+      "signed_volume_m3": 3.8251763001040553e-07
+    },
+    {
+      "object": "FJ1551M",
+      "triangles": 410,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.1894709487346284e-08,
+      "signed_volume_m3": 3.825150362927891e-07
+    },
+    {
+      "object": "FJ1552",
+      "triangles": 1210,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.2112186253965262e-12,
+      "signed_volume_m3": 6.519860828760691e-07
+    },
+    {
+      "object": "FJ1552M",
+      "triangles": 1210,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.2112186253965262e-12,
+      "signed_volume_m3": 6.519045603408024e-07
+    },
+    {
+      "object": "FJ1553",
+      "triangles": 1090,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.040340837533461e-08,
+      "signed_volume_m3": 6.989165093471515e-07
+    },
+    {
+      "object": "FJ1553M",
+      "triangles": 1090,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.040340837533461e-08,
+      "signed_volume_m3": 6.991518782892665e-07
+    },
+    {
+      "object": "FJ1554",
+      "triangles": 4460,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.945512829173921e-09,
+      "signed_volume_m3": 5.045681452416555e-05
+    },
+    {
+      "object": "FJ1554M",
+      "triangles": 4460,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.9455118785803963e-09,
+      "signed_volume_m3": 5.046131409602571e-05
+    },
+    {
+      "object": "FJ1555",
+      "triangles": 650,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.2094217778493644e-08,
+      "signed_volume_m3": 6.824578549649462e-07
+    },
+    {
+      "object": "FJ1556",
+      "triangles": 680,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.6943046765475054e-10,
+      "signed_volume_m3": 6.868146751243315e-07
+    },
+    {
+      "object": "FJ1557",
+      "triangles": 1960,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.8921344359000543e-08,
+      "signed_volume_m3": 2.351023519436764e-06
+    },
+    {
+      "object": "FJ1558",
+      "triangles": 13396,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.121148959598061e-08,
+      "signed_volume_m3": 4.579778509805909e-05
+    },
+    {
+      "object": "FJ1559",
+      "triangles": 732,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.160464083733211e-08,
+      "signed_volume_m3": 6.690304492360575e-07
+    },
+    {
+      "object": "FJ1560",
+      "triangles": 392,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.495615873630067e-09,
+      "signed_volume_m3": 4.2040288974021745e-08
+    },
+    {
+      "object": "FJ1561",
+      "triangles": 3898,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.3790285446785618e-08,
+      "signed_volume_m3": 5.450727271919828e-06
+    },
+    {
+      "object": "FJ1562",
+      "triangles": 1938,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.4993004534605274e-08,
+      "signed_volume_m3": 2.124096369530961e-06
+    },
+    {
+      "object": "FJ1563",
+      "triangles": 1044,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.419941786608457e-08,
+      "signed_volume_m3": 2.9746798606531372e-06
+    },
+    {
+      "object": "FJ1564",
+      "triangles": 1418,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.6232600512868873e-10,
+      "signed_volume_m3": 1.4666333437929294e-06
+    },
+    {
+      "object": "FJ1565",
+      "triangles": 5358,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.637092549322596e-08,
+      "signed_volume_m3": 5.638975098695776e-06
+    },
+    {
+      "object": "FJ1566",
+      "triangles": 816,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.2595042302145375e-09,
+      "signed_volume_m3": 7.846791054883972e-07
+    },
+    {
+      "object": "FJ1567",
+      "triangles": 1566,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.766750192325195e-10,
+      "signed_volume_m3": 5.350386679274699e-06
+    },
+    {
+      "object": "FJ1568",
+      "triangles": 860,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.801505660676219e-10,
+      "signed_volume_m3": 1.7540605217797151e-06
+    },
+    {
+      "object": "FJ1569",
+      "triangles": 720,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.3524010013939776e-08,
+      "signed_volume_m3": 6.801890143595799e-07
+    },
+    {
+      "object": "FJ1570",
+      "triangles": 2596,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 8.360340406128753e-09,
+      "signed_volume_m3": 3.2324371684215297e-06
+    },
+    {
+      "object": "FJ1571",
+      "triangles": 4074,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.424194406284384e-09,
+      "signed_volume_m3": 5.6045398294699845e-06
+    },
+    {
+      "object": "FJ1572",
+      "triangles": 2756,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.8992666157352576e-08,
+      "signed_volume_m3": 3.0357259829680007e-06
+    },
+    {
+      "object": "FJ1573",
+      "triangles": 10224,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.7809513567622403e-09,
+      "signed_volume_m3": 5.398194094629284e-05
+    },
+    {
+      "object": "FJ1574",
+      "triangles": 3078,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.057314925076067e-08,
+      "signed_volume_m3": 5.754591776524907e-06
+    },
+    {
+      "object": "FJ1575",
+      "triangles": 2590,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.1657854431541725e-08,
+      "signed_volume_m3": 5.471663775028925e-06
+    },
+    {
+      "object": "FJ1576",
+      "triangles": 1248,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.4819616766973205e-09,
+      "signed_volume_m3": 9.115832575398899e-07
+    },
+    {
+      "object": "FJ1577",
+      "triangles": 1436,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.7763073187277594e-09,
+      "signed_volume_m3": 8.981023531638079e-07
+    },
+    {
+      "object": "FJ1578",
+      "triangles": 2242,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.0081515681233437e-08,
+      "signed_volume_m3": 2.8196806288553317e-06
+    },
+    {
+      "object": "FJ1579",
+      "triangles": 2272,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 8.178825595422598e-09,
+      "signed_volume_m3": 2.8237794089099457e-06
+    },
+    {
+      "object": "FJ1580",
+      "triangles": 728,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.1677371295550715e-08,
+      "signed_volume_m3": 6.691833008753151e-07
+    },
+    {
+      "object": "FJ1582",
+      "triangles": 3956,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.180720754090806e-09,
+      "signed_volume_m3": 5.435354821007051e-06
+    },
+    {
+      "object": "FJ1583",
+      "triangles": 1956,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.965367745808499e-08,
+      "signed_volume_m3": 2.133859547695798e-06
+    },
+    {
+      "object": "FJ1584",
+      "triangles": 1032,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.044606621608886e-10,
+      "signed_volume_m3": 2.931116581789264e-06
+    },
+    {
+      "object": "FJ1585",
+      "triangles": 1410,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.909761734481435e-11,
+      "signed_volume_m3": 1.446506989828412e-06
+    },
+    {
+      "object": "FJ1586",
+      "triangles": 5414,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.1322741945429815e-09,
+      "signed_volume_m3": 5.664195978614147e-06
+    },
+    {
+      "object": "FJ1587",
+      "triangles": 13780,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.191956330580028e-08,
+      "signed_volume_m3": 4.6236700266607914e-05
+    },
+    {
+      "object": "FJ1588",
+      "triangles": 804,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.7045045930252911e-12,
+      "signed_volume_m3": 7.640199464409281e-07
+    },
+    {
+      "object": "FJ1589",
+      "triangles": 1572,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.127952405787185e-08,
+      "signed_volume_m3": 5.3466709459462755e-06
+    },
+    {
+      "object": "FJ1590",
+      "triangles": 886,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.5138952010102e-09,
+      "signed_volume_m3": 1.7840914919011092e-06
+    },
+    {
+      "object": "FJ1591",
+      "triangles": 674,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.385814678746432e-08,
+      "signed_volume_m3": 6.105555778995212e-07
+    },
+    {
+      "object": "FJ1592",
+      "triangles": 2632,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.2094293178951794e-09,
+      "signed_volume_m3": 3.2332999617264406e-06
+    },
+    {
+      "object": "FJ1593",
+      "triangles": 4102,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.279130202482408e-09,
+      "signed_volume_m3": 5.607944111138233e-06
+    },
+    {
+      "object": "FJ1594",
+      "triangles": 2778,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.232438928482484e-08,
+      "signed_volume_m3": 3.035180288445431e-06
+    },
+    {
+      "object": "FJ1595",
+      "triangles": 10344,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.1883272144075363e-12,
+      "signed_volume_m3": 5.398466496158449e-05
+    },
+    {
+      "object": "FJ1596",
+      "triangles": 3116,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.8147180972692914e-08,
+      "signed_volume_m3": 5.750884242207565e-06
+    },
+    {
+      "object": "FJ1597",
+      "triangles": 2608,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.6714850662970676e-08,
+      "signed_volume_m3": 5.464200207263169e-06
+    },
+    {
+      "object": "FJ1598",
+      "triangles": 1236,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.605268223376811e-10,
+      "signed_volume_m3": 9.177562231010751e-07
+    },
+    {
+      "object": "FJ1599",
+      "triangles": 1450,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.0377851356047074e-11,
+      "signed_volume_m3": 8.967240627199966e-07
+    },
+    {
+      "object": "FJ1600",
+      "triangles": 2200,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.4834186713034074e-08,
+      "signed_volume_m3": 2.240394459258411e-06
+    },
+    {
+      "object": "FJ1601",
+      "triangles": 3002,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.7329424579974198e-08,
+      "signed_volume_m3": 2.853668061839351e-06
+    },
+    {
+      "object": "FJ2542",
+      "triangles": 2082,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.0897491449023563e-08,
+      "signed_volume_m3": 4.0842169770751325e-06
+    },
+    {
+      "object": "FJ2543",
+      "triangles": 364,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.3202157060190732e-07,
+      "signed_volume_m3": 4.794538163268334e-07
+    },
+    {
+      "object": "FJ2544",
+      "triangles": 3846,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.425489311437159e-09,
+      "signed_volume_m3": 8.192103762760225e-06
+    },
+    {
+      "object": "FJ2545",
+      "triangles": 4670,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.895535423350103e-12,
+      "signed_volume_m3": 6.608873409747793e-06
+    },
+    {
+      "object": "FJ2546",
+      "triangles": 3618,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.455912656916992e-10,
+      "signed_volume_m3": 6.533437160713293e-06
+    },
+    {
+      "object": "FJ2547",
+      "triangles": 2086,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 9.148323978329541e-09,
+      "signed_volume_m3": 4.078044109009775e-06
+    },
+    {
+      "object": "FJ2548",
+      "triangles": 368,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.829895568035476e-08,
+      "signed_volume_m3": 4.7470556974353506e-07
+    },
+    {
+      "object": "FJ2549",
+      "triangles": 3864,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.5009708333622316e-12,
+      "signed_volume_m3": 8.234068556066414e-06
+    },
+    {
+      "object": "FJ2550",
+      "triangles": 4616,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.148373309971303e-12,
+      "signed_volume_m3": 6.606029071531608e-06
+    },
+    {
+      "object": "FJ2551",
+      "triangles": 3638,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.59150100871865e-11,
+      "signed_volume_m3": 6.525870608792422e-06
+    },
+    {
+      "object": "FJ2738",
+      "triangles": 8214,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.366906078019813e-09,
+      "signed_volume_m3": 5.7186820518803326e-06
+    },
+    {
+      "object": "FJ2739",
+      "triangles": 2888,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 8.592625486205452e-09,
+      "signed_volume_m3": 6.221272016422677e-07
+    },
+    {
+      "object": "FJ2740",
+      "triangles": 7422,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.1861296443876365e-09,
+      "signed_volume_m3": 3.6494637789044504e-06
+    },
+    {
+      "object": "FJ2741",
+      "triangles": 12318,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.851279364967205e-09,
+      "signed_volume_m3": 6.541418659805976e-07
+    },
+    {
+      "object": "FJ2742",
+      "triangles": 5904,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 9.169293708938367e-09,
+      "signed_volume_m3": 2.887639239187032e-06
+    },
+    {
+      "object": "FJ2743",
+      "triangles": 41400,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 8.834749367518716e-10,
+      "signed_volume_m3": 3.1921095707290236e-06
+    },
+    {
+      "object": "FJ2745",
+      "triangles": 9152,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.4283224450124051e-09,
+      "signed_volume_m3": 2.582309503898053e-07
+    },
+    {
+      "object": "FJ2746",
+      "triangles": 3268,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.868036529437347e-12,
+      "signed_volume_m3": 1.2765587641824887e-06
+    },
+    {
+      "object": "FJ2747",
+      "triangles": 10702,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.818238672269549e-09,
+      "signed_volume_m3": 4.920971911828739e-06
+    },
+    {
+      "object": "FJ2748",
+      "triangles": 13872,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 9.3112626983749e-11,
+      "signed_volume_m3": 6.321092232572235e-07
+    },
+    {
+      "object": "FJ2750",
+      "triangles": 7594,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.716655068231417e-09,
+      "signed_volume_m3": 5.566587286514346e-06
+    },
+    {
+      "object": "FJ2751",
+      "triangles": 2874,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.598860440230518e-08,
+      "signed_volume_m3": 6.228334777551596e-07
+    },
+    {
+      "object": "FJ2752",
+      "triangles": 7448,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.406054869431662e-09,
+      "signed_volume_m3": 3.6429675551861273e-06
+    },
+    {
+      "object": "FJ2753",
+      "triangles": 12312,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.2397282586068448e-09,
+      "signed_volume_m3": 6.541671679401672e-07
+    },
+    {
+      "object": "FJ2754",
+      "triangles": 5912,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.0010474852034676e-08,
+      "signed_volume_m3": 2.90807955407205e-06
+    },
+    {
+      "object": "FJ2755",
+      "triangles": 41400,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.0700492285172315e-09,
+      "signed_volume_m3": 3.1921807471499056e-06
+    },
+    {
+      "object": "FJ2757",
+      "triangles": 9152,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.6066073533325081e-09,
+      "signed_volume_m3": 2.5817686734791107e-07
+    },
+    {
+      "object": "FJ2758",
+      "triangles": 25752,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 8.995420048726928e-10,
+      "signed_volume_m3": 1.3442329173819344e-06
+    },
+    {
+      "object": "FJ2759",
+      "triangles": 10702,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.137392845825818e-09,
+      "signed_volume_m3": 4.919105339974402e-06
+    },
+    {
+      "object": "FJ2760",
+      "triangles": 13872,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 9.568056159557614e-10,
+      "signed_volume_m3": 6.320778441737172e-07
+    },
+    {
+      "object": "FJ2762",
+      "triangles": 1632,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 3.4481403424723013e-09,
+      "signed_volume_m3": 1.4309960462394607e-07
+    },
+    {
+      "object": "FJ2774",
+      "triangles": 4510,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.08434853977879e-12,
+      "signed_volume_m3": 4.026684058711499e-08
+    },
+    {
+      "object": "FJ2778",
+      "triangles": 6214,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.243319931633886e-10,
+      "signed_volume_m3": 3.789578385385271e-08
+    },
+    {
+      "object": "FJ2780",
+      "triangles": 6304,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.197698044537291e-11,
+      "signed_volume_m3": 1.4847098047180811e-08
+    },
+    {
+      "object": "FJ2781",
+      "triangles": 5580,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.0201516968400848e-09,
+      "signed_volume_m3": 1.0097465655042052e-07
+    },
+    {
+      "object": "FJ2782",
+      "triangles": 4842,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.0395020506618196e-09,
+      "signed_volume_m3": 1.842359581571653e-07
+    },
+    {
+      "object": "FJ2783",
+      "triangles": 3270,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.0065044549939343e-10,
+      "signed_volume_m3": 5.138145491822102e-08
+    },
+    {
+      "object": "FJ2784",
+      "triangles": 6092,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.1305823948319407e-09,
+      "signed_volume_m3": 1.5878935292854178e-07
+    },
+    {
+      "object": "FJ2785",
+      "triangles": 9290,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.175945997255222e-10,
+      "signed_volume_m3": 2.559849086711886e-07
+    },
+    {
+      "object": "FJ2788",
+      "triangles": 1152,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.734767661267082e-10,
+      "signed_volume_m3": 6.568747669373037e-09
+    },
+    {
+      "object": "FJ2791",
+      "triangles": 4366,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 13,
+      "minimum_double_area_m2": 0.0,
+      "signed_volume_m3": 4.030458296931883e-08
+    },
+    {
+      "object": "FJ2796",
+      "triangles": 6198,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.2459983900956854e-10,
+      "signed_volume_m3": 3.7891674962967705e-08
+    },
+    {
+      "object": "FJ2798",
+      "triangles": 6084,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.5264001760740007e-10,
+      "signed_volume_m3": 1.4837128456347744e-08
+    },
+    {
+      "object": "FJ2799",
+      "triangles": 5566,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 7.252518264108158e-10,
+      "signed_volume_m3": 1.0089171900534038e-07
+    },
+    {
+      "object": "FJ2800",
+      "triangles": 4812,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.7932615593802293e-09,
+      "signed_volume_m3": 1.8443276120982271e-07
+    },
+    {
+      "object": "FJ2801",
+      "triangles": 3232,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 2.1908279877747017e-11,
+      "signed_volume_m3": 5.117468149713146e-08
+    },
+    {
+      "object": "FJ2802",
+      "triangles": 6092,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 1.3020719616893004e-09,
+      "signed_volume_m3": 1.5887136960771213e-07
+    },
+    {
+      "object": "FJ2803",
+      "triangles": 10650,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 4.79120943849785e-10,
+      "signed_volume_m3": 2.558613025689936e-07
+    },
+    {
+      "object": "FJ2806",
+      "triangles": 1148,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.168785862693803e-10,
+      "signed_volume_m3": 6.5566941821289545e-09
+    },
+    {
+      "object": "FJ2809",
+      "triangles": 6580,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 6.896882023821327e-11,
+      "signed_volume_m3": 1.0308356530615775e-07
+    },
+    {
+      "object": "FJ3131",
+      "triangles": 68522,
+      "nonfinite_coordinates": 0,
+      "triangles_double_area_le_1e-12_m2": 0,
+      "minimum_double_area_m2": 5.171138663757555e-12,
+      "signed_volume_m3": 0.000367839259544392
+    }
+  ],
+  "totals": {
+    "objects": 425,
+    "triangles": 2404604,
+    "nonfinite_coordinates": 0,
+    "near_collapsed_triangles": 16,
+    "objects_negative_signed_volume": 0
+  }
+}

@@ -1,0 +1,1670 @@
+{
+  "variant": "s2",
+  "source_blend_sha256": "77eaab0c36259ad1f957e2c7ccb95f2546d34d8193b639882ce5f726d8f6a83c",
+  "visible_triangles": 99946,
+  "visible_objects": 53,
+  "bounds_min": [
+    -0.5043357014656067,
+    -0.18889309465885162,
+    0.004702341742813587
+  ],
+  "bounds_max": [
+    0.5038890838623047,
+    0.1546555906534195,
+    1.7996844053268433
+  ],
+  "surface_zone_ids": [
+    "adductors.left",
+    "adductors.right",
+    "biceps.left",
+    "biceps.right",
+    "brachialis.left",
+    "brachialis.right",
+    "calf.left",
+    "calf.right",
+    "deltoid.left",
+    "deltoid.right",
+    "fibularis.left",
+    "fibularis.right",
+    "forearm-extensors.left",
+    "forearm-extensors.right",
+    "forearm-flexors.left",
+    "forearm-flexors.right",
+    "gluteal.left",
+    "gluteal.right",
+    "hamstrings-lateral.left",
+    "hamstrings-lateral.right",
+    "hamstrings-medial.left",
+    "hamstrings-medial.right",
+    "hip-abductors.left",
+    "hip-abductors.right",
+    "latissimus.left",
+    "latissimus.right",
+    "oblique.left",
+    "oblique.right",
+    "pectoralis.left",
+    "pectoralis.right",
+    "quadriceps-lateral.left",
+    "quadriceps-lateral.right",
+    "quadriceps-medial.left",
+    "quadriceps-medial.right",
+    "quadriceps-rectus.left",
+    "quadriceps-rectus.right",
+    "rectus-abdominis.left",
+    "rectus-abdominis.right",
+    "sartorius.left",
+    "sartorius.right",
+    "scapular.left",
+    "scapular.right",
+    "serratus.left",
+    "serratus.right",
+    "soleus.left",
+    "soleus.right",
+    "tibialis.left",
+    "tibialis.right",
+    "trapezius.left",
+    "trapezius.right",
+    "triceps.left",
+    "triceps.right"
+  ],
+  "objects": [
+    {
+      "object": "S2.pectoralis.left",
+      "zone": "pectoralis.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 1070,
+      "triangles": 2136,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        1070
+      ],
+      "minimum_double_area_m2": 2.2331114266751573e-06,
+      "signed_volume_m3": 0.001195042166278906,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.014027434401214123,
+        -0.15052993595600128,
+        1.244633674621582
+      ],
+      "bounds_max": [
+        0.2568196952342987,
+        0.03792598471045494,
+        1.4824179410934448
+      ]
+    },
+    {
+      "object": "S2.deltoid.left",
+      "zone": "deltoid.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 895,
+      "triangles": 1786,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        895
+      ],
+      "minimum_double_area_m2": 3.991719948707432e-06,
+      "signed_volume_m3": 0.0007538742265730152,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.09906579554080963,
+        -0.028657495975494385,
+        1.338303804397583
+      ],
+      "bounds_max": [
+        0.30235210061073303,
+        0.1233779564499855,
+        1.4912797212600708
+      ]
+    },
+    {
+      "object": "S2.trapezius.left",
+      "zone": "trapezius.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 1136,
+      "triangles": 2268,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        1136
+      ],
+      "minimum_double_area_m2": 4.3892576610509246e-06,
+      "signed_volume_m3": 0.0007353115886713025,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.014854047447443008,
+        0.004782106261700392,
+        1.1884175539016724
+      ],
+      "bounds_max": [
+        0.23184408247470856,
+        0.1546555906534195,
+        1.6612082719802856
+      ]
+    },
+    {
+      "object": "S2.forearm-flexors.left",
+      "zone": "forearm-flexors.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 761,
+      "triangles": 1518,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        761
+      ],
+      "minimum_double_area_m2": 2.7281507264096317e-06,
+      "signed_volume_m3": 0.00040981906693016146,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.2802029550075531,
+        -0.034308336675167084,
+        0.9583653807640076
+      ],
+      "bounds_max": [
+        0.4210629165172577,
+        0.06524179875850677,
+        1.203778624534607
+      ]
+    },
+    {
+      "object": "S2.calf.left",
+      "zone": "calf.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 1010,
+      "triangles": 2016,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        1010
+      ],
+      "minimum_double_area_m2": 4.106382819345306e-06,
+      "signed_volume_m3": 0.001153753196480889,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.030138321220874786,
+        0.003314842004328966,
+        0.21056361496448517
+      ],
+      "bounds_max": [
+        0.16501638293266296,
+        0.12011031806468964,
+        0.5309396386146545
+      ]
+    },
+    {
+      "object": "S2.triceps.left",
+      "zone": "triceps.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 760,
+      "triangles": 1516,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        760
+      ],
+      "minimum_double_area_m2": 3.501858889894438e-06,
+      "signed_volume_m3": 0.0006690414867793573,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.17730847001075745,
+        0.036976732313632965,
+        1.1728286743164062
+      ],
+      "bounds_max": [
+        0.3306671679019928,
+        0.10366909950971603,
+        1.4355218410491943
+      ]
+    },
+    {
+      "object": "S2.adductors.left",
+      "zone": "adductors.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 1148,
+      "triangles": 2296,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        1148
+      ],
+      "minimum_double_area_m2": 4.318689885861344e-06,
+      "signed_volume_m3": 0.001621999611206419,
+      "euler_characteristic": 0,
+      "bounds_min": [
+        0.017874877899885178,
+        -0.03911423310637474,
+        0.3777410089969635
+      ],
+      "bounds_max": [
+        0.15292343497276306,
+        0.05713233724236488,
+        0.9235925078392029
+      ]
+    },
+    {
+      "object": "S2.brachialis.left",
+      "zone": "brachialis.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 649,
+      "triangles": 1294,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        649
+      ],
+      "minimum_double_area_m2": 2.3423141130231315e-06,
+      "signed_volume_m3": 0.0002303533211490337,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.16565465927124023,
+        -0.004283278249204159,
+        1.1416165828704834
+      ],
+      "bounds_max": [
+        0.34160274267196655,
+        0.05219509080052376,
+        1.4607899188995361
+      ]
+    },
+    {
+      "object": "S2.forearm-extensors.left",
+      "zone": "forearm-extensors.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 815,
+      "triangles": 1634,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        815
+      ],
+      "minimum_double_area_m2": 2.4275037162873165e-06,
+      "signed_volume_m3": 0.0004917215265533543,
+      "euler_characteristic": -2,
+      "bounds_min": [
+        0.29604968428611755,
+        -0.022970378398895264,
+        0.9589197039604187
+      ],
+      "bounds_max": [
+        0.44810348749160767,
+        0.0710286870598793,
+        1.292054533958435
+      ]
+    },
+    {
+      "object": "S2.oblique.left",
+      "zone": "oblique.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 1261,
+      "triangles": 2518,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        1261
+      ],
+      "minimum_double_area_m2": 1.4674780347415054e-06,
+      "signed_volume_m3": 0.0009027112848332787,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.05966292321681976,
+        -0.1484675109386444,
+        1.010866403579712
+      ],
+      "bounds_max": [
+        0.16712401807308197,
+        0.102945476770401,
+        1.3547214269638062
+      ]
+    },
+    {
+      "object": "S2.fibularis.left",
+      "zone": "fibularis.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 542,
+      "triangles": 1080,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        542
+      ],
+      "minimum_double_area_m2": 1.277572364427823e-06,
+      "signed_volume_m3": 0.00018503301829736577,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.13005153834819794,
+        0.029239600524306297,
+        0.1409219354391098
+      ],
+      "bounds_max": [
+        0.17457301914691925,
+        0.07736305892467499,
+        0.447225958108902
+      ]
+    },
+    {
+      "object": "S2.gluteal.left",
+      "zone": "gluteal.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 1112,
+      "triangles": 2220,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        1112
+      ],
+      "minimum_double_area_m2": 3.851427481012141e-06,
+      "signed_volume_m3": 0.0012712232100157862,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.026783239096403122,
+        -0.005462235305458307,
+        0.7849174737930298
+      ],
+      "bounds_max": [
+        0.194270059466362,
+        0.15183691680431366,
+        1.0763256549835205
+      ]
+    },
+    {
+      "object": "S2.scapular.left",
+      "zone": "scapular.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 710,
+      "triangles": 1416,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        710
+      ],
+      "minimum_double_area_m2": 7.213617852177477e-07,
+      "signed_volume_m3": 0.0004276330603499508,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.05735299736261368,
+        0.02084922604262829,
+        1.3309966325759888
+      ],
+      "bounds_max": [
+        0.23738208413124084,
+        0.13155488669872284,
+        1.4795445203781128
+      ]
+    },
+    {
+      "object": "S2.latissimus.left",
+      "zone": "latissimus.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 1266,
+      "triangles": 2528,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        1266
+      ],
+      "minimum_double_area_m2": 1.3971687608085689e-06,
+      "signed_volume_m3": 0.0006750633426772384,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.020702071487903595,
+        0.023375211283564568,
+        0.9934527277946472
+      ],
+      "bounds_max": [
+        0.22748370468616486,
+        0.1476994752883911,
+        1.4042776823043823
+      ]
+    },
+    {
+      "object": "S2.rectus-abdominis.left",
+      "zone": "rectus-abdominis.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 913,
+      "triangles": 1818,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 2,
+      "component_vertex_counts": [
+        795,
+        118
+      ],
+      "minimum_double_area_m2": 2.956239037448722e-06,
+      "signed_volume_m3": 0.00044385678595055465,
+      "euler_characteristic": 4,
+      "bounds_min": [
+        0.001242149155586958,
+        -0.14609220623970032,
+        1.0120925903320312
+      ],
+      "bounds_max": [
+        0.09942957758903503,
+        -0.038607947528362274,
+        1.3180444240570068
+      ]
+    },
+    {
+      "object": "S2.quadriceps-rectus.left",
+      "zone": "quadriceps-rectus.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 935,
+      "triangles": 1870,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        935
+      ],
+      "minimum_double_area_m2": 3.0293961993926926e-06,
+      "signed_volume_m3": 0.0008338619677913619,
+      "euler_characteristic": 0,
+      "bounds_min": [
+        0.0885189026594162,
+        -0.06638187170028687,
+        0.41135358810424805
+      ],
+      "bounds_max": [
+        0.20820508897304535,
+        0.018983330577611923,
+        0.9926660656929016
+      ]
+    },
+    {
+      "object": "S2.sartorius.left",
+      "zone": "sartorius.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 782,
+      "triangles": 1560,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        782
+      ],
+      "minimum_double_area_m2": 2.1467028171215086e-06,
+      "signed_volume_m3": 0.0002701342833018673,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.025935513898730278,
+        -0.05127593129873276,
+        0.36726701259613037
+      ],
+      "bounds_max": [
+        0.15717481076717377,
+        0.02695559151470661,
+        1.0240528583526611
+      ]
+    },
+    {
+      "object": "S2.hamstrings-medial.left",
+      "zone": "hamstrings-medial.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 970,
+      "triangles": 1936,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        970
+      ],
+      "minimum_double_area_m2": 2.4634218937209492e-06,
+      "signed_volume_m3": 0.0011085752909827903,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.017963863909244537,
+        -0.0005543584120459855,
+        0.3771204650402069
+      ],
+      "bounds_max": [
+        0.10816371440887451,
+        0.09769257158041,
+        0.8802561163902283
+      ]
+    },
+    {
+      "object": "S2.serratus.left",
+      "zone": "serratus.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 1046,
+      "triangles": 2088,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        1046
+      ],
+      "minimum_double_area_m2": 5.986519444331201e-06,
+      "signed_volume_m3": 0.0006761856642869676,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.06272958964109421,
+        -0.08939465880393982,
+        1.213444709777832
+      ],
+      "bounds_max": [
+        0.18865500390529633,
+        0.1433829963207245,
+        1.4989045858383179
+      ]
+    },
+    {
+      "object": "S2.soleus.left",
+      "zone": "soleus.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 872,
+      "triangles": 1740,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        872
+      ],
+      "minimum_double_area_m2": 7.410430076237635e-07,
+      "signed_volume_m3": 0.0008107136774319841,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.04210988059639931,
+        0.003907730802893639,
+        0.11369278281927109
+      ],
+      "bounds_max": [
+        0.163851797580719,
+        0.08936615288257599,
+        0.45260730385780334
+      ]
+    },
+    {
+      "object": "S2.hip-abductors.left",
+      "zone": "hip-abductors.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 442,
+      "triangles": 880,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        442
+      ],
+      "minimum_double_area_m2": 1.4549415055729656e-06,
+      "signed_volume_m3": 0.00013554024710891964,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.15017443895339966,
+        -0.039952684193849564,
+        0.878873884677887
+      ],
+      "bounds_max": [
+        0.2058214247226715,
+        0.015671731904149055,
+        1.042513370513916
+      ]
+    },
+    {
+      "object": "S2.tibialis.left",
+      "zone": "tibialis.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 618,
+      "triangles": 1232,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        618
+      ],
+      "minimum_double_area_m2": 1.5530381920977724e-06,
+      "signed_volume_m3": 0.00030381513511725585,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.11185865849256516,
+        -0.015146322548389435,
+        0.14285026490688324
+      ],
+      "bounds_max": [
+        0.16341771185398102,
+        0.03910241648554802,
+        0.4508998692035675
+      ]
+    },
+    {
+      "object": "S2.quadriceps-lateral.left",
+      "zone": "quadriceps-lateral.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 993,
+      "triangles": 1982,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        993
+      ],
+      "minimum_double_area_m2": 2.2925136564025025e-06,
+      "signed_volume_m3": 0.0011647019664933257,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.11645852029323578,
+        -0.0494992695748806,
+        0.41379010677337646
+      ],
+      "bounds_max": [
+        0.21639691293239594,
+        0.06100757047533989,
+        0.9050919413566589
+      ]
+    },
+    {
+      "object": "S2.quadriceps-medial.left",
+      "zone": "quadriceps-medial.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 792,
+      "triangles": 1580,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        792
+      ],
+      "minimum_double_area_m2": 8.187194969044449e-07,
+      "signed_volume_m3": 0.0006480806213707949,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.04664328694343567,
+        -0.05835415795445442,
+        0.4396277368068695
+      ],
+      "bounds_max": [
+        0.13583962619304657,
+        0.01867648959159851,
+        0.8505327701568604
+      ]
+    },
+    {
+      "object": "S2.biceps.left",
+      "zone": "biceps.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 662,
+      "triangles": 1320,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        662
+      ],
+      "minimum_double_area_m2": 3.6785808954769736e-06,
+      "signed_volume_m3": 0.0003879531888982242,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.17084158957004547,
+        -0.013543286360800266,
+        1.1466673612594604
+      ],
+      "bounds_max": [
+        0.34591740369796753,
+        0.03700275346636772,
+        1.4811413288116455
+      ]
+    },
+    {
+      "object": "S2.hamstrings-lateral.left",
+      "zone": "hamstrings-lateral.left",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 906,
+      "triangles": 1808,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        906
+      ],
+      "minimum_double_area_m2": 1.6116838667304938e-06,
+      "signed_volume_m3": 0.0010566748469988331,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        0.06806069612503052,
+        0.03243767470121384,
+        0.42663294076919556
+      ],
+      "bounds_max": [
+        0.17810948193073273,
+        0.10466752201318741,
+        0.8810483813285828
+      ]
+    },
+    {
+      "object": "S2.pectoralis.left.001",
+      "zone": "pectoralis.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 1070,
+      "triangles": 2136,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        1070
+      ],
+      "minimum_double_area_m2": 4.7407277675546785e-06,
+      "signed_volume_m3": 0.001195124320977959,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.25688859820365906,
+        -0.15049608051776886,
+        1.2446871995925903
+      ],
+      "bounds_max": [
+        0.014077541418373585,
+        0.03792881220579147,
+        1.4824403524398804
+      ]
+    },
+    {
+      "object": "S2.deltoid.left.001",
+      "zone": "deltoid.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 895,
+      "triangles": 1786,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        895
+      ],
+      "minimum_double_area_m2": 2.900983692848991e-06,
+      "signed_volume_m3": 0.0007538414968496429,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.30245134234428406,
+        -0.02885265089571476,
+        1.3382714986801147
+      ],
+      "bounds_max": [
+        -0.09904605895280838,
+        0.1233639046549797,
+        1.4912915229797363
+      ]
+    },
+    {
+      "object": "S2.trapezius.left.001",
+      "zone": "trapezius.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 1136,
+      "triangles": 2268,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        1136
+      ],
+      "minimum_double_area_m2": 1.8993700496001168e-06,
+      "signed_volume_m3": 0.0007355275854285133,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.2318776398897171,
+        0.004905903246253729,
+        1.1883981227874756
+      ],
+      "bounds_max": [
+        0.014922089874744415,
+        0.15449155867099762,
+        1.6612067222595215
+      ]
+    },
+    {
+      "object": "S2.forearm-flexors.left.001",
+      "zone": "forearm-flexors.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 761,
+      "triangles": 1518,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        761
+      ],
+      "minimum_double_area_m2": 4.0498165752865574e-06,
+      "signed_volume_m3": 0.0004098093069789825,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.42097675800323486,
+        -0.03451242670416832,
+        0.9583809971809387
+      ],
+      "bounds_max": [
+        -0.2799528241157532,
+        0.06513047218322754,
+        1.2036556005477905
+      ]
+    },
+    {
+      "object": "S2.calf.left.001",
+      "zone": "calf.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 1010,
+      "triangles": 2016,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        1010
+      ],
+      "minimum_double_area_m2": 2.2871025602732067e-06,
+      "signed_volume_m3": 0.001153810249405196,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.16480515897274017,
+        0.0033167738001793623,
+        0.21066534519195557
+      ],
+      "bounds_max": [
+        -0.030303068459033966,
+        0.12015251070261002,
+        0.5311605930328369
+      ]
+    },
+    {
+      "object": "S2.triceps.left.001",
+      "zone": "triceps.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 760,
+      "triangles": 1516,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        760
+      ],
+      "minimum_double_area_m2": 2.9851507080250537e-06,
+      "signed_volume_m3": 0.0006691032634074674,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.33067065477371216,
+        0.03695642948150635,
+        1.1729003190994263
+      ],
+      "bounds_max": [
+        -0.17730247974395752,
+        0.10393115878105164,
+        1.4354829788208008
+      ]
+    },
+    {
+      "object": "S2.adductors.left.001",
+      "zone": "adductors.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 1148,
+      "triangles": 2296,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        1148
+      ],
+      "minimum_double_area_m2": 3.649004021050396e-06,
+      "signed_volume_m3": 0.001622336028387405,
+      "euler_characteristic": 0,
+      "bounds_min": [
+        -0.1533004492521286,
+        -0.03905554860830307,
+        0.3776879906654358
+      ],
+      "bounds_max": [
+        -0.01783280074596405,
+        0.057101503014564514,
+        0.9237592220306396
+      ]
+    },
+    {
+      "object": "S2.brachialis.left.001",
+      "zone": "brachialis.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 649,
+      "triangles": 1294,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        649
+      ],
+      "minimum_double_area_m2": 3.331396059655606e-06,
+      "signed_volume_m3": 0.00023026162601377489,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.34152770042419434,
+        -0.004310200456529856,
+        1.141567349433899
+      ],
+      "bounds_max": [
+        -0.16562268137931824,
+        0.052234869450330734,
+        1.460794448852539
+      ]
+    },
+    {
+      "object": "S2.forearm-extensors.left.001",
+      "zone": "forearm-extensors.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 815,
+      "triangles": 1634,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        815
+      ],
+      "minimum_double_area_m2": 4.032080589423285e-06,
+      "signed_volume_m3": 0.0004917918557150957,
+      "euler_characteristic": -2,
+      "bounds_min": [
+        -0.4476487636566162,
+        -0.022967485710978508,
+        0.9589047431945801
+      ],
+      "bounds_max": [
+        -0.2959739863872528,
+        0.07087499648332596,
+        1.2919261455535889
+      ]
+    },
+    {
+      "object": "S2.oblique.left.001",
+      "zone": "oblique.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 1261,
+      "triangles": 2518,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        1261
+      ],
+      "minimum_double_area_m2": 3.23040869887826e-06,
+      "signed_volume_m3": 0.0009026108985386918,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.16727492213249207,
+        -0.1487349271774292,
+        1.0107094049453735
+      ],
+      "bounds_max": [
+        -0.05965983495116234,
+        0.10295022279024124,
+        1.3546782732009888
+      ]
+    },
+    {
+      "object": "S2.fibularis.left.001",
+      "zone": "fibularis.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 542,
+      "triangles": 1080,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        542
+      ],
+      "minimum_double_area_m2": 1.3572186590931236e-06,
+      "signed_volume_m3": 0.00018499513291536703,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.1745155304670334,
+        0.029241787269711494,
+        0.14098700881004333
+      ],
+      "bounds_max": [
+        -0.13007675111293793,
+        0.07732822746038437,
+        0.4471963346004486
+      ]
+    },
+    {
+      "object": "S2.gluteal.left.001",
+      "zone": "gluteal.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 1112,
+      "triangles": 2220,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        1112
+      ],
+      "minimum_double_area_m2": 4.468511601301039e-06,
+      "signed_volume_m3": 0.0012711262424407069,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.1942714899778366,
+        -0.005361472722142935,
+        0.7849761247634888
+      ],
+      "bounds_max": [
+        0.026791542768478394,
+        0.1520019769668579,
+        1.0766854286193848
+      ]
+    },
+    {
+      "object": "S2.scapular.left.001",
+      "zone": "scapular.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 710,
+      "triangles": 1416,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        710
+      ],
+      "minimum_double_area_m2": 3.2913425484054792e-06,
+      "signed_volume_m3": 0.00042755557078008464,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.23707881569862366,
+        0.02082231268286705,
+        1.3309123516082764
+      ],
+      "bounds_max": [
+        -0.05729208514094353,
+        0.13162864744663239,
+        1.4797093868255615
+      ]
+    },
+    {
+      "object": "S2.latissimus.left.001",
+      "zone": "latissimus.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 1266,
+      "triangles": 2528,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        1266
+      ],
+      "minimum_double_area_m2": 3.778160548383435e-06,
+      "signed_volume_m3": 0.0006753165033111304,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.22747501730918884,
+        0.023347990587353706,
+        0.9931653141975403
+      ],
+      "bounds_max": [
+        0.02037135511636734,
+        0.14761792123317719,
+        1.4042898416519165
+      ]
+    },
+    {
+      "object": "S2.rectus-abdominis.left.001",
+      "zone": "rectus-abdominis.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 913,
+      "triangles": 1818,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 2,
+      "component_vertex_counts": [
+        796,
+        117
+      ],
+      "minimum_double_area_m2": 3.263560866047119e-06,
+      "signed_volume_m3": 0.00044384435057854833,
+      "euler_characteristic": 4,
+      "bounds_min": [
+        -0.09956812113523483,
+        -0.1461217701435089,
+        1.0125365257263184
+      ],
+      "bounds_max": [
+        -0.0011487003648653626,
+        -0.03864883631467819,
+        1.3180105686187744
+      ]
+    },
+    {
+      "object": "S2.quadriceps-rectus.left.001",
+      "zone": "quadriceps-rectus.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 935,
+      "triangles": 1870,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        935
+      ],
+      "minimum_double_area_m2": 1.794112506320897e-06,
+      "signed_volume_m3": 0.0008338531102227016,
+      "euler_characteristic": 0,
+      "bounds_min": [
+        -0.20818758010864258,
+        -0.06636824458837509,
+        0.41135165095329285
+      ],
+      "bounds_max": [
+        -0.08859521895647049,
+        0.018983330577611923,
+        0.9927899241447449
+      ]
+    },
+    {
+      "object": "S2.sartorius.left.001",
+      "zone": "sartorius.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 782,
+      "triangles": 1560,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        782
+      ],
+      "minimum_double_area_m2": 3.2392569757780874e-06,
+      "signed_volume_m3": 0.00027008716505481597,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.15727807581424713,
+        -0.05136911943554878,
+        0.3672594726085663
+      ],
+      "bounds_max": [
+        -0.025945356115698814,
+        0.02706157974898815,
+        1.023903489112854
+      ]
+    },
+    {
+      "object": "S2.hamstrings-medial.left.001",
+      "zone": "hamstrings-medial.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 970,
+      "triangles": 1936,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        970
+      ],
+      "minimum_double_area_m2": 3.517049095609754e-06,
+      "signed_volume_m3": 0.0011088462942436248,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.10813716053962708,
+        -0.0004890575655736029,
+        0.37723618745803833
+      ],
+      "bounds_max": [
+        -0.018022892996668816,
+        0.09763631224632263,
+        0.8802283406257629
+      ]
+    },
+    {
+      "object": "S2.serratus.left.001",
+      "zone": "serratus.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 1046,
+      "triangles": 2088,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        1046
+      ],
+      "minimum_double_area_m2": 4.817222845284699e-06,
+      "signed_volume_m3": 0.0006764634144068652,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.18898001313209534,
+        -0.08900607377290726,
+        1.2133218050003052
+      ],
+      "bounds_max": [
+        -0.06269287317991257,
+        0.14357660710811615,
+        1.4990804195404053
+      ]
+    },
+    {
+      "object": "S2.soleus.left.001",
+      "zone": "soleus.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 872,
+      "triangles": 1740,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        872
+      ],
+      "minimum_double_area_m2": 1.6759043685507979e-06,
+      "signed_volume_m3": 0.0008108028187307201,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.16378049552440643,
+        0.0038235376123338938,
+        0.11357634514570236
+      ],
+      "bounds_max": [
+        -0.04215149208903313,
+        0.08929279446601868,
+        0.45261287689208984
+      ]
+    },
+    {
+      "object": "S2.hip-abductors.left.001",
+      "zone": "hip-abductors.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 442,
+      "triangles": 880,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        442
+      ],
+      "minimum_double_area_m2": 1.1687334380159847e-06,
+      "signed_volume_m3": 0.00013552842092443593,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.2058815211057663,
+        -0.039862457662820816,
+        0.8788620233535767
+      ],
+      "bounds_max": [
+        -0.14994394779205322,
+        0.01569328084588051,
+        1.0425009727478027
+      ]
+    },
+    {
+      "object": "S2.tibialis.left.001",
+      "zone": "tibialis.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 618,
+      "triangles": 1232,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        618
+      ],
+      "minimum_double_area_m2": 1.087655070981386e-06,
+      "signed_volume_m3": 0.00030366539049345083,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.16342169046401978,
+        -0.015076791867613792,
+        0.1429874151945114
+      ],
+      "bounds_max": [
+        -0.11173549294471741,
+        0.03904961422085762,
+        0.450661838054657
+      ]
+    },
+    {
+      "object": "S2.quadriceps-lateral.left.001",
+      "zone": "quadriceps-lateral.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 993,
+      "triangles": 1982,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        993
+      ],
+      "minimum_double_area_m2": 4.22348545344477e-06,
+      "signed_volume_m3": 0.0011648383323227408,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.2163601815700531,
+        -0.0494864247739315,
+        0.4137941300868988
+      ],
+      "bounds_max": [
+        -0.11647448688745499,
+        0.061023663729429245,
+        0.9050886034965515
+      ]
+    },
+    {
+      "object": "S2.quadriceps-medial.left.001",
+      "zone": "quadriceps-medial.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 792,
+      "triangles": 1580,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        792
+      ],
+      "minimum_double_area_m2": 1.7019941733723533e-06,
+      "signed_volume_m3": 0.0006481763247824978,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.1356896162033081,
+        -0.0583663247525692,
+        0.4396740198135376
+      ],
+      "bounds_max": [
+        -0.04667196050286293,
+        0.018623286858201027,
+        0.8504720330238342
+      ]
+    },
+    {
+      "object": "S2.biceps.left.001",
+      "zone": "biceps.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 662,
+      "triangles": 1320,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        662
+      ],
+      "minimum_double_area_m2": 2.2488025223898105e-06,
+      "signed_volume_m3": 0.00038793717867088476,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.3457546830177307,
+        -0.013549174182116985,
+        1.146670937538147
+      ],
+      "bounds_max": [
+        -0.1710340976715088,
+        0.03716004639863968,
+        1.4811292886734009
+      ]
+    },
+    {
+      "object": "S2.hamstrings-lateral.left.001",
+      "zone": "hamstrings-lateral.right",
+      "role": "muscle",
+      "selectable": true,
+      "vertices": 906,
+      "triangles": 1808,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        906
+      ],
+      "minimum_double_area_m2": 8.150102155471123e-07,
+      "signed_volume_m3": 0.001056917092937312,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.17817112803459167,
+        0.03244014456868172,
+        0.4266457259654999
+      ],
+      "bounds_max": [
+        -0.06806457787752151,
+        0.10479911416769028,
+        0.8809851408004761
+      ]
+    },
+    {
+      "object": "S.s2.neutral-support",
+      "zone": "support",
+      "role": "cover",
+      "selectable": false,
+      "vertices": 3935,
+      "triangles": 7866,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "near_degenerate_triangles": 0,
+      "nonfinite_coordinates": 0,
+      "loose_vertices": 0,
+      "connected_components": 1,
+      "component_vertex_counts": [
+        3935
+      ],
+      "minimum_double_area_m2": 6.7466672847284674e-06,
+      "signed_volume_m3": 0.044272891047010376,
+      "euler_characteristic": 2,
+      "bounds_min": [
+        -0.5043357014656067,
+        -0.18889309465885162,
+        0.004702341742813587
+      ],
+      "bounds_max": [
+        0.5038890838623047,
+        0.11322682350873947,
+        1.7996844053268433
+      ]
+    }
+  ],
+  "limitations": [
+    "Surface labels are provisional, not full medical or final product segmentation.",
+    "No exhaustive self-intersection, occlusion, rig, raycast or iPhone benchmark.",
+    "S2/S3 retain overlapping closed anatomical masses; no final nonoverlapping skin partition."
+  ],
+  "nonmanifold_visible_edges": 0
+}

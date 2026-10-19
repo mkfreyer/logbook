@@ -1,0 +1,44 @@
+{
+  "baseline": "b905fb0498c8085837e978282421c48fef791a26",
+  "historical_files_verified_unchanged": 201,
+  "variants": {
+    "s1": {
+      "triangles": 74000,
+      "objects": 55,
+      "selectable_objects": 54,
+      "zone_ids": 54,
+      "nonmanifold_edges": 0
+    },
+    "s2": {
+      "triangles": 99946,
+      "objects": 53,
+      "selectable_objects": 52,
+      "zone_ids": 52,
+      "nonmanifold_edges": 0
+    },
+    "s3": {
+      "triangles": 107862,
+      "objects": 111,
+      "selectable_objects": 110,
+      "zone_ids": 54,
+      "nonmanifold_edges": 1522
+    }
+  },
+  "input_anatomical_source_same": true,
+  "three_different_geometry_signatures": true,
+  "source_review_geometry_normals_zone_semantics_identical": true,
+  "common_blender_protocol": true,
+  "blender_pngs_verified": 15,
+  "comparison_sheets_verified": 7,
+  "orange_is_real_3d_objects": true,
+  "licenses_and_attribution_preserved": true,
+  "application_integration": false,
+  "M4B": false,
+  "mobile_benchmark": false,
+  "limitations": [
+    "S1 closed union retains three components and residual tunnels; regions provisional.",
+    "S2/S3 overlapping anatomical masses are not a final surface partition.",
+    "S3 retains 1522 nonmanifold edges; cleanup required.",
+    "No exhaustive intersection, rig, medical or iPhone performance validation."
+  ]
+}

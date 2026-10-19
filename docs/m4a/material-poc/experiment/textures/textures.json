@@ -1,0 +1,42 @@
+{
+  "generator_sha256": "ed123dc8467dac534317677a87ad9ccb6b8d95b43b4c2ba612edabdf776b1525",
+  "resolution": [
+    1024,
+    1024
+  ],
+  "source": "Original procedural anatomy-flow artwork; no downloaded image, paid tool, AI image or third-party anatomy.",
+  "files": [
+    {
+      "path": "pectoral-normal.png",
+      "bytes": 323248,
+      "sha256": "0e52b9579d7abfab00e57cda0da4ddd59a162d8468069f7a84df986b0f3db347",
+      "channels": 3
+    },
+    {
+      "path": "pectoral-surface.png",
+      "bytes": 361413,
+      "sha256": "0d29dd1f397598f998f8a817766b44bc4d995ae1210830402e6cb0f1bceb13d8",
+      "channels": 4
+    },
+    {
+      "path": "deltoid-normal.png",
+      "bytes": 560417,
+      "sha256": "ae604a1f48666d9dd3a38952aa90941392bf2be06ed395168b4e3f54b2de88bc",
+      "channels": 3
+    },
+    {
+      "path": "deltoid-surface.png",
+      "bytes": 679193,
+      "sha256": "4ed2dd3012cf32e182440113cafe432b63a903e23a97fcb17481fe1109550509",
+      "channels": 4
+    }
+  ],
+  "normal_convention": "Tangent-space OpenGL +Y, RGB8, non-color; generated from virtual height, no mesh displacement.",
+  "surface_channels": {
+    "R": "region coverage",
+    "G": "linear roughness",
+    "B": "tone encoded (0.80 + 0.40*B)",
+    "A": "fibre modulation diagnostic"
+  },
+  "gpu_estimate": "Four RGBA8 textures: 16 MiB at 1024x1024 without mipmaps, about 21.33 MiB with full mip chains; engine-dependent, not measured."
+}

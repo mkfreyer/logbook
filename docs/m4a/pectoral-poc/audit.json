@@ -1,0 +1,28 @@
+{
+  "verdict": "méthode insuffisante",
+  "original_vertices_outside_scope_unchanged": 50900,
+  "outside_scope_max_coordinate_error_m": 0,
+  "two_eyes_unchanged": true,
+  "source_review_geometry_normals_surface_attributes_identical": true,
+  "geometry_signature_sha256": "1c3cb2a9daefb252d40ef29a0baa20008c2e0cb764762fd45e1a74c79563b927",
+  "independent_selectors_verified": [
+    "pectoralis.left",
+    "pectoralis.right",
+    "deltoid.right"
+  ],
+  "face_region_ids": {
+    "0": "unassigned",
+    "1": "pectoralis.left",
+    "2": "pectoralis.right",
+    "3": "deltoid.right"
+  },
+  "zone_triangles": {
+    "pectoralis.left": 4659,
+    "pectoralis.right": 4559,
+    "deltoid.right": 5600
+  },
+  "maximum_scalar_fibre_height_m": 4.724464088212699e-05,
+  "selection_semantics": "Three independent point-mask shader controls; disjoint provisional integer face IDs for the same regions. Borders are approximate, not final anatomical segmentation.",
+  "geometry_checks_are_not_visual_success": true,
+  "application_integration": false
+}

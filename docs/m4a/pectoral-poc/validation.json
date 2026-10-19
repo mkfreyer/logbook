@@ -1,0 +1,43 @@
+{
+  "verdict": "méthode insuffisante",
+  "historical_files_verified_unchanged": 333,
+  "new_blender_frames": 6,
+  "comparison_sheets": 2,
+  "comparison_column_width_px": 390,
+  "source_geometry_license": "CC0",
+  "body_triangles": 133870,
+  "visible_triangles": 136046,
+  "objects": 3,
+  "selectable_demo_zones": 3,
+  "one_visual_attempt_only": true,
+  "no_automatic_followup_variant": true,
+  "application_integration": false,
+  "M4B": false,
+  "mobile_runtime_measured": false,
+  "sources": [
+    {
+      "file": "before/front.png",
+      "sha256": "93d828656439f9fd263f89f1eccd4a738c5b8b51273dc7d77d958cbb745db9bf"
+    },
+    {
+      "file": "before/three-quarter.png",
+      "sha256": "26d74fd6c72d481daf4e46649fb2d426aaaad7b10f5d5fcb56335445c4d26c66"
+    },
+    {
+      "file": "after/front.png",
+      "sha256": "a72f1af6a43ec320e68456b8ae8f201a41de46e9f16aaa464df2cca1cf0c6d9b"
+    },
+    {
+      "file": "after/three-quarter.png",
+      "sha256": "3185adbabd0359026208454d0b771655fb538d6807acca8cba12f5ab9e34e93a"
+    },
+    {
+      "file": "after/detail.png",
+      "sha256": "2a8c5fca15a1bd8b62f2d6589d10d48e987d853a157bcafdc41a0559993136c3"
+    },
+    {
+      "file": "after/selection.png",
+      "sha256": "fdff34c40966baead3be0341c2ffc3479a4bd66c5ecabd8eb9830f1d3db35b79"
+    }
+  ]
+}

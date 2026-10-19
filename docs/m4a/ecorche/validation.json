@@ -1,0 +1,36 @@
+{
+  "date_utc": "2026-10-18",
+  "sources_verified": 17,
+  "real_model_renders": 12,
+  "comparison_sheets": 5,
+  "common_protocol_identical": true,
+  "previous_versioned_audit_source_render_tool_files_byte_identical": 85,
+  "previous_checkpoint": {
+    "files_verified": 3606,
+    "bytes_verified": 97888638
+  },
+  "new_checkpoint": {
+    "restore_verified": true,
+    "files": 27,
+    "bytes": 283672080,
+    "selected_geometry_unchanged_after_save_reload": true
+  },
+  "restored_render_control": {
+    "candidate": "ecorche",
+    "view": "selection",
+    "pixels_identical": true,
+    "bytes_identical": false,
+    "sha256": "3a4fda639b86d4b70cc4f9495d1cdba8dd0002b6e50867eacbb77c8a17fca844"
+  },
+  "network_observation": {
+    "url": "https://download.blender.org/demo/asset-bundles/human-base-meshes/human-base-meshes-bundle-v1.4.1.zip",
+    "method": "HEAD",
+    "http_status": 200,
+    "content_length": 50643039,
+    "http_date_utc": "2026-10-18 08:05:43",
+    "normal_proxy_and_tls": true
+  },
+  "scope": "M4A research only; no app integration, SQLite, dependencies, M4B, purchases, merge, or Astra Ultra; no iPhone runtime validation",
+  "original_licence_notices_preserved_byte_for_byte": true,
+  "authored_whitespace_check": "passed; only verbatim Z-Anatomy licence excluded because original uses trailing Markdown spaces"
+}
