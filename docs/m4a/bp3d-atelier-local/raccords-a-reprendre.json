@@ -1,0 +1,56 @@
+[
+  {
+    "name": "R01_STERNUM",
+    "location": [
+      0.0015304915141314268,
+      -0.09716882556676865,
+      1.3629945516586304
+    ],
+    "scope": "Sternal origin edges: inspect medially; centroid of body of sternum only."
+  },
+  {
+    "name": "R02_CLAVICULE_G",
+    "location": [
+      0.08030557632446289,
+      -0.0005370063590817153,
+      1.4791892766952515
+    ],
+    "scope": "Inspect clavicular origin; bone centroid only."
+  },
+  {
+    "name": "R03_DELTO_PECTORAL_G",
+    "location": [
+      0.20466691255569458,
+      0.019145485013723373,
+      1.3773200511932373
+    ],
+    "scope": "Nearest surface pair, not a validated sulcus or insertion."
+  },
+  {
+    "name": "R04_HUMERUS_G",
+    "location": [
+      0.19577354192733765,
+      0.015289321541786194,
+      1.3852288722991943
+    ],
+    "scope": "Nearest pec/humerus surfaces; insertion needs manual verification."
+  },
+  {
+    "name": "R05_AXILLAIRE_G",
+    "location": [
+      0.18805919587612152,
+      0.018244575709104538,
+      1.4097590446472168
+    ],
+    "scope": "Lateral sample of abdominal pec portion; inspect anterior axillary fold."
+  },
+  {
+    "name": "R06_DELTOIDE_ACROMIAL",
+    "location": [
+      0.19806338846683502,
+      0.03227614238858223,
+      1.4369398355484009
+    ],
+    "scope": "Centroid of acromial portion, not a point on the acromion."
+  }
+]

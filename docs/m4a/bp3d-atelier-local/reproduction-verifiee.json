@@ -1,0 +1,11 @@
+{
+  "method": "Fresh Blender factory session, delivered subset ZIP only; no original full archive, original OBJ directory or network needed.",
+  "blender": "4.3.2",
+  "source_and_rebuilt_checks_equal_except_blend_container_sha": true,
+  "muscle_source_objects": 9,
+  "bone_source_objects": 6,
+  "editable_triangles": 26398,
+  "source_file_sha256": "d662e52c707e818c73e4f846d212b1a8ffd2d96de57940ee2adadcb3e26fadaa",
+  "rebuilt_file_sha256": "c6fa47d841e0710ef020691c04ca50de7d5d354275eb5448b176cd3a463ab1d5",
+  "visual_validation": false
+}

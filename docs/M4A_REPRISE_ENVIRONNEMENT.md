@@ -1,6 +1,11 @@
 # M4A — Sauvegarde et reprise après changement réseau
 
-> **Étape actuelle, 19 octobre 2026 : [reconstruction fitness depuis BodyParts3D](M4A_BP3D_RECONSTRUCTION.md).**
+> **Étape actuelle : [atelier anatomique Blender, pectoraux et deltoïde gauche](M4A_ATELIER_ANATOMIQUE_BLENDER.md).**
+> Sources intactes, neuf copies éditables, trois sélections par muscle entier et guide manuel précis.
+> Aucune sculpture artistique validée ; intervention manuelle requise. Aucun nouvel essai D3/D4.
+> PR #11 en brouillon, arrêt pour validation avant toute extension, intégration, SQLite, M4B ou fusion.
+
+> **Historique, 19 octobre 2026 : [reconstruction fitness depuis BodyParts3D](M4A_BP3D_RECONSTRUCTION.md).**
 > Nouvelle direction explicitement demandée : anatomie source sélectionnée, soutien continu, deux constructions Blender.
 > D1 / D2 ne sont pas recommandées comme base finale : raccords visuels insuffisants. Arrêt après publication.
 > PR #11 en brouillon ; aucune intégration, SQLite, M4B ou fusion. Les étapes ci-dessous restent historiques.

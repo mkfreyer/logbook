@@ -1,0 +1,92 @@
+{
+  "generator_sha256": "ac51dd38c897959f5fe5146cf6a48270b10f720d5a2bd733e9c9ff8503442cea",
+  "source_bundle_sha256": "f1a8c79625c15137c5d87cbe8f80168d37ade1d49cb6adeffa2e7774c9d7b2ae",
+  "muscle_objects": 9,
+  "logical_muscles": [
+    "pectoralis-major-left",
+    "pectoralis-major-right",
+    "deltoid-left"
+  ],
+  "bone_reference_objects": 6,
+  "copies": [
+    {
+      "element_id": "FJ1447M",
+      "muscle_id": "pectoralis-major-left",
+      "source_vertices": 1495,
+      "editable_vertices": 949,
+      "triangles": 1846,
+      "position_changes": "none; normalization only"
+    },
+    {
+      "element_id": "FJ1464M",
+      "muscle_id": "pectoralis-major-left",
+      "source_vertices": 5466,
+      "editable_vertices": 3565,
+      "triangles": 7114,
+      "position_changes": "none; normalization only"
+    },
+    {
+      "element_id": "FJ1446M",
+      "muscle_id": "pectoralis-major-left",
+      "source_vertices": 1019,
+      "editable_vertices": 774,
+      "triangles": 1536,
+      "position_changes": "none; normalization only"
+    },
+    {
+      "element_id": "FJ1447",
+      "muscle_id": "pectoralis-major-right",
+      "source_vertices": 1492,
+      "editable_vertices": 949,
+      "triangles": 1846,
+      "position_changes": "none; normalization only"
+    },
+    {
+      "element_id": "FJ1464",
+      "muscle_id": "pectoralis-major-right",
+      "source_vertices": 5480,
+      "editable_vertices": 3565,
+      "triangles": 7114,
+      "position_changes": "none; normalization only"
+    },
+    {
+      "element_id": "FJ1446",
+      "muscle_id": "pectoralis-major-right",
+      "source_vertices": 1019,
+      "editable_vertices": 774,
+      "triangles": 1536,
+      "position_changes": "none; normalization only"
+    },
+    {
+      "element_id": "FJ1468M",
+      "muscle_id": "deltoid-left",
+      "source_vertices": 2604,
+      "editable_vertices": 1053,
+      "triangles": 2206,
+      "position_changes": "none; normalization only"
+    },
+    {
+      "element_id": "FJ1467M",
+      "muscle_id": "deltoid-left",
+      "source_vertices": 918,
+      "editable_vertices": 656,
+      "triangles": 1300,
+      "position_changes": "none; normalization only"
+    },
+    {
+      "element_id": "FJ1513M",
+      "muscle_id": "deltoid-left",
+      "source_vertices": 1678,
+      "editable_vertices": 982,
+      "triangles": 1900,
+      "position_changes": "none; normalization only"
+    }
+  ],
+  "sculpture_performed": false,
+  "automatic_sculpt_variants": 0,
+  "source_geometry_unmodified": true,
+  "work_geometry_changes": "Per-OBJ exact-position weld, normalized coordinates, smooth display only; no artistic deformation.",
+  "selection": "Whole object material override on all three portions of one muscle. No face masks or startup scripts.",
+  "reference_pose": "Unchanged source pose; target athletic volumes/attachments not manually corrected.",
+  "license_for_adapted_scene": "CC-BY-SA-4.0"
+}

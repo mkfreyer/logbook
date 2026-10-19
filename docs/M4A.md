@@ -1,6 +1,11 @@
 # M4A — Audit réel de la carte musculaire 3D
 
-> **État courant, 19 octobre 2026 : [nouvelle reconstruction depuis BodyParts3D](M4A_BP3D_RECONSTRUCTION.md).**
+> **État courant : [atelier local de reconstruction assistée dans Blender](M4A_ATELIER_ANATOMIQUE_BLENDER.md).**
+> Les géométries sources restent distinctes ; fichier éditable, identités et guide manuel livrés.
+> La sculpture premium reste à effectuer par une intervention manuelle compétente ; aucun D3/D4 ou résultat artistique revendiqué.
+> Arrêt pour validation. PR #11 toujours en brouillon, sans extension au corps entier, intégration, SQLite, M4B ou fusion.
+
+> **Historique, 19 octobre 2026 : [nouvelle reconstruction depuis BodyParts3D](M4A_BP3D_RECONSTRUCTION.md).**
 > Cette direction demandée par l’utilisateur remplace la décision historique du 18 octobre de ne pas reconstruire cette source.
 > Deux constructions et leurs vrais rendus sont publiés ; aucune ne satisfait le rendu premium demandé.
 > Arrêt pour décision, PR #11 toujours en brouillon, aucune intégration, SQLite, M4B ou fusion.
