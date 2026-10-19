@@ -1,0 +1,483 @@
+{
+  "variant": "defined",
+  "source_archive_sha256": "40665852c49f218326590e204db91064a1ecfc3c6f8cbd7bbbcaac62c7cd409e",
+  "generator_sha256": "73cf3bb7e4f9cc17640c14b56acac51e6e2228f1798fd1278f8e994fe27bff61",
+  "source_head_sha256": "6d6f73fae7e74976563db4b60cf084474ccade208cc5705bfdd41319d7bbe85a",
+  "anatomy": "Direct BodyParts3D audited source OBJ volumes, selected and warped; no Ecorche or Z-Anatomy geometry.",
+  "head_reuse": "B+ neutral head above z=1.535 and its two eyes only; no B+ torso or limbs.",
+  "settings": {
+    "inset": 0.84,
+    "bulk": 0.25,
+    "voxel": 0.0031,
+    "smooth": 3,
+    "budget": 120000
+  },
+  "source_records": [
+    {
+      "element_id": "FJ2810",
+      "sha256": "682f402206f15592acdeaae8ffb6b34c3e5c3267fa4685e63d2e4920ef2a80e0",
+      "source_triangles": 203382
+    },
+    {
+      "element_id": "FJ1446M",
+      "sha256": "3f9dbd5c3f6fdf043454f251d69ea96547dca4bc1efbf7bffd85315fc1a9fd34",
+      "source_triangles": 1536
+    },
+    {
+      "element_id": "FJ1447M",
+      "sha256": "aab8ea03eed46a79b3f765ef539df785deb333e5079c21f8c7bec14444768a18",
+      "source_triangles": 1846
+    },
+    {
+      "element_id": "FJ1464M",
+      "sha256": "a2ffa047e9cff27df3ed7cb5f305491ce921f236cfe60ee90334cc5fead271c3",
+      "source_triangles": 7114
+    },
+    {
+      "element_id": "FJ1446",
+      "sha256": "7a0d77a63b06d4212998bec86f84853287c3a21696ec7afc92c7767c987a726d",
+      "source_triangles": 1536
+    },
+    {
+      "element_id": "FJ1447",
+      "sha256": "e239a63adf99dfc094ece7efcd91ec7cd9ac802e9d7581141b311a7842fbbbe6",
+      "source_triangles": 1846
+    },
+    {
+      "element_id": "FJ1464",
+      "sha256": "f446df845d19385cdbd5b86457c8690981cbc914f8f9595b50bdc4a44505aab7",
+      "source_triangles": 7114
+    },
+    {
+      "element_id": "FJ1467M",
+      "sha256": "a523b5f2ab862ad6505787f4936098fbcfe3f28a3742b57aac34307fe752f8eb",
+      "source_triangles": 1300
+    },
+    {
+      "element_id": "FJ1468M",
+      "sha256": "75340ac9157ea6c64baaa74c0bbfd6173114dcff0d30ea814702c288b002f104",
+      "source_triangles": 2206
+    },
+    {
+      "element_id": "FJ1513M",
+      "sha256": "a806a9a20b68009f0071c22411b009f4baef3de118f00a37cc4a3be8cdf7ce2e",
+      "source_triangles": 1900
+    },
+    {
+      "element_id": "FJ1467",
+      "sha256": "2f69f1a13c836539abca85d9b77f55f96319ad3fdd75c62f498eabe49b266bfe",
+      "source_triangles": 1300
+    },
+    {
+      "element_id": "FJ1468",
+      "sha256": "09eebb4a8d72c91936b0bfde7f35829a58f56103ac158f559186698458bcc616",
+      "source_triangles": 2206
+    },
+    {
+      "element_id": "FJ1513",
+      "sha256": "ef8308c92fd0d01d8c0d7ffd9238305eefc2f28710d7bb58f451512abdc08e99",
+      "source_triangles": 1900
+    },
+    {
+      "element_id": "FJ1478M",
+      "sha256": "10189f1d7b5220df3baef2b259ae9855ed301c1afaadfc2de25af3222c5a08fc",
+      "source_triangles": 1426
+    },
+    {
+      "element_id": "FJ1512M",
+      "sha256": "6b0ed7b70973b3a2e08de4ea5ce59c05a4ddce2b90212ff734326be2726d1293",
+      "source_triangles": 1856
+    },
+    {
+      "element_id": "FJ1478",
+      "sha256": "2442d2b5ac30c5da42e72eeff83d143df51c7617001cbc6552096a504f29bc07",
+      "source_triangles": 1426
+    },
+    {
+      "element_id": "FJ1512",
+      "sha256": "2173b7cce29f11036907b80e068e9bd6c16f22359d6e7994af9684454b99b4d5",
+      "source_triangles": 1856
+    },
+    {
+      "element_id": "FJ1477M",
+      "sha256": "96d9859e983736f53864e53fa0579b8f6a18006067967df42e4fe7ea2d2b9e6f",
+      "source_triangles": 2606
+    },
+    {
+      "element_id": "FJ1479M",
+      "sha256": "4b8315f9134a213f45c3af830270f4526e705d0a149894516d3f5fba98878f15",
+      "source_triangles": 1588
+    },
+    {
+      "element_id": "FJ1480M",
+      "sha256": "fc35854102a057ca85a201eeff4c18f03722b1ceab52c311ce1b87abf4fa2ff8",
+      "source_triangles": 832
+    },
+    {
+      "element_id": "FJ1477",
+      "sha256": "1d1c3b42eec0dffe696bd25cffa81784c87c15f16c9605050fdf1cb2f47698dd",
+      "source_triangles": 2606
+    },
+    {
+      "element_id": "FJ1479",
+      "sha256": "acc48f746bd07a117357a9c49a1a9850c96b85d7c63cf90a662a45717875a315",
+      "source_triangles": 1588
+    },
+    {
+      "element_id": "FJ1480",
+      "sha256": "1ea653667afa5ff0bf0e01d71ac648819655241c130e8dd1778ed2f9561c34c5",
+      "source_triangles": 832
+    },
+    {
+      "element_id": "FJ1472M",
+      "sha256": "6c47a0290d3c5952e858227ed655b6ef1caac88661a13d15618a8364d0af765f",
+      "source_triangles": 2186
+    },
+    {
+      "element_id": "FJ1487M",
+      "sha256": "04555d88efe99e68a2b07441c4deffa4d1e7ebafb8d3f60995dd28c0ff42f147",
+      "source_triangles": 4874
+    },
+    {
+      "element_id": "FJ1489M",
+      "sha256": "8c6a0274a546389ad6a4f615379ff0e9a020a7fb054cfd5e1e20401d4ecb06f7",
+      "source_triangles": 2098
+    },
+    {
+      "element_id": "FJ1490M",
+      "sha256": "f0ed6a659b2a1fd0d9138d2b7ca91535f62b70b9bc16f862173fdd85f69372d2",
+      "source_triangles": 2474
+    },
+    {
+      "element_id": "FJ1492M",
+      "sha256": "c2fa9cb48e9d70d9a180553623df0e8be92c507f323074b8b5bed41b266f47f2",
+      "source_triangles": 4294
+    },
+    {
+      "element_id": "FJ1496M",
+      "sha256": "3ee91fd59707361cb9fd6c55fa51c677df1744a779965c987e789e2be52758a2",
+      "source_triangles": 1148
+    },
+    {
+      "element_id": "FJ1517M",
+      "sha256": "dad2acf99146ad290d327a6d3e9e0c8fa214c26880d9f85292d4c4eb4554500f",
+      "source_triangles": 1208
+    },
+    {
+      "element_id": "FJ1472",
+      "sha256": "f6aadd5b1df9440ec0c4fabf21641f72447d5190bcaf58f357e8b5a76b3f5889",
+      "source_triangles": 2186
+    },
+    {
+      "element_id": "FJ1487",
+      "sha256": "0ff651a5417f240c6a5205bef5218336a61fe3474752cca1b483d02aae0b92ad",
+      "source_triangles": 4874
+    },
+    {
+      "element_id": "FJ1489",
+      "sha256": "31ccd9ec738252ec2eae88cf68068679d0663425c98b8d90dcbca18b3cbd1988",
+      "source_triangles": 2098
+    },
+    {
+      "element_id": "FJ1490",
+      "sha256": "8b6ec821491a2eafaee8c813cfad4532beae94c354595cc3e922d8cdbb36fb32",
+      "source_triangles": 2474
+    },
+    {
+      "element_id": "FJ1492",
+      "sha256": "31f528b3ba6a8fb26177c9f1455692be3acfbb173b4c4cbf9dc3d597acb5c5ff",
+      "source_triangles": 4294
+    },
+    {
+      "element_id": "FJ1496",
+      "sha256": "8e83c638e2353bb8ba65547f4b846d89a1f393c4761806faf8e09970c9b6b6bf",
+      "source_triangles": 1148
+    },
+    {
+      "element_id": "FJ1517",
+      "sha256": "e6a4cec704d3601a33704b40ee1f3f7bce484017dd563d1f4d2da43331b3ffce",
+      "source_triangles": 1208
+    },
+    {
+      "element_id": "FJ1520M",
+      "sha256": "5ca485d5bfe97fd5a9e17d76d2a77077577e13f19584f5634a8eb1bbc6d7da3d",
+      "source_triangles": 10530
+    },
+    {
+      "element_id": "FJ1521M",
+      "sha256": "fe756252f820a47e9c757f67de4ca37adf44837dbe0d10c6d2e5df3a5a6a0751",
+      "source_triangles": 7108
+    },
+    {
+      "element_id": "FJ1554M",
+      "sha256": "a08a23c17d20a120eebe96a9c8db1bb86672529fb8f34868d5f7cd28f5df98d5",
+      "source_triangles": 4460
+    },
+    {
+      "element_id": "FJ1520",
+      "sha256": "6bb3d13198991bda4d0aae27561976b9ba53b0d21d817f180098307c7b99deb1",
+      "source_triangles": 10530
+    },
+    {
+      "element_id": "FJ1521",
+      "sha256": "19bd9d1cbbb84e10826eb770068f6e271cd79dde960bca62ac71da24120fc354",
+      "source_triangles": 7108
+    },
+    {
+      "element_id": "FJ1554",
+      "sha256": "f7683d77a5bfe9ac6d07fdc913c46cf41db20298c087e71df73fab18192e90a4",
+      "source_triangles": 4460
+    },
+    {
+      "element_id": "FJ1452M",
+      "sha256": "2f0ba9782cf27bd57446c6f9f44a399bfb98e88a67136c7304e47098838fce1f",
+      "source_triangles": 111826
+    },
+    {
+      "element_id": "FJ1452",
+      "sha256": "8fb254f196b1e249b1aea667d195f00c355f901f5fa89e37f586a8316c2fcdcd",
+      "source_triangles": 111826
+    },
+    {
+      "element_id": "FJ1418M",
+      "sha256": "abde060eaa4c4e1b3da0a865a804a2c8b7790d2994cc1fe8c133dd541c92d90e",
+      "source_triangles": 2376
+    },
+    {
+      "element_id": "FJ1419M",
+      "sha256": "37f92300b952b93099dd8dd417b154b1af7484fd28780d990ff21e0e7684af84",
+      "source_triangles": 3356
+    },
+    {
+      "element_id": "FJ1418",
+      "sha256": "e576dd907b8bb9b373beda7ba9cb14cce4c958def4b782ad6563b6e2fbe71d46",
+      "source_triangles": 2376
+    },
+    {
+      "element_id": "FJ1419",
+      "sha256": "e2e06899b8a61640b32086432ec4b577b2bf2db6f044d469c01bdceb38bd3831",
+      "source_triangles": 3356
+    },
+    {
+      "element_id": "FJ1433M",
+      "sha256": "3871310f1c1f76ca55cfa4fe043d2e3a25488903fe695674a87c7c893cdc99ae",
+      "source_triangles": 5688
+    },
+    {
+      "element_id": "FJ1442M",
+      "sha256": "507caa464730c508c2fd2f6958f9a5660fb6ca188bc38fafb5c9b5556ac6732b",
+      "source_triangles": 6688
+    },
+    {
+      "element_id": "FJ1443M",
+      "sha256": "8ca4d66734150402401722e8a82f52ada8af9d6973592e127431b742dfe46ad4",
+      "source_triangles": 4552
+    },
+    {
+      "element_id": "FJ1433",
+      "sha256": "a5f75907d784dd2a44d7efa96cb31009aba2afe43465336b105561751b19f8ef",
+      "source_triangles": 5688
+    },
+    {
+      "element_id": "FJ1442",
+      "sha256": "f67be78d7d0ddc6e78c0683ce4bd5be7492e4137f8661bc54039cbf535a88880",
+      "source_triangles": 6688
+    },
+    {
+      "element_id": "FJ1443",
+      "sha256": "5bdb79f52849241e20ff2280332f20efd38f1b4bda1fb1337e10a5c3e466002b",
+      "source_triangles": 4552
+    },
+    {
+      "element_id": "FJ1395M",
+      "sha256": "f9b7a8bc5db9ff1c7a6dc25fb15cdac175c96d4a52ec9304709dff5468e8a11b",
+      "source_triangles": 5110
+    },
+    {
+      "element_id": "FJ1435M",
+      "sha256": "27c6f7bdf85a103b4247153f4ca08c846ef0037b92d5032af542496822647cad",
+      "source_triangles": 4612
+    },
+    {
+      "element_id": "FJ1436M",
+      "sha256": "e97560023348e6d7aa6d1586862a9717b6ae6ffb72f8ceee8ecf43f3f63c567f",
+      "source_triangles": 2712
+    },
+    {
+      "element_id": "FJ1444M",
+      "sha256": "2794a3899545d9b66f61fb9de3459132b577939c63b527fae101d497e28b154e",
+      "source_triangles": 1728
+    },
+    {
+      "element_id": "FJ1395",
+      "sha256": "0c22806bfd2a0f8745023a7d438250411f9d013f3d966c5c75335f5b57f8e142",
+      "source_triangles": 5110
+    },
+    {
+      "element_id": "FJ1435",
+      "sha256": "1fdce0f7db538e4731207af06a293e41037c2474192f61ca2cb5b0d663b16894",
+      "source_triangles": 4612
+    },
+    {
+      "element_id": "FJ1436",
+      "sha256": "a9351992df5093e761784b73ca3f4a7d09d0c997e3cef2f840a45b863eb7097d",
+      "source_triangles": 2712
+    },
+    {
+      "element_id": "FJ1444",
+      "sha256": "c071097501796cee5ff2a011b3d84c7bea4cb153241fce0f8b0a73d070bd990f",
+      "source_triangles": 1728
+    },
+    {
+      "element_id": "FJ1394M",
+      "sha256": "18df6c6fe718aa0d60f4a98ad9ed3dab7d95c1da0aacd641a498b97ddf31ceb6",
+      "source_triangles": 3052
+    },
+    {
+      "element_id": "FJ1397M",
+      "sha256": "43545b226adb517579273570e6bcb30943c5f22a1687aba6e11d6e1634175f05",
+      "source_triangles": 3842
+    },
+    {
+      "element_id": "FJ1437M",
+      "sha256": "66d10b2e0d114158a9b2aa8751b5967ca24f1231f2e2905ebde4755cab62902c",
+      "source_triangles": 4418
+    },
+    {
+      "element_id": "FJ1394",
+      "sha256": "621dc10e974bcc1c53a8843bf1db3a1c322c8327d279010c58533bd28952bf08",
+      "source_triangles": 3052
+    },
+    {
+      "element_id": "FJ1397",
+      "sha256": "d7f3aa44801171baade1a59c40a8f8bda72097bec07047f93f24ebaac4546cb4",
+      "source_triangles": 3842
+    },
+    {
+      "element_id": "FJ1437",
+      "sha256": "c9c62b720ffe375a8eddf390608684a796f1ea54880a5c34fa440404addc399e",
+      "source_triangles": 4418
+    },
+    {
+      "element_id": "FJ1402M",
+      "sha256": "6b2f97b45dddd3045655cd1495f09db6baa4d3b9c19a84af5e00f0745c193d88",
+      "source_triangles": 2616
+    },
+    {
+      "element_id": "FJ1421M",
+      "sha256": "1c760938cc531c810758cf5f9fb25ff3a6a0cfd7798d102da95b3269f6741b00",
+      "source_triangles": 3172
+    },
+    {
+      "element_id": "FJ1402",
+      "sha256": "f5165be945dbae2a81a1261b5f5c169c9ba677e80c70af263a08efc2f57f3f53",
+      "source_triangles": 2616
+    },
+    {
+      "element_id": "FJ1421",
+      "sha256": "82d12d8359e66303a7e5a21c2b9b24b26d33b8bbeab55f8f97c87881e25e5fa7",
+      "source_triangles": 3172
+    },
+    {
+      "element_id": "FJ1439M",
+      "sha256": "948b094bcc119ddbfcfeec4cd27cf21125f27d2d3c25c5344091fbc05833e971",
+      "source_triangles": 2510
+    },
+    {
+      "element_id": "FJ1439",
+      "sha256": "b03d2f54644969d153d3dfe4025ee629858e72c1e5ee3b0e7d5f16f54dc505b3",
+      "source_triangles": 2510
+    }
+  ],
+  "authored_complements": [
+    "dorsaux.left",
+    "dorsaux.right",
+    "abdominaux.left",
+    "abdominaux.right"
+  ],
+  "authoring_claim": "Approximate artistic fitness volumes, no verified BP3D element/FMA identity for these complements.",
+  "counts": {
+    "visible_triangles": 122176,
+    "body_triangles": 120000,
+    "body_vertices": 59990,
+    "objects": 3,
+    "region_ids_available": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ]
+  },
+  "zone_triangles": {
+    "0": 51849,
+    "1": 2847,
+    "2": 2815,
+    "3": 1327,
+    "4": 1178,
+    "5": 445,
+    "6": 433,
+    "7": 395,
+    "8": 392,
+    "9": 1937,
+    "10": 1880,
+    "11": 1653,
+    "12": 1662,
+    "13": 3218,
+    "14": 3200,
+    "15": 1340,
+    "16": 1367,
+    "17": 8874,
+    "18": 8829,
+    "19": 2852,
+    "20": 2703,
+    "21": 2810,
+    "22": 2737,
+    "23": 2489,
+    "24": 2569,
+    "25": 2453,
+    "26": 2418,
+    "27": 1338,
+    "28": 1355,
+    "29": 322,
+    "30": 313
+  },
+  "source_dilation_m": 0.0018,
+  "underlays": [
+    "abdominal junction support",
+    "neutral pelvic cover"
+  ],
+  "removed_union_fragment_vertices": 40,
+  "license_for_derived_models_and_renders": "CC-BY-SA-4.0",
+  "limitations": [
+    "Region transfer is provisional nearest-source surface classification, not final anatomical segmentation.",
+    "No iPhone runtime, rig or medical validation.",
+    "Voxel union and decimation alter fine anatomical detail."
+  ]
+}

@@ -1,6 +1,11 @@
 # M4A — Sauvegarde et reprise après changement réseau
 
-> **Étape actuelle : [POC matériaux / normal maps — approche insuffisante](M4A_POC_MATERIAUX_ECORCHE.md).**
+> **Étape actuelle, 19 octobre 2026 : [reconstruction fitness depuis BodyParts3D](M4A_BP3D_RECONSTRUCTION.md).**
+> Nouvelle direction explicitement demandée : anatomie source sélectionnée, soutien continu, deux constructions Blender.
+> D1 / D2 ne sont pas recommandées comme base finale : raccords visuels insuffisants. Arrêt après publication.
+> PR #11 en brouillon ; aucune intégration, SQLite, M4B ou fusion. Les étapes ci-dessous restent historiques.
+
+> **Historique : [POC matériaux / normal maps — approche insuffisante](M4A_POC_MATERIAUX_ECORCHE.md).**
 > B+ Puissance inchangé, zéro triangle ajouté ; un seul matériau testé, non retenu au critère mobile.
 > Arrêt après publication, sans nouvelle itération automatique. PR #11 en brouillon, sans intégration, SQLite, M4B ou fusion.
 

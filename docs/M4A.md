@@ -1,5 +1,11 @@
 # M4A — Audit réel de la carte musculaire 3D
 
+> **État courant, 19 octobre 2026 : [nouvelle reconstruction depuis BodyParts3D](M4A_BP3D_RECONSTRUCTION.md).**
+> Cette direction demandée par l’utilisateur remplace la décision historique du 18 octobre de ne pas reconstruire cette source.
+> Deux constructions et leurs vrais rendus sont publiés ; aucune ne satisfait le rendu premium demandé.
+> Arrêt pour décision, PR #11 toujours en brouillon, aucune intégration, SQLite, M4B ou fusion.
+> Le texte daté ci-dessous est conservé comme historique.
+
 ## État de la livraison du 18 octobre 2026
 
 **Dernière itération : [B+ validé / B+ V2](M4A_B_PLUS_V2.md).** B+ est validé comme base visuelle ; une variante légèrement plus musclée est proposée, en attente de validation. Aucune segmentation complète ou intégration.

@@ -1,0 +1,49 @@
+{
+  "method": "Original Blender PNGs, Lanczos resize only; fixed full-body framing. No image synthesis or local retouch.",
+  "column_width": 390,
+  "mobile_preview_width": 390,
+  "images": [
+    {
+      "path": "front.png",
+      "sha256": "39b7b3614a49b08094d228928a047ee932b1a6697e85aa204deb8688f1653ffa",
+      "source_view": "front",
+      "width": 820,
+      "height": 750
+    },
+    {
+      "path": "soft-mobile-390.png",
+      "sha256": "3586fb1af150bfbbc8023ae5481869a7e7a4a295432a2dd13a6c93b4465960e3",
+      "source": "soft/renders/three-quarter.png",
+      "width": 390,
+      "height": 624
+    },
+    {
+      "path": "defined-mobile-390.png",
+      "sha256": "f2e7a95bcbd173771f06ddceeb647c19cca98759b4ef0d138f454b571b4bcffc",
+      "source": "defined/renders/three-quarter.png",
+      "width": 390,
+      "height": 624
+    },
+    {
+      "path": "three-quarter.png",
+      "sha256": "480c94ba86341922d05530232a0aee40b637916884744dac6cfb716b4babc7dd",
+      "source_view": "three-quarter",
+      "width": 820,
+      "height": 750
+    },
+    {
+      "path": "back.png",
+      "sha256": "b2b90e737eb8f5423100caead81e10abd3145b387d03c7e8e72ef3f392fa25f5",
+      "source_view": "back",
+      "width": 820,
+      "height": 750
+    },
+    {
+      "path": "selection.png",
+      "sha256": "4784fe087d6dc72aade0b64ee98aee3c2fc2af5f069a34bd1168061464be2148",
+      "source_view": "selection",
+      "width": 820,
+      "height": 750
+    }
+  ]
+}
