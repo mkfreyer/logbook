@@ -1,0 +1,60 @@
+{
+  "consulted_date": "2026-10-20",
+  "client_timezone": "Europe/Paris",
+  "sources": [
+    {
+      "id": "A_SKETCHFAB",
+      "url": "https://sketchfab.com/3d-models/3-male-power-body-types-highpoly-lowpoly-31f1e665ed684f4eabc125788d616cf3",
+      "kind": "fiche exacte demandée",
+      "access": "échec de lecture directe ; pas de fichier"
+    },
+    {
+      "id": "A_STORE",
+      "url": "https://vincentpage.artstation.com/store/lrMM8/3-male-power-body-types-highpoly-lowpoly-included-man-base-anatomy-young-girl-zbursh-doll-highpoly-anatomy-human-cartoon-male-female-torso-head-body-foot-hand-highpoly-basemesh-young-anatomy-semi-realistic-character",
+      "kind": "catalogue auteur de même intitulé",
+      "access": "texte de la boutique consulté par outil web ; correspondance binaire avec UID Sketchfab non vérifiée"
+    },
+    {
+      "id": "B_SKETCHFAB",
+      "url": "https://sketchfab.com/3d-models/ecorche-male-musclenames-anatomy-33162ec759e04d2985dbbdf4ec908d66",
+      "kind": "fiche exacte demandée",
+      "access": "extrait indexé consulté ; lecture directe 403"
+    },
+    {
+      "id": "B_STORE",
+      "url": "https://chrisfischer.artstation.com/store/XKBG1/ecorche-musclenames-male-anatomy",
+      "kind": "boutique auteur",
+      "access": "texte consulté par outil web"
+    },
+    {
+      "id": "B_BUNDLE",
+      "url": "https://chrisfischer.gumroad.com/l/fgxyho",
+      "kind": "description du bundle mâle/femelle par le même auteur",
+      "access": "extrait indexé ; lecteur web direct sans texte exploitable"
+    },
+    {
+      "id": "B_CHART",
+      "url": "https://chrisfischer.artstation.com/pages/musclechart",
+      "kind": "légende anatomique auteur",
+      "access": "texte consulté"
+    },
+    {
+      "id": "ARTSTATION_EULA",
+      "url": "https://www.artstation.com/marketplace-product-eula",
+      "kind": "conditions liées par les deux boutiques",
+      "access": "texte consulté ; présence d’un lien vers nouveaux termes 2025"
+    },
+    {
+      "id": "ARTSTATION_TOS_LINKED",
+      "url": "https://cdn2.unrealengine.com/artstation-terms-of-service-eu-65335878bd2c.pdf",
+      "kind": "document lié par la bannière 2025",
+      "access": "PDF consulté ; conditions du site, ne remplace pas à lui seul le choix de licence du produit"
+    },
+    {
+      "id": "A_TAG_HINT",
+      "url": "https://sketchfab.com/tags/semi-realistic",
+      "kind": "liste de résultats indexée",
+      "access": "mention de titre et voisinage de boutons ; association exacte téléchargement/licence non probante"
+    }
+  ]
+}

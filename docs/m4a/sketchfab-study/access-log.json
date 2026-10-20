@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-20",
+  "events": [
+    {
+      "channel": "outil web",
+      "targets": [
+        "A_SKETCHFAB",
+        "B_SKETCHFAB"
+      ],
+      "result": "A non accessible ; B HTTP 403"
+    },
+    {
+      "channel": "outil web",
+      "targets": [
+        "API publique Sketchfab v3, deux UID"
+      ],
+      "result": "non accessible"
+    },
+    {
+      "channel": "HTTPS Python via proxy de l’environnement",
+      "url": "https://api.sketchfab.com/v3/models/33162ec759e04d2985dbbdf4ec908d66",
+      "result": "tunnel HTTP 403 Forbidden ; aucun contenu modèle reçu"
+    },
+    {
+      "channel": "politique réseau locale",
+      "result": "Sketchfab, API Sketchfab et CDN des vendeurs absents des destinations autorisées ; aucun contournement"
+    },
+    {
+      "channel": "outil web",
+      "targets": [
+        "A_STORE",
+        "B_STORE",
+        "B_CHART",
+        "ARTSTATION_EULA"
+      ],
+      "result": "texte consultable"
+    },
+    {
+      "channel": "outil web",
+      "targets": [
+        "B_BUNDLE",
+        "B_SKETCHFAB"
+      ],
+      "result": "extraits indexés utilisés avec indication de cette limite"
+    },
+    {
+      "channel": "outil web",
+      "targets": [
+        "aperçus images ArtStation et Sketchfab"
+      ],
+      "result": "URL ou marqueur image retourné ; pas de pixels exportables dans le résultat MCP, aucun examen local à 390 px ni capture de viewer réalisé"
+    }
+  ],
+  "conclusion": "Accès à des métadonnées commerciales ; aucune acquisition officielle de binaire, aucune mesure Blender/GLB, aucun benchmark."
+}
