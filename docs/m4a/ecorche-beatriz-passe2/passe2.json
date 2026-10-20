@@ -1,0 +1,196 @@
+{
+  "baseline_commit": "03aa2eb1d34c984e1477211576c5e9b26eae4d59",
+  "baseline_blend_sha256": "6798e252ae1aa1c7d8c31d33726045c718a82854a182428ed106e4a1c44672eb",
+  "source_asset": {
+    "extras": {
+      "author": "Beatriz Gomez Santamaria (https://sketchfab.com/BeatrizGomez)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/ecorche-anatomy-study-e402d3d541eb4b199c57d5410f5d3c57",
+      "title": "Ecorche - Anatomy study"
+    },
+    "generator": "Sketchfab-12.67.0",
+    "version": "2.0"
+  },
+  "source_sha256": "137e2e80bdcf9c87ff49ab32cb5de70f8de542870c78a7d5170e8743d241a73a",
+  "median_plane_x_m": 0.002114987923242599,
+  "objects": 390,
+  "triangles": 531777,
+  "changed_objects": [
+    "deltoid.left",
+    "deltoid.right",
+    "m0_c014.left",
+    "m0_c014.right",
+    "m0_c015.left",
+    "m0_c015.right",
+    "m0_c016.left",
+    "m0_c016.right",
+    "pectoralis_major.left",
+    "pectoralis_major.right",
+    "trapezius.left",
+    "trapezius.right"
+  ],
+  "unchanged_objects": 378,
+  "new_triangles": 0,
+  "new_muscle_objects": 0,
+  "records_right": [
+    {
+      "asset_id": "deltoid.right",
+      "side": "right",
+      "max_displacement_m": 0.0034925587404373696,
+      "mean_displacement_m": 0.0008266829813293625,
+      "bbox_dimensions_before_m": [
+        0.1795613169670105,
+        0.15620004618540406,
+        0.2230590581893921
+      ],
+      "bbox_dimensions_after_m": [
+        0.17807436919069944,
+        0.1552029360956389,
+        0.2230590581893921
+      ],
+      "signed_volume_before_m3": 0.0016315692616128898,
+      "signed_volume_after_m3": 0.001629471705500217,
+      "surface_area_before_m2": 0.09198209894071202,
+      "surface_area_after_m2": 0.09201660116942388,
+      "boundary_vertices": 0,
+      "triangles_guarded": 49,
+      "notes": [
+        "Broad fan-shaped redistribution across anterior/acromial/posterior portions.",
+        "Common distal insertion and proximal borders attenuated.",
+        "Enclosed volume constrained; outer shoulder width protected."
+      ],
+      "volume_ratio": 0.9987143934603185
+    },
+    {
+      "asset_id": "m0_c014.right",
+      "side": "right",
+      "max_displacement_m": 0.0010995971403893014,
+      "mean_displacement_m": 0.0005153293366405803,
+      "bbox_dimensions_before_m": [
+        0.1501861810684204,
+        0.07454511616379023,
+        0.3761688470840454
+      ],
+      "bbox_dimensions_after_m": [
+        0.14987130439780555,
+        0.07493124620668701,
+        0.3763900698938385
+      ],
+      "signed_volume_before_m3": 0.0006214800079086267,
+      "signed_volume_after_m3": 0.000641138508934304,
+      "surface_area_before_m2": 0.061829980021044215,
+      "surface_area_after_m2": 0.06195566134163499,
+      "boundary_vertices": 0,
+      "triangles_guarded": 1,
+      "notes": [
+        "Biceps very small gain."
+      ]
+    },
+    {
+      "asset_id": "m0_c015.right",
+      "side": "right",
+      "max_displacement_m": 0.0030000000000000443,
+      "mean_displacement_m": 0.001458762314271084,
+      "bbox_dimensions_before_m": [
+        0.11998344957828522,
+        0.08170823007822037,
+        0.2905898094177246
+      ],
+      "bbox_dimensions_after_m": [
+        0.12007138852882074,
+        0.08416600551231239,
+        0.2907393358236636
+      ],
+      "signed_volume_before_m3": 0.0005872091133699529,
+      "signed_volume_after_m3": 0.0006533339707187694,
+      "surface_area_before_m2": 0.05327063012390463,
+      "surface_area_after_m2": 0.05611174872594137,
+      "boundary_vertices": 0,
+      "triangles_guarded": 12,
+      "notes": [
+        "Small triceps belly gain, insertions attenuated."
+      ]
+    },
+    {
+      "asset_id": "m0_c016.right",
+      "side": "right",
+      "max_displacement_m": 0.0021251092921726086,
+      "mean_displacement_m": 0.0008995659690834068,
+      "bbox_dimensions_before_m": [
+        0.08881816267967224,
+        0.06778549402952194,
+        0.19849228858947754
+      ],
+      "bbox_dimensions_after_m": [
+        0.09035700234536376,
+        0.0683766259490487,
+        0.19861348458366668
+      ],
+      "signed_volume_before_m3": 0.0002587096930772613,
+      "signed_volume_after_m3": 0.0002773792605276091,
+      "surface_area_before_m2": 0.02782869330374796,
+      "surface_area_after_m2": 0.028579882619665653,
+      "boundary_vertices": 0,
+      "triangles_guarded": 0,
+      "notes": [
+        "Small triceps belly gain, insertions attenuated."
+      ]
+    },
+    {
+      "asset_id": "pectoralis_major.right",
+      "side": "right",
+      "max_displacement_m": 0.0004500000000001103,
+      "mean_displacement_m": 0.000386889929351381,
+      "bbox_dimensions_before_m": [
+        0.23223692551255226,
+        0.19985603541135788,
+        0.20599019527435303
+      ],
+      "bbox_dimensions_after_m": [
+        0.23261041843943508,
+        0.19934441200409272,
+        0.20551944235396125
+      ],
+      "signed_volume_before_m3": 0.0016492876444714286,
+      "signed_volume_after_m3": 0.001649612638953982,
+      "surface_area_before_m2": 0.11022972324617263,
+      "surface_area_after_m2": 0.1094747943729517,
+      "boundary_vertices": 0,
+      "triangles_guarded": 3,
+      "notes": [
+        "Bounded high-frequency surface fairing only; no additional chest hypertrophy."
+      ]
+    },
+    {
+      "asset_id": "trapezius.right",
+      "side": "right",
+      "max_displacement_m": 0.002344390332195971,
+      "mean_displacement_m": 0.0001666864608296258,
+      "bbox_dimensions_before_m": [
+        0.18474575254367664,
+        0.15314278565347195,
+        0.4582127332687378
+      ],
+      "bbox_dimensions_after_m": [
+        0.18651192174995304,
+        0.15315569934807408,
+        0.4582127332687378
+      ],
+      "signed_volume_before_m3": 0.0011497132004407308,
+      "signed_volume_after_m3": 0.001161605138611314,
+      "surface_area_before_m2": 0.11377698669411145,
+      "surface_area_after_m2": 0.1144144345599376,
+      "boundary_vertices": 0,
+      "triangles_guarded": 1,
+      "notes": [
+        "Only medial contact and scapular transition adjusted; no global trap enlargement."
+      ]
+    }
+  ],
+  "builder_sha256": "db431cee479d78e4b6054ac88f84932ee9607661c59a625e3ae42f221be5ca04",
+  "limitations": [
+    "Deltoid portions are continuous shape regions and overlapping weights, not three separate anatomical meshes.",
+    "Geometric consistency does not certify medical anatomy.",
+    "No mobile optimization or application interaction in this pass."
+  ]
+}

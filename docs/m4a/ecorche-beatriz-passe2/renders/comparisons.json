@@ -1,0 +1,149 @@
+{
+  "composer_sha256": "1be4bb856db20ae421a532a6d3f459a9df9b6619505f8b395cb92a192e49248d",
+  "method": "Raw PNG pixels pasted at native size; labels and borders only.",
+  "sheets": [
+    {
+      "file": "comparatif-face.png",
+      "sha256": "270c02d700f7e26048ae959f4935e02520487467beffa347e28389061ed10631",
+      "inputs": [
+        {
+          "file": "avant-face.png",
+          "sha256": "17e24246c8f4a345e6bba2bc4f43fd65c6db3d5e70ea89125247f9febb6ebed9"
+        },
+        {
+          "file": "apres-face.png",
+          "sha256": "c7bfe25d8d34a2cf2e389b823670fabfdbb1e646c18cc7a3d4def1e1a8b3d826"
+        }
+      ],
+      "render_pixels_retouch": false
+    },
+    {
+      "file": "comparatif-profil.png",
+      "sha256": "18620d1498654e5bbe0ed70c50d550126c3b3124c6bb54d43201085ee2d7d393",
+      "inputs": [
+        {
+          "file": "avant-profil.png",
+          "sha256": "825091651f96ab85812bb12f0182d9ae832267f6dea257fbcb12c34d2c5cdfb9"
+        },
+        {
+          "file": "apres-profil.png",
+          "sha256": "2ed5d1ce06eac4af40c6b9300592947203c91916f9281ac3151429eefb501cc1"
+        }
+      ],
+      "render_pixels_retouch": false
+    },
+    {
+      "file": "comparatif-dos.png",
+      "sha256": "5ca9eb2cb0b678ea865fec1b69f4ee32f0e11b5143d8b6aeb78310da89ba1c5f",
+      "inputs": [
+        {
+          "file": "avant-dos.png",
+          "sha256": "4ba05c56779b02b1d4e0ae425e8fbd1298818b6aef899cf016af7dcaf57d2e01"
+        },
+        {
+          "file": "apres-dos.png",
+          "sha256": "21cb2d5ea64bee67f58855992710c22faf2e8d2ba0023ba93600dbeedcc59e99"
+        }
+      ],
+      "render_pixels_retouch": false
+    },
+    {
+      "file": "comparatif-epaule-avant.png",
+      "sha256": "f474c1f4d076d785701e43de2016f8c1cf9108ba28ad33a36aa55458257de3e7",
+      "inputs": [
+        {
+          "file": "avant-epaule-avant.png",
+          "sha256": "d96dc592ce1cd68fb806dd5da71ebe4360f7bad6562e17652adab3b75d0bcfa5"
+        },
+        {
+          "file": "apres-epaule-avant.png",
+          "sha256": "6000c32660a3183d76bab224aba2e0a0f606234a839a057cef0b5d4800ff586a"
+        }
+      ],
+      "render_pixels_retouch": false
+    },
+    {
+      "file": "comparatif-epaule-profil.png",
+      "sha256": "53a2e4c1e5d62ada2a02b15315523846ab006874a6b997ba1a9dec762b19fc27",
+      "inputs": [
+        {
+          "file": "avant-epaule-profil.png",
+          "sha256": "ee17719561959bb4ccf36aa407052a3bfbba5e5983e4ac2a55fc4059a32bd02b"
+        },
+        {
+          "file": "apres-epaule-profil.png",
+          "sha256": "ef7807430349238990f3eeb89abcbeaa73099671fa2e2ad8dfb2c53e3a580f15"
+        }
+      ],
+      "render_pixels_retouch": false
+    },
+    {
+      "file": "comparatif-epaule-arriere.png",
+      "sha256": "39248996bc5f0c41c522736830e1b2e1d180f929302d061e5f743f1d5d1cb7b6",
+      "inputs": [
+        {
+          "file": "avant-epaule-arriere.png",
+          "sha256": "40805548cd703afc886493c780c90941c6d9928b2d50b885ebcba9a02c5939ba"
+        },
+        {
+          "file": "apres-epaule-arriere.png",
+          "sha256": "72f666464386fe99c4e5b3aa60c667fd5944ac824f6e6012801edf2a57479d5f"
+        }
+      ],
+      "render_pixels_retouch": false
+    },
+    {
+      "file": "comparatif-haut-dos.png",
+      "sha256": "673b71189da771ad4e135ea88c6343530171c5fc338e92aedb6ed26d8fe3f1a1",
+      "inputs": [
+        {
+          "file": "avant-haut-dos.png",
+          "sha256": "a47433dd350da0fb9896be10f88d0094c6df99318ccc1eba54ee8559d8190c8a"
+        },
+        {
+          "file": "apres-haut-dos.png",
+          "sha256": "c61d1cd2f21cad6a74c5de212bd670ebebff9599134bc3fd947ec6c7030dd2eb"
+        }
+      ],
+      "render_pixels_retouch": false
+    },
+    {
+      "file": "validation-mat-neutre.png",
+      "sha256": "ee5f9f3872d5b717d108899c14388ac30c6d8b7bb6ce2c386a1849f8f9aa7e2f",
+      "inputs": [
+        {
+          "file": "apres-face.png",
+          "sha256": "c7bfe25d8d34a2cf2e389b823670fabfdbb1e646c18cc7a3d4def1e1a8b3d826"
+        },
+        {
+          "file": "apres-profil.png",
+          "sha256": "2ed5d1ce06eac4af40c6b9300592947203c91916f9281ac3151429eefb501cc1"
+        },
+        {
+          "file": "apres-dos.png",
+          "sha256": "21cb2d5ea64bee67f58855992710c22faf2e8d2ba0023ba93600dbeedcc59e99"
+        }
+      ],
+      "render_pixels_retouch": false
+    },
+    {
+      "file": "deltoides-mat-neutre.png",
+      "sha256": "334850b3a1409cccbefa689ba37110efe4383612b1cda095006dd3d2a81a51f8",
+      "inputs": [
+        {
+          "file": "apres-epaule-avant.png",
+          "sha256": "6000c32660a3183d76bab224aba2e0a0f606234a839a057cef0b5d4800ff586a"
+        },
+        {
+          "file": "apres-epaule-profil.png",
+          "sha256": "ef7807430349238990f3eeb89abcbeaa73099671fa2e2ad8dfb2c53e3a580f15"
+        },
+        {
+          "file": "apres-epaule-arriere.png",
+          "sha256": "72f666464386fe99c4e5b3aa60c667fd5944ac824f6e6012801edf2a57479d5f"
+        }
+      ],
+      "render_pixels_retouch": false
+    }
+  ]
+}

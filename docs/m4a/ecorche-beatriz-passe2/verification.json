@@ -1,0 +1,67 @@
+{
+  "baseline_unchanged_sha256": "6798e252ae1aa1c7d8c31d33726045c718a82854a182428ed106e4a1c44672eb",
+  "new_master_sha256": "55f4c47e0b125fb1abbb9fe89fae544b4aa02520077565819b19a7bbe9bec435",
+  "glb_sha256": "f27ee33162cf3e82e169cf7be0d64a12b13b1b9e526611f6343aca23098d1d03",
+  "objects": 390,
+  "master_triangles": 531777,
+  "new_triangles": 0,
+  "changed_objects": 12,
+  "untouched_objects": 378,
+  "max_untouched_coordinate_difference_m": 0.0,
+  "source_triangle_indices_unchanged": true,
+  "triangle_inversions_above_cross_norm_1e_minus_10": 0,
+  "duplicate_seam_displacement_error_m": 0.0,
+  "bilateral_reflection_error_m": 1.6781612321992156e-08,
+  "closed_muscle_volume_ratios_right": {
+    "m0_c014.right": 1.031631733754898,
+    "m0_c015.right": 1.1126086080430344,
+    "m0_c016.right": 1.0721642880093591,
+    "deltoid.right": 0.9987143712302715,
+    "pectoralis_major.right": 1.0001970230502624,
+    "trapezius.right": 1.0103434287366946
+  },
+  "trapezius_median_gap_profiles": [
+    {
+      "z_m": 1.35,
+      "before_gap_m": 0.005334175351228715,
+      "after_gap_m": 0.0022250264989593107
+    },
+    {
+      "z_m": 1.4,
+      "before_gap_m": 0.005653318990517792,
+      "after_gap_m": 0.002112225700105288
+    },
+    {
+      "z_m": 1.45,
+      "before_gap_m": 0.004576238240996729,
+      "after_gap_m": 0.001171612726807006
+    },
+    {
+      "z_m": 1.5,
+      "before_gap_m": 0.0049926544185898945,
+      "after_gap_m": 0.001580791520552495
+    }
+  ],
+  "neutral_matte_material_checked": true,
+  "deltoid_weight_groups_checked": true,
+  "deltoid_medical_certification": false,
+  "glb_objects": 390,
+  "glb_triangles": 531775,
+  "glb_vertices": 335173,
+  "glb_surface_match_at_micron_quantization": true,
+  "glb_duplicate_faces_removed": [
+    {
+      "asset_id": "m0_c138__CENTRAL__ATHLETIQUE",
+      "removed_copies": 1,
+      "copies_remaining": 1
+    },
+    {
+      "asset_id": "m0_c145__CENTRAL__ATHLETIQUE",
+      "removed_copies": 1,
+      "copies_remaining": 1
+    }
+  ],
+  "blender_glb_reimport_checked": true,
+  "verifier_sha256": "1da406c2e91e5b47d9a45b0261d79f82709fdbf63add07b6397f8ab3689d44e4",
+  "renders_verified": 15
+}
