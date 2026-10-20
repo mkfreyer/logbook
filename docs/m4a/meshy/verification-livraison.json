@@ -1,0 +1,13 @@
+{
+  "required_base": "7c2aa5c47994f1bc58758302274a8c5b9693200b",
+  "new_branch": "feat/m4a-meshy-masques-musculaires",
+  "all_changes_new_files_only": true,
+  "original_worktree_unchanged": true,
+  "application_SQLite_M4B_unchanged": true,
+  "source_file_byte_equal_uploaded_sha256": "9fab861a65407e69b9401bec077bf7b40f58d36404e80bad9db6147f24320a14",
+  "editable_Blender_labels_roundtrip_byte_equal": true,
+  "local_document_links_valid": true,
+  "python_syntax_valid": true,
+  "anatomical_validation": false,
+  "verdict": "Partial POC; deltoid border remains provisional."
+}

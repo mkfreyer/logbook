@@ -1,0 +1,152 @@
+{
+  "source_sha256": "9fab861a65407e69b9401bec077bf7b40f58d36404e80bad9db6147f24320a14",
+  "vertices": 47711,
+  "triangles": 95426,
+  "source_components": 1,
+  "source_file_intact": true,
+  "blender_positions_bit_equal_source": true,
+  "blender_triangle_indices_bit_equal_source": true,
+  "new_anatomical_geometry": 0,
+  "source_coordinate_conversion": "Object rotation +90 X only; local vertex buffers untouched.",
+  "regions": [
+    {
+      "id": "pectoralis.left",
+      "faces": 1356,
+      "connected_components": 1,
+      "boundary_edges": 180,
+      "euler_characteristic": 1,
+      "single_disk": true,
+      "boundary_loops": 1,
+      "boundary_vertices_degree_two": true
+    },
+    {
+      "id": "pectoralis.right",
+      "faces": 1145,
+      "connected_components": 1,
+      "boundary_edges": 161,
+      "euler_characteristic": 1,
+      "single_disk": true,
+      "boundary_loops": 1,
+      "boundary_vertices_degree_two": true
+    },
+    {
+      "id": "deltoid.left",
+      "faces": 2215,
+      "connected_components": 1,
+      "boundary_edges": 151,
+      "euler_characteristic": 1,
+      "single_disk": true,
+      "boundary_loops": 1,
+      "boundary_vertices_degree_two": true
+    }
+  ],
+  "blender_selection_checks": [
+    {
+      "scene": "00_NEUTRE",
+      "orange_value": 0,
+      "orange_faces": 0,
+      "other_regions_blue": true
+    },
+    {
+      "scene": "01_PECTORAL_GAUCHE",
+      "orange_value": 1,
+      "orange_faces": 1356,
+      "other_regions_blue": true
+    },
+    {
+      "scene": "02_PECTORAL_DROIT",
+      "orange_value": 2,
+      "orange_faces": 1145,
+      "other_regions_blue": true
+    },
+    {
+      "scene": "03_DELTOIDE_GAUCHE",
+      "orange_value": 3,
+      "orange_faces": 2215,
+      "other_regions_blue": true
+    }
+  ],
+  "export_primitives": 4,
+  "export_positions_bit_equal_source": true,
+  "export_all_original_triangles_once": true,
+  "export_triangle_reorder_has_explicit_bijection": true,
+  "raycast_binding_tests": [
+    {
+      "origin_source_coordinates": [
+        0.09,
+        0.52,
+        1
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "export_primitive": 1,
+      "local_face_index": 476,
+      "source_triangle": 60630,
+      "region_value": 1,
+      "same_hit_on_original_and_export": true
+    },
+    {
+      "origin_source_coordinates": [
+        -0.09,
+        0.52,
+        1
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "export_primitive": 2,
+      "local_face_index": 670,
+      "source_triangle": 35224,
+      "region_value": 2,
+      "same_hit_on_original_and_export": true
+    },
+    {
+      "origin_source_coordinates": [
+        0.22,
+        0.56,
+        1
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "export_primitive": 3,
+      "local_face_index": 1297,
+      "source_triangle": 81983,
+      "region_value": 3,
+      "same_hit_on_original_and_export": true
+    },
+    {
+      "origin_source_coordinates": [
+        0,
+        0.1,
+        1
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "export_primitive": 0,
+      "local_face_index": 46578,
+      "source_triangle": 47723,
+      "region_value": 0,
+      "same_hit_on_original_and_export": true
+    }
+  ],
+  "render_hashes_verified": true,
+  "rendered_frames": 5,
+  "anatomical_contours_validated": false,
+  "visual_verdict": "Partial POC: functional surface selection; deltoid lower/posterior boundary requires manual correction before full visual approval.",
+  "limitations": [
+    "BVH raycasts test offline triangle/primitive identity, not a touch engine, Three.js runtime or iPhone.",
+    "Topologically continuous masks do not prove anatomical borders; the deltoid remains provisional.",
+    "No deformation, new muscle, remesh, full-body segmentation, rig, application integration or SQLite access."
+  ]
+}
