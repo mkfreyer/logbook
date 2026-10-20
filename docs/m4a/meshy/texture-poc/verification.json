@@ -1,0 +1,112 @@
+{
+  "source_file_intact": true,
+  "source_sha256": "9fab861a65407e69b9401bec077bf7b40f58d36404e80bad9db6147f24320a14",
+  "source_vertices": 47711,
+  "source_triangles": 95426,
+  "blender_positions_and_indices_bit_equal_source": true,
+  "source_geometry_changes": 0,
+  "blender_mask_image_packed_linear": true,
+  "selection_is_not_face_material_labels": true,
+  "uv_chart_triangles": 3485,
+  "painted_uv_overlap_texels": 0,
+  "mask_at_chart_seam": 0.0,
+  "export_vertices": 47940,
+  "uv_seam_duplicate_vertices": 229,
+  "export_triangles": 95426,
+  "export_source_face_order_verified": true,
+  "export_vertex_to_source_verified": true,
+  "export_normals_unit_length": true,
+  "png_bytes_embedded_verified": true,
+  "baked_PBR_matches_mask_within_8bit_tolerance": true,
+  "source_export_raycast_uv_checks": [
+    {
+      "case": "left_pectoral",
+      "source_triangle": 60630,
+      "export_triangle": 60630,
+      "uv_gltf": [
+        0.5277300144331661,
+        0.4168027025735328
+      ],
+      "mask_value": 1.0,
+      "selected": true
+    },
+    {
+      "case": "right_pectoral",
+      "source_triangle": 35224,
+      "export_triangle": 35224,
+      "uv_gltf": [
+        0.004999999888241291,
+        0.9950000047683716
+      ],
+      "mask_value": 0.0,
+      "selected": false
+    },
+    {
+      "case": "deltoid",
+      "source_triangle": 81983,
+      "export_triangle": 81983,
+      "uv_gltf": [
+        0.004999999888241291,
+        0.9950000047683717
+      ],
+      "mask_value": 0.0,
+      "selected": false
+    },
+    {
+      "case": "abdomen",
+      "source_triangle": 47723,
+      "export_triangle": 47723,
+      "uv_gltf": [
+        0.004999999888241291,
+        0.9950000047683716
+      ],
+      "mask_value": 0.0,
+      "selected": false
+    },
+    {
+      "case": "formerly_orange_axillary_fold_now_blue",
+      "source_triangle": 74059,
+      "export_triangle": 74059,
+      "uv_gltf": [
+        0.19132900711690481,
+        0.150999918292321
+      ],
+      "mask_value": 0.0,
+      "selected": false
+    },
+    {
+      "case": "same_triangle_unpainted_point",
+      "source_triangle": 49249,
+      "export_triangle": 49249,
+      "uv_gltf": [
+        0.7634998088250273,
+        0.4658237679560009
+      ],
+      "mask_value": 0.0026517482476923447,
+      "selected": false
+    },
+    {
+      "case": "same_triangle_painted_point",
+      "source_triangle": 49249,
+      "export_triangle": 49249,
+      "uv_gltf": [
+        0.7483362279345954,
+        0.4580144299865566
+      ],
+      "mask_value": 0.9944959632363121,
+      "selected": true
+    }
+  ],
+  "boundary_triangles_with_black_and_white_corners": 128,
+  "glb_independent_blender_import_ok": true,
+  "neutral_render_pixel_identical_to_898aac6": true,
+  "render_hashes_verified": true,
+  "blender_frames": 7,
+  "mobile_runtime_tested": false,
+  "application_integration": false,
+  "limitations": [
+    "Only one pectoral; local UV working chart, not full-body atlas.",
+    "Blender importer and offline UV raycasts are not Three.js/WebView/iPhone validation.",
+    "Authored surface contour is an artistic approximation, not a medical boundary."
+  ]
+}

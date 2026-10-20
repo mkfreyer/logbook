@@ -1,0 +1,30 @@
+{
+  "source_sha256": "9fab861a65407e69b9401bec077bf7b40f58d36404e80bad9db6147f24320a14",
+  "export_sha256": "bf47588daafcddde0de3d93124be547005c810d71f2260be891c04049c8413fd",
+  "file": "meshy-painted-selection.glb",
+  "exporter_sha256": "9a4a5dc0b95a536d17b1c01a474660466822d7b4aa8946c88ccf24812f093d0c",
+  "source_vertices": 47711,
+  "export_vertices": 47940,
+  "uv_seam_duplicate_vertices": 229,
+  "triangles": 95426,
+  "primitive_count": 1,
+  "vertex_map_file": "vertex-to-source.u32",
+  "vertex_map_sha256": "86bb27b07f08118849de640532679020be2b46e605c3a966237641e8d0a7d19b",
+  "source_triangle_rule": "Single primitive 0: source_triangle = faceIndex. Actual serialized indices verified with vertex-to-source map. Not the old four-primitive GLB binding.",
+  "uv_convention": "glTF UV = (Blender U, 1 - Blender V). PNG row zero is top. No further flip for GLTFLoader textures.",
+  "selection_id": "pectoralis.left",
+  "mask_texture_index": 2,
+  "mask_filter": "linear with mipmaps, CLAMP_TO_EDGE",
+  "mask_color_space": "linear data, never sRGB",
+  "material_textures": {
+    "selected-basecolor-srgb.png": "e9b5742e80e60e9389a137aa3d3fcddf1083b42ea8a80d692dbf8870cf5048ae",
+    "selected-coat-roughness-metallic-linear.png": "da2c55f324b6a219bdc912537fca2c21acd228f36caafb3f44a44e3766515885",
+    "pectoralis-left-mask.png": "3f23fd57fefa7a12a3750c1faef20a1b0c300343b4952d03b9dd9f90891772e9"
+  },
+  "required_runtime_extension_for_coat": "KHR_materials_clearcoat (core PBR base color still works without coat)",
+  "limitations": [
+    "Baked orange GLB is a static interchange test, not an interactive selection implementation.",
+    "Texture 2 is an unused-by-core mask referenced by extras; a future shader/CPU UV lookup must explicitly load it.",
+    "Local UV chart only; rest of body points at an unpainted texel. Not a full-body UV atlas."
+  ]
+}
