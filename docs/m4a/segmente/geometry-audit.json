@@ -1,0 +1,116 @@
+{
+  "blender": "4.3.2",
+  "outer_max_recess_m": 0.0008,
+  "parts": [
+    {
+      "id": "pectoralis.left",
+      "inner_method": "smoothed inner offset .018m; 10 normal + 8 position smoothing steps",
+      "max_inner_distance_m": 0.027336391902345842,
+      "vertices": 1492,
+      "triangles": 2980,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "components": 1,
+      "signed_volume": 0.0005779893965885358
+    },
+    {
+      "id": "deltoid.left",
+      "inner_method": "smoothed inner offset .018m; 10 normal + 8 position smoothing steps",
+      "max_inner_distance_m": 0.02205669373597494,
+      "vertices": 2056,
+      "triangles": 4108,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "components": 1,
+      "signed_volume": 0.0007249853629539916
+    },
+    {
+      "id": "biceps.left",
+      "inner_method": "smoothed inner offset .018m; 10 normal + 8 position smoothing steps",
+      "max_inner_distance_m": 0.02138568393464938,
+      "vertices": 894,
+      "triangles": 1784,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "components": 1,
+      "signed_volume": 0.00022314220562571124
+    },
+    {
+      "id": "triceps.left",
+      "inner_method": "smoothed inner offset .018m; 10 normal + 8 position smoothing steps",
+      "max_inner_distance_m": 0.023810711155994365,
+      "vertices": 768,
+      "triangles": 1532,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "components": 1,
+      "signed_volume": 0.0001920683333948366
+    },
+    {
+      "id": "pectoralis.right",
+      "inner_method": "smoothed inner offset .018m; 10 normal + 8 position smoothing steps",
+      "max_inner_distance_m": 0.02267739831413369,
+      "vertices": 1268,
+      "triangles": 2532,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "components": 1,
+      "signed_volume": 0.0005675859691216293
+    },
+    {
+      "id": "deltoid.right",
+      "inner_method": "smoothed inner offset .018m; 10 normal + 8 position smoothing steps",
+      "max_inner_distance_m": 0.02192406757017614,
+      "vertices": 2068,
+      "triangles": 4132,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "components": 1,
+      "signed_volume": 0.000751734144033325
+    },
+    {
+      "id": "biceps.right",
+      "inner_method": "smoothed inner offset .018m; 10 normal + 8 position smoothing steps",
+      "max_inner_distance_m": 0.021446314477052298,
+      "vertices": 788,
+      "triangles": 1572,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "components": 1,
+      "signed_volume": 0.00021343659146862541
+    },
+    {
+      "id": "triceps.right",
+      "inner_method": "smoothed inner offset .018m; 10 normal + 8 position smoothing steps",
+      "max_inner_distance_m": 0.021055246454242713,
+      "vertices": 838,
+      "triangles": 1672,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "components": 1,
+      "signed_volume": 0.00019149763448744804
+    },
+    {
+      "id": "support",
+      "inner_method": "normal offset .006m",
+      "max_inner_distance_m": 0.006000000000000052,
+      "vertices": 36840,
+      "triangles": 73700,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "components": 1,
+      "signed_volume": 0.004761289934552085
+    },
+    {
+      "id": "baseline",
+      "inner_method": "normal offset .006m",
+      "max_inner_distance_m": 0.006000000000000055,
+      "vertices": 41102,
+      "triangles": 82208,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "components": 1,
+      "signed_volume": 0.006018195298636621
+    }
+  ]
+}

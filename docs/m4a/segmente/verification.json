@@ -1,0 +1,266 @@
+{
+  "blend_sha256": "2d9ad5e77092094e2fe068cd7dcdfb7dc4888c86540e783eb517e633f1027796",
+  "glb_sha256": "832677ee7dabf36f3e313e71e7c2663d0315e7ef684775d2921e6c2557931b61",
+  "glb_bytes": 2187868,
+  "nodes": 9,
+  "independent_materials": 9,
+  "textures": 0,
+  "roundtrip": [
+    {
+      "id": "pectoralis.left",
+      "triangles": 2980,
+      "geometry_equal_at_1_micrometre": true
+    },
+    {
+      "id": "deltoid.left",
+      "triangles": 4108,
+      "geometry_equal_at_1_micrometre": true
+    },
+    {
+      "id": "biceps.left",
+      "triangles": 1784,
+      "geometry_equal_at_1_micrometre": true
+    },
+    {
+      "id": "triceps.left",
+      "triangles": 1532,
+      "geometry_equal_at_1_micrometre": true
+    },
+    {
+      "id": "pectoralis.right",
+      "triangles": 2532,
+      "geometry_equal_at_1_micrometre": true
+    },
+    {
+      "id": "deltoid.right",
+      "triangles": 4132,
+      "geometry_equal_at_1_micrometre": true
+    },
+    {
+      "id": "biceps.right",
+      "triangles": 1572,
+      "geometry_equal_at_1_micrometre": true
+    },
+    {
+      "id": "triceps.right",
+      "triangles": 1672,
+      "geometry_equal_at_1_micrometre": true
+    },
+    {
+      "id": "support",
+      "triangles": 73700,
+      "geometry_equal_at_1_micrometre": true
+    }
+  ],
+  "first_hit_selection_probes": [
+    {
+      "id": "biceps.left",
+      "object": "M4A.biceps.left",
+      "origin": [
+        2.2943058013916016,
+        -3.2766082286834717,
+        0.5
+      ],
+      "direction": [
+        -0.5349504351615906,
+        0.8447951674461365,
+        -0.012216080911457539
+      ],
+      "hit": [
+        0.22161650657653809,
+        -0.0034117698669433594,
+        0.4526682496070862
+      ],
+      "triangle": 200
+    },
+    {
+      "id": "biceps.right",
+      "object": "M4A.biceps.right",
+      "origin": [
+        -2.2943058013916016,
+        -3.2766082286834717,
+        0.5
+      ],
+      "direction": [
+        0.5375739336013794,
+        0.8431338667869568,
+        -0.011814378201961517
+      ],
+      "hit": [
+        -0.21251535415649414,
+        -0.011516809463500977,
+        0.4542480409145355
+      ],
+      "triangle": 398
+    },
+    {
+      "id": "deltoid.left",
+      "object": "M4A.deltoid.left",
+      "origin": [
+        2.2943058013916016,
+        -3.2766082286834717,
+        0.5
+      ],
+      "direction": [
+        -0.5250987410545349,
+        0.8506948351860046,
+        0.02427828125655651
+      ],
+      "hit": [
+        0.23601293563842773,
+        0.05796313285827637,
+        0.5951665043830872
+      ],
+      "triangle": 1471
+    },
+    {
+      "id": "deltoid.right",
+      "object": "M4A.deltoid.right",
+      "origin": [
+        -2.2943058013916016,
+        -3.2766082286834717,
+        0.5
+      ],
+      "direction": [
+        0.5199449062347412,
+        0.8541990518569946,
+        -0.001183105749078095
+      ],
+      "hit": [
+        -0.26052093505859375,
+        0.06462502479553223,
+        0.4953722357749939
+      ],
+      "triangle": 572
+    },
+    {
+      "id": "pectoralis.left",
+      "object": "M4A.pectoralis.left",
+      "origin": [
+        2.2943058013916016,
+        -3.2766082286834717,
+        0.5
+      ],
+      "direction": [
+        -0.576741099357605,
+        0.8168867230415344,
+        0.008104559034109116
+      ],
+      "hit": [
+        0.06274843215942383,
+        -0.11586642265319824,
+        0.5313585996627808
+      ],
+      "triangle": 733
+    },
+    {
+      "id": "pectoralis.right",
+      "object": "M4A.pectoralis.right",
+      "origin": [
+        -2.2943058013916016,
+        -3.2766082286834717,
+        0.5
+      ],
+      "direction": [
+        0.5769169926643372,
+        0.8167943954467773,
+        -0.0037074415013194084
+      ],
+      "hit": [
+        -0.07375144958496094,
+        -0.1327652931213379,
+        0.48573005199432373
+      ],
+      "triangle": 634
+    },
+    {
+      "id": "triceps.left",
+      "object": "M4A.triceps.left",
+      "origin": [
+        2.2943058013916016,
+        3.2766082286834717,
+        0.5
+      ],
+      "direction": [
+        -0.5457048416137695,
+        -0.8375505208969116,
+        -0.026745786890387535
+      ],
+      "hit": [
+        0.24518418312072754,
+        0.1316061019897461,
+        0.399569571018219
+      ],
+      "triangle": 234
+    },
+    {
+      "id": "triceps.right",
+      "object": "M4A.triceps.right",
+      "origin": [
+        -2.2943058013916016,
+        3.2766082286834717,
+        0.5
+      ],
+      "direction": [
+        0.5474823117256165,
+        -0.8366037011146545,
+        -0.018904179334640503
+      ],
+      "hit": [
+        -0.24071931838989258,
+        0.13853764533996582,
+        0.42909109592437744
+      ],
+      "triangle": 559
+    }
+  ],
+  "nonadjacent_self_intersection_pairs": {
+    "pectoralis.left": {
+      "total": 2,
+      "categories": {
+        "inner_wall": 2
+      }
+    },
+    "deltoid.left": {
+      "total": 0,
+      "categories": {}
+    },
+    "biceps.left": {
+      "total": 0,
+      "categories": {}
+    },
+    "triceps.left": {
+      "total": 0,
+      "categories": {}
+    },
+    "pectoralis.right": {
+      "total": 17,
+      "categories": {
+        "wall_wall": 10,
+        "inner_wall": 7
+      }
+    },
+    "deltoid.right": {
+      "total": 0,
+      "categories": {}
+    },
+    "biceps.right": {
+      "total": 0,
+      "categories": {}
+    },
+    "triceps.right": {
+      "total": 0,
+      "categories": {}
+    },
+    "support": {
+      "total": 607,
+      "categories": {
+        "inner_wall": 7,
+        "inner_inner": 597,
+        "wall_wall": 3
+      }
+    }
+  },
+  "intersection_caveat": "BVH triangle-overlap diagnostic, not a certification of printability or medical volumes.",
+  "mobile_runtime_tested": false
+}
