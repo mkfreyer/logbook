@@ -1,0 +1,224 @@
+{
+  "composer_sha256": "e840207c6be28d700ab67eb2968d0c55dfa11d19eccd9403694bf04ee75ed791",
+  "method": "Raw PNG pixels pasted at native size; labels and borders only.",
+  "sheets": [
+    {
+      "file": "comparatif-face.png",
+      "sha256": "4221425ee98e88167ec4ea57145bf0d117c727ec95b7167f43c689e8b80ae23c",
+      "inputs": [
+        {
+          "file": "avant-face.png",
+          "sha256": "098b498ddc1ea559da5ab65c0fce44f0d1bcb1d04728f429987206ab7033ec68"
+        },
+        {
+          "file": "apres-face.png",
+          "sha256": "67d4da3abec0638f5538b93d5595de9906c09627caa78f4e2905f6c4ac08a96d"
+        }
+      ],
+      "render_pixels_retouch": false
+    },
+    {
+      "file": "comparatif-profil.png",
+      "sha256": "aa54f4528cdcc5858b820b017a1d22037192c867aa29bd8f9a99db8e908a5f91",
+      "inputs": [
+        {
+          "file": "avant-profil.png",
+          "sha256": "03cc28ced85211341f0c1d1c8c90d71a45e403b269f473616a90dc12ea0906b4"
+        },
+        {
+          "file": "apres-profil.png",
+          "sha256": "b780bab58add63a9b46122de1859e0d65c8beb920922fc071f68c1546e289f74"
+        }
+      ],
+      "render_pixels_retouch": false
+    },
+    {
+      "file": "comparatif-dos.png",
+      "sha256": "fb33c76c1ef2ed99d39f614ddaabd7eab0da183d0cdb64e7ebb52a161126f25e",
+      "inputs": [
+        {
+          "file": "avant-dos.png",
+          "sha256": "49ecc51af3bd841df6de208c1ebc4afcc60ed1c9459a688b3a0769accb0dbce3"
+        },
+        {
+          "file": "apres-dos.png",
+          "sha256": "3ffb23ad22b14110ae72c453b1c3f3df92a45337c6e3ff92f53a4f7b0e18dea6"
+        }
+      ],
+      "render_pixels_retouch": false
+    },
+    {
+      "file": "comparatif-epaule-droite.png",
+      "sha256": "8cb3d16b9c75655280ab9d51dbb60e31f2c7b9eb77906a8b8c3c847110d7a415",
+      "inputs": [
+        {
+          "file": "avant-epaule-droite.png",
+          "sha256": "c6c377f4a334d71840c8dcb895483f45039024ac9880844d577a886fa76ad0c0"
+        },
+        {
+          "file": "apres-epaule-droite.png",
+          "sha256": "9bcd694798ab59db19a2d57a5bb16767c1e1435269dfccf67546a48df21e83ac"
+        }
+      ],
+      "render_pixels_retouch": false
+    },
+    {
+      "file": "comparatif-epaule-gauche.png",
+      "sha256": "5888653485c779a14ab629fe8651494061b1afdc6c4dc1941ba1b1e1e0cbf2b1",
+      "inputs": [
+        {
+          "file": "avant-epaule-gauche.png",
+          "sha256": "37172bb87b7f77ba3128fc3d091608d44d829c189bab74b8b025321d6bf4da01"
+        },
+        {
+          "file": "apres-epaule-gauche.png",
+          "sha256": "97d91bf2def671ca4635f04297aec6dc76852d0c2b1f3d8a162a51fc6816d28d"
+        }
+      ],
+      "render_pixels_retouch": false
+    },
+    {
+      "file": "comparatif-epaule-profil.png",
+      "sha256": "cb872c978ec4c42feefe878a118808d5ed850867a34b8d39e5a1a9173adb23c2",
+      "inputs": [
+        {
+          "file": "avant-epaule-profil.png",
+          "sha256": "8b708764e9d492b54c9803ed0493412f859143215a8caf213421e19371b61d3f"
+        },
+        {
+          "file": "apres-epaule-profil.png",
+          "sha256": "c220fed1d1eae2bc71918ff95420f8911a9074841c114c7706361d9bd48a334a"
+        }
+      ],
+      "render_pixels_retouch": false
+    },
+    {
+      "file": "comparatif-epaule-arriere.png",
+      "sha256": "1c6ed974b31cc618fd125a27365d459add76989829341b75656f49f09043bf5d",
+      "inputs": [
+        {
+          "file": "avant-epaule-arriere.png",
+          "sha256": "d3edd27c389e9c5fbbc32edcbc5d641ee48e8cd453d32e62bcec36e07b0603a2"
+        },
+        {
+          "file": "apres-epaule-arriere.png",
+          "sha256": "e36b3c1637df19e473223ffae76f67d0d0ca7777b76e3f4192e07e02161a2a6c"
+        }
+      ],
+      "render_pixels_retouch": false
+    },
+    {
+      "file": "comparatif-haut-dos.png",
+      "sha256": "753e6716082e674d87fa8919d422e12ac4f67175dd5db657ad6a88d07d7f0e0a",
+      "inputs": [
+        {
+          "file": "avant-haut-dos.png",
+          "sha256": "e2ebd150c1027f39cb4c0fd69ce7cfe92a5bed075c8a37a5c1ce4ddc0cc0a635"
+        },
+        {
+          "file": "apres-haut-dos.png",
+          "sha256": "92d0cbc078dad250b092b9c1844855ca2be48f55effe91b3dd61a3d3688fc7b2"
+        }
+      ],
+      "render_pixels_retouch": false
+    },
+    {
+      "file": "comparatif-pectoraux.png",
+      "sha256": "87188cdddfdffa48cb7c99413825933d8d7b97e251970ae9a8f0fdeef7e99296",
+      "inputs": [
+        {
+          "file": "avant-pectoraux.png",
+          "sha256": "f23e34003405e06ab0e31fa8fae9325b2708a53d1b4507b94ce2c4e5db402916"
+        },
+        {
+          "file": "apres-pectoraux.png",
+          "sha256": "2dacb31b705726e83d0f98dc412fc39b06831b4ecf0cd05a0a9107d41b9e695e"
+        }
+      ],
+      "render_pixels_retouch": false
+    },
+    {
+      "file": "comparatif-thorax-lateral.png",
+      "sha256": "4389af2cd52b45ab1d35b0e84f5dc94335fdc19ae21a167797ed0223fb7d29e8",
+      "inputs": [
+        {
+          "file": "avant-thorax-lateral.png",
+          "sha256": "dfb34b7d7b6a56b8d0cab94f5bdee129c92a89f96f90df71fa80d03f6688f9ca"
+        },
+        {
+          "file": "apres-thorax-lateral.png",
+          "sha256": "74a826bb9453101ab7e200ef153c6178269a8a64199dbdad341433fb8f814dbd"
+        }
+      ],
+      "render_pixels_retouch": false
+    },
+    {
+      "file": "validation-mat-neutre.png",
+      "sha256": "ce540aafd3051997ab191726f4e1e7666f066ce987ada949d614f4f18402fd7d",
+      "inputs": [
+        {
+          "file": "apres-face.png",
+          "sha256": "67d4da3abec0638f5538b93d5595de9906c09627caa78f4e2905f6c4ac08a96d"
+        },
+        {
+          "file": "apres-profil.png",
+          "sha256": "b780bab58add63a9b46122de1859e0d65c8beb920922fc071f68c1546e289f74"
+        },
+        {
+          "file": "apres-dos.png",
+          "sha256": "3ffb23ad22b14110ae72c453b1c3f3df92a45337c6e3ff92f53a4f7b0e18dea6"
+        }
+      ],
+      "render_pixels_retouch": false
+    },
+    {
+      "file": "deux-epaules.png",
+      "sha256": "4743626c345e0cf0138292e0843fa8aa8bde2e8f18cffebbae43190834448a5c",
+      "inputs": [
+        {
+          "file": "apres-epaule-droite.png",
+          "sha256": "9bcd694798ab59db19a2d57a5bb16767c1e1435269dfccf67546a48df21e83ac"
+        },
+        {
+          "file": "apres-epaule-gauche.png",
+          "sha256": "97d91bf2def671ca4635f04297aec6dc76852d0c2b1f3d8a162a51fc6816d28d"
+        }
+      ],
+      "render_pixels_retouch": false
+    },
+    {
+      "file": "deltoide-trois-angles.png",
+      "sha256": "b9188e2f0feed64eb19b92407cd3cc345217856edf5e6a9995c78c827f960b83",
+      "inputs": [
+        {
+          "file": "apres-epaule-droite.png",
+          "sha256": "9bcd694798ab59db19a2d57a5bb16767c1e1435269dfccf67546a48df21e83ac"
+        },
+        {
+          "file": "apres-epaule-profil.png",
+          "sha256": "c220fed1d1eae2bc71918ff95420f8911a9074841c114c7706361d9bd48a334a"
+        },
+        {
+          "file": "apres-epaule-arriere.png",
+          "sha256": "e36b3c1637df19e473223ffae76f67d0d0ca7777b76e3f4192e07e02161a2a6c"
+        }
+      ],
+      "render_pixels_retouch": false
+    },
+    {
+      "file": "diagnostic-eclairage.png",
+      "sha256": "1d6c09c56c61979e3e3d7d32f2525018bc9136ad6294afeb36dfdfa91107ae09",
+      "inputs": [
+        {
+          "file": "../../ecorche-beatriz-passe2/renders/apres-face.png",
+          "sha256": "c7bfe25d8d34a2cf2e389b823670fabfdbb1e646c18cc7a3d4def1e1a8b3d826"
+        },
+        {
+          "file": "avant-face.png",
+          "sha256": "098b498ddc1ea559da5ab65c0fce44f0d1bcb1d04728f429987206ab7033ec68"
+        }
+      ],
+      "render_pixels_retouch": false
+    }
+  ]
+}
