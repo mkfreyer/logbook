@@ -1,0 +1,75 @@
+{
+  "study_only": true,
+  "budget_spent_eur": 0,
+  "binary_files_obtained": [],
+  "models": [
+    {
+      "id": "A",
+      "uid": "31f1e665ed684f4eabc125788d616cf3",
+      "target": "mannequin du milieu uniquement",
+      "download_completed": false,
+      "sketchfab_license": null,
+      "triangle_count": null,
+      "vertex_count": null,
+      "runtime_file_bytes": null,
+      "muscle_segmentation": "non vérifiée",
+      "store_declarations": {
+        "formats": [
+          "ZPR",
+          "ZTL",
+          "FBX highpoly",
+          "FBX highpoly décimé",
+          "FBX lowpoly"
+        ],
+        "uv": true,
+        "subdivision_levels": 4,
+        "archive_sizes_MB": {
+          "m1.rar": 330,
+          "m2.rar": 140,
+          "m3.rar": 330,
+          "Shared Textures.rar": 1.1
+        },
+        "standard_price_usd": 19.99,
+        "extended_price_usd": 199
+      },
+      "provenance": [
+        "A_SKETCHFAB",
+        "A_STORE"
+      ],
+      "warning": "Aucun transfert des statistiques du modèle gratuit voisin 16a6424 vers cet UID."
+    },
+    {
+      "id": "B",
+      "uid": "33162ec759e04d2985dbbdf4ec908d66",
+      "download_completed": false,
+      "sketchfab_license": "intitulé historique commercial ; licence acquise non confirmée",
+      "triangles_displayed_rounded": 664300,
+      "vertices_displayed_rounded": 332300,
+      "runtime_file_bytes": null,
+      "muscle_segmentation": "auteur du bundle : non séparé par muscle",
+      "store_declarations": {
+        "formats": [
+          "OBJ triangulé",
+          "OBJ non triangulé"
+        ],
+        "male_zip_size_MB": 190,
+        "standard_price_usd": 15,
+        "extended_price_usd": 150
+      },
+      "bundle_declarations": {
+        "single_object_per_body": true,
+        "color_texture_for_muscles": true,
+        "quad_highpoly_and_decimated": true,
+        "uv": true
+      },
+      "no_ai_tag_indexed": true,
+      "provenance": [
+        "B_SKETCHFAB",
+        "B_STORE",
+        "B_BUNDLE",
+        "B_CHART"
+      ]
+    }
+  ],
+  "user_confirmed_no_existing_license_or_copy": true
+}

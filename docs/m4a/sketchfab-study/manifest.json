@@ -1,0 +1,42 @@
+{
+  "base_commit": "7c2aa5c",
+  "date": "2026-10-20",
+  "scope": "documentation et métadonnées uniquement",
+  "files": [
+    {
+      "path": "docs/M4A_COMPARATIF_SKETCHFAB.md",
+      "bytes": 15075,
+      "sha256": "97dc93b02090a7b82df1d3af02e30f40790598ad9b0d12aadb35977ea01edf52"
+    },
+    {
+      "path": "docs/m4a/sketchfab-study/A_VERIFIER.md",
+      "bytes": 1969,
+      "sha256": "9684ee8b230dc958899111d5ac1858faa444dde10b4c6c4701654b4adbecdb5a"
+    },
+    {
+      "path": "docs/m4a/sketchfab-study/EXTRAITS.md",
+      "bytes": 1938,
+      "sha256": "0faa7eaa2fcd74f852bf9d2d9341eaede61ff70fab32780f734ac2afd42a479b"
+    },
+    {
+      "path": "docs/m4a/sketchfab-study/VISUELS.md",
+      "bytes": 2326,
+      "sha256": "ae0d6f6e047bfc6e2051505c0db056960f3a9d1dc55c58518dbba507e8630e26"
+    },
+    {
+      "path": "docs/m4a/sketchfab-study/access-log.json",
+      "bytes": 1586,
+      "sha256": "205b4a68041d23851e0082d188230a75d7d3b40eb7d3fcd1113d8cc57925399c"
+    },
+    {
+      "path": "docs/m4a/sketchfab-study/metadata.json",
+      "bytes": 2096,
+      "sha256": "841565d5578de4938f3721d14f385f869625401fb1dc88706c82df246f271904"
+    },
+    {
+      "path": "docs/m4a/sketchfab-study/sources.json",
+      "bytes": 2575,
+      "sha256": "9a08c4ebf2764f89ab43175921dd124e289374ff5bdb4437c51cdc790b002f32"
+    }
+  ]
+}
