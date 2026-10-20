@@ -1,0 +1,142 @@
+{
+  "source_sha256": "9fab861a65407e69b9401bec077bf7b40f58d36404e80bad9db6147f24320a14",
+  "crop_source_y": 0.12,
+  "curve": "periodic Catmull-Rom, 12 samples/segment",
+  "area_error": 0.0,
+  "parts": [
+    {
+      "id": "pectoralis.left",
+      "vertices": 746,
+      "triangles": 1218,
+      "boundary_edges": 272,
+      "nonmanifold_edges": 0,
+      "components": 1,
+      "area": 0.035949067558627854,
+      "min_triangle_area": 6.486009051669481e-10
+    },
+    {
+      "id": "deltoid.left",
+      "vertices": 1028,
+      "triangles": 1814,
+      "boundary_edges": 240,
+      "nonmanifold_edges": 0,
+      "components": 1,
+      "area": 0.04567663043269024,
+      "min_triangle_area": 1.5320803937354093e-12
+    },
+    {
+      "id": "biceps.left",
+      "vertices": 447,
+      "triangles": 732,
+      "boundary_edges": 160,
+      "nonmanifold_edges": 0,
+      "components": 1,
+      "area": 0.015223407470759646,
+      "min_triangle_area": 4.54446382793885e-09
+    },
+    {
+      "id": "triceps.left",
+      "vertices": 384,
+      "triangles": 623,
+      "boundary_edges": 143,
+      "nonmanifold_edges": 0,
+      "components": 1,
+      "area": 0.013365196369214172,
+      "min_triangle_area": 2.914142515370886e-09
+    },
+    {
+      "id": "pectoralis.right",
+      "vertices": 634,
+      "triangles": 1024,
+      "boundary_edges": 242,
+      "nonmanifold_edges": 0,
+      "components": 1,
+      "area": 0.035103090871784356,
+      "min_triangle_area": 3.8063510236587963e-10
+    },
+    {
+      "id": "deltoid.right",
+      "vertices": 1034,
+      "triangles": 1831,
+      "boundary_edges": 235,
+      "nonmanifold_edges": 0,
+      "components": 1,
+      "area": 0.04729823724823913,
+      "min_triangle_area": 1.0588994614939717e-11
+    },
+    {
+      "id": "biceps.right",
+      "vertices": 394,
+      "triangles": 644,
+      "boundary_edges": 142,
+      "nonmanifold_edges": 0,
+      "components": 1,
+      "area": 0.014714817424859982,
+      "min_triangle_area": 5.1076231577820994e-09
+    },
+    {
+      "id": "triceps.right",
+      "vertices": 419,
+      "triangles": 681,
+      "boundary_edges": 155,
+      "nonmanifold_edges": 0,
+      "components": 1,
+      "area": 0.013116365588956642,
+      "min_triangle_area": 7.23454612739044e-09
+    },
+    {
+      "id": "support",
+      "vertices": 18420,
+      "triangles": 35074,
+      "boundary_edges": 1776,
+      "nonmanifold_edges": 0,
+      "components": 1,
+      "area": 0.8233306993173284,
+      "min_triangle_area": 2.9271601716543013e-13
+    },
+    {
+      "id": "baseline",
+      "vertices": 20551,
+      "triangles": 40663,
+      "boundary_edges": 441,
+      "nonmanifold_edges": 0,
+      "components": 1,
+      "area": 1.0437775122824604,
+      "min_triangle_area": 2.9271601716543013e-13
+    }
+  ],
+  "cleanup": [
+    {
+      "id": "pectoralis.left",
+      "reassigned_triangles": 0
+    },
+    {
+      "id": "deltoid.left",
+      "reassigned_triangles": 0
+    },
+    {
+      "id": "biceps.left",
+      "reassigned_triangles": 0
+    },
+    {
+      "id": "triceps.left",
+      "reassigned_triangles": 0
+    },
+    {
+      "id": "pectoralis.right",
+      "reassigned_triangles": 4
+    },
+    {
+      "id": "deltoid.right",
+      "reassigned_triangles": 0
+    },
+    {
+      "id": "biceps.right",
+      "reassigned_triangles": 39
+    },
+    {
+      "id": "triceps.right",
+      "reassigned_triangles": 0
+    }
+  ]
+}

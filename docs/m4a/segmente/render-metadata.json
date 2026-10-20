@@ -1,0 +1,156 @@
+{
+  "engine": "Cycles CPU",
+  "samples": 64,
+  "resolution": [
+    780,
+    1000
+  ],
+  "seed": 0,
+  "denoising": false,
+  "frames": [
+    {
+      "file": "front.png",
+      "camera": "front",
+      "selected": null,
+      "baseline": false,
+      "isolate": false,
+      "exploded": false
+    },
+    {
+      "file": "three-quarter.png",
+      "camera": "three-quarter",
+      "selected": null,
+      "baseline": false,
+      "isolate": false,
+      "exploded": false
+    },
+    {
+      "file": "profile.png",
+      "camera": "profile",
+      "selected": null,
+      "baseline": false,
+      "isolate": false,
+      "exploded": false
+    },
+    {
+      "file": "back.png",
+      "camera": "back",
+      "selected": null,
+      "baseline": false,
+      "isolate": false,
+      "exploded": false
+    },
+    {
+      "file": "baseline-front.png",
+      "camera": "front",
+      "selected": null,
+      "baseline": true,
+      "isolate": false,
+      "exploded": false
+    },
+    {
+      "file": "baseline-three-quarter.png",
+      "camera": "three-quarter",
+      "selected": null,
+      "baseline": true,
+      "isolate": false,
+      "exploded": false
+    },
+    {
+      "file": "baseline-profile.png",
+      "camera": "profile",
+      "selected": null,
+      "baseline": true,
+      "isolate": false,
+      "exploded": false
+    },
+    {
+      "file": "baseline-back.png",
+      "camera": "back",
+      "selected": null,
+      "baseline": true,
+      "isolate": false,
+      "exploded": false
+    },
+    {
+      "file": "select-pectoralis.left.png",
+      "camera": "three-quarter",
+      "selected": "pectoralis.left",
+      "baseline": false,
+      "isolate": false,
+      "exploded": false
+    },
+    {
+      "file": "select-deltoid.left.png",
+      "camera": "three-quarter",
+      "selected": "deltoid.left",
+      "baseline": false,
+      "isolate": false,
+      "exploded": false
+    },
+    {
+      "file": "select-biceps.left.png",
+      "camera": "three-quarter",
+      "selected": "biceps.left",
+      "baseline": false,
+      "isolate": false,
+      "exploded": false
+    },
+    {
+      "file": "select-triceps.left.png",
+      "camera": "rear-three-quarter",
+      "selected": "triceps.left",
+      "baseline": false,
+      "isolate": false,
+      "exploded": false
+    },
+    {
+      "file": "select-pectoralis.right.png",
+      "camera": "three-quarter-right",
+      "selected": "pectoralis.right",
+      "baseline": false,
+      "isolate": false,
+      "exploded": false
+    },
+    {
+      "file": "select-deltoid.right.png",
+      "camera": "three-quarter-right",
+      "selected": "deltoid.right",
+      "baseline": false,
+      "isolate": false,
+      "exploded": false
+    },
+    {
+      "file": "select-biceps.right.png",
+      "camera": "three-quarter-right",
+      "selected": "biceps.right",
+      "baseline": false,
+      "isolate": false,
+      "exploded": false
+    },
+    {
+      "file": "select-triceps.right.png",
+      "camera": "rear-three-quarter-right",
+      "selected": "triceps.right",
+      "baseline": false,
+      "isolate": false,
+      "exploded": false
+    },
+    {
+      "file": "isolate-pectoralis.left.png",
+      "camera": "three-quarter",
+      "selected": "pectoralis.left",
+      "baseline": false,
+      "isolate": true,
+      "exploded": false
+    },
+    {
+      "file": "exploded.png",
+      "camera": "three-quarter",
+      "selected": null,
+      "baseline": false,
+      "isolate": false,
+      "exploded": true
+    }
+  ]
+}

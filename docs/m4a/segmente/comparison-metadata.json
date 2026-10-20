@@ -1,0 +1,15 @@
+{
+  "panel_size": [
+    390,
+    500
+  ],
+  "composition": "Pillow LANCZOS resize + titles only; no anatomical image edits",
+  "files": [
+    "comparison-front-390.png",
+    "comparison-three-quarter-390.png",
+    "comparison-profile-390.png",
+    "comparison-back-390.png",
+    "selections-8-pieces.png",
+    "isolation-et-eclate.png"
+  ]
+}
