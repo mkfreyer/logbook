@@ -1,0 +1,4927 @@
+{
+  "baseline_commit": "ff092992bb55e005dd850563ca59765b2fbffd4f",
+  "source_sha256": "9fab861a65407e69b9401bec077bf7b40f58d36404e80bad9db6147f24320a14",
+  "baseline_labels_sha256": "67247aa0a61c8eb0fa9363902d54e31a206677d6b7329314a15a6e9ecd792f6e",
+  "corrected_labels_sha256": "df3dafff71bc7b57c52b128cc49a358d4aa9b59fee7fcc1bcd01fc0983372fb8",
+  "method": "One targeted pass over existing face assignments. Remove posterior/inferior deltoid overrun identified on actual neutral Meshy views; remove single-face boundary tips in each region independently. No new global classification. Anatomical ambiguities retained for manual review.",
+  "annotation": {
+    "image_size": [
+      1000,
+      840
+    ],
+    "ortho_width": 0.68,
+    "camera_names": [
+      "CAM_CONTROLE_PROFIL",
+      "CAM_CONTROLE_DOS"
+    ],
+    "profile_lower_groove_pixels": [
+      [
+        410.0,
+        430.0
+      ],
+      [
+        455.0,
+        436.0
+      ],
+      [
+        480.0,
+        452.0
+      ],
+      [
+        510.0,
+        484.0
+      ],
+      [
+        550.0,
+        520.0
+      ],
+      [
+        579.0,
+        492.0
+      ],
+      [
+        625.0,
+        465.0
+      ],
+      [
+        669.0,
+        440.0
+      ],
+      [
+        695.0,
+        411.0
+      ],
+      [
+        716.0,
+        367.0
+      ]
+    ],
+    "rear_lower_groove_pixels": [
+      [
+        270.0,
+        501.0
+      ],
+      [
+        300.0,
+        496.0
+      ],
+      [
+        332.0,
+        471.0
+      ],
+      [
+        363.0,
+        452.0
+      ],
+      [
+        397.0,
+        433.0
+      ],
+      [
+        431.0,
+        416.0
+      ],
+      [
+        465.0,
+        396.0
+      ],
+      [
+        497.0,
+        371.0
+      ],
+      [
+        522.0,
+        335.0
+      ],
+      [
+        539.0,
+        293.0
+      ]
+    ],
+    "rear_source_z_max": -0.025
+  },
+  "edits": [
+    {
+      "source_triangle": 20098,
+      "from": 2,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 20947,
+      "from": 2,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 21530,
+      "from": 2,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 23925,
+      "from": 2,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 30324,
+      "from": 2,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 37109,
+      "from": 2,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 39213,
+      "from": 2,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 39422,
+      "from": 2,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 39836,
+      "from": 2,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 40400,
+      "from": 2,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 41453,
+      "from": 2,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 44104,
+      "from": 2,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 44473,
+      "from": 2,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 46133,
+      "from": 2,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 46790,
+      "from": 2,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 46846,
+      "from": 2,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 46898,
+      "from": 2,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 48605,
+      "from": 1,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 48650,
+      "from": 1,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 48831,
+      "from": 1,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 49107,
+      "from": 1,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 49332,
+      "from": 1,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 49350,
+      "from": 1,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 53595,
+      "from": 1,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 54211,
+      "from": 1,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 54249,
+      "from": 1,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 57275,
+      "from": 1,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 64382,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 66097,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 66755,
+      "from": 1,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 66963,
+      "from": 1,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 67538,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 67811,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 67997,
+      "from": 1,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 68562,
+      "from": 1,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 68577,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 68724,
+      "from": 1,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 68725,
+      "from": 1,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 69135,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 69463,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 69929,
+      "from": 1,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 70312,
+      "from": 1,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 71111,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 71570,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 74243,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 74244,
+      "from": 1,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 74688,
+      "from": 1,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 74841,
+      "from": 1,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 74973,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 76150,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 76151,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 76152,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 76657,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 76658,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 76876,
+      "from": 1,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 77162,
+      "from": 1,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 77187,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 77188,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 77218,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove",
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 77223,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 77224,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 77506,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 77788,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 77789,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 77848,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 77881,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 77882,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 78175,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 78377,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 78378,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 78448,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 78449,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 78454,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 78597,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 78598,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 78649,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 78650,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 78899,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 78900,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 79234,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 79235,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 79384,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 79385,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 79561,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 79562,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 79660,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 79663,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 79717,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 79718,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 79744,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 79756,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 80010,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 80011,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 80012,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 80034,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 80035,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 80036,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 80042,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 80043,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 80044,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 80045,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 80092,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 80093,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 80119,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 80120,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 80121,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 80131,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 80133,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 80155,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 80156,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 80199,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 80200,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 80226,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 80227,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 80228,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 80229,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 80266,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 80267,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 80285,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 80286,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 80444,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 80495,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 80496,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 80543,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 80544,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 80545,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 80546,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 80547,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 80579,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 80580,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 80633,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 80643,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 80644,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 80645,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 80707,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 80709,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 80731,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 80752,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 80753,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 80774,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 80775,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 80811,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 80871,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 80872,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 80963,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 81015,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 81016,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 81208,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 81209,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 81210,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 81248,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 81249,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 81260,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 81261,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 81262,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 81266,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 81327,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 81328,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 81400,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 81402,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 81439,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 81449,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 81450,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 81451,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 81455,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 81511,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 81512,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 81561,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 81562,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 81637,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 81638,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 81713,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 81714,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 81715,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 81738,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 81753,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 81754,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 81755,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 81756,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 81818,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 81819,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 81820,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 81861,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 81862,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 81863,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 81885,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 81886,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 81914,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 81915,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 81916,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 81917,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 81975,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 82028,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 82029,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 82030,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 82053,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 82077,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 82200,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 82201,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 82202,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove",
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 82283,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 82293,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 82294,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 82295,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 82296,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 82339,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 82340,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 82355,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 82356,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 82357,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 82358,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 82359,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 82360,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 82361,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 82362,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 82367,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 82420,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 82421,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 82422,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 82436,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 82437,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 82458,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 82491,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 82499,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 82500,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 82598,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 82599,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 82619,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 82648,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 82690,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 82694,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 82695,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 82696,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 82709,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 82718,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 82736,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 82756,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 82757,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 82758,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 82759,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 82917,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 82918,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 82919,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 82921,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83015,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83016,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83043,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 83044,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 83068,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 83069,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 83070,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 83115,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 83124,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 83205,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83217,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83243,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 83245,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 83402,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83403,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83416,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83417,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83426,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 83427,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 83497,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83523,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 83534,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 83586,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83587,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83615,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83665,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83666,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83667,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83668,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83669,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83689,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 83690,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 83691,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 83701,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83733,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove",
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 83757,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83758,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83759,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83807,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83808,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83816,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83817,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83818,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83825,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83840,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83841,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83842,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83843,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83847,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83848,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83854,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 83855,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 83856,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 83894,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83895,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83899,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83929,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83942,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83943,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83955,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83956,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83960,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83980,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83981,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83982,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83987,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83988,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 83989,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84018,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84046,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84047,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84065,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84066,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84072,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84073,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84074,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84093,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84095,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84148,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84149,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84150,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84151,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84163,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84172,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84176,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84177,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84187,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84188,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84189,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84192,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84205,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84224,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84225,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84226,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84227,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84228,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84242,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84244,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84248,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84266,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84267,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84272,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84292,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84324,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84325,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84332,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84358,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84359,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84371,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84392,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84425,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84426,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84437,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84439,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84440,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84442,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84445,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84446,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84447,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84448,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84459,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove",
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 84460,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84461,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84465,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84466,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84469,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84476,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84477,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84510,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84511,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84512,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84513,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84525,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84526,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84560,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84561,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84570,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84622,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84662,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84698,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84699,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84716,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84730,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84731,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84732,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84767,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84768,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84779,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84780,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84823,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84824,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84825,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84833,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84835,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84836,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84845,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84846,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84847,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84857,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84858,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84859,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84860,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove",
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 84893,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84911,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84912,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84916,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 84930,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84975,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 84976,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85023,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85024,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85025,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85026,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile"
+      ]
+    },
+    {
+      "source_triangle": 85034,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85035,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85044,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85045,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85080,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85081,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85082,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85095,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85096,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85113,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85114,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85115,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85116,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85117,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85118,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85141,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85142,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85143,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85144,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85163,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85164,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85165,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85166,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85170,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85176,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85177,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85191,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85192,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85193,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85211,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85212,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85244,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85245,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85246,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85266,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85282,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85283,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85284,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85285,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85286,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85287,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85295,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85296,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85297,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85298,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85299,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85300,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85301,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85314,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85316,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85319,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85320,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85321,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85328,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85329,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85332,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85333,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85334,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85335,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85336,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85337,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85338,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85341,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85342,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85370,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85371,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85372,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85373,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85382,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85383,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85389,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85392,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85393,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85394,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85395,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85396,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85398,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85399,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85417,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85418,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85419,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85420,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85421,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85422,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85425,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85426,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85427,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85434,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85435,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85441,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85442,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85449,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85450,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85494,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85503,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85577,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove",
+        "one_face_boundary_tip"
+      ]
+    },
+    {
+      "source_triangle": 85578,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85604,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85697,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85698,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85699,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85713,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    },
+    {
+      "source_triangle": 85728,
+      "from": 3,
+      "to": 0,
+      "reasons": [
+        "below_visible_shoulder_groove_profile",
+        "below_visible_posterior_shoulder_groove"
+      ]
+    }
+  ],
+  "topology_protected_or_unreachable_candidates": [
+    79036,
+    79383,
+    79470,
+    82341,
+    82342,
+    82693,
+    82741,
+    82742,
+    82938,
+    83158,
+    83159,
+    83267,
+    83268,
+    83269,
+    83292,
+    83293,
+    83294,
+    83372,
+    83614,
+    83782,
+    83783,
+    84434,
+    84435,
+    84436,
+    84700,
+    84740,
+    84834,
+    84848,
+    84855,
+    84856,
+    84997,
+    85268,
+    85269
+  ],
+  "review_groups": [
+    {
+      "value": 1,
+      "id": "left_pec_clavicle",
+      "status": "anatomical_border_unresolved",
+      "source_triangles": [
+        49064,
+        49065,
+        49098,
+        49349,
+        49512,
+        50246,
+        50687,
+        51191,
+        51383,
+        51897,
+        52069,
+        52238,
+        52346,
+        52395,
+        52447,
+        52720,
+        52984,
+        53177,
+        53264,
+        53399,
+        53513,
+        53644,
+        54210,
+        54714,
+        55016,
+        56049,
+        56079,
+        56167,
+        56745,
+        56818,
+        57392,
+        57618,
+        57937,
+        58256,
+        58832,
+        58833,
+        58903,
+        58942,
+        59334,
+        59402,
+        60443,
+        61084,
+        61779,
+        61803,
+        62351,
+        62651,
+        62961,
+        62962,
+        63736,
+        64300,
+        64487,
+        64538,
+        64860,
+        64861,
+        65303,
+        65369,
+        65370,
+        66002,
+        66095,
+        66171,
+        66401,
+        66590,
+        66775,
+        67002,
+        67003,
+        67024,
+        67219,
+        67244,
+        67454,
+        67501,
+        67983,
+        68070,
+        68697,
+        68705,
+        68889,
+        69402,
+        69500,
+        69747,
+        70292,
+        70778,
+        71058,
+        71661,
+        72424,
+        73047,
+        73366,
+        73394,
+        73707,
+        74059,
+        74749,
+        75026,
+        75495,
+        76125,
+        76619,
+        76667,
+        76716,
+        76923,
+        77069,
+        77118,
+        77119,
+        77285
+      ]
+    },
+    {
+      "value": 2,
+      "id": "right_pec_clavicle",
+      "status": "anatomical_border_unresolved",
+      "source_triangles": [
+        19462,
+        19510,
+        19511,
+        19634,
+        19700,
+        19911,
+        20284,
+        20285,
+        20323,
+        21097,
+        21744,
+        21745,
+        22790,
+        22792,
+        23282,
+        23624,
+        23932,
+        24930,
+        25058,
+        25695,
+        25696,
+        25778,
+        26100,
+        26453,
+        26895,
+        27032,
+        27201,
+        27324,
+        29039,
+        29269,
+        29461,
+        30114,
+        30325,
+        30694,
+        31219,
+        31417,
+        31706,
+        31875,
+        32326,
+        32361,
+        32418,
+        33086,
+        33720,
+        33964,
+        34683,
+        35795,
+        36557,
+        37000,
+        37001,
+        37107,
+        37167,
+        37622,
+        37712,
+        37858,
+        37867,
+        38270,
+        39246,
+        39562,
+        39837,
+        40581,
+        40971,
+        41276,
+        41318,
+        41446,
+        41546,
+        42182,
+        42285,
+        42570,
+        42640,
+        42722,
+        42861,
+        42971,
+        43130,
+        43133,
+        43610,
+        43611,
+        44063,
+        44484,
+        44501,
+        45529,
+        45691,
+        45899,
+        46216,
+        46217,
+        46225,
+        46323,
+        46533,
+        46628
+      ]
+    },
+    {
+      "value": 3,
+      "id": "deltoid_posterior_and_insertion",
+      "status": "anatomical_border_unresolved",
+      "source_triangles": [
+        68204,
+        68766,
+        69031,
+        69052,
+        69361,
+        69580,
+        70237,
+        70391,
+        70450,
+        70969,
+        71080,
+        71081,
+        71552,
+        71836,
+        72781,
+        73495,
+        73832,
+        73833,
+        74818,
+        74972,
+        75370,
+        75608,
+        76764,
+        77155,
+        77159,
+        77445,
+        77668,
+        77669,
+        77745,
+        77876,
+        77961,
+        78699,
+        78700,
+        78920,
+        79036,
+        79355,
+        79356,
+        79383,
+        79469,
+        79576,
+        79661,
+        79743,
+        80132,
+        80154,
+        80708,
+        81401,
+        81667,
+        81843,
+        81901,
+        82341,
+        82342,
+        82368,
+        82525,
+        82691,
+        82692,
+        82693,
+        82719,
+        82737,
+        82738,
+        82741,
+        82742,
+        82780,
+        82781,
+        82811,
+        82938,
+        82997,
+        83045,
+        83116,
+        83150,
+        83158,
+        83159,
+        83244,
+        83267,
+        83268,
+        83269,
+        83292,
+        83293,
+        83294,
+        83372,
+        83440,
+        83524,
+        83525,
+        83614,
+        83699,
+        83702,
+        83703,
+        83782,
+        83783,
+        84088,
+        84155,
+        84434,
+        84435,
+        84436,
+        84438,
+        84441,
+        84618,
+        84700,
+        84740,
+        84834,
+        84848,
+        84855,
+        84856,
+        84894,
+        84915,
+        84997,
+        85097,
+        85204,
+        85267,
+        85268,
+        85269,
+        85315,
+        85318,
+        85331,
+        85432,
+        85433,
+        85497,
+        85498
+      ]
+    }
+  ],
+  "counts_before": {
+    "0": 90710,
+    "1": 1356,
+    "2": 1145,
+    "3": 2215
+  },
+  "counts_after": {
+    "0": 91230,
+    "1": 1333,
+    "2": 1128,
+    "3": 1735
+  },
+  "geometry_changed": false,
+  "anatomical_validation": false
+}

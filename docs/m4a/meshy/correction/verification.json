@@ -1,0 +1,208 @@
+{
+  "source_sha256": "9fab861a65407e69b9401bec077bf7b40f58d36404e80bad9db6147f24320a14",
+  "vertices": 47711,
+  "triangles": 95426,
+  "source_file_intact": true,
+  "both_blender_meshes_bit_equal_source": true,
+  "positions_added_removed_or_moved": 0,
+  "triangles_added_removed": 0,
+  "stable_region_ids": true,
+  "face_edits": 520,
+  "untargeted_face_labels_unchanged": true,
+  "regions": [
+    {
+      "id": "pectoralis.left",
+      "faces": 1333,
+      "connected_components": 1,
+      "boundary_edges": 157,
+      "euler_characteristic": 1,
+      "single_disk": true,
+      "boundary_loops": 1,
+      "boundary_vertex_degree": 2
+    },
+    {
+      "id": "pectoralis.right",
+      "faces": 1128,
+      "connected_components": 1,
+      "boundary_edges": 144,
+      "euler_characteristic": 1,
+      "single_disk": true,
+      "boundary_loops": 1,
+      "boundary_vertex_degree": 2
+    },
+    {
+      "id": "deltoid.left",
+      "faces": 1735,
+      "connected_components": 1,
+      "boundary_edges": 185,
+      "euler_characteristic": 1,
+      "single_disk": true,
+      "boundary_loops": 1,
+      "boundary_vertex_degree": 2
+    }
+  ],
+  "neutral_blue_material_lights_world_unchanged": true,
+  "selection_checks": [
+    {
+      "id": 0,
+      "other_regions_blue": true,
+      "no_emission": true
+    },
+    {
+      "id": 1,
+      "other_regions_blue": true,
+      "no_emission": true
+    },
+    {
+      "id": 2,
+      "other_regions_blue": true,
+      "no_emission": true
+    },
+    {
+      "id": 3,
+      "other_regions_blue": true,
+      "no_emission": true
+    }
+  ],
+  "export_positions_bit_equal_source": true,
+  "all_original_triangles_exported_once": true,
+  "regenerated_mapping_bijective_and_verified": true,
+  "raycast_checks": [
+    {
+      "origin": [
+        0.09,
+        0.52,
+        1
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "source_triangle": 60630,
+      "export_primitive": 1,
+      "local_face": 466,
+      "region": 1
+    },
+    {
+      "origin": [
+        -0.09,
+        0.52,
+        1
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "source_triangle": 35224,
+      "export_primitive": 2,
+      "local_face": 665,
+      "region": 2
+    },
+    {
+      "origin": [
+        0.22,
+        0.56,
+        1
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "source_triangle": 81983,
+      "export_primitive": 3,
+      "local_face": 1145,
+      "region": 3
+    },
+    {
+      "origin": [
+        0,
+        0.1,
+        1
+      ],
+      "direction": [
+        0,
+        0,
+        -1
+      ],
+      "source_triangle": 47723,
+      "export_primitive": 0,
+      "local_face": 46595,
+      "region": 0
+    },
+    {
+      "origin": [
+        0.007572521723132448,
+        0.5875066416346573,
+        0.0787463707929655
+      ],
+      "direction": [
+        0.4564045334301488,
+        -0.6630861935123394,
+        -0.5933056563338364
+      ],
+      "source_triangle": 48605,
+      "export_primitive": 0,
+      "local_face": 47477,
+      "region": 0
+    },
+    {
+      "origin": [
+        -0.17844281139953344,
+        0.48756850445900196,
+        0.018128290149535008
+      ],
+      "direction": [
+        0.522803755308221,
+        0.6299790571967955,
+        -0.5742844425274453
+      ],
+      "source_triangle": 20098,
+      "export_primitive": 0,
+      "local_face": 20080,
+      "region": 0
+    },
+    {
+      "origin": [
+        0.11383779390648065,
+        0.6154740966271011,
+        0.0346188837986893
+      ],
+      "direction": [
+        0.10441045211884131,
+        -0.05720511400441792,
+        -0.992887723974912
+      ],
+      "source_triangle": 64382,
+      "export_primitive": 0,
+      "local_face": 62644,
+      "region": 0
+    }
+  ],
+  "render_hashes_verified": true,
+  "frames": [
+    "before-left-detail.png",
+    "before-deltoid-profile.png",
+    "before-deltoid-back.png",
+    "after-neutral-front.png",
+    "after-left-front.png",
+    "after-left-three-quarter.png",
+    "after-right-front.png",
+    "after-left-detail.png",
+    "after-deltoid-profile.png",
+    "after-deltoid-back.png",
+    "after-diagnostic.png",
+    "after-right-detail.png",
+    "after-deltoid-front.png"
+  ],
+  "visual_verdict": "PARTIEL",
+  "anatomical_contours_validated": false,
+  "mobile_device_performance_validated": false,
+  "limitations": [
+    "Local boundary-tip cleanup is not an anatomical contour validation.",
+    "Residual triangle steps and uncertain clavicular/axillary/posterior boundaries require human face review.",
+    "390 px contact sheets are image-size checks, not an iPhone or touch-engine benchmark."
+  ]
+}
