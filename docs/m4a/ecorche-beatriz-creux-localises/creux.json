@@ -1,0 +1,739 @@
+{
+  "baseline_commit": "0ab3d838c728a88f2d325edff7a6884400c9ed78",
+  "baseline_blend_sha256": "f8b6a232a18335221af3cafc62b37837fedc1caaf9bc6cb48e1cb583f222d9ab",
+  "scene": "17_CREUX_LOCALISES",
+  "before_scene": "16_COMBINAISON_P4_P5",
+  "changed_objects": [
+    "deltoid.left",
+    "deltoid.right"
+  ],
+  "unchanged_other_objects": 298,
+  "source_asset": {
+    "extras": {
+      "author": "Beatriz Gomez Santamaria (https://sketchfab.com/BeatrizGomez)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/ecorche-anatomy-study-e402d3d541eb4b199c57d5410f5d3c57",
+      "title": "Ecorche - Anatomy study"
+    },
+    "generator": "Sketchfab-12.67.0",
+    "version": "2.0"
+  },
+  "source_sha256": "137e2e80bdcf9c87ff49ab32cb5de70f8de542870c78a7d5170e8743d241a73a",
+  "head_source": {
+    "source_url": "https://download.blender.org/demo/asset-bundles/human-base-meshes/human-base-meshes-bundle-v1.4.1.zip",
+    "bundle_blend_sha256": "3c121505651140ceb4d69fd1d8923f7788ffadd81672f5be14845a5f2c75c137",
+    "source_collection": "Head (Animation) - Realistic",
+    "author": "Dan Ulrich",
+    "license": "CC0",
+    "embedded_readme": "Important Info\n==============\n\nHuman Base Meshes: Asset Bundle - Version 1.4\n\nAll provided assets are public domain under the CC0 license.\nThe minimum supported Blender version is 4.2!\n\nWhat's included\n==============\n\nThese are various human base meshes that are provided by the Blender community and the Blender Studio.\nThey include:\n    - Quad topology for multi-resolution sculpting\n    - Closed volumes for voxel remeshing\n    - Face sets\n    - UV maps (including UDIMs)\n    - Multiresoluton levels for realistic assets\n    - Creased edges and Subdiv modifiers for planar/primitive assets\n\nHow to install the Asset Bundle\n===============================\n\nIt's recommended to create a new Asset Library in the preferences first:\n- Open the Preferences\n- Go to \"File Paths\"\n- Add a New Asset Library with the + button and call it \"Human Base Meshes\"\n- Set the \"Import Method\" to \"Append\"\n\nTo add the assets from this file to the Asset Library:\n- In the Asset Browser below, click on \"Copy Bundle to Asset Library\"\n- Choose a target Asset Library\n- Choose a target folder location\n\nThat's it. Enjoy!",
+    "objects": [
+      {
+        "key": "head",
+        "source_object": "GEO-head_animation_realistic",
+        "triangles": 25896,
+        "bbox_m": [
+          [
+            -0.12092459296512412,
+            -0.07735258340835573,
+            1.4387554078102112
+          ],
+          [
+            0.1253736486501713,
+            0.1448040336370468,
+            1.8000673792362214
+          ]
+        ]
+      },
+      {
+        "key": "eye.l",
+        "source_object": "GEO-head_animation_realistic.sclera.L",
+        "triangles": 1088,
+        "bbox_m": [
+          [
+            0.020359586722375894,
+            -0.049049095809459695,
+            1.6778770172595978
+          ],
+          [
+            0.04198613072109415,
+            -0.0274642936885357,
+            1.70124689412117
+          ]
+        ]
+      },
+      {
+        "key": "eye.r",
+        "source_object": "GEO-head_animation_realistic.sclera.R",
+        "triangles": 1088,
+        "bbox_m": [
+          [
+            -0.03776044940280721,
+            -0.049049095809459695,
+            1.6778770172595978
+          ],
+          [
+            -0.01613390540408895,
+            -0.027464300394058228,
+            1.70124689412117
+          ]
+        ]
+      }
+    ],
+    "fit": "XY scale 0.9, Z scale 0.972 to align chin and occiput to the fixed cervical attachments; cranial top at 1.8 m; X center fitted to mannequin midplane, Y offset +0.075 m to align the occipital attachment without moving the validated neck.",
+    "selected_source_only": true,
+    "rain_rig_used": false,
+    "multires_level": 1,
+    "builder_sha256": "b80cc46470ce12dc27482577e32a430ffbdc6bd7020eeb257c3fc5e6235c00e6",
+    "donor_sha256": "ebfe6160812ccc188789cf22f78a5222a511aa6a7925d0dddc88a9b1c48cdbd3"
+  },
+  "median_plane_x_m": 0.002114987923242599,
+  "records": {
+    "deltoid.left": {
+      "triangles": 11938,
+      "vertices": 5971,
+      "changed_vertices": 203,
+      "protected_belly_vertices": 901,
+      "belly_max_difference_m": 0,
+      "outside_allowed_bands_max_difference_m": 0,
+      "volume_before_m3": 0.0016241538002590248,
+      "volume_after_m3": 0.0016241538002936568,
+      "relative_volume_error": 2.132316545555568e-11,
+      "bbox_identical": true,
+      "self_contacts": 0,
+      "faces_rotated_over_90deg_from_old_trough": 8,
+      "projected_orientation_preserved": true
+    },
+    "deltoid.right": {
+      "triangles": 11938,
+      "vertices": 5971,
+      "changed_vertices": 203,
+      "protected_belly_vertices": 901,
+      "belly_max_difference_m": 0,
+      "outside_allowed_bands_max_difference_m": 0,
+      "volume_before_m3": 0.0016241538048514055,
+      "volume_after_m3": 0.0016241538048527738,
+      "relative_volume_error": 8.424372310855688e-13,
+      "bbox_identical": true,
+      "self_contacts": 0,
+      "faces_rotated_over_90deg_from_old_trough": 8,
+      "projected_orientation_preserved": true
+    }
+  },
+  "surface_method": {
+    "baseline_commit": "0ab3d838c728a88f2d325edff7a6884400c9ed78",
+    "method": "Only 3 mm geodesic bands: transverse Hermite bridge at old grooves and rounded new trough; volume balanced exclusively within these bands. No depth envelope, broad smoothing or belly deformation.",
+    "max_band_radius_m": 0.003,
+    "allowed_vertices": 257,
+    "changed_vertices": 203,
+    "locked_belly_vertices": 901,
+    "belly_max_displacement_m": 0.0,
+    "outside_bands_max_displacement_m": 0.0,
+    "locked_silhouette_vertices": 176,
+    "new_groove_amplitude_m": 0.0009860409899805377,
+    "max_displacement_m": 0.004000008800015531,
+    "volume_before_m3": 0.0016241538048514057,
+    "volume_after_m3": 0.0016241538048527738,
+    "relative_volume_error": 8.423132693195719e-13,
+    "bbox_before_m": [
+      0.17953184247016907,
+      0.15781089384108782,
+      0.22285938262939453
+    ],
+    "bbox_after_m": [
+      0.17953184247016907,
+      0.15781089384108782,
+      0.22285938262939453
+    ],
+    "red_paths_reference_px": [
+      [
+        [
+          55.0,
+          292.0
+        ],
+        [
+          57.0,
+          300.0
+        ],
+        [
+          65.0,
+          319.0
+        ],
+        [
+          78.0,
+          335.0
+        ],
+        [
+          94.0,
+          350.0
+        ]
+      ],
+      [
+        [
+          230.0,
+          82.0
+        ],
+        [
+          233.0,
+          100.0
+        ],
+        [
+          234.0,
+          128.0
+        ],
+        [
+          231.0,
+          160.0
+        ],
+        [
+          225.0,
+          192.0
+        ],
+        [
+          217.0,
+          223.0
+        ],
+        [
+          207.0,
+          254.0
+        ],
+        [
+          194.0,
+          286.0
+        ],
+        [
+          179.0,
+          315.0
+        ],
+        [
+          161.0,
+          344.0
+        ]
+      ]
+    ],
+    "registered_old_paths_px": [
+      [
+        [
+          55.0,
+          292.0
+        ],
+        [
+          54.55981080580656,
+          295.63640157484406
+        ],
+        [
+          53.16041053321833,
+          299.6922058661688
+        ],
+        [
+          55.55894360687433,
+          302.7360699979462
+        ],
+        [
+          56.346138970739375,
+          306.3021397020467
+        ],
+        [
+          58.38695358270309,
+          309.453590969147
+        ],
+        [
+          62.09083136200639,
+          311.8599575461952
+        ],
+        [
+          64.41004277712238,
+          314.8225094734971
+        ],
+        [
+          65.01664647373913,
+          318.75578117211955
+        ],
+        [
+          68.38215820268572,
+          321.2115034342721
+        ],
+        [
+          70.02664144521076,
+          325.13857387070186
+        ],
+        [
+          72.28989318304244,
+          328.97719614845755
+        ],
+        [
+          74.68519320259222,
+          332.92634863580645
+        ],
+        [
+          77.24219418754345,
+          336.8017572243174
+        ],
+        [
+          79.88079634633569,
+          340.8644512874712
+        ],
+        [
+          83.45130702304084,
+          344.2372799771654
+        ],
+        [
+          85.80585550317342,
+          349.18110461390575
+        ],
+        [
+          89.23048061315404,
+          353.2027383765368
+        ]
+      ],
+      [
+        [
+          230.0,
+          82.0
+        ],
+        [
+          230.7115439693507,
+          85.33994832696864
+        ],
+        [
+          229.78345472493322,
+          88.99677213510627
+        ],
+        [
+          230.95635345867726,
+          92.1959558670516
+        ],
+        [
+          232.53341116747063,
+          95.35107954379264
+        ],
+        [
+          232.90422028677258,
+          98.68789808917197
+        ],
+        [
+          233.12251711040946,
+          102.02547770700636
+        ],
+        [
+          233.3123475459015,
+          105.36305732484077
+        ],
+        [
+          233.48477496267265,
+          108.70063694267516
+        ],
+        [
+          233.64968920411215,
+          112.03768106269574
+        ],
+        [
+          234.45369101679867,
+          115.35171385936582
+        ],
+        [
+          235.9169325857632,
+          118.65826033606956
+        ],
+        [
+          234.09911931508043,
+          122.04818683555771
+        ],
+        [
+          234.01642460176708,
+          125.38831092853638
+        ],
+        [
+          236.07092864444417,
+          128.740603345023
+        ],
+        [
+          236.95068534677353,
+          132.17465402444267
+        ],
+        [
+          235.4510103592669,
+          135.506693858317
+        ],
+        [
+          234.49793871671113,
+          138.8213835964373
+        ],
+        [
+          234.89177215878348,
+          142.2473250374848
+        ],
+        [
+          234.01385397964953,
+          145.54826468776358
+        ],
+        [
+          232.85299735475186,
+          148.80237949553336
+        ],
+        [
+          232.0261563537545,
+          152.08999812625663
+        ],
+        [
+          231.58624259577093,
+          155.42675159235668
+        ],
+        [
+          231.15377794089812,
+          158.7640697616075
+        ],
+        [
+          229.79809143442677,
+          161.97493798126737
+        ],
+        [
+          226.47887342621877,
+          164.8587952579797
+        ],
+        [
+          224.4133345751286,
+          167.88009460289675
+        ],
+        [
+          218.92391957545075,
+          170.25138940120976
+        ],
+        [
+          218.12058314281325,
+          173.44279318588468
+        ],
+        [
+          218.9188356439795,
+          176.98460720014705
+        ],
+        [
+          216.60032685718613,
+          179.92006943515094
+        ],
+        [
+          215.09009089300005,
+          183.03668520853512
+        ],
+        [
+          215.6572290754309,
+          186.62492887206253
+        ],
+        [
+          222.51813650994416,
+          191.6058485710462
+        ],
+        [
+          219.85707733232397,
+          194.47879130133688
+        ],
+        [
+          212.48935692353103,
+          196.19936891029243
+        ],
+        [
+          218.48215611115947,
+          201.12386627414963
+        ],
+        [
+          221.88545097320454,
+          205.51523222997753
+        ],
+        [
+          222.71953963942653,
+          209.30301967775733
+        ],
+        [
+          221.70372456161047,
+          212.6192997975318
+        ],
+        [
+          224.10604175248395,
+          216.88379789456147
+        ],
+        [
+          222.5631119918473,
+          220.07444579443924
+        ],
+        [
+          218.65031763527602,
+          222.58281616533404
+        ],
+        [
+          217.0165745276435,
+          225.73381069925946
+        ],
+        [
+          215.53639028383074,
+          228.92957362446515
+        ],
+        [
+          213.99606842927057,
+          232.1071847209927
+        ],
+        [
+          212.38150393382392,
+          235.2613626344869
+        ],
+        [
+          212.15128543333128,
+          238.862348817471
+        ],
+        [
+          211.15017491158986,
+          242.22985679957722
+        ],
+        [
+          210.2970032642608,
+          245.6578877336673
+        ],
+        [
+          208.81269107981265,
+          248.88038776671087
+        ],
+        [
+          207.63708711068762,
+          252.21656050955414
+        ],
+        [
+          206.43812006344797,
+          255.55414012738854
+        ],
+        [
+          205.24742689725994,
+          258.90615808254404
+        ],
+        [
+          205.1979841117042,
+          262.7076100999944
+        ],
+        [
+          203.65339254371196,
+          265.95869150756
+        ],
+        [
+          202.02463257854592,
+          269.18435216022186
+        ],
+        [
+          200.4177717702197,
+          272.42688700561223
+        ],
+        [
+          198.587564684832,
+          275.58444877440473
+        ],
+        [
+          197.14812151032305,
+          278.9171974522293
+        ],
+        [
+          195.6848190767165,
+          282.2547770700637
+        ],
+        [
+          194.18657831833727,
+          285.59280058961514
+        ],
+        [
+          193.15341387143425,
+          289.170661223555
+        ],
+        [
+          193.26611187023138,
+          293.3488018087975
+        ],
+        [
+          189.54311755269333,
+          295.67929452643506
+        ],
+        [
+          185.85287325945987,
+          297.9921664113846
+        ],
+        [
+          185.14426145908593,
+          301.8503556094391
+        ],
+        [
+          182.83722403613584,
+          304.89435384444744
+        ],
+        [
+          178.21776023323645,
+          306.67926739004605
+        ],
+        [
+          171.8894531424342,
+          307.479777292193
+        ],
+        [
+          172.17088393102674,
+          311.96123697045925
+        ],
+        [
+          167.5739374665589,
+          313.652094701563
+        ],
+        [
+          166.80643830891557,
+          317.57564333827685
+        ],
+        [
+          164.0794607010106,
+          320.37079413175803
+        ],
+        [
+          161.9446881562287,
+          323.54436197904994
+        ],
+        [
+          161.77237123453781,
+          327.9861712987683
+        ],
+        [
+          159.90433802514087,
+          331.4107869856449
+        ],
+        [
+          157.51429686145664,
+          334.5274528661041
+        ],
+        [
+          155.82526592864568,
+          338.1345242207656
+        ]
+      ]
+    ],
+    "max_old_registration_offset_px": [
+      5.8479636426422505,
+      11.780581964042362
+    ],
+    "blue_paths_reference_px": [
+      [
+        [
+          55.0,
+          292.0
+        ],
+        [
+          57.0,
+          312.0
+        ],
+        [
+          57.0,
+          333.0
+        ],
+        [
+          60.0,
+          353.0
+        ],
+        [
+          64.0,
+          370.0
+        ],
+        [
+          70.0,
+          378.0
+        ]
+      ],
+      [
+        [
+          229.0,
+          72.0
+        ],
+        [
+          230.0,
+          90.0
+        ],
+        [
+          219.0,
+          123.0
+        ],
+        [
+          213.0,
+          151.0
+        ],
+        [
+          207.0,
+          185.0
+        ],
+        [
+          200.0,
+          217.0
+        ],
+        [
+          187.0,
+          251.0
+        ],
+        [
+          174.0,
+          280.0
+        ],
+        [
+          164.0,
+          315.0
+        ],
+        [
+          149.0,
+          352.0
+        ],
+        [
+          138.76851851851853,
+          368.25
+        ]
+      ]
+    ],
+    "requested_blue2_end_px": [
+      132,
+      379
+    ],
+    "actual_blue2_end_px": [
+      138.76851851851853,
+      368.25
+    ],
+    "blue2_clip_reason": "Requested end reaches another arm object; final taper stays on the visible deltoid.",
+    "surface_builder_sha256": "b211766320c45d21457cfb112f7c5df4d7ff240c474a6a518a0347e7c707fcc1"
+  },
+  "camera": {
+    "yaw_degrees": -55.0,
+    "target_m": [
+      -0.19388153252887522,
+      0.0655434029442178,
+      1.4303160740269556
+    ],
+    "location_m": [
+      -3.470489740371704,
+      -2.22876238822937,
+      1.4303160905838013
+    ],
+    "ortho_scale": 0.20929357409477234,
+    "pixel_aspect_x": 1.0767270133990374,
+    "pixel_aspect_y": 1.0,
+    "pixels_per_meter_x": 1704.0004850850426,
+    "pixels_per_meter_y": 1834.743353136129,
+    "reference_size_px": [
+      320,
+      384
+    ],
+    "registration": "Original orientation with manually identified crop landmarks; calibrated framing/aspect. Not an automatic image registration.",
+    "top_landmark_px": [
+      232.99861907958984,
+      54.001304626464844
+    ],
+    "lateral_landmark_px": [
+      -0.0013711456267628819,
+      270.00130462646484
+    ],
+    "blue2_last_visible_reference_px": [
+      138.76851851851853,
+      368.25
+    ],
+    "blue2_requested_endpoint_px": [
+      132,
+      379
+    ]
+  },
+  "topology_unchanged": true,
+  "new_triangles": 0,
+  "new_segmentation": false,
+  "builder_sha256": "64db8c7f8bf90ad368e03eb54a9e93333ba8cc28e6671f38b1eda0bbaccb6a54"
+}

@@ -1,0 +1,39 @@
+{
+  "yaw_degrees": -55.0,
+  "target_m": [
+    -0.19388153252887522,
+    0.0655434029442178,
+    1.4303160740269556
+  ],
+  "location_m": [
+    -3.470489740371704,
+    -2.22876238822937,
+    1.4303160905838013
+  ],
+  "ortho_scale": 0.20929357409477234,
+  "pixel_aspect_x": 1.0767270133990374,
+  "pixel_aspect_y": 1.0,
+  "pixels_per_meter_x": 1704.0004850850426,
+  "pixels_per_meter_y": 1834.743353136129,
+  "reference_size_px": [
+    320,
+    384
+  ],
+  "registration": "Original orientation with manually identified crop landmarks; calibrated framing/aspect. Not an automatic image registration.",
+  "top_landmark_px": [
+    232.99861907958984,
+    54.001304626464844
+  ],
+  "lateral_landmark_px": [
+    -0.0013711456267628819,
+    270.00130462646484
+  ],
+  "blue2_last_visible_reference_px": [
+    138.76851851851853,
+    368.25
+  ],
+  "blue2_requested_endpoint_px": [
+    132,
+    379
+  ]
+}
