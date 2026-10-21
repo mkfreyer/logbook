@@ -1,0 +1,253 @@
+{
+  "composer_sha256": "d93b61acc8b3a9cf1598a1aff3e5ca2c5434798dd6b836209313f3d6b14c0fbe",
+  "sheets": [
+    {
+      "file": "comparatif-face.png",
+      "sha256": "bcac4267c0de4272200434c4bfbaebe131310cc59c55f657242a8e8397fa3977",
+      "sources": [
+        {
+          "file": "avant-face.png",
+          "sha256": "67d4da3abec0638f5538b93d5595de9906c09627caa78f4e2905f6c4ac08a96d"
+        },
+        {
+          "file": "apres-face.png",
+          "sha256": "c5d82c464b33d59c3c662774d09e8b3ae1eaf4232fdf9cdac952772861ef235b"
+        }
+      ],
+      "raw_pixels_resized": false,
+      "raw_pixels_retouched": false
+    },
+    {
+      "file": "comparatif-profil.png",
+      "sha256": "a5e0c81087c3227443a12ff2bd7a702baa47cf3647533ee36fa37f1ce1bf0c47",
+      "sources": [
+        {
+          "file": "avant-profil.png",
+          "sha256": "b780bab58add63a9b46122de1859e0d65c8beb920922fc071f68c1546e289f74"
+        },
+        {
+          "file": "apres-profil.png",
+          "sha256": "73b336610279807a48d85a9e869c8aadd7325ae366d2bea253741165013eb8b4"
+        }
+      ],
+      "raw_pixels_resized": false,
+      "raw_pixels_retouched": false
+    },
+    {
+      "file": "comparatif-dos.png",
+      "sha256": "759be2f3f18ee1d3b069979fbdd49850798b04c4be84e4a4e0ff87c559416468",
+      "sources": [
+        {
+          "file": "avant-dos.png",
+          "sha256": "3ffb23ad22b14110ae72c453b1c3f3df92a45337c6e3ff92f53a4f7b0e18dea6"
+        },
+        {
+          "file": "apres-dos.png",
+          "sha256": "f9067e25d3ade34b20afdd2bb1d1590ca445a521e3f6184796f94a4902152c1e"
+        }
+      ],
+      "raw_pixels_resized": false,
+      "raw_pixels_retouched": false
+    },
+    {
+      "file": "comparatif-epaule-droite.png",
+      "sha256": "9f467280e4f25f58f970d6427efc88856b7291a9cb3641df6c75446f58b9dbde",
+      "sources": [
+        {
+          "file": "avant-epaule-droite.png",
+          "sha256": "9bcd694798ab59db19a2d57a5bb16767c1e1435269dfccf67546a48df21e83ac"
+        },
+        {
+          "file": "apres-epaule-droite.png",
+          "sha256": "9a1f17b66f240ff5a0f5926fafdc5c3cba7810490190ae0d65c84f141a908e90"
+        }
+      ],
+      "raw_pixels_resized": false,
+      "raw_pixels_retouched": false
+    },
+    {
+      "file": "comparatif-epaule-gauche.png",
+      "sha256": "089699d747d0d729b9723044b68a121ac332131294e73b138962947f2d4ee67b",
+      "sources": [
+        {
+          "file": "avant-epaule-gauche.png",
+          "sha256": "97d91bf2def671ca4635f04297aec6dc76852d0c2b1f3d8a162a51fc6816d28d"
+        },
+        {
+          "file": "apres-epaule-gauche.png",
+          "sha256": "0b5be7fd9fb1f61baf75f791e471b187dbc901ef33e145eeada771eeb8cdf5e3"
+        }
+      ],
+      "raw_pixels_resized": false,
+      "raw_pixels_retouched": false
+    },
+    {
+      "file": "comparatif-epaule-profil.png",
+      "sha256": "bc1507a69fdf2544125ae77cc5e0b8f7a9e9e711fc71b1803b8094aa6694380e",
+      "sources": [
+        {
+          "file": "avant-epaule-profil.png",
+          "sha256": "c220fed1d1eae2bc71918ff95420f8911a9074841c114c7706361d9bd48a334a"
+        },
+        {
+          "file": "apres-epaule-profil.png",
+          "sha256": "85d31ef7dbe50579e56f0825f7ae1ba17418b5c524f637210105834423f7a570"
+        }
+      ],
+      "raw_pixels_resized": false,
+      "raw_pixels_retouched": false
+    },
+    {
+      "file": "comparatif-gorge.png",
+      "sha256": "6af9c03a0dac23d168f97fb7cfcb0f54f9d7579fb0a6b4252b2fd825f5563f67",
+      "sources": [
+        {
+          "file": "avant-gorge.png",
+          "sha256": "32d90f126afd440b3190fd748bc05972c789e5c22725fe0357d1e64991e2e4bb"
+        },
+        {
+          "file": "apres-gorge.png",
+          "sha256": "06410c5d42ca6fb95ca37cc94498bba480c19b2d562eca0b51e045e97a5124c9"
+        }
+      ],
+      "raw_pixels_resized": false,
+      "raw_pixels_retouched": false
+    },
+    {
+      "file": "comparatif-gorge-trois-quarts.png",
+      "sha256": "fc933d2b5fbc09050db8c0e2b339aab7958d1a1a066b34e95e49e522f97d678d",
+      "sources": [
+        {
+          "file": "avant-gorge-trois-quarts.png",
+          "sha256": "b81d8c2121478463c4e07efaba379564cb61ea5b0d1d5a8a2c2d7441b96f96dc"
+        },
+        {
+          "file": "apres-gorge-trois-quarts.png",
+          "sha256": "662cc12e4928cfd1685e8bad80d3cccd70cfb19b95a69eea92deb523c69bfe0c"
+        }
+      ],
+      "raw_pixels_resized": false,
+      "raw_pixels_retouched": false
+    },
+    {
+      "file": "comparatif-tete.png",
+      "sha256": "2ef4c83de9d70fd5df7a4c8cef39aefb93a373712d7e034404fe88f2f3c5c79f",
+      "sources": [
+        {
+          "file": "avant-tete.png",
+          "sha256": "cc9bae8fc0cf99f56d4e195f25044f9d1936b27bd296b11b603c14a5ebbf5d3f"
+        },
+        {
+          "file": "apres-tete.png",
+          "sha256": "c637d4d341dda7063aa9ab7d7725533ccbb5c7cb2d25ec7a436afc3fb6159209"
+        }
+      ],
+      "raw_pixels_resized": false,
+      "raw_pixels_retouched": false
+    },
+    {
+      "file": "comparatif-tete-profil.png",
+      "sha256": "b043947ffa5f16c1fdfb1294e3ae3dc436cc184287e5bf303c5cbffbd87841a0",
+      "sources": [
+        {
+          "file": "avant-tete-profil.png",
+          "sha256": "7ba5b8d28f3652fefda11105a4b0de8b0c861f563070cde71b6a26992a9af182"
+        },
+        {
+          "file": "apres-tete-profil.png",
+          "sha256": "745aba42e17f0250cd880623d9e31182b3082b9e28793acd091cbc9170d8332d"
+        }
+      ],
+      "raw_pixels_resized": false,
+      "raw_pixels_retouched": false
+    },
+    {
+      "file": "comparatif-tete-trois-quarts.png",
+      "sha256": "125d71db4d3759968eb0ec74c64d79580e9bcabb5931fd9403777ee5c33a4014",
+      "sources": [
+        {
+          "file": "avant-tete-trois-quarts.png",
+          "sha256": "39d7439460d4e21b9df2797b6a34f9fb8e851a02098c137bf52ba15d60f84f87"
+        },
+        {
+          "file": "apres-tete-trois-quarts.png",
+          "sha256": "579c013d36b7af5465d535195dd847e38ab7045f23ea8a873d9632ecb1661722"
+        }
+      ],
+      "raw_pixels_resized": false,
+      "raw_pixels_retouched": false
+    },
+    {
+      "file": "validation-mat-neutre.png",
+      "sha256": "8028d334573fd37f809a93743e71ce14e1a0a45ad9acdd88812d37e964cab92c",
+      "sources": [
+        {
+          "file": "apres-face.png",
+          "sha256": "c5d82c464b33d59c3c662774d09e8b3ae1eaf4232fdf9cdac952772861ef235b"
+        },
+        {
+          "file": "apres-profil.png",
+          "sha256": "73b336610279807a48d85a9e869c8aadd7325ae366d2bea253741165013eb8b4"
+        },
+        {
+          "file": "apres-dos.png",
+          "sha256": "f9067e25d3ade34b20afdd2bb1d1590ca445a521e3f6184796f94a4902152c1e"
+        }
+      ],
+      "raw_pixels_resized": false,
+      "raw_pixels_retouched": false
+    },
+    {
+      "file": "deux-epaules.png",
+      "sha256": "6921be46cf43b6d13ba7c90f98ff9f8629b09b73a95b831444dec0242272479d",
+      "sources": [
+        {
+          "file": "apres-epaule-droite.png",
+          "sha256": "9a1f17b66f240ff5a0f5926fafdc5c3cba7810490190ae0d65c84f141a908e90"
+        },
+        {
+          "file": "apres-epaule-gauche.png",
+          "sha256": "0b5be7fd9fb1f61baf75f791e471b187dbc901ef33e145eeada771eeb8cdf5e3"
+        }
+      ],
+      "raw_pixels_resized": false,
+      "raw_pixels_retouched": false
+    },
+    {
+      "file": "tete-trois-vues.png",
+      "sha256": "728bd0c17837a62a64ea58e773a5d234494c11d56f9bfd3f161897270163c658",
+      "sources": [
+        {
+          "file": "apres-tete.png",
+          "sha256": "c637d4d341dda7063aa9ab7d7725533ccbb5c7cb2d25ec7a436afc3fb6159209"
+        },
+        {
+          "file": "apres-tete-trois-quarts.png",
+          "sha256": "579c013d36b7af5465d535195dd847e38ab7045f23ea8a873d9632ecb1661722"
+        },
+        {
+          "file": "apres-tete-profil.png",
+          "sha256": "745aba42e17f0250cd880623d9e31182b3082b9e28793acd091cbc9170d8332d"
+        }
+      ],
+      "raw_pixels_resized": false,
+      "raw_pixels_retouched": false
+    },
+    {
+      "file": "gorge-deux-vues.png",
+      "sha256": "8eb08171ee3e1e41985e91428fa7b419abdd1c2097c21d590304f946adb4b7c5",
+      "sources": [
+        {
+          "file": "apres-gorge.png",
+          "sha256": "06410c5d42ca6fb95ca37cc94498bba480c19b2d562eca0b51e045e97a5124c9"
+        },
+        {
+          "file": "apres-gorge-trois-quarts.png",
+          "sha256": "662cc12e4928cfd1685e8bad80d3cccd70cfb19b95a69eea92deb523c69bfe0c"
+        }
+      ],
+      "raw_pixels_resized": false,
+      "raw_pixels_retouched": false
+    }
+  ]
+}
