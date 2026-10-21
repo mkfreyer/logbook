@@ -1,0 +1,177 @@
+{
+  "baseline_commit": "9e49c787c58986b306d818a2d35a23a0e71aef87",
+  "baseline_blend_sha256": "15444ab13acb4232ed9d366e39b333c305b9c1be533e71d2b5eee90b9e58ff37",
+  "source_asset": {
+    "extras": {
+      "author": "Beatriz Gomez Santamaria (https://sketchfab.com/BeatrizGomez)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/ecorche-anatomy-study-e402d3d541eb4b199c57d5410f5d3c57",
+      "title": "Ecorche - Anatomy study"
+    },
+    "generator": "Sketchfab-12.67.0",
+    "version": "2.0"
+  },
+  "source_sha256": "137e2e80bdcf9c87ff49ab32cb5de70f8de542870c78a7d5170e8743d241a73a",
+  "median_plane_x_m": 0.002114987923242599,
+  "before_objects": 298,
+  "before_triangles": 488822,
+  "objects": 300,
+  "triangles": 498058,
+  "changed_original_objects": [
+    "deltoid.left",
+    "deltoid.right",
+    "head_throat.neutral_surface"
+  ],
+  "unchanged_original_objects": 295,
+  "new_objects": [
+    "head.eye.l",
+    "head.eye.r"
+  ],
+  "neck_protected_below_z_m": 1.57,
+  "head_source_cut_z_m": 1.575,
+  "neck_retained_triangles": 10637,
+  "head_retained_triangles": 23642,
+  "submental_bridge_triangles": 453,
+  "head_source": {
+    "source_url": "https://download.blender.org/demo/asset-bundles/human-base-meshes/human-base-meshes-bundle-v1.4.1.zip",
+    "bundle_blend_sha256": "3c121505651140ceb4d69fd1d8923f7788ffadd81672f5be14845a5f2c75c137",
+    "source_collection": "Head (Animation) - Realistic",
+    "author": "Dan Ulrich",
+    "license": "CC0",
+    "embedded_readme": "Important Info\n==============\n\nHuman Base Meshes: Asset Bundle - Version 1.4\n\nAll provided assets are public domain under the CC0 license.\nThe minimum supported Blender version is 4.2!\n\nWhat's included\n==============\n\nThese are various human base meshes that are provided by the Blender community and the Blender Studio.\nThey include:\n    - Quad topology for multi-resolution sculpting\n    - Closed volumes for voxel remeshing\n    - Face sets\n    - UV maps (including UDIMs)\n    - Multiresoluton levels for realistic assets\n    - Creased edges and Subdiv modifiers for planar/primitive assets\n\nHow to install the Asset Bundle\n===============================\n\nIt's recommended to create a new Asset Library in the preferences first:\n- Open the Preferences\n- Go to \"File Paths\"\n- Add a New Asset Library with the + button and call it \"Human Base Meshes\"\n- Set the \"Import Method\" to \"Append\"\n\nTo add the assets from this file to the Asset Library:\n- In the Asset Browser below, click on \"Copy Bundle to Asset Library\"\n- Choose a target Asset Library\n- Choose a target folder location\n\nThat's it. Enjoy!",
+    "objects": [
+      {
+        "key": "head",
+        "source_object": "GEO-head_animation_realistic",
+        "triangles": 25896,
+        "bbox_m": [
+          [
+            -0.12092459296512412,
+            -0.07735258340835573,
+            1.4387554078102112
+          ],
+          [
+            0.1253736486501713,
+            0.1448040336370468,
+            1.8000673792362214
+          ]
+        ]
+      },
+      {
+        "key": "eye.l",
+        "source_object": "GEO-head_animation_realistic.sclera.L",
+        "triangles": 1088,
+        "bbox_m": [
+          [
+            0.020359586722375894,
+            -0.049049095809459695,
+            1.6778770172595978
+          ],
+          [
+            0.04198613072109415,
+            -0.0274642936885357,
+            1.70124689412117
+          ]
+        ]
+      },
+      {
+        "key": "eye.r",
+        "source_object": "GEO-head_animation_realistic.sclera.R",
+        "triangles": 1088,
+        "bbox_m": [
+          [
+            -0.03776044940280721,
+            -0.049049095809459695,
+            1.6778770172595978
+          ],
+          [
+            -0.01613390540408895,
+            -0.027464300394058228,
+            1.70124689412117
+          ]
+        ]
+      }
+    ],
+    "fit": "XY scale 0.9, Z scale 0.972 to align chin and occiput to the fixed cervical attachments; cranial top at 1.8 m; X center fitted to mannequin midplane, Y offset +0.075 m to align the occipital attachment without moving the validated neck.",
+    "selected_source_only": true,
+    "rain_rig_used": false,
+    "multires_level": 1,
+    "builder_sha256": "b80cc46470ce12dc27482577e32a430ffbdc6bd7020eeb257c3fc5e6235c00e6",
+    "donor_sha256": "ebfe6160812ccc188789cf22f78a5222a511aa6a7925d0dddc88a9b1c48cdbd3"
+  },
+  "shoulder_right": {
+    "volume_before_m3": 0.0016241538048514055,
+    "volume_after_m3": 0.0016241538048513728,
+    "max_displacement_m": 0.0066108224540552376,
+    "bbox_before_m": [
+      0.17953184247016907,
+      0.15781089384108782,
+      0.22285938262939453
+    ],
+    "bbox_after_m": [
+      0.18071087930229518,
+      0.16236013996579465,
+      0.22285938262939453
+    ],
+    "nonadjacent_self_contacts_detected": 0,
+    "fan_widths_radians": [
+      0.25,
+      0.27,
+      0.29
+    ],
+    "landmarks": {
+      "order": [
+        "anterior_clavicular",
+        "middle_acromial",
+        "posterior_scapular"
+      ],
+      "right_origins_m": [
+        [
+          -0.125,
+          0.014,
+          1.482
+        ],
+        [
+          -0.21,
+          0.06,
+          1.5
+        ],
+        [
+          -0.13,
+          0.128,
+          1.465
+        ]
+      ],
+      "right_belly_landmarks_m": [
+        [
+          -0.25,
+          0.026,
+          1.405
+        ],
+        [
+          -0.274,
+          0.075,
+          1.405
+        ],
+        [
+          -0.252,
+          0.128,
+          1.398
+        ]
+      ],
+      "right_common_insertion_m": [
+        -0.243,
+        0.08,
+        1.296
+      ],
+      "status": "Source-guided authoring landmarks, not medically certified attachments."
+    },
+    "topology_unchanged": true
+  },
+  "builder_sha256": "48768ee307ea97e6df6bb68e6aa1eb791a96bdc327ee092cad6a5facde5cfda4",
+  "limitations": [
+    "Head is adapted from a CC0 source, not a medical facial reconstruction.",
+    "Eye rims are intentional openings occupied by separate eyeball objects.",
+    "No app integration, mobile performance measurement or final muscle segmentation."
+  ]
+}
