@@ -11,6 +11,7 @@ import bpy
 import numpy as np
 from mathutils.bvhtree import BVHTree
 
+NORMAL_VECTOR_TOLERANCE = .001  # Default retained for the 990201f audit.
 
 def helpers(name):
     path = Path(__file__).with_name(name)
@@ -154,7 +155,7 @@ def main():
         desired = np.einsum('tij,tjk->tik', bary, extra_before[side]['n'][parent])
         desired /= np.linalg.norm(desired, axis=2, keepdims=True)
         difference = np.linalg.norm(normals - desired, axis=2)
-        assert difference.max() < .001  # Custom-normal quantization, < .06 degree.
+        assert difference.max() < NORMAL_VECTOR_TOLERANCE
         seam = defaultdict(list)
         for face, ns, label in zip(f, normals, labels):
             for vertex, normal in zip(face, ns):
