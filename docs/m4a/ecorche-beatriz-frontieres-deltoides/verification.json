@@ -1,0 +1,175 @@
+{
+  "baseline_commit": "fb68f5ee9ab3b47f3ae046cd7a1ce11129a98857",
+  "geometry_reference_commit": "0ab3d838c728a88f2d325edff7a6884400c9ed78",
+  "baseline_sha256": "2a60e801d8ba76b473f552b993dc73d4cf1778e8230b97e50a6df25470d0d4a8",
+  "master_sha256": "34af46851680f8edce0d55b138603caa6df0d2eb0253d587499d3be866d70c91",
+  "all_298_other_objects_raw_geometry_materials_normals_unchanged": true,
+  "head_P5_throat_body_unchanged": true,
+  "all_original_surface_vertices_unchanged": true,
+  "original_cameras_and_five_lights_unchanged": true,
+  "no_sculpting_or_surface_smoothing": true,
+  "topology_changed_only_on_two_deltoids": true,
+  "six_independent_materials_and_neutral_reset_tested": true,
+  "six_ids_primitives_and_materials_verified_in_GLBs": true,
+  "neutral_control_geometry_buffers_identical": true,
+  "both_GLB_reimports_verified": true,
+  "GLB_custom_corner_normals_verified": true,
+  "GLB_custom_normal_export_max_component_error": 6.255507469177246e-05,
+  "GLB_cross_material_boundary_normal_max_component_difference": 0.0,
+  "master_triangles": 499754,
+  "extra_triangles": 1696,
+  "shoulders": {
+    "right": {
+      "original_vertices_bitwise_unchanged": true,
+      "original_vertices": 5971,
+      "added_vertices": 424,
+      "original_triangles": 11938,
+      "triangles": 12786,
+      "added_triangles": 848,
+      "source_triangles_split": 419,
+      "max_barycentric_surface_storage_error_m": 6.072893532430618e-08,
+      "source_face_partition_area_error_max": 2.220446049250313e-16,
+      "max_sibling_overlap_area_barycentric": 6.938893903907228e-17,
+      "closed_two_manifold_euler_2": true,
+      "nonadjacent_self_intersections": 0,
+      "volume_before_m3": 0.0016241538048514055,
+      "volume_after_m3": 0.0016241538033417878,
+      "normal_interpolation_max_vector_error": 0.00026488250383635293,
+      "material_boundary_max_loop_normal_difference": 0.0,
+      "boundary_before": {
+        "(0, 1)": {
+          "samples": 114,
+          "median_turn_degrees": 80.24924208153794,
+          "p95_turn_degrees": 151.47120512712394,
+          "max_turn_degrees": 168.67221352777935
+        },
+        "(1, 2)": {
+          "samples": 90,
+          "median_turn_degrees": 61.03351255479211,
+          "p95_turn_degrees": 148.30123071026634,
+          "max_turn_degrees": 169.5794592356912
+        },
+        "(0, 2)": {
+          "samples": 32,
+          "median_turn_degrees": 49.99960886318907,
+          "p95_turn_degrees": 133.14483535467232,
+          "max_turn_degrees": 154.95252938259878
+        }
+      },
+      "boundary_after": {
+        "(0, 1)": {
+          "samples": 194,
+          "median_turn_degrees": 3.9703139127868923,
+          "p95_turn_degrees": 16.655076715573397,
+          "max_turn_degrees": 30.604941587345337
+        },
+        "(1, 2)": {
+          "samples": 174,
+          "median_turn_degrees": 5.623387835799221,
+          "p95_turn_degrees": 20.7711555163356,
+          "max_turn_degrees": 50.9334915595112
+        },
+        "(0, 2)": {
+          "samples": 54,
+          "median_turn_degrees": 5.121285660200371,
+          "p95_turn_degrees": 11.787402490537017,
+          "max_turn_degrees": 21.034434283222424
+        }
+      },
+      "regions": [
+        {
+          "id": "deltoid.right.anterior",
+          "triangles": 5344,
+          "components": 1
+        },
+        {
+          "id": "deltoid.right.lateral",
+          "triangles": 2704,
+          "components": 1
+        },
+        {
+          "id": "deltoid.right.posterior",
+          "triangles": 4738,
+          "components": 1
+        }
+      ]
+    },
+    "left": {
+      "original_vertices_bitwise_unchanged": true,
+      "original_vertices": 5971,
+      "added_vertices": 424,
+      "original_triangles": 11938,
+      "triangles": 12786,
+      "added_triangles": 848,
+      "source_triangles_split": 419,
+      "max_barycentric_surface_storage_error_m": 5.977871455529748e-08,
+      "source_face_partition_area_error_max": 2.220446049250313e-16,
+      "max_sibling_overlap_area_barycentric": 6.938893903907228e-17,
+      "closed_two_manifold_euler_2": true,
+      "nonadjacent_self_intersections": 0,
+      "volume_before_m3": 0.0016241538002590248,
+      "volume_after_m3": 0.0016241538003330521,
+      "normal_interpolation_max_vector_error": 0.0003937072541109713,
+      "material_boundary_max_loop_normal_difference": 0.0,
+      "boundary_before": {
+        "(0, 1)": {
+          "samples": 114,
+          "median_turn_degrees": 80.24928007254321,
+          "p95_turn_degrees": 151.47120512712394,
+          "max_turn_degrees": 168.67221352777935
+        },
+        "(1, 2)": {
+          "samples": 90,
+          "median_turn_degrees": 61.03351255479211,
+          "p95_turn_degrees": 148.30123071026634,
+          "max_turn_degrees": 169.57945025795158
+        },
+        "(0, 2)": {
+          "samples": 32,
+          "median_turn_degrees": 49.99960886318907,
+          "p95_turn_degrees": 133.14483535467232,
+          "max_turn_degrees": 154.95252938259878
+        }
+      },
+      "boundary_after": {
+        "(0, 1)": {
+          "samples": 194,
+          "median_turn_degrees": 3.9703139127868923,
+          "p95_turn_degrees": 16.655076715573397,
+          "max_turn_degrees": 30.604941587345337
+        },
+        "(1, 2)": {
+          "samples": 174,
+          "median_turn_degrees": 5.623759814515026,
+          "p95_turn_degrees": 20.7711555163356,
+          "max_turn_degrees": 50.9334915595112
+        },
+        "(0, 2)": {
+          "samples": 54,
+          "median_turn_degrees": 5.121285660200371,
+          "p95_turn_degrees": 11.78726643771537,
+          "max_turn_degrees": 21.034434283222424
+        }
+      },
+      "regions": [
+        {
+          "id": "deltoid.left.anterior",
+          "triangles": 5344,
+          "components": 1
+        },
+        {
+          "id": "deltoid.left.lateral",
+          "triangles": 2704,
+          "components": 1
+        },
+        {
+          "id": "deltoid.left.posterior",
+          "triangles": 4738,
+          "components": 1
+        }
+      ]
+    }
+  },
+  "mobile_FPS_measured": false,
+  "verifier_sha256": "9274e299e8d517705694532deb270db7c4f5af2cc9abbd320a3a2a129e4d93df"
+}

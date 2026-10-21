@@ -1,0 +1,128 @@
+{
+  "before_after_views": [
+    {
+      "file": "epaule-profil.png",
+      "before_source": "../../ecorche-beatriz-zones-deltoides/renders/zones/epaule-profil.png",
+      "before_sha256": "968ab0bf5fc443838cb9df1024469c078d632b060dbe03c9359c5ea77c307189",
+      "after_sha256": "2eb3a81bf22a2a731f755c2a4df9a8bc42623af34dfa52f8eadc7502c65ce035",
+      "camera_and_resolution_identical": true
+    },
+    {
+      "file": "epaule-droite.png",
+      "before_source": "../../ecorche-beatriz-zones-deltoides/renders/zones/epaule-droite.png",
+      "before_sha256": "4aea09e7bfb8c35e133f86f33733bc22aa27b99838e318937621b76222edf253",
+      "after_sha256": "ce7c58b38bbfcf7fda921ffdf284446453b61942517edfabebda7f46f3a42905",
+      "camera_and_resolution_identical": true
+    },
+    {
+      "file": "epaule-gauche.png",
+      "before_source": "../../ecorche-beatriz-zones-deltoides/renders/zones/epaule-gauche.png",
+      "before_sha256": "de27535f4a22a590235276f4947b98008601a755a8225e385ee10fb608541d4a",
+      "after_sha256": "0fb31b632d46c062dfc7ba8f750f0dc8381800bdae808f324549803abb033844",
+      "camera_and_resolution_identical": true
+    },
+    {
+      "file": "epaules-face.png",
+      "before_source": "../../ecorche-beatriz-zones-deltoides/renders/zones/epaules-face.png",
+      "before_sha256": "16314f01eb9af6a92f0ab4633de95e0654cbd0aa1b6c8bcf9c465f6383626800",
+      "after_sha256": "4aa335ba1aacf26edbc46e9bb1a8f39e60069f0063c5a5f368dd713392da298d",
+      "camera_and_resolution_identical": true
+    },
+    {
+      "file": "epaules-dos.png",
+      "before_source": "../../ecorche-beatriz-zones-deltoides/renders/zones/epaules-dos.png",
+      "before_sha256": "ff052c73bf677ccefc8649fb709368efb14d1c0f5feb335e2abac3c77855a32a",
+      "after_sha256": "b58f817d857448880772fbe1c2a48e90d0b7dfb057280ddd7435f68a07bcc85a",
+      "camera_and_resolution_identical": true
+    },
+    {
+      "file": "epaule-arriere.png",
+      "before_source": "../../ecorche-beatriz-zones-deltoides/renders/zones/epaule-arriere.png",
+      "before_sha256": "4766e1c90b97fbb5dcc83fb9fcacdc44f1795c5829d213cf2e2ced4cf9d5d8e0",
+      "after_sha256": "4aed65d746f5c6e97064320a3a85b9e3d3ac0f641f2c1702c750906c23dede3c",
+      "camera_and_resolution_identical": true
+    },
+    {
+      "file": "epaule-face-droite.png",
+      "before_source": "before/epaule-face-droite.png",
+      "before_sha256": "0e642239a4abe6d857f7db72af060450e3c36ab96d5d133ff401cf70629c6771",
+      "after_sha256": "615763cb5f1832b6170323e4a4aed39e247d7370bf6d4737c757828d9a92c600",
+      "camera_and_resolution_identical": true
+    },
+    {
+      "file": "epaule-face-gauche.png",
+      "before_source": "before/epaule-face-gauche.png",
+      "before_sha256": "cdad2c757642d7a810758568058cb7d11af88909ca7729f953af2c238eef5fa5",
+      "after_sha256": "94a01845e61e6042f1f441509727db12f950a4724e447b6a73a7034909ed6cfb",
+      "camera_and_resolution_identical": true
+    }
+  ],
+  "neutral_checks": [
+    {
+      "file": "epaule-profil.png",
+      "pixels_identical": false,
+      "changed_pixels_percent": 0.029538001543209878,
+      "max_channel_difference_8bit": 9,
+      "mean_channel_difference_8bit": 0.0002085744598765432,
+      "before_sha256": "ee67b722677df608d97b021087619d7acea46cbfd7a3216e847092059e003ffd",
+      "after_sha256": "c14075a36f5f2ebc915618e0013d730f892a627adff9418a2b4ec9814e279aa5"
+    },
+    {
+      "file": "epaule-droite.png",
+      "pixels_identical": false,
+      "changed_pixels_percent": 0.03255208333333333,
+      "max_channel_difference_8bit": 3,
+      "mean_channel_difference_8bit": 0.0002190232767489712,
+      "before_sha256": "d7cd778fd5206d93f232ce05a735a031658e5020da84bbf9636a4d2a6bd2e8dc",
+      "after_sha256": "e062800806bf306e063d3ed730dfd78ba5de45635c4455b49a0ef7d894e0e7d4"
+    }
+  ],
+  "plates": [
+    {
+      "file": "comparatif-frontieres.png",
+      "sha256": "d407e3e7d5c6f053fc2b886e4f105b962086501e173b5a00e9956e83a297873f",
+      "sources": [
+        "../../ecorche-beatriz-zones-deltoides/renders/zones/epaule-profil.png",
+        "after/epaule-profil.png",
+        "../../ecorche-beatriz-zones-deltoides/renders/zones/epaule-droite.png",
+        "after/epaule-droite.png",
+        "../../ecorche-beatriz-zones-deltoides/renders/zones/epaules-face.png",
+        "after/epaules-face.png",
+        "../../ecorche-beatriz-zones-deltoides/renders/zones/epaules-dos.png",
+        "after/epaules-dos.png"
+      ]
+    },
+    {
+      "file": "controle-six-zones.png",
+      "sha256": "8c2eaffe053a9b3ad8a4ea5ba59cc00266c496cc945d2b586b68755760a75494",
+      "sources": [
+        "after/epaule-face-droite.png",
+        "after/epaule-face-gauche.png",
+        "after/epaule-droite.png",
+        "after/epaule-gauche.png",
+        "after/epaule-profil.png",
+        "after/epaules-dos.png"
+      ]
+    },
+    {
+      "file": "comparatif-neutre.png",
+      "sha256": "725708170b853044d3d5a43fdf0fab4d255324feda271a4912e25ba9f9337ca6",
+      "sources": [
+        "../../ecorche-beatriz-zones-deltoides/renders/neutral/epaule-profil.png",
+        "neutral/epaule-profil.png",
+        "../../ecorche-beatriz-zones-deltoides/renders/neutral/epaule-droite.png",
+        "neutral/epaule-droite.png"
+      ]
+    },
+    {
+      "file": "epaules-face-neutres.png",
+      "sha256": "9445daa2053fcd0d2d489ea7c2f6e6b7cdfaa0e1496572a6b1655fded38dd0d8",
+      "sources": [
+        "neutral/epaule-face-droite.png",
+        "neutral/epaule-face-gauche.png"
+      ]
+    }
+  ],
+  "pixels_repainted": false,
+  "compositor_sha256": "39618617ea5f700d8ccff0966a516ccf1bd5c27d132a465092a61d4d0e19787c"
+}
