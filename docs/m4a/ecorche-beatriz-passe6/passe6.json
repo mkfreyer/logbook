@@ -1,0 +1,171 @@
+{
+  "baseline_commit": "354d36486cb0d44ad51dfae35278b967153a1424",
+  "baseline_blend_sha256": "926cadf61c4608c096cbf84e0c50ff0785eb7c5568d613206dfe57d695e4a54d",
+  "p4_blend_sha256": "15444ab13acb4232ed9d366e39b333c305b9c1be533e71d2b5eee90b9e58ff37",
+  "source_asset": {
+    "extras": {
+      "author": "Beatriz Gomez Santamaria (https://sketchfab.com/BeatrizGomez)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/ecorche-anatomy-study-e402d3d541eb4b199c57d5410f5d3c57",
+      "title": "Ecorche - Anatomy study"
+    },
+    "generator": "Sketchfab-12.67.0",
+    "version": "2.0"
+  },
+  "source_sha256": "137e2e80bdcf9c87ff49ab32cb5de70f8de542870c78a7d5170e8743d241a73a",
+  "head_source": {
+    "source_url": "https://download.blender.org/demo/asset-bundles/human-base-meshes/human-base-meshes-bundle-v1.4.1.zip",
+    "bundle_blend_sha256": "3c121505651140ceb4d69fd1d8923f7788ffadd81672f5be14845a5f2c75c137",
+    "source_collection": "Head (Animation) - Realistic",
+    "author": "Dan Ulrich",
+    "license": "CC0",
+    "embedded_readme": "Important Info\n==============\n\nHuman Base Meshes: Asset Bundle - Version 1.4\n\nAll provided assets are public domain under the CC0 license.\nThe minimum supported Blender version is 4.2!\n\nWhat's included\n==============\n\nThese are various human base meshes that are provided by the Blender community and the Blender Studio.\nThey include:\n    - Quad topology for multi-resolution sculpting\n    - Closed volumes for voxel remeshing\n    - Face sets\n    - UV maps (including UDIMs)\n    - Multiresoluton levels for realistic assets\n    - Creased edges and Subdiv modifiers for planar/primitive assets\n\nHow to install the Asset Bundle\n===============================\n\nIt's recommended to create a new Asset Library in the preferences first:\n- Open the Preferences\n- Go to \"File Paths\"\n- Add a New Asset Library with the + button and call it \"Human Base Meshes\"\n- Set the \"Import Method\" to \"Append\"\n\nTo add the assets from this file to the Asset Library:\n- In the Asset Browser below, click on \"Copy Bundle to Asset Library\"\n- Choose a target Asset Library\n- Choose a target folder location\n\nThat's it. Enjoy!",
+    "objects": [
+      {
+        "key": "head",
+        "source_object": "GEO-head_animation_realistic",
+        "triangles": 25896,
+        "bbox_m": [
+          [
+            -0.12092459296512412,
+            -0.07735258340835573,
+            1.4387554078102112
+          ],
+          [
+            0.1253736486501713,
+            0.1448040336370468,
+            1.8000673792362214
+          ]
+        ]
+      },
+      {
+        "key": "eye.l",
+        "source_object": "GEO-head_animation_realistic.sclera.L",
+        "triangles": 1088,
+        "bbox_m": [
+          [
+            0.020359586722375894,
+            -0.049049095809459695,
+            1.6778770172595978
+          ],
+          [
+            0.04198613072109415,
+            -0.0274642936885357,
+            1.70124689412117
+          ]
+        ]
+      },
+      {
+        "key": "eye.r",
+        "source_object": "GEO-head_animation_realistic.sclera.R",
+        "triangles": 1088,
+        "bbox_m": [
+          [
+            -0.03776044940280721,
+            -0.049049095809459695,
+            1.6778770172595978
+          ],
+          [
+            -0.01613390540408895,
+            -0.027464300394058228,
+            1.70124689412117
+          ]
+        ]
+      }
+    ],
+    "fit": "XY scale 0.9, Z scale 0.972 to align chin and occiput to the fixed cervical attachments; cranial top at 1.8 m; X center fitted to mannequin midplane, Y offset +0.075 m to align the occipital attachment without moving the validated neck.",
+    "selected_source_only": true,
+    "rain_rig_used": false,
+    "multires_level": 1,
+    "builder_sha256": "b80cc46470ce12dc27482577e32a430ffbdc6bd7020eeb257c3fc5e6235c00e6",
+    "donor_sha256": "ebfe6160812ccc188789cf22f78a5222a511aa6a7925d0dddc88a9b1c48cdbd3"
+  },
+  "median_plane_x_m": 0.002114987923242599,
+  "objects": 300,
+  "triangles": 498058,
+  "changed_original_objects": [
+    "deltoid.left",
+    "deltoid.right"
+  ],
+  "unchanged_original_objects": 298,
+  "new_objects": [],
+  "new_triangles": 0,
+  "reconstructed_objects": [
+    "deltoid.left",
+    "deltoid.right"
+  ],
+  "reconstruction_voxel_m": 0.0018,
+  "surface_method": {
+    "method": "P4 section convex hull replaces pre-existing deep troughs. Three overlapping elliptical belly volumes are fitted inside the P4 support, joined by a rounded union and attenuated toward common attachments. No outward volume compensation.",
+    "base": "P4 deltoid only; all other objects remain P5",
+    "maximum_target_volume_ratio_to_p4": 0.97,
+    "volume_ratio_to_p4": 0.9622571589140345,
+    "inward_offset_m": 1.2878587085651817e-15,
+    "max_displacement_from_p4_m": 0.020637187439204608,
+    "x_bbox_before_m": [
+      -0.2757292091846466,
+      -0.09619736671447754
+    ],
+    "x_bbox_after_m": [
+      -0.2749963191085939,
+      -0.09619736671447754
+    ],
+    "belly_centers_y_fraction": [
+      0.26,
+      0.5,
+      0.74
+    ],
+    "belly_x_radius_fraction": [
+      0.6,
+      0.62,
+      0.58
+    ],
+    "belly_y_radius_fraction": [
+      0.265,
+      0.245,
+      0.27
+    ],
+    "smooth_union_softness_m": 0.0008,
+    "longitudinal_sections": 153,
+    "angular_samples": 513,
+    "new_triangles": 0,
+    "builder_sha256": "2245f9a1a66e5cdbf9dbe5541543d684f22dc08bc2e4803363adeacc12729070",
+    "surface_sha256": "047c0978e431bdae55162e87a3927e75ca43d205c7e02dc0eb6d153aa16590ea"
+  },
+  "shoulder_right": {
+    "volume_p4_m3": 0.0016241538048514055,
+    "volume_p5_m3": 0.001624153786492313,
+    "volume_p6_m3": 0.0015613865805964124,
+    "volume_ratio_to_p4": 0.9613538914433442,
+    "max_distance_to_p4_surface_m": 0.020310046151280403,
+    "bbox_p4_m": [
+      0.17953184247016907,
+      0.15781089384108782,
+      0.22285938262939453
+    ],
+    "bbox_p5_m": [
+      0.18071086704730988,
+      0.16236014664173126,
+      0.22285938262939453
+    ],
+    "bbox_p6_m": [
+      0.17825908213853836,
+      0.1544739529490471,
+      0.2223212718963623
+    ],
+    "nonadjacent_self_contacts_detected": 0,
+    "min_triangle_area_m2": 9.738701096783302e-08,
+    "deltopectoral_vertices_approached": 531,
+    "max_deltopectoral_correction_m": 0.003486552906326554,
+    "eligible_contact_sample_count": 331,
+    "eligible_contact_median_before_m": 0.005108260083943605,
+    "eligible_contact_median_after_m": 0.00348486565053463,
+    "contact_samples_measured_before_reconstruction": true
+  },
+  "builder_sha256": "cc215b4e7c72fb238235b955011a8b4ba5c7298a7c969384603cbfa79cb85ebf",
+  "limitations": [
+    "Source-guided stylized shoulder reconstruction, not medical certification.",
+    "Only deltoid meshes changed; all P5 head, throat, pectorals and remaining body arrays are identical.",
+    "Complete clinical attachment/contact audit and final interactive muscle segmentation not provided."
+  ]
+}

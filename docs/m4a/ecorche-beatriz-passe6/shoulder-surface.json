@@ -1,0 +1,37 @@
+{
+  "method": "P4 section convex hull replaces pre-existing deep troughs. Three overlapping elliptical belly volumes are fitted inside the P4 support, joined by a rounded union and attenuated toward common attachments. No outward volume compensation.",
+  "base": "P4 deltoid only; all other objects remain P5",
+  "maximum_target_volume_ratio_to_p4": 0.97,
+  "volume_ratio_to_p4": 0.9622571589140345,
+  "inward_offset_m": 1.2878587085651817e-15,
+  "max_displacement_from_p4_m": 0.020637187439204608,
+  "x_bbox_before_m": [
+    -0.2757292091846466,
+    -0.09619736671447754
+  ],
+  "x_bbox_after_m": [
+    -0.2749963191085939,
+    -0.09619736671447754
+  ],
+  "belly_centers_y_fraction": [
+    0.26,
+    0.5,
+    0.74
+  ],
+  "belly_x_radius_fraction": [
+    0.6,
+    0.62,
+    0.58
+  ],
+  "belly_y_radius_fraction": [
+    0.265,
+    0.245,
+    0.27
+  ],
+  "smooth_union_softness_m": 0.0008,
+  "longitudinal_sections": 153,
+  "angular_samples": 513,
+  "new_triangles": 0,
+  "builder_sha256": "2245f9a1a66e5cdbf9dbe5541543d684f22dc08bc2e4803363adeacc12729070",
+  "surface_sha256": "047c0978e431bdae55162e87a3927e75ca43d205c7e02dc0eb6d153aa16590ea"
+}
