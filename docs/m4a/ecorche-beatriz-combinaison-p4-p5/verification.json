@@ -1,0 +1,54 @@
+{
+  "new_master_sha256": "f8b6a232a18335221af3cafc62b37837fedc1caaf9bc6cb48e1cb583f222d9ab",
+  "source_p4_sha256": "15444ab13acb4232ed9d366e39b333c305b9c1be533e71d2b5eee90b9e58ff37",
+  "source_p5_sha256": "926cadf61c4608c096cbf84e0c50ff0785eb7c5568d613206dfe57d695e4a54d",
+  "archive_p6_sha256": "1988d7452a028817a90e79013a2fa804afdb366d07421e5782415f660eee5758",
+  "deltoids_exact_p4": {
+    "deltoid.left": {
+      "raw_geometry_topology_shape_keys_groups_identical": true,
+      "evaluated_coordinates_topology_normals_identical": true,
+      "max_coordinate_difference_m": 0,
+      "raw_mesh_fingerprint": "9bfc70613b39a57dfcfc3a6dc94812c0f699a1acb4230859c78556aeb791fac4",
+      "triangles": 11938,
+      "volume_p4_m3": 0.0016241538002590248,
+      "volume_combination_m3": 0.0016241538002590248,
+      "volume_difference_m3": 0.0
+    },
+    "deltoid.right": {
+      "raw_geometry_topology_shape_keys_groups_identical": true,
+      "evaluated_coordinates_topology_normals_identical": true,
+      "max_coordinate_difference_m": 0,
+      "raw_mesh_fingerprint": "481c9e142733f2b27a921650fc7f341da2ab3d6aea3bd3ea97552cfa5ddf4069",
+      "triangles": 11938,
+      "volume_p4_m3": 0.0016241538048514055,
+      "volume_combination_m3": 0.0016241538048514055,
+      "volume_difference_m3": 0.0
+    }
+  },
+  "unchanged_other_objects_exact_p5": 298,
+  "unchanged_other_objects_match_p6_evaluated_geometry": true,
+  "head_eyes_and_entire_neck_exact_p5": true,
+  "throat_below_1_570m_exact_p4": true,
+  "throat_compared_triangles": 10251,
+  "objects": 300,
+  "master_triangles": 498058,
+  "glb_sha256": "b9e6788fa4a9a246f6d30b0ce325243e44d41bcebd054f46ee44324dc0f8038b",
+  "glb_bytes": 10280688,
+  "glb_triangles": 498057,
+  "glb_vertices": 293448,
+  "glb_surface_match_at_micron_quantization": true,
+  "glb_duplicate_faces_removed": [
+    {
+      "asset_id": "m0_c145__CENTRAL__ATHLETIQUE",
+      "removed_copies": 1,
+      "copies_remaining": 1
+    }
+  ],
+  "glb_reimport_verified": true,
+  "render_files_hash_verified": 10,
+  "neutral_matte_material_verified": true,
+  "new_sculpting": false,
+  "new_segmentation": false,
+  "verifier_sha256": "6f9b0ecc9c4fecfe9038c4d2f25453242fab27800c6e0b6b7b868da7def0cb1a",
+  "scope": "Exact asset assembly and export checks. Existing P4 reliefs and contacts intentionally restored, not corrected. No medical certification or mobile FPS test."
+}
