@@ -1,0 +1,57 @@
+{
+  "composition_only_no_geometry_or_image_retouching": true,
+  "plates": [
+    {
+      "file": "planche-neutre.png",
+      "sha256": "417e27d055735091054ba972a40f8d4d68699ec84763fcb5a824756cf81d7c7d",
+      "sources": [
+        "neutral/face.png",
+        "neutral/profil.png",
+        "neutral/dos.png",
+        "neutral/trois-quarts.png"
+      ]
+    },
+    {
+      "file": "planche-zones.png",
+      "sha256": "64223f7c08207ab42179aac598732a77d7cb776aea1264f358d4086d00d9663d",
+      "sources": [
+        "zones/face.png",
+        "zones/profil.png",
+        "zones/dos.png",
+        "zones/trois-quarts.png"
+      ]
+    },
+    {
+      "file": "planche-epaules-zones.png",
+      "sha256": "d19cee03a3b03834850a000c5a7b968fb0ba1d7ad26644bb5bcb03b18886407e",
+      "sources": [
+        "zones/epaule-droite.png",
+        "zones/epaule-gauche.png",
+        "zones/epaule-profil.png",
+        "zones/epaule-arriere.png",
+        "zones/epaules-face.png",
+        "zones/epaules-dos.png"
+      ]
+    },
+    {
+      "file": "planche-epaules-neutres.png",
+      "sha256": "eb80a8e305a6c623f9c2f9a64fc63c38a703240e1eabde53c1a1e1f023ddc1b6",
+      "sources": [
+        "neutral/epaule-droite.png",
+        "neutral/epaule-gauche.png",
+        "neutral/epaule-profil.png",
+        "neutral/epaule-arriere.png"
+      ]
+    },
+    {
+      "file": "comparatif-reference-neutre-zones.png",
+      "sha256": "705033856409ca836918ff7a638bb1975ef385cfa4a86cd2240e26efb3b54761",
+      "sources": [
+        "../../ecorche-beatriz-combinaison-p4-p5/renders/epaule-profil.png",
+        "neutral/epaule-profil.png",
+        "zones/epaule-profil.png"
+      ]
+    }
+  ],
+  "compositor_sha256": "c69255025e0a1c29ca0ea99f1298415e9244b90ed576002c1e6e2af0976f023e"
+}

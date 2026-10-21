@@ -1,0 +1,66 @@
+{
+  "new_neutral_render_checks": [
+    {
+      "file": "epaule-droite.png",
+      "new_render": true,
+      "pixels_exactly_equal": true,
+      "max_channel_difference_8bit": 0,
+      "mean_absolute_channel_difference_8bit": 0.0,
+      "new_sha256": "d7cd778fd5206d93f232ce05a735a031658e5020da84bbf9636a4d2a6bd2e8dc",
+      "baseline_sha256": "30acec148b484180267139e9e6555579330994778f611dbe84ee5a3233dc6df4"
+    },
+    {
+      "file": "epaule-profil.png",
+      "new_render": true,
+      "pixels_exactly_equal": true,
+      "max_channel_difference_8bit": 0,
+      "mean_absolute_channel_difference_8bit": 0.0,
+      "new_sha256": "ee67b722677df608d97b021087619d7acea46cbfd7a3216e847092059e003ffd",
+      "baseline_sha256": "29234dc7ff42469f4ad4636b4a6bcba5bef6fdecbb45a35540657c00e65ad7a8"
+    }
+  ],
+  "approved_neutral_views_reused_after_geometry_and_setup_verification": [
+    {
+      "file": "face.png",
+      "sha256": "2c0b950ac74a96035ce2a777f90c0abf508ca4df5b729c3877384b05791b767b",
+      "source": "../../ecorche-beatriz-combinaison-p4-p5/renders/face.png"
+    },
+    {
+      "file": "profil.png",
+      "sha256": "a6a9b033eb858206462ce2c38463a21b7b2c940479ce2a9588cde62a6a3156a7",
+      "source": "../../ecorche-beatriz-combinaison-p4-p5/renders/profil.png"
+    },
+    {
+      "file": "dos.png",
+      "sha256": "e5050afa9a7b8cbedeab5105c87a3ca933ea00c6e6806996ff1f6b04bbf2166e",
+      "source": "../../ecorche-beatriz-combinaison-p4-p5/renders/dos.png"
+    },
+    {
+      "file": "trois-quarts.png",
+      "sha256": "be178718c321fce6e924214857d95a75d9992c03c21c3572b4139789eb799679",
+      "source": "../../ecorche-beatriz-combinaison-p4-p5/renders/trois-quarts.png"
+    },
+    {
+      "file": "epaules-face.png",
+      "sha256": "1443cc66b4affd933be90ce6f6ab0202ded97bb97e4c568dbd1baa0b71737729",
+      "source": "../../ecorche-beatriz-combinaison-p4-p5/renders/epaules-face.png"
+    },
+    {
+      "file": "epaules-dos.png",
+      "sha256": "a139414a32becb2609c6157f56aec9cb56fd8da03d5b913ddb622b627c939c5a",
+      "source": "../../ecorche-beatriz-combinaison-p4-p5/renders/epaules-dos.png"
+    },
+    {
+      "file": "epaule-gauche.png",
+      "sha256": "652d3d4652131142199d2ab0875fbed7cd0a150d92139310fd1554ff8a873b65",
+      "source": "../../ecorche-beatriz-combinaison-p4-p5/renders/epaule-gauche.png"
+    },
+    {
+      "file": "epaule-arriere.png",
+      "sha256": "5d8675c76de7237f9acd32df477fbc130139097c419f04e39312a8e4a71fcf49",
+      "source": "../../ecorche-beatriz-combinaison-p4-p5/renders/epaule-arriere.png"
+    }
+  ],
+  "reason": "Unchanged geometry/material/lighting/cameras; avoid redundant CPU rendering.",
+  "pixels_repainted": false
+}
