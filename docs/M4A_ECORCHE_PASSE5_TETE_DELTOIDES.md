@@ -65,7 +65,7 @@ Le corps anatomique reste l’adaptation **Beatriz Gomez Santamaria — CC BY 4.
   [contrôles](m4a/ecorche-beatriz-passe5/verification.json),
   [reproduction](m4a/ecorche-beatriz-passe5/README.md).
 
-Le master compte **498 058 triangles et 300 objets** 
+Le master compte **498 058 triangles et 300 objets**,
 contre 488 822 triangles et 298 objets à la passe 4. Le supplément provient
 de la nouvelle tête et des deux yeux ; les deltoïdes ne gagnent aucun triangle.
 Le GLB sérialise **498 057 triangles, 293 448 sommets, 300 objets et
