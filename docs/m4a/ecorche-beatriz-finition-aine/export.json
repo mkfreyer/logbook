@@ -1,0 +1,21 @@
+{
+  "file": "ecorche-finition-aine.glb",
+  "bytes": 10396860,
+  "sha256": "24cbcc35de090badfc108bfa4e5ebf9a33526521a560a8d76d7fd43b8f58f9d5",
+  "nodes": 299,
+  "meshes": 299,
+  "materials": 7,
+  "primitives": 303,
+  "triangles": 502939,
+  "selection_zone_ids": [
+    "deltoid.left.anterior",
+    "deltoid.left.lateral",
+    "deltoid.left.posterior",
+    "deltoid.right.anterior",
+    "deltoid.right.lateral",
+    "deltoid.right.posterior"
+  ],
+  "textures_added": 0,
+  "shape_keys_baked_at_existing_values": true,
+  "exporter_sha256": "a33d8937f95a9385c0af8bb96a8a1d1f3e1acae3574911746e83a5e09ba20ef6"
+}

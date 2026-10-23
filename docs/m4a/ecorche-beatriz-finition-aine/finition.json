@@ -1,0 +1,62 @@
+{
+  "baseline_commit": "d79692f380e39312939290ab0d3e038e448aa9b2",
+  "baseline_blend_sha256": "e2c39435afb038306580e6df4ef889ba0a292188cdb255de9143b4b5ffefb528",
+  "baseline_master": "../ecorche-beatriz-anatomie-deltoides/ecorche-p4-p5-zones.blend",
+  "source_scene": "22_ANATOMIE_DELTOIDES_P4",
+  "scene": "23_FINITION_AINE_LOCALISEE",
+  "master": "ecorche-finition-aine.blend",
+  "added_object": "groin.neutral_surface",
+  "original_mesh_objects": 300,
+  "original_mesh_objects_edited": 0,
+  "replaced_central_objects": [
+    "m0_c098__CENTRAL__ATHLETIQUE",
+    "m1_c084__CENTRAL__ATHLETIQUE"
+  ],
+  "original_objects_preserved_in_proposal": 298,
+  "objects_after": 299,
+  "added_triangles": 2208,
+  "surface_method": {
+    "method": "Small closed neutral pubic envelope; fitted behind existing adductor and lower abdominal surfaces, replacing two exposed central pieces.",
+    "replaced_original_objects": [
+      "m0_c098__CENTRAL__ATHLETIQUE",
+      "m1_c084__CENTRAL__ATHLETIQUE"
+    ],
+    "original_muscle_vertices_edited": 0,
+    "center_xz_m": [
+      0.002114987923242599,
+      0.923
+    ],
+    "radii_xyz_m": [
+      0.052,
+      0.035,
+      0.0305
+    ],
+    "centre_y_m": -0.016,
+    "lower_recession_max_m": 0.022,
+    "vertical_profile_exponent": 4,
+    "segments": 48,
+    "latitude_divisions": 24,
+    "vertices": 1106,
+    "triangles": 2208,
+    "bbox_min_m": [
+      -0.0498850120767574,
+      -0.051000000000000004,
+      0.8925000000000001
+    ],
+    "bbox_max_m": [
+      0.0541149879232426,
+      0.03458858295014093,
+      0.9535
+    ],
+    "anatomical_purpose": "Neutral presentation only; no claimed anatomical organ or training muscle."
+  },
+  "surface_npz_sha256": "c0014d6f86fee93a848834d28db142afb60fe228c5a067faa2fa6b49eb345845",
+  "builder_sha256": "03751517376e7b5d7e43c9ba8ad0def73aae7098b2647d0d5c80722f6097e631",
+  "reference_image": "No new image attachment was available; scope follows the written anatomical region.",
+  "limitations": [
+    "Two exposed central pieces substituted only in the new presentation scene; original scene and source file retained.",
+    "Not a replacement anatomical muscle and not an interactive zone.",
+    "Not a mobile-optimized or clinically certified model."
+  ],
+  "master_sha256": "57f2d561f2ec963553df67ddd8d712652381ff9c6bda40de60c2646dcb3e71c5"
+}
