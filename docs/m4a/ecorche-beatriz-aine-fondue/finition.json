@@ -1,0 +1,225 @@
+{
+  "baseline_commit": "cf5569b2e84727a800863301901126a6630884f3",
+  "baseline_blend_sha256": "57f2d561f2ec963553df67ddd8d712652381ff9c6bda40de60c2646dcb3e71c5",
+  "baseline_master": "../ecorche-beatriz-finition-aine/ecorche-finition-aine.blend",
+  "source_scene": "23_FINITION_AINE_LOCALISEE",
+  "scene": "24_AINE_RACCORDS_FONDUS",
+  "master": "ecorche-aine-fondue.blend",
+  "added_object": "groin.neutral_surface",
+  "replaced_object": "groin.neutral_surface",
+  "retained_original_objects": 298,
+  "retained_original_vertices_moved": 0,
+  "surface_triangles": 20799,
+  "surface_vertices": 11041,
+  "contact_boundary_vertices": 1269,
+  "boundary_inset_m": 0.00015,
+  "fully_buried_triangles_removed": true,
+  "fully_buried_intersecting_triangles_removed": 0,
+  "construction": {
+    "baseline_commit": "cf5569b2e84727a800863301901126a6630884f3",
+    "baseline_blend_sha256": "57f2d561f2ec963553df67ddd8d712652381ff9c6bda40de60c2646dcb3e71c5",
+    "source_scene": "23_FINITION_AINE_LOCALISEE",
+    "grid_step_m": 0.00125,
+    "blend_radius_m": 0.0045,
+    "grid_shape": [
+      103,
+      101,
+      77
+    ],
+    "maximum_smooth_union_offset_m": 0.001125,
+    "method": "Rounded receding core and compact C1 smooth minimum of local signed distances to retained closed source components.",
+    "core_parameters_m": {
+      "center_xz": [
+        0.002114987923242599,
+        0.933
+      ],
+      "radii_xyz": [
+        0.052,
+        0.028,
+        0.035
+      ],
+      "center_y": -0.023,
+      "posterior_slope_toward_bottom": 0.45
+    },
+    "sources": [
+      {
+        "id": "m0_c040.left",
+        "used_for_distance_field": true,
+        "samples": 5980
+      },
+      {
+        "id": "m0_c040.right",
+        "used_for_distance_field": true,
+        "samples": 5981
+      },
+      {
+        "id": "m0_c043.left",
+        "used_for_distance_field": true,
+        "samples": 4386
+      },
+      {
+        "id": "m0_c043.right",
+        "used_for_distance_field": true,
+        "samples": 4386
+      },
+      {
+        "id": "m0_c051.left",
+        "used_for_distance_field": true,
+        "samples": 5372
+      },
+      {
+        "id": "m0_c051.right",
+        "used_for_distance_field": true,
+        "samples": 5372
+      },
+      {
+        "id": "m0_c052.left",
+        "used_for_distance_field": true,
+        "samples": 19517
+      },
+      {
+        "id": "m0_c052.right",
+        "used_for_distance_field": true,
+        "samples": 19518
+      },
+      {
+        "id": "m0_c053.left",
+        "used_for_distance_field": true,
+        "samples": 58416
+      },
+      {
+        "id": "m0_c053.right",
+        "used_for_distance_field": true,
+        "samples": 58416
+      },
+      {
+        "id": "m0_c063.left",
+        "used_for_distance_field": true,
+        "samples": 363
+      },
+      {
+        "id": "m0_c063.right",
+        "used_for_distance_field": true,
+        "samples": 363
+      },
+      {
+        "id": "m0_c064.left",
+        "used_for_distance_field": true,
+        "samples": 50596
+      },
+      {
+        "id": "m0_c064.right",
+        "used_for_distance_field": true,
+        "samples": 50597
+      },
+      {
+        "id": "m0_c065.left",
+        "used_for_distance_field": true,
+        "samples": 1447
+      },
+      {
+        "id": "m0_c065.right",
+        "used_for_distance_field": true,
+        "samples": 1447
+      },
+      {
+        "id": "m0_c066.left",
+        "used_for_distance_field": true,
+        "samples": 43635
+      },
+      {
+        "id": "m0_c066.right",
+        "used_for_distance_field": true,
+        "samples": 43636
+      },
+      {
+        "id": "m0_c067.left",
+        "used_for_distance_field": true,
+        "samples": 33875
+      },
+      {
+        "id": "m0_c067.right",
+        "used_for_distance_field": true,
+        "samples": 33876
+      },
+      {
+        "id": "m0_c069.left",
+        "used_for_distance_field": true,
+        "samples": 14336
+      },
+      {
+        "id": "m0_c069.right",
+        "used_for_distance_field": true,
+        "samples": 14337
+      },
+      {
+        "id": "m0_c071.left",
+        "used_for_distance_field": true,
+        "samples": 20207
+      },
+      {
+        "id": "m0_c071.right",
+        "used_for_distance_field": true,
+        "samples": 20207
+      },
+      {
+        "id": "m0_c079.left",
+        "used_for_distance_field": true,
+        "samples": 30814
+      },
+      {
+        "id": "m0_c079.right",
+        "used_for_distance_field": true,
+        "samples": 30815
+      },
+      {
+        "id": "m0_c086__CENTRAL__ATHLETIQUE",
+        "used_for_distance_field": true,
+        "samples": 22718
+      },
+      {
+        "id": "m0_c114__CENTRAL__ATHLETIQUE",
+        "used_for_distance_field": true,
+        "samples": 13882
+      },
+      {
+        "id": "m0_c130__CENTRAL__ATHLETIQUE",
+        "used_for_distance_field": true,
+        "samples": 24251
+      },
+      {
+        "id": "m1_c007.left",
+        "used_for_distance_field": true,
+        "samples": 1768
+      },
+      {
+        "id": "m1_c007.right",
+        "used_for_distance_field": true,
+        "samples": 1768
+      },
+      {
+        "id": "m1_c014__CENTRAL__ATHLETIQUE",
+        "used_for_distance_field": true,
+        "samples": 153847
+      },
+      {
+        "id": "rectus_abdominis.left",
+        "used_for_distance_field": true,
+        "samples": 31351
+      },
+      {
+        "id": "rectus_abdominis.right",
+        "used_for_distance_field": true,
+        "samples": 31351
+      }
+    ],
+    "source_meshes_modified": 0,
+    "fields_sha256": "5b7f143a86b5d3ed4f629b35aadc0694fc67683cbbb3f3eecfe218f12bd6db14",
+    "sources_sha256": "dca9713457dc455903fc3fbe04bfae74f81e6a21a243f349cafe9c61a777b4a7"
+  },
+  "method": "Compact local implicit union; smooth geometric shading like the reference feet; source shading normals transferred only at buried contact margins; receding rounded core.",
+  "topology": "Open presentation patch; all contact boundaries deliberately inside unchanged neighbour surfaces. Not a welded whole-body skin.",
+  "builder_sha256": "08415c9d9e3bf2b3b2657603897a9b82b057f54de1085fd616dfc652b300812e",
+  "foot_reference": "Actual unchanged feet of this mannequin; no new reference image file received.",
+  "master_sha256": "72c3f1de79c55f058f2710d655c37c063bbd8427ef0c91b580280bfee8f89b20"
+}
