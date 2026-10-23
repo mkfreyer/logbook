@@ -1,0 +1,247 @@
+{
+  "baseline_commit": "d94297af21a05dacaa1f19a1ce64c7b64f447ea4",
+  "baseline_blend_sha256": "72c3f1de79c55f058f2710d655c37c063bbd8427ef0c91b580280bfee8f89b20",
+  "baseline_master": "../ecorche-beatriz-aine-fondue/ecorche-aine-fondue.blend",
+  "source_scene": "24_AINE_RACCORDS_FONDUS",
+  "scene": "25_AINE_SURFACE_HOMOGENE",
+  "master": "ecorche-aine-homogene.blend",
+  "added_object": "groin.neutral_surface",
+  "replaced_object": "groin.neutral_surface",
+  "retained_original_objects": 298,
+  "retained_original_vertices_moved": 0,
+  "surface_triangles": 38488,
+  "surface_vertices": 20420,
+  "contact_boundary_vertices": 2356,
+  "boundary_field_inset_m": 0.0015,
+  "fully_buried_triangles_removed": false,
+  "fully_buried_intersecting_triangles_removed": 0,
+  "construction": {
+    "baseline_commit": "d94297af21a05dacaa1f19a1ce64c7b64f447ea4",
+    "baseline_blend_sha256": "72c3f1de79c55f058f2710d655c37c063bbd8427ef0c91b580280bfee8f89b20",
+    "source_scene": "24_AINE_RACCORDS_FONDUS",
+    "grid_step_m": 0.00125,
+    "blend_radius_m": 0.008,
+    "grid_shape": [
+      131,
+      121,
+      89
+    ],
+    "maximum_smooth_union_offset_m": 0.002,
+    "method": "Rounded receding core and compact C1 smooth minimum of local signed distances to retained closed source components.",
+    "core_parameters_m": {
+      "center_xz": [
+        0.002114987923242599,
+        0.941
+      ],
+      "radii_xyz": [
+        0.06,
+        0.03,
+        0.035
+      ],
+      "center_y": -0.027,
+      "posterior_slope_toward_bottom": 0.45
+    },
+    "sources": [
+      {
+        "id": "m0_c026.left",
+        "used_for_distance_field": true,
+        "samples": 25
+      },
+      {
+        "id": "m0_c026.right",
+        "used_for_distance_field": true,
+        "samples": 25
+      },
+      {
+        "id": "m0_c040.left",
+        "used_for_distance_field": true,
+        "samples": 29938
+      },
+      {
+        "id": "m0_c040.right",
+        "used_for_distance_field": true,
+        "samples": 29938
+      },
+      {
+        "id": "m0_c043.left",
+        "used_for_distance_field": true,
+        "samples": 12573
+      },
+      {
+        "id": "m0_c043.right",
+        "used_for_distance_field": true,
+        "samples": 12573
+      },
+      {
+        "id": "m0_c051.left",
+        "used_for_distance_field": true,
+        "samples": 14118
+      },
+      {
+        "id": "m0_c051.right",
+        "used_for_distance_field": true,
+        "samples": 14118
+      },
+      {
+        "id": "m0_c052.left",
+        "used_for_distance_field": true,
+        "samples": 45792
+      },
+      {
+        "id": "m0_c052.right",
+        "used_for_distance_field": true,
+        "samples": 45792
+      },
+      {
+        "id": "m0_c053.left",
+        "used_for_distance_field": true,
+        "samples": 124267
+      },
+      {
+        "id": "m0_c053.right",
+        "used_for_distance_field": true,
+        "samples": 124267
+      },
+      {
+        "id": "m0_c063.left",
+        "used_for_distance_field": true,
+        "samples": 949
+      },
+      {
+        "id": "m0_c063.right",
+        "used_for_distance_field": true,
+        "samples": 949
+      },
+      {
+        "id": "m0_c064.left",
+        "used_for_distance_field": true,
+        "samples": 91797
+      },
+      {
+        "id": "m0_c064.right",
+        "used_for_distance_field": true,
+        "samples": 91797
+      },
+      {
+        "id": "m0_c065.left",
+        "used_for_distance_field": true,
+        "samples": 17523
+      },
+      {
+        "id": "m0_c065.right",
+        "used_for_distance_field": true,
+        "samples": 17523
+      },
+      {
+        "id": "m0_c066.left",
+        "used_for_distance_field": true,
+        "samples": 72173
+      },
+      {
+        "id": "m0_c066.right",
+        "used_for_distance_field": true,
+        "samples": 72173
+      },
+      {
+        "id": "m0_c067.left",
+        "used_for_distance_field": true,
+        "samples": 75721
+      },
+      {
+        "id": "m0_c067.right",
+        "used_for_distance_field": true,
+        "samples": 75721
+      },
+      {
+        "id": "m0_c069.left",
+        "used_for_distance_field": true,
+        "samples": 22844
+      },
+      {
+        "id": "m0_c069.right",
+        "used_for_distance_field": true,
+        "samples": 22844
+      },
+      {
+        "id": "m0_c071.left",
+        "used_for_distance_field": true,
+        "samples": 36319
+      },
+      {
+        "id": "m0_c071.right",
+        "used_for_distance_field": true,
+        "samples": 36319
+      },
+      {
+        "id": "m0_c079.left",
+        "used_for_distance_field": true,
+        "samples": 49868
+      },
+      {
+        "id": "m0_c079.right",
+        "used_for_distance_field": true,
+        "samples": 49868
+      },
+      {
+        "id": "m0_c086__CENTRAL__ATHLETIQUE",
+        "used_for_distance_field": true,
+        "samples": 44097
+      },
+      {
+        "id": "m0_c114__CENTRAL__ATHLETIQUE",
+        "used_for_distance_field": true,
+        "samples": 28001
+      },
+      {
+        "id": "m0_c130__CENTRAL__ATHLETIQUE",
+        "used_for_distance_field": true,
+        "samples": 53903
+      },
+      {
+        "id": "m1_c007.left",
+        "used_for_distance_field": true,
+        "samples": 11611
+      },
+      {
+        "id": "m1_c007.right",
+        "used_for_distance_field": true,
+        "samples": 11611
+      },
+      {
+        "id": "m1_c014__CENTRAL__ATHLETIQUE",
+        "used_for_distance_field": true,
+        "samples": 262771
+      },
+      {
+        "id": "m1_c028__CENTRAL__ATHLETIQUE",
+        "used_for_distance_field": true,
+        "samples": 448
+      },
+      {
+        "id": "rectus_abdominis.left",
+        "used_for_distance_field": true,
+        "samples": 77472
+      },
+      {
+        "id": "rectus_abdominis.right",
+        "used_for_distance_field": true,
+        "samples": 77472
+      }
+    ],
+    "source_meshes_modified": 0,
+    "fields_sha256": "b7695625439b1b68f012f1c0abe68be09259d98a878ab0aadd29a4cded006281",
+    "sources_sha256": "64e1fec92bbb7309f4c85351637a77b42b3a8cfc13050378c18418483ce2ff0e",
+    "extraction": {
+      "field_gaussian_sigma_m": 0.001,
+      "free_surface_outset_m": 0.00025,
+      "contact_field_inset_m": 0.0015,
+      "nearest_point_geometry_projection": false,
+      "extractor_sha256": "8a12bba5ce7efe3528bcd3e2e1cb2f82a5757405a7b80bf057eba6839341ea77"
+    }
+  },
+  "method": "Rebuilt low-frequency neutral envelope, higher and wider at the pubic root, receding below; 8 mm compact smooth union and 1 mm field fairing. Contact collar inset in the field without vertex projection; source shading matched at margins. 298 other objects unchanged.",
+  "topology": "Open presentation patch; all contact boundaries deliberately inside unchanged neighbour surfaces. Not a welded whole-body skin.",
+  "builder_sha256": "78131601db0e38ccfa2b7fe517287731d15e9293b31d8996cec1fc006736dfbd",
+  "foot_reference": "Unchanged feet of this mannequin: deliberate smooth simplified surface finish.",
+  "master_sha256": "7639c04f72b5da3728f4a8c46f0588c1c97d564ab075d1c6d8e29e0b3dbb7126"
+}
