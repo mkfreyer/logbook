@@ -1,0 +1,602 @@
+{
+  "baseline_commit": "0ab3d838c728a88f2d325edff7a6884400c9ed78",
+  "baseline_blend_sha256": "f8b6a232a18335221af3cafc62b37837fedc1caaf9bc6cb48e1cb583f222d9ab",
+  "scene": "17_TRAJETS_DELTOIDES",
+  "before_scene": "16_COMBINAISON_P4_P5",
+  "changed_objects": [
+    "deltoid.left",
+    "deltoid.right"
+  ],
+  "unchanged_other_objects": 298,
+  "source_asset": {
+    "extras": {
+      "author": "Beatriz Gomez Santamaria (https://sketchfab.com/BeatrizGomez)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/ecorche-anatomy-study-e402d3d541eb4b199c57d5410f5d3c57",
+      "title": "Ecorche - Anatomy study"
+    },
+    "generator": "Sketchfab-12.67.0",
+    "version": "2.0"
+  },
+  "source_sha256": "137e2e80bdcf9c87ff49ab32cb5de70f8de542870c78a7d5170e8743d241a73a",
+  "head_source": {
+    "source_url": "https://download.blender.org/demo/asset-bundles/human-base-meshes/human-base-meshes-bundle-v1.4.1.zip",
+    "bundle_blend_sha256": "3c121505651140ceb4d69fd1d8923f7788ffadd81672f5be14845a5f2c75c137",
+    "source_collection": "Head (Animation) - Realistic",
+    "author": "Dan Ulrich",
+    "license": "CC0",
+    "embedded_readme": "Important Info\n==============\n\nHuman Base Meshes: Asset Bundle - Version 1.4\n\nAll provided assets are public domain under the CC0 license.\nThe minimum supported Blender version is 4.2!\n\nWhat's included\n==============\n\nThese are various human base meshes that are provided by the Blender community and the Blender Studio.\nThey include:\n    - Quad topology for multi-resolution sculpting\n    - Closed volumes for voxel remeshing\n    - Face sets\n    - UV maps (including UDIMs)\n    - Multiresoluton levels for realistic assets\n    - Creased edges and Subdiv modifiers for planar/primitive assets\n\nHow to install the Asset Bundle\n===============================\n\nIt's recommended to create a new Asset Library in the preferences first:\n- Open the Preferences\n- Go to \"File Paths\"\n- Add a New Asset Library with the + button and call it \"Human Base Meshes\"\n- Set the \"Import Method\" to \"Append\"\n\nTo add the assets from this file to the Asset Library:\n- In the Asset Browser below, click on \"Copy Bundle to Asset Library\"\n- Choose a target Asset Library\n- Choose a target folder location\n\nThat's it. Enjoy!",
+    "objects": [
+      {
+        "key": "head",
+        "source_object": "GEO-head_animation_realistic",
+        "triangles": 25896,
+        "bbox_m": [
+          [
+            -0.12092459296512412,
+            -0.07735258340835573,
+            1.4387554078102112
+          ],
+          [
+            0.1253736486501713,
+            0.1448040336370468,
+            1.8000673792362214
+          ]
+        ]
+      },
+      {
+        "key": "eye.l",
+        "source_object": "GEO-head_animation_realistic.sclera.L",
+        "triangles": 1088,
+        "bbox_m": [
+          [
+            0.020359586722375894,
+            -0.049049095809459695,
+            1.6778770172595978
+          ],
+          [
+            0.04198613072109415,
+            -0.0274642936885357,
+            1.70124689412117
+          ]
+        ]
+      },
+      {
+        "key": "eye.r",
+        "source_object": "GEO-head_animation_realistic.sclera.R",
+        "triangles": 1088,
+        "bbox_m": [
+          [
+            -0.03776044940280721,
+            -0.049049095809459695,
+            1.6778770172595978
+          ],
+          [
+            -0.01613390540408895,
+            -0.027464300394058228,
+            1.70124689412117
+          ]
+        ]
+      }
+    ],
+    "fit": "XY scale 0.9, Z scale 0.972 to align chin and occiput to the fixed cervical attachments; cranial top at 1.8 m; X center fitted to mannequin midplane, Y offset +0.075 m to align the occipital attachment without moving the validated neck.",
+    "selected_source_only": true,
+    "rain_rig_used": false,
+    "multires_level": 1,
+    "builder_sha256": "b80cc46470ce12dc27482577e32a430ffbdc6bd7020eeb257c3fc5e6235c00e6",
+    "donor_sha256": "ebfe6160812ccc188789cf22f78a5222a511aa6a7925d0dddc88a9b1c48cdbd3"
+  },
+  "median_plane_x_m": 0.002114987923242599,
+  "records": {
+    "deltoid.left": {
+      "vertices": 5971,
+      "triangles": 11938,
+      "changed_vertices": 880,
+      "max_displacement_m": 0.0034982662992131147,
+      "volume_before_m3": 0.0016241538002590248,
+      "volume_after_m3": 0.0016208589735979776,
+      "volume_ratio": 0.9979713579708266,
+      "bbox_before_m": [
+        0.17953185737133026,
+        0.15781089384108782,
+        0.22285938262939453
+      ],
+      "bbox_after_m": [
+        0.17953161895275116,
+        0.15781089384108782,
+        0.22285938262939453
+      ],
+      "self_contacts": 0,
+      "min_triangle_area_m2": 3.346871742362628e-08
+    },
+    "deltoid.right": {
+      "vertices": 5971,
+      "triangles": 11938,
+      "changed_vertices": 881,
+      "max_displacement_m": 0.0034982662992131147,
+      "volume_before_m3": 0.0016241538048514055,
+      "volume_after_m3": 0.0016208589785334413,
+      "volume_ratio": 0.9979713581878007,
+      "bbox_before_m": [
+        0.17953184247016907,
+        0.15781089384108782,
+        0.22285938262939453
+      ],
+      "bbox_after_m": [
+        0.17953160405158997,
+        0.15781089384108782,
+        0.22285938262939453
+      ],
+      "self_contacts": 0,
+      "min_triangle_area_m2": 3.346871742362628e-08
+    }
+  },
+  "surface_method": {
+    "method": "Transport of existing local depression depth onto the two blue trajectories; true mesh displacement only.",
+    "baseline_commit": "0ab3d838c728a88f2d325edff7a6884400c9ed78",
+    "paths": [
+      {
+        "path": 1,
+        "reference_red_px": [
+          [
+            92.0,
+            130.0
+          ],
+          [
+            80.0,
+            153.0
+          ],
+          [
+            69.0,
+            180.0
+          ],
+          [
+            60.0,
+            208.0
+          ],
+          [
+            54.0,
+            230.0
+          ],
+          [
+            53.0,
+            258.0
+          ],
+          [
+            53.0,
+            286.0
+          ],
+          [
+            57.0,
+            300.0
+          ],
+          [
+            65.0,
+            319.0
+          ],
+          [
+            78.0,
+            335.0
+          ],
+          [
+            94.0,
+            350.0
+          ]
+        ],
+        "reference_blue_px": [
+          [
+            55.0,
+            292.0
+          ],
+          [
+            57.0,
+            312.0
+          ],
+          [
+            57.0,
+            333.0
+          ],
+          [
+            60.0,
+            353.0
+          ],
+          [
+            64.0,
+            370.0
+          ],
+          [
+            70.0,
+            378.0
+          ]
+        ],
+        "old_surface_path_px": [
+          [
+            346.531855808151,
+            285.0
+          ],
+          [
+            337.7126517570996,
+            303.7959866220736
+          ],
+          [
+            329.0079869369758,
+            322.59197324414714
+          ],
+          [
+            322.01878509139004,
+            341.38795986622074
+          ],
+          [
+            316.09579055066155,
+            360.1839464882943
+          ],
+          [
+            310.8996170155023,
+            378.9799331103679
+          ],
+          [
+            305.50151514064703,
+            397.7759197324415
+          ],
+          [
+            301.61121399224646,
+            416.571906354515
+          ],
+          [
+            301.23200760973464,
+            435.3678929765886
+          ],
+          [
+            302.52542795859733,
+            454.1638795986622
+          ],
+          [
+            304.7630124706648,
+            472.95986622073576
+          ],
+          [
+            310.4307904248492,
+            491.75585284280936
+          ],
+          [
+            319.76316776637594,
+            510.55183946488296
+          ],
+          [
+            329.63737486005147,
+            529.3478260869565
+          ],
+          [
+            342.7997692316212,
+            548.14381270903
+          ]
+        ],
+        "new_surface_path_px": [
+          [
+            346.531855808151,
+            285.0
+          ],
+          [
+            337.7126517570996,
+            303.7959866220736
+          ],
+          [
+            329.0079869369758,
+            322.59197324414714
+          ],
+          [
+            322.01878509139004,
+            341.38795986622074
+          ],
+          [
+            316.09579055066155,
+            360.1839464882943
+          ],
+          [
+            310.8996170155023,
+            378.9799331103679
+          ],
+          [
+            305.50151514064703,
+            397.7759197324415
+          ],
+          [
+            301.61121399224646,
+            416.571906354515
+          ],
+          [
+            301.23200760973464,
+            435.3678929765886
+          ],
+          [
+            302.52542795859733,
+            454.1638795986622
+          ],
+          [
+            304.7630124706648,
+            472.95986622073576
+          ],
+          [
+            310.4824744825911,
+            492.0850975367761
+          ],
+          [
+            315.7188001142761,
+            520.0165023763423
+          ],
+          [
+            317.2224184813329,
+            547.4685354691076
+          ],
+          [
+            319.87931543137205,
+            574.9205685618729
+          ]
+        ],
+        "old_end_px": [
+          362.0,
+          566.0
+        ],
+        "new_end_px": [
+          328.92564041502015,
+          601.0
+        ],
+        "upper_first_path_preserved_until_original_y_px": 490
+      },
+      {
+        "path": 2,
+        "reference_red_px": [
+          [
+            230.0,
+            82.0
+          ],
+          [
+            233.0,
+            100.0
+          ],
+          [
+            234.0,
+            128.0
+          ],
+          [
+            231.0,
+            160.0
+          ],
+          [
+            225.0,
+            192.0
+          ],
+          [
+            217.0,
+            223.0
+          ],
+          [
+            207.0,
+            254.0
+          ],
+          [
+            194.0,
+            286.0
+          ],
+          [
+            179.0,
+            315.0
+          ],
+          [
+            161.0,
+            344.0
+          ]
+        ],
+        "reference_blue_px": [
+          [
+            229.0,
+            72.0
+          ],
+          [
+            230.0,
+            90.0
+          ],
+          [
+            219.0,
+            123.0
+          ],
+          [
+            213.0,
+            151.0
+          ],
+          [
+            207.0,
+            185.0
+          ],
+          [
+            200.0,
+            217.0
+          ],
+          [
+            187.0,
+            251.0
+          ],
+          [
+            174.0,
+            280.0
+          ],
+          [
+            164.0,
+            315.0
+          ],
+          [
+            149.0,
+            352.0
+          ],
+          [
+            132.0,
+            379.0
+          ]
+        ],
+        "old_surface_path_px": [
+          [
+            565.7650404992966,
+            218.0
+          ],
+          [
+            558.5412527943234,
+            240.20735785953178
+          ],
+          [
+            552.2415851895047,
+            262.41471571906357
+          ],
+          [
+            549.0578111307653,
+            284.6220735785953
+          ],
+          [
+            547.6146894435217,
+            306.8294314381271
+          ],
+          [
+            545.2382767566767,
+            329.03678929765886
+          ],
+          [
+            538.5990385104271,
+            351.24414715719064
+          ],
+          [
+            529.665334658127,
+            373.4515050167224
+          ],
+          [
+            520.196436724688,
+            395.65886287625415
+          ],
+          [
+            459.5621268808595,
+            417.86622073578593
+          ],
+          [
+            446.9312348641399,
+            440.0735785953177
+          ],
+          [
+            451.47572858518356,
+            462.2809364548495
+          ],
+          [
+            455.8072429155919,
+            484.4882943143813
+          ],
+          [
+            465.4344056573408,
+            506.695652173913
+          ],
+          [
+            469.3875693267049,
+            528.9030100334448
+          ]
+        ],
+        "new_surface_path_px": [
+          [
+            565.7650404992966,
+            218.0
+          ],
+          [
+            555.0403501779359,
+            233.70923488595275
+          ],
+          [
+            538.1178194624781,
+            257.4397993311037
+          ],
+          [
+            528.237629274578,
+            283.4096989966555
+          ],
+          [
+            523.4961970423807,
+            309.3795986622073
+          ],
+          [
+            519.7716785371213,
+            335.3494983277592
+          ],
+          [
+            512.1704484184539,
+            361.319397993311
+          ],
+          [
+            502.8471731452885,
+            387.2892976588629
+          ],
+          [
+            489.4734345288804,
+            413.2591973244147
+          ],
+          [
+            425.54738642230467,
+            439.22909698996654
+          ],
+          [
+            408.8163079525957,
+            465.1989966555184
+          ],
+          [
+            414.38804045809326,
+            491.1688963210702
+          ],
+          [
+            420.6473475514237,
+            517.138795986622
+          ],
+          [
+            431.1990739988457,
+            543.1086956521739
+          ],
+          [
+            435.5741768776303,
+            569.0785953177258
+          ]
+        ],
+        "old_end_px": [
+          461.0,
+          550.0
+        ],
+        "new_end_px": [
+          426.45216195125954,
+          593.75
+        ],
+        "upper_first_path_preserved_until_original_y_px": null
+      }
+    ],
+    "camera": "P4P5_epaule-droite",
+    "reference_size_px": [
+      320,
+      384
+    ],
+    "registration": "Manual correspondence of existing valley landmarks in the same -55 degree view; relative annotation displacements scaled 1.25 to original render pixels. Not an automated pixel registration.",
+    "pixels_per_meter": 2400,
+    "closing_radius_px": 40,
+    "rounded_extra_depth_m": 0.002,
+    "new_textures_or_material_lines": false,
+    "global_volume_compensation": false,
+    "changed_vertices": 943,
+    "max_fill_m": 0.0028600206415187847,
+    "max_recession_m": 0.0034982661686963706,
+    "volume_ratio": 0.9979713579288375,
+    "bbox_before_m": [
+      0.17953184247016907,
+      0.15781089384108782,
+      0.22285938262939453
+    ],
+    "bbox_after_m": [
+      0.1795316158958125,
+      0.15781089384098623,
+      0.22285938262939453
+    ],
+    "surface_builder_sha256": "b5adbb3d478d137c33865c97d84e63745c7cae1a3a7f34652fcdb54f90aeb00b"
+  },
+  "topology_unchanged": true,
+  "new_triangles": 0,
+  "new_segmentation": false,
+  "builder_sha256": "5837cbbe6e32500d1a1d2ae6695c086048417f77e08e6f2386aadd2ac97968e9"
+}

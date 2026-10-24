@@ -1,0 +1,130 @@
+{
+  "composer_sha256": "26eeef442e4a8ff8a3093c2adcebf32fb6dac442d82dee84c7e1d99db471362d",
+  "method": "Unretouched input PNG pixels pasted at native size; labels and borders only.",
+  "sheets": [
+    {
+      "file": "comparatif-face.png",
+      "sha256": "59e09fcbe427e2856accf1db446a2aaeb5a616a7a137dcc8473a63a1f1e7c20b",
+      "inputs": [
+        {
+          "file": "avant-face.png",
+          "sha256": "5c98e20bbcf5f2b002ac866af82e69088ae04d7714be04c5636dff7fffbc31ee"
+        },
+        {
+          "file": "apres-face.png",
+          "sha256": "4fa0803889d2b014be3e550d17dac92c1593c7777e6a45c80566ab21eafdcfe6"
+        }
+      ],
+      "render_pixels_retouch": false
+    },
+    {
+      "file": "comparatif-profil.png",
+      "sha256": "21a7cc76cb93b9971a52715a5b22163e15b01cc4adfa31590ff763bc0ef1a5cc",
+      "inputs": [
+        {
+          "file": "avant-profil.png",
+          "sha256": "7fd6c57a818428e0607d43e358625e48988afa85b21b639b1911ab93b6564fce"
+        },
+        {
+          "file": "apres-profil.png",
+          "sha256": "afa2d4cee0989f3e6eb07fd857c964e6bcf8965354e98aab039e4ffcd5d174fe"
+        }
+      ],
+      "render_pixels_retouch": false
+    },
+    {
+      "file": "comparatif-dos.png",
+      "sha256": "0f7c04e960e6d61cbff7eb91b251b9a645a2bd9037224806326923d0786638df",
+      "inputs": [
+        {
+          "file": "avant-dos.png",
+          "sha256": "87807bf5dc6afc45217804e7e2cb5742a330038923be3944db5851c82a01582f"
+        },
+        {
+          "file": "apres-dos.png",
+          "sha256": "c6a0c87b934befd6e58e1e9f18b54c9c1e7b436030eff9af8916a44ae1c01955"
+        }
+      ],
+      "render_pixels_retouch": false
+    },
+    {
+      "file": "comparatif-trois-quarts.png",
+      "sha256": "d7c20aea017a38ad129e71c33c2cc3fb06c5b9b2235fcf9f2352b55d214c4d30",
+      "inputs": [
+        {
+          "file": "avant-trois-quarts.png",
+          "sha256": "03784543caa312de48d54d1438498243916b95ffa8c02863c712eb0a3d7243f0"
+        },
+        {
+          "file": "apres-trois-quarts.png",
+          "sha256": "ffedc85feec1d333691902052b37aa5a3f3ae344f912019a0e11ea522a699ef6"
+        }
+      ],
+      "render_pixels_retouch": false
+    },
+    {
+      "file": "planche-validation.png",
+      "sha256": "915f4a66d4cbd197b1babb0432c8cb9b3a506e1cc34d89ba34226f6b588830bd",
+      "inputs": [
+        {
+          "file": "apres-face.png",
+          "sha256": "4fa0803889d2b014be3e550d17dac92c1593c7777e6a45c80566ab21eafdcfe6"
+        },
+        {
+          "file": "apres-profil.png",
+          "sha256": "afa2d4cee0989f3e6eb07fd857c964e6bcf8965354e98aab039e4ffcd5d174fe"
+        },
+        {
+          "file": "apres-dos.png",
+          "sha256": "c6a0c87b934befd6e58e1e9f18b54c9c1e7b436030eff9af8916a44ae1c01955"
+        }
+      ],
+      "render_pixels_retouch": false
+    },
+    {
+      "file": "comparatif-volumes.png",
+      "sha256": "7aaf08d64d81702072ac59c91c433ad84cc160d185411897099e81361f0b3190",
+      "inputs": [
+        {
+          "file": "base-symetrique-trois-quarts.png",
+          "sha256": "8ed6eb54c28cf43ff6ec8413116e573bab7eb3cc7937fc7e6727fe60ca633ac8"
+        },
+        {
+          "file": "apres-trois-quarts.png",
+          "sha256": "ffedc85feec1d333691902052b37aa5a3f3ae344f912019a0e11ea522a699ef6"
+        }
+      ],
+      "render_pixels_retouch": false
+    },
+    {
+      "file": "controle-deltoide.png",
+      "sha256": "4c9ece98bc98f292d61cd7f6a3efbed0e8cff8843e9fd5dd803dd310ece682df",
+      "inputs": [
+        {
+          "file": "deltoide-avant.png",
+          "sha256": "676daf9eadb460c60573a50f42f6ed1c813f9938dec8c4870f34f2d5ed9b99fa"
+        },
+        {
+          "file": "deltoide-arriere.png",
+          "sha256": "6d595077642505e52813ff2de8ad3eabaed8e8e164df7f576cdb5397593fa4c6"
+        }
+      ],
+      "render_pixels_retouch": false
+    },
+    {
+      "file": "selection-comparatif.png",
+      "sha256": "a1279597dc6d67d9a18a36bf411c0a081bfeb7be19049116f05d8ffdb21b92b8",
+      "inputs": [
+        {
+          "file": "apres-trois-quarts.png",
+          "sha256": "ffedc85feec1d333691902052b37aa5a3f3ae344f912019a0e11ea522a699ef6"
+        },
+        {
+          "file": "selection-pectorale.png",
+          "sha256": "58466227e631e0b956d7fb65e440e34c2ae9e819f2f6edc03fb3f4b80160d9fd"
+        }
+      ],
+      "render_pixels_retouch": false
+    }
+  ]
+}

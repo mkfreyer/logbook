@@ -1,0 +1,36 @@
+{
+  "method": "Relative displayed-luminance error on mirrored shoulder ROIs; Gaussian radius 2 px for noise measurement only, images never altered.",
+  "left_roi_xyxy": [
+    185,
+    235,
+    310,
+    350
+  ],
+  "right_roi_xyxy": [
+    410,
+    235,
+    535,
+    350
+  ],
+  "background_threshold_8bit": 60,
+  "relative_errors": {
+    "pass2_old_lights": 0.1364808786162771,
+    "pass2_balanced_lights": 0.0030364248378939402,
+    "pass3_balanced_lights": 0.0030550974208163697
+  },
+  "inputs": [
+    {
+      "file": "../../ecorche-beatriz-passe2/renders/apres-face.png",
+      "sha256": "c7bfe25d8d34a2cf2e389b823670fabfdbb1e646c18cc7a3d4def1e1a8b3d826"
+    },
+    {
+      "file": "avant-face.png",
+      "sha256": "098b498ddc1ea559da5ab65c0fce44f0d1bcb1d04728f429987206ab7033ec68"
+    },
+    {
+      "file": "apres-face.png",
+      "sha256": "67d4da3abec0638f5538b93d5595de9906c09627caa78f4e2905f6c4ac08a96d"
+    }
+  ],
+  "composer_sha256": "e840207c6be28d700ab67eb2968d0c55dfa11d19eccd9403694bf04ee75ed791"
+}

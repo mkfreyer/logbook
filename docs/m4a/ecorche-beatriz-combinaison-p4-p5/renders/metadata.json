@@ -1,0 +1,208 @@
+{
+  "input_blend_sha256": "45352a8e69bee2c1458b230214bb0ce53335126aa694dbbb97067f5c88ed3735",
+  "renderer_sha256": "8efe6bf36fa74c4d6545dd8473509a38bf720f8e227ce2d8db07ef2eb535040b",
+  "engine": "CYCLES_CPU",
+  "samples": 48,
+  "lights": [
+    {
+      "location": [
+        -2.99788498878479,
+        -3.0,
+        2.5999999046325684
+      ],
+      "energy": 200,
+      "size": 2.2
+    },
+    {
+      "location": [
+        3.00211501121521,
+        -3.0,
+        2.5999999046325684
+      ],
+      "energy": 200,
+      "size": 2.2
+    },
+    {
+      "location": [
+        -1.99788498878479,
+        3.0,
+        3.0
+      ],
+      "energy": 180,
+      "size": 2.2
+    },
+    {
+      "location": [
+        2.00211501121521,
+        3.0,
+        3.0
+      ],
+      "energy": 180,
+      "size": 2.2
+    },
+    {
+      "location": [
+        0.0021149879321455956,
+        -4.0,
+        4.0
+      ],
+      "energy": 100,
+      "size": 2
+    }
+  ],
+  "same_pass3_matte_material": true,
+  "render_pixels_retouched": false,
+  "frames": [
+    {
+      "file": "face.png",
+      "sha256": "2c0b950ac74a96035ce2a777f90c0abf508ca4df5b729c3877384b05791b767b",
+      "yaw_degrees": 0,
+      "ortho_scale": 2.05,
+      "target": [
+        0.002114987923242599,
+        0,
+        0.9
+      ],
+      "size": [
+        720,
+        1152
+      ]
+    },
+    {
+      "file": "profil.png",
+      "sha256": "a6a9b033eb858206462ce2c38463a21b7b2c940479ce2a9588cde62a6a3156a7",
+      "yaw_degrees": -90,
+      "ortho_scale": 2.05,
+      "target": [
+        0.002114987923242599,
+        0,
+        0.9
+      ],
+      "size": [
+        720,
+        1152
+      ]
+    },
+    {
+      "file": "dos.png",
+      "sha256": "e5050afa9a7b8cbedeab5105c87a3ca933ea00c6e6806996ff1f6b04bbf2166e",
+      "yaw_degrees": 180,
+      "ortho_scale": 2.05,
+      "target": [
+        0.002114987923242599,
+        0,
+        0.9
+      ],
+      "size": [
+        720,
+        1152
+      ]
+    },
+    {
+      "file": "trois-quarts.png",
+      "sha256": "be178718c321fce6e924214857d95a75d9992c03c21c3572b4139789eb799679",
+      "yaw_degrees": -45,
+      "ortho_scale": 2.05,
+      "target": [
+        0.002114987923242599,
+        0,
+        0.9
+      ],
+      "size": [
+        720,
+        1152
+      ]
+    },
+    {
+      "file": "epaules-face.png",
+      "sha256": "1443cc66b4affd933be90ce6f6ab0202ded97bb97e4c568dbd1baa0b71737729",
+      "yaw_degrees": 0,
+      "ortho_scale": 0.68,
+      "target": [
+        0.002114987923242599,
+        0.02,
+        1.41
+      ],
+      "size": [
+        1200,
+        640
+      ]
+    },
+    {
+      "file": "epaules-dos.png",
+      "sha256": "a139414a32becb2609c6157f56aec9cb56fd8da03d5b913ddb622b627c939c5a",
+      "yaw_degrees": 180,
+      "ortho_scale": 0.68,
+      "target": [
+        0.002114987923242599,
+        0.02,
+        1.41
+      ],
+      "size": [
+        1200,
+        640
+      ]
+    },
+    {
+      "file": "epaule-droite.png",
+      "sha256": "30acec148b484180267139e9e6555579330994778f611dbe84ee5a3233dc6df4",
+      "yaw_degrees": -55,
+      "ortho_scale": 0.4,
+      "target": [
+        -0.19,
+        0.06,
+        1.4
+      ],
+      "size": [
+        960,
+        864
+      ]
+    },
+    {
+      "file": "epaule-gauche.png",
+      "sha256": "652d3d4652131142199d2ab0875fbed7cd0a150d92139310fd1554ff8a873b65",
+      "yaw_degrees": 55,
+      "ortho_scale": 0.4,
+      "target": [
+        0.19422997584648521,
+        0.06,
+        1.4
+      ],
+      "size": [
+        960,
+        864
+      ]
+    },
+    {
+      "file": "epaule-profil.png",
+      "sha256": "29234dc7ff42469f4ad4636b4a6bcba5bef6fdecbb45a35540657c00e65ad7a8",
+      "yaw_degrees": -90,
+      "ortho_scale": 0.4,
+      "target": [
+        -0.19,
+        0.06,
+        1.4
+      ],
+      "size": [
+        960,
+        864
+      ]
+    },
+    {
+      "file": "epaule-arriere.png",
+      "sha256": "5d8675c76de7237f9acd32df477fbc130139097c419f04e39312a8e4a71fcf49",
+      "yaw_degrees": -135,
+      "ortho_scale": 0.4,
+      "target": [
+        -0.19,
+        0.06,
+        1.4
+      ],
+      "size": [
+        960,
+        864
+      ]
+    }
+  ],
+  "final_blend_sha256": "f8b6a232a18335221af3cafc62b37837fedc1caaf9bc6cb48e1cb583f222d9ab"
+}

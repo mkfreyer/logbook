@@ -1,0 +1,40 @@
+{
+  "baseline_commit": "898aac640dee6fdba27d4a16484035843a35d053",
+  "source_sha256": "9fab861a65407e69b9401bec077bf7b40f58d36404e80bad9db6147f24320a14",
+  "input_blend_sha256": "857d7435073bc3d5670fd7e1fedf2cedfed347daf7f92da3b05d3fcbc2cc3587",
+  "builder_sha256": "6297eff554fa9480e2dc121bcb0c27a9f238e7d634122aac58b63a1e123dcae8",
+  "stencil_sha256": "ae293d454a952ab0325650280e9cc5e8309ac1bd476874dec3a2af8025b171b4",
+  "stencil_png_sha256": "1cf50a7db19756f2e22a13304bdef1047149987c31683662cc67f2b0e9a9898b",
+  "mask_sha256": "3f23fd57fefa7a12a3750c1faef20a1b0c300343b4952d03b9dd9f90891772e9",
+  "uv_loops_sha256": "c2463c81705186b2366e08775ad5ce1a7e4a1065f388dbf609b0a14d121ee8fc",
+  "uv_chart_triangles": 3485,
+  "uv_chart_topology": {
+    "faces": 3485,
+    "connected_components": 1,
+    "boundary_edges": 229,
+    "euler_characteristic": 1,
+    "single_disk": true
+  },
+  "uv_chart_name": "UV_LOCAL_PECTORAL",
+  "uv_seam_mask_max": 0.0,
+  "painted_uv_overlap_texels": 0,
+  "mask_resolution": [
+    1024,
+    1024
+  ],
+  "visible_projection_ray_tests": 264293,
+  "occluded_projection_samples_rejected": 5755,
+  "geometry_changed": false,
+  "source_vertex_count": 47711,
+  "source_triangle_count": 95426,
+  "paint_method": "Authored cubic SVG stencil projected once from the existing Meshy three-quarter camera onto a local angle-based UV chart, with per-texel BVH visibility rejection. No face-label blur.",
+  "selection_id": "pectoralis.left",
+  "image_origin": "PNG top-left; Blender UV bottom-left; invert V for glTF UVs.",
+  "blend_sha256": "8e99b8e23039fd23e6a72953b6967b892b175a900bc4284e107172fc7d3e260d",
+  "documentation_postprocess": {
+    "script_sha256": "854895afeaffdfd898415d2261d20d770a2998eda33fdb7a475226120366d684",
+    "input_blend_sha256": "3fe78fd8c30b1bb6dd822f95c10c9e3fb1246fbb770820158f1ad19840007d84",
+    "final_blend_sha256": "8e99b8e23039fd23e6a72953b6967b892b175a900bc4284e107172fc7d3e260d",
+    "operation": "Informational texts only: remove inherited triangle-editing guides and embed current painted-mask guide. No geometry, UV, texture, material or camera edits."
+  }
+}

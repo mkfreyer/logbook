@@ -1,0 +1,96 @@
+{
+  "baseline_commit": "cc7af9aa1330eb37d062c1f402f61fc4bf7472ca",
+  "p4_blend_sha256": "15444ab13acb4232ed9d366e39b333c305b9c1be533e71d2b5eee90b9e58ff37",
+  "p5_blend_sha256": "926cadf61c4608c096cbf84e0c50ff0785eb7c5568d613206dfe57d695e4a54d",
+  "p6_archive_sha256": "1988d7452a028817a90e79013a2fa804afdb366d07421e5782415f660eee5758",
+  "scene": "16_COMBINAISON_P4_P5",
+  "restored_objects_exact_p4": [
+    "deltoid.left",
+    "deltoid.right"
+  ],
+  "remaining_objects_exact_p5": 298,
+  "source_asset": {
+    "extras": {
+      "author": "Beatriz Gomez Santamaria (https://sketchfab.com/BeatrizGomez)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/ecorche-anatomy-study-e402d3d541eb4b199c57d5410f5d3c57",
+      "title": "Ecorche - Anatomy study"
+    },
+    "generator": "Sketchfab-12.67.0",
+    "version": "2.0"
+  },
+  "source_sha256": "137e2e80bdcf9c87ff49ab32cb5de70f8de542870c78a7d5170e8743d241a73a",
+  "head_source": {
+    "source_url": "https://download.blender.org/demo/asset-bundles/human-base-meshes/human-base-meshes-bundle-v1.4.1.zip",
+    "bundle_blend_sha256": "3c121505651140ceb4d69fd1d8923f7788ffadd81672f5be14845a5f2c75c137",
+    "source_collection": "Head (Animation) - Realistic",
+    "author": "Dan Ulrich",
+    "license": "CC0",
+    "embedded_readme": "Important Info\n==============\n\nHuman Base Meshes: Asset Bundle - Version 1.4\n\nAll provided assets are public domain under the CC0 license.\nThe minimum supported Blender version is 4.2!\n\nWhat's included\n==============\n\nThese are various human base meshes that are provided by the Blender community and the Blender Studio.\nThey include:\n    - Quad topology for multi-resolution sculpting\n    - Closed volumes for voxel remeshing\n    - Face sets\n    - UV maps (including UDIMs)\n    - Multiresoluton levels for realistic assets\n    - Creased edges and Subdiv modifiers for planar/primitive assets\n\nHow to install the Asset Bundle\n===============================\n\nIt's recommended to create a new Asset Library in the preferences first:\n- Open the Preferences\n- Go to \"File Paths\"\n- Add a New Asset Library with the + button and call it \"Human Base Meshes\"\n- Set the \"Import Method\" to \"Append\"\n\nTo add the assets from this file to the Asset Library:\n- In the Asset Browser below, click on \"Copy Bundle to Asset Library\"\n- Choose a target Asset Library\n- Choose a target folder location\n\nThat's it. Enjoy!",
+    "objects": [
+      {
+        "key": "head",
+        "source_object": "GEO-head_animation_realistic",
+        "triangles": 25896,
+        "bbox_m": [
+          [
+            -0.12092459296512412,
+            -0.07735258340835573,
+            1.4387554078102112
+          ],
+          [
+            0.1253736486501713,
+            0.1448040336370468,
+            1.8000673792362214
+          ]
+        ]
+      },
+      {
+        "key": "eye.l",
+        "source_object": "GEO-head_animation_realistic.sclera.L",
+        "triangles": 1088,
+        "bbox_m": [
+          [
+            0.020359586722375894,
+            -0.049049095809459695,
+            1.6778770172595978
+          ],
+          [
+            0.04198613072109415,
+            -0.0274642936885357,
+            1.70124689412117
+          ]
+        ]
+      },
+      {
+        "key": "eye.r",
+        "source_object": "GEO-head_animation_realistic.sclera.R",
+        "triangles": 1088,
+        "bbox_m": [
+          [
+            -0.03776044940280721,
+            -0.049049095809459695,
+            1.6778770172595978
+          ],
+          [
+            -0.01613390540408895,
+            -0.027464300394058228,
+            1.70124689412117
+          ]
+        ]
+      }
+    ],
+    "fit": "XY scale 0.9, Z scale 0.972 to align chin and occiput to the fixed cervical attachments; cranial top at 1.8 m; X center fitted to mannequin midplane, Y offset +0.075 m to align the occipital attachment without moving the validated neck.",
+    "selected_source_only": true,
+    "rain_rig_used": false,
+    "multires_level": 1,
+    "builder_sha256": "b80cc46470ce12dc27482577e32a430ffbdc6bd7020eeb257c3fc5e6235c00e6",
+    "donor_sha256": "ebfe6160812ccc188789cf22f78a5222a511aa6a7925d0dddc88a9b1c48cdbd3"
+  },
+  "median_plane_x_m": 0.002114987923242599,
+  "objects": 300,
+  "sculpting": false,
+  "new_segmentation": false,
+  "builder_sha256": "e42e88b504474b1b841434977a854b64abfdb242d894ed024242330c24156184",
+  "method": "Exact object and mesh copies: P4 deltoids, all other parts from P5; historical scenes untouched."
+}

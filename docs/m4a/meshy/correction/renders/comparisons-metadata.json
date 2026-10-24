@@ -1,0 +1,85 @@
+{
+  "script_sha256": "6a9c31236e0a43f3938a7ea77811f7928505c03c546486b45462e95996a8e1b0",
+  "comparisons": [
+    {
+      "file": "comparison-mobile-390.png",
+      "sha256": "77a45639cf1009861bc67326082c0e5b13d4ebabd5f10fe134fdb5293e1cec3e",
+      "inputs": [
+        {
+          "file": "renders/selection.png",
+          "sha256": "e9c1dde466eb248a021f92c2050530117e7735a30e59b73ee01d9d001c7ea269"
+        },
+        {
+          "file": "correction/renders/after-left-three-quarter.png",
+          "sha256": "2e2fa9de94b28458533b49b08320a11fd40fc596f4c128073140613479d3abbd"
+        }
+      ],
+      "operation": "Side-by-side layout, text labels and proportional LANCZOS resize only; no muscle recoloring or contour edit.",
+      "panel_width": 390,
+      "size": [
+        780,
+        696
+      ]
+    },
+    {
+      "file": "comparison-left-detail.png",
+      "sha256": "e313d23acb5fbbc0b13850fc88396959d68cecceb776f379bab76321edcb6af8",
+      "inputs": [
+        {
+          "file": "correction/renders/before-left-detail.png",
+          "sha256": "f6aef280861dd93f1c9c36571c32ca0ce0d7b43e5a2f891e186150c3d2fb71be"
+        },
+        {
+          "file": "correction/renders/after-left-detail.png",
+          "sha256": "3b03891dc99e20ca2a423e3b269c9adc4ddf7a551b52129cbb056c9eddf2a3c4"
+        }
+      ],
+      "operation": "Side-by-side layout, text labels and proportional LANCZOS resize only; no muscle recoloring or contour edit.",
+      "panel_width": 700,
+      "size": [
+        1400,
+        660
+      ]
+    },
+    {
+      "file": "comparison-deltoid-profile.png",
+      "sha256": "6c9c040d691d7188395fcf3b0fc440b4d8880acd78e7b322e376013df048368d",
+      "inputs": [
+        {
+          "file": "correction/renders/before-deltoid-profile.png",
+          "sha256": "84dbaa5cd38ae58c0d357ea964332775983b380203ed2925b1631b6c72b72279"
+        },
+        {
+          "file": "correction/renders/after-deltoid-profile.png",
+          "sha256": "972936236bb65db3f2ec61a06845e0434a680bb6436c46a83ec9c33df40e7b28"
+        }
+      ],
+      "operation": "Side-by-side layout, text labels and proportional LANCZOS resize only; no muscle recoloring or contour edit.",
+      "panel_width": 700,
+      "size": [
+        1400,
+        660
+      ]
+    },
+    {
+      "file": "comparison-deltoid-back.png",
+      "sha256": "20aef25c7b3051aecb957579dae6a45c5feede02086da643485a005e7ce33c6e",
+      "inputs": [
+        {
+          "file": "correction/renders/before-deltoid-back.png",
+          "sha256": "e476b0d18a3e91f512de5f3f04ca45425f9f594fd87f3811af3f6ec3ccbc8cf3"
+        },
+        {
+          "file": "correction/renders/after-deltoid-back.png",
+          "sha256": "7541dd7d535507b6f444bf31abdb6c3e7897ec4a2b5a359a124e6a7e633916eb"
+        }
+      ],
+      "operation": "Side-by-side layout, text labels and proportional LANCZOS resize only; no muscle recoloring or contour edit.",
+      "panel_width": 700,
+      "size": [
+        1400,
+        660
+      ]
+    }
+  ]
+}

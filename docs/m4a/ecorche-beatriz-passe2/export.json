@@ -1,0 +1,15 @@
+{
+  "file": "ecorche-passe2.glb",
+  "sha256": "f27ee33162cf3e82e169cf7be0d64a12b13b1b9e526611f6343aca23098d1d03",
+  "bytes": 11563732,
+  "master_triangles": 531777,
+  "exported_triangles": 531775,
+  "exporter_omitted_triangles": 2,
+  "nodes": 390,
+  "meshes": 390,
+  "materials": 1,
+  "material": "blue PBR; neutral matte remains available in Blender",
+  "shape_keys_baked": true,
+  "deltoid_authoring_weights_in_blender_only": true,
+  "exporter_sha256": "0e84aca5b219127fb8d17a5026bd6a95607319b7d6bc8d83c9b569de2838430d"
+}

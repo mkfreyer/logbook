@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="840" viewBox="0 0 1000 840">
+  <title>Left pectoral selection stencil, drawn on the actual Meshy three-quarter view</title>
+  <desc>Projection painting source; camera CAM_DETAIL_TROIS_QUARTS from commit 898aac6. Not a retouched render or a replacement anatomy.</desc>
+  <rect width="1000" height="840" fill="black"/>
+  <path fill="white" d="M 436 271
+    C 467 265 520 264 552 278
+    C 564 286 570 313 580 333
+    C 589 351 609 370 621 391
+    C 631 409 643 432 657 447
+    C 644 454 628 462 611 474
+    C 586 493 556 512 527 528
+    C 494 544 454 555 421 549
+    C 395 545 381 527 374 505
+    C 364 478 371 444 381 412
+    C 393 375 410 336 423 302
+    C 428 287 432 277 436 271 Z"/>
+</svg>

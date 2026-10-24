@@ -1,0 +1,311 @@
+{
+  "input_blend_sha256": "45bf3f08d907a1a7ad606f0488d31483ef126e87eb529f6f7fb20415999755cc",
+  "renderer_sha256": "9af5ba50c5aec116d5f7735c0712be3c02c7f42683b103a587296c63bbcecab9",
+  "engine": "CYCLES_CPU",
+  "samples": 48,
+  "same_pass3_matte_material": true,
+  "physically_symmetric_lighting": true,
+  "lights": [
+    {
+      "name": "P6_Avant_-1",
+      "location": [
+        -2.99788498878479,
+        -3.0,
+        2.5999999046325684
+      ],
+      "energy": 200,
+      "size": 2.2
+    },
+    {
+      "name": "P6_Avant_1",
+      "location": [
+        3.00211501121521,
+        -3.0,
+        2.5999999046325684
+      ],
+      "energy": 200,
+      "size": 2.2
+    },
+    {
+      "name": "P6_Dos_-1",
+      "location": [
+        -1.99788498878479,
+        3.0,
+        3.0
+      ],
+      "energy": 180,
+      "size": 2.2
+    },
+    {
+      "name": "P6_Dos_1",
+      "location": [
+        2.00211501121521,
+        3.0,
+        3.0
+      ],
+      "energy": 180,
+      "size": 2.2
+    },
+    {
+      "name": "P6_Centre",
+      "location": [
+        0.0021149879321455956,
+        -4.0,
+        4.0
+      ],
+      "energy": 100,
+      "size": 2
+    }
+  ],
+  "render_pixels_retouch": false,
+  "frames": [
+    {
+      "file": "p4-epaules-face.png",
+      "sha256": "4940abfe920cf796d896cd4a4d0a2f66ca03c91357636bea0687d179efb1a773",
+      "scene": "13_TEMOIN_PASSE4",
+      "camera": "epaules-face",
+      "size": [
+        1200,
+        640
+      ],
+      "reused_exact_prior_capture": false
+    },
+    {
+      "file": "p5-epaules-face.png",
+      "sha256": "dd16a8e1492d6ccf0a3b5d6fe9f80905e725ddcd93b1228d253fc23498321992",
+      "scene": "14_TEMOIN_PASSE5",
+      "camera": "epaules-face",
+      "size": [
+        1200,
+        640
+      ],
+      "reused_exact_prior_capture": false
+    },
+    {
+      "file": "p6-epaules-face.png",
+      "sha256": "1ed3d025f47cca8ca8f2a3468c87626c9eb3eded1841f3d37cce61ed73778d04",
+      "scene": "15_PASSE6_NEUTRE",
+      "camera": "epaules-face",
+      "size": [
+        1200,
+        640
+      ],
+      "reused_exact_prior_capture": false
+    },
+    {
+      "file": "p4-epaules-dos.png",
+      "sha256": "320cf5b04a90e01257d33a71375039d1f1c3890d95f7031db8428f92f607e382",
+      "scene": "13_TEMOIN_PASSE4",
+      "camera": "epaules-dos",
+      "size": [
+        1200,
+        640
+      ],
+      "reused_exact_prior_capture": false
+    },
+    {
+      "file": "p5-epaules-dos.png",
+      "sha256": "4432cdaf166c1425a382b508106af5b88f834799814bbfe22597b2b81e8f1dbe",
+      "scene": "14_TEMOIN_PASSE5",
+      "camera": "epaules-dos",
+      "size": [
+        1200,
+        640
+      ],
+      "reused_exact_prior_capture": false
+    },
+    {
+      "file": "p6-epaules-dos.png",
+      "sha256": "4ff74b90703f9a0eb26e57eb7e9a49ffa94204dddac8e9b1a60012f82b1de2be",
+      "scene": "15_PASSE6_NEUTRE",
+      "camera": "epaules-dos",
+      "size": [
+        1200,
+        640
+      ],
+      "reused_exact_prior_capture": false
+    },
+    {
+      "file": "p4-epaule-droite.png",
+      "sha256": "9a1f17b66f240ff5a0f5926fafdc5c3cba7810490190ae0d65c84f141a908e90",
+      "scene": "13_TEMOIN_PASSE4",
+      "camera": "epaule-droite",
+      "size": [
+        960,
+        864
+      ],
+      "reused_exact_prior_capture": true,
+      "source_file": "docs/m4a/ecorche-beatriz-passe4/renders/apres-epaule-droite.png",
+      "source_sha256": "9a1f17b66f240ff5a0f5926fafdc5c3cba7810490190ae0d65c84f141a908e90"
+    },
+    {
+      "file": "p5-epaule-droite.png",
+      "sha256": "5f10bc36bc971e10af978531cc0a27c383a2b185ed9d72ff1b242d343918e67b",
+      "scene": "14_TEMOIN_PASSE5",
+      "camera": "epaule-droite",
+      "size": [
+        960,
+        864
+      ],
+      "reused_exact_prior_capture": true,
+      "source_file": "docs/m4a/ecorche-beatriz-passe5/renders/apres-epaule-droite.png",
+      "source_sha256": "5f10bc36bc971e10af978531cc0a27c383a2b185ed9d72ff1b242d343918e67b"
+    },
+    {
+      "file": "p6-epaule-droite.png",
+      "sha256": "ca6f1de1c475c926229daafb1b39d223b4e08d90fab141346cb3b415f4898eb6",
+      "scene": "15_PASSE6_NEUTRE",
+      "camera": "epaule-droite",
+      "size": [
+        960,
+        864
+      ],
+      "reused_exact_prior_capture": false
+    },
+    {
+      "file": "p4-epaule-gauche.png",
+      "sha256": "0b5be7fd9fb1f61baf75f791e471b187dbc901ef33e145eeada771eeb8cdf5e3",
+      "scene": "13_TEMOIN_PASSE4",
+      "camera": "epaule-gauche",
+      "size": [
+        960,
+        864
+      ],
+      "reused_exact_prior_capture": true,
+      "source_file": "docs/m4a/ecorche-beatriz-passe4/renders/apres-epaule-gauche.png",
+      "source_sha256": "0b5be7fd9fb1f61baf75f791e471b187dbc901ef33e145eeada771eeb8cdf5e3"
+    },
+    {
+      "file": "p5-epaule-gauche.png",
+      "sha256": "8345cd3782e5b0876d7016d1d9edc39a1e030e37d371880e92364e98b074d5de",
+      "scene": "14_TEMOIN_PASSE5",
+      "camera": "epaule-gauche",
+      "size": [
+        960,
+        864
+      ],
+      "reused_exact_prior_capture": true,
+      "source_file": "docs/m4a/ecorche-beatriz-passe5/renders/apres-epaule-gauche.png",
+      "source_sha256": "8345cd3782e5b0876d7016d1d9edc39a1e030e37d371880e92364e98b074d5de"
+    },
+    {
+      "file": "p6-epaule-gauche.png",
+      "sha256": "de8f1cffbe94128ac99de9f3147ce3b14eab74a8f5b3fd9f0f2aab32db11cb6a",
+      "scene": "15_PASSE6_NEUTRE",
+      "camera": "epaule-gauche",
+      "size": [
+        960,
+        864
+      ],
+      "reused_exact_prior_capture": false
+    },
+    {
+      "file": "p4-epaule-profil.png",
+      "sha256": "85d31ef7dbe50579e56f0825f7ae1ba17418b5c524f637210105834423f7a570",
+      "scene": "13_TEMOIN_PASSE4",
+      "camera": "epaule-profil",
+      "size": [
+        960,
+        864
+      ],
+      "reused_exact_prior_capture": true,
+      "source_file": "docs/m4a/ecorche-beatriz-passe4/renders/apres-epaule-profil.png",
+      "source_sha256": "85d31ef7dbe50579e56f0825f7ae1ba17418b5c524f637210105834423f7a570"
+    },
+    {
+      "file": "p5-epaule-profil.png",
+      "sha256": "e31fe19ef2d57d5ba6509dd97df1bb3199875229f229e753c0e4a20eb8299983",
+      "scene": "14_TEMOIN_PASSE5",
+      "camera": "epaule-profil",
+      "size": [
+        960,
+        864
+      ],
+      "reused_exact_prior_capture": true,
+      "source_file": "docs/m4a/ecorche-beatriz-passe5/renders/apres-epaule-profil.png",
+      "source_sha256": "e31fe19ef2d57d5ba6509dd97df1bb3199875229f229e753c0e4a20eb8299983"
+    },
+    {
+      "file": "p6-epaule-profil.png",
+      "sha256": "09418569dbfd73c6182c66f982604da2df49aa653e2db6d36c81e74dfbfa3e86",
+      "scene": "15_PASSE6_NEUTRE",
+      "camera": "epaule-profil",
+      "size": [
+        960,
+        864
+      ],
+      "reused_exact_prior_capture": false
+    },
+    {
+      "file": "p4-epaule-arriere.png",
+      "sha256": "8436ac00421e040ffca7c7389f7a253dd32a70a7aaf990a7e4c17acb52a575e0",
+      "scene": "13_TEMOIN_PASSE4",
+      "camera": "epaule-arriere",
+      "size": [
+        960,
+        864
+      ],
+      "reused_exact_prior_capture": true,
+      "source_file": "docs/m4a/ecorche-beatriz-passe5/renders/avant-epaule-arriere.png",
+      "source_sha256": "8436ac00421e040ffca7c7389f7a253dd32a70a7aaf990a7e4c17acb52a575e0"
+    },
+    {
+      "file": "p5-epaule-arriere.png",
+      "sha256": "ca6beb31c43b2d583e2c247e7ce21c765de267a56c2085691d060d43968c842a",
+      "scene": "14_TEMOIN_PASSE5",
+      "camera": "epaule-arriere",
+      "size": [
+        960,
+        864
+      ],
+      "reused_exact_prior_capture": true,
+      "source_file": "docs/m4a/ecorche-beatriz-passe5/renders/apres-epaule-arriere.png",
+      "source_sha256": "ca6beb31c43b2d583e2c247e7ce21c765de267a56c2085691d060d43968c842a"
+    },
+    {
+      "file": "p6-epaule-arriere.png",
+      "sha256": "f05a45195c9bf5986a1ae7d04179c4aea8de03b35c70865b9892f6b762c68e10",
+      "scene": "15_PASSE6_NEUTRE",
+      "camera": "epaule-arriere",
+      "size": [
+        960,
+        864
+      ],
+      "reused_exact_prior_capture": false
+    },
+    {
+      "file": "p6-face.png",
+      "sha256": "345d60c1de0b80d873dee924c52b1bef719e222340bb07a522a6ff326887b05d",
+      "scene": "15_PASSE6_NEUTRE",
+      "camera": "face",
+      "size": [
+        720,
+        1152
+      ],
+      "reused_exact_prior_capture": false
+    },
+    {
+      "file": "p6-profil.png",
+      "sha256": "a27786416bfdd6b247fe0a25f028d3951548bc34d8f3e7fe98939357579b5127",
+      "scene": "15_PASSE6_NEUTRE",
+      "camera": "profil",
+      "size": [
+        720,
+        1152
+      ],
+      "reused_exact_prior_capture": false
+    },
+    {
+      "file": "p6-dos.png",
+      "sha256": "f2175a69ef2233c1c08a8b581315fc6e589635cab88a5babda6ce1f816e6d048",
+      "scene": "15_PASSE6_NEUTRE",
+      "camera": "dos",
+      "size": [
+        720,
+        1152
+      ],
+      "reused_exact_prior_capture": false
+    }
+  ],
+  "final_blend_sha256": "1988d7452a028817a90e79013a2fa804afdb366d07421e5782415f660eee5758"
+}

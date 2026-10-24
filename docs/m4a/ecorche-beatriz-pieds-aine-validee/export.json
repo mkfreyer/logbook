@@ -1,0 +1,21 @@
+{
+  "file": "ecorche-pieds-aine-validee.glb",
+  "bytes": 11264792,
+  "sha256": "a0d91b02e5e0526c5c4c1a4f5e205c2a9badb59206a94dc89a4e38362a604ae7",
+  "nodes": 299,
+  "meshes": 299,
+  "materials": 7,
+  "primitives": 303,
+  "triangles": 549351,
+  "selection_zone_ids": [
+    "deltoid.left.anterior",
+    "deltoid.left.lateral",
+    "deltoid.left.posterior",
+    "deltoid.right.anterior",
+    "deltoid.right.lateral",
+    "deltoid.right.posterior"
+  ],
+  "textures_added": 0,
+  "shape_keys_baked_at_existing_values": true,
+  "exporter_sha256": "cca784e9cd6dc276e1e5e4f14bf431538d67b4802f568d674fa7933f6c501e43"
+}

@@ -1,0 +1,12 @@
+{
+  "file": "reconstruction-guides.glb",
+  "sha256": "5d8d7fdfd638a6a62faab6d488947dd2e09f3ac0602e664a35f21dcc4ef9be93",
+  "bytes": 11801348,
+  "master_triangles": 582150,
+  "exported_triangles": 582149,
+  "exporter_omitted_triangles": 1,
+  "nodes": 300,
+  "meshes": 300,
+  "materials": 1,
+  "no_guides_or_application_code": true
+}

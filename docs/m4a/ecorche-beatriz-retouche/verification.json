@@ -1,0 +1,75 @@
+{
+  "source_unchanged_sha256": "137e2e80bdcf9c87ff49ab32cb5de70f8de542870c78a7d5170e8743d241a73a",
+  "master_sha256": "6798e252ae1aa1c7d8c31d33726045c718a82854a182428ed106e4a1c44672eb",
+  "glb_sha256": "28296786bc217dfd17c7d2f4446b72d91c06e2ff2247874c24dd5a1cc297c7b3",
+  "master_objects": 390,
+  "master_triangles": 531777,
+  "bilateral_pairs": 155,
+  "max_pair_reflection_error_m": 1.6781612321992156e-08,
+  "max_central_reflection_distance_m": 1.4901161193847656e-08,
+  "max_duplicate_seam_delta_error_m": 0.0,
+  "retouch_triangle_inversions": 0,
+  "glb_triangles": 531775,
+  "glb_vertices": 335173,
+  "export_omissions_checked": [
+    {
+      "object": "m0_c138__CENTRAL__ATHLETIQUE",
+      "quantized_area_m2": 1.4919500000003937e-08,
+      "removed_copies": 1,
+      "copies_still_exported": 1,
+      "kind": "duplicate_surface"
+    },
+    {
+      "object": "m0_c145__CENTRAL__ATHLETIQUE",
+      "quantized_area_m2": 1.4245000000014753e-09,
+      "removed_copies": 1,
+      "copies_still_exported": 1,
+      "kind": "duplicate_surface"
+    }
+  ],
+  "geometry_matches_serialized_export_at_micron_quantization": true,
+  "glb_blender_reimport_objects": 390,
+  "glb_blender_reimport_triangles": 531775,
+  "blue_material_without_source_vertex_color_multiplication": true,
+  "median_ray_coverage": [
+    {
+      "z_m": 0.98,
+      "front_hit_y_m": -0.0668712854385376,
+      "back_hit_y_m": 0.10305172204971313
+    },
+    {
+      "z_m": 1.05,
+      "front_hit_y_m": -0.07727032899856567,
+      "back_hit_y_m": 0.08341515064239502
+    },
+    {
+      "z_m": 1.12,
+      "front_hit_y_m": -0.08314520120620728,
+      "back_hit_y_m": 0.08156800270080566
+    },
+    {
+      "z_m": 1.2,
+      "front_hit_y_m": -0.0979718565940857,
+      "back_hit_y_m": 0.11108428239822388
+    },
+    {
+      "z_m": 1.3,
+      "front_hit_y_m": -0.10017150640487671,
+      "back_hit_y_m": 0.1345180869102478
+    },
+    {
+      "z_m": 1.38,
+      "front_hit_y_m": -0.08941328525543213,
+      "back_hit_y_m": 0.13789838552474976
+    },
+    {
+      "z_m": 1.45,
+      "front_hit_y_m": -0.04011404514312744,
+      "back_hit_y_m": 0.13602763414382935
+    }
+  ],
+  "renders_verified": 12,
+  "medical_anatomy_certified": false,
+  "deltoid_three_heads_independently_segmented": false,
+  "verifier_sha256": "67c1a56a96276d086210b39e56ee2fce16aec49164631389c8ced29921ad9a24"
+}

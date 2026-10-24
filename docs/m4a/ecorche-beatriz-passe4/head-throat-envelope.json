@@ -1,0 +1,23 @@
+{
+  "method": "Horizontal radial exterior sampling from pass-three cranial, facial and cervical triangles; symmetric morphology closing and curvature filtering; finer filtered nose/mouth/eye landmarks; local throat envelope under retained cervical muscles.",
+  "z_samples": 235,
+  "angular_samples": 256,
+  "large_closing_samples": [
+    15,
+    23
+  ],
+  "detail_closing_samples": [
+    7,
+    11
+  ],
+  "large_gaussian_sigma": [
+    2.6,
+    2.1
+  ],
+  "preserved_landmarks": "Softly filtered source nose, lips and orbital mass; no exposed internal facial layers.",
+  "geometry_is_source_guided": true,
+  "new_medical_anatomy_claim": false,
+  "baseline_sha256": "cfe710f5efd581922f46c0d25d4178cc81de74137fd2761716ad95516fdf13b8",
+  "surface_sha256": "74e41b74369d3862b40cde69e3ed3866550c627b2ea6de4a6b225e1d4fed4da2",
+  "builder_sha256": "8fd27e6254d4de16c2244076144b00598601fcd7d98837e9cdd8e99774294013"
+}

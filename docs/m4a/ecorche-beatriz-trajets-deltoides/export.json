@@ -1,0 +1,14 @@
+{
+  "file": "ecorche-trajets-deltoides.glb",
+  "sha256": "f8c15a7492d77533c80b3de947764a77bd6936894b8d4629cc1dc98bbd1b8759",
+  "bytes": 10280768,
+  "master_triangles": 498058,
+  "exported_triangles": 498057,
+  "exporter_omitted_triangles": 1,
+  "nodes": 300,
+  "meshes": 300,
+  "materials": 1,
+  "shape_keys_baked_without_surface_change": true,
+  "new_masks": false,
+  "exporter_sha256": "bc41f8ef33747be61babc65999326114cecabc56d7f7cd05fab511131ce13c90"
+}

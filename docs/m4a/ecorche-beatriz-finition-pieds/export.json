@@ -1,0 +1,21 @@
+{
+  "file": "ecorche-finition-pieds.glb",
+  "bytes": 10933596,
+  "sha256": "44c8fd699aed340658462dbea8500723bdd504ce77e36a7932f4dc6dfcb02734",
+  "nodes": 299,
+  "meshes": 299,
+  "materials": 7,
+  "primitives": 303,
+  "triangles": 531662,
+  "selection_zone_ids": [
+    "deltoid.left.anterior",
+    "deltoid.left.lateral",
+    "deltoid.left.posterior",
+    "deltoid.right.anterior",
+    "deltoid.right.lateral",
+    "deltoid.right.posterior"
+  ],
+  "textures_added": 0,
+  "shape_keys_baked_at_existing_values": true,
+  "exporter_sha256": "849eb5ce835cad39ec92dbfdf31989e2474ce8662c62891635a0135e405a4e86"
+}

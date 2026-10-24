@@ -1,0 +1,1251 @@
+{
+  "baseline_commit": "d79692f380e39312939290ab0d3e038e448aa9b2",
+  "baseline_sha256": "e2c39435afb038306580e6df4ef889ba0a292188cdb255de9143b4b5ffefb528",
+  "master_sha256": "57f2d561f2ec963553df67ddd8d712652381ff9c6bda40de60c2646dcb3e71c5",
+  "original_meshes_exactly_preserved": 298,
+  "replaced_central_objects": [
+    "m0_c098__CENTRAL__ATHLETIQUE",
+    "m1_c084__CENTRAL__ATHLETIQUE"
+  ],
+  "original_vertices_moved": 0,
+  "two_substituted_pieces_retained_identically_in_historical_scene": true,
+  "head_P5_throat_deltoids_and_all_original_thigh_meshes_identical": true,
+  "five_original_lights_identical": true,
+  "global_body_bbox_identical": true,
+  "global_body_bbox_m": [
+    [
+      -0.33779075741767883,
+      -0.15563656389713287,
+      0.0
+    ],
+    [
+      0.34202075004577637,
+      0.16089430451393127,
+      1.80006742477417
+    ]
+  ],
+  "added_object": "groin.neutral_surface",
+  "added_triangles": 2208,
+  "triangles_total_blender": 502940,
+  "presentation_surface_closed_manifold": true,
+  "presentation_surface_connected_components": 1,
+  "presentation_surface_nonadjacent_self_intersections": 0,
+  "presentation_surface_signed_volume_m3": 0.0002771116751957726,
+  "presentation_surface_mirror_surface_error_max_m": 3.725290298461914e-09,
+  "presentation_surface_bbox_min_m": [
+    -0.049885012209415436,
+    -0.050999999046325684,
+    0.8924999833106995
+  ],
+  "presentation_surface_bbox_max_m": [
+    0.05411498621106148,
+    0.03458858281373978,
+    0.953499972820282
+  ],
+  "original_glb_mesh_positions_normals_indices_and_attributes_bit_identical": 298,
+  "new_presentation_surface_glb_triangle_geometry_verified": true,
+  "six_zone_material_and_primitive_ids_verified": [
+    "deltoid.left.anterior",
+    "deltoid.left.lateral",
+    "deltoid.left.posterior",
+    "deltoid.right.anterior",
+    "deltoid.right.lateral",
+    "deltoid.right.posterior"
+  ],
+  "buried_joins": "Envelope fitted behind existing muscles; intentional buried interpenetration at joins, not a welded global skin.",
+  "global_body_intersection_certification": false,
+  "original_objects": {
+    "deltoid.left": {
+      "raw_fingerprint": "79248d430a4acfc068fc93c8270599b5899d775e25ec67fde2be29c04be57b65",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "deltoid.right": {
+      "raw_fingerprint": "3c9b3c2f5102f3141b22f06d2852b363006f01db9d1cd4b896f6ca81bc687a5f",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "head.eye.l": {
+      "raw_fingerprint": "74a462c79ce0a3bdc50ac332ef1441caba493a5c3ac790b9c92d995df7ca62c7",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "head.eye.r": {
+      "raw_fingerprint": "b7814412352f35b9f91314c25f66b21d348a1dcc8b5069eafdd691fae36f472d",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "head_throat.neutral_surface": {
+      "raw_fingerprint": "57c7a43dc265672d1d54b98a3d22f1eda3e0c96540a1519602abb39988b2302e",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "latissimus_dorsi.left": {
+      "raw_fingerprint": "5f4046e84bcc9e45dcc4309288e1cc80f9ba181dfeac56c521447d00a0e8a794",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "latissimus_dorsi.right": {
+      "raw_fingerprint": "1b4870fa3825fe5c44ed8cd4b6564ea25e3e067eeb9676271d9befec34d3f029",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c000.left": {
+      "raw_fingerprint": "91677ea0f2285fdf3aa7f5cdb0e0eaf08c13091fff3a15eeb5bc96309f39b0b6",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c000.right": {
+      "raw_fingerprint": "ebd2a7c94353ecce536cd9ffd98e2e6ed2f24a41cf689a922565908ab22b86a5",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c001.left": {
+      "raw_fingerprint": "bc3c89d14d698c63ebae7f3d586e2e6085db61cb2e097634b8faa4df777f7bdf",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c001.right": {
+      "raw_fingerprint": "0cec90e06f562f73ab79641f4d6f116777108e2cd1de971588e0a0f7d77b6475",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c002.left": {
+      "raw_fingerprint": "f37c2eff18f5948d5a8bac401e9096c7d4817836e1e4b6e0db3d47afe0579d20",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c002.right": {
+      "raw_fingerprint": "bb4f68427736011d28751d9ddefabdf3fad2edd495abfe215a2588f63d2caae3",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c003.left": {
+      "raw_fingerprint": "1c052fa6469d08ce515a179bdaca40885ccd50c1d210a38fbc222602f37b8fce",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c003.right": {
+      "raw_fingerprint": "82a04f0bb0c6e2007b844e5395de8f9d9bfaf45cd7af574a279ae964816b3d38",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c004.left": {
+      "raw_fingerprint": "f25d56f74dc3286cb68d87640239678616371d5220f004e5c7b3411a38020f8a",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c004.right": {
+      "raw_fingerprint": "05d2bece97c8cbdd9e734f4acbeab66bced61eee760c382672709343de109214",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c005.left": {
+      "raw_fingerprint": "4eaddc82fb303e5a61abcfe33a3564fb175483f44a0d22245ecfed5bbbbdeb3c",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c005.right": {
+      "raw_fingerprint": "6395c864581ed984e0eb6e07add2ec3ef3aae02b004c441b1027a8d8433d3062",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c006.left": {
+      "raw_fingerprint": "dbf1cbf906d71b9e46bfdfc5f41e4752a9a1aa12f2b1873d22128e218284d3f0",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c006.right": {
+      "raw_fingerprint": "82ec284d7dbf5e5ae6310e2fd9d57fb7abd06b5dcc2645ef6fc72c2edb4cb9a7",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c007.left": {
+      "raw_fingerprint": "dc62d6e5554b74b56fc2d754de80d8326025b67140232ce2c3f1691d8bfa667b",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c007.right": {
+      "raw_fingerprint": "2fec97f904b6823f2fc8c9c76c33963509ba272905692e9b4f15d5a7bc47e946",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c008.left": {
+      "raw_fingerprint": "bd95001d80f6f16033daf01721c2de62b988f1537507c349cc8b33fc04a71fe7",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c008.right": {
+      "raw_fingerprint": "383e4a6ca746ea07bd983c7a6a9d635149e0f2b756204d4d6e8299eaa2bc1351",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c009.left": {
+      "raw_fingerprint": "52d01b0964389fd627d63d82ca8526600b97a8fd8b2854bae670ce0414dad47b",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c009.right": {
+      "raw_fingerprint": "9f3d3259633b4181c1100f7873ba9461a663497a085334664d00b22b713bc66f",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c010.left": {
+      "raw_fingerprint": "958b3f53fe7671ba2ea346cbb57520c2c08bc320bd391c6f12c8159c0dec4855",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c010.right": {
+      "raw_fingerprint": "6de34331e84b136a204018d0cfd6964f75a9e2c673fea3869e8d056f3b8131cf",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c011.left": {
+      "raw_fingerprint": "d6431a9278f63b4912143095f8cf9879ef4f4445dadc30f6c8b0e6546e9aca51",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c011.right": {
+      "raw_fingerprint": "efd39ffd6763bb2725f77f028b5c5cb4537b805bebaab45acc54d20a1b7ad7e4",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c012.left": {
+      "raw_fingerprint": "a14f6c770ab9528eb55a545a30f7c8c48b1ec5ddd269b9920ec9857cb7c5ccb3",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c012.right": {
+      "raw_fingerprint": "d87b3303fcec6523c0a6e485c8bdcd53849e01229a754d5b141c3a9cb7c241dc",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c013.left": {
+      "raw_fingerprint": "334f5b10a72cd2a190574275d07dcf067f6472ad31df86c433520ba9349df729",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c013.right": {
+      "raw_fingerprint": "403c76f1397d16dbedd46cb430afecd64054766499b5048f77eb5d3e938549e5",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c014.left": {
+      "raw_fingerprint": "93d3d99f743de7f3db959a263c99122f872fd789adde7041224387c0e2b6cd66",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c014.right": {
+      "raw_fingerprint": "85ce7b08cc0217f9d3b2a10b2340cbb2bc42b8980be19edae54c2d29a08915eb",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c015.left": {
+      "raw_fingerprint": "c5191085b5e2c3ffb37d925c2c428bf141001dca3671846ea65e97bde5caf0e8",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c015.right": {
+      "raw_fingerprint": "ed7e440cbb189200e374277656d4a983f5d8c93c4da5bd30cfb8d037c42b18a6",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c016.left": {
+      "raw_fingerprint": "b4f40bfcdd95f07ce49fa52c8863f9292b26bbe59a4010f411e05b0aae0bd52b",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c016.right": {
+      "raw_fingerprint": "4787425cb9acb5a605865558bb04719be7e6d1609755ed3a9d63fb78d4de3cd2",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c020.left": {
+      "raw_fingerprint": "dd9015f9aea76d0073a1e22ae05e9bd981b236a7b29775f82c147b1ac39dcd8d",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c020.right": {
+      "raw_fingerprint": "1ab60c2c668f247420ef481be59889973b2053e6fa213926caf32dee5dadc0c6",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c021.left": {
+      "raw_fingerprint": "bfda68904a5dfb4b2936e731ed79ee2fb84616a0c3bb2e27bfb965b6d12edc19",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c021.right": {
+      "raw_fingerprint": "faf536605604b3f458a77e636d3365366746c66f8e5a2e00026c07ca103bf20c",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c022.left": {
+      "raw_fingerprint": "dd304790c0a0f1b8d4e6820d1f2e6833a28e3b5b832574ceb20d8b767cd8ab82",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c022.right": {
+      "raw_fingerprint": "e322ee54626934ec5052a5959774bdd57d6001ac97b23e21f08097392d2bf593",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c023.left": {
+      "raw_fingerprint": "36dbac561538821e93bc6224fef2df548253ac86abc32480d7c4eb96d9cda2bb",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c023.right": {
+      "raw_fingerprint": "e643697dbbbba755c2eada8e9fd34b9ff532f44b49e196fb3c7c8bbec9ed0792",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c025.left": {
+      "raw_fingerprint": "0c8c79c7015365baf9eb962e11a7ee5ef2dec3bc484362f2cbb01ef0cd2fd94c",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c025.right": {
+      "raw_fingerprint": "e6476cb04b77d340c9f493a80f231ab83235868d015c355148042119bb59b9c2",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c026.left": {
+      "raw_fingerprint": "866d8e43c194b160466324ee65a5f99de184c273b0136bcb23eaf7e19f07bb19",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c026.right": {
+      "raw_fingerprint": "4ca4ca3f01b94eb58b9f1e83ff90b68b4da191c1fd0717d817f9bb0e69019420",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c027.left": {
+      "raw_fingerprint": "521b3a4a4e41eee495d0cef2582be6b20a87fd3ae2a7c7c2d23201eec8eac712",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c027.right": {
+      "raw_fingerprint": "b654904b81cdcbf2d85a9ddb23df28659fe0ca7889bf315007fd8a48ae36439b",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c028.left": {
+      "raw_fingerprint": "2e5da904655ae5d7cfb5fb59a503ffe48c9ced9e9a7504b2cdc815a88b1501dd",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c028.right": {
+      "raw_fingerprint": "de4ded8e0339dae1f329a1b00806815953657bb2789769b27de785b846cd9359",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c029.left": {
+      "raw_fingerprint": "cdc6d23ed589037de5f70262431bf04564b4e5ddcc3b3ae4292fa0c0136564ce",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c029.right": {
+      "raw_fingerprint": "81e7b960e86ae30339ed76867b91c161bb10337a913a26df9363008acdf62115",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c030.left": {
+      "raw_fingerprint": "de2dc730f46f36fdb3e269c6d0074ccfacd2913e93cc74e8b9b1eb58e005c85e",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c030.right": {
+      "raw_fingerprint": "60161eac0873e5d37254c7e0d2bcb35f0b4f502f7a1a0dc692a29115095bb6ea",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c031.left": {
+      "raw_fingerprint": "7a93d5723491f2decf7809064ac2741f40f429870f7ae5b450f7316a6afa537d",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c031.right": {
+      "raw_fingerprint": "3e698e4441e46f85a6ff69775d25fc263a8039adbebacbec1d3e65d868f339eb",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c032.left": {
+      "raw_fingerprint": "c7f31418fa3b7e794ff7ec10d627aaeaa4cfd503948bfac876beec4a6c815d6f",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c032.right": {
+      "raw_fingerprint": "88180a13965bc32a79f184e44ca86e312d70af89af0708f160ee91cbaae040af",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c033.left": {
+      "raw_fingerprint": "77e218547f14b071632d1bbbc240b952fa5e2124214dc164b17e9a89f31d68d9",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c033.right": {
+      "raw_fingerprint": "81506394341547d61724f8a71260bbcdf38a1649774089c13db2e9c2b9e1cb8c",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c034.left": {
+      "raw_fingerprint": "9d87affcca22e1bcf07122f0c319690e5c5118e8ca192a899353dda25f0aba8c",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c034.right": {
+      "raw_fingerprint": "68d61705e13a6b2b47ba6a5741956c1b893ec85085543a07f5fa89983cdde471",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c035.left": {
+      "raw_fingerprint": "fcc963b66b48d6fc7e7897226d4bbf1290083950f8cb84a8dd5ec68daca48077",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c035.right": {
+      "raw_fingerprint": "e85e3053a171fce172d91c628880ff6116e420edd80778e5cd667dc6833d9017",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c036.left": {
+      "raw_fingerprint": "dd7901a723066b305872ce934a6522f1047e47264a29d1c0bd34b5a626b6d5b1",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c036.right": {
+      "raw_fingerprint": "3b61dbe88aa7d4ff931ab5f7c9f4ab4e04dd84ea3d6f8748714affd733dc7166",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c037.left": {
+      "raw_fingerprint": "c277f858a69dfda4a362b3db1a380bf60206e0fc09729c550002ab2272e6ab11",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c037.right": {
+      "raw_fingerprint": "c788be6faf176dbfd8fda44c0d8d83727ee2df1af86e8d53c9d1b7432dc0bf2b",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c038.left": {
+      "raw_fingerprint": "519f1f2aa7145181ef70c734e46d7d299dbbac0fc33a1eb029d111dac1c3d52a",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c038.right": {
+      "raw_fingerprint": "8023539cb094f1e7da4e99e9024b6fbb50e0e2808229bf63a8ff43658f82298f",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c039.left": {
+      "raw_fingerprint": "897832e8150c176217f5050cb7204a6eb73635b8756b364e8eb529d2ec7e127d",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c039.right": {
+      "raw_fingerprint": "52dfb18397c0879f96bb341179c07b65f808a2018d24d3156b09c43fb8e3012b",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c040.left": {
+      "raw_fingerprint": "69a0ec53e6c024eaf6d8b85c33acb87071ee32a2ab527d79f45dd2ee4e93f63f",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c040.right": {
+      "raw_fingerprint": "4ba5688fab6e788cb763c1615c06f5a0e4641ef2652614c2b424f9b114df7e64",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c041.left": {
+      "raw_fingerprint": "6454585956f1b0b2d9fbb30a1ac82fafb88a080ab4610e77e89f0a73f83d3365",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c041.right": {
+      "raw_fingerprint": "5055179850c92b89bc10b02b5b34ee1e309ba503b86316fb3baedc587670542d",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c042.left": {
+      "raw_fingerprint": "9b6e7601a40fc3e112c9288b3753399cd55fbab6e3c915236cb700d23be531af",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c042.right": {
+      "raw_fingerprint": "20ef06b35b76ba7593f23a6d104d8a37d4896061ab320574da9abfa2170472c4",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c043.left": {
+      "raw_fingerprint": "919d15bad1698c38a71b12866c98032abe5ee88ce000d02f6bced49707ebc7d6",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c043.right": {
+      "raw_fingerprint": "dac7da6bd3339c191f55c0cfdff5bc65e968ad61fdcb3b1a80415800da3cfbae",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c044.left": {
+      "raw_fingerprint": "9874b3fbd145ce8d0b326287f80a5bfb9111a15612098fae55dfa1a9eb3e5d2c",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c044.right": {
+      "raw_fingerprint": "633e8aa2c5115b35e0618d58316934a7f93303d081061b413eed7a090a17eca5",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c045.left": {
+      "raw_fingerprint": "5d92720785e8ea1d163109ac4ba8800a468cc9ef775d64136781ef9356cb6e3f",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c045.right": {
+      "raw_fingerprint": "54c85f5fee2e9025b5278ed5ec13bdd6a5a5f4af41d5608b71cfe8202ebe05c5",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c046.left": {
+      "raw_fingerprint": "feca6cd9820c565a8dc2f56c17b56de04e16f5fa03af0cf64d5643bb861f4191",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c046.right": {
+      "raw_fingerprint": "1c565bdaa47eaf09b9e391e16013e614e8274d3f24129ca1c9cf208a3e8313ac",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c047.left": {
+      "raw_fingerprint": "574bfe5966050c2d22918f511a5041a6ed2ea1024a5ce56bb6e4b762c5b66a3a",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c047.right": {
+      "raw_fingerprint": "565210dcef583a4e10d641048c167adcce135707e8b32ae3637c29013aa03154",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c048.left": {
+      "raw_fingerprint": "b38383ab967feaa787b4ba18c9c4a23d0025ca8de99fc612c98896603bd5f94f",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c048.right": {
+      "raw_fingerprint": "15c2faf4d79d26089ec5d7d5584bc9176c7cf5c48eb4cbeaa4e1fedd5c7c35c3",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c049.left": {
+      "raw_fingerprint": "1f26dd8e407eff11defcb4280499bf8606204ecc5112c05eac0d02e3aaab2967",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c049.right": {
+      "raw_fingerprint": "ff4a3ad5abf94a1f15154b226bb33f3cb049708088c55960f8e35ddb1da8b68e",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c050.left": {
+      "raw_fingerprint": "ec63cb6a732f4304bd59f58b796b4209be547398f69f2bce122cd7cef10c7b06",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c050.right": {
+      "raw_fingerprint": "1882454853b463ea42debd9ca5da4cfb0228238353da357210debcd99ecbbd6f",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c051.left": {
+      "raw_fingerprint": "3b4c48c40c1acc01e72486a33e64e7af62175e553e50d15b3e829f285a76e550",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c051.right": {
+      "raw_fingerprint": "370fe2301db399dc8b7d43a6fc5d5cd2ec3ddbac70774142128aee87ad4d6600",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c052.left": {
+      "raw_fingerprint": "59f4968e181bcd70436f3e721b32b69cdf59cc6e07d912e35ca2cce7a8aadfb4",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c052.right": {
+      "raw_fingerprint": "4ec6773d5b97c3640b91a6ee3848941d97b9aa47f99b47fe761254bd7a394a8c",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c053.left": {
+      "raw_fingerprint": "7c3e8b3d750c0a5b8a054365586d0c2de4d15b16a2426bb373e49a4c2a0ba9fa",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c053.right": {
+      "raw_fingerprint": "0c43c8fc27746ea1da186a6aec54d3ff77879c54a8a53d8e2b28141b7f97df45",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c054.left": {
+      "raw_fingerprint": "ccf2e16223a7d221187ace2eca6275a354ab4727c56a1aae63f30d8adf0396a8",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c054.right": {
+      "raw_fingerprint": "207a52994757b2a3f8d53445fd3280913ef1958abb405e574f16d25230735929",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c055.left": {
+      "raw_fingerprint": "8260bde720609b26a58bef567afec1696aa46d3d7d86b299998ba721d6f29316",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c055.right": {
+      "raw_fingerprint": "554124f6be294802451f3883f3a1940895069cb6dfaabf1cf7c53347b5e312ad",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c056.left": {
+      "raw_fingerprint": "9d4cc606bd420cca62a19893c6e045f018d481f02e3ab34772849d0a9040071b",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c056.right": {
+      "raw_fingerprint": "d83166f88a8f7013da05800d836668b28511d1cc967ad2dc27814404c9bb62c8",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c057.left": {
+      "raw_fingerprint": "471fec8010f36d942beaa3ee1437c351b78f0051d77cf7f42355a4f9a94396af",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c057.right": {
+      "raw_fingerprint": "bec9ee0c4f1e5a4589f06cc57ba94ac71df6fef69877800234d60066300992d7",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c058__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "a74468c6d57870f738722ea4f473630e197290c78362ee6c99bae2e87b694c15",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c059.left": {
+      "raw_fingerprint": "76e2802fad14cf25be2a57297a3685e082f21f95df57fafd00da0344bee7eb16",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c059.right": {
+      "raw_fingerprint": "68b4f4b42cdb23bba6951e1f0ef2cc23cda1c6063cec4a322612716428a5173e",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c060.left": {
+      "raw_fingerprint": "eaeb9cc892f43cdcb130fc9c065b021bab9b9c77194763cffc38a3ea7821c208",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c060.right": {
+      "raw_fingerprint": "46ef5e39aca09268e2c2539c3ca984814e23a83c507673c53d6ffc81acd9ca0f",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c061.left": {
+      "raw_fingerprint": "4a91731c24211f74d30d3a3b79fb4a01b8479bdd43e9619b984050215c3b311c",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c061.right": {
+      "raw_fingerprint": "bfaa9fc9acf50639cc53b96a4752e8a6e195cda4b8b53769b2075263c59c62f7",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c062.left": {
+      "raw_fingerprint": "3efcf7b34c9af70993cca7a161bb61ef2440cda78cb0d2ec8df4564c2f7beda0",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c062.right": {
+      "raw_fingerprint": "b8963cd1b57121fef6b0a8def26c6b406fbfe0dbd7652860096bbaa1a3c84e58",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c063.left": {
+      "raw_fingerprint": "baab612ccfe6ba4cfab9faa86b170ad0bb877efb20c5f6c93c9478083794c488",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c063.right": {
+      "raw_fingerprint": "7265ca8ffffac62fac934fa8eadf8489449dcc781196c2345978973bc9b7720b",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c064.left": {
+      "raw_fingerprint": "f62e88d9fc5e32cc74f13c9b2ae10ca39d836b30defc96b58e3e0eb5ded0fdda",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c064.right": {
+      "raw_fingerprint": "2fecaf5f93f02f08906925eb0e9216889accfd707a911abd4d9228ce16ae00b0",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c065.left": {
+      "raw_fingerprint": "e0e61ef059b34fd9f46c666ac7b405b489664eeeef1ede8ca7073589ad11a55a",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c065.right": {
+      "raw_fingerprint": "c13f23402d88a06f08c425f0d02017f0f69bd7f2bd233ff58d9804b2dba68994",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c066.left": {
+      "raw_fingerprint": "29d0add78b6c296682eee61881f85a9709e65e3e08d5ed1077ec1aabc441559f",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c066.right": {
+      "raw_fingerprint": "a8a32f062b56a6d18d0145a43ab9d441c7e1005411e8eb998befb45558a9bebe",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c067.left": {
+      "raw_fingerprint": "caee8ff7b7e44254146843ad608f93f0f43182449f3e52af26211c886f55ae41",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c067.right": {
+      "raw_fingerprint": "b8362574929eb21297fe3a7470281cbe2d6ede59ea780ede567e09ed7421b029",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c068.left": {
+      "raw_fingerprint": "c1054800fcbaf797982ba561ee1a5b8d71ceb0b4c09b878e554b83d6b09ef2ac",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c068.right": {
+      "raw_fingerprint": "e3331010d356a6a00ba0282279578bc8c9770f062a965928c5061533e5dec30e",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c069.left": {
+      "raw_fingerprint": "aa75035cdd297103b07e4f6a35321415dc19e37d1c7caf778c632a7f339a5397",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c069.right": {
+      "raw_fingerprint": "ad70bb0e7f0149e1baa8ee332cf8f4f31f265722cc0314f4461fa78d93e85cb3",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c070.left": {
+      "raw_fingerprint": "fb4066bf811357a043837da520e6b07a35c1a1103d8e1f3ed423620ac7bc3506",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c070.right": {
+      "raw_fingerprint": "c37d272b9a1656da299fc1005668b0f90fa0c5808de746a97e498b851a528362",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c071.left": {
+      "raw_fingerprint": "dc644a7edc0fb57d32829c83c73d8853cca0418a3d885e48a31dab9526dd90d8",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c071.right": {
+      "raw_fingerprint": "f3064e80f3aa4a6105ad5a03bc9f86eb24ea4dbfefb2a0f8cf0eb46771f9cae8",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c072.left": {
+      "raw_fingerprint": "a2bce12e69789a086338ed5992a33094c7ce3502f34e685f4cdf857e53abf229",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c072.right": {
+      "raw_fingerprint": "2f996af3ab18f819fa9ba798e76223a0298b74b76a606380bf9336db608bb422",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c073__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "7103b3a709ab639b00bd897d0a71d796bfb7e28d3fd8cdb81cdbf942b4fb4dc1",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c074.left": {
+      "raw_fingerprint": "742d3efa83ccaaa6e5f7d105c69b7d3b51143062892d0c43c0ce9a960b84f284",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c074.right": {
+      "raw_fingerprint": "3e9f907ffe21d5d5e8bbcb74c566b66b00849fd0ae7e19d9f2e8ef7567fc293e",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c075.left": {
+      "raw_fingerprint": "7c7e587b12b1e262ecec35c9891b33abc0696ad889a97ff6a7d954007ae134b2",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c075.right": {
+      "raw_fingerprint": "8786c4a9a6454d1376a29571dc10812e838365310fb3c0db0c2a507c0d56067b",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c076.left": {
+      "raw_fingerprint": "5fb14fd9e4af6d379e4aa6c6083ce6f56e18dc30c7a453056c6be1a114f887fa",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c076.right": {
+      "raw_fingerprint": "1f7c72a560e56ec86a59283e339ff4e96693a3414b7b9833ca2db2856ba4457d",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c078.left": {
+      "raw_fingerprint": "f2d6f84388338da54ec123acbff8dd6421c4a57a8d76af2b59660075d01c30e2",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c078.right": {
+      "raw_fingerprint": "653168395e624acf39e9a2f9d2e217611fa8e18e4a3736e9f0b82d76efec8440",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c079.left": {
+      "raw_fingerprint": "291f6999e52a96c4bdab5b008d2f5cd743cd11ece83769c47d2388c17f6e7d7c",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c079.right": {
+      "raw_fingerprint": "797950dc116b0fb64a9a8e1af2045924f51f0c2c88a425bb8e64dc4ff86d6a3c",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c080.left": {
+      "raw_fingerprint": "524c795076e1fad802f9e8c598871b52a14820931a997c22c0b5f075ea8baf38",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c080.right": {
+      "raw_fingerprint": "459dd364abc972009133b6c1022cbc812e0948ac8cdca78d2e023b5aceee44ff",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c084.left": {
+      "raw_fingerprint": "bc16e4f0be8eba1d4ad60739ec7f604efd134af54a8fab9dbb0336995f3f70cc",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c084.right": {
+      "raw_fingerprint": "8f8fc2c84e7cd23d004282b0a5128c990f8a872d5c94dc7c023e6de9836ba210",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c085.left": {
+      "raw_fingerprint": "56bc67dafe7b97be42fca420d5dfded57ba1b330331fd57a3f80d4c97c70ae97",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c085.right": {
+      "raw_fingerprint": "f21576eaf57c865fa1c1f3a7b3eec0fbca31eca43a35befedf9d59a66dac7a77",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c086__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "b528267676017d68c704bfe32cd5ef418b5ad083d5c5b4feabb76c3225854b68",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c087.left": {
+      "raw_fingerprint": "ccb96b93bd4d57af46f1f4f6c6ebcda57db9e021786f732a46d382c4d4528dfa",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c087.right": {
+      "raw_fingerprint": "c7937738984616c4e2a127b987d97fafd17103c52fb0cbd2e2ce14e4b41d4b6f",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c089.left": {
+      "raw_fingerprint": "cf8c5654a421a428f9f14b810138e236d93c0d0bba5852df9da236600eca2a98",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c089.right": {
+      "raw_fingerprint": "9c9863ddb2f72fcadbc293e934ac6f1fd8ec3aa062b2c8a0e5d75b15cde2775c",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c090.left": {
+      "raw_fingerprint": "83c5fe10e970d7a96b27d21e70376c4fc4d28252ad5bd47be7c5f27dc9be3075",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c090.right": {
+      "raw_fingerprint": "9e0223868423658b0d05f54f90167cfea94e5620ed089d5df672c11e85def44d",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c094.left": {
+      "raw_fingerprint": "01ad6eec71238d6d81d988016589d6aae0080c7ff3fd6dd7f4222fda7f8cb0f2",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c094.right": {
+      "raw_fingerprint": "182d04f392225fa9ec0355d27096c8b06d5353be311d1bb040c3fe6409b3774c",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c114__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "9bef04a56287e858267484846291fd8389b2c435eabb9abe9133917dc3ebae89",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c126.left": {
+      "raw_fingerprint": "ed3d03356ce4d6acf2a9157c21277b42e18519f0c7240c61202ca6b3cbceda85",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c126.right": {
+      "raw_fingerprint": "c63c40f1b84502d49d582e8c5fcd914f194fe094664dfe976827b1d6d1b18b0a",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c130__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "b02ce0dcb0e47ed45d52f1f019945250e0a0d5427681de5f330085fb9c4f5148",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c140__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "65ae89da889c2d62d5a26cef44091568d12ab59a17cf21229b748d31add5c546",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c141__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "799c76d881e5363025c39ccb24360ad70958682f152ba3d9544f57ab56a08aef",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c143__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "5e8d8b63c2439650d574c154cde96f5859e392ef0bbace133e88d0f5d1dbf44d",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c144__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "68a42e08b7311fe815e265e3107b4f3e79b4894701d04e5daa52a375b3849d10",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c145__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "6d87a231aade848c4ec2b2bb811c0cb7dbb3dd24b996b34b37cc649fafb398aa",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m0_c146__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "2d0235956416611ff7ef3f89f653639adca907eb41c1a4dcd02247c486a6ea9e",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c000.left": {
+      "raw_fingerprint": "6f154e0afa0d36f51f62e3a004eb943c21578caed00ecd8e359a21c8ffe7ef4d",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c000.right": {
+      "raw_fingerprint": "2cd7cbe93fcbf1c8c895f6204ad81e7d27badc3869fdf8423124439678dd842d",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c001.left": {
+      "raw_fingerprint": "46e57ba4b05978275dee8f270bf007d1d20b6184944f0c2d61ee0f3970e7f757",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c001.right": {
+      "raw_fingerprint": "bd729f89c35aa682b00653060d5751fca08ca1d95a7af4e69711a0f3e3540598",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c002.left": {
+      "raw_fingerprint": "2974d31a5586c19887899d5a0aee95d0c7833beee022fcd26fa1756633b1977c",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c002.right": {
+      "raw_fingerprint": "3bc0c1564307318f624a5d28a940b0530b1ea715c1937214b21adf346f2bc11b",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c003.left": {
+      "raw_fingerprint": "8dd9cc294ffe9cf83401ac8b6303e21371cb4b286a8b7727a8aa9bfc17193014",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c003.right": {
+      "raw_fingerprint": "ead586ef4c9ecc8c23909eaa32eaf5d7b6e28752cc12289ffaadb2288221626f",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c004.left": {
+      "raw_fingerprint": "6939f0fd275d5120e6fc31446c7c6c7c0a5a8ab901c978112232ad220308d691",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c004.right": {
+      "raw_fingerprint": "c6f1fc5d00f3cd8a8d121a208c17559012eedf9e9bf25db84d40e1e802f7b025",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c005.left": {
+      "raw_fingerprint": "7f6d39303ab0415c71d9584a228d09cd282a6c8344ba9b642d36e0d3dcd24db1",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c005.right": {
+      "raw_fingerprint": "8c4dfa1e7ef1fe8c5fc2fc6168e0e8ed4c41f64eaa8e0707b36d2a1104b3fa97",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c006.left": {
+      "raw_fingerprint": "16fa5047599de1c3f1b24b289cb435c06e587b2b272f899906e266ddb055c7e4",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c006.right": {
+      "raw_fingerprint": "1e7f37e828d94fca997bd6296e8e24a4ca6e17a579f5ebdc05422fb3b403ee02",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c007.left": {
+      "raw_fingerprint": "90de06225913ae952e6c2c376f2561daf4702a4d0c7a4a80cea0faccbb38b7fb",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c007.right": {
+      "raw_fingerprint": "ddeded9c75084e7227a091dd2c4cec38e81b021ee5b5663439e7bc97a3d86a7f",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c008.left": {
+      "raw_fingerprint": "8313731f598d8c6ffffaafe6a3fd6aace9d44968744de2323bbc1b3d8ec7c6f5",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c008.right": {
+      "raw_fingerprint": "c97629e853dc47733142f48d4fbf3f6464e0cc485db988e533dae8c400782405",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c009.left": {
+      "raw_fingerprint": "1ac87e3c561a4f2f731b1690ec167a6b3241522294e5e61db24074c63e034181",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c009.right": {
+      "raw_fingerprint": "f948c605a01a7cefdbb46a9a778043b5e821d55d65e54096621ee55f555a49ef",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c010.left": {
+      "raw_fingerprint": "b32f69713710dd8ed0c6b5601bf40824b4546daf9f3ab7e719fc1920ed430eff",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c010.right": {
+      "raw_fingerprint": "936c194b5e07c17cb84b683e58374bfa32b2ee5bce2e410c169317adcfade124",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c011.left": {
+      "raw_fingerprint": "2eadfbf2834e8a2b5b912f35ef75e6c98ca77f9cca3ba857daf89ac574c95b71",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c011.right": {
+      "raw_fingerprint": "a4c56f19caaf6209d9014fc486dba98165171d44ed40cd2f8a801e7a65373b9b",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c012.left": {
+      "raw_fingerprint": "903eb24152e7888777e26ac39665da10b98acaffbdc89c628c5ecb9fd7ffba69",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c012.right": {
+      "raw_fingerprint": "ce02bec888dcdfd2a1e5816081b6f0fbc0575841edb133ef3fbcf16ab5fd8f79",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c013.left": {
+      "raw_fingerprint": "f0c142ccdeac2b796928e87be76700edcac97181a695669141cc8fc70650da42",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c013.right": {
+      "raw_fingerprint": "0cc42c637077d35eedf15832ee315e83bcb1582b102e9fbd61eb7695e0a81e47",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c014__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "5ec6f3c55708a96f62132c0282173a2e2982c7ccbfc94b61d09f86829e3cc1c7",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c015.left": {
+      "raw_fingerprint": "6cf591727e2077f1af65662277a7dcc5e8398e5822b7ebf6ebfd700dca67aeef",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c015.right": {
+      "raw_fingerprint": "961a990226c49cd21687378b9815174b749e7a5dcc4672679e0dc787f4fee157",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c016.left": {
+      "raw_fingerprint": "937890503eb0c4971f79177ef577abcf629e7724a10d523af50ff93d60d29aac",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c016.right": {
+      "raw_fingerprint": "5867e5f3349ec87aa8a9c19b0bd7ffe482117c8ab35247c9de9c8f43a97c8b29",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c017.left": {
+      "raw_fingerprint": "1e9be6f6bf1bb841cc0e5134fc927868932aa1136fd146c632710ae622246ce2",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c017.right": {
+      "raw_fingerprint": "af9e1fd0d8447d4ff31c2d20989f28a084d8ca36b6c064b354f84af0b6920025",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c018.left": {
+      "raw_fingerprint": "49c631f1e1dd1c4dd461cb9abfd2be232a22833fc8ec4a068d384277a4fe5eb4",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c018.right": {
+      "raw_fingerprint": "9a7d99fc2b87fe452ca4b5003949ecfc0744dc4d59d4f428bef873e9da675b09",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c019.left": {
+      "raw_fingerprint": "9109d1c620870f7403d4b47d74bb1107e2518110198da1e4e55ac365c6c1d1da",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c019.right": {
+      "raw_fingerprint": "7196f5331f30d573e2c644074ffa19713a4df1d218b3eb8787166d59ff3481ef",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c020.left": {
+      "raw_fingerprint": "1f7e922728585bed119f3337142adee8af31091f9c86a6c5600c6577a4f684c3",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c020.right": {
+      "raw_fingerprint": "1c3fffa7fccae3551ff0c1e43a314d89282068c071dd2eb9c761109fadfc47a3",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c021.left": {
+      "raw_fingerprint": "84333a00e83cdd793ee22cb3cfdb037486cfc6412b98fc871ce71442d0e42e27",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c021.right": {
+      "raw_fingerprint": "7405cba8226e1b5bf055560c855dc72f4030dd9d12f601fb7eeff5e4a15a5e15",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c022.left": {
+      "raw_fingerprint": "b3935246e102112fca37e1df03fedf245fcbc128e55a52497078dd1113f3cd4b",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c022.right": {
+      "raw_fingerprint": "a0cc19d311cb8995a0719ea1c825a6033418d7baf77cfc83baa7cc58086ba446",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c023.left": {
+      "raw_fingerprint": "404016638e9b211391ae7cfa0f6cbbd265a014fe442c7c395a27f8fcf88b3234",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c023.right": {
+      "raw_fingerprint": "a62b36bb5889d2591413983e20b08b45b032525d28e80f2193f6422aa40dc69e",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c024.left": {
+      "raw_fingerprint": "eb73f1565c7feabf3c035a438f95e83fb9b3095c4c4a13c4ede99ed08b73484d",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c024.right": {
+      "raw_fingerprint": "a30b4f95896283d87f4ec7860e9e14953a47ee31817a9a782722a801b2bffd3b",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c025.left": {
+      "raw_fingerprint": "2ad8f86da828cffefb12380e31716425d284aac7ab4abb8977895f82c775af5c",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c025.right": {
+      "raw_fingerprint": "cb670e7367029e45e15d37d1db53444bfc44840c6658a2145a1494b6ffc2f819",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c026.left": {
+      "raw_fingerprint": "f42fdb45c9b5490a8fe73071d5da0287f3d76cba99f77bf5952e8cadf6dd9f47",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c026.right": {
+      "raw_fingerprint": "c5cd4421c5c6647585325a4c6b1b9352b0115a96f5365b1cd00adbc8029c95e8",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c027.left": {
+      "raw_fingerprint": "e08dbece2d7b45765fd50f96367b8bb98fa2dbc67a91fea24966c3d8141405a5",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c027.right": {
+      "raw_fingerprint": "027953978dcd5e9ce7fd4dfa9a59aee0df820c52d9479ffbbc56f6fa2618047a",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c028__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "4f482f0a9d9eecb47e51664681df69e072ce97c26788574f114ecb89fb43b802",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c029__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "d4fe09054e34a6d913cd1e7840bdd353f77a096a0634260a78d055b4835354ea",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c030.left": {
+      "raw_fingerprint": "00bb2780b573442453662ea29ddba5d7a442704380d2360499ebd68215d0ac06",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c030.right": {
+      "raw_fingerprint": "9042e470057dd84ba9c4ca93f405a1573839be363a28f9b8dd991ce598bfb986",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c031__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "4efd58fc40363c71010526be081ee3663a7ec59679502d06bda039c54c0d4763",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c032__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "f1db1db6d7f2372d1bb928127243bd0f781e58ef5bb32145df72aa3e64a8d9e5",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c033.left": {
+      "raw_fingerprint": "332917a25c47897a3625e3871578ae16b8f5d4d873307c03519f8c536d9fd38f",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c033.right": {
+      "raw_fingerprint": "704596cea2d4a9104a76455a9ab7c3e6f08a6168e6c7cb8809ef50dc66c57627",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c034.left": {
+      "raw_fingerprint": "b88b7e6349f6727deb5d1ec45a25bdde1160de0cfcbbc478719428c1ffd0b309",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c034.right": {
+      "raw_fingerprint": "91c5e12e76c4c61571518cd96b119b3186a546755cc61544b0cb9cd5b39c72ff",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c035__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "0d1f832b802da720b4333d29281c3edca13f3b5cd54ae266700408cc38281e1c",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c036__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "fd5dc3459ec9687294f8d81f5592b53f138ede6c9631637653274107940ce8b0",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c037__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "0f2866f810e8353cf9d3a7db19b837a3ea81baa3741672083646d9dde080b36d",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c038__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "247869dea7a51eae52b119a276b27ac62bb6cfb7add27640e5c3f1e4ca884c48",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c039__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "67e516e581bdcee43f9f20464a2a54e7cd6d84838090deacc4280d36c3eeee37",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c040__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "e6250a41301d6467f9fbfd6e50e1a62f1a77b54f4b8c0132a419355fdb44e884",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c041__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "c3ff12ef31a02c97c2e24fa66f81643e48880ba70292361061ad2a1ccb383034",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c042__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "8c1492138a77cb6c286e9cb576c35efe8cc4c21b2a741742dc6b2075fb385408",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c043__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "f5b81724dea44392b98d79669d6f773dca56cafb3c89cb3c6ea57dc8ee4168f7",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c044__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "b132f9a909c5667021aa4014f116a57ae133e0b70e4a15091e361e9181bacd8b",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c045__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "2bfe80ccf88bf5c37aa9c112817a73253ab372e1c3c46bb82d137a41641d1287",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c046__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "0bdcd747bf861ad452a20a9019240f5d5f03bcfc4ac4fbb53d9611bf4bb340fa",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c047__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "5da07943a9de2a47f83ca1a5e236ba9a0aa498bb1013ab319bb797cc34a56eb0",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c048__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "444a67bfccd479a78c462283e2bff902132dc76f38e22ea844dec6b0b4d30559",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c049__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "49dbbdd42c5704d0da7e659a6c3a0f271c1ea2678bdd448919d162eebb9be7fc",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c051__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "7c9303e672d015ed03e9a8f471b7682a8d2a9efe564b7b63531b42c1e562076c",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c054__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "aacd3fb74f5358bd927497d118acf178fada839272b59249d32c3493dd4c767f",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c055__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "cab553b5b2a605b8ce7d3ad191486077eaec3bffd2e3b3a76fc56ae4e621350a",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c056__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "a0ea00704a29266fb992e1d171d531990e6674edd41d8013aded17f1e201805f",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c059__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "d2ebecefc9c3f2ca631989fd4c08661dd90f5a65b38e4e50ae3def2d4a60d358",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c060__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "e7d449f37c6d5873ed0d66248861194af641f69f46920a7d9fd288ca6df79864",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c061__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "3b861b693590aae9f0a454342fb7d3beac3a2fdad24856d880378839f596bc73",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c062__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "f3ebf781c39013bb1e5c4a7958d42fce61f240bbf9f541cd52510b6182061401",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c063__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "175e352ef87455e200506f76ddf944eeea46655c4ea0bbb37f66fc2c70e2f49f",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c064__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "158de8e8552fa3657b7e1cd542a88b23028f910553165cf1d26922dc6384ae8f",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c065__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "84b103579a0e37a62ec78a48e33c185bc3bc9d67af1e356919abb999d29485c7",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c067__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "dcb06b8d508849cfaba93ab71d7a2883e7b69bbaf10c3cf7cb974516240b4ae3",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c068__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "a7b3935c2fcda776aac23e59a93e6a16c6b8e59a8ecca201b41950682964995c",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c069__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "87281e384274052a0c492300ac6c652ee5a78b8bdefc1423575f6ce662d6bf06",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c070__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "5d746c92fa501c8015781a1d544680824149d703e3754e7a6902227035829a4f",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c071__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "faadc62107fa10c392ccf3b57402050ea1cb37b7a97a6ef76f6e82215b694583",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c073__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "9a2757b0e6bcdfb0e8c9c15c4113a4d2bf7bd175ac64c131abd6d237f9e8e0b6",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c074__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "180ce3648c6b06a4d4bcbb0055b7d44a7ab45558992973453682b332c2fb1b08",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c075__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "98c84dcd5c34741da7489df03f7ffe67581f54d4c1304ba271bf9340b4648f6e",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c076__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "b4af15b0bd55d11f885b37e11eac796bc092fee1a7b2c87021baa7d98c4d0019",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c077__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "f2a99f782276a32d3f01f433274b1fee2a03348d061abc6414567b17d6844348",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c078__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "158f857d2fd3acec755b4d72c57b21e314778c465932e6cbdec43decd1db09da",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c080__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "9f5157e7263017527d5dc87c8f982ce0b78c6dc82776de8d28b72de7858834a0",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c081__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "600c78cc0f513bcfa18d218572634bfad7cffb8a884f255bd54948cc06f983fa",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c082__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "da41b3c80b2962b6b8a0ccf99110f0b35b4b4fd1b0fa90c2d75ec11fb3dd57fa",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c083__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "59cd425a08a236f73551538f20357e03c247e5a65fce34e4a4abc82301a68673",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m1_c085__CENTRAL__ATHLETIQUE": {
+      "raw_fingerprint": "6ad79f833e634862725eb63b07c55a3b57fe4a10ef683fba4fb4ecd89d1c1835",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m2_c000.left": {
+      "raw_fingerprint": "d73656af1d52204de4c50ebf0f7f9b36097e25003e48a4bda313adf6c1ee6e77",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m2_c000.right": {
+      "raw_fingerprint": "e2b66beaa5c28073f5733fa0c6d1e730e207e53b6c37037ef865e67ea656cace",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m2_c001.left": {
+      "raw_fingerprint": "4d1f198a771d001aa4689ccba5fe5046abf122bfd2d7f165c4557f8487228454",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "m2_c001.right": {
+      "raw_fingerprint": "63ef0bdd6d0880bd22babed2d5c53bed22c378fc80bd41d6365e4880e4b46742",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "pectoralis_major.left": {
+      "raw_fingerprint": "d217ab0765694668ebc7305aa3f866feffdfab9ca1e0140de769913654251590",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "pectoralis_major.right": {
+      "raw_fingerprint": "c92913d87c817a311416ef3abe9682f2bc6e4f2c408ba9176348d9ce3edfa104",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "rectus_abdominis.left": {
+      "raw_fingerprint": "d70e7ea3c9123401d74ae00e1cedb4c8cf56894b391da6547615e3267b8cec5b",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "rectus_abdominis.right": {
+      "raw_fingerprint": "cd30ba3a3ab02eb85d8997ba6f3b2b01e2e69d0843af69937687483ded85583e",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "trapezius.left": {
+      "raw_fingerprint": "496e7890a63a8c7cdd1b2a088c40f2a628cbcc2154a557e7d046f78ca5e0e550",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "trapezius.right": {
+      "raw_fingerprint": "f9de233b245a4f3372fdde3f24ab1f1d071def145e1fbc910fa8fa99a83d8322",
+      "evaluated_surface_and_corner_normals_identical": true
+    },
+    "trapezius_attachment.reconstructed_midline": {
+      "raw_fingerprint": "0e6d7dbce748f630ba90b37909876cd6a7d19993a9110138001cb02071fded31",
+      "evaluated_surface_and_corner_normals_identical": true
+    }
+  }
+}

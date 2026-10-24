@@ -1,0 +1,82 @@
+{
+  "blend_sha256": "3fe78fd8c30b1bb6dd822f95c10c9e3fb1246fbb770820158f1ad19840007d84",
+  "renderer_sha256": "3fafedb1678a6cfb28d98a1d43bedc7effb355f2496deb6d40b7d2c652f5a62c",
+  "engine": "CYCLES_CPU",
+  "samples": 48,
+  "seed": 0,
+  "denoising": false,
+  "geometry_operation": false,
+  "frames": [
+    {
+      "file": "neutral-front.png",
+      "scene": "00_NEUTRE",
+      "camera": "FACE",
+      "size": [
+        720,
+        1152
+      ],
+      "sha256": "be6e35fd2de306487e7261432f5d70a459726418ac089bf157be5e3536fffb9b"
+    },
+    {
+      "file": "painted-front.png",
+      "scene": "01_MASQUE_PEINT",
+      "camera": "FACE",
+      "size": [
+        720,
+        1152
+      ],
+      "sha256": "b86fcc1dbec7b67f864e2d1ff9d2ab60c006a45f54b95bcb9e69c6939c666c1e"
+    },
+    {
+      "file": "painted-three-quarter.png",
+      "scene": "01_MASQUE_PEINT",
+      "camera": "TROIS_QUARTS",
+      "size": [
+        720,
+        1152
+      ],
+      "sha256": "b7ac778d9e7077337e1f8b53379e22903d801329d2e38bfd4a2317deacb21bf7"
+    },
+    {
+      "file": "painted-detail.png",
+      "scene": "01_MASQUE_PEINT",
+      "camera": "DETAIL_TROIS_QUARTS",
+      "size": [
+        1000,
+        840
+      ],
+      "sha256": "9b8ed381c4863c670cdff37820415ae5da898380deec6b2e565bfa528cfa953e"
+    },
+    {
+      "file": "painted-profile.png",
+      "scene": "01_MASQUE_PEINT",
+      "camera": "CONTROLE_PROFIL",
+      "size": [
+        1000,
+        840
+      ],
+      "sha256": "550516896e7e7705ccb9d8b01ed015d432986f9c092b8db60400e40c1392b5e9"
+    },
+    {
+      "file": "painted-detail-front.png",
+      "scene": "01_MASQUE_PEINT",
+      "camera": "DETAIL_FACE",
+      "size": [
+        1000,
+        840
+      ],
+      "sha256": "632eb838f95f6d9c6977c055e6207ecb22db23ccd8b4802b98ff731518f6a1b5"
+    },
+    {
+      "file": "triangles-profile.png",
+      "scene": "01_PECTORAL_GAUCHE",
+      "camera": "CONTROLE_PROFIL",
+      "size": [
+        1000,
+        840
+      ],
+      "sha256": "673fab1f9caf472c8b1c25dd8439cadfa1e07146ca1f5b3c0070daca61aa8f4a"
+    }
+  ],
+  "triangle_control_blend_sha256": "857d7435073bc3d5670fd7e1fedf2cedfed347daf7f92da3b05d3fcbc2cc3587"
+}

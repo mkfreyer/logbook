@@ -1,0 +1,21 @@
+{
+  "file": "ecorche-aine-fondue.glb",
+  "bytes": 10746948,
+  "sha256": "500c72a5d4b1cfd2cfc9b6efd8d5dd48c90dde908a8498922602ee962e501f00",
+  "nodes": 299,
+  "meshes": 299,
+  "materials": 7,
+  "primitives": 303,
+  "triangles": 521530,
+  "selection_zone_ids": [
+    "deltoid.left.anterior",
+    "deltoid.left.lateral",
+    "deltoid.left.posterior",
+    "deltoid.right.anterior",
+    "deltoid.right.lateral",
+    "deltoid.right.posterior"
+  ],
+  "textures_added": 0,
+  "shape_keys_baked_at_existing_values": true,
+  "exporter_sha256": "690917ba156faf6e5c9952828b27bfa9eac2f580858ad7a554f5ba14ae9f1c32"
+}

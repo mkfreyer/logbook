@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "source_file": "../../source.glb",
+  "source_sha256": "9fab861a65407e69b9401bec077bf7b40f58d36404e80bad9db6147f24320a14",
+  "binding": {
+    "node_index": 0,
+    "mesh_index": 0,
+    "primitive_index": 0,
+    "topology": "TRIANGLES",
+    "triangle_count": 95426,
+    "vertex_count": 47711,
+    "position_buffer_sha256": "1863b86fa586165422af02bcc61e19cda63a1d51694e7bfdb95157bd2451d132",
+    "index_buffer_sha256": "a709e35bb2570cc90b2c48088547d77b5ef3850d5f270f7ef030b77813c15a37",
+    "triangle_index_rule": "Zero-based ordinal of each consecutive index triplet of source mesh 0, primitive 0. No reordering."
+  },
+  "labels": {
+    "file": "triangle-regions.u8",
+    "dtype": "uint8",
+    "byte_length": 95426,
+    "sha256": "df3dafff71bc7b57c52b128cc49a358d4aa9b59fee7fcc1bcd01fc0983372fb8",
+    "unassigned_value": 0
+  },
+  "regions": [
+    {
+      "id": "pectoralis.left",
+      "value": 1,
+      "faces": 1333,
+      "connected_components": 1,
+      "boundary_edges": 157,
+      "euler_characteristic": 1,
+      "single_disk": true
+    },
+    {
+      "id": "pectoralis.right",
+      "value": 2,
+      "faces": 1128,
+      "connected_components": 1,
+      "boundary_edges": 144,
+      "euler_characteristic": 1,
+      "single_disk": true
+    },
+    {
+      "id": "deltoid.left",
+      "value": 3,
+      "faces": 1735,
+      "connected_components": 1,
+      "boundary_edges": 185,
+      "euler_characteristic": 1,
+      "single_disk": true
+    }
+  ],
+  "contours_sha256": null,
+  "method": "Editable Blender face material indices, explicitly mapped through source_triangle_index and checked against original vertex/triangle arrays.",
+  "geometry_changes": false,
+  "face_order_changed": false,
+  "mobile_performance_validated": false,
+  "blender_source_sha256": "033926625778f6e9b16e7bbc18de97d17f077a48e004a96be9b891f54e7a976f",
+  "source_file_relative_to": "directory containing this regions.json",
+  "correction_face_edit_list": "../face-edits.json"
+}

@@ -1,0 +1,77 @@
+{
+  "composer_sha256": "55f3ad62d31fc332cb1d3b228a354bd860b7437d606c17ef702963e2d0c7393c",
+  "sheets": [
+    {
+      "file": "planche-finale.png",
+      "sha256": "f0eca4d96ef167c620620b0fb68da55468c007144aafc5f1bbc4faec0727d637",
+      "sources": [
+        {
+          "file": "face.png",
+          "sha256": "2c0b950ac74a96035ce2a777f90c0abf508ca4df5b729c3877384b05791b767b"
+        },
+        {
+          "file": "profil.png",
+          "sha256": "a6a9b033eb858206462ce2c38463a21b7b2c940479ce2a9588cde62a6a3156a7"
+        },
+        {
+          "file": "dos.png",
+          "sha256": "e5050afa9a7b8cbedeab5105c87a3ca933ea00c6e6806996ff1f6b04bbf2166e"
+        },
+        {
+          "file": "trois-quarts.png",
+          "sha256": "be178718c321fce6e924214857d95a75d9992c03c21c3572b4139789eb799679"
+        }
+      ],
+      "raw_pixels_resized": false,
+      "raw_pixels_retouched": false
+    },
+    {
+      "file": "epaules-face-dos.png",
+      "sha256": "803fbd3acc4668871e389d116512bd584c417e427f03e4aaef8d1c9c86e75aef",
+      "sources": [
+        {
+          "file": "epaules-face.png",
+          "sha256": "1443cc66b4affd933be90ce6f6ab0202ded97bb97e4c568dbd1baa0b71737729"
+        },
+        {
+          "file": "epaules-dos.png",
+          "sha256": "a139414a32becb2609c6157f56aec9cb56fd8da03d5b913ddb622b627c939c5a"
+        }
+      ],
+      "raw_pixels_resized": false,
+      "raw_pixels_retouched": false
+    },
+    {
+      "file": "deux-deltoides.png",
+      "sha256": "7c058c3d68a6678640a093e43c9a445a446c13c9f1e07cf3b76442a90ec33ddf",
+      "sources": [
+        {
+          "file": "epaule-droite.png",
+          "sha256": "30acec148b484180267139e9e6555579330994778f611dbe84ee5a3233dc6df4"
+        },
+        {
+          "file": "epaule-gauche.png",
+          "sha256": "652d3d4652131142199d2ab0875fbed7cd0a150d92139310fd1554ff8a873b65"
+        }
+      ],
+      "raw_pixels_resized": false,
+      "raw_pixels_retouched": false
+    },
+    {
+      "file": "epaule-profil-arriere.png",
+      "sha256": "a110a0d897847d32cfc9062ec5b03a83c3a2a6516da184471434c732b45b8c4a",
+      "sources": [
+        {
+          "file": "epaule-profil.png",
+          "sha256": "29234dc7ff42469f4ad4636b4a6bcba5bef6fdecbb45a35540657c00e65ad7a8"
+        },
+        {
+          "file": "epaule-arriere.png",
+          "sha256": "5d8675c76de7237f9acd32df477fbc130139097c419f04e39312a8e4a71fcf49"
+        }
+      ],
+      "raw_pixels_resized": false,
+      "raw_pixels_retouched": false
+    }
+  ]
+}

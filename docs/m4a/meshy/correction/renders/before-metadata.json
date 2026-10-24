@@ -1,0 +1,44 @@
+{
+  "version": "before",
+  "input_blend_sha256": "5af7e09fb8b2ea54ceec345313b5a0af2e5436eb55ea068113ee299b83fb3c83",
+  "renderer_sha256": "8983611fa2185fec84dc1e167feb93c9abf33db228c007097f4869274ac7329c",
+  "samples": 48,
+  "engine": "CYCLES_CPU",
+  "blender": "4.3.2",
+  "geometry_operation": false,
+  "frames": [
+    {
+      "file": "before-left-detail.png",
+      "scene": "01_PECTORAL_GAUCHE",
+      "camera": "DETAIL_TROIS_QUARTS",
+      "size": [
+        1000,
+        840
+      ],
+      "selection_region": 1,
+      "sha256": "f6aef280861dd93f1c9c36571c32ca0ce0d7b43e5a2f891e186150c3d2fb71be"
+    },
+    {
+      "file": "before-deltoid-profile.png",
+      "scene": "03_DELTOIDE_GAUCHE",
+      "camera": "CONTROLE_PROFIL",
+      "size": [
+        1000,
+        840
+      ],
+      "selection_region": 3,
+      "sha256": "84dbaa5cd38ae58c0d357ea964332775983b380203ed2925b1631b6c72b72279"
+    },
+    {
+      "file": "before-deltoid-back.png",
+      "scene": "03_DELTOIDE_GAUCHE",
+      "camera": "CONTROLE_DOS",
+      "size": [
+        1000,
+        840
+      ],
+      "selection_region": 3,
+      "sha256": "e476b0d18a3e91f512de5f3f04ca45425f9f594fd87f3811af3f6ec3ccbc8cf3"
+    }
+  ]
+}
