@@ -1,0 +1,9 @@
+{
+  "matched_before_after_views": 6,
+  "raw_render_hashes_verified": 12,
+  "camera_matrices_scale_resolution_samples_equal": true,
+  "baseline_sha256": "72c3f1de79c55f058f2710d655c37c063bbd8427ef0c91b580280bfee8f89b20",
+  "master_sha256": "cb24f10382ee056f2800032f2dc08729e50c8130250bd5c533dd8c2fd37f52eb",
+  "processing": "Labels and uniform resizing only. Individual Blender images unmodified.",
+  "compositor_sha256": "dca6af8f30fa923071d600d01a21e0eea4c830e31467020b2cb3a28904cdef94"
+}
