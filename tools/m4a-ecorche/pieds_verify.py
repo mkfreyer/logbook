@@ -50,6 +50,17 @@ def main():
     helper = definitions('guides_deltoides_verify.py')
     before, lights = helper['snapshot'](baseline, meta['source_scene'])
     after, new_lights = helper['snapshot'](root/meta['master'], meta['scene'])
+    donor_checks = {}
+    if 'donor_master' in meta:
+        donor = (root/meta['donor_master']).resolve()
+        assert sha(donor) == meta['donor_blend_sha256']
+        donor_objects, _ = helper['snapshot'](donor, meta['donor_scene'])
+        for key in meta['changed_objects']:
+            for field in ['v', 'f']:
+                assert np.array_equal(donor_objects[key][field], after[key][field]), (key, field, 'donor')
+            for field in ['fingerprint', 'normals', 'modifiers', 'materials']:
+                assert donor_objects[key][field] == after[key][field], (key, field, 'donor')
+            donor_checks[key] = donor_objects[key]['fingerprint']
     assert len(before) == len(after) == 299 and before.keys() == after.keys()
     assert lights == new_lights and len(lights) == 5
     changed = set(meta['changed_objects'])
@@ -146,7 +157,7 @@ def main():
             'bbox_m': [v.min(0).tolist(), v.max(0).tolist()],
         }
     old_doc, _, old_ac = codec['glb'](root/meta['baseline_glb'])
-    doc, _, ac = codec['glb'](root/'ecorche-finition-pieds.glb')
+    doc, _, ac = codec['glb'](root/meta.get('export_file', 'ecorche-finition-pieds.glb'))
     old_nodes = {n['name']: n for n in old_doc['nodes'] if 'mesh' in n}
     nodes = {n['name']: n for n in doc['nodes'] if 'mesh' in n}
     assert old_nodes.keys() == nodes.keys()
@@ -189,6 +200,10 @@ def main():
         'preserved_object_fingerprints': preserved,
         'verifier_sha256': sha(Path(__file__)),
     }
+    if donor_checks:
+        report['donor_commit'] = meta['donor_commit']
+        report['donor_sha256'] = meta['donor_blend_sha256']
+        report['feet_identical_to_donor_including_normals_materials_topology'] = donor_checks
     (root/'verification.json').write_text(json.dumps(report, indent=2)+'\n')
     print('VERIFIED_FEET', json.dumps({k: v for k, v in report.items() if k != 'preserved_object_fingerprints'}), flush=True)
 

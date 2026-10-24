@@ -42,7 +42,7 @@ def main():
         for key in ob.keys():
             clone[key] = ob[key]
     bpy.context.window.scene = scene
-    path = root/'ecorche-finition-pieds.glb'
+    path = root/meta.get('export_file', 'ecorche-finition-pieds.glb')
     bpy.ops.export_scene.gltf(filepath=str(path), export_format='GLB', use_selection=False,
         use_active_scene=True, export_animations=False, export_morph=False,
         export_extras=True, export_apply=False, export_yup=True,
@@ -70,10 +70,12 @@ def main():
         'Body: Ecorche - Anatomy study — Beatriz Gomez Santamaria — CC BY 4.0. '
         'Head/eyes: Dan Ulrich / Blender Studio Human Base Meshes v1.4.1 — CC0. '
         'Logbook adaptation: P4 deltoids, P5 head, deltoid region partition; '
-        'symmetric foot and ankle finish; 297 other meshes unchanged from d94297a.')
+        'symmetric foot and ankle finish; 297 other meshes unchanged from '
+        +meta['baseline_commit'][:7]+'.')
     doc['asset']['extras'] = {**old_doc['asset'].get('extras', {}),
         'baseline_commit': meta['baseline_commit'],
-        'modifications': 'Only the two feet and their immediate ankle contacts rebuilt and smoothed from d94297a. Original leg meshes, groin, six deltoid zones, P5 head and throat unchanged; 297 other objects preserved.',
+        'modifications': meta.get('export_modifications',
+            'Only the two feet and their immediate ankle contacts rebuilt and smoothed from d94297a. Original leg meshes, groin, six deltoid zones, P5 head and throat unchanged; 297 other objects preserved.'),
         'modified_object_ids': meta['changed_objects'],
         'deltoid_partition_inherited_without_changes': 'd79692f',
         'master_sha256': meta['master_sha256']}

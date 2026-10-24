@@ -43,7 +43,7 @@ def board(file, title, views, width):
             im = Image.open(root/'renders'/mode/(view+'.png')).convert('RGB')
             im = im.resize((width, height), Image.Resampling.LANCZOS)
             canvas.paste(im, (x, y+label))
-    d.text((margin, canvas.height-footer+7), 'Base d94297a • Pieds et chevilles uniquement • Proposition pour validation', font=small, fill='#bac7d6')
+    d.text((margin, canvas.height-footer+7), 'Base '+meta['baseline_commit'][:7]+' • Pieds et chevilles uniquement • Proposition pour validation', font=small, fill='#bac7d6')
     d.text((margin, canvas.height-footer+31), 'Aine, deltoïdes, tête, gorge et muscles des jambes conservés', font=small, fill='#bac7d6')
     canvas.save(root/'renders'/file)
 
