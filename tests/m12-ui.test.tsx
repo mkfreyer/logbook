@@ -73,26 +73,26 @@ beforeEach(() => {
   mockSessions.resumeRest.mockResolvedValue(resting);
   jest.mocked(useSessions).mockReturnValue(mockSessions as unknown as SessionRepository);
 });
-afterEach(() => { cleanup(); jest.restoreAllMocks(); jest.useRealTimers(); });
+afterEach(async () => { await cleanup(); jest.restoreAllMocks(); jest.useRealTimers(); });
 
 describe('M1.2 : une seule série et sauvegarde explicite', () => {
   test('seule la première série est affichée, avec trois champs réels vides et des cibles distinctes', async () => {
-    const view = render(<SessionScreen sessionId="session" />);
+    const view = await render(<SessionScreen sessionId="session" />);
     await view.findByText(/Top set · 1 \/ 3/);
     expect(view.queryByText(/Back-off|Finisher/)).toBeNull();
     expect(view.getByText('8–10 répétitions · 80 kg · RIR 2')).toBeTruthy();
     for (const label of ['Charge réelle (kg)', 'Répétitions réelles', 'RIR réel']) expect(view.getByLabelText(label).props.value).toBe('');
-    fireEvent.press(view.getByRole('button', { name: 'Valider la série' }));
+    await fireEvent.press(view.getByRole('button', { name: 'Valider la série' }));
     expect(mockSessions.validateSet).not.toHaveBeenCalled();
     expect(view.getByRole('alert')).toBeTruthy();
   });
 
   test('la validation sauvegarde les valeurs réellement saisies puis ouvre le repos de la série', async () => {
     jest.useFakeTimers().setSystemTime(new Date(stamp));
-    const view = render(<SessionScreen sessionId="session" />);
-    fireEvent.changeText(await view.findByLabelText('Charge réelle (kg)'), '72,5');
-    fireEvent.changeText(view.getByLabelText('Répétitions réelles'), '9');
-    fireEvent.press(view.getByRole('button', { name: 'Valider la série' }));
+    const view = await render(<SessionScreen sessionId="session" />);
+    await fireEvent.changeText(await view.findByLabelText('Charge réelle (kg)'), '72,5');
+    await fireEvent.changeText(view.getByLabelText('Répétitions réelles'), '9');
+    await fireEvent.press(view.getByRole('button', { name: 'Valider la série' }));
     await view.findByText('Repos entre les séries');
     expect(mockSessions.validateSet).toHaveBeenCalledWith('session', 'first', { weightKg: 72.5, reps: 9, rir: null }, 0);
     expect(view.queryByLabelText('Répétitions réelles')).toBeNull();
@@ -102,45 +102,45 @@ describe('M1.2 : une seule série et sauvegarde explicite', () => {
   });
 
   test('charge au poids du corps et RIR peuvent rester vides sans copier les objectifs', async () => {
-    const view = render(<SessionScreen sessionId="session" />);
-    fireEvent.changeText(await view.findByLabelText('Répétitions réelles'), '12');
-    fireEvent.press(view.getByRole('button', { name: 'Valider la série' }));
+    const view = await render(<SessionScreen sessionId="session" />);
+    await fireEvent.changeText(await view.findByLabelText('Répétitions réelles'), '12');
+    await fireEvent.press(view.getByRole('button', { name: 'Valider la série' }));
     await waitFor(() => expect(mockSessions.validateSet).toHaveBeenCalledWith('session', 'first', { weightKg: null, reps: 12, rir: null }, 0));
     await view.findByText('Repos entre les séries');
   });
 
   test('une erreur conserve les champs, bloque les doubles validations en attente puis permet de réessayer', async () => {
     const pending = deferred<WorkoutSession>(); mockSessions.validateSet.mockReturnValueOnce(pending.promise);
-    const view = render(<SessionScreen sessionId="session" />);
-    fireEvent.changeText(await view.findByLabelText('Répétitions réelles'), '9');
+    const view = await render(<SessionScreen sessionId="session" />);
+    await fireEvent.changeText(await view.findByLabelText('Répétitions réelles'), '9');
     const validate = view.getByRole('button', { name: 'Valider la série' });
-    fireEvent.press(validate); fireEvent.press(validate);
+    await fireEvent.press(validate); await fireEvent.press(validate);
     expect(mockSessions.validateSet).toHaveBeenCalledTimes(1);
     expect(view.getByRole('button', { name: 'Retour' }).props.accessibilityState.disabled).toBe(true);
     await act(async () => { pending.resolve(initial); await pending.promise; });
     mockSessions.validateSet.mockRejectedValueOnce(new Error('Stockage indisponible'));
-    fireEvent.press(view.getByRole('button', { name: 'Valider la série' }));
+    await fireEvent.press(view.getByRole('button', { name: 'Valider la série' }));
     await view.findByText('Stockage indisponible');
     expect(view.getByLabelText('Répétitions réelles').props.value).toBe('9');
     expect(router.dismissTo).not.toHaveBeenCalled();
-    fireEvent.press(view.getByRole('button', { name: 'Valider la série' }));
+    await fireEvent.press(view.getByRole('button', { name: 'Valider la série' }));
     await view.findByText('Repos entre les séries');
   });
 
   test('la sortie temporaire ne valide aucun champ et ne termine pas la séance', async () => {
-    const view = render(<SessionScreen sessionId="session" />);
-    fireEvent.changeText(await view.findByLabelText('Répétitions réelles'), '9');
-    fireEvent.press(view.getByRole('button', { name: 'Quitter et reprendre plus tard' }));
+    const view = await render(<SessionScreen sessionId="session" />);
+    await fireEvent.changeText(await view.findByLabelText('Répétitions réelles'), '9');
+    await fireEvent.press(view.getByRole('button', { name: 'Quitter et reprendre plus tard' }));
     expect(router.dismissTo).toHaveBeenCalledWith({ pathname: '/', params: { universe: 'musculation' } });
     expect(mockSessions.validateSet).not.toHaveBeenCalled(); expect(mockSessions.finishSession).not.toHaveBeenCalled();
   });
 
   test('sans repos, une étape manuelle permet de continuer sans revenir à une liste', async () => {
     mockSessions.getSession.mockResolvedValue({ ...initial, performances: [performed] });
-    const view = render(<SessionScreen sessionId="session" />);
+    const view = await render(<SessionScreen sessionId="session" />);
     await view.findByText('Série enregistrée');
     expect(view.queryByLabelText('Répétitions réelles')).toBeNull();
-    fireEvent.press(view.getByRole('button', { name: 'Passer à la série suivante' }));
+    await fireEvent.press(view.getByRole('button', { name: 'Passer à la série suivante' }));
     await view.findByText(/Back-off · 2 \/ 3/);
     expect(mockSessions.advanceAfterSet).toHaveBeenCalledWith('session', 'performance');
     expect(view.getByLabelText('Répétitions réelles').props.value).toBe('');
@@ -148,11 +148,11 @@ describe('M1.2 : une seule série et sauvegarde explicite', () => {
 
   test('la dernière série propose une fin manuelle et conserve une confirmation véridique', async () => {
     mockSessions.getSession.mockResolvedValue(allDone);
-    const view = render(<SessionScreen sessionId="session" />);
+    const view = await render(<SessionScreen sessionId="session" />);
     await view.findByText('Toutes les séries sont enregistrées');
     expect(view.queryByText('Repos prévu')).toBeNull();
     expect(mockSessions.finishSession).not.toHaveBeenCalled();
-    fireEvent.press(view.getByRole('button', { name: 'Terminer la séance' }));
+    await fireEvent.press(view.getByRole('button', { name: 'Terminer la séance' }));
     await view.findByText('Entraînement enregistré');
     expect(view.getByLabelText('Séries réalisées').props.children).toBe('3');
     expect(mockSessions.finishSession).toHaveBeenCalledTimes(1);
@@ -160,9 +160,9 @@ describe('M1.2 : une seule série et sauvegarde explicite', () => {
   });
 
   test('le menu secondaire ne concerne que les objectifs de la série active', async () => {
-    const view = render(<SessionScreen sessionId="session" />);
-    fireEvent.press(await view.findByRole('button', { name: 'Actions de séance' }));
-    fireEvent.press(await view.findByRole('button', { name: 'Modifier les objectifs de la série' }));
+    const view = await render(<SessionScreen sessionId="session" />);
+    await fireEvent.press(await view.findByRole('button', { name: 'Actions de séance' }));
+    await fireEvent.press(await view.findByRole('button', { name: 'Modifier les objectifs de la série' }));
     await waitFor(() => expect(router.push).toHaveBeenCalledWith({ pathname: '/sessions/[sessionId]/edit', params: { sessionId: 'session', setId: 'first' } }));
   });
 });
@@ -173,21 +173,21 @@ describe('M1.2 : repos calculé depuis les horodatages', () => {
 
   test('le passage anticipé ferme le bon intervalle et affiche la prochaine série avec des champs vides', async () => {
     mockSessions.getSession.mockResolvedValue(resting);
-    const view = render(<SessionScreen sessionId="session" />);
-    fireEvent.press(await view.findByRole('button', { name: 'Passer à la série suivante' }));
+    const view = await render(<SessionScreen sessionId="session" />);
+    await fireEvent.press(await view.findByRole('button', { name: 'Passer à la série suivante' }));
     await view.findByText(/Back-off · 2 \/ 3/);
     expect(mockSessions.completeRest).toHaveBeenCalledWith('session', 'rest');
     expect(view.getByLabelText('Charge réelle (kg)').props.value).toBe('');
   });
 
-  test('l’expiration affiche le dépassement et change le bouton sans progression automatique', () => {
+  test('l’expiration affiche le dépassement et change le bouton sans progression automatique', async () => {
     const complete = jest.fn();
-    const view = render(<RestTimer rest={rest} busy={false} onPause={jest.fn()} onResume={jest.fn()} onComplete={complete} />);
-    act(() => { jest.advanceTimersByTime(61000); });
+    const view = await render(<RestTimer rest={rest} busy={false} onPause={jest.fn()} onResume={jest.fn()} onComplete={complete} />);
+    await act(() => { jest.advanceTimersByTime(61000); });
     expect(view.getByText('+00:01')).toBeTruthy();
     expect(view.getByRole('button', { name: 'Repos terminé' })).toBeTruthy();
     expect(complete).not.toHaveBeenCalled();
-    fireEvent.press(view.getByRole('button', { name: 'Repos terminé' }));
+    await fireEvent.press(view.getByRole('button', { name: 'Repos terminé' }));
     expect(complete).toHaveBeenCalledTimes(1);
     expect(view.queryByText(/\+15|\+30/)).toBeNull();
   });
@@ -195,30 +195,30 @@ describe('M1.2 : repos calculé depuis les horodatages', () => {
   test('une reprise après fermeture recalcule directement le dépassement conservé', async () => {
     jest.setSystemTime(new Date(Date.parse(stamp) + 90000));
     mockSessions.getSession.mockResolvedValue(resting);
-    const view = render(<SessionScreen sessionId="session" />);
+    const view = await render(<SessionScreen sessionId="session" />);
     await view.findByText('+00:30');
     expect(view.getByLabelText('Repos réel écoulé').props.children).toBe('01:30');
     expect(mockSessions.validateSet).not.toHaveBeenCalled();
     expect(mockSessions.completeRest).not.toHaveBeenCalled();
   });
 
-  test('la pause conservée fige le minuteur mais le repos réel continue et la reprise est explicite', () => {
+  test('la pause conservée fige le minuteur mais le repos réel continue et la reprise est explicite', async () => {
     jest.setSystemTime(new Date(Date.parse(stamp) + 30000));
     const pause = jest.fn(), resume = jest.fn();
-    const view = render(<RestTimer rest={{ ...rest, pauses: [{ id: 'pause', startedAt: new Date(Date.parse(stamp) + 10000).toISOString(), endedAt: null }] }} busy={false} onPause={pause} onResume={resume} onComplete={jest.fn()} />);
+    const view = await render(<RestTimer rest={{ ...rest, pauses: [{ id: 'pause', startedAt: new Date(Date.parse(stamp) + 10000).toISOString(), endedAt: null }] }} busy={false} onPause={pause} onResume={resume} onComplete={jest.fn()} />);
     expect(view.getByLabelText('Temps restant').props.children).toBe('00:50');
-    act(() => { jest.advanceTimersByTime(10000); });
+    await act(() => { jest.advanceTimersByTime(10000); });
     expect(view.getByLabelText('Temps restant').props.children).toBe('00:50');
     expect(view.getByLabelText('Repos réel écoulé').props.children).toBe('00:40');
-    fireEvent.press(view.getByRole('button', { name: 'Reprendre le minuteur' }));
+    await fireEvent.press(view.getByRole('button', { name: 'Reprendre le minuteur' }));
     expect(resume).toHaveBeenCalledTimes(1); expect(pause).not.toHaveBeenCalled();
   });
 
   test('pause et reprise utilisent le bon intervalle persistant', async () => {
     mockSessions.getSession.mockResolvedValue(resting);
-    const view = render(<SessionScreen sessionId="session" />);
-    fireEvent.press(await view.findByRole('button', { name: 'Mettre le minuteur en pause' }));
-    fireEvent.press(await view.findByRole('button', { name: 'Reprendre le minuteur' }));
+    const view = await render(<SessionScreen sessionId="session" />);
+    await fireEvent.press(await view.findByRole('button', { name: 'Mettre le minuteur en pause' }));
+    await fireEvent.press(await view.findByRole('button', { name: 'Reprendre le minuteur' }));
     await view.findByRole('button', { name: 'Mettre le minuteur en pause' });
     expect(mockSessions.pauseRest).toHaveBeenCalledWith('session', 'rest');
     expect(mockSessions.resumeRest).toHaveBeenCalledWith('session', 'rest');
@@ -227,34 +227,34 @@ describe('M1.2 : repos calculé depuis les horodatages', () => {
   test('un échec de fin de repos conserve le chronomètre et permet une nouvelle tentative', async () => {
     mockSessions.getSession.mockResolvedValue(resting);
     mockSessions.completeRest.mockRejectedValueOnce(new Error('Impossible d’enregistrer le repos'));
-    const view = render(<SessionScreen sessionId="session" />);
-    fireEvent.press(await view.findByRole('button', { name: 'Passer à la série suivante' }));
+    const view = await render(<SessionScreen sessionId="session" />);
+    await fireEvent.press(await view.findByRole('button', { name: 'Passer à la série suivante' }));
     await view.findByText('Impossible d’enregistrer le repos');
     expect(view.queryByLabelText('Répétitions réelles')).toBeNull();
-    fireEvent.press(view.getByRole('button', { name: 'Passer à la série suivante' }));
+    await fireEvent.press(view.getByRole('button', { name: 'Passer à la série suivante' }));
     await view.findByText(/Back-off · 2 \/ 3/);
   });
 });
 
 describe('M1.2 : modification explicite des objectifs', () => {
   test('Cette séance est sélectionnée par défaut, la grille sauvegarde les objectifs sans performances', async () => {
-    const view = render(<SessionSetEditor sessionId="session" setId="first" />);
+    const view = await render(<SessionSetEditor sessionId="session" setId="first" />);
     await waitFor(() => expect(view.getByLabelText('Charge cible (kg)').props.value).toBe('80'));
     expect(view.getByRole('radio', { name: 'Cette séance' }).props.accessibilityState.checked).toBe(true);
-    fireEvent.changeText(view.getByLabelText('Charge cible (kg)'), '75,5');
-    fireEvent.changeText(view.getByLabelText('Repos cible (s)'), '135');
-    fireEvent.press(view.getByRole('button', { name: 'Enregistrer les objectifs' }));
+    await fireEvent.changeText(view.getByLabelText('Charge cible (kg)'), '75,5');
+    await fireEvent.changeText(view.getByLabelText('Repos cible (s)'), '135');
+    await fireEvent.press(view.getByRole('button', { name: 'Enregistrer les objectifs' }));
     await waitFor(() => expect(mockSessions.updateSet).toHaveBeenCalledWith('session', 'first', { ...targets, label: 'Top set', kind: 'top_set', notes: '', loadRule: null, targetWeightKg: 75.5, restAfterSec: 135 }, 'session'));
     await waitFor(() => expect(router.dismissTo).toHaveBeenCalledWith({ pathname: '/sessions/[sessionId]', params: { sessionId: 'session' } }));
     expect(mockSessions.validateSet).not.toHaveBeenCalled();
   });
 
   test('Programme est un choix explicite et transmet sa portée sans toucher aux résultats', async () => {
-    const view = render(<SessionSetEditor sessionId="session" setId="first" />);
+    const view = await render(<SessionSetEditor sessionId="session" setId="first" />);
     await waitFor(() => expect(view.getByRole('radio', { name: 'Programme' }).props.accessibilityState.disabled).toBe(false));
-    fireEvent.press(view.getByRole('radio', { name: 'Programme' }));
-    fireEvent.changeText(view.getByLabelText('RIR cible'), '');
-    fireEvent.press(view.getByRole('button', { name: 'Enregistrer les objectifs' }));
+    await fireEvent.press(view.getByRole('radio', { name: 'Programme' }));
+    await fireEvent.changeText(view.getByLabelText('RIR cible'), '');
+    await fireEvent.press(view.getByRole('button', { name: 'Enregistrer les objectifs' }));
     await waitFor(() => expect(mockSessions.updateSet).toHaveBeenCalledWith('session', 'first', { ...targets, label: 'Top set', kind: 'top_set', notes: '', loadRule: null, targetRir: null }, 'program'));
     await waitFor(() => expect(router.dismissTo).toHaveBeenCalledWith({ pathname: '/sessions/[sessionId]', params: { sessionId: 'session' } }));
     expect(mockSessions.validateSet).not.toHaveBeenCalled();
@@ -262,20 +262,20 @@ describe('M1.2 : modification explicite des objectifs', () => {
 
   test('une erreur ne quitte pas l’éditeur, et Annuler ne sauvegarde pas', async () => {
     mockSessions.updateSet.mockRejectedValueOnce(new Error('La série du programme a été supprimée'));
-    const view = render(<SessionSetEditor sessionId="session" setId="first" />);
+    const view = await render(<SessionSetEditor sessionId="session" setId="first" />);
     await view.findByLabelText('Repos cible (s)');
-    fireEvent.changeText(view.getByLabelText('Repos cible (s)'), '90');
-    fireEvent.press(view.getByRole('button', { name: 'Enregistrer les objectifs' }));
+    await fireEvent.changeText(view.getByLabelText('Repos cible (s)'), '90');
+    await fireEvent.press(view.getByRole('button', { name: 'Enregistrer les objectifs' }));
     await view.findByText('La série du programme a été supprimée');
     expect(router.dismissTo).not.toHaveBeenCalled();
     expect(view.getByLabelText('Repos cible (s)').props.value).toBe('90');
-    fireEvent.press(view.getByRole('button', { name: 'Annuler' }));
+    await fireEvent.press(view.getByRole('button', { name: 'Annuler' }));
     expect(mockSessions.updateSet).toHaveBeenCalledTimes(1);
   });
 
   test('une série déjà validée ou une autre série n’est pas modifiable depuis une route ancienne', async () => {
     mockSessions.getSession.mockResolvedValue(advanced);
-    const view = render(<SessionSetEditor sessionId="session" setId="first" />);
+    const view = await render(<SessionSetEditor sessionId="session" setId="first" />);
     await view.findByText('Cette série n’est pas modifiable : elle est validée, retirée ou la séance est terminée.');
     expect(view.queryByRole('button', { name: 'Enregistrer les objectifs' })).toBeNull();
     expect(mockSessions.updateSet).not.toHaveBeenCalled();
@@ -283,11 +283,11 @@ describe('M1.2 : modification explicite des objectifs', () => {
 
   test('une sauvegarde doublée reste unique, sans navigation tardive après perte du focus', async () => {
     const pending = deferred<WorkoutSession>(); mockSessions.updateSet.mockReturnValue(pending.promise);
-    const view = render(<SessionSetEditor sessionId="session" setId="first" />);
+    const view = await render(<SessionSetEditor sessionId="session" setId="first" />);
     const save = await view.findByRole('button', { name: 'Enregistrer les objectifs' });
-    fireEvent.press(save); fireEvent.press(save);
+    await fireEvent.press(save); await fireEvent.press(save);
     expect(mockSessions.updateSet).toHaveBeenCalledTimes(1);
-    act(() => mockFocusCleanups.forEach(blur => blur()));
+    await act(() => mockFocusCleanups.forEach(blur => blur()));
     await act(async () => { pending.resolve(initial); await pending.promise; });
     expect(router.dismissTo).not.toHaveBeenCalled();
   });

@@ -60,9 +60,9 @@ const repository = {
   listCompletedSessions: jest.fn<SessionRepository['listCompletedSessions']>(),
 };
 const catalog = { listCatalog: jest.fn<() => Promise<ExerciseCatalogItem[]>>() };
-function alertButton(name: string) {
+async function alertButton(name: string) {
   const calls = jest.mocked(Alert.alert).mock.calls, button = calls[calls.length - 1]?.[2]?.find(item => item.text === name);
-  expect(button).toBeTruthy(); act(() => button?.onPress?.());
+  expect(button).toBeTruthy(); await act(() => button?.onPress?.());
 }
 function deferred<T>() { let resolve!: (value: T) => void; const promise = new Promise<T>(done => { resolve = done; }); return { promise, resolve }; }
 const replacementProps = { sessionId: 's', exerciseId: 'e0', setId: 'set0' };
@@ -79,25 +79,25 @@ beforeEach(() => {
   jest.mocked(useSessions).mockReturnValue(repository as unknown as SessionRepository);
   jest.mocked(useTraining).mockReturnValue(catalog as unknown as ReturnType<typeof useTraining>);
 });
-afterEach(() => { cleanup(); jest.restoreAllMocks(); });
+afterEach(async () => { await cleanup(); jest.restoreAllMocks(); });
 
 describe('M2 : remplacement temporaire confirmé', () => {
   test('la recherche inclut les exercices personnalisés et annonce les charges effacées avant toute écriture', async () => {
-    const view = render(<SessionReplacement {...replacementProps} />);
+    const view = await render(<SessionReplacement {...replacementProps} />);
     await view.findByText('Exercice personnalisé');
-    fireEvent.changeText(view.getByLabelText('Rechercher un remplacement'), 'developpe HALTERES');
+    await fireEvent.changeText(view.getByLabelText('Rechercher un remplacement'), 'developpe HALTERES');
     expect(view.queryByText('Presse à cuisses')).toBeNull();
-    fireEvent.press(view.getByRole('button', { name: `Remplacer par ${alternative.name}` }));
+    await fireEvent.press(view.getByRole('button', { name: `Remplacer par ${alternative.name}` }));
     await waitFor(() => expect(Alert.alert).toHaveBeenCalledWith('Remplacer cet exercice ?', expect.stringContaining('charges cibles restantes seront effacées'), expect.any(Array), expect.any(Object)));
-    expect(repository.replaceExercise).not.toHaveBeenCalled(); alertButton('Annuler');
+    expect(repository.replaceExercise).not.toHaveBeenCalled(); await alertButton('Annuler');
     expect(repository.replaceExercise).not.toHaveBeenCalled(); expect(router.dismissTo).not.toHaveBeenCalled();
   });
   test('confirmation et double clic ne produisent qu’un remplacement, puis reviennent à la séance', async () => {
     const pending = deferred<WorkoutSession>(); repository.replaceExercise.mockReturnValueOnce(pending.promise);
-    const view = render(<SessionReplacement {...replacementProps} />);
+    const view = await render(<SessionReplacement {...replacementProps} />);
     const row = await view.findByRole('button', { name: `Remplacer par ${alternative.name}` });
-    fireEvent.press(row); fireEvent.press(row); await waitFor(() => expect(Alert.alert).toHaveBeenCalledTimes(1));
-    alertButton('Remplacer'); alertButton('Remplacer');
+    await fireEvent.press(row); await fireEvent.press(row); await waitFor(() => expect(Alert.alert).toHaveBeenCalledTimes(1));
+    await alertButton('Remplacer'); await alertButton('Remplacer');
     await waitFor(() => expect(repository.replaceExercise).toHaveBeenCalledTimes(1));
     expect(repository.replaceExercise).toHaveBeenCalledWith('s', 'e0', alternative.id, 'set0');
     expect(router.dismissTo).not.toHaveBeenCalled();
@@ -106,31 +106,31 @@ describe('M2 : remplacement temporaire confirmé', () => {
   });
   test('un échec conserve l’écran et permet une nouvelle confirmation, sans masquer l’erreur', async () => {
     repository.replaceExercise.mockRejectedValueOnce(new Error('Sauvegarde impossible'));
-    const view = render(<SessionReplacement {...replacementProps} />);
-    fireEvent.press(await view.findByRole('button', { name: `Remplacer par ${alternative.name}` })); await waitFor(() => expect(Alert.alert).toHaveBeenCalled()); alertButton('Remplacer');
+    const view = await render(<SessionReplacement {...replacementProps} />);
+    await fireEvent.press(await view.findByRole('button', { name: `Remplacer par ${alternative.name}` })); await waitFor(() => expect(Alert.alert).toHaveBeenCalled()); await alertButton('Remplacer');
     await view.findByText('Sauvegarde impossible'); expect(router.dismissTo).not.toHaveBeenCalled();
-    fireEvent.press(view.getByRole('button', { name: `Remplacer par ${alternative.name}` })); await waitFor(() => expect(Alert.alert).toHaveBeenCalledTimes(2)); alertButton('Remplacer');
+    await fireEvent.press(view.getByRole('button', { name: `Remplacer par ${alternative.name}` })); await waitFor(() => expect(Alert.alert).toHaveBeenCalledTimes(2)); await alertButton('Remplacer');
     await waitFor(() => expect(router.dismissTo).toHaveBeenCalledTimes(1));
   });
   test('une confirmation tardive après sortie ne modifie aucune série', async () => {
-    const view = render(<SessionReplacement {...replacementProps} />);
-    fireEvent.press(await view.findByRole('button', { name: `Remplacer par ${alternative.name}` }));
+    const view = await render(<SessionReplacement {...replacementProps} />);
+    await fireEvent.press(await view.findByRole('button', { name: `Remplacer par ${alternative.name}` }));
     await waitFor(() => expect(Alert.alert).toHaveBeenCalled());
-    act(() => mockFocusCleanups.forEach(blur => blur())); alertButton('Remplacer');
+    await act(() => mockFocusCleanups.forEach(blur => blur())); await alertButton('Remplacer');
     expect(repository.replaceExercise).not.toHaveBeenCalled();
   });
   test('une ancienne route ou un repos actif ne permettent pas de remplacer une série validée', async () => {
     repository.getSession.mockResolvedValue(resting);
-    const view = render(<SessionReplacement {...replacementProps} />);
+    const view = await render(<SessionReplacement {...replacementProps} />);
     await view.findByText(/Le repos doit être terminé manuellement/);
     expect(view.queryByLabelText('Rechercher un remplacement')).toBeNull(); expect(repository.replaceExercise).not.toHaveBeenCalled();
   });
   test('retour d’un remplacement : le même identifiant de série n’emporte pas les champs réels de l’ancien exercice', async () => {
-    const view = render(<SessionScreen sessionId="s" />);
-    fireEvent.changeText(await view.findByLabelText('Charge réelle (kg)'), '80');
-    fireEvent.changeText(view.getByLabelText('Répétitions réelles'), '8');
+    const view = await render(<SessionScreen sessionId="s" />);
+    await fireEvent.changeText(await view.findByLabelText('Charge réelle (kg)'), '80');
+    await fireEvent.changeText(view.getByLabelText('Répétitions réelles'), '8');
     repository.getSession.mockResolvedValue(replacement);
-    act(() => {
+    await act(() => {
       mockFocusCleanups.forEach(blur => blur());
       mockFocusEffects.forEach(effect => effect());
     });
@@ -144,33 +144,33 @@ describe('M2 : remplacement temporaire confirmé', () => {
 describe('M2 : exercices restants et repos préservé', () => {
   test('la grille exclut les exercices terminés et conserve les séries encore à faire', async () => {
     repository.getSession.mockResolvedValue({ ...initial, performances: [{ ...performance, sessionSetId: 'set2', advancedAt: stamp }] });
-    const view = render(<RemainingExercises sessionId="s" />);
+    const view = await render(<RemainingExercises sessionId="s" />);
     await view.findByRole('button', { name: 'Choisir Barre' });
     expect(view.queryByRole('button', { name: 'Choisir Tractions' })).toBeNull();
     expect(view.getByRole('button', { name: 'Choisir Curl' })).toBeTruthy();
     expect(view.getByText('2 séries restantes')).toBeTruthy();
   });
   test('choisir un exercice plus loin ouvre la séance sans créer ni valider une performance', async () => {
-    const view = render(<RemainingExercises sessionId="s" />);
-    fireEvent.press(await view.findByRole('button', { name: 'Choisir Curl' }));
+    const view = await render(<RemainingExercises sessionId="s" />);
+    await fireEvent.press(await view.findByRole('button', { name: 'Choisir Curl' }));
     await waitFor(() => expect(router.dismissTo).toHaveBeenCalledTimes(1));
     expect(repository.chooseNextExercise).toHaveBeenCalledWith('s', 'e2', 'set0');
     expect(repository.validateSet).not.toHaveBeenCalled(); expect(repository.completeRest).not.toHaveBeenCalled();
   });
   test('un choix pendant le repos exige une décision explicite et ne clôture jamais le chronomètre', async () => {
     repository.getSession.mockResolvedValue(resting);
-    const view = render(<RemainingExercises sessionId="s" />);
-    fireEvent.press(await view.findByRole('button', { name: 'Choisir Curl' }));
+    const view = await render(<RemainingExercises sessionId="s" />);
+    await fireEvent.press(await view.findByRole('button', { name: 'Choisir Curl' }));
     expect(Alert.alert).toHaveBeenCalledWith('Repos encore en cours', expect.stringContaining('Terminez-le manuellement'), expect.any(Array), expect.any(Object));
-    alertButton('Annuler'); expect(repository.chooseNextExercise).not.toHaveBeenCalled();
-    fireEvent.press(view.getByRole('button', { name: 'Choisir Curl' })); alertButton('Choisir');
+    await alertButton('Annuler'); expect(repository.chooseNextExercise).not.toHaveBeenCalled();
+    await fireEvent.press(view.getByRole('button', { name: 'Choisir Curl' })); await alertButton('Choisir');
     await waitFor(() => expect(router.dismissTo).toHaveBeenCalledTimes(1));
     expect(repository.chooseNextExercise).toHaveBeenCalledWith('s', 'e2', 'set1');
     expect(repository.completeRest).not.toHaveBeenCalled();
   });
   test('un choix enregistré est retrouvé à la réouverture avec une seule série et des champs réels vides', async () => {
     repository.getSession.mockResolvedValue(selected);
-    const view = render(<SessionScreen sessionId="s" />);
+    const view = await render(<SessionScreen sessionId="s" />);
     await view.findByText('Curl');
     expect(view.queryByText('Barre')).toBeNull(); expect(view.queryByText('Tractions')).toBeNull();
     expect(view.getByLabelText('Charge réelle (kg)').props.value).toBe('');
@@ -178,10 +178,10 @@ describe('M2 : exercices restants et repos préservé', () => {
   });
   test('une erreur de sélection conserve la grille et propose une actualisation sans passage prématuré', async () => {
     repository.chooseNextExercise.mockRejectedValueOnce(new Error('La série active a changé'));
-    const view = render(<RemainingExercises sessionId="s" />);
-    fireEvent.press(await view.findByRole('button', { name: 'Choisir Curl' }));
+    const view = await render(<RemainingExercises sessionId="s" />);
+    await fireEvent.press(await view.findByRole('button', { name: 'Choisir Curl' }));
     await view.findByText('La série active a changé'); expect(router.dismissTo).not.toHaveBeenCalled();
-    fireEvent.press(view.getByRole('button', { name: 'Actualiser les exercices' }));
+    await fireEvent.press(view.getByRole('button', { name: 'Actualiser les exercices' }));
     await waitFor(() => expect(repository.getSession).toHaveBeenCalledTimes(2));
     await view.findByRole('button', { name: 'Choisir Curl' });
   });
@@ -190,7 +190,7 @@ describe('M2 : exercices restants et repos préservé', () => {
 describe('M2 : bilan réel et accès après fermeture', () => {
   test('le bilan utilise les résultats, exclut le RIR vide et nomme le remplacement effectivement réalisé', async () => {
     repository.getSession.mockResolvedValue(completed);
-    const view = render(<SessionScreen sessionId="s" />);
+    const view = await render(<SessionScreen sessionId="s" />);
     await view.findByText('Entraînement enregistré');
     expect(view.getByLabelText('Tonnage enregistré').props.children).toBe('600 kg');
     expect(view.getByLabelText('Durée totale').props.children).toBe('1 h 00 min');
@@ -198,30 +198,30 @@ describe('M2 : bilan réel et accès après fermeture', () => {
     expect(view.getByLabelText('RIR moyen').props.children).toBe('1,33');
     expect(view.getByText(alternative.name)).toBeTruthy(); expect(view.getByText('En remplacement de Barre')).toBeTruthy();
     expect(view.queryByText('Barre')).toBeNull(); expect(view.queryByLabelText('Répétitions réelles')).toBeNull();
-    fireEvent.press(view.getByRole('button', { name: 'Convention de calcul du tonnage' }));
+    await fireEvent.press(view.getByRole('button', { name: 'Convention de calcul du tonnage' }));
     expect(view.getByText(/sans supposer deux haltères/)).toBeTruthy();
   });
   test('aucune charge ou aucun RIR donnent des états neutres sans fausses valeurs', async () => {
     repository.getSession.mockResolvedValue({ ...completed, performances: completed.performances.map(item => ({ ...item, weightKg: null, rir: null })) });
-    const view = render(<SessionScreen sessionId="s" />);
+    const view = await render(<SessionScreen sessionId="s" />);
     await view.findByText('Entraînement enregistré');
     expect(view.getByLabelText('Tonnage enregistré').props.children).toBe('—');
     expect(view.getByLabelText('RIR moyen').props.children).toBe('—'); expect(view.getByText('Aucun RIR renseigné.')).toBeTruthy();
   });
   test('les bilans sauvegardés offrent un accès indépendant du programme source', async () => {
     repository.listCompletedSessions.mockResolvedValue([{ id: 's', workoutName: 'Séance supprimée du programme', programName: 'Programme supprimé', startedAt: stamp, finishedAt: completed.finishedAt, performedSetCount: 4 }]);
-    const view = render(<CompletedSessions />);
-    fireEvent.press(await view.findByRole('button', { name: 'Voir le bilan Séance supprimée du programme' }));
+    const view = await render(<CompletedSessions />);
+    await fireEvent.press(await view.findByRole('button', { name: 'Voir le bilan Séance supprimée du programme' }));
     expect(router.push).toHaveBeenCalledWith({ pathname: '/sessions/[sessionId]', params: { sessionId: 's' } });
     expect(repository.validateSet).not.toHaveBeenCalled(); expect(repository.finishSession).not.toHaveBeenCalled();
   });
   test('la liste sans entraînement réalisé affiche un état vide', async () => {
-    const view = render(<CompletedSessions />); await view.findByText('Votre premier bilan');
+    const view = await render(<CompletedSessions />); await view.findByText('Votre premier bilan');
     expect(view.queryByText(/kg/)).toBeNull();
   });
   test('un remplacement partiel affiche séparément l’exercice initial réellement fait et son alternative', async () => {
     repository.getSession.mockResolvedValue({ ...completed, sets: completed.sets.map(series => series.id === 'set0' ? { ...series, sessionExerciseId: 'e0' } : series) });
-    const view = render(<SessionScreen sessionId="s" />);
+    const view = await render(<SessionScreen sessionId="s" />);
     await view.findByText('Entraînement enregistré');
     expect(view.getByText('Barre')).toBeTruthy(); expect(view.getByText(alternative.name)).toBeTruthy();
     expect(view.getByText('40 kg · 8 reps · RIR 2')).toBeTruthy();
@@ -230,17 +230,17 @@ describe('M2 : bilan réel et accès après fermeture', () => {
 });
 
 test('le menu secondaire ouvre les trois actions sans transformer la série active en tableau', async () => {
-  const view = render(<SessionScreen sessionId="s" />);
-  fireEvent.press(await view.findByRole('button', { name: 'Actions de séance' }));
+  const view = await render(<SessionScreen sessionId="s" />);
+  await fireEvent.press(await view.findByRole('button', { name: 'Actions de séance' }));
   expect(view.getByRole('button', { name: 'Modifier les objectifs de la série' })).toBeTruthy();
   expect(view.getByRole('button', { name: 'Remplacer cet exercice' })).toBeTruthy();
-  fireEvent.press(view.getByRole('button', { name: 'Choisir le prochain exercice' }));
+  await fireEvent.press(view.getByRole('button', { name: 'Choisir le prochain exercice' }));
   await waitFor(() => expect(router.push).toHaveBeenCalledWith({ pathname: '/sessions/[sessionId]/exercises', params: { sessionId: 's' } }));
   expect(repository.validateSet).not.toHaveBeenCalled();
 });
 test('l’encadré ouvre directement la fiche avec les trois identifiants sans enregistrer de performance', async () => {
-  const view = render(<SessionScreen sessionId="s" />);
-  fireEvent.press(await view.findByRole('button', { name: 'Voir la fiche de Barre' }));
+  const view = await render(<SessionScreen sessionId="s" />);
+  await fireEvent.press(await view.findByRole('button', { name: 'Voir la fiche de Barre' }));
   expect(view.queryByText('Actions de séance')).toBeNull();
   await waitFor(() => expect(router.push).toHaveBeenCalledWith({ pathname: '/exercises/[exerciseId]', params: { exerciseId: 'c0', replacementSessionId: 's', replacementExerciseId: 'e0', replacementSetId: 'set0' } }));
   expect(repository.validateSet).not.toHaveBeenCalled(); expect(repository.replaceExercise).not.toHaveBeenCalled();
@@ -248,45 +248,45 @@ test('l’encadré ouvre directement la fiche avec les trois identifiants sans e
 
 for (const [zone, text] of [['nom', 'Barre'], ['groupe musculaire', 'DOS'], ['numéro de série', 'Série 1 · 1 / 2']]) {
   test(`la zone ${zone} de l’encadré ouvre la même fiche accessible`, async () => {
-    const view = render(<SessionScreen sessionId="s" />);
+    const view = await render(<SessionScreen sessionId="s" />);
     const hero = await view.findByRole('button', { name: 'Voir la fiche de Barre' });
     expect(hero.props.accessibilityState.disabled).toBe(false);
-    fireEvent.press(within(hero).getByText(text!));
+    await fireEvent.press(within(hero).getByText(text!));
     await waitFor(() => expect(router.push).toHaveBeenCalledTimes(1));
     expect(router.push).toHaveBeenCalledWith({ pathname: '/exercises/[exerciseId]', params: { exerciseId: 'c0', replacementSessionId: 's', replacementExerciseId: 'e0', replacementSetId: 'set0' } });
     expect(repository.validateSet).not.toHaveBeenCalled(); expect(repository.replaceExercise).not.toHaveBeenCalled();
   });
 }
 test('les appuis rapides sur l’encadré ne poussent la fiche qu’une fois', async () => {
-  const view = render(<SessionScreen sessionId="s" />);
+  const view = await render(<SessionScreen sessionId="s" />);
   const hero = await view.findByRole('button', { name: 'Voir la fiche de Barre' });
-  fireEvent.press(hero); fireEvent.press(hero); fireEvent.press(within(hero).getByText('Barre'));
+  await fireEvent.press(hero); await fireEvent.press(hero); await fireEvent.press(within(hero).getByText('Barre'));
   await waitFor(() => expect(router.push).toHaveBeenCalledTimes(1));
-  fireEvent.press(hero); await act(async () => {}); expect(router.push).toHaveBeenCalledTimes(1);
+  await fireEvent.press(hero); await act(async () => {}); expect(router.push).toHaveBeenCalledTimes(1);
 });
 test('retour de consultation : la même série garde les trois champs réels non validés après relecture', async () => {
-  const view = render(<SessionScreen sessionId="s" />);
-  fireEvent.changeText(await view.findByLabelText('Charge réelle (kg)'), '80,5');
-  fireEvent.changeText(view.getByLabelText('Répétitions réelles'), '9'); fireEvent.changeText(view.getByLabelText('RIR réel'), '2');
-  fireEvent.press(view.getByRole('button', { name: 'Voir la fiche de Barre' })); await waitFor(() => expect(router.push).toHaveBeenCalledTimes(1));
+  const view = await render(<SessionScreen sessionId="s" />);
+  await fireEvent.changeText(await view.findByLabelText('Charge réelle (kg)'), '80,5');
+  await fireEvent.changeText(view.getByLabelText('Répétitions réelles'), '9'); await fireEvent.changeText(view.getByLabelText('RIR réel'), '2');
+  await fireEvent.press(view.getByRole('button', { name: 'Voir la fiche de Barre' })); await waitFor(() => expect(router.push).toHaveBeenCalledTimes(1));
   const pending = deferred<WorkoutSession>(); repository.getSession.mockReturnValueOnce(pending.promise);
-  act(() => { mockFocusCleanups.forEach(blur => blur()); mockFocusEffects.forEach(effect => effect()); });
+  await act(() => { mockFocusCleanups.forEach(blur => blur()); mockFocusEffects.forEach(effect => effect()); });
   await act(async () => { pending.resolve({ ...initial, sets: initial.sets.map(set => ({ ...set })) }); await pending.promise; });
   expect(view.getByLabelText('Charge réelle (kg)').props.value).toBe('80,5'); expect(view.getByLabelText('Répétitions réelles').props.value).toBe('9');
   expect(view.getByLabelText('RIR réel').props.value).toBe('2'); expect(view.getByRole('button', { name: 'Voir la fiche de Barre' })).toBeTruthy();
   expect(repository.validateSet).not.toHaveBeenCalled(); expect(repository.replaceExercise).not.toHaveBeenCalled(); expect(repository.completeRest).not.toHaveBeenCalled();
   expect(repository.chooseNextExercise).not.toHaveBeenCalled();
-  fireEvent.press(view.getByRole('button', { name: 'Voir la fiche de Barre' })); await waitFor(() => expect(router.push).toHaveBeenCalledTimes(2));
+  await fireEvent.press(view.getByRole('button', { name: 'Voir la fiche de Barre' })); await waitFor(() => expect(router.push).toHaveBeenCalledTimes(2));
 });
 test('le menu conserve ses autres actions et retire seulement l’accès redondant à la fiche', async () => {
-  const view = render(<SessionScreen sessionId="s" />); fireEvent.press(await view.findByRole('button', { name: 'Actions de séance' }));
+  const view = await render(<SessionScreen sessionId="s" />); await fireEvent.press(await view.findByRole('button', { name: 'Actions de séance' }));
   expect(view.queryByRole('button', { name: 'Fiche et conseils de l’exercice' })).toBeNull();
   for (const name of ['Modifier les objectifs de la série', 'Remplacer cet exercice', 'Ajouter une série', 'Modifier une série restante', 'Notes personnelles', 'Choisir le prochain exercice', 'Fermer']) {
     expect(view.getByRole('button', { name })).toBeTruthy();
   }
 });
 test('aucun accès de série active n’est ajouté à l’écran de repos', async () => {
-  repository.getSession.mockResolvedValue(resting); const view = render(<SessionScreen sessionId="s" />);
+  repository.getSession.mockResolvedValue(resting); const view = await render(<SessionScreen sessionId="s" />);
   await view.findByText('Repos entre les séries');
   expect(view.queryByRole('button', { name: /Voir la fiche de/ })).toBeNull();
   expect(repository.completeRest).not.toHaveBeenCalled(); expect(repository.validateSet).not.toHaveBeenCalled();
@@ -294,10 +294,10 @@ test('aucun accès de série active n’est ajouté à l’écran de repos', asy
 
 test('l’encadré reste inaccessible à la navigation pendant la sauvegarde d’une performance', async () => {
   const pending = deferred<WorkoutSession>(); repository.validateSet.mockReturnValueOnce(pending.promise);
-  const view = render(<SessionScreen sessionId="s" />);
-  fireEvent.changeText(await view.findByLabelText('Répétitions réelles'), '8'); fireEvent.press(view.getByRole('button', { name: 'Valider la série' }));
+  const view = await render(<SessionScreen sessionId="s" />);
+  await fireEvent.changeText(await view.findByLabelText('Répétitions réelles'), '8'); await fireEvent.press(view.getByRole('button', { name: 'Valider la série' }));
   const hero = view.getByRole('button', { name: 'Voir la fiche de Barre' }); expect(hero.props.accessibilityState.disabled).toBe(true);
-  fireEvent.press(hero); expect(router.push).not.toHaveBeenCalled();
+  await fireEvent.press(hero); expect(router.push).not.toHaveBeenCalled();
   await act(async () => { pending.resolve(resting); await pending.promise; });
   await view.findByText('Repos entre les séries'); expect(repository.validateSet).toHaveBeenCalledTimes(1); expect(repository.completeRest).not.toHaveBeenCalled();
 });

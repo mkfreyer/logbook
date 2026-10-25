@@ -28,7 +28,7 @@ function Consumer() {
   return <Text>{store.programs.map(program => `${program.id}:${program.workoutCount}`).join(',')}</Text>;
 }
 async function setup() {
-  const view = render(<LogbookProvider><Consumer /></LogbookProvider>);
+  const view = await render(<LogbookProvider><Consumer /></LogbookProvider>);
   await waitFor(() => expect(store.loading).toBe(false));
   return view;
 }
@@ -101,7 +101,7 @@ describe('LogbookProvider : suppressions et actualisation', () => {
     let finishOldRead!: (value: Program[]) => void;
     mockRepository.listPrograms.mockReturnValueOnce(new Promise(resolve => { finishOldRead = resolve; }));
     let oldRead!: Promise<void>;
-    act(() => { oldRead = store.refresh(); });
+    await act(() => { oldRead = store.refresh(); });
     mockRepository.listPrograms.mockResolvedValue([second]);
     await act(async () => store.deleteProgram(first.id));
     await act(async () => { finishOldRead([first, second]); await oldRead; });

@@ -1,5 +1,8 @@
 # M4B — Ouvrir le mannequin sur iPhone depuis Windows
 
+> Guide historique SDK 57 de la PR #15. Pour Expo Go SDK 58 et les commandes
+> PowerShell `.cmd`, suivre [le guide SDK 58](M4B_SDK58_IPHONE_WINDOWS.md).
+
 Le prototype est sur la branche **`feat/m4b-visualiseur-meshy-iphone`**.
 Le test sur votre véritable iPhone reste nécessaire avant validation.
 

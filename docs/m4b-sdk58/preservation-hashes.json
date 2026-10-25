@@ -1,0 +1,677 @@
+{
+  "base": "325ef229fedc3409cc390a651e8776eed96822d7",
+  "checks": [
+    {
+      "file": "app.json",
+      "before": "8b11a9b23bb8ca848e9002adb4258e99ad0a0e7758cb5383cf188771f33344c8",
+      "after": "8b11a9b23bb8ca848e9002adb4258e99ad0a0e7758cb5383cf188771f33344c8"
+    },
+    {
+      "file": "app/_layout.tsx",
+      "before": "995e29b045f86fdb35c2060a419c607b902c1a3def3b02b35815fc0b7e8985ba",
+      "after": "995e29b045f86fdb35c2060a419c607b902c1a3def3b02b35815fc0b7e8985ba"
+    },
+    {
+      "file": "app/exercises/[exerciseId]/edit.tsx",
+      "before": "071f864ffcd0ded70f18f2995b921330781ef0cb5085b53debec3ba8168daeb0",
+      "after": "071f864ffcd0ded70f18f2995b921330781ef0cb5085b53debec3ba8168daeb0"
+    },
+    {
+      "file": "app/exercises/[exerciseId]/index.tsx",
+      "before": "5615d0fff3f5c94464bd49495ca19f3b51ebb104b06eda0561d4941f432a95ee",
+      "after": "5615d0fff3f5c94464bd49495ca19f3b51ebb104b06eda0561d4941f432a95ee"
+    },
+    {
+      "file": "app/exercises/index.tsx",
+      "before": "6d11ccf0167cc60c9d80bcf96547ddb3a50595539b4508a502cc572a556002a7",
+      "after": "6d11ccf0167cc60c9d80bcf96547ddb3a50595539b4508a502cc572a556002a7"
+    },
+    {
+      "file": "app/exercises/new.tsx",
+      "before": "80a88d712ae403f4928205ff459032b2ac3e2db53f372972334efd1e99bda9af",
+      "after": "80a88d712ae403f4928205ff459032b2ac3e2db53f372972334efd1e99bda9af"
+    },
+    {
+      "file": "app/history/exercises/[exerciseId].tsx",
+      "before": "16546d87012cfc95c30cba107d9ee8177e53f4f7a48c0538eb0f13c738ef2550",
+      "after": "16546d87012cfc95c30cba107d9ee8177e53f4f7a48c0538eb0f13c738ef2550"
+    },
+    {
+      "file": "app/history/exercises/index.tsx",
+      "before": "d35363404ebba2deee3808e0b0c00fa632f89436a3c098f6da2f930325625bfb",
+      "after": "d35363404ebba2deee3808e0b0c00fa632f89436a3c098f6da2f930325625bfb"
+    },
+    {
+      "file": "app/history/index.tsx",
+      "before": "e9ac67d3bc50e429fdc1926243a61532fc3f9f8406bc1f7a29c89edd991adba9",
+      "after": "e9ac67d3bc50e429fdc1926243a61532fc3f9f8406bc1f7a29c89edd991adba9"
+    },
+    {
+      "file": "app/history/programs/[programId].tsx",
+      "before": "024c8b0d937d145a652e0ce16d743d8e2f91068c3f16c7d17e4adf2e2447eb57",
+      "after": "024c8b0d937d145a652e0ce16d743d8e2f91068c3f16c7d17e4adf2e2447eb57"
+    },
+    {
+      "file": "app/history/sessions/[sessionId].tsx",
+      "before": "ffd263f2eea3c982f0b44e60a24d04714730d36300043b49d638713a3c6b769d",
+      "after": "ffd263f2eea3c982f0b44e60a24d04714730d36300043b49d638713a3c6b769d"
+    },
+    {
+      "file": "app/index.tsx",
+      "before": "ebb317e091720003517e99fd1ff0e6ac9556577c7782957a0c6b910fa85d0b74",
+      "after": "ebb317e091720003517e99fd1ff0e6ac9556577c7782957a0c6b910fa85d0b74"
+    },
+    {
+      "file": "app/muscle-viewer.tsx",
+      "before": "777eb73a6b14d50dfc099cabf00fe46feab220d7909d2dbc87c17216992f5061",
+      "after": "777eb73a6b14d50dfc099cabf00fe46feab220d7909d2dbc87c17216992f5061"
+    },
+    {
+      "file": "app/programs/[id]/edit.tsx",
+      "before": "3393b20810d5e059f627e7030c1cee392239f3a079960b19778d91bf595a2992",
+      "after": "3393b20810d5e059f627e7030c1cee392239f3a079960b19778d91bf595a2992"
+    },
+    {
+      "file": "app/programs/[id]/index.tsx",
+      "before": "eac14cb5069e39461204fded694e53f0d73e38b68d226042ebf1a98c2768e7a4",
+      "after": "eac14cb5069e39461204fded694e53f0d73e38b68d226042ebf1a98c2768e7a4"
+    },
+    {
+      "file": "app/programs/[id]/workouts/[workoutId]/custom-exercise.tsx",
+      "before": "4063d6aee6be27b6c7fb3f36ba8f09ed64e2cd6a9f826813827cef0fc6a88538",
+      "after": "4063d6aee6be27b6c7fb3f36ba8f09ed64e2cd6a9f826813827cef0fc6a88538"
+    },
+    {
+      "file": "app/programs/[id]/workouts/[workoutId]/edit.tsx",
+      "before": "3cc7d1d2a5907f9de0367ed86109eca130e3e15ad9d57d7e18e3454a9e3af0b4",
+      "after": "3cc7d1d2a5907f9de0367ed86109eca130e3e15ad9d57d7e18e3454a9e3af0b4"
+    },
+    {
+      "file": "app/programs/[id]/workouts/[workoutId]/exercises/[exerciseInstanceId]/edit.tsx",
+      "before": "4296dbdc02e7a79eb12756594e72d1fee94efe048d6042d4fd49be80e48f2773",
+      "after": "4296dbdc02e7a79eb12756594e72d1fee94efe048d6042d4fd49be80e48f2773"
+    },
+    {
+      "file": "app/programs/[id]/workouts/[workoutId]/exercises/[exerciseInstanceId]/index.tsx",
+      "before": "5d47b3db42aa0a4a716094fc2459f6bcdbace0d31d97fd194baefb794adb33c0",
+      "after": "5d47b3db42aa0a4a716094fc2459f6bcdbace0d31d97fd194baefb794adb33c0"
+    },
+    {
+      "file": "app/programs/[id]/workouts/[workoutId]/exercises/[exerciseInstanceId]/sets/[setId]/edit.tsx",
+      "before": "94a7673b98ebe20e05609219bd17fb2ec6dce21adfc5bd7faed1a648ed60f70b",
+      "after": "94a7673b98ebe20e05609219bd17fb2ec6dce21adfc5bd7faed1a648ed60f70b"
+    },
+    {
+      "file": "app/programs/[id]/workouts/[workoutId]/exercises/[exerciseInstanceId]/sets/new.tsx",
+      "before": "8f0747dd0e9e2e002382afd87fbc055e4744a069f9606af350fc17e9e8f6a59d",
+      "after": "8f0747dd0e9e2e002382afd87fbc055e4744a069f9606af350fc17e9e8f6a59d"
+    },
+    {
+      "file": "app/programs/[id]/workouts/[workoutId]/index.tsx",
+      "before": "36b1ce54bfd908dc323fbf7f3ec8a656d698ab41b14556c2b48e3959f9d2ff1a",
+      "after": "36b1ce54bfd908dc323fbf7f3ec8a656d698ab41b14556c2b48e3959f9d2ff1a"
+    },
+    {
+      "file": "app/programs/[id]/workouts/[workoutId]/library.tsx",
+      "before": "9f3a0f7a0308e1dc7bc215691540f33f92b87fbfe6f319fce9ded2343ff7f55f",
+      "after": "9f3a0f7a0308e1dc7bc215691540f33f92b87fbfe6f319fce9ded2343ff7f55f"
+    },
+    {
+      "file": "app/programs/[id]/workouts/index.tsx",
+      "before": "5fb489866a0ebec25a55f23988216ef77caeda2e3622332f4f09e24f2da057fe",
+      "after": "5fb489866a0ebec25a55f23988216ef77caeda2e3622332f4f09e24f2da057fe"
+    },
+    {
+      "file": "app/programs/[id]/workouts/new.tsx",
+      "before": "7dc00f2d7597e977f97dc99a2e88bdf9f809a5a82ae9ffe2f4982afd21bd3e3d",
+      "after": "7dc00f2d7597e977f97dc99a2e88bdf9f809a5a82ae9ffe2f4982afd21bd3e3d"
+    },
+    {
+      "file": "app/programs/index.tsx",
+      "before": "25aadf4e9d08ec45c8f16147623fdc24a0b6d0a10d01004fa55e37cfaa6aff38",
+      "after": "25aadf4e9d08ec45c8f16147623fdc24a0b6d0a10d01004fa55e37cfaa6aff38"
+    },
+    {
+      "file": "app/programs/new.tsx",
+      "before": "13368ff286ba1399004dcb8ad79b416aaf0eeccef97a1a71b2e2ed4ffa817d15",
+      "after": "13368ff286ba1399004dcb8ad79b416aaf0eeccef97a1a71b2e2ed4ffa817d15"
+    },
+    {
+      "file": "app/sessions/[sessionId]/add.tsx",
+      "before": "b68ac6fe6d28d23031183f7e23e939958163bfd7d1e95843111f910bce6b7b70",
+      "after": "b68ac6fe6d28d23031183f7e23e939958163bfd7d1e95843111f910bce6b7b70"
+    },
+    {
+      "file": "app/sessions/[sessionId]/edit.tsx",
+      "before": "d415820109fd3695992d04ed967c2b635aadeaaa195f60c290048bc0e7eff898",
+      "after": "d415820109fd3695992d04ed967c2b635aadeaaa195f60c290048bc0e7eff898"
+    },
+    {
+      "file": "app/sessions/[sessionId]/exercises.tsx",
+      "before": "d6f30fba853e57424f3746e8275b9b1e719c3e3c05af018435d3b0163fcdb7d1",
+      "after": "d6f30fba853e57424f3746e8275b9b1e719c3e3c05af018435d3b0163fcdb7d1"
+    },
+    {
+      "file": "app/sessions/[sessionId]/index.tsx",
+      "before": "b0343ac1722b2508f44270fd21275fbfd98972db72466078c0acb2602c0c2a7e",
+      "after": "b0343ac1722b2508f44270fd21275fbfd98972db72466078c0acb2602c0c2a7e"
+    },
+    {
+      "file": "app/sessions/[sessionId]/notes.tsx",
+      "before": "b66f8301bd433a8a0d42355fc9d166101823a4c33236a833cc60862614e400b3",
+      "after": "b66f8301bd433a8a0d42355fc9d166101823a4c33236a833cc60862614e400b3"
+    },
+    {
+      "file": "app/sessions/[sessionId]/replace.tsx",
+      "before": "4becfa968a76ce154497d0d5f2c5fe8d27e6b30879095f6fb288f878620c54ff",
+      "after": "4becfa968a76ce154497d0d5f2c5fe8d27e6b30879095f6fb288f878620c54ff"
+    },
+    {
+      "file": "app/sessions/completed.tsx",
+      "before": "53979ff1c4c566eaf0b2b65c4200cf76af459fdf558c68fd73083f2d29281e78",
+      "after": "53979ff1c4c566eaf0b2b65c4200cf76af459fdf558c68fd73083f2d29281e78"
+    },
+    {
+      "file": "app/settings.tsx",
+      "before": "56d7466bfe516700159e7bdfc6c7768c8c8aaa58ae9775c28c4f67c84e7aa821",
+      "after": "56d7466bfe516700159e7bdfc6c7768c8c8aaa58ae9775c28c4f67c84e7aa821"
+    },
+    {
+      "file": "assets/models/README.md",
+      "before": "25b4c3f542dc1e1bd1fd4a9aa62bf2b4013630aca784773056d56e0419b7deab",
+      "after": "25b4c3f542dc1e1bd1fd4a9aa62bf2b4013630aca784773056d56e0419b7deab"
+    },
+    {
+      "file": "assets/models/meshy-e45e5d8.glb",
+      "before": "421e593cad17f60d1c0c5e67707729fb88bbf69026795e22011ecc7d90b38959",
+      "after": "421e593cad17f60d1c0c5e67707729fb88bbf69026795e22011ecc7d90b38959"
+    },
+    {
+      "file": "assets/rest-complete.wav",
+      "before": "dde2a70def1f6e247ea6f5b1a3cb870d2efde7cad21e29bc85d702b032ebf00f",
+      "after": "dde2a70def1f6e247ea6f5b1a3cb870d2efde7cad21e29bc85d702b032ebf00f"
+    },
+    {
+      "file": "babel.config.js",
+      "before": "4b96981e76f4da97464e553a3af2c16fbb8e2da6d8a1983246087ed5a0e6afa8",
+      "after": "4b96981e76f4da97464e553a3af2c16fbb8e2da6d8a1983246087ed5a0e6afa8"
+    },
+    {
+      "file": "metro.config.js",
+      "before": "f016a3f10ceba7bcb46d4f631ad27c714ccbe7e68fb977c26c1352f60ea8096d",
+      "after": "f016a3f10ceba7bcb46d4f631ad27c714ccbe7e68fb977c26c1352f60ea8096d"
+    },
+    {
+      "file": "src/data/exerciseGuides.ts",
+      "before": "544b684ad4fdc9b33e0a40284678c008fe384d057b90753f3a519f9f96b86f92",
+      "after": "544b684ad4fdc9b33e0a40284678c008fe384d057b90753f3a519f9f96b86f92"
+    },
+    {
+      "file": "src/data/exportPersonalData.ts",
+      "before": "f71ab8f90db5908c7e5bd11abaa768bcfe2905b05eec1af391a3706652ae79dc",
+      "after": "f71ab8f90db5908c7e5bd11abaa768bcfe2905b05eec1af391a3706652ae79dc"
+    },
+    {
+      "file": "src/data/personalExport.ts",
+      "before": "b16646604fcc92f42f475d8446edd1802ba19e123a5d309830590a2cf865b884",
+      "after": "b16646604fcc92f42f475d8446edd1802ba19e123a5d309830590a2cf865b884"
+    },
+    {
+      "file": "src/db/exerciseCatalog.ts",
+      "before": "b063f3179aab05def0b7b9058021712462cc81c04c55bd73ecea0da02ed41575",
+      "after": "b063f3179aab05def0b7b9058021712462cc81c04c55bd73ecea0da02ed41575"
+    },
+    {
+      "file": "src/db/historyRepository.ts",
+      "before": "550bf91d936e50379f817702acaa0b77c4bdfa698bb1e3f7d1184dc34adb9f1b",
+      "after": "550bf91d936e50379f817702acaa0b77c4bdfa698bb1e3f7d1184dc34adb9f1b"
+    },
+    {
+      "file": "src/db/migrations.ts",
+      "before": "727480c6aa457261fb3b16b015eaa98d113535885b52374b3b843b20d32dade9",
+      "after": "727480c6aa457261fb3b16b015eaa98d113535885b52374b3b843b20d32dade9"
+    },
+    {
+      "file": "src/db/plannedSets.ts",
+      "before": "7852aff8c0ada3002c2e0d0390f30385a343bc58aede20c682c918d2a2bf5694",
+      "after": "7852aff8c0ada3002c2e0d0390f30385a343bc58aede20c682c918d2a2bf5694"
+    },
+    {
+      "file": "src/db/preferencesRepository.ts",
+      "before": "816097efa76681e4473d6607b3f9461148e88e18f87799553aaddee9a7a867f2",
+      "after": "816097efa76681e4473d6607b3f9461148e88e18f87799553aaddee9a7a867f2"
+    },
+    {
+      "file": "src/db/repository.ts",
+      "before": "8cab464fb654f796a0269d2dc1cb27a0288b127befd9ce3959cab1f81c6bbd5d",
+      "after": "8cab464fb654f796a0269d2dc1cb27a0288b127befd9ce3959cab1f81c6bbd5d"
+    },
+    {
+      "file": "src/db/sessionRepository.ts",
+      "before": "4001d2e096e3221aff2b35804af50dde3014df45f2c23d6de5bf3cf3ada6f254",
+      "after": "4001d2e096e3221aff2b35804af50dde3014df45f2c23d6de5bf3cf3ada6f254"
+    },
+    {
+      "file": "src/db/sessionSetOperations.ts",
+      "before": "9d511de7ab08cc184eec8d695fd6db352193f33aa6f7b50227220153d36a59c5",
+      "after": "9d511de7ab08cc184eec8d695fd6db352193f33aa6f7b50227220153d36a59c5"
+    },
+    {
+      "file": "src/db/trainingRepository.ts",
+      "before": "7dfa408a83377f0c5f12b06903e5d731bd18932a61b6e2558458e1e8346aa68e",
+      "after": "7dfa408a83377f0c5f12b06903e5d731bd18932a61b6e2558458e1e8346aa68e"
+    },
+    {
+      "file": "src/db/types.ts",
+      "before": "dc43cf524a798b34d87ff96bbcaf8cb0e67f8d94df3977387ecbd6c5a947137b",
+      "after": "dc43cf524a798b34d87ff96bbcaf8cb0e67f8d94df3977387ecbd6c5a947137b"
+    },
+    {
+      "file": "src/domain/activity.ts",
+      "before": "48567e5e37f86d822cfdc6616a2236deb3bc3270b45efba607cbaf18a8e2b80c",
+      "after": "48567e5e37f86d822cfdc6616a2236deb3bc3270b45efba607cbaf18a8e2b80c"
+    },
+    {
+      "file": "src/domain/history.ts",
+      "before": "08b6f164e7db496c0bdeacb8859ab73d5e1a9d38b1529eb2d09835cffa8a81aa",
+      "after": "08b6f164e7db496c0bdeacb8859ab73d5e1a9d38b1529eb2d09835cffa8a81aa"
+    },
+    {
+      "file": "src/domain/models.ts",
+      "before": "ad5feb6ce27a087c0f69c6c1fa4bef7092205b6e2189716ac88c3d520a50190d",
+      "after": "ad5feb6ce27a087c0f69c6c1fa4bef7092205b6e2189716ac88c3d520a50190d"
+    },
+    {
+      "file": "src/domain/preferences.ts",
+      "before": "89afe6d88a72b2e4f03d16c55a8e8649787f447207b3ed976cfb75697423fd34",
+      "after": "89afe6d88a72b2e4f03d16c55a8e8649787f447207b3ed976cfb75697423fd34"
+    },
+    {
+      "file": "src/domain/restTimer.ts",
+      "before": "694d8f5cb35ff297301bec8c0f50853cb69d5065f09904b580725c041442b8c2",
+      "after": "694d8f5cb35ff297301bec8c0f50853cb69d5065f09904b580725c041442b8c2"
+    },
+    {
+      "file": "src/domain/series.ts",
+      "before": "5020a5753b0311ba0cecc58728e75c3cde4d84a29b53472013d603f930edd973",
+      "after": "5020a5753b0311ba0cecc58728e75c3cde4d84a29b53472013d603f930edd973"
+    },
+    {
+      "file": "src/domain/session.ts",
+      "before": "3cc34e148f13ebf28a8f5666da81576de084c14b9d9acdbcd58715527fc5c5c9",
+      "after": "3cc34e148f13ebf28a8f5666da81576de084c14b9d9acdbcd58715527fc5c5c9"
+    },
+    {
+      "file": "src/domain/sessionError.ts",
+      "before": "9f76b8430e9152bb107f35a15fd3d155323d955272aaefdcfc6376a57af90820",
+      "after": "9f76b8430e9152bb107f35a15fd3d155323d955272aaefdcfc6376a57af90820"
+    },
+    {
+      "file": "src/domain/sessionSummary.ts",
+      "before": "3b630d1c4347ec1373264379a9006544a5f502efffb46c9e4103eb473c0a9558",
+      "after": "3b630d1c4347ec1373264379a9006544a5f502efffb46c9e4103eb473c0a9558"
+    },
+    {
+      "file": "src/domain/setDraft.ts",
+      "before": "b31703fb92d24d1a34ce4d16523497aa78d0dd8faec48633c38830aa756196bc",
+      "after": "b31703fb92d24d1a34ce4d16523497aa78d0dd8faec48633c38830aa756196bc"
+    },
+    {
+      "file": "src/domain/training.ts",
+      "before": "a6d2b924bc57edc662b6397b925f842ca4e184affdcd06776220de1ce5e04399",
+      "after": "a6d2b924bc57edc662b6397b925f842ca4e184affdcd06776220de1ce5e04399"
+    },
+    {
+      "file": "src/features/exercises/CatalogExerciseEditor.tsx",
+      "before": "6386bbe7898a98564e774493421f0bdf0f431a7408fd32b70205ea850a59b4d0",
+      "after": "6386bbe7898a98564e774493421f0bdf0f431a7408fd32b70205ea850a59b4d0"
+    },
+    {
+      "file": "src/features/exercises/ExerciseCatalog.tsx",
+      "before": "2ae8305744b925078314d65a9948a676a03966c227417c72aa502e3193ca43e4",
+      "after": "2ae8305744b925078314d65a9948a676a03966c227417c72aa502e3193ca43e4"
+    },
+    {
+      "file": "src/features/exercises/ExerciseDetail.tsx",
+      "before": "25b6f32b07702fbf34dc5619fe9a031c3be38a623cb9a1c1f64c678fb4db35fe",
+      "after": "25b6f32b07702fbf34dc5619fe9a031c3be38a623cb9a1c1f64c678fb4db35fe"
+    },
+    {
+      "file": "src/features/exercises/TrainingHelp.tsx",
+      "before": "d566c8e8bcb569def9755e3a21f14cb38cbe1dbe84047205321c80d7a690e6e0",
+      "after": "d566c8e8bcb569def9755e3a21f14cb38cbe1dbe84047205321c80d7a690e6e0"
+    },
+    {
+      "file": "src/features/history/ExerciseHistory.tsx",
+      "before": "4d632d282056cfb9e84b16eb5542c4baaf592264c2761bb14a7c3b97b068e74d",
+      "after": "4d632d282056cfb9e84b16eb5542c4baaf592264c2761bb14a7c3b97b068e74d"
+    },
+    {
+      "file": "src/features/history/HistoryOverview.tsx",
+      "before": "2558ed0ed821d4573583f7f582f3e8d82519f421fe692ed39d3505412c4539e3",
+      "after": "2558ed0ed821d4573583f7f582f3e8d82519f421fe692ed39d3505412c4539e3"
+    },
+    {
+      "file": "src/features/history/ProgressChart.tsx",
+      "before": "743336c571cf1e45fbb2579e98f091417d34cc233cd5c047184b19ca509042c6",
+      "after": "743336c571cf1e45fbb2579e98f091417d34cc233cd5c047184b19ca509042c6"
+    },
+    {
+      "file": "src/features/history/SessionHistory.tsx",
+      "before": "b7d2d7756608b18652936d163478b4c2e33a9eff8259c7729b35980c2e77fb62",
+      "after": "b7d2d7756608b18652936d163478b4c2e33a9eff8259c7729b35980c2e77fb62"
+    },
+    {
+      "file": "src/features/history/shared.tsx",
+      "before": "21f96d35765592d7912b8ca0efe1d7c15c4d89b5096579185e6ebb886502135c",
+      "after": "21f96d35765592d7912b8ca0efe1d7c15c4d89b5096579185e6ebb886502135c"
+    },
+    {
+      "file": "src/features/home/HomeActivityCards.tsx",
+      "before": "757eb91549439c024bb56095492138bfc99cd2f75eccc656bb9b935a62621c25",
+      "after": "757eb91549439c024bb56095492138bfc99cd2f75eccc656bb9b935a62621c25"
+    },
+    {
+      "file": "src/features/home/HomeScreen.tsx",
+      "before": "605a3be2d8a7f73cc5fddbe807b4f5b73e7319c9b6401dc26bef2fcc075953f4",
+      "after": "605a3be2d8a7f73cc5fddbe807b4f5b73e7319c9b6401dc26bef2fcc075953f4"
+    },
+    {
+      "file": "src/features/home/useHomeActivity.ts",
+      "before": "705627ee727e55d4d8c84477da14366eadf6b2ca6fae657adc0b7c3883851d1d",
+      "after": "705627ee727e55d4d8c84477da14366eadf6b2ca6fae657adc0b7c3883851d1d"
+    },
+    {
+      "file": "src/features/model3d/ModelViewer.tsx",
+      "before": "fe0c3dc6eeb57597c978277a93632002dff4148abe6707292eca4d8bdc05d718",
+      "after": "1308da44d5c77e2ed7ddd86b164786df3cd669a1888997bd355bf4b0b9466462"
+    },
+    {
+      "file": "src/features/model3d/ModelViewerScreen.tsx",
+      "before": "58f358218efbfbf93c7c841e69f3f6f2ff852f42377819ac3e40100707163fac",
+      "after": "58f358218efbfbf93c7c841e69f3f6f2ff852f42377819ac3e40100707163fac"
+    },
+    {
+      "file": "src/features/model3d/bridge.ts",
+      "before": "5a6cecf1334ce215b0be9c483b47bdf250f1270208895e693db72b3b011805f9",
+      "after": "5a6cecf1334ce215b0be9c483b47bdf250f1270208895e693db72b3b011805f9"
+    },
+    {
+      "file": "src/features/model3d/camera.ts",
+      "before": "f2261a1cad26ec0b9ce96f1cacc3de7fcd3cc82880a25341afb643058d232316",
+      "after": "f2261a1cad26ec0b9ce96f1cacc3de7fcd3cc82880a25341afb643058d232316"
+    },
+    {
+      "file": "src/features/model3d/document.ts",
+      "before": "1c632250f4ac4bf95adf8c8b14c16d6a9b131a5bf3c207daef919a476f1cbeff",
+      "after": "1c632250f4ac4bf95adf8c8b14c16d6a9b131a5bf3c207daef919a476f1cbeff"
+    },
+    {
+      "file": "src/features/model3d/generated/viewerBundle.ts",
+      "before": "68d3b3a33a4b986ba96fa402c01670b63b0a0c63968220942cf6664e75e50172",
+      "after": "68d3b3a33a4b986ba96fa402c01670b63b0a0c63968220942cf6664e75e50172"
+    },
+    {
+      "file": "src/features/model3d/loadModel.ts",
+      "before": "2f75a563645c03140198133a41afc9338ddf6b04738095c56baa1517c68a4239",
+      "after": "2f75a563645c03140198133a41afc9338ddf6b04738095c56baa1517c68a4239"
+    },
+    {
+      "file": "src/features/model3d/model.ts",
+      "before": "17e5f96fef562cec837f8dbd41e3dbd6f44f4f1e0df9220402c93430f59615ac",
+      "after": "17e5f96fef562cec837f8dbd41e3dbd6f44f4f1e0df9220402c93430f59615ac"
+    },
+    {
+      "file": "src/features/model3d/web/viewer.ts",
+      "before": "cbf3f3186d768ab91f0a19a85efb629cbe1731ddac4ecef738792d7fb5ba8b20",
+      "after": "cbf3f3186d768ab91f0a19a85efb629cbe1731ddac4ecef738792d7fb5ba8b20"
+    },
+    {
+      "file": "src/features/programs/ProgramEditor.tsx",
+      "before": "3a068c5dc62655c1dc72723de4f6618f23b2d59b1a622b0a0a19eb162bc9a947",
+      "after": "3a068c5dc62655c1dc72723de4f6618f23b2d59b1a622b0a0a19eb162bc9a947"
+    },
+    {
+      "file": "src/features/programs/ProgramsScreen.tsx",
+      "before": "2998c719987840538254bed351eb766391ff2be33780cd131c2d1649c8105900",
+      "after": "2998c719987840538254bed351eb766391ff2be33780cd131c2d1649c8105900"
+    },
+    {
+      "file": "src/features/programs/WorkoutEditor.tsx",
+      "before": "13a90211b2adeff71b0fd6aa3637c6eaba9ddaca769b317e7778b36289b6803a",
+      "after": "13a90211b2adeff71b0fd6aa3637c6eaba9ddaca769b317e7778b36289b6803a"
+    },
+    {
+      "file": "src/features/programs/shared.tsx",
+      "before": "566d37e64baa22bc0f55d8cbfe3601246827cc4bff454458bbe665b67766edf6",
+      "after": "566d37e64baa22bc0f55d8cbfe3601246827cc4bff454458bbe665b67766edf6"
+    },
+    {
+      "file": "src/features/programs/useConfirmedDelete.ts",
+      "before": "cf15f3186b17c790726594850c2a29d8efceca9cb55c9d7c6e6aa695dd6d0243",
+      "after": "cf15f3186b17c790726594850c2a29d8efceca9cb55c9d7c6e6aa695dd6d0243"
+    },
+    {
+      "file": "src/features/sessions/CompletedSessions.tsx",
+      "before": "10c111775c921b2e0e22b383922efa24a4fd69ca800b8a8e6f1b83912b615005",
+      "after": "10c111775c921b2e0e22b383922efa24a4fd69ca800b8a8e6f1b83912b615005"
+    },
+    {
+      "file": "src/features/sessions/PassedSets.tsx",
+      "before": "babe19bb93c19aaf7a6564bcbb51110db4166256d636cf5eec255ace2ac96cc5",
+      "after": "babe19bb93c19aaf7a6564bcbb51110db4166256d636cf5eec255ace2ac96cc5"
+    },
+    {
+      "file": "src/features/sessions/PreviousPerformanceCard.tsx",
+      "before": "e9ce11553050a9a77bca46d7f59ec641d5cc2126b843c0a341b12f5da622ed8e",
+      "after": "e9ce11553050a9a77bca46d7f59ec641d5cc2126b843c0a341b12f5da622ed8e"
+    },
+    {
+      "file": "src/features/sessions/RemainingExercises.tsx",
+      "before": "ced08c8e0bf4b93ea0f9e10346d7a3d50b0284ec187c442dcbc2d2f50f94de1c",
+      "after": "ced08c8e0bf4b93ea0f9e10346d7a3d50b0284ec187c442dcbc2d2f50f94de1c"
+    },
+    {
+      "file": "src/features/sessions/RestTimer.tsx",
+      "before": "77b0cc2b657a6872814ec89cfa05680b2c07b5c0f774c2b334c1ac45946e97ff",
+      "after": "77b0cc2b657a6872814ec89cfa05680b2c07b5c0f774c2b334c1ac45946e97ff"
+    },
+    {
+      "file": "src/features/sessions/ResumeSessionCard.tsx",
+      "before": "4dbb83a297d90c0792ede6f611339fe35c839457c1fda9e11a52813f700cd4a2",
+      "after": "4dbb83a297d90c0792ede6f611339fe35c839457c1fda9e11a52813f700cd4a2"
+    },
+    {
+      "file": "src/features/sessions/SessionNotes.tsx",
+      "before": "818e7f241a8c84e6eb73b99ca66e6be6ceb52ca0a1729efffdf9ec897d696803",
+      "after": "818e7f241a8c84e6eb73b99ca66e6be6ceb52ca0a1729efffdf9ec897d696803"
+    },
+    {
+      "file": "src/features/sessions/SessionReplacement.tsx",
+      "before": "5f17bd07d175f8a043df08eeb2f7283172507ca5c6e78fb9c8b42683d0ca7b61",
+      "after": "5f17bd07d175f8a043df08eeb2f7283172507ca5c6e78fb9c8b42683d0ca7b61"
+    },
+    {
+      "file": "src/features/sessions/SessionScreen.tsx",
+      "before": "b2d0a3267cdb9c6197b29cdc47da23783ad35850019134f0be6df245cf95c0d3",
+      "after": "b2d0a3267cdb9c6197b29cdc47da23783ad35850019134f0be6df245cf95c0d3"
+    },
+    {
+      "file": "src/features/sessions/SessionSetEditor.tsx",
+      "before": "ea90c534910646e55f5384f5ff28ca731951b70fc7d3b287831faca8ec7cd221",
+      "after": "ea90c534910646e55f5384f5ff28ca731951b70fc7d3b287831faca8ec7cd221"
+    },
+    {
+      "file": "src/features/sessions/SessionSummaryView.tsx",
+      "before": "941c821f5f56a8c14bb6c3959f0c416ffdf8dc7237df7d412c7d6e6d9cb31dd8",
+      "after": "941c821f5f56a8c14bb6c3959f0c416ffdf8dc7237df7d412c7d6e6d9cb31dd8"
+    },
+    {
+      "file": "src/features/sessions/shared.tsx",
+      "before": "d92e80b5a82c6baeba3962da292ff3ed76151259a78a96825c284354a70f99ef",
+      "after": "d92e80b5a82c6baeba3962da292ff3ed76151259a78a96825c284354a70f99ef"
+    },
+    {
+      "file": "src/features/sessions/useExerciseReplacement.ts",
+      "before": "c4bf05031ade3439cc1b2abef64fbb289b18084605f4c6f848268ce3f7256e49",
+      "after": "c4bf05031ade3439cc1b2abef64fbb289b18084605f4c6f848268ce3f7256e49"
+    },
+    {
+      "file": "src/features/sessions/useRestAlert.ts",
+      "before": "68582f50288dd8ec625b342b9053c335e16b064d474102d13752e407afb2ddbc",
+      "after": "68582f50288dd8ec625b342b9053c335e16b064d474102d13752e407afb2ddbc"
+    },
+    {
+      "file": "src/features/sessions/useSessionConfirmation.ts",
+      "before": "4ce4dd74ba098e23b44f22ad47ae8a63aa94ad11965beb9ab6397d5a435b45db",
+      "after": "4ce4dd74ba098e23b44f22ad47ae8a63aa94ad11965beb9ab6397d5a435b45db"
+    },
+    {
+      "file": "src/features/sessions/useSkipSet.ts",
+      "before": "2b1ace864e2c24e8f77c09fb0e40badbd0000adbfc28043800661ce424024067",
+      "after": "2b1ace864e2c24e8f77c09fb0e40badbd0000adbfc28043800661ce424024067"
+    },
+    {
+      "file": "src/features/settings/SeriesDisplaySettings.tsx",
+      "before": "8ec1a6625cfeadd7d19caae1b29ad0e882dbb3ec2b845bd400af2d247d2da139",
+      "after": "8ec1a6625cfeadd7d19caae1b29ad0e882dbb3ec2b845bd400af2d247d2da139"
+    },
+    {
+      "file": "src/features/settings/SettingsScreen.tsx",
+      "before": "124a3175538e55e98f452fabe8f182a9b069b663d8269b816afb5ddb6c297c4c",
+      "after": "124a3175538e55e98f452fabe8f182a9b069b663d8269b816afb5ddb6c297c4c"
+    },
+    {
+      "file": "src/features/training/CustomExerciseEditor.tsx",
+      "before": "3c9fc0113faf1492b8b41df061bd1f3d844243a327c9ec8171cf449a29cdb1a1",
+      "after": "3c9fc0113faf1492b8b41df061bd1f3d844243a327c9ec8171cf449a29cdb1a1"
+    },
+    {
+      "file": "src/features/training/ExerciseLibrary.tsx",
+      "before": "6a301ab7b1adc4c6625dcc64e2b361b730ca0ad9f23444927159c5433f346865",
+      "after": "6a301ab7b1adc4c6625dcc64e2b361b730ca0ad9f23444927159c5433f346865"
+    },
+    {
+      "file": "src/features/training/ExerciseOverview.tsx",
+      "before": "06f3312453291e2eedaa97bfb87cc28314334a20bddd18504e9491817e0e457d",
+      "after": "06f3312453291e2eedaa97bfb87cc28314334a20bddd18504e9491817e0e457d"
+    },
+    {
+      "file": "src/features/training/LoadRuleFields.tsx",
+      "before": "03ca70e6e697b643b050803d043655b9672f6f224b6260ea2d031d8264bb6cbf",
+      "after": "03ca70e6e697b643b050803d043655b9672f6f224b6260ea2d031d8264bb6cbf"
+    },
+    {
+      "file": "src/features/training/PlannedExerciseEditor.tsx",
+      "before": "7ad8d81cfc3cda59f8d8bf642c3a763347ebbcda7857d83bff585fef59922beb",
+      "after": "7ad8d81cfc3cda59f8d8bf642c3a763347ebbcda7857d83bff585fef59922beb"
+    },
+    {
+      "file": "src/features/training/SetEditor.tsx",
+      "before": "cafeb79f4fa8bb1ea879705dec1bb7aa34c28759f4452eb3d51317b985a127d3",
+      "after": "cafeb79f4fa8bb1ea879705dec1bb7aa34c28759f4452eb3d51317b985a127d3"
+    },
+    {
+      "file": "src/features/training/WorkoutOverview.tsx",
+      "before": "c3d0336c0f654f41c6b96be30edf1b3fc5ac95440f795cba05f09867e79fc883",
+      "after": "c3d0336c0f654f41c6b96be30edf1b3fc5ac95440f795cba05f09867e79fc883"
+    },
+    {
+      "file": "src/features/training/shared.tsx",
+      "before": "1c0980a55dcaa1911873667922b099291670d7f4cda512c1c2e06b02507d1c36",
+      "after": "1c0980a55dcaa1911873667922b099291670d7f4cda512c1c2e06b02507d1c36"
+    },
+    {
+      "file": "src/features/training/useWorkoutPlan.ts",
+      "before": "6036c10c92dd41a0f801a8ac26872a8d6994d8bacef8b4a060b7c2317a02cfee",
+      "after": "6036c10c92dd41a0f801a8ac26872a8d6994d8bacef8b4a060b7c2317a02cfee"
+    },
+    {
+      "file": "src/navigation/UniverseContext.tsx",
+      "before": "8230212ac48cf2afc1600ee687697f04535e2880f7418c42a3e771a2812f2f5a",
+      "after": "ef97be60c9065e82577a1fc27f4534d55524f32feb3de926281115e315ee915a"
+    },
+    {
+      "file": "src/navigation/UniversePager.tsx",
+      "before": "a5b2b1eb5e5126a8299620baedbd392cd07cb28f3910f897352ed3b69d3a4958",
+      "after": "a5b2b1eb5e5126a8299620baedbd392cd07cb28f3910f897352ed3b69d3a4958"
+    },
+    {
+      "file": "src/navigation/UniverseScreen.tsx",
+      "before": "c057ae9203e2081cb7e8491caeadf70d59e8e38ea1be4e2fb9aa68c6b21dadb2",
+      "after": "c057ae9203e2081cb7e8491caeadf70d59e8e38ea1be4e2fb9aa68c6b21dadb2"
+    },
+    {
+      "file": "src/navigation/physics.ts",
+      "before": "ef5bf15855e71e000d5ff0dbb50f85cb486783770fe994790ffc4323bd7014f2",
+      "after": "ef5bf15855e71e000d5ff0dbb50f85cb486783770fe994790ffc4323bd7014f2"
+    },
+    {
+      "file": "src/store/LogbookProvider.tsx",
+      "before": "3a78b8319365305088f49b7a7f57493700b9a2ded8439caa5a66f77f73fd7992",
+      "after": "3a78b8319365305088f49b7a7f57493700b9a2ded8439caa5a66f77f73fd7992"
+    },
+    {
+      "file": "src/store/PreferencesProvider.tsx",
+      "before": "9ff16c63a5f39bc6a44928a92a999e4d914dcbdbac17cc5871d56c0a6f3e06e9",
+      "after": "9ff16c63a5f39bc6a44928a92a999e4d914dcbdbac17cc5871d56c0a6f3e06e9"
+    },
+    {
+      "file": "src/store/SeriesDisplayProvider.tsx",
+      "before": "6444769a68d1156c52b8c31dfaff98ca7d2a0f1580d29f692068a8c01df6a8e5",
+      "after": "6444769a68d1156c52b8c31dfaff98ca7d2a0f1580d29f692068a8c01df6a8e5"
+    },
+    {
+      "file": "src/store/SessionProvider.tsx",
+      "before": "114211edb92821dc7933259240d90074d917a82b13692a34f88c861f62634aa7",
+      "after": "114211edb92821dc7933259240d90074d917a82b13692a34f88c861f62634aa7"
+    },
+    {
+      "file": "src/store/TrainingProvider.tsx",
+      "before": "0682d79fa93a70e66f857e8369309f5c3c7d4700a708fa154dfb1e8431ae365e",
+      "after": "0682d79fa93a70e66f857e8369309f5c3c7d4700a708fa154dfb1e8431ae365e"
+    },
+    {
+      "file": "src/ui/index.tsx",
+      "before": "e14e1eb787ee6e7750104695bc3f33df0dbe95bae8d0f3a57ce2f14c457aa003",
+      "after": "e14e1eb787ee6e7750104695bc3f33df0dbe95bae8d0f3a57ce2f14c457aa003"
+    },
+    {
+      "file": "tools/m4b/build-viewer.mjs",
+      "before": "1deb2edcf244a2e7b3e6a30f40f905995e8559dc222ecd98645fdf2cabf04ad0",
+      "after": "1deb2edcf244a2e7b3e6a30f40f905995e8559dc222ecd98645fdf2cabf04ad0"
+    },
+    {
+      "file": "tools/m4b/test-browser.ts",
+      "before": "520b0d662375df1cbd3eebbafb7853a4e091974ff390911d50192f73f56881a2",
+      "after": "520b0d662375df1cbd3eebbafb7853a4e091974ff390911d50192f73f56881a2"
+    }
+  ],
+  "modified": [
+    {
+      "file": "src/features/model3d/ModelViewer.tsx",
+      "before": "fe0c3dc6eeb57597c978277a93632002dff4148abe6707292eca4d8bdc05d718",
+      "after": "1308da44d5c77e2ed7ddd86b164786df3cd669a1888997bd355bf4b0b9466462"
+    },
+    {
+      "file": "src/navigation/UniverseContext.tsx",
+      "before": "8230212ac48cf2afc1600ee687697f04535e2880f7418c42a3e771a2812f2f5a",
+      "after": "ef97be60c9065e82577a1fc27f4534d55524f32feb3de926281115e315ee915a"
+    }
+  ],
+  "model": {
+    "file": "assets/models/meshy-e45e5d8.glb",
+    "before": "421e593cad17f60d1c0c5e67707729fb88bbf69026795e22011ecc7d90b38959",
+    "after": "421e593cad17f60d1c0c5e67707729fb88bbf69026795e22011ecc7d90b38959"
+  },
+  "erasedTypeChanges": [
+    {
+      "file": "src/features/model3d/ModelViewer.tsx",
+      "compiledJavaScriptIdentical": true
+    },
+    {
+      "file": "src/navigation/UniverseContext.tsx",
+      "compiledJavaScriptIdentical": true
+    }
+  ]
+}

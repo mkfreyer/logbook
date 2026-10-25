@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, expect, jest, test } from '@jest/globals';
 import { act, cleanup, fireEvent, render, waitFor } from '@testing-library/react-native';
-import { AppState, Switch, Text } from 'react-native';
+import { AppState, Text } from 'react-native';
 import { router } from 'expo-router';
 import type { WorkoutSession } from '../src/domain/session';
 import { PreferencesProvider } from '../src/store/PreferencesProvider';
@@ -8,7 +8,6 @@ import { SessionProvider } from '../src/store/SessionProvider';
 import { SettingsScreen } from '../src/features/settings/SettingsScreen';
 import { exportPersonalData } from '../src/data/exportPersonalData';
 import { PersonalExportError } from '../src/data/personalExport';
-import { Button } from '../src/ui';
 
 let mockStored: string | null = null;
 const mockRead = jest.fn<() => Promise<{ value: string } | null>>();
@@ -53,7 +52,7 @@ function Screen({ sound = false }: { sound?: boolean }) {
   return <PreferencesProvider>{sound ? <SessionProvider><SettingsScreen /></SessionProvider> : <SettingsScreen />}</PreferencesProvider>;
 }
 function deferred<T>() { let resolve!: (value: T) => void; const promise = new Promise<T>(done => { resolve = done; }); return { promise, resolve }; }
-async function loaded(view: ReturnType<typeof render>) {
+async function loaded(view: Awaited<ReturnType<typeof render>>) {
   await waitFor(() => expect(view.getByLabelText('Son de fin de repos').props.disabled).toBe(false));
 }
 async function advance(ms: number) { await act(async () => { jest.advanceTimersByTime(ms); }); }
@@ -69,30 +68,30 @@ beforeEach(() => {
   Object.defineProperty(AppState, 'currentState', { value: 'active', writable: true, configurable: true });
   jest.spyOn(AppState, 'addEventListener').mockImplementation(() => ({ remove: jest.fn() }));
 });
-afterEach(() => { cleanup(); jest.restoreAllMocks(); jest.useRealTimers(); });
+afterEach(async () => { await cleanup(); jest.restoreAllMocks(); jest.useRealTimers(); });
 
 test('settings show real units, local-data risks and unavailable restoration, without exporting on mount', async () => {
-  const view = render(<Screen />); await loaded(view);
+  const view = await render(<Screen />); await loaded(view);
   expect(view.getByText('Kilogrammes · kg')).toBeTruthy(); expect(view.getByText('Version 0.1.0')).toBeTruthy();
   expect(view.getByText(/Supprimer Logbook, Expo Go ou son stockage/)).toBeTruthy();
   expect(view.getByText(/La restauration n’est pas encore disponible/)).toBeTruthy();
   expect(view.queryByRole('button', { name: 'Restaurer mes données' })).toBeNull();
   expect(view.getAllByRole('switch')).toHaveLength(1); expect(exportPersonalData).not.toHaveBeenCalled();
-  fireEvent.press(view.getByRole('button', { name: 'Retour' })); expect(router.back).toHaveBeenCalledTimes(1);
+  await fireEvent.press(view.getByRole('button', { name: 'Retour' })); expect(router.back).toHaveBeenCalledTimes(1);
 });
 test('changing the switch displays the intent immediately and persists it across provider remount', async () => {
-  let view = render(<Screen />); await loaded(view);
+  let view = await render(<Screen />); await loaded(view);
   expect(view.getByLabelText('Son de fin de repos').props.value).toBe(true);
-  fireEvent(view.getByLabelText('Son de fin de repos'), 'valueChange', false);
+  await fireEvent(view.getByLabelText('Son de fin de repos'), 'valueChange', false);
   await waitFor(() => expect(view.getByLabelText('Son de fin de repos').props.value).toBe(false));
-  await waitFor(() => expect(mockStored).toBe('false')); view.unmount();
-  view = render(<Screen />); await loaded(view); expect(view.getByLabelText('Son de fin de repos').props.value).toBe(false);
+  await waitFor(() => expect(mockStored).toBe('false')); await view.unmount();
+  view = await render(<Screen />); await loaded(view); expect(view.getByLabelText('Son de fin de repos').props.value).toBe(false);
 });
 test('a delayed SQLite write must not disable, revert or relayout the native switch while the latest intent is displayed', async () => {
   const pending = deferred<void>();
   mockWrite.mockImplementation(async (_sql, _key, value) => { await pending.promise; mockStored = value; });
-  const view = render(<Screen />); await loaded(view);
-  fireEvent(view.getByLabelText('Son de fin de repos'), 'valueChange', false);
+  const view = await render(<Screen />); await loaded(view);
+  await fireEvent(view.getByLabelText('Son de fin de repos'), 'valueChange', false);
   expect(view.getByLabelText('Son de fin de repos').props.value).toBe(false);
   expect(view.getByLabelText('Son de fin de repos').props.disabled).toBe(false);
   expect(view.queryByText('Enregistrement…')).toBeNull();
@@ -104,9 +103,9 @@ test('rapid alternating taps stay responsive while ordered completions cannot ov
   mockWrite.mockImplementation((_sql, _key, value) => new Promise(resolve => {
     jobs.push({ value, finish: () => { mockStored = value; resolve(); } });
   }));
-  const view = render(<Screen />); await loaded(view);
-  const control = view.UNSAFE_getByType(Switch);
-  act(() => { for (const value of [false, true, false, true, false]) control.props.onValueChange(value); });
+  const view = await render(<Screen />); await loaded(view);
+  const control = view.getByLabelText('Son de fin de repos');
+  await act(() => { for (const value of [false, true, false, true, false]) control.props.onChange({ nativeEvent: { value: value } }); });
   expect(view.getByLabelText('Son de fin de repos').props.value).toBe(false);
   expect(view.getByLabelText('Son de fin de repos').props.disabled).toBe(false);
   for (let i = 0; i < 5; i++) {
@@ -118,14 +117,14 @@ test('rapid alternating taps stay responsive while ordered completions cannot ov
     expect(view.queryByText('Enregistrement…')).toBeNull();
   }
   expect(mockWrite).toHaveBeenCalledTimes(5); expect(mockStored).toBe('false');
-  view.unmount(); const reopened = render(<Screen />); await loaded(reopened);
+  await view.unmount(); const reopened = await render(<Screen />); await loaded(reopened);
   expect(reopened.getByLabelText('Son de fin de repos').props.value).toBe(false);
 });
 test('an older failed intent cannot roll back a later queued choice or disable its switch', async () => {
   const pending = deferred<void>();
   mockWrite.mockImplementationOnce(async () => { await pending.promise; throw new Error('Première écriture échouée'); });
-  const view = render(<Screen />); await loaded(view); const control = view.UNSAFE_getByType(Switch);
-  act(() => { control.props.onValueChange(false); control.props.onValueChange(true); });
+  const view = await render(<Screen />); await loaded(view); const control = view.getByLabelText('Son de fin de repos');
+  await act(() => { control.props.onChange({ nativeEvent: { value: false } }); control.props.onChange({ nativeEvent: { value: true } }); });
   await act(async () => { pending.resolve(); });
   await waitFor(() => expect(mockStored).toBe('true'));
   expect(view.getByLabelText('Son de fin de repos').props.value).toBe(true);
@@ -133,30 +132,30 @@ test('an older failed intent cannot roll back a later queued choice or disable i
   expect(view.queryByText(/Le réglage n’a pas pu être lu ou enregistré/)).toBeNull();
 });
 test('a failed latest write rolls back to the last actual commit, not the initial default, and retry reads SQLite', async () => {
-  const view = render(<Screen />); await loaded(view);
-  fireEvent(view.getByLabelText('Son de fin de repos'), 'valueChange', false);
+  const view = await render(<Screen />); await loaded(view);
+  await fireEvent(view.getByLabelText('Son de fin de repos'), 'valueChange', false);
   await waitFor(() => expect(mockStored).toBe('false'));
   mockWrite.mockRejectedValueOnce(new Error('Stockage saturé'));
-  fireEvent(view.getByLabelText('Son de fin de repos'), 'valueChange', true);
+  await fireEvent(view.getByLabelText('Son de fin de repos'), 'valueChange', true);
   await view.findByText(/Le réglage n’a pas pu être lu ou enregistré/);
   expect(view.getByLabelText('Son de fin de repos').props.value).toBe(false);
   expect(mockStored).toBe('false');
-  fireEvent.press(view.getByText('Réessayer le réglage sonore')); await loaded(view);
+  await fireEvent.press(view.getByText('Réessayer le réglage sonore')); await loaded(view);
   expect(view.getByLabelText('Son de fin de repos').props.value).toBe(false);
 });
 test('leaving settings does not cancel a pending preference commit in the app-level provider', async () => {
   const pending = deferred<void>();
   mockWrite.mockImplementation(async (_sql, _key, value) => { await pending.promise; mockStored = value; });
-  const view = render(<PreferencesProvider><SettingsScreen /></PreferencesProvider>); await loaded(view);
-  fireEvent(view.getByLabelText('Son de fin de repos'), 'valueChange', false);
-  view.rerender(<PreferencesProvider><Text>Accueil</Text></PreferencesProvider>);
+  const view = await render(<PreferencesProvider><SettingsScreen /></PreferencesProvider>); await loaded(view);
+  await fireEvent(view.getByLabelText('Son de fin de repos'), 'valueChange', false);
+  await view.rerender(<PreferencesProvider><Text>Accueil</Text></PreferencesProvider>);
   await act(async () => { pending.resolve(); }); expect(mockStored).toBe('false');
-  view.rerender(<PreferencesProvider><SettingsScreen /></PreferencesProvider>); await loaded(view);
+  await view.rerender(<PreferencesProvider><SettingsScreen /></PreferencesProvider>); await loaded(view);
   expect(view.getByLabelText('Son de fin de repos').props.value).toBe(false);
 });
 test('the actual global rest observer plays once with the persisted preference and respects silent mode configuration', async () => {
   jest.useFakeTimers(); jest.setSystemTime(start);
-  const view = render(<Screen sound />); await loaded(view); await advance(2100);
+  const view = await render(<Screen sound />); await loaded(view); await advance(2100);
   expect(mockPlayer.play).toHaveBeenCalledTimes(1);
   expect(mockAudioMode).toHaveBeenCalledWith(expect.objectContaining({ playsInSilentMode: false, shouldPlayInBackground: false }));
   await advance(5000); expect(mockPlayer.play).toHaveBeenCalledTimes(1);
@@ -164,16 +163,16 @@ test('the actual global rest observer plays once with the persisted preference a
 });
 test('disabling sound really mutes the active interval, including after reopening settings and the observer', async () => {
   jest.useFakeTimers(); jest.setSystemTime(start);
-  let view = render(<Screen sound />); await loaded(view);
-  fireEvent(view.getByLabelText('Son de fin de repos'), 'valueChange', false);
-  await waitFor(() => expect(mockStored).toBe('false')); view.unmount();
-  view = render(<Screen sound />); await loaded(view); await advance(3000);
+  let view = await render(<Screen sound />); await loaded(view);
+  await fireEvent(view.getByLabelText('Son de fin de repos'), 'valueChange', false);
+  await waitFor(() => expect(mockStored).toBe('false')); await view.unmount();
+  view = await render(<Screen sound />); await loaded(view); await advance(3000);
   expect(mockPlayer.play).not.toHaveBeenCalled(); expect(mockAudioMode).not.toHaveBeenCalled();
 });
 test('turning sound back on after expiry does not play a late alarm; the next interval can alert normally', async () => {
   jest.useFakeTimers(); jest.setSystemTime(start); mockStored = 'false';
-  const view = render(<Screen sound />); await loaded(view); await advance(3000);
-  fireEvent(view.getByLabelText('Son de fin de repos'), 'valueChange', true); await loaded(view); await advance(1000);
+  const view = await render(<Screen sound />); await loaded(view); await advance(3000);
+  await fireEvent(view.getByLabelText('Son de fin de repos'), 'valueChange', true); await loaded(view); await advance(1000);
   expect(mockPlayer.play).not.toHaveBeenCalled();
   mockSessionRepository.getActiveSession.mockResolvedValue({ ...session, rests: [{ ...session.rests[0]!, id: 'next-rest', startedAt: new Date().toISOString() }] });
   await act(async () => { mockRefresh(); }); await advance(2200); expect(mockPlayer.play).toHaveBeenCalledTimes(1);
@@ -181,30 +180,30 @@ test('turning sound back on after expiry does not play a late alarm; the next in
 test('pending or failed preference saves are muted, block duplicate writes and remain visible until retry', async () => {
   jest.useFakeTimers(); jest.setSystemTime(start);
   const pending = deferred<void>(); mockWrite.mockImplementation(async () => { await pending.promise; throw new Error('Stockage indisponible'); });
-  const view = render(<Screen sound />); await loaded(view);
-  const control = view.UNSAFE_getByType(Switch);
-  act(() => { control.props.onValueChange(false); control.props.onValueChange(false); });
+  const view = await render(<Screen sound />); await loaded(view);
+  const control = view.getByLabelText('Son de fin de repos');
+  await act(() => { control.props.onChange({ nativeEvent: { value: false } }); control.props.onChange({ nativeEvent: { value: false } }); });
   await advance(2200); expect(mockWrite).toHaveBeenCalledTimes(1); expect(mockPlayer.play).not.toHaveBeenCalled();
   await act(async () => { pending.resolve(); });
   expect(view.getByText(/Le réglage n’a pas pu être lu ou enregistré/)).toBeTruthy();
   expect(view.getByLabelText('Son de fin de repos').props.value).toBe(true);
   expect(view.getByLabelText('Son de fin de repos').props.disabled).toBe(true);
-  fireEvent.press(view.getByText('Réessayer le réglage sonore')); await loaded(view);
+  await fireEvent.press(view.getByText('Réessayer le réglage sonore')); await loaded(view);
   expect(view.getByLabelText('Son de fin de repos').props.value).toBe(true); expect(router.back).not.toHaveBeenCalled();
 });
 test('a failed preference read cannot be mistaken for permission to sound, and retry reads the saved value', async () => {
   jest.useFakeTimers(); jest.setSystemTime(start); mockStored = 'false'; mockRead.mockRejectedValueOnce(new Error('Lecture impossible'));
-  const view = render(<Screen sound />); await view.findByText(/Le réglage n’a pas pu être lu ou enregistré/);
+  const view = await render(<Screen sound />); await view.findByText(/Le réglage n’a pas pu être lu ou enregistré/);
   await advance(2500); expect(mockPlayer.play).not.toHaveBeenCalled();
-  fireEvent.press(view.getByText('Réessayer le réglage sonore')); await loaded(view);
+  await fireEvent.press(view.getByText('Réessayer le réglage sonore')); await loaded(view);
   expect(view.getByLabelText('Son de fin de repos').props.value).toBe(false);
 });
 test('export is explicit, blocks double presses and navigation, and never claims the sheet saved a file', async () => {
   const pending = deferred<void>(); jest.mocked(exportPersonalData).mockReturnValue(pending.promise);
-  const view = render(<Screen />); await loaded(view);
-  const button = view.UNSAFE_getAllByType(Button).find(item => item.props.label === 'Exporter mes données')!;
-  act(() => { button.props.onPress(); button.props.onPress(); });
-  expect(exportPersonalData).toHaveBeenCalledTimes(1); fireEvent.press(view.getByRole('button', { name: 'Retour' }));
+  const view = await render(<Screen />); await loaded(view);
+  const button = view.getByRole('button', { name: 'Exporter mes données' });
+  await act(() => { button.props.onClick({ nativeEvent: {}, target: null, currentTarget: null }); button.props.onClick({ nativeEvent: {}, target: null, currentTarget: null }); });
+  expect(exportPersonalData).toHaveBeenCalledTimes(1); await fireEvent.press(view.getByRole('button', { name: 'Retour' }));
   expect(router.back).not.toHaveBeenCalled();
   await act(async () => { jest.mocked(exportPersonalData).mock.calls[0]![0]!.onPhase?.('sharing'); });
   expect(view.queryByRole('button', { name: 'Annuler l’export' })).toBeNull();
@@ -216,31 +215,31 @@ test('cancel during preparation aborts the signal, stays on settings and allows 
   jest.mocked(exportPersonalData).mockImplementation(options => new Promise((_resolve, reject) => {
     options!.signal!.addEventListener('abort', () => reject(new PersonalExportError('cancelled', 'Export annulé. Vos données sont conservées.')), { once: true });
   }));
-  const view = render(<Screen />); await loaded(view); fireEvent.press(view.getByText('Exporter mes données'));
+  const view = await render(<Screen />); await loaded(view); await fireEvent.press(view.getByText('Exporter mes données'));
   const signal = jest.mocked(exportPersonalData).mock.calls[0]![0]!.signal!;
-  fireEvent.press(view.getByText('Annuler l’export')); await view.findByText('Export annulé. Vos données sont conservées.');
+  await fireEvent.press(view.getByText('Annuler l’export')); await view.findByText('Export annulé. Vos données sont conservées.');
   expect(signal.aborted).toBe(true); expect(router.back).not.toHaveBeenCalled();
-  jest.mocked(exportPersonalData).mockResolvedValue(undefined); fireEvent.press(view.getByText('Exporter mes données'));
+  jest.mocked(exportPersonalData).mockResolvedValue(undefined); await fireEvent.press(view.getByText('Exporter mes données'));
   await view.findByText(/Feuille de partage fermée/); expect(exportPersonalData).toHaveBeenCalledTimes(2);
 });
 test('export errors remain visible without leaving settings and retries clear stale errors', async () => {
   jest.mocked(exportPersonalData).mockRejectedValueOnce(new PersonalExportError('io', 'Impossible de préparer le fichier.'));
-  const view = render(<Screen />); await loaded(view); fireEvent.press(view.getByText('Exporter mes données'));
+  const view = await render(<Screen />); await loaded(view); await fireEvent.press(view.getByText('Exporter mes données'));
   await view.findByText('Impossible de préparer le fichier.'); expect(router.back).not.toHaveBeenCalled();
-  fireEvent.press(view.getByText('Exporter mes données')); await view.findByText(/Feuille de partage fermée/);
+  await fireEvent.press(view.getByText('Exporter mes données')); await view.findByText(/Feuille de partage fermée/);
   expect(view.queryByText('Impossible de préparer le fichier.')).toBeNull();
 });
 test('leaving settings during preparation aborts, but a native sharing-sheet blur does not cancel the export', async () => {
   const pending = deferred<void>(); jest.mocked(exportPersonalData).mockReturnValue(pending.promise);
-  let view = render(<Screen />); await loaded(view); fireEvent.press(view.getByText('Exporter mes données'));
+  let view = await render(<Screen />); await loaded(view); await fireEvent.press(view.getByText('Exporter mes données'));
   let signal = jest.mocked(exportPersonalData).mock.calls[0]![0]!.signal!;
-  act(() => { for (const close of mockFocusCleanups) close(); }); expect(signal.aborted).toBe(true);
-  await act(async () => { pending.resolve(); }); view.unmount();
+  await act(() => { for (const close of mockFocusCleanups) close(); }); expect(signal.aborted).toBe(true);
+  await act(async () => { pending.resolve(); }); await view.unmount();
   const next = deferred<void>(); jest.mocked(exportPersonalData).mockReturnValue(next.promise);
-  view = render(<Screen />); await loaded(view); fireEvent.press(view.getByText('Exporter mes données'));
+  view = await render(<Screen />); await loaded(view); await fireEvent.press(view.getByText('Exporter mes données'));
   signal = jest.mocked(exportPersonalData).mock.calls[1]![0]!.signal!;
   await act(async () => { jest.mocked(exportPersonalData).mock.calls[1]![0]!.onPhase?.('sharing'); });
-  act(() => { for (const close of mockFocusCleanups) close(); }); expect(signal.aborted).toBe(false);
+  await act(() => { for (const close of mockFocusCleanups) close(); }); expect(signal.aborted).toBe(false);
   await act(async () => { next.resolve(); });
   expect(mockWrite).not.toHaveBeenCalled();
 });

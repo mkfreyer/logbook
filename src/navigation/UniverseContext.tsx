@@ -1,5 +1,5 @@
 import { createContext, useContext } from 'react';
-import type { PanGesture } from 'react-native-gesture-handler';
+import type { Gesture } from 'react-native-gesture-handler';
 import type { SharedValue } from 'react-native-reanimated';
 
 export type UniverseId = 'home' | 'musculation' | 'cardio';
@@ -17,7 +17,8 @@ export interface PageScrollState {
 }
 export const UniversePageContext = createContext<{
   id: UniverseId;
-  pan: PanGesture;
+  // RNGH 3's root PanGesture is the new hook API, not this builder API.
+  pan: ReturnType<typeof Gesture.Pan>;
   scroll: SharedValue<Record<string, PageScrollState>>;
 } | null>(null);
 
