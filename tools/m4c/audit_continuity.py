@@ -1,13 +1,15 @@
 """Stitch texture components across real source UV seams; not triangle labels."""
-import json
+import json,argparse
 from pathlib import Path
 import numpy as np
 from PIL import Image
 from scipy.ndimage import label,binary_fill_holes
 from glb_io import source
-root=Path(__file__).resolve().parents[2];out=root/'docs/m4c/meshy-huit-zones'
-_,v,n,f=source(root/'assets/models/meshy-e45e5d8.glb');uv=np.load(out/'source-uv-binding.npz')['uv_blender'].copy();uv[:,:,1]=1-uv[:,:,1]
-coverage=np.array(Image.open(out/'textures/uv-covered-pixels.png'))>0
+root=Path(__file__).resolve().parents[2]
+parser=argparse.ArgumentParser();parser.add_argument('--asset-dir',type=Path,default=root/'docs/m4c/meshy-huit-zones');out=parser.parse_args().asset_dir.resolve()
+spec=json.loads((out/'regions.json').read_text())
+_,v,n,f=source(root/'assets/models/meshy-e45e5d8.glb');uv=np.load(out/spec.get('uvSource','source-uv-binding.npz'))['uv_blender'].copy();uv[:,:,1]=1-uv[:,:,1]
+coverage=np.array(Image.open(out/spec.get('coverageSource','textures/uv-covered-pixels.png')))>0
 ids=np.array(Image.open(out/'textures/muscle-ids.png'));spec=json.loads((out/'regions.json').read_text());size=ids.shape[0]
 components=np.zeros(ids.shape,np.int32);parent=[0];records=[];offset=0
 for zone in spec['zones']:

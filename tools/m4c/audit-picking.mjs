@@ -8,7 +8,7 @@ import { createHash } from 'node:crypto';
 import * as THREE from 'three';
 import { sampleId, resolveOriginalSurfaceHit } from './surface-lookup.mjs';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
-const out = path.join(root, 'docs/m4c/meshy-huit-zones');
+const out = path.resolve(root, process.argv[2] ?? 'docs/m4c/meshy-huit-zones');
 const json = file => JSON.parse(fs.readFileSync(path.join(out, file), 'utf8'));
 const spec = json('regions.json'), binding = json('region-binding.json');
 function readGLB(file) {
