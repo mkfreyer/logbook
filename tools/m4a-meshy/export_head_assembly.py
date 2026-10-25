@@ -33,13 +33,14 @@ for node in doc['nodes']:
     if 'mesh' in node:
         node['name'] = node['extras']['asset_id']
 assert len(doc['meshes']) == 1
-doc['asset']['copyright'] = 'Model created with Meshy – CC BY 4.0 License. Logbook adaptation: source Anatomical Form body preserved below the neck cut; '+meta.get('head_label', 'Rib Reach Exercise')+' head extracted, uniformly fitted and joined locally.'
+modifications = meta.get('modifications', 'Only source head removed. Donor head uniformly fitted; local lower-head attachment and shared-ring connection. Retained source body vertices not moved. No muscle segmentation or app integration.')
+doc['asset']['copyright'] = 'Model created with Meshy – CC BY 4.0 License. Logbook adaptation: '+modifications
 doc['asset']['extras'] = {
     'source_generator': 'meshy-scene', 'license': 'CC-BY-4.0',
     'license_url': 'https://creativecommons.org/licenses/by/4.0/',
     'source_body': meta['body_filename_uploaded'], 'source_body_sha256': meta['body_source_sha256'],
     'source_head': meta['head_filename_uploaded'], 'source_head_sha256': meta['head_source_sha256'],
-    'modifications': 'Only source head removed. Donor head uniformly fitted; local lower-head attachment and shared-ring connection. Retained source body vertices not moved. No muscle segmentation or app integration.',
+    'modifications': modifications,
     'body_cut_blender_z_m': meta['body_cut_z_m'],
     'head_uniform_scale': meta['head_scale_uniform'], 'head_translation_blender_m': meta['head_translation_m'],
     'master_sha256': meta['master_sha256'],

@@ -44,14 +44,15 @@ record = {'master_sha256': input_sha, 'mode': a.mode, 'preview': bool(a.preview)
           'lights': {o.name: [o.data.energy, o.data.size, list(o.location)]
                      for o in scene.objects if o.type == 'LIGHT'}}
 for view in a.views:
-    close = view.startswith('tete-')
-    name = view[5:] if close else view
+    neck = view.startswith('raccord-')
+    close = view.startswith('tete-') or neck
+    name = view[8:] if neck else (view[5:] if close else view)
     yaw = {'face': 0, 'profil': -90, 'trois-quarts': -35}[name]
-    target = Vector((-.002, -.02, .82)) if close else Vector((-.002, 0, -.002))
+    target = Vector((-.002, -.005, .715)) if neck else (Vector((-.002, -.02, .82)) if close else Vector((-.002, 0, -.002)))
     angle = math.radians(yaw)
     camera.location = target+Vector((4*math.sin(angle), -4*math.cos(angle), 0))
     camera.rotation_euler = (target-camera.location).to_track_quat('-Z', 'Y').to_euler()
-    data.ortho_scale = .38 if close else 2.15
+    data.ortho_scale = .235 if neck else (.38 if close else 2.15)
     size = (600, 600) if a.preview else ((864, 864) if close else (720, 1152))
     scene.render.resolution_x, scene.render.resolution_y = size
     scene.cycles.samples = 12 if a.preview else 32
