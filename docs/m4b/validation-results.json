@@ -16,5 +16,22 @@
   "iphone_fps": null,
   "iphone_process_memory": null,
   "expo_go_client_sdk57_on_user_iphone": "not verified",
-  "sqlite_code_or_migrations_changed": false
+  "sqlite_code_or_migrations_changed": false,
+  "existing_package_patch_changes": {
+    "expo-asset": [
+      "57.0.19",
+      "57.0.20"
+    ],
+    "expo-constants": [
+      "57.0.21",
+      "57.0.22"
+    ]
+  },
+  "expo_online_recommendations_remaining": [
+    "expo",
+    "@expo/metro-runtime",
+    "expo-linking",
+    "expo-router",
+    "expo-sharing"
+  ]
 }

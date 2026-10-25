@@ -12,6 +12,8 @@ segmentation anatomique ou carte thermique.
 `react-native-webview` **13.16.1** est la version du catalogue SDK 57 et est
 [incluse dans Expo Go pour ce SDK](https://docs.expo.dev/versions/v57.0.0/sdk/webview/).
 Le chargement local utilise `expo-asset` 57.0.20 et `expo-file-system` déjà présent.
+Cet ajout entraîne le correctif indirect `expo-constants` 57.0.22, dans le même SDK ;
+les tests et l’export ont été exécutés avec cette version.
 Le fichier GLB est déclaré comme asset Metro. Aucun nouveau code natif ni plugin
 exigeant un rebuild du client Expo Go SDK 57.
 

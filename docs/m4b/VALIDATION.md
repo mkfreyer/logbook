@@ -69,14 +69,19 @@ réussite ne prétend pas démontrer la fluidité du rendu natif.
 ## Compatibilité et recommandations Expo
 
 Le catalogue local de `expo@57.0.28` et la documentation SDK 57 confirment
-`react-native-webview@13.16.1`. Le contrôle en ligne recommande des correctifs
-pour six dépendances **déjà présentes dans le socle** : `expo`,
-`@expo/metro-runtime`, `expo-constants`, `expo-linking`, `expo-router` et
-`expo-sharing`. Leurs déclarations et versions verrouillées ne sont pas
-modifiées par ce prototype. Cette recommandation de mise à jour ne constitue
-pas une validation sur appareil ni une raison de lancer une mise à niveau
-sans tâche dédiée. Le nouvel ajout `expo-asset@57.0.20` suit la recommandation
-SDK 57 en ligne ; Three.js n’introduit aucun module natif.
+`react-native-webview@13.16.1`. Le nouvel ajout direct `expo-asset@57.0.20`
+suit la recommandation SDK 57 en ligne et demande `expo-constants~57.0.22` :
+le verrouillage passe donc **expo-asset de 57.0.19 à 57.0.20** (il était déjà
+transitif) et **expo-constants de 57.0.21 à 57.0.22**. Cette dépendance indirecte
+reste dans le SDK 57 ; les tests et l’export ci-dessus portent sur ces versions.
+La déclaration existante `expo-constants~57.0.21` n’a pas besoin d’être élargie.
+
+Le contrôle en ligne final conserve des recommandations de correctifs pour
+cinq dépendances **déjà présentes dans le socle** : `expo`,
+`@expo/metro-runtime`, `expo-linking`, `expo-router` et `expo-sharing`.
+Leurs versions verrouillées restent identiques au socle M3.4C. Aucune mise à
+niveau générale de SDK n’est appliquée. Three.js n’introduit aucun module natif.
+Ces recommandations ne remplacent pas une validation sur appareil.
 
 La version d’Expo Go de l’iPhone reste inconnue. Si elle n’accepte pas le
 SDK 57, suivre le [guide de précontrôle](../M4B_GUIDE_IPHONE_WINDOWS.md) ; aucun
