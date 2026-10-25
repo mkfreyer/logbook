@@ -1,0 +1,89 @@
+{
+  "body_source": "../meshy/source.glb",
+  "head_source": "../meshy-assemblage-tete-marble-titan/source-tete.glb",
+  "body_filename_uploaded": "Meshy_AI_Anatomical_Form_1025014819_generate.glb",
+  "head_filename_uploaded": "Meshy_AI_Marble_Titan_1025022845_generate.glb",
+  "head_label": "Marble Titan \u2014 t\u00eate source conserv\u00e9e",
+  "body_source_sha256": "9fab861a65407e69b9401bec077bf7b40f58d36404e80bad9db6147f24320a14",
+  "head_source_sha256": "147c6c0dda07b9c576c6b62da60ea9acd6b2beac497888c1eb7c270e1c97ebc5",
+  "original_body_triangles": 95426,
+  "original_donor_triangles": 87628,
+  "donor_extracted_head_triangles": 14402,
+  "retained_body_triangles_after_cut": 90090,
+  "bridge_triangles": 6096,
+  "assembled_triangles": 110588,
+  "body_cut_z_m": 0.683,
+  "donor_cut_z_m": 0.69,
+  "head_attachment_z_m": 0.7025,
+  "head_scale_uniform": 0.9776035510705412,
+  "head_translation_m": [
+    0.000382040892177935,
+    -0.005501228992371543,
+    0.023065532005973943
+  ],
+  "head_rotation_degrees": [
+    0,
+    0,
+    0
+  ],
+  "head_local_attachment_height_m": 0.03823867273330683,
+  "head_original_surface_retained_above_z_m": 0.7212386727333069,
+  "new_attachment_profile_rings": 15,
+  "head_cut_plane_normal": [
+    -0.2,
+    -0.16,
+    1
+  ],
+  "head_cut_plane_offset_m": 0.698,
+  "body_boundary_vertices": 192,
+  "head_boundary_vertices": 144,
+  "body_vertex_count_after_cut": 45138,
+  "head_offset": 48018,
+  "retained_body_vertices_moved": 0,
+  "head_core_unchanged_above_z_m": 0.7212386727333069,
+  "source_body_scene": "00_CORPS_ORIGINAL",
+  "scene_before": "02_TETE_DONNEUSE_SOURCE",
+  "scene_after": "01_ASSEMBLAGE_CORPS_TETE",
+  "master": "meshy-corps-tete-assemble.blend",
+  "export": "meshy-corps-tete-assemble.glb",
+  "comparison_master": "../meshy-assemblage-tete-marble-titan/meshy-corps-tete-assemble.blend",
+  "comparison_master_sha256": "0ac1c4dc0529b1dc07bf13d1795fe283ed3d342f743e44ca058da68d6b9e9bd9",
+  "comparison_glb": "../meshy-assemblage-tete-marble-titan/meshy-corps-tete-assemble.glb",
+  "comparison_glb_sha256": "10e3aa0ec29f4c0aab8a015cd50ffa07d9ba9f4488f97e1aae056d006c422121",
+  "comparison_head_label": "Marble Titan source intacte",
+  "native_head_restoration": true,
+  "head_cut_planes": [
+    {
+      "normal": [
+        -0.2,
+        -0.16,
+        1
+      ],
+      "offset": 0.698
+    },
+    {
+      "normal": [
+        0.2,
+        -0.16,
+        1
+      ],
+      "offset": 0.698
+    }
+  ],
+  "body_reference_scene": "03_ASSEMBLAGE_DBBA75E",
+  "restored_body_neck_strip_m": [
+    0.683,
+    0.695
+  ],
+  "collar_regular_samples": 192,
+  "local_z_range_m": [
+    0.683,
+    0.7212386727333069
+  ],
+  "protected_body_vertices": 45138,
+  "topology_changed": true,
+  "topology_change_scope": "Donor neck clipped below the native chin with two oblique planes; receiving neck lowered 12 mm; local bridge only.",
+  "modifications": "Native donor head, chin and under-jaw retained without sculpting; source body retained below z=0.683; only the immediate neck connection rebuilt. No muscle segmentation or app integration.",
+  "refiner_sha256": "aa8f9a46c863b6c4d3d2d736522ca3e7925c20bec991ebdd315a43e13ab50cbc",
+  "master_sha256": "9754fd908e11671d53b016a7a791870d23a6931af2ea265d158f04590e345b18"
+}
