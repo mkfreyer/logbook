@@ -1,0 +1,15 @@
+{
+  "matched_before_after_views": 4,
+  "camera_matrices_scale_and_resolution_equal": true,
+  "render_file_hashes_verified": 8,
+  "image_processing": "Board labels, uniform resizing and identical detail crop only; individual renders untouched.",
+  "detail_crop_box_px": [
+    280,
+    300,
+    720,
+    650
+  ],
+  "baseline_sha256": "e2c39435afb038306580e6df4ef889ba0a292188cdb255de9143b4b5ffefb528",
+  "master_sha256": "57f2d561f2ec963553df67ddd8d712652381ff9c6bda40de60c2646dcb3e71c5",
+  "compositor_sha256": "aa1c783f8f4c96bde08c76a295dbaf5f06b9344488dd68116b3f8d8756e92bb1"
+}

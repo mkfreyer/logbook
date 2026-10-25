@@ -1,0 +1,24 @@
+{
+  "files": [
+    {
+      "name": "ecorche-p4-p5-zones.glb",
+      "bytes": 10337140,
+      "sha256": "be5461e6e67a1b71b5f371d47798aebfda9b7d2a984d7bc788899f0994d14111"
+    },
+    {
+      "name": "ecorche-p4-p5-zones-controle.glb",
+      "bytes": 10336984,
+      "sha256": "89b58a75a4bb49ac52b0e379b74724bbb2a155ad135c94ba76868c142eb32b2d"
+    }
+  ],
+  "nodes": 300,
+  "meshes": 300,
+  "materials": 7,
+  "primitives": 304,
+  "triangles": 499753,
+  "independent_zone_materials": 6,
+  "shape_keys_baked_at_approved_values": true,
+  "no_textures_added": true,
+  "exporter_sha256": "a85ecf073803ced7281ec464411e8b0576bfcee70132e320a9230b91e1ef52a3",
+  "helper_exporter_sha256": "6356aeac43c0da10fd1e00f1c0eb26db33ab60e712af305f221ea0396ba82f0d"
+}

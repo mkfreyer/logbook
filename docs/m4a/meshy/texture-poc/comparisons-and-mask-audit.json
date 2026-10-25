@@ -1,0 +1,58 @@
+{
+  "script_sha256": "76cc92e0e4e4d5901e30bb1a0bc72047a2a751d16dbcc42dec04d1b61436ced6",
+  "mask_sha256": "3f23fd57fefa7a12a3750c1faef20a1b0c300343b4952d03b9dd9f90891772e9",
+  "mask_components_at_half_threshold": 1,
+  "mask_hole_texels_at_half_threshold": 0,
+  "selected_mask_texels": 241380,
+  "neutral_render_pixel_identical_to_898aac6": true,
+  "comparisons": [
+    {
+      "file": "comparison-detail.png",
+      "sha256": "d0c0bc30c6ca2c6dcb11273dbda108fe35856441aaad2fabc5ca3eeafc929f3c",
+      "panel_width": 700,
+      "inputs": [
+        {
+          "file": "correction/renders/after-left-detail.png",
+          "sha256": "3b03891dc99e20ca2a423e3b269c9adc4ddf7a551b52129cbb056c9eddf2a3c4"
+        },
+        {
+          "file": "texture-poc/renders/painted-detail.png",
+          "sha256": "9b8ed381c4863c670cdff37820415ae5da898380deec6b2e565bfa528cfa953e"
+        }
+      ],
+      "operations": "Proportional resize, text labels and side-by-side composition only. No muscle recoloring, lighting, sharpening or contour retouch."
+    },
+    {
+      "file": "comparison-profile.png",
+      "sha256": "95b42a02990b669eee1ce7b84f57b94588953eca22cb1181c8e6d7ec9d094ebd",
+      "panel_width": 700,
+      "inputs": [
+        {
+          "file": "texture-poc/renders/triangles-profile.png",
+          "sha256": "673fab1f9caf472c8b1c25dd8439cadfa1e07146ca1f5b3c0070daca61aa8f4a"
+        },
+        {
+          "file": "texture-poc/renders/painted-profile.png",
+          "sha256": "550516896e7e7705ccb9d8b01ed015d432986f9c092b8db60400e40c1392b5e9"
+        }
+      ],
+      "operations": "Proportional resize, text labels and side-by-side composition only. No muscle recoloring, lighting, sharpening or contour retouch."
+    },
+    {
+      "file": "comparison-mobile-390.png",
+      "sha256": "8d7fcb9d91bc9daf2bc9bc1869a79e1aefb41ea6c4cba615da82e0c7ea0b9032",
+      "panel_width": 390,
+      "inputs": [
+        {
+          "file": "correction/renders/after-left-three-quarter.png",
+          "sha256": "2e2fa9de94b28458533b49b08320a11fd40fc596f4c128073140613479d3abbd"
+        },
+        {
+          "file": "texture-poc/renders/painted-three-quarter.png",
+          "sha256": "b7ac778d9e7077337e1f8b53379e22903d801329d2e38bfd4a2317deacb21bf7"
+        }
+      ],
+      "operations": "Proportional resize, text labels and side-by-side composition only. No muscle recoloring, lighting, sharpening or contour retouch."
+    }
+  ]
+}

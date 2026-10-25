@@ -1,0 +1,14 @@
+{
+  "file": "ecorche-creux-localises.glb",
+  "sha256": "54f07706d87959867732a50172d4e0aaeff29892cfd0bad58fc9ddfe1023e8a6",
+  "bytes": 10280824,
+  "master_triangles": 498058,
+  "exported_triangles": 498057,
+  "exporter_omitted_triangles": 1,
+  "nodes": 300,
+  "meshes": 300,
+  "materials": 1,
+  "shape_keys_baked_without_surface_change": true,
+  "new_masks": false,
+  "exporter_sha256": "89655e6245f8a62b574d6f786b97c621593eab65f40ac47a22b0371405d1315c"
+}

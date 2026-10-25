@@ -1,0 +1,289 @@
+{
+  "input_blend_sha256": "7111490ed48d30adc54a474c4af3165bb3281b81cf702192ca2df729a22a2a05",
+  "renderer_sha256": "6c59d8a4ed14341665c8278d1609aef73f2f0a869c661d4b08ca31b2a94579c4",
+  "engine": "CYCLES_CPU",
+  "samples": 48,
+  "same_matte_material_before_after": true,
+  "physically_symmetric_lighting": true,
+  "lights": [
+    {
+      "name": "P3_Avant_-1",
+      "location": [
+        -2.99788498878479,
+        -3.0,
+        2.5999999046325684
+      ],
+      "energy": 200,
+      "size": 2.2
+    },
+    {
+      "name": "P3_Avant_1",
+      "location": [
+        3.00211501121521,
+        -3.0,
+        2.5999999046325684
+      ],
+      "energy": 200,
+      "size": 2.2
+    },
+    {
+      "name": "P3_Dos_-1",
+      "location": [
+        -1.99788498878479,
+        3.0,
+        3.0
+      ],
+      "energy": 180,
+      "size": 2.2
+    },
+    {
+      "name": "P3_Dos_1",
+      "location": [
+        2.00211501121521,
+        3.0,
+        3.0
+      ],
+      "energy": 180,
+      "size": 2.2
+    },
+    {
+      "name": "P3_Centre",
+      "location": [
+        0.0021149879321455956,
+        -4.0,
+        4.0
+      ],
+      "energy": 100,
+      "size": 2
+    }
+  ],
+  "render_pixels_retouch": false,
+  "frames": [
+    {
+      "file": "avant-face.png",
+      "sha256": "098b498ddc1ea559da5ab65c0fce44f0d1bcb1d04728f429987206ab7033ec68",
+      "scene": "07_AVANT_PASSE3",
+      "camera": "face",
+      "size": [
+        720,
+        1152
+      ],
+      "retained_from_original_passe2_comparison": true
+    },
+    {
+      "file": "apres-face.png",
+      "sha256": "67d4da3abec0638f5538b93d5595de9906c09627caa78f4e2905f6c4ac08a96d",
+      "scene": "08_PASSE3_NEUTRE",
+      "camera": "face",
+      "size": [
+        720,
+        1152
+      ],
+      "revision": "midline_attachment"
+    },
+    {
+      "file": "avant-profil.png",
+      "sha256": "03cc28ced85211341f0c1d1c8c90d71a45e403b269f473616a90dc12ea0906b4",
+      "scene": "07_AVANT_PASSE3",
+      "camera": "profil",
+      "size": [
+        720,
+        1152
+      ],
+      "retained_from_original_passe2_comparison": true
+    },
+    {
+      "file": "apres-profil.png",
+      "sha256": "b780bab58add63a9b46122de1859e0d65c8beb920922fc071f68c1546e289f74",
+      "scene": "08_PASSE3_NEUTRE",
+      "camera": "profil",
+      "size": [
+        720,
+        1152
+      ],
+      "revision": "midline_attachment"
+    },
+    {
+      "file": "avant-dos.png",
+      "sha256": "49ecc51af3bd841df6de208c1ebc4afcc60ed1c9459a688b3a0769accb0dbce3",
+      "scene": "07_AVANT_PASSE3",
+      "camera": "dos",
+      "size": [
+        720,
+        1152
+      ],
+      "retained_from_original_passe2_comparison": true
+    },
+    {
+      "file": "apres-dos.png",
+      "sha256": "3ffb23ad22b14110ae72c453b1c3f3df92a45337c6e3ff92f53a4f7b0e18dea6",
+      "scene": "08_PASSE3_NEUTRE",
+      "camera": "dos",
+      "size": [
+        720,
+        1152
+      ],
+      "revision": "midline_attachment"
+    },
+    {
+      "file": "avant-epaule-droite.png",
+      "sha256": "c6c377f4a334d71840c8dcb895483f45039024ac9880844d577a886fa76ad0c0",
+      "scene": "07_AVANT_PASSE3",
+      "camera": "epaule-droite",
+      "size": [
+        960,
+        864
+      ],
+      "retained_from_original_passe2_comparison": true
+    },
+    {
+      "file": "apres-epaule-droite.png",
+      "sha256": "9bcd694798ab59db19a2d57a5bb16767c1e1435269dfccf67546a48df21e83ac",
+      "scene": "08_PASSE3_NEUTRE",
+      "camera": "epaule-droite",
+      "size": [
+        960,
+        864
+      ],
+      "revision": "midline_attachment"
+    },
+    {
+      "file": "avant-epaule-gauche.png",
+      "sha256": "37172bb87b7f77ba3128fc3d091608d44d829c189bab74b8b025321d6bf4da01",
+      "scene": "07_AVANT_PASSE3",
+      "camera": "epaule-gauche",
+      "size": [
+        960,
+        864
+      ],
+      "retained_from_original_passe2_comparison": true
+    },
+    {
+      "file": "apres-epaule-gauche.png",
+      "sha256": "97d91bf2def671ca4635f04297aec6dc76852d0c2b1f3d8a162a51fc6816d28d",
+      "scene": "08_PASSE3_NEUTRE",
+      "camera": "epaule-gauche",
+      "size": [
+        960,
+        864
+      ],
+      "revision": "midline_attachment"
+    },
+    {
+      "file": "avant-epaule-profil.png",
+      "sha256": "8b708764e9d492b54c9803ed0493412f859143215a8caf213421e19371b61d3f",
+      "scene": "07_AVANT_PASSE3",
+      "camera": "epaule-profil",
+      "size": [
+        960,
+        864
+      ],
+      "retained_from_original_passe2_comparison": true
+    },
+    {
+      "file": "apres-epaule-profil.png",
+      "sha256": "c220fed1d1eae2bc71918ff95420f8911a9074841c114c7706361d9bd48a334a",
+      "scene": "08_PASSE3_NEUTRE",
+      "camera": "epaule-profil",
+      "size": [
+        960,
+        864
+      ],
+      "revision": "midline_attachment"
+    },
+    {
+      "file": "avant-epaule-arriere.png",
+      "sha256": "d3edd27c389e9c5fbbc32edcbc5d641ee48e8cd453d32e62bcec36e07b0603a2",
+      "scene": "07_AVANT_PASSE3",
+      "camera": "epaule-arriere",
+      "size": [
+        960,
+        864
+      ],
+      "retained_from_original_passe2_comparison": true
+    },
+    {
+      "file": "apres-epaule-arriere.png",
+      "sha256": "e36b3c1637df19e473223ffae76f67d0d0ca7777b76e3f4192e07e02161a2a6c",
+      "scene": "08_PASSE3_NEUTRE",
+      "camera": "epaule-arriere",
+      "size": [
+        960,
+        864
+      ],
+      "revision": "midline_attachment"
+    },
+    {
+      "file": "avant-haut-dos.png",
+      "sha256": "e2ebd150c1027f39cb4c0fd69ce7cfe92a5bed075c8a37a5c1ce4ddc0cc0a635",
+      "scene": "07_AVANT_PASSE3",
+      "camera": "haut-dos",
+      "size": [
+        960,
+        960
+      ],
+      "retained_from_original_passe2_comparison": true
+    },
+    {
+      "file": "apres-haut-dos.png",
+      "sha256": "92d0cbc078dad250b092b9c1844855ca2be48f55effe91b3dd61a3d3688fc7b2",
+      "scene": "08_PASSE3_NEUTRE",
+      "camera": "haut-dos",
+      "size": [
+        960,
+        960
+      ],
+      "revision": "midline_attachment"
+    },
+    {
+      "file": "avant-pectoraux.png",
+      "sha256": "f23e34003405e06ab0e31fa8fae9325b2708a53d1b4507b94ce2c4e5db402916",
+      "scene": "07_AVANT_PASSE3",
+      "camera": "pectoraux",
+      "size": [
+        1000,
+        800
+      ],
+      "retained_from_original_passe2_comparison": true
+    },
+    {
+      "file": "apres-pectoraux.png",
+      "sha256": "2dacb31b705726e83d0f98dc412fc39b06831b4ecf0cd05a0a9107d41b9e695e",
+      "scene": "08_PASSE3_NEUTRE",
+      "camera": "pectoraux",
+      "size": [
+        1000,
+        800
+      ],
+      "revision": "midline_attachment"
+    },
+    {
+      "file": "avant-thorax-lateral.png",
+      "sha256": "dfb34b7d7b6a56b8d0cab94f5bdee129c92a89f96f90df71fa80d03f6688f9ca",
+      "scene": "07_AVANT_PASSE3",
+      "camera": "thorax-lateral",
+      "size": [
+        960,
+        960
+      ],
+      "retained_from_original_passe2_comparison": true
+    },
+    {
+      "file": "apres-thorax-lateral.png",
+      "sha256": "74a826bb9453101ab7e200ef153c6178269a8a64199dbdad341433fb8f814dbd",
+      "scene": "08_PASSE3_NEUTRE",
+      "camera": "thorax-lateral",
+      "size": [
+        960,
+        960
+      ],
+      "revision": "midline_attachment"
+    }
+  ],
+  "final_blend_sha256": "cfe710f5efd581922f46c0d25d4178cc81de74137fd2761716ad95516fdf13b8",
+  "midline_revision": {
+    "input_master_sha256": "8b41d575b397980f9dabd849b7a7f051a9fde1da77557429b295ced03b82d12a",
+    "renderer_sha256": "d2c24f2e953ef301d62b7ffa3f0e6370b8193c812d9e53134a08c03336f479e2",
+    "unchanged_before_frames_reused": true
+  }
+}

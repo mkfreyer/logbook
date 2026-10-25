@@ -1,0 +1,72 @@
+{
+  "baseline_sha256": "f8b6a232a18335221af3cafc62b37837fedc1caaf9bc6cb48e1cb583f222d9ab",
+  "new_master_sha256": "4b6226f5354fce857386c19e0c35df92e04c89a8124871c2d0a6329169aab93d",
+  "protected_other_objects_exact": 298,
+  "head_throat_pectorals_rest_exact": true,
+  "surface_checks": {
+    "deltoid.left": {
+      "changed_vertices": 203,
+      "locked_belly_vertices": 901,
+      "belly_max_difference_m": 0,
+      "outside_bands_max_difference_m": 0,
+      "protected_belly_sha256": "ecd13b51f7a35a45c049b5b89d7646c858c6b88da0138bb376a3469a5719bd1b",
+      "max_distance_to_registered_curve_m": 0.0029819701832383143,
+      "max_band_radius_m": 0.003,
+      "relative_volume_error": 2.132316545555568e-11,
+      "volume_before_m3": 0.0016241538002590248,
+      "volume_after_m3": 0.0016241538002936568,
+      "bbox_identical": true,
+      "front_profile_support_error_m": {
+        "(0, 2)": 2.220446049250313e-16,
+        "(1, 2)": 2.220446049250313e-16
+      },
+      "triangles": 11938,
+      "topology_identical": true,
+      "closed_two_manifold": true,
+      "euler_characteristic": 2,
+      "self_contacts": 0
+    },
+    "deltoid.right": {
+      "changed_vertices": 203,
+      "locked_belly_vertices": 901,
+      "belly_max_difference_m": 0,
+      "outside_bands_max_difference_m": 0,
+      "protected_belly_sha256": "5afb90f2d8af38352f131a0bc723536b36e6aa0164f54faaf9ddee9c83935c35",
+      "max_distance_to_registered_curve_m": 0.0029819715646416988,
+      "max_band_radius_m": 0.003,
+      "relative_volume_error": 8.424372310855688e-13,
+      "volume_before_m3": 0.0016241538048514055,
+      "volume_after_m3": 0.0016241538048527738,
+      "bbox_identical": true,
+      "front_profile_support_error_m": {
+        "(0, 2)": 2.220446049250313e-16,
+        "(1, 2)": 2.220446049250313e-16
+      },
+      "triangles": 11938,
+      "topology_identical": true,
+      "closed_two_manifold": true,
+      "euler_characteristic": 2,
+      "self_contacts": 0
+    }
+  },
+  "new_segmentation": false,
+  "objects": 300,
+  "master_triangles": 498058,
+  "glb_triangles": 498057,
+  "glb_vertices": 293448,
+  "glb_sha256": "54f07706d87959867732a50172d4e0aaeff29892cfd0bad58fc9ddfe1023e8a6",
+  "glb_surface_match_at_micron_quantization": true,
+  "glb_locked_coordinates_exact": true,
+  "glb_reimport_verified": true,
+  "glb_duplicate_faces_removed": [
+    {
+      "asset_id": "m0_c145__CENTRAL__ATHLETIQUE",
+      "removed_copies": 1,
+      "copies_remaining": 1
+    }
+  ],
+  "paired_cameras_and_lights_verified": true,
+  "render_files_hash_verified": 8,
+  "verifier_sha256": "6e2b2e100c1aa5190fe994b80a2c443f9641d86893e2f99c7448a54259fdb444",
+  "scope": "Exact geometry preservation and narrow-band constraints. Geometric checks do not certify the visual/anatomical quality of the grooves."
+}

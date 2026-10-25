@@ -1,0 +1,21 @@
+{
+  "file": "ecorche-aine-homogene.glb",
+  "bytes": 11078184,
+  "sha256": "74460dfc149cbd158eba71d670bd8d6f6cb239b398cd1adc254d5bcdf0be1128",
+  "nodes": 299,
+  "meshes": 299,
+  "materials": 7,
+  "primitives": 303,
+  "triangles": 539219,
+  "selection_zone_ids": [
+    "deltoid.left.anterior",
+    "deltoid.left.lateral",
+    "deltoid.left.posterior",
+    "deltoid.right.anterior",
+    "deltoid.right.lateral",
+    "deltoid.right.posterior"
+  ],
+  "textures_added": 0,
+  "shape_keys_baked_at_existing_values": true,
+  "exporter_sha256": "2ee7e07f0084cdf9ba775966a4d72a0aa4d699a08742b79e98b95f8b29b5e9c4"
+}

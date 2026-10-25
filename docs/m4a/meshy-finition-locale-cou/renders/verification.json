@@ -1,0 +1,8 @@
+{
+  "master_sha256": "7c2dcc6831aa043b9d17caf270f62175150499ccb05af6be5783ab7a1c3e782d",
+  "matched_before_after_views": 6,
+  "raw_render_hashes_verified": 13,
+  "camera_scale_resolution_samples_lighting_equal": true,
+  "image_processing": "Captions and uniform resizing only; raw Blender frames untouched.",
+  "compositor_sha256": "622954fd67010ddcb3f8c4df35da83c3ada769d01191e951a37b0c31a197090a"
+}

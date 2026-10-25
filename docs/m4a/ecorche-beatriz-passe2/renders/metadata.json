@@ -1,0 +1,161 @@
+{
+  "input_blend_sha256": "b843f20881c04796a717a535ed11c87d1fb97c18c764aa208e16d6bbdabc837a",
+  "renderer_sha256": "36a5d279ecb96a54b0b21a7bfcc29bdead4c5cd5fc6e98fef42348fe58c673b3",
+  "engine": "CYCLES_CPU",
+  "samples": 48,
+  "same_matte_material_lights_cameras_for_before_after": true,
+  "render_pixels_retouch": false,
+  "frames": [
+    {
+      "file": "avant-face.png",
+      "sha256": "17e24246c8f4a345e6bba2bc4f43fd65c6db3d5e70ea89125247f9febb6ebed9",
+      "scene": "04_AVANT_PASSE2",
+      "camera": "face",
+      "size": [
+        720,
+        1152
+      ]
+    },
+    {
+      "file": "apres-face.png",
+      "sha256": "c7bfe25d8d34a2cf2e389b823670fabfdbb1e646c18cc7a3d4def1e1a8b3d826",
+      "scene": "05_PASSE2_NEUTRE",
+      "camera": "face",
+      "size": [
+        720,
+        1152
+      ]
+    },
+    {
+      "file": "avant-profil.png",
+      "sha256": "825091651f96ab85812bb12f0182d9ae832267f6dea257fbcb12c34d2c5cdfb9",
+      "scene": "04_AVANT_PASSE2",
+      "camera": "profil",
+      "size": [
+        720,
+        1152
+      ]
+    },
+    {
+      "file": "apres-profil.png",
+      "sha256": "2ed5d1ce06eac4af40c6b9300592947203c91916f9281ac3151429eefb501cc1",
+      "scene": "05_PASSE2_NEUTRE",
+      "camera": "profil",
+      "size": [
+        720,
+        1152
+      ]
+    },
+    {
+      "file": "avant-dos.png",
+      "sha256": "4ba05c56779b02b1d4e0ae425e8fbd1298818b6aef899cf016af7dcaf57d2e01",
+      "scene": "04_AVANT_PASSE2",
+      "camera": "dos",
+      "size": [
+        720,
+        1152
+      ]
+    },
+    {
+      "file": "apres-dos.png",
+      "sha256": "21cb2d5ea64bee67f58855992710c22faf2e8d2ba0023ba93600dbeedcc59e99",
+      "scene": "05_PASSE2_NEUTRE",
+      "camera": "dos",
+      "size": [
+        720,
+        1152
+      ]
+    },
+    {
+      "file": "avant-epaule-avant.png",
+      "sha256": "d96dc592ce1cd68fb806dd5da71ebe4360f7bad6562e17652adab3b75d0bcfa5",
+      "scene": "04_AVANT_PASSE2",
+      "camera": "epaule-avant",
+      "size": [
+        1000,
+        900
+      ]
+    },
+    {
+      "file": "apres-epaule-avant.png",
+      "sha256": "6000c32660a3183d76bab224aba2e0a0f606234a839a057cef0b5d4800ff586a",
+      "scene": "05_PASSE2_NEUTRE",
+      "camera": "epaule-avant",
+      "size": [
+        1000,
+        900
+      ]
+    },
+    {
+      "file": "avant-epaule-profil.png",
+      "sha256": "ee17719561959bb4ccf36aa407052a3bfbba5e5983e4ac2a55fc4059a32bd02b",
+      "scene": "04_AVANT_PASSE2",
+      "camera": "epaule-profil",
+      "size": [
+        1000,
+        900
+      ]
+    },
+    {
+      "file": "apres-epaule-profil.png",
+      "sha256": "ef7807430349238990f3eeb89abcbeaa73099671fa2e2ad8dfb2c53e3a580f15",
+      "scene": "05_PASSE2_NEUTRE",
+      "camera": "epaule-profil",
+      "size": [
+        1000,
+        900
+      ]
+    },
+    {
+      "file": "avant-epaule-arriere.png",
+      "sha256": "40805548cd703afc886493c780c90941c6d9928b2d50b885ebcba9a02c5939ba",
+      "scene": "04_AVANT_PASSE2",
+      "camera": "epaule-arriere",
+      "size": [
+        1000,
+        900
+      ]
+    },
+    {
+      "file": "apres-epaule-arriere.png",
+      "sha256": "72f666464386fe99c4e5b3aa60c667fd5944ac824f6e6012801edf2a57479d5f",
+      "scene": "05_PASSE2_NEUTRE",
+      "camera": "epaule-arriere",
+      "size": [
+        1000,
+        900
+      ]
+    },
+    {
+      "file": "avant-haut-dos.png",
+      "sha256": "a47433dd350da0fb9896be10f88d0094c6df99318ccc1eba54ee8559d8190c8a",
+      "scene": "04_AVANT_PASSE2",
+      "camera": "haut-dos",
+      "size": [
+        1000,
+        1000
+      ]
+    },
+    {
+      "file": "apres-haut-dos.png",
+      "sha256": "c61d1cd2f21cad6a74c5de212bd670ebebff9599134bc3fd947ec6c7030dd2eb",
+      "scene": "05_PASSE2_NEUTRE",
+      "camera": "haut-dos",
+      "size": [
+        1000,
+        1000
+      ]
+    },
+    {
+      "file": "apres-bleu-trois-quarts.png",
+      "sha256": "e3f05d18d2abba6da71bbadff1d9c967e8461d5523f0f2ee708bd7d3072b52ab",
+      "scene": "06_PASSE2_BLEU",
+      "camera": "trois-quarts",
+      "size": [
+        720,
+        1152
+      ]
+    }
+  ],
+  "final_blend_sha256": "55f4c47e0b125fb1abbb9fe89fae544b4aa02520077565819b19a7bbe9bec435"
+}

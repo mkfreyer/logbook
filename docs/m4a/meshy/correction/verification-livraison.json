@@ -1,0 +1,33 @@
+{
+  "baseline": "ff092992bb55e005dd850563ca59765b2fbffd4f",
+  "baseline_blobs_unchanged": 225,
+  "all_old_files_preserved": true,
+  "source_commit_parent": "ff092992bb55e005dd850563ca59765b2fbffd4f",
+  "branch": "feat/m4a-meshy-masques-musculaires",
+  "scope": "Only new correction documentation, assets and five dedicated scripts; all preexisting files preserved.",
+  "final_blender_roundtrip_byte_equal": true,
+  "roundtrip_label_bytes": 95426,
+  "roundtrip_label_sha256": "df3dafff71bc7b57c52b128cc49a358d4aa9b59fee7fcc1bcd01fc0983372fb8",
+  "geometric_cost_added_triangles": 0,
+  "regions_have_one_connected_component_one_boundary_no_holes": true,
+  "export_and_source_bvh_raycasts_verified": 7,
+  "real_blender_render_frames_verified": 13,
+  "comparison_sheets": 4,
+  "application_changes": false,
+  "SQLite_modified": false,
+  "M4B_started": false,
+  "PR11_modified": false,
+  "merges": false,
+  "additional_budget_eur": 0,
+  "Astra_used": false,
+  "visual_verdict": "PARTIEL",
+  "anatomical_validation": false,
+  "verification_commands": [
+    "Blender apply_face_edits.py: explicit source face assignments",
+    "Blender save_regions.py: edited face assignments exported",
+    "Python export_regions_glb.py: source positions/triangles preserved, new permutation read back",
+    "Blender check_correction.py: source/Blender/export/region/raycast/render checks",
+    "Blender save_regions.py on final blend: byte-identical labels roundtrip",
+    "All 225 baseline git blobs compared byte for byte against ff09299"
+  ]
+}

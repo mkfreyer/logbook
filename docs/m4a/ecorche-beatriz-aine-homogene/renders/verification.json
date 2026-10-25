@@ -1,0 +1,16 @@
+{
+  "matched_before_after_views": 5,
+  "camera_matrices_scale_resolution_and_pair_samples_equal": true,
+  "render_file_hashes_verified": 11,
+  "before_frames": "Cropped detail freshly rendered at 128 samples; four 32-sample views reused unchanged from d94297a",
+  "image_processing": "Board labels and uniform resizing only; 128-sample detail cropped directly by Blender at the same camera coordinates on both sides; individual renders untouched.",
+  "detail_crop_box_px": [
+    280,
+    300,
+    720,
+    650
+  ],
+  "baseline_sha256": "72c3f1de79c55f058f2710d655c37c063bbd8427ef0c91b580280bfee8f89b20",
+  "master_sha256": "7639c04f72b5da3728f4a8c46f0588c1c97d564ab075d1c6d8e29e0b3dbb7126",
+  "compositor_sha256": "18d419744480c89fbb805ebd3b922ee669a25bacdc3a1953b9d9389b94e8dbf4"
+}

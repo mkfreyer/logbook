@@ -1,0 +1,14 @@
+{
+  "file": "ecorche-p4-p5.glb",
+  "sha256": "b9e6788fa4a9a246f6d30b0ce325243e44d41bcebd054f46ee44324dc0f8038b",
+  "bytes": 10280688,
+  "master_triangles": 498058,
+  "exported_triangles": 498057,
+  "exporter_omitted_triangles": 1,
+  "nodes": 300,
+  "meshes": 300,
+  "materials": 1,
+  "shape_keys_baked_without_surface_change": true,
+  "new_masks": false,
+  "exporter_sha256": "ab0f3662861c1e21c1134e8bc88fbf7f48b9498d45d2df0f33347591c3fce58e"
+}

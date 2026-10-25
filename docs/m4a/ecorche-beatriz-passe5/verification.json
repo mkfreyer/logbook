@@ -1,0 +1,88 @@
+{
+  "baseline_unchanged_sha256": "15444ab13acb4232ed9d366e39b333c305b9c1be533e71d2b5eee90b9e58ff37",
+  "new_master_sha256": "926cadf61c4608c096cbf84e0c50ff0785eb7c5568d613206dfe57d695e4a54d",
+  "glb_sha256": "92328858f2bb1e3adf456cb8bfcc823f5b8f73afb2231acc3ef8693a4ec7a338",
+  "before_scene_exact_pass4": true,
+  "unchanged_body_objects": 295,
+  "max_unchanged_coordinate_difference_m": 0,
+  "changed_original_objects": [
+    "deltoid.left",
+    "deltoid.right",
+    "head_throat.neutral_surface"
+  ],
+  "validated_neck_preserved_below_z_m": 1.57,
+  "neck_max_original_vertex_difference_m": 0.0,
+  "unchanged_throat_triangles_verified": 10251,
+  "new_eyeball_objects": 2,
+  "source_lip_contact_pairs": 179,
+  "head_self_contacts_match_source_geometry": true,
+  "surface_checks": {
+    "deltoid.left": {
+      "triangles": 11938,
+      "closed_two_manifold": true,
+      "components": 1,
+      "euler_characteristic": 2,
+      "min_triangle_area_m2": 6.33382056256078e-08,
+      "nonadjacent_self_contacts_detected": 0,
+      "topology_unchanged": true,
+      "volume_ratio": 0.9999999876149396,
+      "max_displacement_m": 0.0066108205300723175
+    },
+    "deltoid.right": {
+      "triangles": 11938,
+      "closed_two_manifold": true,
+      "components": 1,
+      "euler_characteristic": 2,
+      "min_triangle_area_m2": 6.33382056256078e-08,
+      "nonadjacent_self_contacts_detected": 0,
+      "topology_unchanged": true,
+      "volume_ratio": 0.9999999886962107,
+      "max_displacement_m": 0.0066108205300723175
+    },
+    "head.eye.l": {
+      "triangles": 1088,
+      "closed_two_manifold": true,
+      "components": 1,
+      "euler_characteristic": 2,
+      "min_triangle_area_m2": 1.7476952428704964e-07,
+      "nonadjacent_self_contacts_detected": 0
+    },
+    "head.eye.r": {
+      "triangles": 1088,
+      "closed_two_manifold": true,
+      "components": 1,
+      "euler_characteristic": 2,
+      "min_triangle_area_m2": 1.7476952428704964e-07,
+      "nonadjacent_self_contacts_detected": 0
+    },
+    "head_throat.neutral_surface": {
+      "triangles": 34732,
+      "closed_two_manifold": true,
+      "components": 1,
+      "euler_characteristic": 2,
+      "min_triangle_area_m2": 2.022009728309099e-10,
+      "nonadjacent_self_contacts_detected": 179
+    }
+  },
+  "deltoid_reflection_error_m": 1.6781612321992156e-08,
+  "head_has_natural_source_asymmetry": true,
+  "shoulder_authoring_groups_refined": true,
+  "neutral_pass3_material_verified": true,
+  "symmetric_five_light_rig_verified": true,
+  "objects": 300,
+  "master_triangles": 498058,
+  "glb_triangles": 498057,
+  "glb_vertices": 293448,
+  "glb_duplicate_faces_removed": [
+    {
+      "asset_id": "m0_c145__CENTRAL__ATHLETIQUE",
+      "removed_copies": 1,
+      "copies_remaining": 1
+    }
+  ],
+  "glb_surface_match_at_micron_quantization": true,
+  "glb_reimport_verified": true,
+  "render_files_hash_verified": 20,
+  "verifier_sha256": "53365fa07f1e8f4775558ae6e658d34a2e9b294e68291075224d9066a16890ac",
+  "scope": "Body and throat preservation, modified deltoid geometry and export QA; source lip closure contacts reported, no clinical certification or exhaustive inter-object audit."
+}

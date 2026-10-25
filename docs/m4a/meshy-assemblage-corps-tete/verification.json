@@ -1,0 +1,38 @@
+{
+  "master_sha256": "c2a6dd6488ee72fc9bbab4695d9eb6791b908bbedd5e927f96c78240109ca5f0",
+  "body_source_sha256": "9fab861a65407e69b9401bec077bf7b40f58d36404e80bad9db6147f24320a14",
+  "head_source_sha256": "1879f3f79f419ca0552adf8776cf3b0e6d3a25dcf11b7a98a351eeb71747a35d",
+  "sources_unchanged": true,
+  "before_scene_exact_original_body": true,
+  "retained_body_vertices_moved": 0,
+  "retained_body_vertices_verified": 45102,
+  "fully_preserved_original_body_triangles": 90117,
+  "retained_body_triangle_coordinates_exact": true,
+  "body_cut_z_m": 0.695,
+  "body_clipped_triangle_plane_error_max_m": 3.6232261777610012e-09,
+  "body_source_face_clipped_area_error_max_m2": 1.1164781820482733e-10,
+  "body_source_face_clipped_area_error_sum_m2": 4.6708189489316295e-09,
+  "donor_head_surface_preserved_after_uniform_fit": true,
+  "head_triangle_plane_error_max_m": 2.8732939046233325e-08,
+  "head_source_face_clipped_area_error_max_m2": 8.303761507474352e-10,
+  "joint_height_range_m": [
+    0.695,
+    0.7395133972167969
+  ],
+  "new_joint_head_intersections": 0,
+  "closed_edge_manifold": true,
+  "consistent_face_orientation": true,
+  "connected_face_components": [
+    97424
+  ],
+  "euler_before": -2,
+  "euler_after": -2,
+  "source_topology_outside_head_not_repaired": true,
+  "glb_surface_matches_master_exactly": true,
+  "attribution_embedded": true,
+  "same_neutral_material_and_five_lights": true,
+  "source_triangles": 95426,
+  "assembled_triangles": 97424,
+  "no_app_changes_or_muscle_segmentation": true,
+  "verifier_sha256": "45ed354d5979a66b027fa8a391af8b58dcf1a3f108d9eba4062e20438d66c042"
+}

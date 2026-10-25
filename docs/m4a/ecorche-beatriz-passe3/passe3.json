@@ -1,0 +1,378 @@
+{
+  "baseline_commit": "0297e9bc19c7adf8bbb3a369ab7691cd295821be",
+  "baseline_blend_sha256": "55f4c47e0b125fb1abbb9fe89fae544b4aa02520077565819b19a7bbe9bec435",
+  "source_asset": {
+    "extras": {
+      "author": "Beatriz Gomez Santamaria (https://sketchfab.com/BeatrizGomez)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/ecorche-anatomy-study-e402d3d541eb4b199c57d5410f5d3c57",
+      "title": "Ecorche - Anatomy study"
+    },
+    "generator": "Sketchfab-12.67.0",
+    "version": "2.0"
+  },
+  "source_sha256": "137e2e80bdcf9c87ff49ab32cb5de70f8de542870c78a7d5170e8743d241a73a",
+  "median_plane_x_m": 0.002114987923242599,
+  "objects": 391,
+  "before_triangles": 531777,
+  "triangles": 572805,
+  "new_triangles": 41028,
+  "refined_objects": [
+    "deltoid.left",
+    "deltoid.right",
+    "pectoralis_major.left",
+    "pectoralis_major.right"
+  ],
+  "surface_reconstruction_voxel_size_m": 0.003,
+  "local_decimation_ratio": 0.4,
+  "changed_objects": [
+    "deltoid.left",
+    "deltoid.right",
+    "m0_c042.left",
+    "m0_c042.right",
+    "m0_c044.left",
+    "m0_c044.right",
+    "m0_c046.left",
+    "m0_c046.right",
+    "m0_c050.left",
+    "m0_c050.right",
+    "m0_c053.left",
+    "m0_c053.right",
+    "pectoralis_major.left",
+    "pectoralis_major.right",
+    "rectus_abdominis.left",
+    "rectus_abdominis.right",
+    "trapezius.left",
+    "trapezius.right"
+  ],
+  "unchanged_objects": 372,
+  "records_right": [
+    {
+      "asset_id": "deltoid.right",
+      "max_displacement_m": 0.006000000000000039,
+      "mean_displacement_m": 0.0023708348785795234,
+      "volume_before_m3": 0.0016294716692303556,
+      "volume_after_m3": 0.0016241537910484116,
+      "volume_ratio": 0.9967364402325228,
+      "bbox_before_m": [
+        0.17807435244321823,
+        0.15520293219015002,
+        0.2230590581893921
+      ],
+      "bbox_after_m": [
+        0.1798133092097629,
+        0.15809307801843148,
+        0.22285938262939453
+      ],
+      "protected_source_fold_faces": 0,
+      "displacement_reference": "reconstructed_surface",
+      "source_triangles": 4242,
+      "final_triangles": 11938,
+      "notes": [
+        "Source-guided three fan paths, with different belly widths and orientations.",
+        "Broad shape redistribution after removal of residual sculpt ridges; no incised separation or detached patch.",
+        "Shoulder volume constrained, distal insertion and proximal rim attenuated."
+      ]
+    },
+    {
+      "asset_id": "pectoralis_major.right",
+      "max_displacement_m": 0.003735360153390581,
+      "mean_displacement_m": 0.001030540252533656,
+      "volume_before_m3": 0.0016496125921539025,
+      "volume_after_m3": 0.0016496125921540933,
+      "volume_ratio": 1.0000000000001157,
+      "bbox_before_m": [
+        0.23261041793739423,
+        0.19934441894292831,
+        0.205519437789917
+      ],
+      "bbox_after_m": [
+        0.23222956685346693,
+        0.1978821641277046,
+        0.20270784053645952
+      ],
+      "protected_source_fold_faces": 0,
+      "displacement_reference": "reconstructed_surface",
+      "source_triangles": 4220,
+      "final_triangles": 14320,
+      "notes": [
+        "Stronger bounded curvature fairing of front and inferior edge; volume restored.",
+        "Sternal separation and humeral attachment protected."
+      ]
+    },
+    {
+      "asset_id": "trapezius.right",
+      "max_displacement_m": 0.004500000000000003,
+      "mean_displacement_m": 0.0006352844784462771,
+      "volume_before_m3": 0.0011616051769971266,
+      "volume_after_m3": 0.001161481183287309,
+      "volume_ratio": 0.9998932565795392,
+      "bbox_before_m": [
+        0.18651192169636488,
+        0.153155704960227,
+        0.4582127332687378
+      ],
+      "bbox_after_m": [
+        0.18694841546290436,
+        0.1515758994116784,
+        0.45695273755790766
+      ],
+      "protected_source_fold_faces": 25,
+      "displacement_reference": "source_surface",
+      "source_triangles": 5446,
+      "final_triangles": 5446,
+      "notes": [
+        "Near-midline contact tightened and posterior banks rounded, including upper cervical transition.",
+        "Small local surface fairing, with total trap volume constrained."
+      ]
+    },
+    {
+      "asset_id": "m0_c050.right",
+      "max_displacement_m": 0.0030000000000000907,
+      "mean_displacement_m": 0.0017443788127028503,
+      "volume_before_m3": 0.00010733410979302451,
+      "volume_after_m3": 0.00010724771835627434,
+      "volume_ratio": 0.9991951166603351,
+      "bbox_before_m": [
+        0.10352231189608574,
+        0.11034158221445978,
+        0.13436472415924072
+      ],
+      "bbox_after_m": [
+        0.10239254472325546,
+        0.11051870510759841,
+        0.13436472415924072
+      ],
+      "protected_source_fold_faces": 0,
+      "displacement_reference": "source_surface",
+      "source_triangles": 812,
+      "final_triangles": 812,
+      "notes": [
+        "Rounded lateral surface ridges and upper contacts toward the pectoral underside.",
+        "Original source piece IDs retained; no invented anatomical name for these pieces."
+      ]
+    },
+    {
+      "asset_id": "m0_c042.right",
+      "max_displacement_m": 0.0030000000000000916,
+      "mean_displacement_m": 0.0011313648040223133,
+      "volume_before_m3": 0.00018444585897102957,
+      "volume_after_m3": 0.00018451075843303895,
+      "volume_ratio": 1.0003518618545921,
+      "bbox_before_m": [
+        0.10363755002617836,
+        0.15159227699041367,
+        0.16697263717651367
+      ],
+      "bbox_after_m": [
+        0.1025316048445099,
+        0.15060636646728157,
+        0.16704747616349613
+      ],
+      "protected_source_fold_faces": 0,
+      "displacement_reference": "source_surface",
+      "source_triangles": 922,
+      "final_triangles": 922,
+      "notes": [
+        "Rounded lateral surface ridges and upper contacts toward the pectoral underside.",
+        "Original source piece IDs retained; no invented anatomical name for these pieces."
+      ]
+    },
+    {
+      "asset_id": "m0_c044.right",
+      "max_displacement_m": 0.002087092848176896,
+      "mean_displacement_m": 0.0010273506728750506,
+      "volume_before_m3": 0.000167849996670782,
+      "volume_after_m3": 0.00016777040541556486,
+      "volume_ratio": 0.9995258191433077,
+      "bbox_before_m": [
+        0.10138500854372978,
+        0.11188091617077589,
+        0.16107892990112305
+      ],
+      "bbox_after_m": [
+        0.10131195577533891,
+        0.11145751844284728,
+        0.16107892990112305
+      ],
+      "protected_source_fold_faces": 1,
+      "displacement_reference": "source_surface",
+      "source_triangles": 702,
+      "final_triangles": 702,
+      "notes": [
+        "Rounded lateral surface ridges and upper contacts toward the pectoral underside.",
+        "Original source piece IDs retained; no invented anatomical name for these pieces."
+      ]
+    },
+    {
+      "asset_id": "m0_c046.right",
+      "max_displacement_m": 0.0022760004444275597,
+      "mean_displacement_m": 0.0010358258434971996,
+      "volume_before_m3": 0.00023975669016644067,
+      "volume_after_m3": 0.0002397566901665383,
+      "volume_ratio": 1.0000000000004072,
+      "bbox_before_m": [
+        0.10129360854625702,
+        0.11348239332437515,
+        0.21631276607513428
+      ],
+      "bbox_after_m": [
+        0.10059702913034613,
+        0.11241449376621723,
+        0.21631276607513428
+      ],
+      "protected_source_fold_faces": 0,
+      "displacement_reference": "source_surface",
+      "source_triangles": 810,
+      "final_triangles": 810,
+      "notes": [
+        "Rounded lateral surface ridges and upper contacts toward the pectoral underside.",
+        "Original source piece IDs retained; no invented anatomical name for these pieces."
+      ]
+    },
+    {
+      "asset_id": "m0_c053.right",
+      "max_displacement_m": 0.0022717299529803787,
+      "mean_displacement_m": 0.00036546893479165156,
+      "volume_before_m3": 0.0016381669878044226,
+      "volume_after_m3": 0.001638166987804462,
+      "volume_ratio": 1.000000000000024,
+      "bbox_before_m": [
+        0.14104116521775723,
+        0.147727869451046,
+        0.32529932260513306
+      ],
+      "bbox_after_m": [
+        0.14104116521775723,
+        0.14718095293502198,
+        0.32529932260513306
+      ],
+      "protected_source_fold_faces": 0,
+      "displacement_reference": "source_surface",
+      "source_triangles": 2214,
+      "final_triangles": 2214,
+      "notes": [
+        "Rounded lateral surface ridges and upper contacts toward the pectoral underside.",
+        "Original source piece IDs retained; no invented anatomical name for these pieces."
+      ]
+    },
+    {
+      "asset_id": "rectus_abdominis.right",
+      "max_displacement_m": 0.0019874270704250932,
+      "mean_displacement_m": 0.0006775578254943865,
+      "volume_before_m3": 0.0006061277111572522,
+      "volume_after_m3": 0.0006061277111572092,
+      "volume_ratio": 0.9999999999999292,
+      "bbox_before_m": [
+        0.08009840529120993,
+        0.08686906099319458,
+        0.40803009271621704
+      ],
+      "bbox_after_m": [
+        0.08008707119390585,
+        0.08686838172793224,
+        0.40769830879365654
+      ],
+      "protected_source_fold_faces": 0,
+      "displacement_reference": "source_surface",
+      "source_triangles": 2124,
+      "final_triangles": 2124,
+      "notes": [
+        "Bounded smoothing of small anterior sculpt irregularities, abdominal blocks retained."
+      ]
+    }
+  ],
+  "deltoid_landmarks": {
+    "order": [
+      "anterior_clavicular",
+      "middle_acromial",
+      "posterior_scapular"
+    ],
+    "right_origins_m": [
+      [
+        -0.125,
+        0.014,
+        1.482
+      ],
+      [
+        -0.21,
+        0.06,
+        1.5
+      ],
+      [
+        -0.13,
+        0.128,
+        1.465
+      ]
+    ],
+    "right_belly_landmarks_m": [
+      [
+        -0.25,
+        0.026,
+        1.405
+      ],
+      [
+        -0.274,
+        0.075,
+        1.405
+      ],
+      [
+        -0.252,
+        0.128,
+        1.398
+      ]
+    ],
+    "right_common_insertion_m": [
+      -0.243,
+      0.08,
+      1.296
+    ],
+    "status": "Source-guided authoring landmarks, not medically certified attachments."
+  },
+  "lateral_contact_adjustment_counts": {
+    "m0_c050.right": {
+      "gap_vertices_approached": 103,
+      "penetration_vertices_retracted": 83
+    },
+    "m0_c042.right": {
+      "gap_vertices_approached": 28,
+      "penetration_vertices_retracted": 21
+    },
+    "m0_c044.right": {
+      "gap_vertices_approached": 0,
+      "penetration_vertices_retracted": 0
+    },
+    "m0_c046.right": {
+      "gap_vertices_approached": 0,
+      "penetration_vertices_retracted": 0
+    },
+    "m0_c053.right": {
+      "gap_vertices_approached": 0,
+      "penetration_vertices_retracted": 0
+    }
+  },
+  "baseline_max_shoulder_reflection_error_m": 1.6781612321992156e-08,
+  "builder_sha256": "4a4417e833fda90b0c73e8d337e169cd0fd47160bbfe66b80664fee00a3e31a9",
+  "limitations": [
+    "Source-guided authoring, not independent medical anatomy validation.",
+    "Separate muscle meshes retained; complete semantic segmentation is not delivered.",
+    "No application integration or mobile performance claim."
+  ],
+  "additional_connective_attachment": {
+    "asset_id": "trapezius_attachment.reconstructed_midline",
+    "objects": 1,
+    "triangles": 5436,
+    "construction": "Closed 4 mm deep loft; side edges embedded 0.55 mm below sampled posterior trapezius banks; shallow 1.2 mm central groove.",
+    "z_range_m": [
+      1.29,
+      1.685
+    ],
+    "width_range_m": [
+      0.0028799999999999997,
+      0.016
+    ],
+    "anatomical_status": "Stylized connective attachment; not a certified medical ligament.",
+    "builder_sha256": "d2c24f2e953ef301d62b7ffa3f0e6370b8193c812d9e53134a08c03336f479e2"
+  },
+  "midline_input_master_sha256": "8b41d575b397980f9dabd849b7a7f051a9fde1da77557429b295ced03b82d12a"
+}

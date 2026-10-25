@@ -1,0 +1,35 @@
+{
+  "method": "Small closed neutral pubic envelope; fitted behind existing adductor and lower abdominal surfaces, replacing two exposed central pieces.",
+  "replaced_original_objects": [
+    "m0_c098__CENTRAL__ATHLETIQUE",
+    "m1_c084__CENTRAL__ATHLETIQUE"
+  ],
+  "original_muscle_vertices_edited": 0,
+  "center_xz_m": [
+    0.002114987923242599,
+    0.923
+  ],
+  "radii_xyz_m": [
+    0.052,
+    0.035,
+    0.0305
+  ],
+  "centre_y_m": -0.016,
+  "lower_recession_max_m": 0.022,
+  "vertical_profile_exponent": 4,
+  "segments": 48,
+  "latitude_divisions": 24,
+  "vertices": 1106,
+  "triangles": 2208,
+  "bbox_min_m": [
+    -0.0498850120767574,
+    -0.051000000000000004,
+    0.8925000000000001
+  ],
+  "bbox_max_m": [
+    0.0541149879232426,
+    0.03458858295014093,
+    0.9535
+  ],
+  "anatomical_purpose": "Neutral presentation only; no claimed anatomical organ or training muscle."
+}

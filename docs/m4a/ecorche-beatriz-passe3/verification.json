@@ -1,0 +1,108 @@
+{
+  "baseline_unchanged_sha256": "55f4c47e0b125fb1abbb9fe89fae544b4aa02520077565819b19a7bbe9bec435",
+  "new_master_sha256": "cfe710f5efd581922f46c0d25d4178cc81de74137fd2761716ad95516fdf13b8",
+  "glb_sha256": "307da865a8d10d5e534fa4c4bb80af660a2ac8ce8d716ca8c7cbeead8f2ad85b",
+  "objects": 391,
+  "master_triangles": 572805,
+  "new_triangles": 41028,
+  "reconstructed_surface_checks": {
+    "deltoid.right": {
+      "closed_two_manifold": true,
+      "connected_components": 1,
+      "triangles": 11938,
+      "min_triangle_area_m2": 9.939958427496727e-08,
+      "nonadjacent_contact_pairs_detected": 0
+    },
+    "pectoralis_major.right": {
+      "closed_two_manifold": true,
+      "connected_components": 1,
+      "triangles": 14320,
+      "min_triangle_area_m2": 1.5120802147078476e-07,
+      "nonadjacent_contact_pairs_detected": 0
+    }
+  },
+  "topology_changed_objects": [
+    "deltoid.left",
+    "deltoid.right",
+    "pectoralis_major.left",
+    "pectoralis_major.right"
+  ],
+  "arms_and_lats_unchanged": true,
+  "changed_objects": 18,
+  "untouched_objects": 372,
+  "additional_connective_objects": 1,
+  "midline_attachment_checks": {
+    "closed_two_manifold": true,
+    "euler_characteristic": 2,
+    "surface_contact_pairs_with_trapezius": {
+      "right": 670,
+      "left": 678
+    },
+    "interactive_muscle_zone": false
+  },
+  "max_untouched_coordinate_difference_m": 0.0,
+  "indices_unchanged_outside_reconstructed_objects": true,
+  "unreconstructed_triangle_rotations_above_90_degrees": 0,
+  "duplicate_seam_displacement_error_m": 0.0,
+  "bilateral_reflection_error_m": 1.6781612321992156e-08,
+  "closed_muscle_volume_ratios_right": {
+    "deltoid.right": 0.996736436468325,
+    "pectoralis_major.right": 1.0000000046007849,
+    "trapezius.right": 0.9998932509202946,
+    "m0_c042.right": 1.0003519873810154,
+    "m0_c044.right": 0.9995259859251712,
+    "m0_c046.right": 1.0000000105225846,
+    "m0_c050.right": 0.9991948854716346,
+    "m0_c053.right": 0.9999999997131601,
+    "rectus_abdominis.right": 1.000000036381851
+  },
+  "trapezius_median_gap_profiles": [
+    {
+      "z_m": 1.35,
+      "before_gap_m": 0.0022250264989593107,
+      "after_gap_m": 0.0010573302283221012
+    },
+    {
+      "z_m": 1.4,
+      "before_gap_m": 0.002112225700105288,
+      "after_gap_m": 0.0003709337523626231
+    },
+    {
+      "z_m": 1.45,
+      "before_gap_m": 0.001171612726807006,
+      "after_gap_m": 0.00029903688038058606
+    },
+    {
+      "z_m": 1.5,
+      "before_gap_m": 0.001580791520552495,
+      "after_gap_m": 0.0005829758583458218
+    },
+    {
+      "z_m": 1.6,
+      "before_gap_m": null,
+      "after_gap_m": null
+    }
+  ],
+  "neutral_matte_material_checked": true,
+  "deltoid_weight_groups_checked": true,
+  "deltoid_medical_certification": false,
+  "glb_objects": 391,
+  "glb_triangles": 572803,
+  "glb_vertices": 351433,
+  "glb_surface_match_at_micron_quantization": true,
+  "glb_duplicate_faces_removed": [
+    {
+      "asset_id": "m0_c138__CENTRAL__ATHLETIQUE",
+      "removed_copies": 1,
+      "copies_remaining": 1
+    },
+    {
+      "asset_id": "m0_c145__CENTRAL__ATHLETIQUE",
+      "removed_copies": 1,
+      "copies_remaining": 1
+    }
+  ],
+  "blender_glb_reimport_checked": true,
+  "verifier_sha256": "b21fc8f884a9b72be1fb05440c044895c975986a72bd90da16825d38659c2031",
+  "renders_verified": 20
+}

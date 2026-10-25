@@ -1,0 +1,95 @@
+{
+  "source_sha256": "9fab861a65407e69b9401bec077bf7b40f58d36404e80bad9db6147f24320a14",
+  "regions_sha256": "172b911f5ed2e9a199bda931042d00de0d829a66f213705383dcf0d00cc1cb49",
+  "renderer_sha256": "acbeedb47d22e05b98dd0ab95572b9ba4c3ab185e76761dac106ec7d17b9ed5d",
+  "blender": "4.3.2",
+  "engine": "CYCLES_CPU",
+  "samples": 96,
+  "seed": 0,
+  "geometry_changed": false,
+  "image_synthesis": false,
+  "source_positions_sha256": "1863b86fa586165422af02bcc61e19cda63a1d51694e7bfdb95157bd2451d132",
+  "source_indices_sha256": "a709e35bb2570cc90b2c48088547d77b5ef3850d5f270f7ef030b77813c15a37",
+  "material_base_linear": [
+    0.19,
+    0.28,
+    0.42,
+    1
+  ],
+  "roughness": 0.37,
+  "metallic": 0.12,
+  "axis_conversion": "Object +90 degrees X only; local source positions and face order untouched.",
+  "frames": [
+    {
+      "file": "front.png",
+      "scene": "00_NEUTRE",
+      "camera": "FACE",
+      "size": [
+        720,
+        1152
+      ],
+      "ortho_scale": 2.1500000953674316,
+      "selection_region": 0,
+      "sha256": "91bed0249e5dc13ebe655e5bb8be78045aba2ae8fcd53dda6fb889576268bd98"
+    },
+    {
+      "file": "three-quarter.png",
+      "scene": "00_NEUTRE",
+      "camera": "TROIS_QUARTS",
+      "size": [
+        720,
+        1152
+      ],
+      "ortho_scale": 2.1500000953674316,
+      "selection_region": 0,
+      "sha256": "cefd74938f3c796aa4bf661a62ad9fbd38b952ac637340b2cc167091555ec146"
+    },
+    {
+      "file": "selection.png",
+      "scene": "01_PECTORAL_GAUCHE",
+      "camera": "TROIS_QUARTS",
+      "size": [
+        720,
+        1152
+      ],
+      "ortho_scale": 2.1500000953674316,
+      "selection_region": 1,
+      "sha256": "e9c1dde466eb248a021f92c2050530117e7735a30e59b73ee01d9d001c7ea269"
+    },
+    {
+      "file": "detail.png",
+      "scene": "04_CONTROLE_REGIONS",
+      "camera": "DETAIL_TROIS_QUARTS",
+      "size": [
+        1000,
+        840
+      ],
+      "ortho_scale": 0.6800000071525574,
+      "selection_region": -1,
+      "sha256": "d1831f1bdb79de37aab8a9f3bbc6ce23b91c7ddf06058b3f582fefdbb5ba9489"
+    },
+    {
+      "file": "detail-profile.png",
+      "scene": "04_CONTROLE_REGIONS",
+      "camera": "CONTROLE_PROFIL",
+      "size": [
+        1000,
+        840
+      ],
+      "ortho_scale": 0.6800000071525574,
+      "selection_region": -1,
+      "sha256": "50ef42fb1b94056b93ded172c6e7008bfb2d6ed3693f21a330947f2533631a66"
+    }
+  ],
+  "blend_file": "meshy-masques.blend",
+  "blend_sha256": "5af7e09fb8b2ea54ceec345313b5a0af2e5436eb55ea068113ee299b83fb3c83",
+  "license_and_guide_postprocess": {
+    "script_sha256": "d036febcd124dee5884fc2f420fe6af17239ad50f781d4e039446acfc6b542d4",
+    "input_blend_sha256": "6c4545e2265499e63f6e703c49cce0b78b77a28184550dff89885f2642ffcf05",
+    "embedded_texts": [
+      "LICENCE_ET_PROVENANCE.md",
+      "RAYCAST_ET_EXPORT.md"
+    ],
+    "geometry_operation": false
+  }
+}

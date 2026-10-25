@@ -1,0 +1,130 @@
+{
+  "baseline_sha256": "f8b6a232a18335221af3cafc62b37837fedc1caaf9bc6cb48e1cb583f222d9ab",
+  "master_sha256": "ff5317285a8aa88305bfee4fcda9eefd18d17fbe8cbe2b4820099e4475e428a2",
+  "baseline_commit": "0ab3d838c728a88f2d325edff7a6884400c9ed78",
+  "validated_guides_commit": "0fc6f0b3a0ffacc2283d26a06afa852ef3be35ad",
+  "protected_other_objects_exact": 298,
+  "head_throat_pectorals_body_raw_and_evaluated_exact": true,
+  "source_scene_unchanged": true,
+  "master_mesh_objects": 300,
+  "new_segmentation": false,
+  "master_triangles": 582150,
+  "surface_checks": {
+    "deltoid.right": {
+      "vertices": 26994,
+      "triangles": 53984,
+      "original_belly_vertices_exact": 901,
+      "belly_max_displacement_m": 0,
+      "unchanged_original_vertices": 5076,
+      "bbox_identical": true,
+      "convex_support_outward_error_m": {
+        "0": 2.220446049250313e-16,
+        "90": 0.0008008794694470689,
+        "-55": 2.220446049250313e-16,
+        "-135": 0.0005320001260018525
+      },
+      "closed_two_manifold": true,
+      "self_intersections": 7,
+      "self_intersection_triangle_pairs": [
+        [
+          1344,
+          35046
+        ],
+        [
+          1344,
+          35050
+        ],
+        [
+          7270,
+          12887
+        ],
+        [
+          7270,
+          12897
+        ],
+        [
+          7270,
+          12899
+        ],
+        [
+          1271,
+          12839
+        ],
+        [
+          1271,
+          12838
+        ]
+      ],
+      "euler_characteristic": 2,
+      "volume_before_m3": 0.0016241538048514055,
+      "volume_after_m3": 0.0016312639450235167,
+      "relative_volume_change": 0.0043777505251492155
+    },
+    "deltoid.left": {
+      "vertices": 26994,
+      "triangles": 53984,
+      "original_belly_vertices_exact": 901,
+      "belly_max_displacement_m": 0,
+      "unchanged_original_vertices": 5076,
+      "bbox_identical": true,
+      "convex_support_outward_error_m": {
+        "0": 2.220446049250313e-16,
+        "90": 0.0008008794694470689,
+        "-55": 0.0016795970699468032,
+        "-135": 2.220446049250313e-16
+      },
+      "closed_two_manifold": true,
+      "self_intersections": 7,
+      "self_intersection_triangle_pairs": [
+        [
+          1344,
+          35046
+        ],
+        [
+          1344,
+          35050
+        ],
+        [
+          7270,
+          12899
+        ],
+        [
+          7270,
+          12887
+        ],
+        [
+          7270,
+          12897
+        ],
+        [
+          1271,
+          12838
+        ],
+        [
+          1271,
+          12839
+        ]
+      ],
+      "euler_characteristic": 2,
+      "volume_before_m3": 0.0016241538002590248,
+      "volume_after_m3": 0.0016312639396489853,
+      "relative_volume_change": 0.0043777500559532
+    }
+  },
+  "mirror_max_distance_m": 1.6781612321992156e-08,
+  "original_lights_identical": true,
+  "scope": "Preservation applies to the protected belly and 298 other objects. Deltoid topology changed. This proposal fails the clean-intersection/raccord criteria and is not validated.",
+  "no_self_intersections": false,
+  "glb_triangles": 582149,
+  "glb_sha256": "5d8d7fdfd638a6a62faab6d488947dd2e09f3ac0602e664a35f21dcc4ef9be93",
+  "glb_surface_match_at_micron_precision": true,
+  "glb_duplicate_faces_removed": [
+    {
+      "object": "m0_c145__CENTRAL__ATHLETIQUE",
+      "duplicate_copies_removed": 1
+    }
+  ],
+  "render_hashes_verified": 12,
+  "paired_cameras_identical": true,
+  "validation_status": "INSUFFISANT_NON_VALIDE"
+}

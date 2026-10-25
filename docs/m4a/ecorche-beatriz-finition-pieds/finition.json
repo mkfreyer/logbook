@@ -1,0 +1,72 @@
+{
+  "baseline_commit": "d94297af21a05dacaa1f19a1ce64c7b64f447ea4",
+  "baseline_master": "../ecorche-beatriz-aine-fondue/ecorche-aine-fondue.blend",
+  "baseline_blend_sha256": "72c3f1de79c55f058f2710d655c37c063bbd8427ef0c91b580280bfee8f89b20",
+  "source_scene": "24_AINE_RACCORDS_FONDUS",
+  "scene": "26_FINITION_PIEDS",
+  "baseline_glb": "../ecorche-beatriz-aine-fondue/ecorche-aine-fondue.glb",
+  "master": "ecorche-finition-pieds.blend",
+  "changed_objects": [
+    "m2_c001.left",
+    "m2_c001.right"
+  ],
+  "retained_original_objects": 297,
+  "retained_original_vertices_moved": 0,
+  "construction": {
+    "baseline_commit": "d94297af21a05dacaa1f19a1ce64c7b64f447ea4",
+    "baseline_blend_sha256": "72c3f1de79c55f058f2710d655c37c063bbd8427ef0c91b580280bfee8f89b20",
+    "source_scene": "24_AINE_RACCORDS_FONDUS",
+    "foot_id": "m2_c001.left",
+    "step_m": 0.00125,
+    "ankle_radial_reduction": 0.1,
+    "ankle_taper_z_m": [
+      0.085,
+      0.145
+    ],
+    "ankle_center_xy_m": [
+      0.123,
+      0.083
+    ],
+    "contact_radius_m": 0.0045,
+    "reference_objects": [
+      "m0_c027.left",
+      "m0_c028.left",
+      "m0_c031.left",
+      "m0_c032.left",
+      "m0_c036.left",
+      "m0_c049.left",
+      "m0_c054.left",
+      "m0_c061.left",
+      "m1_c008.left",
+      "m1_c013.left"
+    ],
+    "parts_sha256": "826b016d35805449fdeb1986df905b0388d305d8029992d706a8cb5fe1685701",
+    "field_builder_sha256": "634db097e85e7cc1af596a989799e61e35f2b537aafd8cd4cf7732a0bbacad67",
+    "inside_classification": "Vertical ray parity on closed meshes; nearest-distance magnitudes"
+  },
+  "extraction": {
+    "forefoot_filter_sigma_m": 0.00043749999999999995,
+    "ankle_filter_sigma_m": 0.0008749999999999999,
+    "filter_height_transition_m": [
+      0.06,
+      0.11
+    ],
+    "ankle_cover_outset_m": 0.0006,
+    "ankle_cover_height_transition_m": [
+      0.09,
+      0.12
+    ],
+    "contact_inset_m": 0.0015,
+    "contact_clip_distance_m": 0.022,
+    "extractor_sha256": "2b36bf9db6fc3cde6e98b58050ebcd1665c9f94515b924b6cefbf3fc32e94303"
+  },
+  "target_triangles_per_foot": 16000,
+  "actual_triangles_per_foot": 16000,
+  "vertices_per_foot": 8276,
+  "median_plane_x_m": 0.002114987923242599,
+  "builder_sha256": "e19093d22d85901bf13ac450ab0e846dfe592a851e9de469cc564994fae98961",
+  "normal_transfer_source_distance_limit_m": 0.0004,
+  "method": "Foot-only ankle taper, local implicit union to unchanged leg anatomy, mild field fairing, QEM simplification with protected contact borders, smooth neutral shading. Symmetric mirror of the left reconstruction.",
+  "topology": "Two replacement foot meshes. Contact perimeters deliberately buried in unchanged leg surfaces; not a welded whole-body skin.",
+  "master_sha256": "cb24f10382ee056f2800032f2dc08729e50c8130250bd5c533dd8c2fd37f52eb"
+}

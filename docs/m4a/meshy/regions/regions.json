@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "source_file": "source.glb",
+  "source_sha256": "9fab861a65407e69b9401bec077bf7b40f58d36404e80bad9db6147f24320a14",
+  "binding": {
+    "node_index": 0,
+    "mesh_index": 0,
+    "primitive_index": 0,
+    "topology": "TRIANGLES",
+    "triangle_count": 95426,
+    "vertex_count": 47711,
+    "position_buffer_sha256": "1863b86fa586165422af02bcc61e19cda63a1d51694e7bfdb95157bd2451d132",
+    "index_buffer_sha256": "a709e35bb2570cc90b2c48088547d77b5ef3850d5f270f7ef030b77813c15a37",
+    "triangle_index_rule": "Zero-based ordinal of each consecutive index triplet of source mesh 0, primitive 0. No reordering."
+  },
+  "labels": {
+    "file": "triangle-regions.u8",
+    "dtype": "uint8",
+    "byte_length": 95426,
+    "sha256": "67247aa0a61c8eb0fa9363902d54e31a206677d6b7329314a15a6e9ecd792f6e",
+    "unassigned_value": 0
+  },
+  "regions": [
+    {
+      "value": 1,
+      "id": "pectoralis.left",
+      "faces": 1356,
+      "connected_components": 1,
+      "boundary_edges": 180,
+      "euler_characteristic": 1,
+      "single_disk": true,
+      "island_faces_unassigned": 36,
+      "hole_faces_filled": 0
+    },
+    {
+      "value": 2,
+      "id": "pectoralis.right",
+      "faces": 1145,
+      "connected_components": 1,
+      "boundary_edges": 161,
+      "euler_characteristic": 1,
+      "single_disk": true,
+      "island_faces_unassigned": 12,
+      "hole_faces_filled": 0
+    },
+    {
+      "value": 3,
+      "id": "deltoid.left",
+      "faces": 2215,
+      "connected_components": 1,
+      "boundary_edges": 151,
+      "euler_characteristic": 1,
+      "single_disk": true,
+      "island_faces_unassigned": 0,
+      "hole_faces_filled": 0
+    }
+  ],
+  "contours_sha256": "27cc7aa077461b38b871188dc4dd5cf9b550ba066edddd52715b072969ec9cf3",
+  "method": "Manually traced source-view contours, front-surface depth gate, interpolated front/rear deltoid boundary; triangle-centroid classification and connected disk cleanup. Visual anatomical labels, not medical segmentation.",
+  "geometry_changes": false,
+  "face_order_changed": false,
+  "mobile_performance_validated": false
+}

@@ -1,0 +1,67 @@
+{
+  "baseline_unchanged_sha256": "cfe710f5efd581922f46c0d25d4178cc81de74137fd2761716ad95516fdf13b8",
+  "new_master_sha256": "15444ab13acb4232ed9d366e39b333c305b9c1be533e71d2b5eee90b9e58ff37",
+  "glb_sha256": "4cda402ef39b6a3403957a17aa8d193de027841b0a59319e99f4f7f086f9bd96",
+  "before_scene_exact_pass3": true,
+  "unchanged_body_objects": 295,
+  "max_unchanged_coordinate_difference_m": 0,
+  "changed_original_objects": [
+    "deltoid.left",
+    "deltoid.right"
+  ],
+  "substituted_head_pieces_preserved_in_before_and_prior_scenes": 94,
+  "new_presentation_surfaces": 1,
+  "surface_checks": {
+    "deltoid.left": {
+      "triangles": 11938,
+      "closed_two_manifold": true,
+      "components": 1,
+      "euler_characteristic": 2,
+      "min_triangle_area_m2": 3.346871742362628e-08,
+      "nonadjacent_self_contacts_detected": 0,
+      "topology_unchanged": true,
+      "volume_ratio": 0.9999999967663725,
+      "max_displacement_m": 0.0038893552834888627
+    },
+    "deltoid.right": {
+      "triangles": 11938,
+      "closed_two_manifold": true,
+      "components": 1,
+      "euler_characteristic": 2,
+      "min_triangle_area_m2": 3.346871742362628e-08,
+      "nonadjacent_self_contacts_detected": 0,
+      "topology_unchanged": true,
+      "volume_ratio": 1.0000000122750985,
+      "max_displacement_m": 0.0038893739320028267
+    },
+    "head_throat.neutral_surface": {
+      "triangles": 27672,
+      "closed_two_manifold": true,
+      "components": 1,
+      "euler_characteristic": 2,
+      "min_triangle_area_m2": 2.8726901911257856e-07,
+      "nonadjacent_self_contacts_detected": 0
+    }
+  },
+  "deltoid_reflection_error_m": 1.6781612321992156e-08,
+  "head_mirrored_surface_distance_max_m": 0.0002074310468742624,
+  "shoulder_authoring_groups_preserved": true,
+  "neutral_pass3_material_verified": true,
+  "symmetric_five_light_rig_verified": true,
+  "objects": 298,
+  "master_triangles": 488822,
+  "glb_triangles": 488821,
+  "glb_vertices": 288826,
+  "glb_duplicate_faces_removed": [
+    {
+      "asset_id": "m0_c145__CENTRAL__ATHLETIQUE",
+      "removed_copies": 1,
+      "copies_remaining": 1
+    }
+  ],
+  "glb_surface_match_at_micron_quantization": true,
+  "glb_reimport_verified": true,
+  "render_files_hash_verified": 22,
+  "verifier_sha256": "31680df84ae3ab4d16af228957ae121852a09bb8a2e9938d98233ee63307032e",
+  "scope": "Geometry QA of modified surfaces and export; no clinical certification or complete inter-object contact audit."
+}

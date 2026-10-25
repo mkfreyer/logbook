@@ -1,0 +1,21 @@
+{
+  "file": "ecorche-tete-neutre.glb",
+  "bytes": 11132972,
+  "sha256": "951c63d17ba97946bee666e4d22e33a8f9e9421dcfc503917959483d00a36d29",
+  "nodes": 297,
+  "meshes": 297,
+  "materials": 7,
+  "primitives": 301,
+  "triangles": 541771,
+  "selection_zone_ids": [
+    "deltoid.left.anterior",
+    "deltoid.left.lateral",
+    "deltoid.left.posterior",
+    "deltoid.right.anterior",
+    "deltoid.right.lateral",
+    "deltoid.right.posterior"
+  ],
+  "textures_added": 0,
+  "shape_keys_baked_at_existing_values": true,
+  "exporter_sha256": "5f64252793c1365892c843dfd83543f13c61aea679f3cea173cb1115c930c69d"
+}

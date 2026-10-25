@@ -1,0 +1,127 @@
+{
+  "version": "after",
+  "input_blend_sha256": "033926625778f6e9b16e7bbc18de97d17f077a48e004a96be9b891f54e7a976f",
+  "renderer_sha256": "8983611fa2185fec84dc1e167feb93c9abf33db228c007097f4869274ac7329c",
+  "samples": 48,
+  "engine": "CYCLES_CPU",
+  "blender": "4.3.2",
+  "geometry_operation": false,
+  "frames": [
+    {
+      "file": "after-neutral-front.png",
+      "scene": "00_NEUTRE",
+      "camera": "FACE",
+      "size": [
+        720,
+        1152
+      ],
+      "selection_region": 0,
+      "sha256": "49f7d1a8af9c7e765f7c2832a35195de5d1619e404865015b29c15b8a0d25239"
+    },
+    {
+      "file": "after-left-front.png",
+      "scene": "01_PECTORAL_GAUCHE",
+      "camera": "FACE",
+      "size": [
+        720,
+        1152
+      ],
+      "selection_region": 1,
+      "sha256": "38b252763bd031295aa68cd10bc96ab7ad75ca5566c2d0ff4c1c17b27d3a8252"
+    },
+    {
+      "file": "after-left-three-quarter.png",
+      "scene": "01_PECTORAL_GAUCHE",
+      "camera": "TROIS_QUARTS",
+      "size": [
+        720,
+        1152
+      ],
+      "selection_region": 1,
+      "sha256": "2e2fa9de94b28458533b49b08320a11fd40fc596f4c128073140613479d3abbd"
+    },
+    {
+      "file": "after-right-front.png",
+      "scene": "02_PECTORAL_DROIT",
+      "camera": "FACE",
+      "size": [
+        720,
+        1152
+      ],
+      "selection_region": 2,
+      "sha256": "153d9c62602744f08e3489ead95ef514b320e4a81e41884fe68dca0cfe9d2706"
+    },
+    {
+      "file": "after-left-detail.png",
+      "scene": "01_PECTORAL_GAUCHE",
+      "camera": "DETAIL_TROIS_QUARTS",
+      "size": [
+        1000,
+        840
+      ],
+      "selection_region": 1,
+      "sha256": "3b03891dc99e20ca2a423e3b269c9adc4ddf7a551b52129cbb056c9eddf2a3c4"
+    },
+    {
+      "file": "after-deltoid-profile.png",
+      "scene": "03_DELTOIDE_GAUCHE",
+      "camera": "CONTROLE_PROFIL",
+      "size": [
+        1000,
+        840
+      ],
+      "selection_region": 3,
+      "sha256": "972936236bb65db3f2ec61a06845e0434a680bb6436c46a83ec9c33df40e7b28"
+    },
+    {
+      "file": "after-deltoid-back.png",
+      "scene": "03_DELTOIDE_GAUCHE",
+      "camera": "CONTROLE_DOS",
+      "size": [
+        1000,
+        840
+      ],
+      "selection_region": 3,
+      "sha256": "7541dd7d535507b6f444bf31abdb6c3e7897ec4a2b5a359a124e6a7e633916eb"
+    },
+    {
+      "file": "after-diagnostic.png",
+      "scene": "04_CONTROLE_REGIONS",
+      "camera": "DETAIL_FACE",
+      "size": [
+        1000,
+        840
+      ],
+      "selection_region": -1,
+      "sha256": "f2383187c870eb4e609af78fecb7e379a19cb47e54099d37f21bee8b7aed10cc"
+    },
+    {
+      "file": "after-right-detail.png",
+      "scene": "02_PECTORAL_DROIT",
+      "camera": "DETAIL_FACE",
+      "size": [
+        1000,
+        840
+      ],
+      "selection_region": 2,
+      "sha256": "29e50d5427f8e949388f63c6aedc5117c0248b8795d7e16a3935751b9a6a7c56"
+    },
+    {
+      "file": "after-deltoid-front.png",
+      "scene": "03_DELTOIDE_GAUCHE",
+      "camera": "DETAIL_FACE",
+      "size": [
+        1000,
+        840
+      ],
+      "selection_region": 3,
+      "sha256": "2d39360ea927b5f67a6e36acf9c9cad6caa9a912b6aaf87585ef95597a6589b1"
+    }
+  ],
+  "postprocess": {
+    "script_sha256": "2b01681b44732c590c33c5c43ee71f4098d703c8b043763c18d1c44a7e88bd3e",
+    "render_input_blend_sha256": "033926625778f6e9b16e7bbc18de97d17f077a48e004a96be9b891f54e7a976f",
+    "final_blend_sha256": "857d7435073bc3d5670fd7e1fedf2cedfed347daf7f92da3b05d3fcbc2cc3587",
+    "operation": "Update informational region metadata and correction guide texts only; no material, geometry or scene changes."
+  }
+}

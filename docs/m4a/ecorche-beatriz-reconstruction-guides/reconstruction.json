@@ -1,0 +1,94 @@
+{
+  "scene": "19_RECONSTRUCTION_GUIDES",
+  "before_scene": "16_COMBINAISON_P4_P5",
+  "baseline_blend_sha256": "f8b6a232a18335221af3cafc62b37837fedc1caaf9bc6cb48e1cb583f222d9ab",
+  "reference_commit": "0ab3d838c728a88f2d325edff7a6884400c9ed78",
+  "guides_commit": "0fc6f0b3a0ffacc2283d26a06afa852ef3be35ad",
+  "master": "reconstruction-guides.blend",
+  "records": {
+    "deltoid.left": {
+      "vertices": 26994,
+      "triangles": 53984,
+      "original_belly_vertices_unchanged": 901,
+      "max_belly_displacement_m": 0.0,
+      "volume_after_m3": 0.0016312639396489853
+    },
+    "deltoid.right": {
+      "vertices": 26994,
+      "triangles": 53984,
+      "original_belly_vertices_unchanged": 901,
+      "max_belly_displacement_m": 0.0,
+      "volume_after_m3": 0.0016312639450235167
+    }
+  },
+  "unchanged_objects": 298,
+  "surface_method": {
+    "baseline_commit": "0ab3d838c728a88f2d325edff7a6884400c9ed78",
+    "validated_guides_commit": "0fc6f0b3a0ffacc2283d26a06afa852ef3be35ad",
+    "method": "Replace local old/new groove patches with conforming triangulation; biharmonic fair floor and single rounded trough per blue guide. Local border regularization capped at 2.5mm; main belly and other objects unchanged.",
+    "original_vertices": 5971,
+    "original_triangles": 11938,
+    "vertices": 26994,
+    "triangles": 53984,
+    "removed_original_faces": 1724,
+    "unchanged_original_faces": 10214,
+    "patch_triangles": 43770,
+    "retained_original_vertices": 5221,
+    "new_vertices": 21773,
+    "refinement_rounds": [
+      {
+        "round": 1,
+        "new_vertices": 214,
+        "patch_triangles": 652
+      },
+      {
+        "round": 2,
+        "new_vertices": 693,
+        "patch_triangles": 2038
+      },
+      {
+        "round": 3,
+        "new_vertices": 1882,
+        "patch_triangles": 5802
+      },
+      {
+        "round": 4,
+        "new_vertices": 4448,
+        "patch_triangles": 14698
+      },
+      {
+        "round": 5,
+        "new_vertices": 7964,
+        "patch_triangles": 30626
+      },
+      {
+        "round": 6,
+        "new_vertices": 6181,
+        "patch_triangles": 42988
+      },
+      {
+        "round": 7,
+        "new_vertices": 199,
+        "patch_triangles": 43386
+      },
+      {
+        "round": 8,
+        "new_vertices": 192,
+        "patch_triangles": 43770
+      }
+    ],
+    "original_belly_vertices": 901,
+    "protected_belly_max_displacement_m": 0,
+    "max_displacement_from_reference_surface_m": 0.011268709103902326,
+    "local_border_regularization_max_m": 0.002500000000000063,
+    "volume_before_m3": 0.0016241538048514057,
+    "volume_after_m3": 0.0016312639450235162,
+    "relative_volume_change": 0.004377750525148771,
+    "global_volume_compensation": false,
+    "authoring_tools": "mapbox-earcut 2.1.0 (ISC), Shapely 2.2.0 (BSD), NumPy/SciPy; no app dependencies",
+    "patch_builder_sha256": "7073cca63fec52085d12f575ce80247f97b5d37e1a94bf70742db130c5eb1754"
+  },
+  "source_attribution": "Ecorche - Anatomy study, Beatriz Gomez Santamaria, CC BY 4.0; P5 head: Blender Studio / Dan Ulrich, CC0. Derived local deltoid reconstruction; rest unchanged.",
+  "validation_status": "INSUFFISANT_NON_VALIDE",
+  "known_self_intersections_per_deltoid": 7
+}

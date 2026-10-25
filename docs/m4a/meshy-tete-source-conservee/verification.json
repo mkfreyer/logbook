@@ -1,0 +1,33 @@
+{
+  "master_sha256": "9754fd908e11671d53b016a7a791870d23a6931af2ea265d158f04590e345b18",
+  "native_donor_reference_scene_exact": true,
+  "source_head_surface_plane_error_max_m": 2.9723038095198737e-08,
+  "source_head_clipped_area_error_max_m2": 8.720937651500102e-10,
+  "head_source_whole_triangles_identical": 14191,
+  "native_chin_triangles_verified": 5153,
+  "native_chin_clipped_triangles": 0,
+  "face_and_hair_triangles_verified": 13345,
+  "head_source_vertices_sculpted_or_moved": 0,
+  "body_source_whole_triangles_identical": 89798,
+  "body_preserved_against_dbba75e": true,
+  "body_source_surface_plane_error_max_m": 3.583342702488757e-09,
+  "body_neck_strip_replaced_m": [
+    0.683,
+    0.695
+  ],
+  "local_bridge_z_range_m": [
+    0.683,
+    0.7212386727333069
+  ],
+  "closed_edge_manifold": true,
+  "consistent_orientation": true,
+  "new_head_neck_intersections": 0,
+  "connected_components": 1,
+  "global_bounds_identical": true,
+  "glb_surface_matches_master_exactly": true,
+  "triangles": 110588,
+  "body_triangles": 90090,
+  "bridge_triangles": 6096,
+  "head_triangles": 14402,
+  "verifier_sha256": "98321ceaa35468b80ba84103c417540f0c62222e1162b24133e681c4d1a3391d"
+}

@@ -1,0 +1,17 @@
+{
+  "sha256": "28296786bc217dfd17c7d2f4446b72d91c06e2ff2247874c24dd5a1cc297c7b3",
+  "file": "ecorche-athletique.glb",
+  "bytes": 11551668,
+  "evaluated_master_triangles": 531777,
+  "exported_triangles": 531775,
+  "exporter_omitted_triangles": 2,
+  "master_near_zero_area_triangles": 0,
+  "nodes": 390,
+  "meshes": 390,
+  "materials": 1,
+  "shape_keys_baked_not_exported": true,
+  "source_vertex_colors_in_master_only": true,
+  "author_credit_preserved": true,
+  "exporter_sha256": "986cdf95431124104a89735bf4b59579112b080daaef77ba5342989890a1ae83",
+  "note": "Separate authoring pieces preserved; mobile optimization and complete anatomical naming remain future work. Vertex colors omitted from GLB to prevent source red colors multiplying the blue presentation material."
+}
