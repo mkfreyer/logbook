@@ -1,0 +1,49 @@
+{
+  "body_source": "../meshy/source.glb",
+  "head_source": "source-tete.glb",
+  "body_filename_uploaded": "Meshy_AI_Anatomical_Form_1025014819_generate.glb",
+  "head_filename_uploaded": "Meshy_AI_Rib_Reach_Exercise_In_1025014903_generate.glb",
+  "body_source_sha256": "9fab861a65407e69b9401bec077bf7b40f58d36404e80bad9db6147f24320a14",
+  "head_source_sha256": "1879f3f79f419ca0552adf8776cf3b0e6d3a25dcf11b7a98a351eeb71747a35d",
+  "original_body_triangles": 95426,
+  "original_donor_triangles": 74166,
+  "donor_extracted_head_triangles": 1177,
+  "retained_body_triangles_after_cut": 90395,
+  "bridge_triangles": 5852,
+  "assembled_triangles": 97424,
+  "body_cut_z_m": 0.695,
+  "donor_cut_z_m": 0.51,
+  "head_attachment_z_m": 0.7025,
+  "head_scale_uniform": 1.6570138093617504,
+  "head_translation_m": [
+    0.02741091237767401,
+    -0.18657066517736973,
+    -0.1591471808681102
+  ],
+  "head_rotation_degrees": [
+    0,
+    0,
+    0
+  ],
+  "head_local_attachment_height_m": 0.044513397216796924,
+  "head_original_surface_retained_above_z_m": 0.7395133972167969,
+  "new_attachment_profile_rings": 15,
+  "head_cut_plane_normal": [
+    0,
+    -0.15,
+    1
+  ],
+  "head_cut_plane_offset_m": 0.7263430652532011,
+  "body_boundary_vertices": 185,
+  "head_boundary_vertices": 117,
+  "body_vertex_count_after_cut": 45287,
+  "head_offset": 48062,
+  "retained_body_vertices_moved": 0,
+  "head_core_unchanged_above_z_m": 0.7395133972167969,
+  "scene_before": "00_CORPS_ORIGINAL",
+  "scene_after": "01_ASSEMBLAGE_CORPS_TETE",
+  "master": "meshy-corps-tete-assemble.blend",
+  "export": "meshy-corps-tete-assemble.glb",
+  "builder_sha256": "464b58d43639a5ac93a53551ad562b4908d002018263f32d9596049b0bf1e9f6",
+  "master_sha256": "c2a6dd6488ee72fc9bbab4695d9eb6791b908bbedd5e927f96c78240109ca5f0"
+}
