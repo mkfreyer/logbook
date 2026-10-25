@@ -20,12 +20,12 @@ beforeEach(() => {
   });
   mockAudioMode.mockResolvedValue(undefined);
 });
-afterEach(() => { cleanup(); jest.restoreAllMocks(); jest.useRealTimers(); });
+afterEach(async () => { await cleanup(); jest.restoreAllMocks(); jest.useRealTimers(); });
 async function advance(ms: number) { await act(async () => { jest.advanceTimersByTime(ms); }); }
-function appState(state: AppStateStatus) { act(() => { AppState.currentState = state; onAppState(state); }); }
+async function appState(state: AppStateStatus) { await act(() => { AppState.currentState = state; onAppState(state); }); }
 
 test('échéance au premier plan : une alerte, sans modifier le repos', async () => {
-  renderHook(() => useRestAlert(rest, true));
+  await renderHook(() => useRestAlert(rest, true));
   await advance(1800); expect(mockPlayer.play).not.toHaveBeenCalled();
   await advance(400); expect(mockPlayer.play).toHaveBeenCalledTimes(1);
   await advance(5000); expect(mockPlayer.play).toHaveBeenCalledTimes(1);
@@ -33,23 +33,23 @@ test('échéance au premier plan : une alerte, sans modifier le repos', async ()
   expect(rest.endedAt).toBeNull();
 });
 test('échéance en arrière-plan : aucune sonnerie tardive au retour', async () => {
-  renderHook(() => useRestAlert(rest, true));
-  await advance(1000); appState('background'); await advance(3000);
-  appState('active'); await advance(2000);
+  await renderHook(() => useRestAlert(rest, true));
+  await advance(1000); await appState('background'); await advance(3000);
+  await appState('active'); await advance(2000);
   expect(mockPlayer.play).not.toHaveBeenCalled();
 });
 test('un repos déjà dépassé à la réouverture ne rejoue pas l’alerte', async () => {
-  jest.setSystemTime(start + 10000); renderHook(() => useRestAlert(rest, true));
+  jest.setSystemTime(start + 10000); await renderHook(() => useRestAlert(rest, true));
   await advance(1000); expect(mockPlayer.play).not.toHaveBeenCalled();
 });
 test('un écran quitté n’émet pas de son', async () => {
-  const view = renderHook((props: { enabled: boolean }) => useRestAlert(rest, props.enabled), { initialProps: { enabled: true } });
-  view.rerender({ enabled: false }); await advance(3000);
+  const view = await renderHook((props: { enabled: boolean }) => useRestAlert(rest, props.enabled), { initialProps: { enabled: true } });
+  await view.rerender({ enabled: false }); await advance(3000);
   expect(mockPlayer.play).not.toHaveBeenCalled();
 });
 test('un échec audio est signalé sans empêcher le minuteur', async () => {
   mockAudioMode.mockRejectedValueOnce(new Error('audio unavailable'));
-  const view = renderHook(() => useRestAlert(rest, true));
+  const view = await renderHook(() => useRestAlert(rest, true));
   await advance(2200); expect(view.result.current).toBe(true);
   expect(mockPlayer.play).not.toHaveBeenCalled(); expect(rest.endedAt).toBeNull();
 });

@@ -37,10 +37,10 @@ beforeEach(() => {
   jest.spyOn(AppState, 'addEventListener').mockImplementation(() => ({ remove: jest.fn() }));
   mockRepository.getActiveSession.mockResolvedValue(session);
 });
-afterEach(() => { cleanup(); jest.restoreAllMocks(); jest.useRealTimers(); });
+afterEach(async () => { await cleanup(); jest.restoreAllMocks(); jest.useRealTimers(); });
 
 test('choosing another exercise exactly at expiry keeps the same rest observation and sounds once, without ending rest', async () => {
-  render(<SessionProvider><Text>Grille des exercices restants</Text></SessionProvider>);
+  await render(<SessionProvider><Text>Grille des exercices restants</Text></SessionProvider>);
   await waitFor(() => expect(mockRepository.subscribe).toHaveBeenCalledTimes(1));
   await act(async () => { await Promise.resolve(); });
   await act(async () => { jest.advanceTimersByTime(800); });

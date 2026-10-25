@@ -75,13 +75,13 @@ beforeEach(() => {
   jest.mocked(useWorkoutPlan).mockReturnValue(plan());
   jest.mocked(useLogbook).mockReturnValue({ getProgram: jest.fn<() => Promise<typeof program>>().mockResolvedValue(program), listWorkouts: jest.fn<() => Promise<typeof workout[]>>().mockResolvedValue([workout]) } as unknown as ReturnType<typeof useLogbook>);
 });
-afterEach(() => { cleanup(); jest.restoreAllMocks(); });
+afterEach(async () => { await cleanup(); jest.restoreAllMocks(); });
 
 describe('M1.2 : terminer la configuration sans créer une réalisation', () => {
-  test('Terminer conserve la flèche et rejoint exactement la vue de séance, sans écriture', () => {
-    const view = render(<ExerciseOverview {...route} />);
+  test('Terminer conserve la flèche et rejoint exactement la vue de séance, sans écriture', async () => {
+    const view = await render(<ExerciseOverview {...route} />);
     expect(view.getByRole('button', { name: 'Retour' })).toBeTruthy();
-    fireEvent.press(view.getByRole('button', { name: 'Terminer' }));
+    await fireEvent.press(view.getByRole('button', { name: 'Terminer' }));
     expect(router.dismissTo).toHaveBeenCalledWith(overviewRoute);
     expect(mockSessions.startOrResume).not.toHaveBeenCalled();
     expect(mockTraining.reorderSets).not.toHaveBeenCalled();
@@ -89,30 +89,30 @@ describe('M1.2 : terminer la configuration sans créer une réalisation', () => 
 
   test('une sauvegarde en cours ou en erreur bloque Terminer ; une nouvelle tentative réussie le réactive', async () => {
     const pending = deferred<void>(); mockTraining.reorderSets.mockReturnValueOnce(pending.promise);
-    const view = render(<ExerciseOverview {...route} />);
-    fireEvent.press(view.getByRole('button', { name: 'Monter Série 2 (position 2)' }));
+    const view = await render(<ExerciseOverview {...route} />);
+    await fireEvent.press(view.getByRole('button', { name: 'Monter Série 2 (position 2)' }));
     expect(view.getByRole('button', { name: 'Terminer' }).props.accessibilityState.disabled).toBe(true);
-    fireEvent.press(view.getByRole('button', { name: 'Terminer' }));
+    await fireEvent.press(view.getByRole('button', { name: 'Terminer' }));
     expect(router.dismissTo).not.toHaveBeenCalled();
     await act(async () => { pending.reject(new Error('Écriture impossible')); await pending.promise.catch(() => undefined); });
     expect(view.getByText('Écriture impossible')).toBeTruthy();
-    fireEvent.press(view.getByRole('button', { name: 'Terminer' }));
+    await fireEvent.press(view.getByRole('button', { name: 'Terminer' }));
     expect(router.dismissTo).not.toHaveBeenCalled();
-    fireEvent.press(view.getByRole('button', { name: 'Monter Série 2 (position 2)' }));
+    await fireEvent.press(view.getByRole('button', { name: 'Monter Série 2 (position 2)' }));
     await waitFor(() => expect(view.getByRole('button', { name: 'Terminer' }).props.accessibilityState.disabled).toBe(false));
-    fireEvent.press(view.getByRole('button', { name: 'Terminer' }));
+    await fireEvent.press(view.getByRole('button', { name: 'Terminer' }));
     expect(router.dismissTo).toHaveBeenCalledWith(overviewRoute);
   });
 
   test('Terminer la configuration revient aux séances avec une confirmation vérifiée, sans démarrage', async () => {
-    const view = render(<WorkoutOverview {...route} />);
+    const view = await render(<WorkoutOverview {...route} />);
     await waitFor(() => expect(view.getByRole('button', { name: 'Démarrer la séance' }).props.accessibilityState.disabled).toBe(false));
-    fireEvent.press(view.getByRole('button', { name: 'Terminer la configuration' }));
+    await fireEvent.press(view.getByRole('button', { name: 'Terminer la configuration' }));
     expect(router.dismissTo).toHaveBeenCalledWith({ pathname: '/programs/[id]/workouts', params: { id: program.id, configuredWorkoutId: workout.id } });
     expect(mockSessions.startOrResume).not.toHaveBeenCalled();
-    view.unmount();
+    await view.unmount();
     mockParams = { id: program.id, configuredWorkoutId: workout.id };
-    const list = render(<WorkoutsScreen />);
+    const list = await render(<WorkoutsScreen />);
     await list.findByText('Configuration enregistrée');
     expect(list.getByText(`${workout.name} · vos modifications sont sauvegardées.`)).toBeTruthy();
     expect(mockSessions.startOrResume).not.toHaveBeenCalled();
@@ -120,7 +120,7 @@ describe('M1.2 : terminer la configuration sans créer une réalisation', () => 
 
   test('un identifiant étranger ne produit aucune confirmation de configuration', async () => {
     mockParams = { id: program.id, configuredWorkoutId: 'another-workout' };
-    const view = render(<WorkoutsScreen />);
+    const view = await render(<WorkoutsScreen />);
     await view.findByRole('button', { name: `Ouvrir la séance ${workout.name}` });
     expect(view.queryByText('Configuration enregistrée')).toBeNull();
   });
@@ -129,19 +129,19 @@ describe('M1.2 : terminer la configuration sans créer une réalisation', () => 
 describe('M1.2 : entrée et reprise d’un entraînement', () => {
   test('aucun départ pour une séance vide ou un exercice sans série', async () => {
     jest.mocked(useWorkoutPlan).mockReturnValue({ ...plan(), data: { program, workout, exercises: [{ ...exercise, sets: [] }], exercise } });
-    const view = render(<WorkoutOverview {...route} />);
+    const view = await render(<WorkoutOverview {...route} />);
     await waitFor(() => expect(mockSessions.getActiveSession).toHaveBeenCalledTimes(1));
-    fireEvent.press(view.getByRole('button', { name: 'Démarrer la séance' }));
+    await fireEvent.press(view.getByRole('button', { name: 'Démarrer la séance' }));
     expect(mockSessions.startOrResume).not.toHaveBeenCalled();
     expect(view.getByText(/configurez les séries de chaque exercice/)).toBeTruthy();
   });
 
   test('le démarrage attend SQLite et résiste au double clic avant d’ouvrir la série active', async () => {
     const pending = deferred<WorkoutSession>(); mockSessions.startOrResume.mockReturnValue(pending.promise);
-    const view = render(<WorkoutOverview {...route} />);
+    const view = await render(<WorkoutOverview {...route} />);
     await waitFor(() => expect(view.getByRole('button', { name: 'Démarrer la séance' }).props.accessibilityState.disabled).toBe(false));
-    fireEvent.press(view.getByRole('button', { name: 'Démarrer la séance' }));
-    fireEvent.press(view.getByRole('button', { name: 'Démarrer la séance' }));
+    await fireEvent.press(view.getByRole('button', { name: 'Démarrer la séance' }));
+    await fireEvent.press(view.getByRole('button', { name: 'Démarrer la séance' }));
     expect(mockSessions.startOrResume).toHaveBeenCalledTimes(1);
     expect(mockSessions.startOrResume).toHaveBeenCalledWith(workout.id);
     expect(router.push).not.toHaveBeenCalled();
@@ -151,53 +151,53 @@ describe('M1.2 : entrée et reprise d’un entraînement', () => {
 
   test('un échec de démarrage reste visible sans navigation et peut être retenté', async () => {
     mockSessions.startOrResume.mockRejectedValueOnce(new Error('Stockage indisponible'));
-    const view = render(<WorkoutOverview {...route} />);
+    const view = await render(<WorkoutOverview {...route} />);
     await waitFor(() => expect(view.getByRole('button', { name: 'Démarrer la séance' }).props.accessibilityState.disabled).toBe(false));
-    fireEvent.press(view.getByRole('button', { name: 'Démarrer la séance' }));
+    await fireEvent.press(view.getByRole('button', { name: 'Démarrer la séance' }));
     await view.findByText('Stockage indisponible');
     expect(router.push).not.toHaveBeenCalled();
     expect(view.getByRole('button', { name: 'Terminer la configuration' }).props.accessibilityState.disabled).toBe(true);
-    fireEvent.press(view.getByRole('button', { name: 'Démarrer la séance' }));
+    await fireEvent.press(view.getByRole('button', { name: 'Démarrer la séance' }));
     await waitFor(() => expect(router.push).toHaveBeenCalledWith(liveRoute));
   });
 
   test('une séance existante est nommée et proposée explicitement à la reprise', async () => {
     const existing = { ...session, sourceWorkoutTemplateId: 'other-template', workoutName: 'Séance déjà commencée' };
     mockSessions.getActiveSession.mockResolvedValue(existing); mockSessions.startOrResume.mockResolvedValue(existing);
-    const view = render(<WorkoutOverview {...route} />);
+    const view = await render(<WorkoutOverview {...route} />);
     const resume = await view.findByRole('button', { name: 'Reprendre la séance en cours' });
     expect(view.getByText(/Séance déjà commencée.*déjà en cours/)).toBeTruthy();
     expect(view.queryByRole('button', { name: 'Démarrer la séance' })).toBeNull();
-    fireEvent.press(resume);
+    await fireEvent.press(resume);
     await waitFor(() => expect(router.push).toHaveBeenCalledWith(liveRoute));
   });
 
   test('une session concurrente différente ne fait pas quitter la configuration sans proposer sa reprise', async () => {
     const existing = { ...session, sourceWorkoutTemplateId: 'other-template', workoutName: 'Séance en cours ailleurs' };
-    const view = render(<WorkoutOverview {...route} />);
+    const view = await render(<WorkoutOverview {...route} />);
     await waitFor(() => expect(view.getByRole('button', { name: 'Démarrer la séance' }).props.accessibilityState.disabled).toBe(false));
     mockSessions.startOrResume.mockResolvedValue(existing); mockSessions.getActiveSession.mockResolvedValue(existing);
-    fireEvent.press(view.getByRole('button', { name: 'Démarrer la séance' }));
+    await fireEvent.press(view.getByRole('button', { name: 'Démarrer la séance' }));
     await view.findByRole('button', { name: 'Reprendre la séance en cours' });
     expect(router.push).not.toHaveBeenCalled();
-    fireEvent.press(view.getByRole('button', { name: 'Reprendre la séance en cours' }));
+    await fireEvent.press(view.getByRole('button', { name: 'Reprendre la séance en cours' }));
     await waitFor(() => expect(router.push).toHaveBeenCalledWith(liveRoute));
   });
 
   test('un départ sauvegardé après fermeture de la page ne déclenche pas une navigation tardive', async () => {
     const pending = deferred<WorkoutSession>(); mockSessions.startOrResume.mockReturnValue(pending.promise);
-    const view = render(<WorkoutOverview {...route} />);
+    const view = await render(<WorkoutOverview {...route} />);
     await waitFor(() => expect(view.getByRole('button', { name: 'Démarrer la séance' }).props.accessibilityState.disabled).toBe(false));
-    fireEvent.press(view.getByRole('button', { name: 'Démarrer la séance' }));
-    act(() => mockFocusCleanups.forEach(blur => blur()));
+    await fireEvent.press(view.getByRole('button', { name: 'Démarrer la séance' }));
+    await act(() => mockFocusCleanups.forEach(blur => blur()));
     await act(async () => { pending.resolve(session); await pending.promise; });
     expect(router.push).not.toHaveBeenCalled();
   });
 
   test('la carte permet de reprendre même si le programme source a été supprimé', async () => {
     mockSessions.getActiveSession.mockResolvedValue({ ...session, sourceProgramId: 'deleted-program', sourceWorkoutTemplateId: 'deleted-template' });
-    const view = render(<ResumeSessionCard />);
-    fireEvent.press(await view.findByRole('button', { name: 'Reprendre la séance' }));
+    const view = await render(<ResumeSessionCard />);
+    await fireEvent.press(await view.findByRole('button', { name: 'Reprendre la séance' }));
     expect(router.push).toHaveBeenCalledWith(liveRoute);
     expect(mockSessions.startOrResume).not.toHaveBeenCalled();
     expect(useLogbook).not.toHaveBeenCalled();
@@ -210,11 +210,11 @@ describe('M1.2 : entrée et reprise d’un entraînement', () => {
       return { remove: () => { foreground.delete(listener); } };
     });
     mockSessions.getActiveSession.mockResolvedValue(session);
-    const view = render(<ResumeSessionCard />);
+    const view = await render(<ResumeSessionCard />);
     await view.findByRole('button', { name: 'Reprendre la séance' });
     mockSessions.getActiveSession.mockResolvedValue(null);
     expect(foreground.size).toBeGreaterThan(0);
-    act(() => foreground.forEach(listener => listener('active')));
+    await act(() => foreground.forEach(listener => listener('active')));
     await waitFor(() => expect(mockSessions.getActiveSession).toHaveBeenCalledTimes(2));
     await waitFor(() => expect(view.queryByRole('button', { name: 'Reprendre la séance' })).toBeNull());
   });

@@ -41,27 +41,27 @@ beforeEach(() => {
   jest.spyOn(AppState, 'addEventListener').mockImplementation(() => ({ remove: jest.fn() }));
   mockRepository.getActiveSession.mockResolvedValue(null);
 });
-afterEach(() => { cleanup(); jest.restoreAllMocks(); });
+afterEach(async () => { await cleanup(); jest.restoreAllMocks(); });
 
 test('l’observateur audio reste actif sur un autre écran et suit les repos sauvegardés', async () => {
-  const view = render(<SessionProvider><OtherScreen /></SessionProvider>);
+  const view = await render(<SessionProvider><OtherScreen /></SessionProvider>);
   expect(view.getByText('Liste des programmes')).toBeTruthy();
   await waitFor(() => expect(mockRepository.subscribe).toHaveBeenCalledTimes(1));
   mockRepository.getActiveSession.mockResolvedValue(resting);
-  act(() => mockChange());
-  await waitFor(() => expect(useRestAlert).toHaveBeenLastCalledWith(resting.rests[0], true));
+  await act(() => mockChange());
+  await waitFor(() => expect(useRestAlert).toHaveBeenLastCalledWith(resting.rests[0]!, true));
   mockRepository.getActiveSession.mockResolvedValue(null);
-  act(() => mockChange());
+  await act(() => mockChange());
   await waitFor(() => expect(useRestAlert).toHaveBeenLastCalledWith(null, true));
   expect(view.getByText('Liste des programmes')).toBeTruthy();
 });
 
 test('une lecture impossible ne bloque pas le reste de l’application et un changement peut réessayer', async () => {
   mockRepository.getActiveSession.mockRejectedValueOnce(new Error('read failure'));
-  const view = render(<SessionProvider><OtherScreen /></SessionProvider>);
+  const view = await render(<SessionProvider><OtherScreen /></SessionProvider>);
   await waitFor(() => expect(mockRepository.getActiveSession).toHaveBeenCalledTimes(1));
   expect(view.getByText('Liste des programmes')).toBeTruthy();
-  mockRepository.getActiveSession.mockResolvedValue(resting); act(() => mockChange());
-  await waitFor(() => expect(useRestAlert).toHaveBeenLastCalledWith(resting.rests[0], true));
-  view.unmount(); expect(mockUnsubscribe).toHaveBeenCalledTimes(1);
+  mockRepository.getActiveSession.mockResolvedValue(resting); await act(() => mockChange());
+  await waitFor(() => expect(useRestAlert).toHaveBeenLastCalledWith(resting.rests[0]!, true));
+  await view.unmount(); expect(mockUnsubscribe).toHaveBeenCalledTimes(1);
 });

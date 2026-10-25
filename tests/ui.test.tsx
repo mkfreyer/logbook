@@ -93,124 +93,124 @@ beforeEach(() => {
   jest.mocked(router.canGoBack).mockReturnValue(false);
   jest.mocked(useLogbook).mockReturnValue(mockStore);
 });
-afterEach(() => { cleanup(); mockFocusCleanups.clear(); jest.restoreAllMocks(); });
+afterEach(async () => { await cleanup(); mockFocusCleanups.clear(); jest.restoreAllMocks(); });
 
 describe('M0 : états vides et organisation locale', () => {
-  test('une erreur d’actualisation garde les programmes connus avec une action Réessayer discrète', () => {
+  test('une erreur d’actualisation garde les programmes connus avec une action Réessayer discrète', async () => {
     mockStore.programs = [program]; mockStore.error = 'Lecture impossible';
-    const view = render(<ProgramsScreen />);
+    const view = await render(<ProgramsScreen />);
     expect(view.getByRole('button', { name: `Ouvrir le programme ${program.name}` })).toBeTruthy();
     expect(view.getByText('Données non à jour · Réessayer')).toBeTruthy(); expect(view.queryByText('Chargement impossible')).toBeNull();
-    fireEvent.press(view.getByRole('button', { name: 'Données non à jour, réessayer' })); expect(mockStore.refresh).toHaveBeenCalledTimes(2);
+    await fireEvent.press(view.getByRole('button', { name: 'Données non à jour, réessayer' })); expect(mockStore.refresh).toHaveBeenCalledTimes(2);
   });
 
-  test('une première lecture de programmes en échec ne présente pas une liste vide comme confirmée', () => {
+  test('une première lecture de programmes en échec ne présente pas une liste vide comme confirmée', async () => {
     mockStore.hasLoaded = false; mockStore.error = 'Lecture impossible';
-    const view = render(<ProgramsScreen />);
+    const view = await render(<ProgramsScreen />);
     expect(view.getByText('Chargement impossible')).toBeTruthy(); expect(view.queryByText('Un programme à votre image')).toBeNull();
     expect(view.getByRole('button', { name: 'Réessayer' })).toBeTruthy();
   });
 
   test('la restauration M3.2 conserve les accès Paramètres M3.3 depuis les deux univers', async () => {
-    const home = render(<HomeScreen />);
+    const home = await render(<HomeScreen />);
     await home.findByText('Après votre première séance terminée.');
-    fireEvent.press(home.getByRole('button', { name: 'Paramètres' }));
-    expect(router.push).toHaveBeenLastCalledWith('/settings'); home.unmount();
-    const programs = render(<ProgramsScreen />);
-    fireEvent.press(programs.getByRole('button', { name: 'Paramètres' }));
+    await fireEvent.press(home.getByRole('button', { name: 'Paramètres' }));
+    expect(router.push).toHaveBeenLastCalledWith('/settings'); await home.unmount();
+    const programs = await render(<ProgramsScreen />);
+    await fireEvent.press(programs.getByRole('button', { name: 'Paramètres' }));
     expect(router.push).toHaveBeenCalledTimes(2); expect(router.push).toHaveBeenLastCalledWith('/settings');
   });
 
   test('le bloc inférieur de l’accueil retrouve sa marge automatique M3.2 avec ses boutons inchangés', async () => {
-    const home = render(<HomeScreen />); await home.findByText('Après votre première séance terminée.');
-    const footers = home.UNSAFE_getAllByType(View).filter(node => StyleSheet.flatten(node.props.style)?.marginTop === 'auto');
+    const home = await render(<HomeScreen />); await home.findByText('Après votre première séance terminée.');
+    const footers = home.container.queryAll(node => node.type === 'View').filter(node => StyleSheet.flatten(node.props.style)?.marginTop === 'auto');
     expect(footers).toHaveLength(1);
-    expect(footers[0]!.findAll(node => node.props.accessibilityLabel === 'Musculation').length).toBeGreaterThan(0);
-    expect(footers[0]!.findAll(node => node.props.accessibilityLabel === 'Cardio, à venir').length).toBeGreaterThan(0);
-    fireEvent.press(home.getByRole('button', { name: 'Musculation' }));
+    expect(footers[0]!.queryAll(node => node.props.accessibilityLabel === 'Musculation').length).toBeGreaterThan(0);
+    expect(footers[0]!.queryAll(node => node.props.accessibilityLabel === 'Cardio, à venir').length).toBeGreaterThan(0);
+    await fireEvent.press(home.getByRole('button', { name: 'Musculation' }));
     expect(mockGoTo).toHaveBeenCalledWith('musculation');
   });
   test('une première ouverture invite à créer sans programmes ni performances fictifs', async () => {
-    const home = render(<HomeScreen />);
+    const home = await render(<HomeScreen />);
     expect(home.getByText('Créer mon premier programme')).toBeTruthy();
     expect(await home.findByText('Après votre première séance terminée.')).toBeTruthy();
     expect(home.getByLabelText('Séances terminées cette semaine').props.children).toBe(0);
     expect(home.queryByText(/Prise de muscle|Alex|\+12\s*%|124\s*350/)).toBeNull();
-    fireEvent.press(home.getByRole('button', { name: 'Créer mon premier programme' }));
+    await fireEvent.press(home.getByRole('button', { name: 'Créer mon premier programme' }));
     expect(router.push).toHaveBeenCalledWith('/programs/new');
-    home.unmount();
+    await home.unmount();
 
-    const list = render(<ProgramsScreen />);
+    const list = await render(<ProgramsScreen />);
     expect(list.getByText('Un programme à votre image')).toBeTruthy();
     expect(list.queryByRole('button', { name: /Ouvrir le programme/ })).toBeNull();
     expect(mockStore.createProgram).not.toHaveBeenCalled();
   });
 
   test('la création de programme exige un nom puis sauvegarde les champs nettoyés', async () => {
-    const view = render(<ProgramEditor mode="create" />);
+    const view = await render(<ProgramEditor mode="create" />);
     const name = await view.findByLabelText('Nom du programme');
-    fireEvent.changeText(name, '   ');
-    fireEvent.press(view.getByRole('button', { name: 'Créer le programme' }));
+    await fireEvent.changeText(name, '   ');
+    await fireEvent.press(view.getByRole('button', { name: 'Créer le programme' }));
     expect(view.getByText('Donnez un nom à votre programme.')).toBeTruthy();
     expect(mockStore.createProgram).not.toHaveBeenCalled();
 
-    fireEvent.changeText(name, '  Mon organisation  ');
-    fireEvent.changeText(view.getByLabelText('Description (facultative)'), '  Deux jours par semaine  ');
-    fireEvent.press(view.getByRole('button', { name: 'Créer le programme' }));
+    await fireEvent.changeText(name, '  Mon organisation  ');
+    await fireEvent.changeText(view.getByLabelText('Description (facultative)'), '  Deux jours par semaine  ');
+    await fireEvent.press(view.getByRole('button', { name: 'Créer le programme' }));
     await waitFor(() => expect(mockStore.createProgram).toHaveBeenCalledWith({ name: 'Mon organisation', description: 'Deux jours par semaine' }));
     await waitFor(() => expect(router.replace).toHaveBeenCalledWith({ pathname: '/programs/[id]', params: { id: program.id } }));
   });
 
-  test('les boutons entre univers utilisent le pager, et Cardio reste indisponible', () => {
+  test('les boutons entre univers utilisent le pager, et Cardio reste indisponible', async () => {
     mockStore.programs = [program];
-    const home = render(<HomeScreen />);
+    const home = await render(<HomeScreen />);
     expect(home.getByText(program.name)).toBeTruthy();
     expect(home.getByText('0 séance prévue · à votre rythme')).toBeTruthy();
-    fireEvent.press(home.getByRole('button', { name: 'Musculation' }));
+    await fireEvent.press(home.getByRole('button', { name: 'Musculation' }));
     expect(mockGoTo).toHaveBeenCalledWith('musculation');
     expect(router.push).not.toHaveBeenCalled();
     expect(home.getByRole('button', { name: 'Cardio, à venir' }).props.accessibilityState.disabled).toBe(true);
-    home.unmount();
+    await home.unmount();
 
-    const list = render(<ProgramsScreen />);
+    const list = await render(<ProgramsScreen />);
     expect(list.queryByRole('button', { name: 'Retour' })).toBeNull();
-    fireEvent.press(list.getByRole('button', { name: 'Accueil' }));
+    await fireEvent.press(list.getByRole('button', { name: 'Accueil' }));
     expect(mockGoTo).toHaveBeenLastCalledWith('home');
     expect(router.back).not.toHaveBeenCalled();
   });
 
   test('la modification charge le programme et conserve son identité', async () => {
     jest.mocked(router.canGoBack).mockReturnValue(true);
-    const view = render(<ProgramEditor mode="edit" id={program.id} />);
+    const view = await render(<ProgramEditor mode="edit" id={program.id} />);
     await waitFor(() => expect(view.getByLabelText('Nom du programme').props.value).toBe(program.name));
     expect(view.getByLabelText('Description (facultative)').props.value).toBe(program.description);
-    fireEvent.changeText(view.getByLabelText('Nom du programme'), 'Nouveau nom');
-    fireEvent.press(view.getByRole('button', { name: 'Enregistrer les modifications' }));
+    await fireEvent.changeText(view.getByLabelText('Nom du programme'), 'Nouveau nom');
+    await fireEvent.press(view.getByRole('button', { name: 'Enregistrer les modifications' }));
     await waitFor(() => expect(mockStore.updateProgram).toHaveBeenCalledWith(program.id, { name: 'Nouveau nom', description: program.description }));
     await waitFor(() => expect(router.back).toHaveBeenCalledTimes(1));
     expect(mockStore.createProgram).not.toHaveBeenCalled();
   });
 
   test('la création de séance exige un nom et retourne aux séances du bon programme', async () => {
-    const view = render(<WorkoutEditor mode="create" programId={program.id} />);
+    const view = await render(<WorkoutEditor mode="create" programId={program.id} />);
     const name = await view.findByLabelText('Nom de la séance');
-    fireEvent.press(view.getByRole('button', { name: 'Ajouter la séance' }));
+    await fireEvent.press(view.getByRole('button', { name: 'Ajouter la séance' }));
     expect(view.getByText('Donnez un nom à votre séance.')).toBeTruthy();
     expect(mockStore.createWorkout).not.toHaveBeenCalled();
 
-    fireEvent.changeText(name, '  Ma séance  ');
-    fireEvent.changeText(view.getByLabelText('Notes (facultatives)'), '  À mon rythme  ');
-    fireEvent.press(view.getByRole('button', { name: 'Ajouter la séance' }));
+    await fireEvent.changeText(name, '  Ma séance  ');
+    await fireEvent.changeText(view.getByLabelText('Notes (facultatives)'), '  À mon rythme  ');
+    await fireEvent.press(view.getByRole('button', { name: 'Ajouter la séance' }));
     await waitFor(() => expect(mockStore.createWorkout).toHaveBeenCalledWith(program.id, { name: 'Ma séance', notes: 'À mon rythme' }));
     await waitFor(() => expect(router.replace).toHaveBeenCalledWith({ pathname: '/programs/[id]/workouts', params: { id: program.id } }));
   });
 
   test('la modification de séance conserve son identité et ses notes', async () => {
     jest.mocked(router.canGoBack).mockReturnValue(true);
-    const view = render(<WorkoutEditor mode="edit" programId={program.id} workoutId={workout.id} />);
+    const view = await render(<WorkoutEditor mode="edit" programId={program.id} workoutId={workout.id} />);
     await waitFor(() => expect(view.getByLabelText('Nom de la séance').props.value).toBe(workout.name));
-    fireEvent.changeText(view.getByLabelText('Notes (facultatives)'), '  Nouvelle consigne  ');
-    fireEvent.press(view.getByRole('button', { name: 'Enregistrer les modifications' }));
+    await fireEvent.changeText(view.getByLabelText('Notes (facultatives)'), '  Nouvelle consigne  ');
+    await fireEvent.press(view.getByRole('button', { name: 'Enregistrer les modifications' }));
     await waitFor(() => expect(mockStore.updateWorkout).toHaveBeenCalledWith(workout.id, { name: workout.name, notes: 'Nouvelle consigne' }));
     await waitFor(() => expect(router.back).toHaveBeenCalledTimes(1));
     expect(mockStore.createWorkout).not.toHaveBeenCalled();
@@ -219,16 +219,16 @@ describe('M0 : états vides et organisation locale', () => {
   test('une création différée reste unique et ne navigue plus après perte du focus', async () => {
     const pending = deferred<Program>();
     mockStore.createProgram.mockReturnValue(pending.promise);
-    const view = render(<ProgramEditor mode="create" />);
-    fireEvent.changeText(await view.findByLabelText('Nom du programme'), 'Mon organisation');
+    const view = await render(<ProgramEditor mode="create" />);
+    await fireEvent.changeText(await view.findByLabelText('Nom du programme'), 'Mon organisation');
     const save = view.getByRole('button', { name: 'Créer le programme' });
-    fireEvent.press(save);
-    fireEvent.press(save);
+    await fireEvent.press(save);
+    await fireEvent.press(save);
     expect(mockStore.createProgram).toHaveBeenCalledTimes(1);
     expect(view.getByRole('button', { name: 'Créer le programme' }).props.accessibilityState.disabled).toBe(true);
     expect(view.getByRole('button', { name: 'Retour' }).props.accessibilityState.disabled).toBe(true);
 
-    act(() => { mockFocusCleanups.forEach((blur) => blur()); });
+    await act(() => { mockFocusCleanups.forEach((blur) => blur()); });
     await act(async () => { pending.resolve(program); await pending.promise; });
     expect(router.replace).not.toHaveBeenCalled();
     expect(router.back).not.toHaveBeenCalled();
@@ -237,15 +237,15 @@ describe('M0 : états vides et organisation locale', () => {
   test('une édition de séance différée reste unique et ne navigue plus après perte du focus', async () => {
     const pending = deferred<WorkoutTemplate>();
     mockStore.updateWorkout.mockReturnValue(pending.promise);
-    const view = render(<WorkoutEditor mode="edit" programId={program.id} workoutId={workout.id} />);
+    const view = await render(<WorkoutEditor mode="edit" programId={program.id} workoutId={workout.id} />);
     await waitFor(() => expect(view.getByLabelText('Nom de la séance').props.value).toBe(workout.name));
     const save = view.getByRole('button', { name: 'Enregistrer les modifications' });
-    fireEvent.press(save);
-    fireEvent.press(save);
+    await fireEvent.press(save);
+    await fireEvent.press(save);
     expect(mockStore.updateWorkout).toHaveBeenCalledTimes(1);
     expect(view.getByRole('button', { name: 'Enregistrer les modifications' }).props.accessibilityState.disabled).toBe(true);
 
-    act(() => { mockFocusCleanups.forEach((blur) => blur()); });
+    await act(() => { mockFocusCleanups.forEach((blur) => blur()); });
     await act(async () => { pending.resolve(workout); await pending.promise; });
     expect(router.replace).not.toHaveBeenCalled();
     expect(router.back).not.toHaveBeenCalled();
@@ -253,7 +253,7 @@ describe('M0 : états vides et organisation locale', () => {
 
   test('une séance appartenant à un autre programme ne peut pas être modifiée', async () => {
     mockStore.getWorkout.mockResolvedValue({ ...workout, programId: 'other-program' });
-    const view = render(<WorkoutEditor mode="edit" programId={program.id} workoutId={workout.id} />);
+    const view = await render(<WorkoutEditor mode="edit" programId={program.id} workoutId={workout.id} />);
     expect(await view.findByText('Cette séance ou son programme n’est pas disponible.')).toBeTruthy();
     expect(view.queryByLabelText('Nom de la séance')).toBeNull();
     expect(mockStore.updateWorkout).not.toHaveBeenCalled();
@@ -269,12 +269,16 @@ describe('M0 : suppressions confirmées', () => {
     expect(button).toBeDefined();
     return button!;
   }
-  function screen(kind: 'programme' | 'séance') {
-    return render(kind === 'programme' ? <ProgramScreen /> : <WorkoutEditor mode="edit" programId={program.id} workoutId={workout.id} />);
+  async function screen(kind: 'programme' | 'séance') {
+    return await render(kind === 'programme' ? <ProgramScreen /> : <WorkoutEditor mode="edit" programId={program.id} workoutId={workout.id} />);
   }
-  function pressHandler(button: ReturnType<ReturnType<typeof render>['getByRole']>): () => void {
+  function pressHandler(button: ReturnType<Awaited<ReturnType<typeof render>>['getByRole']>): () => void {
     let node: typeof button | null = button;
     while (node) {
+      if (typeof node.props.onClick === 'function') {
+        const click = node.props.onClick;
+        return () => click({ nativeEvent: {}, target: null, currentTarget: null });
+      }
       if (typeof node.props.onPress === 'function') return node.props.onPress as () => void;
       node = node.parent;
     }
@@ -282,11 +286,11 @@ describe('M0 : suppressions confirmées', () => {
   }
 
   test.each(['programme', 'séance'] as const)('annuler la confirmation du %s ne supprime ni ne navigue', async kind => {
-    const view = screen(kind);
+    const view = await screen(kind);
     const label = kind === 'programme' ? 'Supprimer le programme' : 'Supprimer la séance';
     const button = await view.findByRole('button', { name: label });
     expect(view.getByRole('button', { name: 'Retour' })).toBeTruthy();
-    fireEvent.press(button);
+    await fireEvent.press(button);
     expect(alert).toHaveBeenCalledTimes(1);
     const [title, message] = alert.mock.calls[0]!;
     expect(title).toContain(label);
@@ -294,14 +298,14 @@ describe('M0 : suppressions confirmées', () => {
     expect(message).toContain(kind === 'programme' ? 'toutes ses séances planifiées' : 'Les autres séances seront conservées');
     expect(choice('Annuler').style).toBe('cancel');
     expect(choice('Supprimer').style).toBe('destructive');
-    act(() => choice('Annuler').onPress?.());
+    await act(() => choice('Annuler').onPress?.());
     expect(mockStore.deleteProgram).not.toHaveBeenCalled();
     expect(mockStore.deleteWorkout).not.toHaveBeenCalled();
     expect(router.dismissTo).not.toHaveBeenCalled();
     expect(router.back).not.toHaveBeenCalled();
     expect(view.getByRole('button', { name: label }).props.accessibilityState.disabled).toBe(false);
     // Even a stale callback from the cancelled dialog cannot delete.
-    act(() => choice('Supprimer').onPress?.());
+    await act(() => choice('Supprimer').onPress?.());
     expect(mockStore.deleteProgram).not.toHaveBeenCalled();
     expect(mockStore.deleteWorkout).not.toHaveBeenCalled();
   });
@@ -309,15 +313,15 @@ describe('M0 : suppressions confirmées', () => {
   test('la suppression du programme est unique et attend le stockage avant le retour à Musculation', async () => {
     const pending = deferred<void>();
     mockStore.deleteProgram.mockReturnValue(pending.promise);
-    const view = screen('programme');
+    const view = await screen('programme');
     const button = await view.findByRole('button', { name: 'Supprimer le programme' });
     // Bypass the React disabled render to exercise the synchronous double-click lock.
     const press = pressHandler(button);
-    act(() => { press(); press(); });
+    await act(() => { press(); press(); });
     expect(alert).toHaveBeenCalledTimes(1);
     expect(mockStore.deleteProgram).not.toHaveBeenCalled();
     const remove = choice('Supprimer').onPress;
-    act(() => { remove?.(); remove?.(); });
+    await act(() => { remove?.(); remove?.(); });
     expect(mockStore.deleteProgram).toHaveBeenCalledTimes(1);
     expect(mockStore.deleteProgram).toHaveBeenCalledWith(program.id);
     expect(view.getByRole('button', { name: 'Retour' }).props.accessibilityState.disabled).toBe(true);
@@ -332,16 +336,16 @@ describe('M0 : suppressions confirmées', () => {
   test('la suppression de séance attend le stockage et bloque une sauvegarde concurrente', async () => {
     const pending = deferred<void>();
     mockStore.deleteWorkout.mockReturnValue(pending.promise);
-    const view = screen('séance');
+    const view = await screen('séance');
     const removeButton = await view.findByRole('button', { name: 'Supprimer la séance' });
     const savePress = pressHandler(view.getByRole('button', { name: 'Enregistrer les modifications' }));
-    fireEvent.changeText(view.getByLabelText('Nom de la séance'), 'Nom non enregistré');
-    fireEvent.press(removeButton);
+    await fireEvent.changeText(view.getByLabelText('Nom de la séance'), 'Nom non enregistré');
+    await fireEvent.press(removeButton);
     expect(alert.mock.calls[0]?.[1]).toContain(workout.name);
-    act(() => savePress());
+    await act(() => savePress());
     expect(mockStore.updateWorkout).not.toHaveBeenCalled();
     const remove = choice('Supprimer').onPress;
-    act(() => { remove?.(); remove?.(); savePress(); });
+    await act(() => { remove?.(); remove?.(); savePress(); });
     expect(mockStore.deleteWorkout).toHaveBeenCalledTimes(1);
     expect(mockStore.deleteWorkout).toHaveBeenCalledWith(workout.id);
     expect(mockStore.updateWorkout).not.toHaveBeenCalled();
@@ -354,17 +358,17 @@ describe('M0 : suppressions confirmées', () => {
   test.each(['programme', 'séance'] as const)('une erreur de suppression du %s laisse l’écran ouvert et permet une nouvelle tentative', async kind => {
     const remove = kind === 'programme' ? mockStore.deleteProgram : mockStore.deleteWorkout;
     remove.mockRejectedValueOnce(new Error('SQLite unavailable'));
-    const view = screen(kind);
+    const view = await screen(kind);
     const label = kind === 'programme' ? 'Supprimer le programme' : 'Supprimer la séance';
-    fireEvent.press(await view.findByRole('button', { name: label }));
-    act(() => choice('Supprimer').onPress?.());
+    await fireEvent.press(await view.findByRole('button', { name: label }));
+    await act(() => choice('Supprimer').onPress?.());
     expect(await view.findByText(kind === 'programme' ? 'Impossible de supprimer ce programme. Réessayez.' : 'Impossible de supprimer cette séance. Réessayez.')).toBeTruthy();
     expect(router.dismissTo).not.toHaveBeenCalled();
     expect(router.back).not.toHaveBeenCalled();
     expect(view.getByRole('button', { name: label }).props.accessibilityState.disabled).toBe(false);
     if (kind === 'séance') expect(view.getByLabelText('Nom de la séance').props.value).toBe(workout.name);
-    fireEvent.press(view.getByRole('button', { name: label }));
-    act(() => choice('Supprimer').onPress?.());
+    await fireEvent.press(view.getByRole('button', { name: label }));
+    await act(() => choice('Supprimer').onPress?.());
     await waitFor(() => expect(router.dismissTo).toHaveBeenCalledTimes(1));
     expect(remove).toHaveBeenCalledTimes(2);
   });
@@ -372,44 +376,44 @@ describe('M0 : suppressions confirmées', () => {
   test('une sauvegarde de séance en cours empêche même l’ouverture de la confirmation de suppression', async () => {
     const pending = deferred<WorkoutTemplate>();
     mockStore.updateWorkout.mockReturnValue(pending.promise);
-    const view = screen('séance');
+    const view = await screen('séance');
     const removeButton = await view.findByRole('button', { name: 'Supprimer la séance' });
     const deletePress = pressHandler(removeButton);
-    fireEvent.press(view.getByRole('button', { name: 'Enregistrer les modifications' }));
-    act(() => deletePress());
+    await fireEvent.press(view.getByRole('button', { name: 'Enregistrer les modifications' }));
+    await act(() => deletePress());
     expect(alert).not.toHaveBeenCalled();
     expect(mockStore.deleteWorkout).not.toHaveBeenCalled();
     await act(async () => { pending.resolve(workout); await pending.promise; });
   });
 
   test('une confirmation quittée et une suppression terminée après perte du focus ne redirigent pas', async () => {
-    const view = screen('programme');
-    fireEvent.press(await view.findByRole('button', { name: 'Supprimer le programme' }));
+    const view = await screen('programme');
+    await fireEvent.press(await view.findByRole('button', { name: 'Supprimer le programme' }));
     const confirm = choice('Supprimer').onPress;
-    act(() => mockFocusCleanups.forEach(blur => blur()));
-    act(() => confirm?.());
+    await act(() => mockFocusCleanups.forEach(blur => blur()));
+    await act(() => confirm?.());
     expect(mockStore.deleteProgram).not.toHaveBeenCalled();
-    view.unmount();
+    await view.unmount();
 
     const pending = deferred<void>();
     mockStore.deleteWorkout.mockReturnValue(pending.promise);
-    const editor = screen('séance');
-    fireEvent.press(await editor.findByRole('button', { name: 'Supprimer la séance' }));
-    act(() => choice('Supprimer').onPress?.());
+    const editor = await screen('séance');
+    await fireEvent.press(await editor.findByRole('button', { name: 'Supprimer la séance' }));
+    await act(() => choice('Supprimer').onPress?.());
     expect(mockStore.deleteWorkout).toHaveBeenCalledTimes(1);
-    act(() => mockFocusCleanups.forEach(blur => blur()));
-    editor.unmount();
+    await act(() => mockFocusCleanups.forEach(blur => blur()));
+    await editor.unmount();
     await act(async () => { pending.resolve(); await pending.promise; });
     expect(router.dismissTo).not.toHaveBeenCalled();
   });
 
   test('la suppression est absente lors de la création ou pour une séance d’un autre programme', async () => {
-    const create = render(<WorkoutEditor mode="create" programId={program.id} />);
+    const create = await render(<WorkoutEditor mode="create" programId={program.id} />);
     await create.findByLabelText('Nom de la séance');
     expect(create.queryByRole('button', { name: 'Supprimer la séance' })).toBeNull();
-    create.unmount();
+    await create.unmount();
     mockStore.getWorkout.mockResolvedValue({ ...workout, programId: 'other-program' });
-    const invalid = screen('séance');
+    const invalid = await screen('séance');
     await invalid.findByText('Cette séance ou son programme n’est pas disponible.');
     expect(invalid.queryByRole('button', { name: 'Supprimer la séance' })).toBeNull();
     expect(mockStore.deleteWorkout).not.toHaveBeenCalled();
@@ -417,8 +421,8 @@ describe('M0 : suppressions confirmées', () => {
 });
 
 
-test('the discreet 3D entry opens its own route from Musculation', () => {
-  const view = render(<ProgramsScreen />);
-  fireEvent.press(view.getByRole('button', { name: 'Ouvrir le mannequin 3D' }));
+test('the discreet 3D entry opens its own route from Musculation', async () => {
+  const view = await render(<ProgramsScreen />);
+  await fireEvent.press(view.getByRole('button', { name: 'Ouvrir le mannequin 3D' }));
   expect(router.push).toHaveBeenCalledWith('/muscle-viewer');
 });

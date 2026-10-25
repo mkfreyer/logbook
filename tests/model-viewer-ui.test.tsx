@@ -28,8 +28,8 @@ jest.mock('../src/features/model3d/loadModel', () => ({ loadModelBase64: jest.fn
 jest.mock('../src/features/model3d/generated/viewerBundle', () => ({ viewerBundle: '/* UI contract test, not a renderer */' }));
 jest.mock('@expo/vector-icons', () => ({ Ionicons: () => null }));
 jest.mock('react-native-safe-area-context', () => jest.requireActual<{ default: typeof import('react-native-safe-area-context') }>('react-native-safe-area-context/jest/mock').default);
-function message(value: unknown) {
-  act(() => mockProps.onMessage?.({ nativeEvent: { data: JSON.stringify(value) } } as Parameters<NonNullable<WebViewProps['onMessage']>>[0]));
+async function message(value: unknown) {
+  await act(() => mockProps.onMessage?.({ nativeEvent: { data: JSON.stringify(value) } } as Parameters<NonNullable<WebViewProps['onMessage']>>[0]));
 }
 const ready = { version: 1, type: 'ready', triangles: 110588, geometryBytes: 1990584 };
 beforeEach(() => {
@@ -38,59 +38,59 @@ beforeEach(() => {
   jest.spyOn(AppState, 'addEventListener').mockImplementation((_event, callback) => { mockAppChange = callback; return { remove: jest.fn() }; });
   jest.mocked(loadModelBase64).mockResolvedValue('AAAA');
 });
-afterEach(() => { cleanup(); jest.restoreAllMocks(); jest.useRealTimers(); if (appStateDescriptor) Object.defineProperty(AppState, 'currentState', appStateDescriptor); });
+afterEach(async () => { await cleanup(); jest.restoreAllMocks(); jest.useRealTimers(); if (appStateDescriptor) Object.defineProperty(AppState, 'currentState', appStateDescriptor); });
 
 test('controls wait for the validated model, then send only camera commands', async () => {
-  const view = render(<ModelViewerScreen />); await view.findByTestId('model-webview');
+  const view = await render(<ModelViewerScreen />); await view.findByTestId('model-webview');
   expect(view.getByRole('button', { name: 'Vue générale' }).props.accessibilityState.disabled).toBe(true);
-  message({ ...ready, triangles: 97424 });
+  await message({ ...ready, triangles: 97424 });
   expect(view.getByRole('button', { name: 'Vue générale' }).props.accessibilityState.disabled).toBe(true);
-  message(ready);
+  await message(ready);
   await waitFor(() => expect(view.getByRole('button', { name: 'Vue générale' }).props.accessibilityState.disabled).toBe(false));
-  fireEvent.press(view.getByRole('button', { name: 'Vue générale' })); expect(mockInject).toHaveBeenLastCalledWith(expect.stringContaining('command("overview")'));
-  fireEvent.press(view.getByRole('button', { name: 'Face' })); expect(mockInject).toHaveBeenLastCalledWith(expect.stringContaining('command("front")'));
+  await fireEvent.press(view.getByRole('button', { name: 'Vue générale' })); expect(mockInject).toHaveBeenLastCalledWith(expect.stringContaining('command("overview")'));
+  await fireEvent.press(view.getByRole('button', { name: 'Face' })); expect(mockInject).toHaveBeenLastCalledWith(expect.stringContaining('command("front")'));
   expect(mockProps.onShouldStartLoadWithRequest?.({ url: 'https://example.com' } as never)).toBe(false);
   expect(mockProps.onShouldStartLoadWithRequest?.({ url: 'about:blank' } as never)).toBe(true);
   expect(view.queryByText(/tonnage|séries|pectoraux|deltoïde/i)).toBeNull();
 });
 
 test('background releases the WebView and ignores events from its previous generation', async () => {
-  const view = render(<ModelViewerScreen />); await view.findByTestId('model-webview'); message(ready);
+  const view = await render(<ModelViewerScreen />); await view.findByTestId('model-webview'); await message(ready);
   const previous = mockProps.onMessage;
-  act(() => mockAppChange('background'));
+  await act(() => mockAppChange('background'));
   expect(view.queryByTestId('model-webview')).toBeNull();
   expect(mockInject).toHaveBeenCalledWith(expect.stringContaining('command("dispose")'));
-  act(() => mockAppChange('active')); await view.findByTestId('model-webview');
-  act(() => previous?.({ nativeEvent: { data: JSON.stringify(ready) } } as never));
+  await act(() => mockAppChange('active')); await view.findByTestId('model-webview');
+  await act(() => previous?.({ nativeEvent: { data: JSON.stringify(ready) } } as never));
   expect(view.getByRole('button', { name: 'Face' }).props.accessibilityState.disabled).toBe(true);
-  message(ready); await waitFor(() => expect(view.getByRole('button', { name: 'Face' }).props.accessibilityState.disabled).toBe(false));
-  act(() => mockAppChange('active')); message(ready);
+  await message(ready); await waitFor(() => expect(view.getByRole('button', { name: 'Face' }).props.accessibilityState.disabled).toBe(false));
+  await act(() => mockAppChange('active')); await message(ready);
   expect(view.getByRole('button', { name: 'Face' }).props.accessibilityState.disabled).toBe(false);
   expect(loadModelBase64).toHaveBeenCalledTimes(1);
 });
 
 test('blur removes the rendering surface; focus creates a new one', async () => {
-  const view = render(<ModelViewerScreen />); await view.findByTestId('model-webview'); message(ready);
-  mockFocused = false; view.rerender(<ModelViewerScreen />);
+  const view = await render(<ModelViewerScreen />); await view.findByTestId('model-webview'); await message(ready);
+  mockFocused = false; await view.rerender(<ModelViewerScreen />);
   expect(view.queryByTestId('model-webview')).toBeNull();
-  mockFocused = true; view.rerender(<ModelViewerScreen />); await view.findByTestId('model-webview');
+  mockFocused = true; await view.rerender(<ModelViewerScreen />); await view.findByTestId('model-webview');
   expect(view.getByRole('button', { name: 'Face' }).props.accessibilityState.disabled).toBe(true);
 });
 
 test('a local asset failure has a retry instead of a false ready state', async () => {
   jest.mocked(loadModelBase64).mockRejectedValueOnce(new Error('file missing'));
-  const view = render(<ModelViewerScreen />); await view.findByText('Le mannequin local n’a pas pu être chargé.');
+  const view = await render(<ModelViewerScreen />); await view.findByText('Le mannequin local n’a pas pu être chargé.');
   expect(view.queryByTestId('model-webview')).toBeNull();
-  fireEvent.press(view.getByRole('button', { name: 'Réessayer' })); await view.findByTestId('model-webview');
-  message(ready); await waitFor(() => expect(view.queryByRole('button', { name: 'Réessayer' })).toBeNull());
+  await fireEvent.press(view.getByRole('button', { name: 'Réessayer' })); await view.findByTestId('model-webview');
+  await message(ready); await waitFor(() => expect(view.queryByRole('button', { name: 'Réessayer' })).toBeNull());
 });
 
 test('a stopped content process releases the surface and offers a clean retry', async () => {
-  const view = render(<ModelViewerScreen />); await view.findByTestId('model-webview'); message(ready);
+  const view = await render(<ModelViewerScreen />); await view.findByTestId('model-webview'); await message(ready);
   const stale = mockProps.onMessage;
-  act(() => mockProps.onContentProcessDidTerminate?.({ nativeEvent: {} } as never));
-  act(() => stale?.({ nativeEvent: { data: JSON.stringify(ready) } } as never));
+  await act(() => mockProps.onContentProcessDidTerminate?.({ nativeEvent: {} } as never));
+  await act(() => stale?.({ nativeEvent: { data: JSON.stringify(ready) } } as never));
   await view.findByText('Le rendu 3D a été interrompu. Réessayez.'); expect(view.queryByTestId('model-webview')).toBeNull();
-  fireEvent.press(view.getByRole('button', { name: 'Réessayer' })); await view.findByTestId('model-webview'); message(ready);
+  await fireEvent.press(view.getByRole('button', { name: 'Réessayer' })); await view.findByTestId('model-webview'); await message(ready);
   await waitFor(() => expect(view.getByRole('button', { name: 'Face' }).props.accessibilityState.disabled).toBe(false));
 });

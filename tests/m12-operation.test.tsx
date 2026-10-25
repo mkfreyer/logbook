@@ -12,25 +12,25 @@ jest.mock('expo-router', () => ({ useFocusEffect: (callback: () => void | (() =>
 afterEach(cleanup);
 
 test('retour après ouverture de la séance : la configuration redevient utilisable', async () => {
-  const { result } = renderHook(useScreenOperation);
+  const { result } = await renderHook(useScreenOperation);
   const save = jest.fn<() => Promise<void>>().mockResolvedValue(undefined), navigate = jest.fn();
   await act(async () => { await result.current.run(save, navigate, true); });
   expect(result.current.busy).toBe(true);
   await act(async () => { await result.current.run(save, navigate, true); });
   expect(save).toHaveBeenCalledTimes(1);
-  act(() => { mockBlur?.(); mockBlur = mockFocus(); });
+  await act(() => { mockBlur?.(); mockBlur = mockFocus(); });
   expect(result.current.busy).toBe(false); expect(result.current.lock.current).toBe(false);
   await act(async () => { await result.current.run(save, navigate, true); });
   expect(save).toHaveBeenCalledTimes(2);
 });
 
 test('un retour pendant une écriture ne libère pas prématurément le verrou', async () => {
-  const { result } = renderHook(useScreenOperation);
+  const { result } = await renderHook(useScreenOperation);
   let resolve!: () => void;
   const save = jest.fn(() => new Promise<void>(done => { resolve = done; }));
   let operation!: Promise<void>;
-  act(() => { operation = result.current.run(save); });
-  act(() => { mockBlur?.(); mockBlur = mockFocus(); });
+  await act(() => { operation = result.current.run(save); });
+  await act(() => { mockBlur?.(); mockBlur = mockFocus(); });
   await act(async () => { await result.current.run(save); });
   expect(save).toHaveBeenCalledTimes(1); expect(result.current.busy).toBe(true);
   await act(async () => { resolve(); await operation; });

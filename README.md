@@ -1,6 +1,6 @@
-# Logbook — fiches et alternatives M3.4C
+# Logbook — prototype M4B sur Expo SDK 58
 
-Application iPhone de musculation en React Native, Expo SDK 57, TypeScript, Expo Router et SQLite local. M0 à M3.4C, y compris Passer/Réintégrer, sont validés sur un véritable iPhone. La branche **`feat/m34c-fiches-exercices`**, basée sur M3.4B `e701785`, ajoute les fiches **Description / Conseils / Alternatives**, des repères hors ligne pour les 15 exercices et une aide facultative. Le remplacement depuis une alternative utilise le parcours existant et sa confirmation, uniquement pour l’entraînement actif. La fiche s’ouvre désormais en touchant directement l’encadré bleu de l’exercice actif ; le menu garde les autres actions. **Cet ajustement d’accès direct attend la validation iPhone.** [Vérification rapide](docs/TESTER_ACCES_DIRECT_FICHE_SUR_IPHONE.md).
+Application iPhone de musculation en React Native, Expo SDK 58, TypeScript, Expo Router et SQLite local. M0 à M3.4C, y compris Passer/Réintégrer, ont été validés sur un véritable iPhone avant cette migration. **La version SDK 58 attend un nouveau test sur appareil.** La branche **`feat/m34c-fiches-exercices`**, basée sur M3.4B `e701785`, ajoute les fiches **Description / Conseils / Alternatives**, des repères hors ligne pour les 15 exercices et une aide facultative. Le remplacement depuis une alternative utilise le parcours existant et sa confirmation, uniquement pour l’entraînement actif. La fiche s’ouvre désormais en touchant directement l’encadré bleu de l’exercice actif ; le menu garde les autres actions. **Cet ajustement d’accès direct attend la validation iPhone.** [Vérification rapide](docs/TESTER_ACCES_DIRECT_FICHE_SUR_IPHONE.md).
 
 Aucune migration supplémentaire : SQLite reste **v8**, export personnel format 1 / 20 tables. Les consignes personnelles restent enregistrées ; les nouveaux textes éditoriaux sont inclus avec l’app. [Décisions M3.4C](docs/M3.4C.md) · [Guide de test iPhone](docs/TESTER_M3_4C_SUR_IPHONE.md).
 
@@ -28,17 +28,23 @@ Le premier lancement ne contient aucun programme ni performance fictive. La bibl
 
 ## Tester sur iPhone depuis Windows
 
-Suivre le [guide des séries passées](docs/TESTER_PASSAGE_SERIES_SUR_IPHONE.md), avec Node.js 24, Git et le même Expo Go compatible avec Expo SDK 57. Arrêter Metro avec **Ctrl+C**, ouvrir PowerShell dans `logbook`, puis :
+Suivre le [guide M4B SDK 58](docs/M4B_SDK58_IPHONE_WINDOWS.md), avec Node.js 24,
+Git et Expo Go SDK 58. Arrêter l’ancien Metro avec **Ctrl+C**, ouvrir PowerShell
+dans `logbook`, puis :
 
 ```powershell
 git fetch origin
-git switch feat/m34b-liberte-entrainement
-git pull --ff-only origin feat/m34b-liberte-entrainement
+git switch feat/m4b-migration-expo-sdk58
+git pull --ff-only origin feat/m4b-migration-expo-sdk58
 npm.cmd ci
-npm.cmd start -- --clear
+npm.cmd run viewer:check
+npx.cmd expo start --go --lan
 ```
 
-Si la branche n’existe pas localement, utiliser `git switch --track origin/feat/m34b-liberte-entrainement` à la place du premier `git switch`. Scanner le QR code avec l’iPhone, sur le même réseau Wi-Fi. Conserver le même projet Expo Go pour retrouver les données. **Ne pas désinstaller Expo Go ni effacer son stockage.**
+Scanner le nouveau QR code avec l’iPhone, sur le même Wi-Fi. Dans Musculation,
+ouvrir **Mannequin 3D · Aperçu**. Conserver les données du même projet Expo Go.
+**Ne pas désinstaller Expo Go ni effacer son stockage.**
+Voir [le rapport de migration et ses limites](docs/M4B_SDK58_MIGRATION.md).
 
 ## Vérifications
 

@@ -13,7 +13,9 @@ export function ModelViewer({ controller, onReadyChange, onSurfaceTouch }: {
   onReadyChange(ready: boolean): void;
   onSurfaceTouch?: (hit: SurfaceHit) => void;
 }) {
-  const web = useRef<WebView>(null);
+  // WebView 14 defaults its additional-props generic to undefined, making
+  // WebViewProps & undefined resolve to never. No extra props are required.
+  const web = useRef<WebView<unknown>>(null);
   const [focused, setFocused] = useState(false);
   const [active, setActive] = useState(AppState.currentState === 'active');
   const appActive = useRef(AppState.currentState === 'active');
@@ -69,7 +71,7 @@ export function ModelViewer({ controller, onReadyChange, onSurfaceTouch }: {
   function fail(message: string) { if (currentGeneration === generation.current) { generation.current++; setError(message); } }
   function retry() { dispose(); generation.current++; setAttempt(value => value + 1); }
   return <View style={s.container} testID="model-viewer-container">
-    {visible && html && !error ? <WebView key={`${attempt}-${active}-${focused}`} ref={web}
+    {visible && html && !error ? <WebView<unknown> key={`${attempt}-${active}-${focused}`} ref={web}
       testID="model-webview" style={s.web} source={source} originWhitelist={['*']}
       javaScriptEnabled scrollEnabled={false} bounces={false} overScrollMode="never"
       contentInsetAdjustmentBehavior="never" automaticallyAdjustContentInsets={false}

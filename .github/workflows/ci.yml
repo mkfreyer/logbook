@@ -23,6 +23,10 @@ jobs:
           cache: npm
       - name: Installer les dépendances verrouillées
         run: npm ci
+      - name: Vérifier les versions du SDK Expo installé
+        run: npx expo install --check
+        env:
+          EXPO_OFFLINE: '1'
       - name: Vérifier le moteur 3D embarqué
         run: npm run viewer:check
       - name: Vérifier TypeScript

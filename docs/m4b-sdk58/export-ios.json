@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "platform": "ios",
+  "kind": "JavaScript/Hermes and assets, not IPA",
+  "bundle": "_expo/static/js/ios/entry-329fa4e264376f4459e6f50945b1d03d.hbc",
+  "asset": {
+    "path": "assets/d374fc3e2d556de109ad64d0d09be269",
+    "ext": "glb"
+  },
+  "fileBytes": 1993204,
+  "sha256": "421e593cad17f60d1c0c5e67707729fb88bbf69026795e22011ecc7d90b38959"
+}
