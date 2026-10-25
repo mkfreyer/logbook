@@ -10,16 +10,21 @@
     "start": "expo start",
     "ios": "expo start --ios",
     "typecheck": "tsc --noEmit",
-    "test": "npm run test:db && npm run test:navigation && npm run test:ui",
+    "test": "npm run test:db && npm run test:navigation && npm run test:ui && npm run test:model-viewer",
     "export:ios": "expo export --platform ios --output-dir dist/ios",
     "test:db": "tsx --test tests/db.test.ts tests/m1-db.test.ts tests/m12-db.test.ts tests/m2-db.test.ts tests/m2-summary.test.ts tests/m3-history.test.ts tests/m32-data.test.ts tests/m33-data.test.ts tests/m34a-data.test.ts tests/m34b-data.test.ts tests/set-passages-data.test.ts tests/m34c-data.test.ts",
     "test:ui": "jest --runInBand",
-    "test:navigation": "tsx --test tests/navigation.test.ts"
+    "test:navigation": "tsx --test tests/navigation.test.ts",
+    "viewer:build": "node tools/m4b/build-viewer.mjs",
+    "viewer:check": "node tools/m4b/build-viewer.mjs --check",
+    "test:model-viewer": "tsx --test tests/model-viewer.test.ts",
+    "test:viewer-browser": "tsx tools/m4b/test-browser.ts"
   },
   "dependencies": {
     "@expo/metro-runtime": "~57.0.16",
     "@expo/vector-icons": "^15.1.1",
     "expo": "~57.0.28",
+    "expo-asset": "57.0.20",
     "expo-audio": "~57.0.5",
     "expo-constants": "~57.0.21",
     "expo-crypto": "~57.0.4",
@@ -41,16 +46,21 @@
     "react-native-screens": "~4.26.0",
     "react-native-svg": "15.15.4",
     "react-native-web": "^0.21.4",
-    "react-native-worklets": "0.10.1"
+    "react-native-webview": "13.16.1",
+    "react-native-worklets": "0.10.1",
+    "three": "0.186.1"
   },
   "devDependencies": {
     "@testing-library/react-native": "^13.3.3",
     "@types/jest": "^29.5.14",
     "@types/node": "^24.0.0",
     "@types/react": "~19.2.2",
+    "@types/three": "0.186.0",
     "babel-preset-expo": "~57.0.15",
+    "esbuild": "0.28.2",
     "jest": "^29.7.0",
     "jest-expo": "~57.0.6",
+    "playwright": "1.64.1",
     "react-test-renderer": "19.2.3",
     "tsx": "^4.20.0",
     "typescript": "~6.0.3"

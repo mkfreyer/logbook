@@ -23,6 +23,8 @@ jobs:
           cache: npm
       - name: Installer les dépendances verrouillées
         run: npm ci
+      - name: Vérifier le moteur 3D embarqué
+        run: npm run viewer:check
       - name: Vérifier TypeScript
         run: npm run typecheck
       - name: Tester SQLite, M0 à M3.4C et la navigation

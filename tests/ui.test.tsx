@@ -415,3 +415,10 @@ describe('M0 : suppressions confirmées', () => {
     expect(mockStore.deleteWorkout).not.toHaveBeenCalled();
   });
 });
+
+
+test('the discreet 3D entry opens its own route from Musculation', () => {
+  const view = render(<ProgramsScreen />);
+  fireEvent.press(view.getByRole('button', { name: 'Ouvrir le mannequin 3D' }));
+  expect(router.push).toHaveBeenCalledWith('/muscle-viewer');
+});
