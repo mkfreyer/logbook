@@ -1,0 +1,5 @@
+{
+  "isolated_texels_reassigned": 2,
+  "covered_zero_hole_texels_filled": 3,
+  "scope": "Only one-pixel components and enclosed zero holes of at most four covered pixels in the 2048 atlas."
+}

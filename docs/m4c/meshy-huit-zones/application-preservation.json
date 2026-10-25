@@ -1,0 +1,546 @@
+{
+  "baseCommit": "11d56d0f0aaf2a4dd621438fcd09f41f9bca4256",
+  "allExistingProtectedFilesBitIdentical": true,
+  "checkedFiles": [
+    {
+      "file": ".github/workflows/ci.yml",
+      "sha256": "95a9356c58b87b0639ba162b1b6079a480acca36be42ae24d591c6c126320b43"
+    },
+    {
+      "file": ".nvmrc",
+      "sha256": "68ca3fba3b7e864770cb61aeb306d4bd4354b68ab4dd38450860c5d823e42a53"
+    },
+    {
+      "file": "app.json",
+      "sha256": "8b11a9b23bb8ca848e9002adb4258e99ad0a0e7758cb5383cf188771f33344c8"
+    },
+    {
+      "file": "app/_layout.tsx",
+      "sha256": "995e29b045f86fdb35c2060a419c607b902c1a3def3b02b35815fc0b7e8985ba"
+    },
+    {
+      "file": "app/exercises/[exerciseId]/edit.tsx",
+      "sha256": "071f864ffcd0ded70f18f2995b921330781ef0cb5085b53debec3ba8168daeb0"
+    },
+    {
+      "file": "app/exercises/[exerciseId]/index.tsx",
+      "sha256": "5615d0fff3f5c94464bd49495ca19f3b51ebb104b06eda0561d4941f432a95ee"
+    },
+    {
+      "file": "app/exercises/index.tsx",
+      "sha256": "6d11ccf0167cc60c9d80bcf96547ddb3a50595539b4508a502cc572a556002a7"
+    },
+    {
+      "file": "app/exercises/new.tsx",
+      "sha256": "80a88d712ae403f4928205ff459032b2ac3e2db53f372972334efd1e99bda9af"
+    },
+    {
+      "file": "app/history/exercises/[exerciseId].tsx",
+      "sha256": "16546d87012cfc95c30cba107d9ee8177e53f4f7a48c0538eb0f13c738ef2550"
+    },
+    {
+      "file": "app/history/exercises/index.tsx",
+      "sha256": "d35363404ebba2deee3808e0b0c00fa632f89436a3c098f6da2f930325625bfb"
+    },
+    {
+      "file": "app/history/index.tsx",
+      "sha256": "e9ac67d3bc50e429fdc1926243a61532fc3f9f8406bc1f7a29c89edd991adba9"
+    },
+    {
+      "file": "app/history/programs/[programId].tsx",
+      "sha256": "024c8b0d937d145a652e0ce16d743d8e2f91068c3f16c7d17e4adf2e2447eb57"
+    },
+    {
+      "file": "app/history/sessions/[sessionId].tsx",
+      "sha256": "ffd263f2eea3c982f0b44e60a24d04714730d36300043b49d638713a3c6b769d"
+    },
+    {
+      "file": "app/index.tsx",
+      "sha256": "ebb317e091720003517e99fd1ff0e6ac9556577c7782957a0c6b910fa85d0b74"
+    },
+    {
+      "file": "app/muscle-viewer.tsx",
+      "sha256": "777eb73a6b14d50dfc099cabf00fe46feab220d7909d2dbc87c17216992f5061"
+    },
+    {
+      "file": "app/programs/[id]/edit.tsx",
+      "sha256": "3393b20810d5e059f627e7030c1cee392239f3a079960b19778d91bf595a2992"
+    },
+    {
+      "file": "app/programs/[id]/index.tsx",
+      "sha256": "eac14cb5069e39461204fded694e53f0d73e38b68d226042ebf1a98c2768e7a4"
+    },
+    {
+      "file": "app/programs/[id]/workouts/[workoutId]/custom-exercise.tsx",
+      "sha256": "4063d6aee6be27b6c7fb3f36ba8f09ed64e2cd6a9f826813827cef0fc6a88538"
+    },
+    {
+      "file": "app/programs/[id]/workouts/[workoutId]/edit.tsx",
+      "sha256": "3cc7d1d2a5907f9de0367ed86109eca130e3e15ad9d57d7e18e3454a9e3af0b4"
+    },
+    {
+      "file": "app/programs/[id]/workouts/[workoutId]/exercises/[exerciseInstanceId]/edit.tsx",
+      "sha256": "4296dbdc02e7a79eb12756594e72d1fee94efe048d6042d4fd49be80e48f2773"
+    },
+    {
+      "file": "app/programs/[id]/workouts/[workoutId]/exercises/[exerciseInstanceId]/index.tsx",
+      "sha256": "5d47b3db42aa0a4a716094fc2459f6bcdbace0d31d97fd194baefb794adb33c0"
+    },
+    {
+      "file": "app/programs/[id]/workouts/[workoutId]/exercises/[exerciseInstanceId]/sets/[setId]/edit.tsx",
+      "sha256": "94a7673b98ebe20e05609219bd17fb2ec6dce21adfc5bd7faed1a648ed60f70b"
+    },
+    {
+      "file": "app/programs/[id]/workouts/[workoutId]/exercises/[exerciseInstanceId]/sets/new.tsx",
+      "sha256": "8f0747dd0e9e2e002382afd87fbc055e4744a069f9606af350fc17e9e8f6a59d"
+    },
+    {
+      "file": "app/programs/[id]/workouts/[workoutId]/index.tsx",
+      "sha256": "36b1ce54bfd908dc323fbf7f3ec8a656d698ab41b14556c2b48e3959f9d2ff1a"
+    },
+    {
+      "file": "app/programs/[id]/workouts/[workoutId]/library.tsx",
+      "sha256": "9f3a0f7a0308e1dc7bc215691540f33f92b87fbfe6f319fce9ded2343ff7f55f"
+    },
+    {
+      "file": "app/programs/[id]/workouts/index.tsx",
+      "sha256": "5fb489866a0ebec25a55f23988216ef77caeda2e3622332f4f09e24f2da057fe"
+    },
+    {
+      "file": "app/programs/[id]/workouts/new.tsx",
+      "sha256": "7dc00f2d7597e977f97dc99a2e88bdf9f809a5a82ae9ffe2f4982afd21bd3e3d"
+    },
+    {
+      "file": "app/programs/index.tsx",
+      "sha256": "25aadf4e9d08ec45c8f16147623fdc24a0b6d0a10d01004fa55e37cfaa6aff38"
+    },
+    {
+      "file": "app/programs/new.tsx",
+      "sha256": "13368ff286ba1399004dcb8ad79b416aaf0eeccef97a1a71b2e2ed4ffa817d15"
+    },
+    {
+      "file": "app/sessions/[sessionId]/add.tsx",
+      "sha256": "b68ac6fe6d28d23031183f7e23e939958163bfd7d1e95843111f910bce6b7b70"
+    },
+    {
+      "file": "app/sessions/[sessionId]/edit.tsx",
+      "sha256": "d415820109fd3695992d04ed967c2b635aadeaaa195f60c290048bc0e7eff898"
+    },
+    {
+      "file": "app/sessions/[sessionId]/exercises.tsx",
+      "sha256": "d6f30fba853e57424f3746e8275b9b1e719c3e3c05af018435d3b0163fcdb7d1"
+    },
+    {
+      "file": "app/sessions/[sessionId]/index.tsx",
+      "sha256": "b0343ac1722b2508f44270fd21275fbfd98972db72466078c0acb2602c0c2a7e"
+    },
+    {
+      "file": "app/sessions/[sessionId]/notes.tsx",
+      "sha256": "b66f8301bd433a8a0d42355fc9d166101823a4c33236a833cc60862614e400b3"
+    },
+    {
+      "file": "app/sessions/[sessionId]/replace.tsx",
+      "sha256": "4becfa968a76ce154497d0d5f2c5fe8d27e6b30879095f6fb288f878620c54ff"
+    },
+    {
+      "file": "app/sessions/completed.tsx",
+      "sha256": "53979ff1c4c566eaf0b2b65c4200cf76af459fdf558c68fd73083f2d29281e78"
+    },
+    {
+      "file": "app/settings.tsx",
+      "sha256": "56d7466bfe516700159e7bdfc6c7768c8c8aaa58ae9775c28c4f67c84e7aa821"
+    },
+    {
+      "file": "assets/models/README.md",
+      "sha256": "25b4c3f542dc1e1bd1fd4a9aa62bf2b4013630aca784773056d56e0419b7deab"
+    },
+    {
+      "file": "assets/models/meshy-e45e5d8.glb",
+      "sha256": "421e593cad17f60d1c0c5e67707729fb88bbf69026795e22011ecc7d90b38959"
+    },
+    {
+      "file": "assets/rest-complete.wav",
+      "sha256": "dde2a70def1f6e247ea6f5b1a3cb870d2efde7cad21e29bc85d702b032ebf00f"
+    },
+    {
+      "file": "babel.config.js",
+      "sha256": "4b96981e76f4da97464e553a3af2c16fbb8e2da6d8a1983246087ed5a0e6afa8"
+    },
+    {
+      "file": "metro.config.js",
+      "sha256": "f016a3f10ceba7bcb46d4f631ad27c714ccbe7e68fb977c26c1352f60ea8096d"
+    },
+    {
+      "file": "package-lock.json",
+      "sha256": "69d96faf8b11ff0c8473f04473edc5dd75c11fadb3039eaf7b4b0043f31433bf"
+    },
+    {
+      "file": "package.json",
+      "sha256": "f524aca4e951da9fddb708fa6bb2985438d58ffb8d9b6fc7725086108034ee8e"
+    },
+    {
+      "file": "src/data/exerciseGuides.ts",
+      "sha256": "544b684ad4fdc9b33e0a40284678c008fe384d057b90753f3a519f9f96b86f92"
+    },
+    {
+      "file": "src/data/exportPersonalData.ts",
+      "sha256": "f71ab8f90db5908c7e5bd11abaa768bcfe2905b05eec1af391a3706652ae79dc"
+    },
+    {
+      "file": "src/data/personalExport.ts",
+      "sha256": "b16646604fcc92f42f475d8446edd1802ba19e123a5d309830590a2cf865b884"
+    },
+    {
+      "file": "src/db/exerciseCatalog.ts",
+      "sha256": "b063f3179aab05def0b7b9058021712462cc81c04c55bd73ecea0da02ed41575"
+    },
+    {
+      "file": "src/db/historyRepository.ts",
+      "sha256": "550bf91d936e50379f817702acaa0b77c4bdfa698bb1e3f7d1184dc34adb9f1b"
+    },
+    {
+      "file": "src/db/migrations.ts",
+      "sha256": "727480c6aa457261fb3b16b015eaa98d113535885b52374b3b843b20d32dade9"
+    },
+    {
+      "file": "src/db/plannedSets.ts",
+      "sha256": "7852aff8c0ada3002c2e0d0390f30385a343bc58aede20c682c918d2a2bf5694"
+    },
+    {
+      "file": "src/db/preferencesRepository.ts",
+      "sha256": "816097efa76681e4473d6607b3f9461148e88e18f87799553aaddee9a7a867f2"
+    },
+    {
+      "file": "src/db/repository.ts",
+      "sha256": "8cab464fb654f796a0269d2dc1cb27a0288b127befd9ce3959cab1f81c6bbd5d"
+    },
+    {
+      "file": "src/db/sessionRepository.ts",
+      "sha256": "4001d2e096e3221aff2b35804af50dde3014df45f2c23d6de5bf3cf3ada6f254"
+    },
+    {
+      "file": "src/db/sessionSetOperations.ts",
+      "sha256": "9d511de7ab08cc184eec8d695fd6db352193f33aa6f7b50227220153d36a59c5"
+    },
+    {
+      "file": "src/db/trainingRepository.ts",
+      "sha256": "7dfa408a83377f0c5f12b06903e5d731bd18932a61b6e2558458e1e8346aa68e"
+    },
+    {
+      "file": "src/db/types.ts",
+      "sha256": "dc43cf524a798b34d87ff96bbcaf8cb0e67f8d94df3977387ecbd6c5a947137b"
+    },
+    {
+      "file": "src/domain/activity.ts",
+      "sha256": "48567e5e37f86d822cfdc6616a2236deb3bc3270b45efba607cbaf18a8e2b80c"
+    },
+    {
+      "file": "src/domain/history.ts",
+      "sha256": "08b6f164e7db496c0bdeacb8859ab73d5e1a9d38b1529eb2d09835cffa8a81aa"
+    },
+    {
+      "file": "src/domain/models.ts",
+      "sha256": "ad5feb6ce27a087c0f69c6c1fa4bef7092205b6e2189716ac88c3d520a50190d"
+    },
+    {
+      "file": "src/domain/preferences.ts",
+      "sha256": "89afe6d88a72b2e4f03d16c55a8e8649787f447207b3ed976cfb75697423fd34"
+    },
+    {
+      "file": "src/domain/restTimer.ts",
+      "sha256": "694d8f5cb35ff297301bec8c0f50853cb69d5065f09904b580725c041442b8c2"
+    },
+    {
+      "file": "src/domain/series.ts",
+      "sha256": "5020a5753b0311ba0cecc58728e75c3cde4d84a29b53472013d603f930edd973"
+    },
+    {
+      "file": "src/domain/session.ts",
+      "sha256": "3cc34e148f13ebf28a8f5666da81576de084c14b9d9acdbcd58715527fc5c5c9"
+    },
+    {
+      "file": "src/domain/sessionError.ts",
+      "sha256": "9f76b8430e9152bb107f35a15fd3d155323d955272aaefdcfc6376a57af90820"
+    },
+    {
+      "file": "src/domain/sessionSummary.ts",
+      "sha256": "3b630d1c4347ec1373264379a9006544a5f502efffb46c9e4103eb473c0a9558"
+    },
+    {
+      "file": "src/domain/setDraft.ts",
+      "sha256": "b31703fb92d24d1a34ce4d16523497aa78d0dd8faec48633c38830aa756196bc"
+    },
+    {
+      "file": "src/domain/training.ts",
+      "sha256": "a6d2b924bc57edc662b6397b925f842ca4e184affdcd06776220de1ce5e04399"
+    },
+    {
+      "file": "src/features/exercises/CatalogExerciseEditor.tsx",
+      "sha256": "6386bbe7898a98564e774493421f0bdf0f431a7408fd32b70205ea850a59b4d0"
+    },
+    {
+      "file": "src/features/exercises/ExerciseCatalog.tsx",
+      "sha256": "2ae8305744b925078314d65a9948a676a03966c227417c72aa502e3193ca43e4"
+    },
+    {
+      "file": "src/features/exercises/ExerciseDetail.tsx",
+      "sha256": "25b6f32b07702fbf34dc5619fe9a031c3be38a623cb9a1c1f64c678fb4db35fe"
+    },
+    {
+      "file": "src/features/exercises/TrainingHelp.tsx",
+      "sha256": "d566c8e8bcb569def9755e3a21f14cb38cbe1dbe84047205321c80d7a690e6e0"
+    },
+    {
+      "file": "src/features/history/ExerciseHistory.tsx",
+      "sha256": "4d632d282056cfb9e84b16eb5542c4baaf592264c2761bb14a7c3b97b068e74d"
+    },
+    {
+      "file": "src/features/history/HistoryOverview.tsx",
+      "sha256": "2558ed0ed821d4573583f7f582f3e8d82519f421fe692ed39d3505412c4539e3"
+    },
+    {
+      "file": "src/features/history/ProgressChart.tsx",
+      "sha256": "743336c571cf1e45fbb2579e98f091417d34cc233cd5c047184b19ca509042c6"
+    },
+    {
+      "file": "src/features/history/SessionHistory.tsx",
+      "sha256": "b7d2d7756608b18652936d163478b4c2e33a9eff8259c7729b35980c2e77fb62"
+    },
+    {
+      "file": "src/features/history/shared.tsx",
+      "sha256": "21f96d35765592d7912b8ca0efe1d7c15c4d89b5096579185e6ebb886502135c"
+    },
+    {
+      "file": "src/features/home/HomeActivityCards.tsx",
+      "sha256": "757eb91549439c024bb56095492138bfc99cd2f75eccc656bb9b935a62621c25"
+    },
+    {
+      "file": "src/features/home/HomeScreen.tsx",
+      "sha256": "605a3be2d8a7f73cc5fddbe807b4f5b73e7319c9b6401dc26bef2fcc075953f4"
+    },
+    {
+      "file": "src/features/home/useHomeActivity.ts",
+      "sha256": "705627ee727e55d4d8c84477da14366eadf6b2ca6fae657adc0b7c3883851d1d"
+    },
+    {
+      "file": "src/features/model3d/ModelViewer.tsx",
+      "sha256": "1308da44d5c77e2ed7ddd86b164786df3cd669a1888997bd355bf4b0b9466462"
+    },
+    {
+      "file": "src/features/model3d/ModelViewerScreen.tsx",
+      "sha256": "58f358218efbfbf93c7c841e69f3f6f2ff852f42377819ac3e40100707163fac"
+    },
+    {
+      "file": "src/features/model3d/bridge.ts",
+      "sha256": "5a6cecf1334ce215b0be9c483b47bdf250f1270208895e693db72b3b011805f9"
+    },
+    {
+      "file": "src/features/model3d/camera.ts",
+      "sha256": "f2261a1cad26ec0b9ce96f1cacc3de7fcd3cc82880a25341afb643058d232316"
+    },
+    {
+      "file": "src/features/model3d/document.ts",
+      "sha256": "1c632250f4ac4bf95adf8c8b14c16d6a9b131a5bf3c207daef919a476f1cbeff"
+    },
+    {
+      "file": "src/features/model3d/generated/viewerBundle.ts",
+      "sha256": "68d3b3a33a4b986ba96fa402c01670b63b0a0c63968220942cf6664e75e50172"
+    },
+    {
+      "file": "src/features/model3d/loadModel.ts",
+      "sha256": "2f75a563645c03140198133a41afc9338ddf6b04738095c56baa1517c68a4239"
+    },
+    {
+      "file": "src/features/model3d/model.ts",
+      "sha256": "17e5f96fef562cec837f8dbd41e3dbd6f44f4f1e0df9220402c93430f59615ac"
+    },
+    {
+      "file": "src/features/model3d/web/viewer.ts",
+      "sha256": "cbf3f3186d768ab91f0a19a85efb629cbe1731ddac4ecef738792d7fb5ba8b20"
+    },
+    {
+      "file": "src/features/programs/ProgramEditor.tsx",
+      "sha256": "3a068c5dc62655c1dc72723de4f6618f23b2d59b1a622b0a0a19eb162bc9a947"
+    },
+    {
+      "file": "src/features/programs/ProgramsScreen.tsx",
+      "sha256": "2998c719987840538254bed351eb766391ff2be33780cd131c2d1649c8105900"
+    },
+    {
+      "file": "src/features/programs/WorkoutEditor.tsx",
+      "sha256": "13a90211b2adeff71b0fd6aa3637c6eaba9ddaca769b317e7778b36289b6803a"
+    },
+    {
+      "file": "src/features/programs/shared.tsx",
+      "sha256": "566d37e64baa22bc0f55d8cbfe3601246827cc4bff454458bbe665b67766edf6"
+    },
+    {
+      "file": "src/features/programs/useConfirmedDelete.ts",
+      "sha256": "cf15f3186b17c790726594850c2a29d8efceca9cb55c9d7c6e6aa695dd6d0243"
+    },
+    {
+      "file": "src/features/sessions/CompletedSessions.tsx",
+      "sha256": "10c111775c921b2e0e22b383922efa24a4fd69ca800b8a8e6f1b83912b615005"
+    },
+    {
+      "file": "src/features/sessions/PassedSets.tsx",
+      "sha256": "babe19bb93c19aaf7a6564bcbb51110db4166256d636cf5eec255ace2ac96cc5"
+    },
+    {
+      "file": "src/features/sessions/PreviousPerformanceCard.tsx",
+      "sha256": "e9ce11553050a9a77bca46d7f59ec641d5cc2126b843c0a341b12f5da622ed8e"
+    },
+    {
+      "file": "src/features/sessions/RemainingExercises.tsx",
+      "sha256": "ced08c8e0bf4b93ea0f9e10346d7a3d50b0284ec187c442dcbc2d2f50f94de1c"
+    },
+    {
+      "file": "src/features/sessions/RestTimer.tsx",
+      "sha256": "77b0cc2b657a6872814ec89cfa05680b2c07b5c0f774c2b334c1ac45946e97ff"
+    },
+    {
+      "file": "src/features/sessions/ResumeSessionCard.tsx",
+      "sha256": "4dbb83a297d90c0792ede6f611339fe35c839457c1fda9e11a52813f700cd4a2"
+    },
+    {
+      "file": "src/features/sessions/SessionNotes.tsx",
+      "sha256": "818e7f241a8c84e6eb73b99ca66e6be6ceb52ca0a1729efffdf9ec897d696803"
+    },
+    {
+      "file": "src/features/sessions/SessionReplacement.tsx",
+      "sha256": "5f17bd07d175f8a043df08eeb2f7283172507ca5c6e78fb9c8b42683d0ca7b61"
+    },
+    {
+      "file": "src/features/sessions/SessionScreen.tsx",
+      "sha256": "b2d0a3267cdb9c6197b29cdc47da23783ad35850019134f0be6df245cf95c0d3"
+    },
+    {
+      "file": "src/features/sessions/SessionSetEditor.tsx",
+      "sha256": "ea90c534910646e55f5384f5ff28ca731951b70fc7d3b287831faca8ec7cd221"
+    },
+    {
+      "file": "src/features/sessions/SessionSummaryView.tsx",
+      "sha256": "941c821f5f56a8c14bb6c3959f0c416ffdf8dc7237df7d412c7d6e6d9cb31dd8"
+    },
+    {
+      "file": "src/features/sessions/shared.tsx",
+      "sha256": "d92e80b5a82c6baeba3962da292ff3ed76151259a78a96825c284354a70f99ef"
+    },
+    {
+      "file": "src/features/sessions/useExerciseReplacement.ts",
+      "sha256": "c4bf05031ade3439cc1b2abef64fbb289b18084605f4c6f848268ce3f7256e49"
+    },
+    {
+      "file": "src/features/sessions/useRestAlert.ts",
+      "sha256": "68582f50288dd8ec625b342b9053c335e16b064d474102d13752e407afb2ddbc"
+    },
+    {
+      "file": "src/features/sessions/useSessionConfirmation.ts",
+      "sha256": "4ce4dd74ba098e23b44f22ad47ae8a63aa94ad11965beb9ab6397d5a435b45db"
+    },
+    {
+      "file": "src/features/sessions/useSkipSet.ts",
+      "sha256": "2b1ace864e2c24e8f77c09fb0e40badbd0000adbfc28043800661ce424024067"
+    },
+    {
+      "file": "src/features/settings/SeriesDisplaySettings.tsx",
+      "sha256": "8ec1a6625cfeadd7d19caae1b29ad0e882dbb3ec2b845bd400af2d247d2da139"
+    },
+    {
+      "file": "src/features/settings/SettingsScreen.tsx",
+      "sha256": "124a3175538e55e98f452fabe8f182a9b069b663d8269b816afb5ddb6c297c4c"
+    },
+    {
+      "file": "src/features/training/CustomExerciseEditor.tsx",
+      "sha256": "3c9fc0113faf1492b8b41df061bd1f3d844243a327c9ec8171cf449a29cdb1a1"
+    },
+    {
+      "file": "src/features/training/ExerciseLibrary.tsx",
+      "sha256": "6a301ab7b1adc4c6625dcc64e2b361b730ca0ad9f23444927159c5433f346865"
+    },
+    {
+      "file": "src/features/training/ExerciseOverview.tsx",
+      "sha256": "06f3312453291e2eedaa97bfb87cc28314334a20bddd18504e9491817e0e457d"
+    },
+    {
+      "file": "src/features/training/LoadRuleFields.tsx",
+      "sha256": "03ca70e6e697b643b050803d043655b9672f6f224b6260ea2d031d8264bb6cbf"
+    },
+    {
+      "file": "src/features/training/PlannedExerciseEditor.tsx",
+      "sha256": "7ad8d81cfc3cda59f8d8bf642c3a763347ebbcda7857d83bff585fef59922beb"
+    },
+    {
+      "file": "src/features/training/SetEditor.tsx",
+      "sha256": "cafeb79f4fa8bb1ea879705dec1bb7aa34c28759f4452eb3d51317b985a127d3"
+    },
+    {
+      "file": "src/features/training/WorkoutOverview.tsx",
+      "sha256": "c3d0336c0f654f41c6b96be30edf1b3fc5ac95440f795cba05f09867e79fc883"
+    },
+    {
+      "file": "src/features/training/shared.tsx",
+      "sha256": "1c0980a55dcaa1911873667922b099291670d7f4cda512c1c2e06b02507d1c36"
+    },
+    {
+      "file": "src/features/training/useWorkoutPlan.ts",
+      "sha256": "6036c10c92dd41a0f801a8ac26872a8d6994d8bacef8b4a060b7c2317a02cfee"
+    },
+    {
+      "file": "src/navigation/UniverseContext.tsx",
+      "sha256": "ef97be60c9065e82577a1fc27f4534d55524f32feb3de926281115e315ee915a"
+    },
+    {
+      "file": "src/navigation/UniversePager.tsx",
+      "sha256": "a5b2b1eb5e5126a8299620baedbd392cd07cb28f3910f897352ed3b69d3a4958"
+    },
+    {
+      "file": "src/navigation/UniverseScreen.tsx",
+      "sha256": "c057ae9203e2081cb7e8491caeadf70d59e8e38ea1be4e2fb9aa68c6b21dadb2"
+    },
+    {
+      "file": "src/navigation/physics.ts",
+      "sha256": "ef5bf15855e71e000d5ff0dbb50f85cb486783770fe994790ffc4323bd7014f2"
+    },
+    {
+      "file": "src/store/LogbookProvider.tsx",
+      "sha256": "3a78b8319365305088f49b7a7f57493700b9a2ded8439caa5a66f77f73fd7992"
+    },
+    {
+      "file": "src/store/PreferencesProvider.tsx",
+      "sha256": "9ff16c63a5f39bc6a44928a92a999e4d914dcbdbac17cc5871d56c0a6f3e06e9"
+    },
+    {
+      "file": "src/store/SeriesDisplayProvider.tsx",
+      "sha256": "6444769a68d1156c52b8c31dfaff98ca7d2a0f1580d29f692068a8c01df6a8e5"
+    },
+    {
+      "file": "src/store/SessionProvider.tsx",
+      "sha256": "114211edb92821dc7933259240d90074d917a82b13692a34f88c861f62634aa7"
+    },
+    {
+      "file": "src/store/TrainingProvider.tsx",
+      "sha256": "0682d79fa93a70e66f857e8369309f5c3c7d4700a708fa154dfb1e8431ae365e"
+    },
+    {
+      "file": "src/ui/index.tsx",
+      "sha256": "e14e1eb787ee6e7750104695bc3f33df0dbe95bae8d0f3a57ce2f14c457aa003"
+    },
+    {
+      "file": "tools/m4b/build-viewer.mjs",
+      "sha256": "1deb2edcf244a2e7b3e6a30f40f905995e8559dc222ecd98645fdf2cabf04ad0"
+    },
+    {
+      "file": "tools/m4b/test-browser.ts",
+      "sha256": "520b0d662375df1cbd3eebbafb7853a4e091974ff390911d50192f73f56881a2"
+    },
+    {
+      "file": "tsconfig.json",
+      "sha256": "ddcd97a23dc6a057b9138c71ba71bddb6b667a94ded0a1bec19209cd92424f75"
+    }
+  ],
+  "SQLiteSchemaVersion": 8,
+  "applicationOrViewerIntegrationPerformed": false,
+  "userConfirmedM4BSDK58OnIPhone": true,
+  "M4CIPhoneTestPerformed": false
+}
