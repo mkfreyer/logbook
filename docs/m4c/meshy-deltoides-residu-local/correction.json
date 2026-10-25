@@ -1,0 +1,27 @@
+{
+  "referenceCommit": "71f70dc",
+  "onlyTransition": [
+    8,
+    0
+  ],
+  "changedTexels": 1142,
+  "isolatedBorderTexelsRemoved": 0,
+  "rightPosteriorTexelsBefore": 24061,
+  "rightPosteriorTexelsAfter": 22919,
+  "rightPosteriorRetainedUVPercent": 95.2537,
+  "sevenOtherMasksByteIdentical": true,
+  "geometryAndUVUnchanged": true,
+  "actualRemovedSurfaceBoundsM": {
+    "min": [
+      -0.2538447678089142,
+      0.4843475818634033,
+      -0.11543513834476471
+    ],
+    "max": [
+      -0.23193737864494324,
+      0.4987926483154297,
+      -0.08277177810668945
+    ]
+  },
+  "controlGlbSha256": "4451ef36f8666481da81260c7671da40dc81299d7057b1c8ed0dd6bd726a5def"
+}

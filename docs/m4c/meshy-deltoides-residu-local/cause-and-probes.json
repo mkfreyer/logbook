@@ -1,0 +1,173 @@
+{
+  "cause": "Real ID8/alpha mask footprint at the previous boundary inflection, not interpolation alone. Linear display filtering is unchanged.",
+  "probes": [
+    {
+      "pixel": [
+        216,
+        456
+      ],
+      "point": [
+        -0.24141931533813477,
+        0.4923698604106903,
+        -0.1052253246307373
+      ],
+      "face": 11724,
+      "role": "remove",
+      "uv": [
+        0.6878021689778576,
+        0.44167037296898515
+      ],
+      "beforeId": 8,
+      "afterId": 0,
+      "beforeBilinearGreenWeight": 1.0,
+      "afterBilinearGreenWeight": 0.0
+    },
+    {
+      "pixel": [
+        218,
+        460
+      ],
+      "point": [
+        -0.2436065673828125,
+        0.4907159209251404,
+        -0.10175657272338867
+      ],
+      "face": 11494,
+      "role": "remove",
+      "uv": [
+        0.6872355626325644,
+        0.43852181805874235
+      ],
+      "beforeId": 8,
+      "afterId": 0,
+      "beforeBilinearGreenWeight": 1.0,
+      "afterBilinearGreenWeight": 0.0
+    },
+    {
+      "pixel": [
+        222,
+        464
+      ],
+      "point": [
+        -0.2483983039855957,
+        0.4892454743385315,
+        -0.09440159797668457
+      ],
+      "face": 11058,
+      "role": "remove",
+      "uv": [
+        0.2672551316252438,
+        0.11179493734823868
+      ],
+      "beforeId": 8,
+      "afterId": 0,
+      "beforeBilinearGreenWeight": 1.0,
+      "afterBilinearGreenWeight": 0.0
+    },
+    {
+      "pixel": [
+        220,
+        438
+      ],
+      "point": [
+        -0.2528681755065918,
+        0.5012527704238892,
+        -0.09121346473693848
+      ],
+      "face": 10642,
+      "role": "keep-green",
+      "uv": [
+        0.24539940445877836,
+        0.4349339748326231
+      ],
+      "beforeId": 8,
+      "afterId": 8,
+      "beforeBilinearGreenWeight": 1.0,
+      "afterBilinearGreenWeight": 1.0
+    },
+    {
+      "pixel": [
+        228,
+        448
+      ],
+      "point": [
+        -0.2555418014526367,
+        0.4970141649246216,
+        -0.08341312408447266
+      ],
+      "face": 10376,
+      "role": "keep-green",
+      "uv": [
+        0.23988981332409196,
+        0.4345112224428547
+      ],
+      "beforeId": 8,
+      "afterId": 8,
+      "beforeBilinearGreenWeight": 1.0,
+      "afterBilinearGreenWeight": 1.0
+    },
+    {
+      "pixel": [
+        236,
+        474
+      ],
+      "point": [
+        -0.25574636459350586,
+        0.48538005352020264,
+        -0.07808208465576172
+      ],
+      "face": 10407,
+      "role": "keep-green",
+      "uv": [
+        0.23402258211821267,
+        0.4278335788181066
+      ],
+      "beforeId": 8,
+      "afterId": 8,
+      "beforeBilinearGreenWeight": 1.0,
+      "afterBilinearGreenWeight": 1.0
+    },
+    {
+      "pixel": [
+        242,
+        450
+      ],
+      "point": [
+        -0.2583491802215576,
+        0.4965197443962097,
+        -0.07163453102111816
+      ],
+      "face": 10270,
+      "role": "keep-blue",
+      "uv": [
+        0.23237219212695742,
+        0.43776676343360044
+      ],
+      "beforeId": 7,
+      "afterId": 7,
+      "beforeBilinearGreenWeight": 0.0,
+      "afterBilinearGreenWeight": 0.0
+    },
+    {
+      "pixel": [
+        208,
+        468
+      ],
+      "point": [
+        -0.2428746223449707,
+        0.4868653416633606,
+        -0.10889673233032227
+      ],
+      "face": 11559,
+      "role": "keep-neutral",
+      "uv": [
+        0.6928400588115569,
+        0.44128215451247227
+      ],
+      "beforeId": 0,
+      "afterId": 0,
+      "beforeBilinearGreenWeight": 0.0,
+      "afterBilinearGreenWeight": 0.0
+    }
+  ]
+}
