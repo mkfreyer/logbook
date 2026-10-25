@@ -1,0 +1,12 @@
+{
+  "file": "meshy-corps-tete-assemble.glb",
+  "bytes": 1993204,
+  "sha256": "421e593cad17f60d1c0c5e67707729fb88bbf69026795e22011ecc7d90b38959",
+  "nodes": 1,
+  "meshes": 1,
+  "materials": 1,
+  "triangles": 110588,
+  "textures": 0,
+  "attribution_embedded": true,
+  "exporter_sha256": "348fb76e2bd67f0addc3da905133213a6114aed32fcad7651cc2679ef9a32034"
+}

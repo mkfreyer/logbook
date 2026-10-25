@@ -1,0 +1,40 @@
+{
+  "master_sha256": "7c2dcc6831aa043b9d17caf270f62175150499ccb05af6be5783ab7a1c3e782d",
+  "reference_commit": "62000ae",
+  "before_surface_matches_published_glb": true,
+  "topology_identical": true,
+  "vertices_before": 55288,
+  "vertices_after": 55288,
+  "triangles_before": 110588,
+  "triangles_after": 110588,
+  "added_triangles": 0,
+  "modified_vertices": 4317,
+  "displacement_max_m": 0.0030000070059423814,
+  "displacement_mean_m": 0.0011172982739035186,
+  "local_modified_z_range_m": [
+    0.6450862884521484,
+    0.7749335169792175
+  ],
+  "vertices_moved_outside_allowed_domain": 0,
+  "face_chin_and_hair_vertices_moved": 0,
+  "distant_body_vertices_moved": 0,
+  "protected_vertices_identical": 50971,
+  "global_bounds_identical": true,
+  "protected_corner_normal_error_max": 0.0004665177499014823,
+  "closed_edge_manifold": true,
+  "consistent_face_orientation": true,
+  "connected_components": 1,
+  "new_local_intersections": 0,
+  "glb_surface_matches_master_exactly": true,
+  "same_material_and_five_lights": true,
+  "mean_radial_change_among_modified_vertices_m": -5.354302836135431e-05,
+  "geometric_roughness_before": {
+    "mean_adjacent_face_angle_degrees": 5.3945663233850025,
+    "p95_adjacent_face_angle_degrees": 19.189550399956154
+  },
+  "geometric_roughness_after": {
+    "mean_adjacent_face_angle_degrees": 3.9070805881530726,
+    "p95_adjacent_face_angle_degrees": 12.135161260930388
+  },
+  "verifier_sha256": "0b2ca3dd8567f9e890a5e3e275035c5681622c2f0333a006e1f8e0559eeae85d"
+}
