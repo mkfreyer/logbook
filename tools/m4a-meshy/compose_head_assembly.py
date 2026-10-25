@@ -27,6 +27,8 @@ font = '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
 title = ImageFont.truetype(font, 27)
 label = ImageFont.truetype(font, 21)
 small = ImageFont.truetype(font, 17)
+head_label = meta.get('head_label', 'Rib Reach Exercise')
+before_label = 'Tête précédente' if 'comparison_glb' in meta else 'Origine'
 
 
 def comparison(file, heading, views, width):
@@ -40,10 +42,10 @@ def comparison(file, heading, views, width):
     for row, (view, text) in enumerate(views):
         for col, mode in enumerate(['before', 'after']):
             x, y = margin+col*(width+margin), header+row*(height+caption+margin)
-            draw.text((x, y), ('Origine' if mode == 'before' else 'Tête donneuse')+' — '+text, font=label, fill='#f0f4fa')
+            draw.text((x, y), (before_label if mode == 'before' else head_label)+' — '+text, font=label, fill='#f0f4fa')
             im = Image.open(root/'renders'/mode/(view+'.png')).convert('RGB')
             canvas.paste(im.resize((width, height), Image.Resampling.LANCZOS), (x, y+caption))
-    draw.text((margin, canvas.height-footer+7), 'Corps : Anatomical Form • Tête : Rib Reach Exercise • Modèles fournis par l’utilisateur', font=small, fill='#bac7d6')
+    draw.text((margin, canvas.height-footer+7), 'Corps : Anatomical Form • Tête : '+head_label+' • Sources utilisateur', font=small, fill='#bac7d6')
     draw.text((margin, canvas.height-footer+32), 'Corps conservé sous le raccord • Model created with Meshy — CC BY 4.0', font=small, fill='#bac7d6')
     canvas.save(root/'renders'/file)
 
@@ -56,7 +58,7 @@ height = round(1152*width/720)
 canvas = Image.new('RGB', (3*width+4*margin, header+caption+height+footer), '#141b24')
 draw = ImageDraw.Draw(canvas)
 draw.text((margin, 14), 'Mannequin assemblé — trois vues de validation', font=title, fill='#f0f4fa')
-draw.text((margin, 50), 'Corps Anatomical Form + tête Rib Reach Exercise — Blender / Cycles', font=small, fill='#bac7d6')
+draw.text((margin, 50), 'Corps Anatomical Form + tête '+head_label+' — Blender / Cycles', font=small, fill='#bac7d6')
 for i, (view, text) in enumerate([('face', 'Face'), ('profil', 'Profil'), ('trois-quarts', 'Trois quarts')]):
     x = margin+i*(width+margin)
     draw.text((x, header), text, font=label, fill='#f0f4fa')

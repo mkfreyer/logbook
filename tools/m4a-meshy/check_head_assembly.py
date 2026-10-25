@@ -90,6 +90,11 @@ def face_components(f):
     return sorted(sizes, reverse=True)
 
 
+def surface_euler(f):
+    edges = np.sort(np.concatenate([f[:, [0, 1]], f[:, [1, 2]], f[:, [2, 0]]]), axis=1)
+    return len(np.unique(f))-len(np.unique(edges, axis=0))+len(f)
+
+
 def exported(path):
     raw = path.read_bytes()
     size = struct.unpack_from('<I', raw, 12)[0]
@@ -120,7 +125,7 @@ def main():
     master = root/meta['master']
     assert sha(master) == meta['master_sha256']
     bpy.ops.wm.open_mainfile(filepath=str(master), use_scripts=False)
-    before = bpy.data.scenes[meta['scene_before']]
+    before = bpy.data.scenes[meta.get('source_body_scene', meta['scene_before'])]
     after = bpy.data.scenes[meta['scene_after']]
     original = next(o for o in before.objects if o.type == 'MESH')
     old_v = np.array([p.co[:] for p in original.data.vertices])
@@ -167,7 +172,11 @@ def main():
     assert np.array_equal(np.unique(edges, axis=0), np.unique(edges[:, ::-1], axis=0))
     old_edges = np.unique(np.sort(np.concatenate([bf[:, [0, 1]], bf[:, [1, 2]], bf[:, [2, 0]]]), axis=1), axis=0)
     old_euler, euler = len(bv)-len(old_edges)+len(bf), len(v)-len(unique)+len(f)
-    assert old_euler == euler
+    body_euler = surface_euler(f[:n_body])
+    head_euler = surface_euler(f[n_body+n_bridge:])
+    # The connecting annulus has Euler characteristic zero. A donor head may
+    # carry different inherited topology (for example loops in its hair).
+    assert euler == body_euler+head_euler
     components = face_components(f)
     assert components == [len(f)]
     assert area[n_body:].min() > 1e-12
@@ -191,10 +200,25 @@ def main():
     assert np.array_equal(triangle_keys(expected[f]), triangle_keys(gv[gf]))
     assert len(gf) == len(f) and doc['asset']['extras']['source_body_sha256'] == meta['body_source_sha256']
     assert 'CC BY 4.0' in doc['asset']['copyright']
+    comparison_verified = False
+    if 'comparison_glb' in meta:
+        assert sha(root/meta['comparison_master']) == meta['comparison_master_sha256']
+        assert sha(root/meta['comparison_glb']) == meta['comparison_glb_sha256']
+        comparison = bpy.data.scenes[meta['scene_before']]
+        co = next(o for o in comparison.objects if o.type == 'MESH')
+        cv = np.array([co.matrix_world@p.co for p in co.data.vertices])[:, [0, 2, 1]]
+        cv[:, 2] *= -1
+        cf = np.array([p.vertices[:] for p in co.data.polygons], np.int32)
+        cd, ca = exported(root/meta['comparison_glb'])
+        cp = cd['meshes'][0]['primitives'][0]
+        cpv, cpf = ca(cp['attributes']['POSITION']), ca(cp['indices']).reshape(-1, 3)
+        assert np.array_equal(triangle_keys(cv[cf]), triangle_keys(cpv[cpf]))
+        comparison_verified = True
     report = {
         'master_sha256': sha(master), 'body_source_sha256': meta['body_source_sha256'],
         'head_source_sha256': meta['head_source_sha256'], 'sources_unchanged': True,
         'before_scene_exact_original_body': True, 'retained_body_vertices_moved': 0,
+        'comparison_previous_assembly_surface_verified': comparison_verified,
         'retained_body_vertices_verified': len(protected_vertices),
         'fully_preserved_original_body_triangles': int(protected_before.sum()),
         'retained_body_triangle_coordinates_exact': True,
@@ -208,6 +232,9 @@ def main():
         'new_joint_head_intersections': len(contacts), 'closed_edge_manifold': True,
         'consistent_face_orientation': True, 'connected_face_components': components,
         'euler_before': int(old_euler), 'euler_after': int(euler),
+        'retained_body_surface_euler': int(body_euler),
+        'retained_head_surface_euler': int(head_euler),
+        'euler_matches_sum_of_retained_surfaces': True,
         'source_topology_outside_head_not_repaired': True,
         'glb_surface_matches_master_exactly': True, 'attribution_embedded': True,
         'same_neutral_material_and_five_lights': True,

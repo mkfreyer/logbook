@@ -33,7 +33,7 @@ for node in doc['nodes']:
     if 'mesh' in node:
         node['name'] = node['extras']['asset_id']
 assert len(doc['meshes']) == 1
-doc['asset']['copyright'] = 'Model created with Meshy – CC BY 4.0 License. Logbook adaptation: source Anatomical Form body preserved below the neck cut; Rib Reach head extracted, uniformly fitted and joined locally.'
+doc['asset']['copyright'] = 'Model created with Meshy – CC BY 4.0 License. Logbook adaptation: source Anatomical Form body preserved below the neck cut; '+meta.get('head_label', 'Rib Reach Exercise')+' head extracted, uniformly fitted and joined locally.'
 doc['asset']['extras'] = {
     'source_generator': 'meshy-scene', 'license': 'CC-BY-4.0',
     'license_url': 'https://creativecommons.org/licenses/by/4.0/',

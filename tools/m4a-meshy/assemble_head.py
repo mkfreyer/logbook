@@ -138,11 +138,24 @@ def main():
     p.add_argument('--body', type=Path, required=True)
     p.add_argument('--head-source', type=Path, required=True)
     p.add_argument('--output', type=Path, required=True)
+    p.add_argument('--comparison', type=Path, help='Previously published assembly folder for the before views')
     a = p.parse_args(sys.argv[sys.argv.index('--')+1:])
     root = a.output.resolve()
     root.mkdir(parents=True, exist_ok=True)
     assert sha(a.body) == '9fab861a65407e69b9401bec077bf7b40f58d36404e80bad9db6147f24320a14'
-    assert sha(a.head_source) == '1879f3f79f419ca0552adf8776cf3b0e6d3a25dcf11b7a98a351eeb71747a35d'
+    profiles = {
+        '1879f3f79f419ca0552adf8776cf3b0e6d3a25dcf11b7a98a351eeb71747a35d': {
+            'slug': 'rib_reach', 'label': 'Rib Reach Exercise',
+            'filename': 'Meshy_AI_Rib_Reach_Exercise_In_1025014903_generate.glb',
+            'cut': .510, 'seed': [-.018, .10, .66], 'center_min_z': .545,
+            'fit_base_z': .520, 'core_slope': .15, 'core_intercept': .5175},
+        '147c6c0dda07b9c576c6b62da60ea9acd6b2beac497888c1eb7c270e1c97ebc5': {
+            'slug': 'marble_titan', 'label': 'Marble Titan',
+            'filename': 'Meshy_AI_Marble_Titan_1025022845_generate.glb',
+            'cut': .690, 'seed': [-.002, -.02, .88], 'center_min_z': .745,
+            'fit_base_z': .695, 'core_slope': .10, 'core_intercept': .705},
+    }
+    profile = profiles[sha(a.head_source)]
     bpy.ops.wm.read_factory_settings(use_empty=True)
     bv, bf, _ = source(a.body)
     dv, df, _ = source(a.head_source)
@@ -150,10 +163,10 @@ def main():
     main_id = np.argmax(np.bincount(labels))
     main_mask = labels[df[:, 0]] == main_id
     original_donor_ids = np.flatnonzero(main_mask)
-    donor_cut, body_cut, head_base = .510, .695, .7025
+    donor_cut, body_cut, head_base = profile['cut'], .695, .7025
     hv, hf, head_ids = clip(dv, df[main_mask], donor_cut, True, original_donor_ids)
     head_labels = components(hv, hf)
-    seed = np.argmin(np.linalg.norm(hv-np.array([-.018, .10, .66]), axis=1))
+    seed = np.argmin(np.linalg.norm(hv-np.array(profile['seed']), axis=1))
     mask = head_labels[hf[:, 0]] == head_labels[seed]
     hf, head_ids = hf[mask], head_ids[mask]
     hv, hf = compact(hv, hf)
@@ -162,16 +175,16 @@ def main():
     v, f, body_ids = clip(bv, bf, body_cut, False)
     v, f = compact(v, f)
     old_head = bv[bv[:, 2] > body_cut+.05]
-    donor_core = hv[hv[:, 2] > .545]
+    donor_core = hv[hv[:, 2] > profile['center_min_z']]
     body_center = (old_head[:, :2].min(0)+old_head[:, :2].max(0))/2
     donor_center = (donor_core[:, :2].min(0)+donor_core[:, :2].max(0))/2
-    scale = float((bv[:, 2].max()-head_base)/(hv[:, 2].max()-.520))
-    translation = np.r_[body_center-scale*donor_center, head_base-scale*.520]
+    scale = float((bv[:, 2].max()-head_base)/(hv[:, 2].max()-profile['fit_base_z']))
+    translation = np.r_[body_center-scale*donor_center, head_base-scale*profile['fit_base_z']]
     head_unmodified = hv*scale+translation
     # Keep the donor head rigid above a new short attachment surface. Its
     # lowest neck strip contains shoulder flares and must not be folded inward.
-    core_slope = .15
-    core_offset = scale*(.525-core_slope*.05)+translation[2]-core_slope*translation[1]
+    core_slope = profile['core_slope']
+    core_offset = scale*profile['core_intercept']+translation[2]-core_slope*translation[1]
     core_normal = (0, -core_slope, 1)
     hv, hf, head_ids = clip(head_unmodified, hf, core_offset, True, head_ids, core_normal)
     hv, hf = compact(hv, hf)
@@ -294,9 +307,9 @@ def main():
     original_mesh.materials.append(material)
     original = bpy.data.objects.new('AVANT__Anatomical_Form', original_mesh)
     before.collection.objects.link(original)
-    ob = bpy.data.objects.new('ASSEMBLAGE__Anatomical_Form_Rib_Reach', mesh)
+    ob = bpy.data.objects.new('ASSEMBLAGE__Anatomical_Form_'+profile['slug'], mesh)
     after.collection.objects.link(ob)
-    ob['asset_id'] = 'meshy.anatomical_form.with_rib_reach_head'
+    ob['asset_id'] = 'meshy.anatomical_form.with_'+profile['slug']+'_head'
     ob['source_body_sha256'], ob['source_head_sha256'] = sha(a.body), sha(a.head_source)
     ob['muscle_segmentation_performed'] = False
     ob['role'] = 'Original supplied body; only source head removed, donor head fitted above fixed neck.'
@@ -323,12 +336,38 @@ def main():
     world.node_tree.nodes['Background'].inputs[1].default_value = .35
     for scene in [before, after]:
         scene.world = world
+    comparison_info = {}
+    comparison_scene = before
+    if a.comparison:
+        folder = a.comparison.resolve()
+        prior_meta = json.loads((folder/'assemblage.json').read_text())
+        prior_master = folder/prior_meta['master']
+        assert sha(prior_master) == prior_meta['master_sha256']
+        with bpy.data.libraries.load(str(prior_master), link=False) as (available, requested):
+            names = [name for name in available.objects if name.startswith('ASSEMBLAGE__')]
+            assert len(names) == 1
+            requested.objects = names
+        comparison_scene = bpy.data.scenes.new('02_ASSEMBLAGE_PRECEDENT')
+        comparison_scene.use_fake_user = True
+        comparison_scene.collection.children.link(rig)
+        comparison_scene.world = world
+        previous = requested.objects[0]
+        comparison_scene.collection.objects.link(previous)
+        for slot in previous.material_slots:
+            slot.material = material
+        comparison_info = {
+            'comparison_master': os.path.relpath(prior_master, root),
+            'comparison_master_sha256': sha(prior_master),
+            'comparison_glb': os.path.relpath(folder/prior_meta['export'], root),
+            'comparison_glb_sha256': sha(folder/prior_meta['export']),
+            'comparison_head_label': prior_meta.get('head_label', 'Rib Reach Exercise'),
+        }
     master = root/'meshy-corps-tete-assemble.blend'
     meta = {
         'body_source': os.path.relpath(a.body.resolve(), root),
         'head_source': os.path.relpath(a.head_source.resolve(), root),
         'body_filename_uploaded': 'Meshy_AI_Anatomical_Form_1025014819_generate.glb',
-        'head_filename_uploaded': 'Meshy_AI_Rib_Reach_Exercise_In_1025014903_generate.glb',
+        'head_filename_uploaded': profile['filename'], 'head_label': profile['label'],
         'body_source_sha256': sha(a.body), 'head_source_sha256': sha(a.head_source),
         'original_body_triangles': len(bf), 'original_donor_triangles': len(df),
         'donor_extracted_head_triangles': len(hf), 'retained_body_triangles_after_cut': n_body_faces,
@@ -341,9 +380,11 @@ def main():
         'body_boundary_vertices': len(body_ring), 'head_boundary_vertices': len(head_ring),
         'body_vertex_count_after_cut': n_body_vertices, 'head_offset': head_offset,
         'retained_body_vertices_moved': 0, 'head_core_unchanged_above_z_m': core_cut,
-        'scene_before': before.name, 'scene_after': after.name, 'master': master.name,
+        'source_body_scene': before.name, 'scene_before': comparison_scene.name,
+        'scene_after': after.name, 'master': master.name,
         'export': 'meshy-corps-tete-assemble.glb',
         'builder_sha256': sha(Path(__file__)),
+        **comparison_info,
     }
     bpy.data.texts.new('ASSEMBLAGE.json').write(json.dumps(meta, indent=2))
     bpy.data.texts.new('ATTRIBUTION.txt').write('Model created with Meshy – CC BY 4.0 License. Logbook adaptation: donor head extracted, uniformly fitted and connected to the preserved source body. No new generation or muscle segmentation.')
