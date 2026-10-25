@@ -1,7 +1,7 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { router, useFocusEffect } from 'expo-router';
 import { useCallback } from 'react';
-import { Pressable, Text, View } from 'react-native';
+import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { useUniverseIsActive, useUniverseNavigation } from '../../navigation/UniverseContext';
 import { UniverseScreen } from '../../navigation/UniverseScreen';
 import { useLogbook } from '../../store/LogbookProvider';
@@ -23,6 +23,11 @@ export default function ProgramsScreen() {
       <Button label="Historique des entraînements" icon="stats-chart-outline" variant="ghost" onPress={() => router.push('/history')} />
       <Button label="Bibliothèque d’exercices" icon="barbell-outline" variant="ghost" onPress={() => router.push('/exercises')} />
       <Button label="Paramètres" icon="settings-outline" variant="ghost" onPress={() => router.push('/settings')} />
+      <Pressable accessibilityRole="button" accessibilityLabel="Ouvrir le mannequin 3D" onPress={() => router.push('/muscle-viewer')}
+        style={({ pressed }) => [previewStyles.link, pressed && { opacity: 0.7 }]}>
+        <Ionicons name="cube-outline" color={colors.cyan} size={17} />
+        <Text style={previewStyles.text}>Mannequin 3D</Text><Text style={previewStyles.tag}>Aperçu</Text>
+      </Pressable>
       <RefreshNotice refreshError={hasLoaded ? error : null} retry={() => { void refresh(); }} />
       {!hasLoaded && (loading || error) ? <LoadState loading={loading} error={error} retry={() => { void refresh(); }} /> :
         programs.length === 0 ? <Card>
@@ -49,3 +54,8 @@ export default function ProgramsScreen() {
     </View>
   </UniverseScreen>;
 }
+
+const previewStyles = StyleSheet.create({
+  link: { minHeight: 44, alignSelf: 'center', flexDirection: 'row', alignItems: 'center', gap: 8, paddingHorizontal: 12 },
+  text: { color: colors.cyan, fontSize: 14 }, tag: { color: colors.muted, fontSize: 11 },
+});

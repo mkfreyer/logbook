@@ -1,0 +1,37 @@
+{
+  "source_commit": "e45e5d8444ff54a96b43eae4f8727081d1452764",
+  "asset_sha256": "421e593cad17f60d1c0c5e67707729fb88bbf69026795e22011ecc7d90b38959",
+  "asset_bytes": 1993204,
+  "ios_export_glb_sha256": "421e593cad17f60d1c0c5e67707729fb88bbf69026795e22011ecc7d90b38959",
+  "ios_export_bundle": "_expo/static/js/ios/entry-b34acf377a30e0c39f60d5d381e6bc56.hbc",
+  "checks": {
+    "typecheck": "passed",
+    "viewer_bundle_check": "passed",
+    "npm_test": "passed",
+    "pager_gesture_debug": "passed",
+    "ios_javascript_export": "passed",
+    "chromium_webgl_touch_lifecycle": "passed"
+  },
+  "iphone_device_test": "pending user validation",
+  "iphone_fps": null,
+  "iphone_process_memory": null,
+  "expo_go_client_sdk57_on_user_iphone": "not verified",
+  "sqlite_code_or_migrations_changed": false,
+  "existing_package_patch_changes": {
+    "expo-asset": [
+      "57.0.19",
+      "57.0.20"
+    ],
+    "expo-constants": [
+      "57.0.21",
+      "57.0.22"
+    ]
+  },
+  "expo_online_recommendations_remaining": [
+    "expo",
+    "@expo/metro-runtime",
+    "expo-linking",
+    "expo-router",
+    "expo-sharing"
+  ]
+}
