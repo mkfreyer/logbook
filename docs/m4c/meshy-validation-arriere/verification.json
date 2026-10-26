@@ -1,0 +1,47 @@
+{
+  "referenceCommit": "daf587857adbb0c615640a3af33b165f8a302804",
+  "beforeCommit": "71f70dc1753735ddbd9da1e021e649c33a1756d3",
+  "rawBlenderFrames": 7,
+  "comparisons": [
+    {
+      "view": "dos-complet",
+      "cameraAndFramingIdentical": true,
+      "pixelIdentical": false,
+      "changedRGBPixels": 101,
+      "pixelsWithChannelDifferenceAbove2": 69,
+      "maxChannelDifference8bit": 59
+    },
+    {
+      "view": "epaules-dos",
+      "cameraAndFramingIdentical": true,
+      "pixelIdentical": false,
+      "changedRGBPixels": 933,
+      "pixelsWithChannelDifferenceAbove2": 597,
+      "maxChannelDifference8bit": 62
+    },
+    {
+      "view": "trois-quarts-arriere-droit",
+      "cameraAndFramingIdentical": true,
+      "pixelIdentical": false,
+      "changedRGBPixels": 3259,
+      "pixelsWithChannelDifferenceAbove2": 2018,
+      "maxChannelDifference8bit": 69
+    }
+  ],
+  "protectedSourceFileCount": 35,
+  "sourcesByteIdentical": true,
+  "lightsIdenticalBetweenScenes": true,
+  "geometryPositionsNormalsUVIndicesIdentical": true,
+  "applicationFilesUnchanged": 134,
+  "eightIdentifiersUnchanged": [
+    "pectoralis.left",
+    "pectoralis.right",
+    "deltoid.left.anterior",
+    "deltoid.left.lateral",
+    "deltoid.left.posterior",
+    "deltoid.right.anterior",
+    "deltoid.right.lateral",
+    "deltoid.right.posterior"
+  ],
+  "imageProcessing": "Captions, layout and proportional reduction only; no model pixel repainting."
+}

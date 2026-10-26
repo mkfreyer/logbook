@@ -1,0 +1,656 @@
+{
+  "referenceCommit": "daf587857adbb0c615640a3af33b165f8a302804",
+  "comparisonBeforeCommit": "71f70dc1753735ddbd9da1e021e649c33a1756d3",
+  "engine": "Blender 4.3.2 / Cycles CPU",
+  "samples": 24,
+  "seed": 0,
+  "denoising": false,
+  "frames": [
+    {
+      "file": "apres-dos-complet.png",
+      "state": "apres",
+      "view": "dos-complet",
+      "angleDegrees": 180,
+      "targetSourceM": [
+        0,
+        0,
+        0
+      ],
+      "resolution": [
+        800,
+        1200
+      ],
+      "orthoScale": 2.049999952316284,
+      "cameraMatrix": [
+        [
+          -1.0,
+          8.378900417937984e-08,
+          9.084423879812675e-08,
+          3.6739402930577075e-16
+        ],
+        [
+          8.742277657347586e-08,
+          -0.03996793180704117,
+          0.9992009401321411,
+          3.0
+        ],
+        [
+          8.735290890626857e-08,
+          0.9992009401321411,
+          0.03996793180704117,
+          0.11999999731779099
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sourceBlend": "docs/m4c/meshy-deltoides-residu-local/meshy-residu-corrige.blend",
+      "sourceBlendSha256": "614a302c6945ea86b62949ecb963c6793376230441726881ebebafc0c9f56dc5",
+      "sha256": "671525446796b085603750ca434cffdd3fde394811cde5bb5d54f1b1b7638d6b"
+    },
+    {
+      "file": "apres-epaules-dos.png",
+      "state": "apres",
+      "view": "epaules-dos",
+      "angleDegrees": 180,
+      "targetSourceM": [
+        0,
+        0.555,
+        -0.055
+      ],
+      "resolution": [
+        1400,
+        900
+      ],
+      "orthoScale": 0.7200000286102295,
+      "cameraMatrix": [
+        [
+          -1.0,
+          8.378900417937984e-08,
+          9.084423879812675e-08,
+          3.6739402930577075e-16
+        ],
+        [
+          8.742277657347586e-08,
+          -0.03996793180704117,
+          0.9992009401321411,
+          3.055000066757202
+        ],
+        [
+          8.735290890626857e-08,
+          0.9992009401321411,
+          0.03996793180704117,
+          0.675000011920929
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sourceBlend": "docs/m4c/meshy-deltoides-residu-local/meshy-residu-corrige.blend",
+      "sourceBlendSha256": "614a302c6945ea86b62949ecb963c6793376230441726881ebebafc0c9f56dc5",
+      "sha256": "591831bacdf86e5f4b2233eebe0a139d44f936f2959b3240549b50ad5be0aa76"
+    },
+    {
+      "file": "apres-trois-quarts-arriere-droit.png",
+      "state": "apres",
+      "view": "trois-quarts-arriere-droit",
+      "angleDegrees": -135,
+      "targetSourceM": [
+        -0.225,
+        0.555,
+        -0.055
+      ],
+      "resolution": [
+        1000,
+        1000
+      ],
+      "orthoScale": 0.36000001430511475,
+      "cameraMatrix": [
+        [
+          -0.7071067690849304,
+          0.02826160565018654,
+          -0.7065417766571045,
+          -2.346320390701294
+        ],
+        [
+          -0.7071067690849304,
+          -0.028261752799153328,
+          0.7065417766571045,
+          2.1763203144073486
+        ],
+        [
+          -1.038675634390529e-07,
+          0.9992009401321411,
+          0.03996805101633072,
+          0.675000011920929
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sourceBlend": "docs/m4c/meshy-deltoides-residu-local/meshy-residu-corrige.blend",
+      "sourceBlendSha256": "614a302c6945ea86b62949ecb963c6793376230441726881ebebafc0c9f56dc5",
+      "sha256": "bd5808d5d032080a5f7550dd690b2b17de6bdfe2f2befe6e2994042d8cee9bc8"
+    },
+    {
+      "file": "apres-trois-quarts-arriere-gauche.png",
+      "state": "apres",
+      "view": "trois-quarts-arriere-gauche",
+      "angleDegrees": 135,
+      "targetSourceM": [
+        0.225,
+        0.555,
+        -0.055
+      ],
+      "resolution": [
+        1000,
+        1000
+      ],
+      "orthoScale": 0.36000001430511475,
+      "cameraMatrix": [
+        [
+          -0.7071067690849304,
+          -0.02826160565018654,
+          0.7065417766571045,
+          2.346320390701294
+        ],
+        [
+          0.7071067690849304,
+          -0.028261752799153328,
+          0.7065417766571045,
+          2.1763203144073486
+        ],
+        [
+          1.038675634390529e-07,
+          0.9992009401321411,
+          0.03996805101633072,
+          0.675000011920929
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sourceBlend": "docs/m4c/meshy-deltoides-residu-local/meshy-residu-corrige.blend",
+      "sourceBlendSha256": "614a302c6945ea86b62949ecb963c6793376230441726881ebebafc0c9f56dc5",
+      "sha256": "d70901f224e4200390e4a78fc159e705f9086da140c313b732d0bbae477943fd"
+    },
+    {
+      "file": "avant-dos-complet.png",
+      "state": "avant",
+      "view": "dos-complet",
+      "angleDegrees": 180,
+      "targetSourceM": [
+        0,
+        0,
+        0
+      ],
+      "resolution": [
+        800,
+        1200
+      ],
+      "orthoScale": 2.049999952316284,
+      "cameraMatrix": [
+        [
+          -1.0,
+          8.378900417937984e-08,
+          9.084423879812675e-08,
+          3.6739402930577075e-16
+        ],
+        [
+          8.742277657347586e-08,
+          -0.03996793180704117,
+          0.9992009401321411,
+          3.0
+        ],
+        [
+          8.735290890626857e-08,
+          0.9992009401321411,
+          0.03996793180704117,
+          0.11999999731779099
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sourceBlend": "docs/m4c/meshy-deltoides-limite-inferieure/meshy-eight-zones-corrected.blend",
+      "sourceBlendSha256": "d4d00f74262b4c9fc7dc3516f4824d0900c55848436917088d6bfad05de5fc68",
+      "sha256": "feceaf1976536d54382a9d0c7203d71c112a3fdc801d287e28568c1ad2c5dd9c"
+    },
+    {
+      "file": "avant-epaules-dos.png",
+      "state": "avant",
+      "view": "epaules-dos",
+      "angleDegrees": 180,
+      "targetSourceM": [
+        0,
+        0.555,
+        -0.055
+      ],
+      "resolution": [
+        1400,
+        900
+      ],
+      "orthoScale": 0.7200000286102295,
+      "cameraMatrix": [
+        [
+          -1.0,
+          8.378900417937984e-08,
+          9.084423879812675e-08,
+          3.6739402930577075e-16
+        ],
+        [
+          8.742277657347586e-08,
+          -0.03996793180704117,
+          0.9992009401321411,
+          3.055000066757202
+        ],
+        [
+          8.735290890626857e-08,
+          0.9992009401321411,
+          0.03996793180704117,
+          0.675000011920929
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sourceBlend": "docs/m4c/meshy-deltoides-limite-inferieure/meshy-eight-zones-corrected.blend",
+      "sourceBlendSha256": "d4d00f74262b4c9fc7dc3516f4824d0900c55848436917088d6bfad05de5fc68",
+      "sha256": "842bd9abc0a09b588dafad282e8c58c0790bac66baad45e63a3f9caa491e8205"
+    },
+    {
+      "file": "avant-trois-quarts-arriere-droit.png",
+      "state": "avant",
+      "view": "trois-quarts-arriere-droit",
+      "angleDegrees": -135,
+      "targetSourceM": [
+        -0.225,
+        0.555,
+        -0.055
+      ],
+      "resolution": [
+        1000,
+        1000
+      ],
+      "orthoScale": 0.36000001430511475,
+      "cameraMatrix": [
+        [
+          -0.7071067690849304,
+          0.02826160565018654,
+          -0.7065417766571045,
+          -2.346320390701294
+        ],
+        [
+          -0.7071067690849304,
+          -0.028261752799153328,
+          0.7065417766571045,
+          2.1763203144073486
+        ],
+        [
+          -1.038675634390529e-07,
+          0.9992009401321411,
+          0.03996805101633072,
+          0.675000011920929
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sourceBlend": "docs/m4c/meshy-deltoides-limite-inferieure/meshy-eight-zones-corrected.blend",
+      "sourceBlendSha256": "d4d00f74262b4c9fc7dc3516f4824d0900c55848436917088d6bfad05de5fc68",
+      "sha256": "03ee0560c8554b32a533a9808ba8eccab756ab4d2cc499eccbc7dc3bb3533ead"
+    }
+  ],
+  "sceneAudits": [
+    {
+      "state": "apres",
+      "geometry": {
+        "positions": "db49350e1dc5adbf375bb1aee760566362b49faa8ebf844703ae2c42b2fb11f7",
+        "indices": "3ccd08a1eb7c19b860c83232346c54c09201b47ba2d1d2f6287d7e4cc2ef9051",
+        "uv": "829d9074395e42e04aa982a8288a755d5e7d9a1edce179eae80cf176eacc9b6f",
+        "normals": "e7c66e8c9dceaf5213bacb1356c10aa6ee561e13c4cc1071ec1cac5b1a65a527"
+      },
+      "geometryUnchanged": true,
+      "materialImagesAndLightsUnchanged": true,
+      "appearanceHash": "447780aebef8e4d2bf2ff191babe4498186412b2705ef32950581bf2978da7a4",
+      "lights": [
+        [
+          "Key",
+          [
+            [
+              0.8320502638816833,
+              0.31606975197792053,
+              -0.45584240555763245,
+              -2.0
+            ],
+            [
+              -0.5547002553939819,
+              0.47410455346107483,
+              -0.6837634444236755,
+              -3.0
+            ],
+            [
+              3.483684452021407e-09,
+              0.8217814564704895,
+              0.5698028206825256,
+              2.799999952316284
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          250.0,
+          [
+            1.0,
+            1.0,
+            1.0
+          ],
+          3.0
+        ],
+        [
+          "Fill",
+          [
+            [
+              0.7071067094802856,
+              -0.33129459619522095,
+              0.6246951222419739,
+              2.0
+            ],
+            [
+              0.70710688829422,
+              0.3312944173812866,
+              -0.6246950030326843,
+              -2.0
+            ],
+            [
+              6.57667413861418e-08,
+              0.8834522366523743,
+              0.46852120757102966,
+              1.7999999523162842
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          200.0,
+          [
+            1.0,
+            1.0,
+            1.0
+          ],
+          3.0
+        ],
+        [
+          "Back",
+          [
+            [
+              -0.9950371980667114,
+              0.0642571747303009,
+              -0.07597371935844421,
+              -0.20000000298023224
+            ],
+            [
+              -0.09950371831655502,
+              -0.6425716876983643,
+              0.7597371935844421,
+              2.0
+            ],
+            [
+              3.7319205503649755e-09,
+              0.763526439666748,
+              0.6457765698432922,
+              2.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          200.0,
+          [
+            1.0,
+            1.0,
+            1.0
+          ],
+          2.0
+        ]
+      ],
+      "packedImages": [
+        [
+          "Image Texture",
+          "9852073e8e083de316e3c66840aa6316ca6f04b3da3c7facff28bb2022b765cd",
+          "Non-Color",
+          "CHANNEL_PACKED",
+          "Linear"
+        ],
+        [
+          "Image Texture.001",
+          "c2f9965f84a5f9dee439be672ef4e5187b20d859af2a23ac535dba3ca1081946",
+          "Non-Color",
+          "CHANNEL_PACKED",
+          "Linear"
+        ]
+      ]
+    },
+    {
+      "state": "avant",
+      "geometry": {
+        "positions": "db49350e1dc5adbf375bb1aee760566362b49faa8ebf844703ae2c42b2fb11f7",
+        "indices": "3ccd08a1eb7c19b860c83232346c54c09201b47ba2d1d2f6287d7e4cc2ef9051",
+        "uv": "829d9074395e42e04aa982a8288a755d5e7d9a1edce179eae80cf176eacc9b6f",
+        "normals": "e7c66e8c9dceaf5213bacb1356c10aa6ee561e13c4cc1071ec1cac5b1a65a527"
+      },
+      "geometryUnchanged": true,
+      "materialImagesAndLightsUnchanged": true,
+      "appearanceHash": "b3a88502cd0ebbf1fea43d82733435b5eedcc2c53e0c313e4afdcc1e45f2ecd6",
+      "lights": [
+        [
+          "Key",
+          [
+            [
+              0.8320502638816833,
+              0.31606975197792053,
+              -0.45584240555763245,
+              -2.0
+            ],
+            [
+              -0.5547002553939819,
+              0.47410455346107483,
+              -0.6837634444236755,
+              -3.0
+            ],
+            [
+              3.483684452021407e-09,
+              0.8217814564704895,
+              0.5698028206825256,
+              2.799999952316284
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          250.0,
+          [
+            1.0,
+            1.0,
+            1.0
+          ],
+          3.0
+        ],
+        [
+          "Fill",
+          [
+            [
+              0.7071067094802856,
+              -0.33129459619522095,
+              0.6246951222419739,
+              2.0
+            ],
+            [
+              0.70710688829422,
+              0.3312944173812866,
+              -0.6246950030326843,
+              -2.0
+            ],
+            [
+              6.57667413861418e-08,
+              0.8834522366523743,
+              0.46852120757102966,
+              1.7999999523162842
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          200.0,
+          [
+            1.0,
+            1.0,
+            1.0
+          ],
+          3.0
+        ],
+        [
+          "Back",
+          [
+            [
+              -0.9950371980667114,
+              0.0642571747303009,
+              -0.07597371935844421,
+              -0.20000000298023224
+            ],
+            [
+              -0.09950371831655502,
+              -0.6425716876983643,
+              0.7597371935844421,
+              2.0
+            ],
+            [
+              3.7319205503649755e-09,
+              0.763526439666748,
+              0.6457765698432922,
+              2.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          200.0,
+          [
+            1.0,
+            1.0,
+            1.0
+          ],
+          2.0
+        ]
+      ],
+      "packedImages": [
+        [
+          "Image Texture",
+          "9852073e8e083de316e3c66840aa6316ca6f04b3da3c7facff28bb2022b765cd",
+          "Non-Color",
+          "CHANNEL_PACKED",
+          "Linear"
+        ],
+        [
+          "Image Texture.001",
+          "377cb5b67f8e445cd664ea4a9d9078b162c32e18f71f346ea46235bb85cd2407",
+          "Non-Color",
+          "CHANNEL_PACKED",
+          "Linear"
+        ]
+      ]
+    }
+  ],
+  "onlyCameraAndRenderSettingsChangedInMemory": true,
+  "savedBlendFiles": false,
+  "preservation": {
+    "protectedSourcesByteIdentical": {
+      "assets/models/meshy-e45e5d8.glb": "421e593cad17f60d1c0c5e67707729fb88bbf69026795e22011ecc7d90b38959",
+      "docs/m4c/meshy-deltoides-residu-local/meshy-residu-corrige.blend": "614a302c6945ea86b62949ecb963c6793376230441726881ebebafc0c9f56dc5",
+      "docs/m4c/meshy-deltoides-limite-inferieure/meshy-eight-zones-corrected.blend": "d4d00f74262b4c9fc7dc3516f4824d0900c55848436917088d6bfad05de5fc68",
+      "docs/m4c/meshy-deltoides-residu-local/textures/changed-texels.png": "e8b495776ab41b8c1fef672a9640a4dfaae9bd147cc904b8ac349f17bfd86136",
+      "docs/m4c/meshy-deltoides-residu-local/textures/control-basecolor.png": "f50ca742879442a0f14ac62a6dc7a06f6cf572defe85d7edbf5853084d114a7e",
+      "docs/m4c/meshy-deltoides-residu-local/textures/deltoid.left.anterior.png": "33748a1b9f8cba3d68fab4b3794610694cd8986762125e4f9645ee0ee0628b89",
+      "docs/m4c/meshy-deltoides-residu-local/textures/deltoid.left.lateral.png": "438dc06646ba846d7ce835addbbd873257eb50bdcbd4a762548b9434120e14f9",
+      "docs/m4c/meshy-deltoides-residu-local/textures/deltoid.left.posterior.png": "baf0e5d4ee130ab840f95efd649d4074e093ee3d5bb19e0c38bcca4cdf034361",
+      "docs/m4c/meshy-deltoides-residu-local/textures/deltoid.right.anterior.png": "418afeb68e59944756a40a479e7aa40eba5074d4704838d3be6786d1700e9a63",
+      "docs/m4c/meshy-deltoides-residu-local/textures/deltoid.right.lateral.png": "04cff1872acf709ec7d3519165623930670796566559ab4d1058894d82c2bad1",
+      "docs/m4c/meshy-deltoides-residu-local/textures/deltoid.right.posterior.png": "23d3fae28534b463e5dfa4db361d3618d59b5897f7f7838a867fb5d638f67d22",
+      "docs/m4c/meshy-deltoides-residu-local/textures/masks-rgba-0.png": "9852073e8e083de316e3c66840aa6316ca6f04b3da3c7facff28bb2022b765cd",
+      "docs/m4c/meshy-deltoides-residu-local/textures/masks-rgba-1.png": "c2f9965f84a5f9dee439be672ef4e5187b20d859af2a23ac535dba3ca1081946",
+      "docs/m4c/meshy-deltoides-residu-local/textures/muscle-ids.png": "a08eaa95903a8b4303075bcc89024b846cc3e20a7097843ba2ef33fcfae0e89c",
+      "docs/m4c/meshy-deltoides-residu-local/textures/pectoralis.left.png": "6362c4af4a35944304d8eccb29f0d15cbb2dbbfd313cc3392e46adbea97689da",
+      "docs/m4c/meshy-deltoides-residu-local/textures/pectoralis.right.png": "eb2794be05e4876f6de303553cf216055c15538fe7c7c860ea064a1cd4567774",
+      "docs/m4c/meshy-deltoides-residu-local/regions.json": "2e85321faeb6ae4a899795253cf5e3a1518685ba9f4d276085b540a35da339fd",
+      "docs/m4c/meshy-deltoides-residu-local/region-binding.json": "261f3d5029c981f85d889f2d6108bf1940aff3ed49a28c482db6e5debc2f57a0",
+      "docs/m4c/meshy-deltoides-residu-local/exports/meshy-eight-zones-control.glb": "4451ef36f8666481da81260c7671da40dc81299d7057b1c8ed0dd6bd726a5def",
+      "docs/m4c/meshy-deltoides-limite-inferieure/textures/changed-texels.png": "d81e9cb0e99a0037cd81f890c3cb67c57537b1efe8b16bfbb01f2abfc0ee5ea7",
+      "docs/m4c/meshy-deltoides-limite-inferieure/textures/control-basecolor.png": "12148972c52ba25571a4b38e0f8774561d4bb62d8b3d8a362139da2cdd5dc212",
+      "docs/m4c/meshy-deltoides-limite-inferieure/textures/deltoid.left.anterior.png": "33748a1b9f8cba3d68fab4b3794610694cd8986762125e4f9645ee0ee0628b89",
+      "docs/m4c/meshy-deltoides-limite-inferieure/textures/deltoid.left.lateral.png": "438dc06646ba846d7ce835addbbd873257eb50bdcbd4a762548b9434120e14f9",
+      "docs/m4c/meshy-deltoides-limite-inferieure/textures/deltoid.left.posterior.png": "baf0e5d4ee130ab840f95efd649d4074e093ee3d5bb19e0c38bcca4cdf034361",
+      "docs/m4c/meshy-deltoides-limite-inferieure/textures/deltoid.right.anterior.png": "418afeb68e59944756a40a479e7aa40eba5074d4704838d3be6786d1700e9a63",
+      "docs/m4c/meshy-deltoides-limite-inferieure/textures/deltoid.right.lateral.png": "04cff1872acf709ec7d3519165623930670796566559ab4d1058894d82c2bad1",
+      "docs/m4c/meshy-deltoides-limite-inferieure/textures/deltoid.right.posterior.png": "bca016da0dbda27593e4436109046e6f5d1310071ef0e19f03824fe6f6b17b46",
+      "docs/m4c/meshy-deltoides-limite-inferieure/textures/masks-rgba-0.png": "9852073e8e083de316e3c66840aa6316ca6f04b3da3c7facff28bb2022b765cd",
+      "docs/m4c/meshy-deltoides-limite-inferieure/textures/masks-rgba-1.png": "377cb5b67f8e445cd664ea4a9d9078b162c32e18f71f346ea46235bb85cd2407",
+      "docs/m4c/meshy-deltoides-limite-inferieure/textures/muscle-ids.png": "c0de4bb1790691320d3aac1fc7dd033c8591400fc4e017748e2d66fc20a4f69c",
+      "docs/m4c/meshy-deltoides-limite-inferieure/textures/pectoralis.left.png": "6362c4af4a35944304d8eccb29f0d15cbb2dbbfd313cc3392e46adbea97689da",
+      "docs/m4c/meshy-deltoides-limite-inferieure/textures/pectoralis.right.png": "eb2794be05e4876f6de303553cf216055c15538fe7c7c860ea064a1cd4567774",
+      "docs/m4c/meshy-deltoides-limite-inferieure/regions.json": "798ac60d51548b3cab3d053a59b9ca5a13fa674fd388f0f9a7c7c9dc877a7e0d",
+      "docs/m4c/meshy-deltoides-limite-inferieure/region-binding.json": "c89675337652e717e42a0a62983b785b9b5a1cbf2eece472df5f2bd2a19c3e44",
+      "docs/m4c/meshy-deltoides-limite-inferieure/exports/meshy-eight-zones-control.glb": "bbd527af5d642d0b11f7327057e8f329d27b9b402f13cdd55aa69a995d773a9a"
+    },
+    "applicationFilesUnchanged": 134,
+    "eightIdentifiersUnchanged": [
+      "pectoralis.left",
+      "pectoralis.right",
+      "deltoid.left.anterior",
+      "deltoid.left.lateral",
+      "deltoid.left.posterior",
+      "deltoid.right.anterior",
+      "deltoid.right.lateral",
+      "deltoid.right.posterior"
+    ],
+    "geometryMatchesDaf5878InBothScenes": true
+  }
+}
