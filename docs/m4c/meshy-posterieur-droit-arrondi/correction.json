@@ -1,0 +1,25 @@
+{
+  "referenceCommit": "18e1a44",
+  "onlyTransition": [
+    0,
+    8
+  ],
+  "addedIDTexels": 11436,
+  "previousID8Texels": 22919,
+  "newID8Texels": 34355,
+  "sevenOtherMasksByteIdentical": true,
+  "antialiasedFringeTexels": 726,
+  "addedVisibleSurfaceBoundsM": {
+    "min": [
+      -0.25897160172462463,
+      0.4572618305683136,
+      -0.14353874325752258
+    ],
+    "max": [
+      -0.14633110165596008,
+      0.6183541417121887,
+      -0.06149321794509888
+    ]
+  },
+  "controlGlbSha256": "332ecb755f6ebec7611e92f2dd3bd6db9d72a21a301e0fcf4dbd26b8c0e2bbf8"
+}

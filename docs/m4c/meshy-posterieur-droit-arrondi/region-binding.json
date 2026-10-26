@@ -1,0 +1,238 @@
+{
+  "schemaVersion": 1,
+  "assetId": "meshy-e45e5d8",
+  "sourceSha256": "421e593cad17f60d1c0c5e67707729fb88bbf69026795e22011ecc7d90b38959",
+  "referenceHasUV": false,
+  "lookup": "SurfaceHit on original: SHA-bound sparse face corner UV, barycentric interpolation, discrete atlas ID. New GLB: use hit.uv directly.",
+  "boundFaces": "../meshy-huit-zones/exports/source-face-indices.u32",
+  "cornerUV": "../meshy-huit-zones/exports/source-corner-uv.f32",
+  "faceCount": 23749,
+  "byteOrder": "little-endian",
+  "neutralCode": 0,
+  "regionCodesStableAcrossTriangleOrder": true,
+  "zones": [
+    {
+      "code": 1,
+      "id": "pectoralis.left",
+      "name": "Grand pectoral gauche",
+      "color": "#FF932B",
+      "sourceFaceCenterSamples": 1039,
+      "faceCenterDiagnosticComponentCounts": [
+        1039
+      ],
+      "boundsSourceM": {
+        "min": [
+          -0.0024390784092247486,
+          0.4141504168510437,
+          0.029432477429509163
+        ],
+        "max": [
+          0.18716271221637726,
+          0.6218091249465942,
+          0.14786258339881897
+        ]
+      },
+      "centerSourceM": [
+        0.09013871103525162,
+        0.529951274394989,
+        0.08799087256193161
+      ],
+      "boundsAreConservativeFaceExtent": true
+    },
+    {
+      "code": 2,
+      "id": "pectoralis.right",
+      "name": "Grand pectoral droit",
+      "color": "#F2D347",
+      "sourceFaceCenterSamples": 944,
+      "faceCenterDiagnosticComponentCounts": [
+        943,
+        1
+      ],
+      "boundsSourceM": {
+        "min": [
+          -0.18711131811141968,
+          0.4089148938655853,
+          0.02942638471722603
+        ],
+        "max": [
+          0.003453904530033469,
+          0.6218791007995605,
+          0.14782153069972992
+        ]
+      },
+      "centerSourceM": [
+        -0.08135994523763657,
+        0.5342705845832825,
+        0.090220607817173
+      ],
+      "boundsAreConservativeFaceExtent": true
+    },
+    {
+      "code": 3,
+      "id": "deltoid.left.anterior",
+      "name": "Deltoïde antérieur gauche",
+      "color": "#E55B5B",
+      "sourceFaceCenterSamples": 493,
+      "faceCenterDiagnosticComponentCounts": [
+        489,
+        2,
+        2
+      ],
+      "boundsSourceM": {
+        "min": [
+          0.15053845942020416,
+          0.4499020278453827,
+          -0.05738390237092972
+        ],
+        "max": [
+          0.2622397840023041,
+          0.6358243227005005,
+          0.05179833993315697
+        ]
+      },
+      "centerSourceM": [
+        0.21179498732089996,
+        0.5670908093452454,
+        0.010393848642706871
+      ],
+      "boundsAreConservativeFaceExtent": true
+    },
+    {
+      "code": 4,
+      "id": "deltoid.left.lateral",
+      "name": "Deltoïde moyen gauche",
+      "color": "#447EEB",
+      "sourceFaceCenterSamples": 397,
+      "faceCenterDiagnosticComponentCounts": [
+        397
+      ],
+      "boundsSourceM": {
+        "min": [
+          0.15581345558166504,
+          0.45328405499458313,
+          -0.11380037665367126
+        ],
+        "max": [
+          0.2627646028995514,
+          0.636286199092865,
+          -0.0017048203153535724
+        ]
+      },
+      "centerSourceM": [
+        0.2200736105442047,
+        0.5805736780166626,
+        -0.06603552401065826
+      ],
+      "boundsAreConservativeFaceExtent": true
+    },
+    {
+      "code": 5,
+      "id": "deltoid.left.posterior",
+      "name": "Deltoïde postérieur gauche",
+      "color": "#46C47B",
+      "sourceFaceCenterSamples": 263,
+      "boundsSourceM": {
+        "min": [
+          0.15838122367858887,
+          0.4550749659538269,
+          -0.14320386946201324
+        ],
+        "max": [
+          0.25361499190330505,
+          0.6177690029144287,
+          -0.060032229870557785
+        ]
+      },
+      "centerSourceM": [
+        0.2145770639181137,
+        0.5544119477272034,
+        -0.11909987777471542
+      ],
+      "boundsAreConservativeFaceExtent": false,
+      "boundsMethod": "remaining ID texel surface samples after posterior correction"
+    },
+    {
+      "code": 6,
+      "id": "deltoid.right.anterior",
+      "name": "Deltoïde antérieur droit",
+      "color": "#E55B5B",
+      "sourceFaceCenterSamples": 490,
+      "faceCenterDiagnosticComponentCounts": [
+        490
+      ],
+      "boundsSourceM": {
+        "min": [
+          -0.265689492225647,
+          0.4504799246788025,
+          -0.056114088743925095
+        ],
+        "max": [
+          -0.14835965633392334,
+          0.6360501646995544,
+          0.05148853734135628
+        ]
+      },
+      "centerSourceM": [
+        -0.21685752272605896,
+        0.5619289875030518,
+        0.009027751162648201
+      ],
+      "boundsAreConservativeFaceExtent": true
+    },
+    {
+      "code": 7,
+      "id": "deltoid.right.lateral",
+      "name": "Deltoïde moyen droit",
+      "color": "#447EEB",
+      "sourceFaceCenterSamples": 431,
+      "faceCenterDiagnosticComponentCounts": [
+        431
+      ],
+      "boundsSourceM": {
+        "min": [
+          -0.2663191258907318,
+          0.4538242518901825,
+          -0.11384876817464828
+        ],
+        "max": [
+          -0.15503531694412231,
+          0.6366091370582581,
+          -0.006596236955374479
+        ]
+      },
+      "centerSourceM": [
+        -0.2171403169631958,
+        0.5917229652404785,
+        -0.06595470756292343
+      ],
+      "boundsAreConservativeFaceExtent": true
+    },
+    {
+      "code": 8,
+      "id": "deltoid.right.posterior",
+      "name": "Deltoïde postérieur droit",
+      "color": "#46C47B",
+      "boundsSourceM": {
+        "min": [
+          -0.25897160172462463,
+          0.4572618305683136,
+          -0.14353874325752258
+        ],
+        "max": [
+          -0.14633110165596008,
+          0.6183541417121887,
+          -0.06149321794509888
+        ]
+      },
+      "centerSourceM": [
+        -0.21556280553340912,
+        0.5573796033859253,
+        -0.12058813869953156
+      ],
+      "boundsAreConservativeFaceExtent": false,
+      "boundsMethod": "union of preceding ID8 bounds and new visible surface texel samples",
+      "centerMethod": "existing safe interior pivot retained; not a recalculated centroid"
+    }
+  ]
+}

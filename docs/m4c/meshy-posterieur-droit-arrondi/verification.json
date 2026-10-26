@@ -1,0 +1,34 @@
+{
+  "referenceCommit": "18e1a44",
+  "onlyIDTransition": [
+    0,
+    8
+  ],
+  "addedIDTexels": 11436,
+  "oldGreenFullyPreserved": true,
+  "sevenOtherMasksByteIdentical": true,
+  "otherPackedChannelsBitIdentical": true,
+  "antialiasingOnlyOnID8NeutralBoundary": true,
+  "geometryBuffersBitIdentical": [
+    "POSITION",
+    "NORMAL",
+    "TEXCOORD_0",
+    "indices"
+  ],
+  "triangles": 110588,
+  "exportVertices": 60622,
+  "eightStableIDs": [
+    "pectoralis.left",
+    "pectoralis.right",
+    "deltoid.left.anterior",
+    "deltoid.left.lateral",
+    "deltoid.left.posterior",
+    "deltoid.right.anterior",
+    "deltoid.right.lateral",
+    "deltoid.right.posterior"
+  ],
+  "protectedApplicationFilesUnchanged": 134,
+  "newGreen3DSurfaceProbes": 5,
+  "outsideNeutralGuards": 2,
+  "sourceGlbSha256": "421e593cad17f60d1c0c5e67707729fb88bbf69026795e22011ecc7d90b38959"
+}
