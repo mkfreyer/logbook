@@ -1,0 +1,335 @@
+{
+  "method": "4-connected ID pixel components, stitched at 33 samples on every real shared source edge with distinct corner UVs. Includes 4px island padding. This is finite sampling, not a medical/anatomical proof.",
+  "uv_seam_edges_tested": 4774,
+  "zones": [
+    {
+      "id": "pectoralis.left",
+      "uv_components_before_seam_stitch": 33,
+      "enclosed_zero_pixels_in_UV": 0,
+      "stitched_surface_component_pixel_counts": [
+        90081
+      ],
+      "component_diagnostics": [
+        {
+          "root": 1,
+          "pixels": 90081,
+          "sourceFaceCenterCount": 1040,
+          "firstSourceFaces": [
+            44993,
+            45024,
+            45025,
+            45032,
+            45053,
+            45094,
+            45114,
+            45132,
+            45133,
+            45138,
+            45149,
+            45151
+          ],
+          "sourceCenterBounds": {
+            "min": [
+              -0.0002406802523182705,
+              0.4169383943080902,
+              0.03025318868458271
+            ],
+            "max": [
+              0.18446652591228485,
+              0.6189891695976257,
+              0.14756867289543152
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "pectoralis.right",
+      "uv_components_before_seam_stitch": 39,
+      "enclosed_zero_pixels_in_UV": 0,
+      "stitched_surface_component_pixel_counts": [
+        90130
+      ],
+      "component_diagnostics": [
+        {
+          "root": 34,
+          "pixels": 90130,
+          "sourceFaceCenterCount": 937,
+          "firstSourceFaces": [
+            18848,
+            18849,
+            18850,
+            18902,
+            19113,
+            19114,
+            19223,
+            19224,
+            19299,
+            19300,
+            19356,
+            19464
+          ],
+          "sourceCenterBounds": {
+            "min": [
+              -0.18474678695201874,
+              0.41676032543182373,
+              0.03018386848270893
+            ],
+            "max": [
+              -0.00019242730922996998,
+              0.6184864640235901,
+              0.14772607386112213
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "deltoid.left.anterior",
+      "uv_components_before_seam_stitch": 25,
+      "enclosed_zero_pixels_in_UV": 0,
+      "stitched_surface_component_pixel_counts": [
+        38171
+      ],
+      "component_diagnostics": [
+        {
+          "root": 73,
+          "pixels": 38171,
+          "sourceFaceCenterCount": 493,
+          "firstSourceFaces": [
+            66352,
+            66462,
+            66463,
+            66464,
+            66465,
+            66466,
+            66651,
+            66787,
+            66788,
+            67067,
+            67068,
+            67104
+          ],
+          "sourceCenterBounds": {
+            "min": [
+              0.15326495468616486,
+              0.45287367701530457,
+              -0.05563650652766228
+            ],
+            "max": [
+              0.26092636585235596,
+              0.6348100304603577,
+              0.050233930349349976
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "deltoid.left.lateral",
+      "uv_components_before_seam_stitch": 21,
+      "enclosed_zero_pixels_in_UV": 0,
+      "stitched_surface_component_pixel_counts": [
+        38139
+      ],
+      "component_diagnostics": [
+        {
+          "root": 98,
+          "pixels": 38139,
+          "sourceFaceCenterCount": 398,
+          "firstSourceFaces": [
+            67342,
+            67343,
+            67344,
+            67452,
+            67453,
+            67717,
+            68154,
+            68155,
+            68189,
+            68190,
+            68191,
+            68263
+          ],
+          "sourceCenterBounds": {
+            "min": [
+              0.15803669393062592,
+              0.45479390025138855,
+              -0.10774558782577515
+            ],
+            "max": [
+              0.2625678777694702,
+              0.6361369490623474,
+              -0.007410726044327021
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "deltoid.left.posterior",
+      "uv_components_before_seam_stitch": 17,
+      "enclosed_zero_pixels_in_UV": 0,
+      "stitched_surface_component_pixel_counts": [
+        28907
+      ],
+      "component_diagnostics": [
+        {
+          "root": 119,
+          "pixels": 28907,
+          "sourceFaceCenterCount": 318,
+          "firstSourceFaces": [
+            64960,
+            65460,
+            65766,
+            66121,
+            66122,
+            66138,
+            66139,
+            66140,
+            66141,
+            66250,
+            66251,
+            66405
+          ],
+          "sourceCenterBounds": {
+            "min": [
+              0.15242958068847656,
+              0.45610669255256653,
+              -0.14334873855113983
+            ],
+            "max": [
+              0.2553248405456543,
+              0.6158843636512756,
+              -0.06054075434803963
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "deltoid.right.anterior",
+      "uv_components_before_seam_stitch": 17,
+      "enclosed_zero_pixels_in_UV": 0,
+      "stitched_surface_component_pixel_counts": [
+        44801
+      ],
+      "component_diagnostics": [
+        {
+          "root": 136,
+          "pixels": 44801,
+          "sourceFaceCenterCount": 556,
+          "firstSourceFaces": [
+            9670,
+            9671,
+            9673,
+            9720,
+            9872,
+            9873,
+            9874,
+            9875,
+            9912,
+            9913,
+            9914,
+            9915
+          ],
+          "sourceCenterBounds": {
+            "min": [
+              -0.2646067440509796,
+              0.4532040059566498,
+              -0.05493416264653206
+            ],
+            "max": [
+              -0.1406739503145218,
+              0.6350688934326172,
+              0.05136774480342865
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "deltoid.right.lateral",
+      "uv_components_before_seam_stitch": 7,
+      "enclosed_zero_pixels_in_UV": 0,
+      "stitched_surface_component_pixel_counts": [
+        38585
+      ],
+      "component_diagnostics": [
+        {
+          "root": 153,
+          "pixels": 38585,
+          "sourceFaceCenterCount": 429,
+          "firstSourceFaces": [
+            9599,
+            9600,
+            9601,
+            9602,
+            9603,
+            9604,
+            9605,
+            9623,
+            9624,
+            9625,
+            9626,
+            9667
+          ],
+          "sourceCenterBounds": {
+            "min": [
+              -0.266045480966568,
+              0.45523586869239807,
+              -0.10764362663030624
+            ],
+            "max": [
+              -0.15672068297863007,
+              0.636423647403717,
+              -0.010310829617083073
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "deltoid.right.posterior",
+      "uv_components_before_seam_stitch": 13,
+      "enclosed_zero_pixels_in_UV": 0,
+      "stitched_surface_component_pixel_counts": [
+        30945
+      ],
+      "component_diagnostics": [
+        {
+          "root": 160,
+          "pixels": 30945,
+          "sourceFaceCenterCount": 386,
+          "firstSourceFaces": [
+            10253,
+            10291,
+            10303,
+            10304,
+            10305,
+            10350,
+            10367,
+            10368,
+            10375,
+            10376,
+            10406,
+            10407
+          ],
+          "sourceCenterBounds": {
+            "min": [
+              -0.25793781876564026,
+              0.4574350416660309,
+              -0.14321984350681305
+            ],
+            "max": [
+              -0.1480889469385147,
+              0.6165135502815247,
+              -0.0630587711930275
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "status": "passed"
+}
