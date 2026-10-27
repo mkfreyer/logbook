@@ -1,0 +1,255 @@
+{
+  "schemaVersion": 1,
+  "status": "proposed-anatomical-placement-awaiting-user-validation",
+  "sourceAssetId": "meshy-e45e5d8",
+  "sourceSha256": "421e593cad17f60d1c0c5e67707729fb88bbf69026795e22011ecc7d90b38959",
+  "coordinateSpace": "original-glb-mesh-local-metres",
+  "axes": {
+    "up": "+Y",
+    "front": "+Z",
+    "anatomicalLeft": "+X",
+    "anatomicalRight": "-X"
+  },
+  "atlas": {
+    "width": 2048,
+    "height": 2048,
+    "file": "textures/muscle-ids.png",
+    "format": "PNG L8",
+    "colorSpace": "linear-data",
+    "backgroundCode": 0,
+    "sampling": "nearest, no mipmaps for identification",
+    "uvOrigin": "glTF top-left; pixel=floor(uv*size), clamped"
+  },
+  "zones": [
+    {
+      "code": 1,
+      "id": "pectoralis.left",
+      "name": "Grand pectoral gauche",
+      "color": "#FF932B"
+    },
+    {
+      "code": 2,
+      "id": "pectoralis.right",
+      "name": "Grand pectoral droit",
+      "color": "#F2D347"
+    },
+    {
+      "code": 3,
+      "id": "deltoid.left.anterior",
+      "name": "Deltoïde antérieur gauche",
+      "color": "#E55B5B"
+    },
+    {
+      "code": 4,
+      "id": "deltoid.left.lateral",
+      "name": "Deltoïde moyen gauche",
+      "color": "#447EEB"
+    },
+    {
+      "code": 5,
+      "id": "deltoid.left.posterior",
+      "name": "Deltoïde postérieur gauche",
+      "color": "#46C47B"
+    },
+    {
+      "code": 6,
+      "id": "deltoid.right.anterior",
+      "name": "Deltoïde antérieur droit",
+      "color": "#E55B5B"
+    },
+    {
+      "code": 7,
+      "id": "deltoid.right.lateral",
+      "name": "Deltoïde moyen droit",
+      "color": "#447EEB"
+    },
+    {
+      "code": 8,
+      "id": "deltoid.right.posterior",
+      "name": "Deltoïde postérieur droit",
+      "color": "#46C47B"
+    }
+  ],
+  "landmarks": {
+    "pectoralContourXY": [
+      [
+        0.012,
+        0.608
+      ],
+      [
+        0.05,
+        0.619
+      ],
+      [
+        0.115,
+        0.61
+      ],
+      [
+        0.16,
+        0.587
+      ],
+      [
+        0.183,
+        0.553
+      ],
+      [
+        0.183,
+        0.517
+      ],
+      [
+        0.16,
+        0.475
+      ],
+      [
+        0.113,
+        0.438
+      ],
+      [
+        0.065,
+        0.418
+      ],
+      [
+        0.03,
+        0.42
+      ],
+      [
+        0.012,
+        0.437
+      ]
+    ],
+    "deltoid": {
+      "axisX": 0.177,
+      "axisZ": -0.055,
+      "topY": 0.652,
+      "insertionY": 0.452,
+      "insertionZ": -0.058,
+      "anteriorOriginZ": -0.005,
+      "posteriorOriginZ": -0.114,
+      "innerXTop": 0.146,
+      "innerXBottom": 0.232
+    }
+  },
+  "uncertainties": [
+    "Generated mesh has no documented clavicle/scapula insertions; anterior/lateral/posterior boundaries are fitness surface approximations, not medical validation.",
+    "Inferior deltoid convergence and pectoral axillary extent require multi-angle visual approval.",
+    "Geometry is slightly asymmetric; each side is inspected independently despite shared anatomical rules."
+  ],
+  "uvSource": "../meshy-huit-zones/source-uv-binding.npz",
+  "coverageSource": "../meshy-huit-zones/textures/uv-covered-pixels.png",
+  "correction": {
+    "referenceCommit": "8b723d9",
+    "onlyTransitions": [
+      [
+        5,
+        0
+      ],
+      [
+        8,
+        0
+      ]
+    ],
+    "surfaceAssignment": "neutral / upper arm unassigned, no automatic triceps or lateral deltoid label",
+    "creaseCurveYZ": {
+      "right": [
+        [
+          -0.15,
+          0.48
+        ],
+        [
+          -0.125,
+          0.491
+        ],
+        [
+          -0.10350775718688965,
+          0.4884037673473358
+        ],
+        [
+          -0.0896613597869873,
+          0.4885522723197937
+        ],
+        [
+          -0.0759425163269043,
+          0.4759053587913513
+        ],
+        [
+          -0.06496071815490723,
+          0.4640105962753296
+        ],
+        [
+          -0.058,
+          0.452
+        ]
+      ],
+      "left": [
+        [
+          -0.15,
+          0.48
+        ],
+        [
+          -0.125,
+          0.491
+        ],
+        [
+          -0.10945749282836914,
+          0.4880671799182892
+        ],
+        [
+          -0.09830045700073242,
+          0.48806360363960266
+        ],
+        [
+          -0.08080101013183594,
+          0.475630521774292
+        ],
+        [
+          -0.06826138496398926,
+          0.4638238549232483
+        ],
+        [
+          -0.058,
+          0.452
+        ]
+      ]
+    }
+  },
+  "residueCorrection": {
+    "referenceCommit": "71f70dc",
+    "onlyTransition": [
+      8,
+      0
+    ],
+    "sourceGuides": "patch-guides.json",
+    "side": "right",
+    "method": "Local surface-projected UV border retreat with nearest visible 3D support; no global resegmentation."
+  },
+  "roundedPosteriorOutline": {
+    "referenceCommit": "18e1a44",
+    "onlyDiscreteTransition": [
+      0,
+      8
+    ],
+    "guide": "outline-guides.json",
+    "projectedCurve": "projected-outline.json",
+    "displayMask": "Antialiased L8 coverage; ID8 when coverage >= 128, no filtering for picking.",
+    "status": "proposed-outline-awaiting-user-visual-validation"
+  },
+  "lowerContourRetreat": {
+    "referenceCommit": "ad08cef",
+    "onlyDiscreteTransition": [
+      8,
+      0
+    ],
+    "guide": "lower-contour-guides.json",
+    "projectedCurve": "projected-outline.json",
+    "status": "proposed-local-retreat-awaiting-visual-validation",
+    "upperRoundPreserved": true
+  },
+  "leftPosteriorHarmonization": {
+    "referenceCommit": "977f68a",
+    "referenceID": 8,
+    "editableID": 5,
+    "guide": "left-contour-guides.json",
+    "adaptation": "surface-adaptation.json",
+    "status": "awaiting-visual-validation"
+  }
+}

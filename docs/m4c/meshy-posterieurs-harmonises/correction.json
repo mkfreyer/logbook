@@ -1,0 +1,14 @@
+{
+  "referenceCommit": "977f68a",
+  "editableID": 5,
+  "referenceID": 8,
+  "addedID5Texels": 6561,
+  "removedID5Texels": 263,
+  "previousLeftID5Texels": 22609,
+  "newLeftID5Texels": 28907,
+  "protectedJoinTexels": 1157,
+  "emptyGutterFragmentsCleared": 34,
+  "singleTexelJoinHolesResolved": 1,
+  "rightAndSixOtherMasksByteIdentical": true,
+  "controlGlbSha256": "a929c1826016a150e388db27f46a47e9f7406f4679bfe3f8e168729c2e2198e6"
+}
