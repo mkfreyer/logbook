@@ -1,0 +1,18 @@
+{
+  "rawBlenderFrames": 9,
+  "matchedReferenceCameraAndCrop": true,
+  "referenceCropIn1000PixelFrame": [
+    160,
+    376,
+    607,
+    786
+  ],
+  "closeupPixelSize": [
+    894,
+    820
+  ],
+  "neutralFacePixelIdenticalToAd08cef": true,
+  "leftRearPixelIdentical": true,
+  "maxLeftRearChannelDifference8bit": 0,
+  "imageProcessing": "Captions, layout and proportional reduction only. No surface pixel repainting."
+}

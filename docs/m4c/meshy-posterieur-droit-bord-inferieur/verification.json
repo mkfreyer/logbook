@@ -1,0 +1,39 @@
+{
+  "referenceCommit": "ad08cef",
+  "onlyIDTransition": [
+    8,
+    0
+  ],
+  "removedIDTexels": 3410,
+  "noGreenAdded": true,
+  "upperRoundCoverageAndIDsBitIdentical": true,
+  "protectedUpperTexels": 14160,
+  "sevenOtherMasksByteIdentical": true,
+  "otherPackedChannelsBitIdentical": true,
+  "embeddedGLBAtlasAndPaletteMatchSourcePNG": true,
+  "geometryBuffersBitIdentical": [
+    "POSITION",
+    "NORMAL",
+    "TEXCOORD_0",
+    "indices"
+  ],
+  "triangles": 110588,
+  "exportVertices": 60622,
+  "eightStableIDs": [
+    "pectoralis.left",
+    "pectoralis.right",
+    "deltoid.left.anterior",
+    "deltoid.left.lateral",
+    "deltoid.left.posterior",
+    "deltoid.right.anterior",
+    "deltoid.right.lateral",
+    "deltoid.right.posterior"
+  ],
+  "protectedApplicationFilesUnchanged": 134,
+  "neutralizedSurfaceProbes": 3,
+  "centralSeamCurveCoverageRange": [
+    0.45011299874546934,
+    0.5489836612203803
+  ],
+  "sourceGlbSha256": "421e593cad17f60d1c0c5e67707729fb88bbf69026795e22011ecc7d90b38959"
+}
