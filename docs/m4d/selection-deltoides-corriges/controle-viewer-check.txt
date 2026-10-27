@@ -1,0 +1,11 @@
+
+> logbook@0.1.0 viewer:check
+> node tools/m4d/build-selection.mjs --check && node tools/m4b/build-viewer.mjs --check
+
+M4D asset 2606304 bytes; atlas PNG 31238 bytes; masks unchanged.
+Viewer bundle is current.
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

@@ -8,12 +8,12 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { buildViewerDocument } from '../../src/features/model3d/document';
 import { MUSCLES } from '../../src/features/model3d/selection';
 async function main() {
-const out = process.env.M4D_ARTIFACT_DIR ?? 'docs/m4d/selection-interactive';
+const out = process.env.M4D_ARTIFACT_DIR ?? 'docs/m4d/selection-deltoides-corriges';
 await mkdir(out,{recursive:true});
 const glb=await readFile('assets/models/meshy-m4d-uv.glb');
 const scene=await new GLTFLoader().parseAsync(glb.buffer.slice(glb.byteOffset,glb.byteOffset+glb.byteLength),'');
 const center=new Box3().setFromObject(scene.scene).getCenter(new Vector3());
-const witnesses=JSON.parse(await readFile('docs/m4c/meshy-posterieurs-harmonises/picking-witnesses.json','utf8'));
+const witnesses=JSON.parse(await readFile('docs/m4c/meshy-deltoides-reperes-iphone/picking-witnesses.json','utf8'));
 const html=buildViewerDocument(glb.toString('base64'));
 const server=createServer((_req,res)=>{res.writeHead(200,{'Content-Type':'text/html'});res.end(html);});
 await new Promise<void>(resolve=>server.listen(0,'127.0.0.1',resolve));
@@ -30,10 +30,21 @@ const command=(c:'overview'|'front'|'reset-selection'|'dispose')=>page.evaluate(
 const selected=async()=> (await snapshot()).selectedMuscle;
 const cdp=await context.newCDPSession(page);
 type P={x:number;y:number;id:number};
+// With software WebGL, inertia may still run after a fixed delay. Projecting a
+// witness before it settles would target a different surface at touch release.
+async function settleCamera(){
+ let previous=(await snapshot()).camera as number[],stable=0;
+ for(let i=0;i<100;i++){
+  await page.waitForTimeout(200);const current=(await snapshot()).camera as number[];
+  if(current.every((value,k)=>Math.abs(value-previous[k]!)<1e-8))stable++;else stable=0;
+  if(stable>=3)return;previous=current;
+ }
+ throw Error('Camera inertia did not settle in the test environment');
+}
 async function gesture(start:P[],end:P[],steps=3){
  await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:start});
  for(let i=1;i<=steps;i++){await cdp.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:start.map((p,k)=>({...p,x:p.x+(end[k]!.x-p.x)*i/steps,y:p.y+(end[k]!.y-p.y)*i/steps}))});await page.waitForTimeout(10);}
- await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});await page.waitForTimeout(750);
+ await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});await page.waitForTimeout(200);await settleCamera();
 }
 async function tap(x:number,y:number){const timestamp=Date.now()/1000;await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x,y,id:1}],timestamp});await page.waitForTimeout(45);await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[],timestamp:timestamp+.06});await page.waitForTimeout(180);}
 async function orient(angle:number){

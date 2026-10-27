@@ -1,0 +1,166 @@
+{
+  "status": "passed",
+  "environment": "Chromium SwiftShader, actual CDP touch events, 430×760 CSS px; not an iPhone",
+  "eightMuscles": [
+    {
+      "id": "pectoralis.left",
+      "label": "Grand pectoral gauche",
+      "touch": {
+        "x": 252.96953298986463,
+        "y": 162.09617274466896
+      },
+      "azimuth": 0.3555240014832491
+    },
+    {
+      "id": "pectoralis.right",
+      "label": "Grand pectoral droit",
+      "touch": {
+        "x": 187.82165798540507,
+        "y": 156.82094968835838
+      },
+      "azimuth": -0.2966674435234705
+    },
+    {
+      "id": "deltoid.left.anterior",
+      "label": "Deltoïde antérieur gauche",
+      "touch": {
+        "x": 317.1785376102961,
+        "y": 152.9070559268724
+      },
+      "azimuth": 0.5085444629016501
+    },
+    {
+      "id": "deltoid.left.lateral",
+      "label": "Deltoïde moyen gauche",
+      "touch": {
+        "x": 235.96951949077632,
+        "y": 134.83555129694543
+      },
+      "azimuth": 1.8093669239406702
+    },
+    {
+      "id": "deltoid.left.posterior",
+      "label": "Deltoïde postérieur gauche",
+      "touch": {
+        "x": 111.26295458269823,
+        "y": 144.90157218224277
+      },
+      "azimuth": 3.002084185159697
+    },
+    {
+      "id": "deltoid.right.anterior",
+      "label": "Deltoïde antérieur droit",
+      "touch": {
+        "x": 126.62663366818532,
+        "y": 126.66284627702068
+      },
+      "azimuth": -0.2142253762242206
+    },
+    {
+      "id": "deltoid.right.lateral",
+      "label": "Deltoïde moyen droit",
+      "touch": {
+        "x": 152.2457344620527,
+        "y": 156.85641201665905
+      },
+      "azimuth": -1.5565314079693857
+    },
+    {
+      "id": "deltoid.right.posterior",
+      "label": "Deltoïde postérieur droit",
+      "touch": {
+        "x": 324.4996143038737,
+        "y": 147.4800390535124
+      },
+      "azimuth": -3.0112806505058134
+    }
+  ],
+  "neutralSurfaceAndBackground": true,
+  "directChange": true,
+  "resetRemovesVisibleHighlight": true,
+  "rotationAndPinchPreserveSelection": true,
+  "longHoldRejected": true,
+  "localOnly": true,
+  "cleanup": true,
+  "initial": {
+    "disposed": false,
+    "loaded": true,
+    "renderCount": 1,
+    "triangles": 110588,
+    "geometryBytes": 2603432,
+    "selectedMuscle": null,
+    "atlasBytes": 4194304,
+    "camera": [
+      0,
+      2.246040425393971e-16,
+      3.6680623784061686
+    ],
+    "target": [
+      0,
+      0,
+      0
+    ],
+    "size": [
+      0.7588047385215759,
+      1.898673415184021,
+      0.3255406618118286
+    ],
+    "minDistance": 0.7181063599792815,
+    "maxDistance": 6.602512281131103,
+    "distance": 3.6680623784061686,
+    "polarAngle": 1.5707963267948966,
+    "azimuth": 0,
+    "geometries": 1,
+    "textures": 2,
+    "renderedTriangles": 110588,
+    "contextLost": false,
+    "projectedBounds": {
+      "isBox3": true,
+      "min": {
+        "x": -0.37940236926078796,
+        "y": -0.9493367075920105,
+        "z": -0.1627703309059143
+      },
+      "max": {
+        "x": 0.37940236926078796,
+        "y": 0.9493367075920105,
+        "z": 0.1627703309059143
+      }
+    }
+  },
+  "disposed": {
+    "disposed": true,
+    "loaded": false,
+    "renderCount": 637,
+    "triangles": 110588,
+    "geometryBytes": 2603432,
+    "selectedMuscle": null,
+    "atlasBytes": 0,
+    "camera": [
+      0,
+      2.246040425393971e-16,
+      3.6680623784061686
+    ],
+    "target": [
+      0,
+      0,
+      0
+    ],
+    "size": [
+      0.7588047385215759,
+      1.898673415184021,
+      0.3255406618118286
+    ],
+    "minDistance": 0.7181063599792815,
+    "maxDistance": 6.602512281131103,
+    "distance": 3.6680623784061686,
+    "polarAngle": 1.5707963267948966,
+    "azimuth": 0,
+    "geometries": 0,
+    "textures": 1,
+    "renderedTriangles": 110588,
+    "contextLost": true,
+    "projectedBounds": null
+  },
+  "errors": []
+}

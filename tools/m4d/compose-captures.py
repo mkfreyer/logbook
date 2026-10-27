@@ -1,8 +1,8 @@
 """Compose/crop actual WebGL screenshots; never repaint mannequin pixels."""
 from pathlib import Path
-import json
+import json, sys
 from PIL import Image, ImageDraw, ImageFont
-root = Path('docs/m4d/selection-interactive')
+root = Path(sys.argv[1] if len(sys.argv)>1 else 'docs/m4d/selection-deltoides-corriges')
 audit = json.loads((root / 'browser-verification.json').read_text())
 assert audit['status'] == 'passed'
 font = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', 17)

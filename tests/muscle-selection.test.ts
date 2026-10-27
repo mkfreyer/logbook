@@ -7,7 +7,7 @@ import { BufferGeometry, BufferAttribute, Mesh, MeshBasicMaterial, Raycaster, Ve
 import { MUSCLES, SelectionTap, sampleMuscle } from '../src/features/model3d/selection';
 import { SELECTION_MODEL, muscleAtlasBase64 } from '../src/features/model3d/generated/selectionData';
 import { parseViewerEvent, commandScript } from '../src/features/model3d/bridge';
-const base = 'docs/m4c/meshy-posterieurs-harmonises';
+const base = 'docs/m4c/meshy-deltoides-reperes-iphone';
 function glb(path: string) {
   const bytes = readFileSync(path), n = bytes.readUInt32LE(12), doc = JSON.parse(bytes.toString('utf8', 20, 20+n));
   const bin = bytes.subarray(28+n), p = doc.meshes[0].primitives[0];
