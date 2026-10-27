@@ -1,0 +1,80 @@
+{
+  "status": "passed",
+  "baseCommit": "06fa665b676ea697e862ae3491fa1af6f827199d",
+  "originalFilesUnchanged": {
+    "assets/models/meshy-e45e5d8.glb": "421e593cad17f60d1c0c5e67707729fb88bbf69026795e22011ecc7d90b38959",
+    "app.json": "8b11a9b23bb8ca848e9002adb4258e99ad0a0e7758cb5383cf188771f33344c8",
+    "package-lock.json": "69d96faf8b11ff0c8473f04473edc5dd75c11fadb3039eaf7b4b0043f31433bf",
+    "src/db/migrations.ts": "727480c6aa457261fb3b16b015eaa98d113535885b52374b3b843b20d32dade9"
+  },
+  "validatedM4CMaskFilesUnchanged": {
+    "docs/m4c/meshy-posterieurs-harmonises/textures/changed-texels.png": "719e3d28794d2f4815fbe6f1451a83793fb1b431ed51cf0f6033ac27a388d922",
+    "docs/m4c/meshy-posterieurs-harmonises/textures/control-basecolor.png": "0921f38aa162a1ee6ea6fa8a2d6a06c8f8b5adbabbd64912af6fef75fd7f7897",
+    "docs/m4c/meshy-posterieurs-harmonises/textures/deltoid.left.anterior.png": "33748a1b9f8cba3d68fab4b3794610694cd8986762125e4f9645ee0ee0628b89",
+    "docs/m4c/meshy-posterieurs-harmonises/textures/deltoid.left.lateral.png": "438dc06646ba846d7ce835addbbd873257eb50bdcbd4a762548b9434120e14f9",
+    "docs/m4c/meshy-posterieurs-harmonises/textures/deltoid.left.posterior.png": "5622d5fde32f3f2e8d4ddfd46cf98411bfb0f1451810720374a9d0f26e485c61",
+    "docs/m4c/meshy-posterieurs-harmonises/textures/deltoid.right.anterior.png": "418afeb68e59944756a40a479e7aa40eba5074d4704838d3be6786d1700e9a63",
+    "docs/m4c/meshy-posterieurs-harmonises/textures/deltoid.right.lateral.png": "04cff1872acf709ec7d3519165623930670796566559ab4d1058894d82c2bad1",
+    "docs/m4c/meshy-posterieurs-harmonises/textures/deltoid.right.posterior.png": "560ae8b0b11c3f94a0cf45d3c489b0abea5b3ffbc1549d467da9ac524ee4dc18",
+    "docs/m4c/meshy-posterieurs-harmonises/textures/masks-rgba-0.png": "9852073e8e083de316e3c66840aa6316ca6f04b3da3c7facff28bb2022b765cd",
+    "docs/m4c/meshy-posterieurs-harmonises/textures/masks-rgba-1.png": "be3782c00d0663d973726438f780494a633b110fd7eafb8d93dd69c9c735f86a",
+    "docs/m4c/meshy-posterieurs-harmonises/textures/muscle-ids.png": "bfc8db8814057c052e36b9b8acc35414253f1989d51bbde839b05d7173a0a54d",
+    "docs/m4c/meshy-posterieurs-harmonises/textures/pectoralis.left.png": "6362c4af4a35944304d8eccb29f0d15cbb2dbbfd313cc3392e46adbea97689da",
+    "docs/m4c/meshy-posterieurs-harmonises/textures/pectoralis.right.png": "eb2794be05e4876f6de303553cf216055c15538fe7c7c860ea064a1cd4567774"
+  },
+  "dependenciesAndDevDependenciesUnchanged": true,
+  "sqliteSchemaVersion": 8,
+  "sqliteMigrationAdded": false,
+  "testCount": 551,
+  "testGroups": {
+    "database": 219,
+    "navigation": 13,
+    "nativeUI": 310,
+    "modelAndSelection": 8,
+    "v8Preservation": 1
+  },
+  "gestureDebugAdditionalTests": 17,
+  "originalModifiedPaths": [
+    "package.json",
+    "src/features/model3d/ModelViewer.tsx",
+    "src/features/model3d/ModelViewerScreen.tsx",
+    "src/features/model3d/bridge.ts",
+    "src/features/model3d/generated/viewerBundle.ts",
+    "src/features/model3d/loadModel.ts",
+    "src/features/model3d/web/viewer.ts",
+    "tests/model-viewer-ui.test.tsx",
+    "tests/model-viewer.test.ts",
+    "tools/m4b/test-browser.ts"
+  ],
+  "logs": {
+    "fullTests": {
+      "sha256": "763f34279c8413eb1cdf8ea006d877496d7c6fc7411b85352f3d7c3ac795c288",
+      "file": "m4d-full-tests-rerun.txt"
+    },
+    "typecheck": {
+      "sha256": "a2a9ce4c5ae934144e62bc29d798aa5d35fe6d94ec3d38cc80d42d48527cf46a",
+      "file": "m4d-types.txt"
+    },
+    "expoSDK58": {
+      "sha256": "dd9e6c7d5a2d4e2ab7e702aa37654550c87ceea7ff401dbdbb18dc124b1927da",
+      "file": "m4d-expo-online.txt"
+    },
+    "bundle": {
+      "sha256": "2e9c07442d64ac40794f85f51b24495a96ce6e27b9a1173068b98a477d3754c9",
+      "file": "m4d-viewer-check.txt"
+    },
+    "gestureDiagnostic": {
+      "sha256": "4ad308e0ffb11020626ea67fdf453f264842f169d42c24acab3663762a282dfc",
+      "file": "m4d-gesture-debug.txt"
+    },
+    "iosExport": {
+      "sha256": "6bd46b9bd3ea611f65856ce804de61f14f3fbcd730b60760e2dbb58b36019d05",
+      "file": "m4d-ios-export.txt"
+    },
+    "sourceAndSelection": {
+      "sha256": "c00665b394d6ec5c1e405d7b1d9cc885b4ccbb5e905bde491f0ea2a311505c6f",
+      "file": "m4d-selection-unit-final.txt"
+    }
+  },
+  "actualIPhoneValidation": "pending user test"
+}

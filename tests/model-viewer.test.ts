@@ -7,7 +7,7 @@ import { commandScript, parseViewerEvent } from '../src/features/model3d/bridge'
 import { MODEL } from '../src/features/model3d/model';
 import { buildViewerDocument } from '../src/features/model3d/document';
 
-test('the runtime asset is byte-identical to the validated M4A master, with one unsegmented mesh', () => {
+test('the preserved M4A master remains byte-identical, with its original unsegmented mesh', () => {
   const bytes = readFileSync(new URL('../assets/models/meshy-e45e5d8.glb', import.meta.url));
   assert.equal(bytes.length, MODEL.bytes);
   assert.equal(createHash('sha256').update(bytes).digest('hex'), MODEL.sha256);

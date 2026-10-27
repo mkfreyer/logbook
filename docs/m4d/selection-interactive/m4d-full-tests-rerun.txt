@@ -1,0 +1,340 @@
+
+> logbook@0.1.0 test
+> npm run test:db && npm run test:navigation && npm run test:ui && npm run test:model-viewer && npm run test:upgrade
+
+
+> logbook@0.1.0 test:db
+> tsx --test tests/db.test.ts tests/m1-db.test.ts tests/m12-db.test.ts tests/m2-db.test.ts tests/m2-summary.test.ts tests/m3-history.test.ts tests/m32-data.test.ts tests/m33-data.test.ts tests/m34a-data.test.ts tests/m34b-data.test.ts tests/set-passages-data.test.ts tests/m34c-data.test.ts
+
+✔ a fresh database is versioned, has foreign keys enabled, and has no sample programs (63.761574ms)
+✔ programs and workout plans can be created, read and edited without changing identity or order (24.315819ms)
+✔ saved programs and edited workouts survive closing and reopening the database (57.701948ms)
+✔ bound parameters preserve quotes and SQL-looking content without executing it (23.81788ms)
+✔ names are required and length limits reject invalid input without partial writes (21.292654ms)
+✔ missing parent programs and missing records fail clearly (54.009422ms)
+✔ database foreign keys reject orphan workouts independently of repository validation (20.416654ms)
+✔ deleting a program cascades only its planned workouts and preserves other records (22.045437ms)
+✔ deleting a middle workout preserves sibling identities, notes, timestamps and order (57.414813ms)
+✔ missing, repeated and SQL-looking delete identifiers never remove unrelated data (23.317428ms)
+✔ a SQLite failure rolls back both the program deletion and its cascading children (24.000277ms)
+✔ deletions persist across database closure without changing retained preparations (62.244325ms)
+✔ concurrent workout creations use distinct stable positions within each program (21.549669ms)
+✔ program list has stable ordering and puts a newly edited program first (20.446165ms)
+✔ re-running the versioned migration preserves existing user data (47.040659ms)
+✔ a migration failure rolls back schema changes and keeps the version unchanged (1.439393ms)
+✔ a newer database version fails safely without deleting or downgrading user data (20.114344ms)
+✔ V2 adds a real exercise library without creating user programs, workouts, series or performances (71.845386ms)
+✔ migration from populated M0 preserves the exact schema and every existing record (28.406957ms)
+✔ failed V2 catalogue insertion rolls back all new tables and preserves populated M0 version 1 (26.084187ms)
+✔ library search ignores accents and case, matches equipment and never executes SQL-looking terms (42.747035ms)
+✔ custom exercise creation and editing preserve catalog identity and existing occurrences (24.912569ms)
+✔ exercise occurrences can be added, edited and repeated without altering the library or their sets (58.526098ms)
+✔ each series persists its own label, type, reps range, optional weight/RIR and individual rest (25.938909ms)
+✔ invalid catalog and numeric series inputs fail without creating or partially changing data (33.248254ms)
+✔ database constraints independently reject invalid targets, missing parents and referenced catalogue deletion (58.431559ms)
+✔ reordering exercise occurrences is an atomic scoped permutation with stable IDs and attached sets (25.823819ms)
+✔ reordering series moves each individual interval with its series and preserves other exercises (65.873394ms)
+✔ storage failure halfway through a reorder rolls back positions and timestamps for exercises and series (24.084763ms)
+✔ Expo exclusive transaction path receives all reorder queries instead of the outer connection (23.184037ms)
+✔ concurrent additions are serialized, have unique positions, and the write queue recovers after an error (61.955927ms)
+✔ deleting one set or one exercise preserves sibling data and ordering, and cascades only its planned sets (27.233679ms)
+✔ M0 workout and program deletions cascade preparation only and retain catalog and unrelated user data (61.768727ms)
+✔ storage errors roll back cascading exercise deletion and leave its sets available for retry (24.191335ms)
+✔ missing and SQL-looking identifiers are rejected without affecting existing plans (25.987561ms)
+✔ custom exercise, edited/reordered targets and deletions survive actual database close and reopen (71.094097ms)
+✔ V3 migrates populated released M1.1 without touching any preparation record or its schema (34.795596ms)
+✔ migration storage failure rolls back all new execution tables and keeps the populated V2 usable (61.649004ms)
+✔ start atomically snapshots names, exercise order and individual targets without recording performances (37.276812ms)
+✔ incomplete preparations roll back their entire snapshot and starting twice resumes one active session (51.83295ms)
+✔ actual values require explicit input and duplicate validation cannot replace a performance or create another rest (33.985389ms)
+✔ three different individual rests are retained, early exit works, overtime never advances, and final series has no rest (78.298617ms)
+✔ zero rest leaves a manual next action and explicitly configured rest applies at exercise boundaries without a default (38.052225ms)
+✔ pauses persist each interval; chronological rest includes pauses while active countdown excludes them (88.237649ms)
+✔ closing SQLite during a running or paused rest reconstructs elapsed time and the active series without duplicates (91.880624ms)
+✔ Cette séance modifies only unperformed execution targets and keeps the original snapshot and every preparation (63.732324ms)
+✔ Programme updates the active objective and the future template, without rewriting original targets or past performance (38.316015ms)
+✔ deleting a program preserves active and completed execution data, and the active snapshot can still finish (67.697521ms)
+✔ a deleted or replaced template cannot receive Programme edits but This session remains usable (34.774019ms)
+✔ SQLite independently protects original targets, validated objectives, actual performances and the single active session (64.852318ms)
+✔ failure starting a rest rolls back its performance and allows retry without duplicates (39.317324ms)
+✔ failure closing a paused rest rolls back pause end and advancement, and preserves retry (82.22493ms)
+✔ Programme and execution objective updates commit together or both roll back (29.666009ms)
+✔ invalid targets, premature completion and out-of-order validation never alter execution or preparation (61.763619ms)
+✔ exclusive Expo path uses only the transaction connection, with no ambient writes or assumed foreign keys (29.916659ms)
+✔ committed change observers can refresh a foreground alarm and cannot turn a saved write into a failure (59.536639ms)
+✔ temporary replacement creates exact exercise identity, clears incompatible targets and leaves the program unchanged (50.710729ms)
+✔ partial replacement never reassigns validated series; remaining results refer to the actual replacement (77.652069ms)
+✔ choosing a later exercise persists, finishes its remaining series then returns to the earliest unfinished program exercise (97.293727ms)
+✔ a choice during paused rest never closes or alters that interval; its real duration is saved only by explicit completion (77.893067ms)
+✔ a chosen final program exercise still opens its own rest if earlier series remain (38.098143ms)
+✔ exceptional choice and partial replacement survive close/reopen; finished summary remains after program deletion (150.95916ms)
+✔ replacement or choice transaction failure rolls back every moved series, target, event and selected exercise (34.310932ms)
+✔ stale rapid choices and foreign or finished exercises are rejected without changing performed data (73.235571ms)
+✔ replacement chains keep every snapshot and reject rewriting performed exercise identity (36.23046ms)
+✔ another execution of the template restores its original exercise and charges (99.705918ms)
+✔ V4 preserves every released M1.2 record, running pause, completed summary and program target during migration (73.530369ms)
+✔ failed V4 migration rolls back added columns/tables and preserves the filled V3 including all pauses (9.00706ms)
+✔ snapshot reads cannot straddle a replacement: no old exercise list paired with new series assignments (104.921212ms)
+✔ temporary alternative targets cannot be written into the original program; this-session editing remains possible (35.670155ms)
+✔ Expo exclusive-connection path keeps replacement/choice mutations scoped and atomic even with foreign keys off (57.901613ms)
+✔ changing catalog weight mode while a session is active cannot copy its old-unit targets into future programming (31.131447ms)
+✔ summary counts only actual sets, chronological duration including absences, logged kg and provided RIR (4.641078ms)
+✔ missing weight and RIR remain neutral; provided zero is not missing (0.723926ms)
+✔ additional weight never invents body mass, per-hand weight is not silently doubled, and warm-ups are included (0.528176ms)
+✔ summary uses the actual replacement name and unit, retaining its source without merging identities (0.386421ms)
+✔ an unfinished session has no final summary; incomplete provenance is reported instead of inventing results (0.823631ms)
+✔ chronological duration formats seconds, minutes and long absences clearly (0.282667ms)
+✔ a chain of temporary alternatives keeps initial program provenance while only performed alternatives appear in the summary (0.326613ms)
+✔ invalid times and overflowing arithmetic are reported rather than displayed as fabricated zero or infinite metrics (0.527996ms)
+✔ empty actual history excludes plans and active sessions; no fictitious tonnage (71.82156ms)
+✔ SQL overview matches M2 summaries for real durations, results and tonnage, never programmed targets (84.638531ms)
+✔ same-name programs stay separate by source ID; deleted plans retain all history and snapshots (59.324605ms)
+✔ period boundaries are inclusive/exclusive at ISO timestamps; previous period is independently filtered (94.301869ms)
+✔ missing loads and RIR remain null; explicit zero is a recorded value (76.19377ms)
+✔ representative set excludes warmups, ties by reps, keeps actual correlated kg/reps (33.977818ms)
+✔ same catalog identity across programs/renames stays queryable; actual snapshots keep their historical names (68.908418ms)
+✔ different catalog IDs and captured load modes are never merged; per-hand tonnage counted once (83.489594ms)
+✔ two actually performed catalog exercises with the same name stay separate in the index and series queries (43.889508ms)
+✔ a history snapshot shares the execution queue and cannot straddle a set commit (85.098398ms)
+✔ partial replacement splits exact actual identities, preserves performed sets and the original program (70.211025ms)
+✔ history reads cannot alter actual results or rest pauses, and v4 initialization preserves every M2 row (39.96811ms)
+✔ saved history reopens from disk after deleting the original program (75.47937ms)
+✔ pages cover completed sessions without duplication and chart limit does not truncate totals (2112.443215ms)
+✔ a real validation timeline can alternate exercises without regrouping earlier results out of order (0.742265ms)
+✔ work-set selection handles missing loads, zero, warmup-only and actual ordering ties (0.316246ms)
+✔ calendar periods honor local midnight, month/year boundaries and Paris DST changes (2.003907ms)
+✔ a first use and an unfinished session cannot supply a previous performance (64.588422ms)
+✔ previous work set is the exact type and position, across programs and after program deletion (27.133953ms)
+✔ fallbacks distinguish same type at another position and another non-warmup type (55.347393ms)
+✔ comparability takes priority over a more recent differently positioned or typed result (29.917304ms)
+✔ working sets never use warmups; warmups never pretend to be comparable to work (22.768405ms)
+✔ same catalog ID with a new load mode never reuses an incompatible result (50.942638ms)
+✔ a temporary replacement uses its actual identity rather than the original bar exercise (37.591692ms)
+✔ missing charge and RIR stay null; explicit zero is preserved (54.817805ms)
+✔ renaming an exercise keeps its history key and old recorded labels (23.450728ms)
+✔ weekly activity counts only local Monday–Sunday completions, including a midnight crossing (78.081158ms)
+✔ empty and active-only weeks contain no completed sessions (13.676961ms)
+✔ week calendar handles DST and a timezone change without UTC day slicing (27.494127ms)
+✔ completion observers fire after a real finish only, never on validations or duplicate finish (54.413842ms)
+✔ M3.1 SQLite rows survive readings, reopening, and a personalized reference update without history rewriting (31.375005ms)
+✔ v4 to current migration preserves every M0–M3.2 value, including a paused active rest; preference table starts empty (56.483737ms)
+✔ failed preference migration rolls back its schema and leaves version 4 data untouched (11.025171ms)
+✔ sound defaults to existing behavior and persists false/true across independent connections (97.243261ms)
+✔ failed preference writes preserve the saved value and recover; malformed known values are not treated as true (89.600668ms)
+✔ rapid preference requests serialize real SQLite writes and persist the latest intent without touching other data (109.197449ms)
+✔ a failed queued preference write does not block the last intent or corrupt application data (48.43157ms)
+✔ complete JSON export preserves all table values, IDs, null/zero, targets, pauses, active/completed sessions and tied journal order (108.715861ms)
+✔ a fresh application exports an honest empty logbook with catalog references and preference defaults (44.004337ms)
+✔ a WAL snapshot stays coherent while another connection creates a program, changes a preference and validates a set (107.561072ms)
+✔ export keeps historical snapshots after deletion of their program (100.230365ms)
+✔ cancelled export and sink failure release the snapshot and never modify application rows (49.976478ms)
+✔ export rejects unknown schema/tables and relational corruption without producing a claimed backup (88.932801ms)
+✔ multi-year export uses bounded pages rather than loading all performances at once (841.545471ms)
+✔ decimal percentages are precise proposals without equipment rounding, null is not zero (2.991973ms)
+✔ series display modes preserve names/types and provide an understandable missing-name fallback (0.416181ms)
+✔ calculated warmup/back-off persist, follow manual targets and respect total (34.956655ms)
+✔ calculated warmup/back-off persist, follow manual targets and respect per_hand (56.59498ms)
+✔ calculated warmup/back-off persist, follow manual targets and respect additional (28.207059ms)
+✔ ordinary, optional warmup, top set, custom and manual back-off remain independent (24.442253ms)
+✔ missing reference weight stays null, explicit zero stays zero, deleting a reference never keeps a stale computed weight (55.120063ms)
+✔ self references, cross-exercise references, calculated chains, wrong top sets and invalid percentages are rejected atomically (32.708223ms)
+✔ reference identity survives reordering and failed writes restore the complete old rule (56.949363ms)
+✔ session snapshots freeze the planned calculation and no real performance is invented or rewritten (30.98466ms)
+✔ existing live manual edits keep session-only scope and explicitly replace a future rule in program scope (30.431701ms)
+✔ v5 migration preserves every old column, ID, preference, completed workout and active paused rest (53.633488ms)
+✔ failed v6 migration rolls back schema and all v5 data and can be retried (16.735825ms)
+✔ display preference persists independently of sound, including rapid writes and errors (22.869263ms)
+✔ personal export includes complete calculation relationships, frozen provenance and the display preference without changing data (86.559653ms)
+✔ Expo-style exclusive connections atomically write and capture rules even when their FK pragma is off (22.588463ms)
+✔ 100 planned, 95 performed yields 85.5 proposed in total, originals and actual fields stay distinct (83.053924ms)
+✔ 100 planned, 95 performed yields 85.5 proposed in per_hand, originals and actual fields stay distinct (26.472898ms)
+✔ 100 planned, 95 performed yields 85.5 proposed in additional, originals and actual fields stay distinct (25.69816ms)
+✔ actual reference null is preserved without treating absence as zero (55.502757ms)
+✔ actual reference 0 is preserved without treating absence as zero (21.473353ms)
+✔ a manual override is not overwritten when its reference is subsequently validated (22.408524ms)
+✔ planned percentages remain separate and never use the performed reference weight (53.521403ms)
+✔ session-only additions persist all targets, notes, type and provenance without a fake template or actual performance (26.847254ms)
+✔ rapid duplicate addition tokens append one set to both execution and program (25.369656ms)
+✔ an addition during paused rest leaves the interval, timestamps and its original performed series identical (58.106385ms)
+✔ adding after the last validation reopens the remaining path without a retrospective rest (38.70913ms)
+✔ any remaining series can be edited with an explicit scope, but performed targets/results remain protected (60.718879ms)
+✔ current rules accept explicit planned or actual references and program scope updates the future only (30.900397ms)
+✔ explicit order choices resolve by stable IDs and do not affect the original exercise program (71.796888ms)
+✔ an already performed dependent keeps its missing target when the reference is executed later (28.60585ms)
+✔ replacement suspends incompatible rules, keeps performed identity and disables program changes (63.860699ms)
+✔ cross-exercise, self, chains, invalid percentages and incompatible top-set references are rejected atomically (24.582031ms)
+✔ unperformed extra removal preserves program additions, original sets and retry idempotence (24.820323ms)
+✔ a validated added set cannot be removed or edited (64.366829ms)
+✔ deleting the source program cannot erase execution additions, applied targets or notes (29.685549ms)
+✔ notes are independent of template instructions, editable after completion and leave performance/rests unchanged (60.311725ms)
+✔ a failed atomic program addition or reference resolution rolls everything back and retry stays safe (24.42664ms)
+✔ a populated released v6 database migrates without changing any old column or active paused rest (15.45542ms)
+✔ failed v7 migration is fully rolled back, preserves v6 and can be retried (56.572961ms)
+✔ export includes all current rules, additions, scopes, notes and immutable originals, without a write (112.586504ms)
+✔ exclusive Expo-style transactions with FK disabled still reject missing sources and persist valid additions (27.908614ms)
+✔ all five kinds can be explicitly added, with exact/range and independent rests, without performing them (57.778498ms)
+✔ original metadata, performed rules and the actual performance remain immutable at SQLite level (28.202593ms)
+✔ an export refuses inconsistent addition provenance without modifying a damaged database (62.274451ms)
+✔ configuring an actual rule never evaluates an incompatible tiny planned weight as if it were an actual result (24.433258ms)
+✔ offline guide: stable identity, specific content and explicit valid alternatives for Développé couché barre (1.216236ms)
+✔ offline guide: stable identity, specific content and explicit valid alternatives for Développé incliné haltères (0.147182ms)
+✔ offline guide: stable identity, specific content and explicit valid alternatives for Pompes (0.090681ms)
+✔ offline guide: stable identity, specific content and explicit valid alternatives for Tractions (0.084279ms)
+✔ offline guide: stable identity, specific content and explicit valid alternatives for Tirage vertical à la poulie (0.140963ms)
+✔ offline guide: stable identity, specific content and explicit valid alternatives for Rowing haltère (0.165692ms)
+✔ offline guide: stable identity, specific content and explicit valid alternatives for Squat barre (0.115069ms)
+✔ offline guide: stable identity, specific content and explicit valid alternatives for Presse à cuisses (0.090066ms)
+✔ offline guide: stable identity, specific content and explicit valid alternatives for Soulevé de terre roumain (0.099354ms)
+✔ offline guide: stable identity, specific content and explicit valid alternatives for Leg curl assis (0.201677ms)
+✔ offline guide: stable identity, specific content and explicit valid alternatives for Développé épaules haltères (0.092351ms)
+✔ offline guide: stable identity, specific content and explicit valid alternatives for Élévations latérales (0.090403ms)
+✔ offline guide: stable identity, specific content and explicit valid alternatives for Curl haltères (0.058458ms)
+✔ offline guide: stable identity, specific content and explicit valid alternatives for Extension triceps à la poulie (0.088478ms)
+✔ offline guide: stable identity, specific content and explicit valid alternatives for Crunch au sol (0.063911ms)
+✔ all fifteen initial IDs have a guide without adding any catalog rows or guessing text matches (1.43972ms)
+✔ custom items never receive invented guidance or inferred alternatives, even with a matching name (0.114801ms)
+✔ missing alternative rows are omitted and duplicate catalog entries cannot duplicate cards (0.142802ms)
+✔ all load modes have a clear explanation and missing load is distinguished from zero (0.131658ms)
+✔ reading every guide on a populated v8 database requires no migration and changes no personal rows (81.458269ms)
+✔ replacement preserves performed and skipped series, original targets and the program, then survives reopening (113.677387ms)
+✔ renaming a custom exercise keeps its ID and earlier execution snapshot unchanged (39.903793ms)
+✔ personal export remains complete schema v8/format 1 and includes custom instructions without writes (154.188852ms)
+✔ skipping a planned series changes only execution status, not goals, program, performance or rest (61.914139ms)
+✔ an added session series can be skipped without changing its source model (95.277724ms)
+✔ an added program series can be skipped without changing its source model (64.223421ms)
+✔ reintegration preserves adjusted targets, name, type, notes, frozen goals and rule provenance (35.302007ms)
+✔ a reintegrated reference is manually performed and resolves the actual-dependent target normally (70.876872ms)
+✔ a performed series cannot be skipped or reintegrated and SQLite refuses performance insertion on a skipped set (35.248644ms)
+✔ all series may be skipped, but finishing still requires at least one real performance (78.533002ms)
+✔ rapid duplicate intents affect one exact series and stale callbacks cannot overwrite a later reintegration (71.417428ms)
+✔ concurrent validation/skip requests commit one coherent outcome without skipping the following series (40.555556ms)
+✔ SQLite statuses, goals and revisions survive reopening, then allow reintegration and execution (65.388291ms)
+✔ skipping and reintegrating another exercise respects the explicitly selected current exercise (34.759335ms)
+✔ skipping the last remaining series preserves an open paused rest until explicit manual completion (74.53237ms)
+✔ reintegration during rest restores a next series without resetting or ending its interval or pauses (69.827853ms)
+✔ a zero-rest pending transition also remains manual when every following series is skipped (37.257242ms)
+✔ passing an actual reference leaves the dependent unresolved and preserves explicitly planned calculations and manual overrides (66.932933ms)
+✔ a skipped dependent retains a legitimate resolved proposal when reintegrated after its reference is performed (34.422751ms)
+✔ replacement affects remaining series only; skipped originals keep their identity and targets after reintegration (67.175396ms)
+✔ withdrawal of an added series remains distinct and requires reintegration before withdrawal (39.393194ms)
+✔ completed history retains skips and real statistics even after the program is deleted, with no status edits allowed (68.869439ms)
+✔ a failed selected-exercise write rolls back the passage and keeps a safe retry (33.574958ms)
+✔ a populated released v7 database migrates without modifying any prior row, preference, note, goal, result or paused rest (51.176453ms)
+✔ failed v8 migration rolls back schema and preserves v7 for a later retry (13.890007ms)
+✔ export preserves skip/reintegration revisions and goals without any write and remains coherent during another connection change (193.981135ms)
+✔ SQLite guards and export integrity refuse a fabricated skip on an already performed series (45.186806ms)
+✔ exclusive Expo connections with FK off still validate exact ownership and sequential passage revisions (89.664372ms)
+✔ a delayed validation from before skipping is rejected even after that same series is reintegrated (84.228683ms)
+ℹ tests 219
+ℹ suites 0
+ℹ pass 219
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 17611.723329
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice
+
+> logbook@0.1.0 test:navigation
+> tsx --test tests/navigation.test.ts
+
+▶ Intent and ownership of vertical universe gestures
+  ✔ tiny movements, horizontal swipes and diagonals do not capture a page (2.437703ms)
+  ✔ upward swipes from Home work at every scroll position, including before measurements (0.326568ms)
+  ✔ returning downward from Musculation requires the list to have started at the top (0.219565ms)
+  ✔ non-scrolling pages allow the adjacent universe while the outside bounds remain closed (0.264494ms)
+  ✔ a future third universe uses the same edge rules on the middle page (0.209636ms)
+✔ Intent and ownership of vertical universe gestures (5.562138ms)
+▶ Following the finger and settling a universe
+  ✔ track offsets cannot reveal space before Home or after the final universe (0.58678ms)
+  ✔ the interactive track follows displacement and is limited to the nearest adjacent page (0.467448ms)
+  ✔ backtracking can restore a page but cannot steal its opposite list boundary (0.38894ms)
+  ✔ a short drag returns to the same page even when its velocity has the opposite sign (0.387055ms)
+  ✔ a deliberate drag commits one page in either direction (0.380077ms)
+  ✔ a fast flick can complete a shorter drag only in the finger direction (0.216473ms)
+  ✔ long or fast swipes never skip a page or escape the first and last universe (0.170436ms)
+  ✔ an unmeasured viewport and a one-page pager cannot change universe (0.123251ms)
+✔ Following the finger and settling a universe (3.473358ms)
+ℹ tests 13
+ℹ suites 2
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 414.074056
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice
+
+> logbook@0.1.0 test:ui
+> jest --runInBand
+
+
+Test Suites: 20 passed, 20 total
+Tests:       310 passed, 310 total
+Snapshots:   0 total
+Time:        26.408 s, estimated 73 s
+Ran all test suites.
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice
+
+> logbook@0.1.0 test:model-viewer
+> tsx --test tests/model-viewer.test.ts tests/muscle-selection.test.ts
+
+✔ the preserved M4A master remains byte-identical, with its original unsegmented mesh (4.217707ms)
+✔ overview fits head, feet and width across narrow and wide viewports (0.610252ms)
+✔ bridge validates technical surface hits, without inventing muscle identifiers (1.230041ms)
+✔ HTML contains only bundled code/data and forbids external connections (3.348044ms)
+(node:32580) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
+Replace `const THREE = require("three")` with `import * as THREE from "three"`.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ runtime UV derivative preserves all validated positions, normals, triangles, UV and neutral material (146.34335ms)
+✔ eight actual raycasts resolve the exact validated atlas, including anatomical left/right (286.5776ms)
+✔ selection bridge accepts exactly eight IDs and null; reset is a bounded command (0.997339ms)
+✔ brief taps survive jitter; drag-return, pinch, hold, cancellation and residual releases never select (0.363008ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1314.233438
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice
+
+> logbook@0.1.0 test:upgrade
+> tsx --test tests/sdk58-preservation.test.ts
+
+✔ SDK upgrade reopens populated v8 without changing schema, personal rows, active rest or export (88.965687ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 347.608135
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

@@ -1,3 +1,4 @@
+import { muscleById, type MuscleId } from './selection';
 /** A surface intersection is technical geometry, never an anatomical muscle ID. */
 export type SurfaceHit = {
   assetId: 'meshy-e45e5d8';
@@ -6,11 +7,12 @@ export type SurfaceHit = {
   faceIndex: number;
   uv?: { x: number; y: number };
 };
-export type ViewerCommand = 'overview' | 'front' | 'dispose';
+export type ViewerCommand = 'overview' | 'front' | 'reset-selection' | 'dispose';
 export type ViewerEvent =
   | { version: 1; type: 'ready'; triangles: number; geometryBytes: number }
   | { version: 1; type: 'error'; message: string }
-  | { version: 1; type: 'surface-hit'; hit: SurfaceHit };
+  | { version: 1; type: 'surface-hit'; hit: SurfaceHit }
+  | { version: 1; type: 'selection'; muscleId: MuscleId | null };
 const record = (value: unknown): value is Record<string, unknown> => !!value && typeof value === 'object' && !Array.isArray(value);
 const finite = (value: unknown): value is number => typeof value === 'number' && Number.isFinite(value);
 export function parseViewerEvent(text: string): ViewerEvent | null {
@@ -23,6 +25,11 @@ export function parseViewerEvent(text: string): ViewerEvent | null {
   }
   if (value.type === 'error' && typeof value.message === 'string') {
     return { version: 1, type: 'error', message: value.message.slice(0, 240) };
+  }
+  if (value.type === 'selection') {
+    if (value.muscleId === null) return { version: 1, type: 'selection', muscleId: null };
+    const muscle = muscleById(value.muscleId);
+    return muscle ? { version: 1, type: 'selection', muscleId: muscle.id } : null;
   }
   if (value.type !== 'surface-hit' || !record(value.hit)) return null;
   const hit = value.hit;

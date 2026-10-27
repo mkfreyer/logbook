@@ -94,3 +94,33 @@ test('a stopped content process releases the surface and offers a clean retry', 
   await fireEvent.press(view.getByRole('button', { name: 'Réessayer' })); await view.findByTestId('model-webview'); await message(ready);
   await waitFor(() => expect(view.getByRole('button', { name: 'Face' }).props.accessibilityState.disabled).toBe(false));
 });
+
+test('validated muscle messages update the French name, change selection and reset without moving the camera', async () => {
+  const view = await render(<ModelViewerScreen />); await view.findByTestId('model-webview');
+  const selection = (id: string | null) => ({ version: 1, type: 'selection', muscleId: id });
+  await message(selection('pectoralis.left')); // Ignore events before renderer ready.
+  expect(view.queryByText('Grand pectoral gauche')).toBeNull();
+  await message(ready);
+  for (const [id, name] of [
+    ['pectoralis.left', 'Grand pectoral gauche'], ['pectoralis.right', 'Grand pectoral droit'],
+    ['deltoid.left.anterior', 'Deltoïde antérieur gauche'], ['deltoid.left.lateral', 'Deltoïde moyen gauche'],
+    ['deltoid.left.posterior', 'Deltoïde postérieur gauche'], ['deltoid.right.anterior', 'Deltoïde antérieur droit'],
+    ['deltoid.right.lateral', 'Deltoïde moyen droit'], ['deltoid.right.posterior', 'Deltoïde postérieur droit'],
+  ]) {
+    await message(selection(id!)); await view.findByText(name!);
+    expect(view.getByRole('button', { name: 'Réinitialiser la sélection' }).props.accessibilityState.disabled).toBe(false);
+  }
+  await message(selection('not-a-muscle'));
+  expect(view.getByText('Deltoïde postérieur droit')).toBeTruthy();
+  await fireEvent.press(view.getByRole('button', { name: 'Réinitialiser la sélection' }));
+  expect(mockInject).toHaveBeenLastCalledWith(expect.stringContaining('command("reset-selection")'));
+  expect(view.getByText('Touchez un muscle pour le sélectionner')).toBeTruthy();
+  await message(selection('pectoralis.left')); await message(selection(null));
+  expect(view.queryByText('Grand pectoral gauche')).toBeNull();
+  await message(selection('pectoralis.left'));
+  const stale = mockProps.onMessage;
+  await act(() => mockAppChange('background'));
+  await act(() => mockAppChange('active')); await view.findByTestId('model-webview'); await message(ready);
+  await act(() => stale?.({ nativeEvent: { data: JSON.stringify(selection('pectoralis.right')) } } as never));
+  expect(view.queryByText('Grand pectoral gauche')).toBeNull(); expect(view.queryByText('Grand pectoral droit')).toBeNull();
+});
