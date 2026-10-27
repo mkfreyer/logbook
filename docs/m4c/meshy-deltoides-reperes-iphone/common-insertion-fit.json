@@ -1,0 +1,14 @@
+{
+  "rightSourcePoint": [
+    -0.2536669671535492,
+    0.45361238718032837,
+    -0.051185134798288345
+  ],
+  "method": "Least squared reprojection error to all three annotated endpoints, constrained to actual original shoulder surface texels near the shared insertion.",
+  "rmsPixelError": 51.265369056302475,
+  "perViewErrorPx": {
+    "posterior": 62.75404105479186,
+    "lateral": 4.76648423779425,
+    "anterior": 62.63884699402634
+  }
+}

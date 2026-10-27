@@ -1,0 +1,2250 @@
+{
+  "right": {
+    "insertion": [
+      -0.2536669671535492,
+      0.45361238718032837,
+      -0.051185134798288345
+    ],
+    "chartAxisSourceM": [
+      0.177,
+      -0.055
+    ],
+    "rows": [
+      {
+        "y": 0.45371238718032836,
+        "anteriorLateralAngle": 0.049720871561177486,
+        "posteriorLateralAngle": 0.049715122862602636
+      },
+      {
+        "y": 0.45457502852640197,
+        "anteriorLateralAngle": 0.049994781048060766,
+        "posteriorLateralAngle": 0.04945964824930746
+      },
+      {
+        "y": 0.4554376698724755,
+        "anteriorLateralAngle": 0.050721925198836955,
+        "posteriorLateralAngle": 0.048789909332335804
+      },
+      {
+        "y": 0.45630031121854914,
+        "anteriorLateralAngle": 0.051913208609198326,
+        "posteriorLateralAngle": 0.047707353020806
+      },
+      {
+        "y": 0.4571629525646227,
+        "anteriorLateralAngle": 0.0535786984848234,
+        "posteriorLateralAngle": 0.04621434327721873
+      },
+      {
+        "y": 0.4580255939106963,
+        "anteriorLateralAngle": 0.05572752799010747,
+        "posteriorLateralAngle": 0.04431414869608549
+      },
+      {
+        "y": 0.45888823525676986,
+        "anteriorLateralAngle": 0.05836780399631219,
+        "posteriorLateralAngle": 0.042010930224232294
+      },
+      {
+        "y": 0.4597508766028435,
+        "anteriorLateralAngle": 0.06150651922913748,
+        "posteriorLateralAngle": 0.03930972902277554
+      },
+      {
+        "y": 0.46061351794891703,
+        "anteriorLateralAngle": 0.06514946881571143,
+        "posteriorLateralAngle": 0.03621645447077385
+      },
+      {
+        "y": 0.46147615929499064,
+        "anteriorLateralAngle": 0.06930117123100364,
+        "posteriorLateralAngle": 0.032737872310551364
+      },
+      {
+        "y": 0.4623388006410642,
+        "anteriorLateralAngle": 0.07428349802147638,
+        "posteriorLateralAngle": 0.028881592934697733
+      },
+      {
+        "y": 0.4632014419871378,
+        "anteriorLateralAngle": 0.07991552283024088,
+        "posteriorLateralAngle": 0.024656059814738732
+      },
+      {
+        "y": 0.46406408333321136,
+        "anteriorLateralAngle": 0.08619394287474291,
+        "posteriorLateralAngle": 0.02007053807148456
+      },
+      {
+        "y": 0.464926724679285,
+        "anteriorLateralAngle": 0.09312649917835158,
+        "posteriorLateralAngle": 0.015135103187047728
+      },
+      {
+        "y": 0.4657893660253586,
+        "anteriorLateralAngle": 0.10071795883038157,
+        "posteriorLateralAngle": 0.00986062985853918
+      },
+      {
+        "y": 0.46665200737143214,
+        "anteriorLateralAngle": 0.10897010636606733,
+        "posteriorLateralAngle": 0.004258780993435407
+      },
+      {
+        "y": 0.46751464871750575,
+        "anteriorLateralAngle": 0.11788173864823737,
+        "posteriorLateralAngle": -0.0016580031533809311
+      },
+      {
+        "y": 0.4683772900635793,
+        "anteriorLateralAngle": 0.12744866325068083,
+        "posteriorLateralAngle": -0.007876515700902684
+      },
+      {
+        "y": 0.4692399314096529,
+        "anteriorLateralAngle": 0.13766370034322203,
+        "posteriorLateralAngle": -0.014382793721611671
+      },
+      {
+        "y": 0.4701025727557265,
+        "anteriorLateralAngle": 0.14851668807848384,
+        "posteriorLateralAngle": -0.021162128679412077
+      },
+      {
+        "y": 0.4709652141018001,
+        "anteriorLateralAngle": 0.15999449148035988,
+        "posteriorLateralAngle": -0.028199076725896298
+      },
+      {
+        "y": 0.47182785544787365,
+        "anteriorLateralAngle": 0.17208101483417482,
+        "posteriorLateralAngle": -0.03547746885493026
+      },
+      {
+        "y": 0.47269049679394726,
+        "anteriorLateralAngle": 0.18475721757855512,
+        "posteriorLateralAngle": -0.04298042091557195
+      },
+      {
+        "y": 0.47355313814002087,
+        "anteriorLateralAngle": 0.19800113369898684,
+        "posteriorLateralAngle": -0.05069034348330901
+      },
+      {
+        "y": 0.4744157794860944,
+        "anteriorLateralAngle": 0.21178789462307976,
+        "posteriorLateralAngle": -0.05858895158962726
+      },
+      {
+        "y": 0.47527842083216804,
+        "anteriorLateralAngle": 0.22608975561753142,
+        "posteriorLateralAngle": -0.06665727430990542
+      },
+      {
+        "y": 0.4761410621782416,
+        "anteriorLateralAngle": 0.24087612568678005,
+        "posteriorLateralAngle": -0.07487566420963082
+      },
+      {
+        "y": 0.4770037035243152,
+        "anteriorLateralAngle": 0.25611360097337044,
+        "posteriorLateralAngle": -0.08322380664894904
+      },
+      {
+        "y": 0.47786634487038876,
+        "anteriorLateralAngle": 0.27176600166000353,
+        "posteriorLateralAngle": -0.09168072894553103
+      },
+      {
+        "y": 0.47872898621646237,
+        "anteriorLateralAngle": 0.2877944123732999,
+        "posteriorLateralAngle": -0.10022480939577524
+      },
+      {
+        "y": 0.4795916275625359,
+        "anteriorLateralAngle": 0.30415722608924634,
+        "posteriorLateralAngle": -0.10883378615432687
+      },
+      {
+        "y": 0.48045426890860954,
+        "anteriorLateralAngle": 0.3208101915403575,
+        "posteriorLateralAngle": -0.11748476597193222
+      },
+      {
+        "y": 0.4813169102546831,
+        "anteriorLateralAngle": 0.3377064641245194,
+        "posteriorLateralAngle": -0.1261542327916101
+      },
+      {
+        "y": 0.4821795516007567,
+        "anteriorLateralAngle": 0.3547966603155489,
+        "posteriorLateralAngle": -0.13481805620315845
+      },
+      {
+        "y": 0.48304219294683026,
+        "anteriorLateralAngle": 0.372028915575435,
+        "posteriorLateralAngle": -0.14345149975597818
+      },
+      {
+        "y": 0.4839048342929039,
+        "anteriorLateralAngle": 0.3893489457682951,
+        "posteriorLateralAngle": -0.1520292291302316
+      },
+      {
+        "y": 0.4847674756389775,
+        "anteriorLateralAngle": 0.4067001120760149,
+        "posteriorLateralAngle": -0.16049981463681323
+      },
+      {
+        "y": 0.48563011698505104,
+        "anteriorLateralAngle": 0.4240234894155976,
+        "posteriorLateralAngle": -0.16860146061643774
+      },
+      {
+        "y": 0.48649275833112465,
+        "anteriorLateralAngle": 0.4412579383582115,
+        "posteriorLateralAngle": -0.17661003432310374
+      },
+      {
+        "y": 0.4873553996771982,
+        "anteriorLateralAngle": 0.4583401805499255,
+        "posteriorLateralAngle": -0.1845027326403463
+      },
+      {
+        "y": 0.4882180410232718,
+        "anteriorLateralAngle": 0.4752048776341609,
+        "posteriorLateralAngle": -0.192255757993302
+      },
+      {
+        "y": 0.4890806823693454,
+        "anteriorLateralAngle": 0.4917847136758216,
+        "posteriorLateralAngle": -0.19984428278395167
+      },
+      {
+        "y": 0.489943323715419,
+        "anteriorLateralAngle": 0.5080104810871447,
+        "posteriorLateralAngle": -0.20724241592977535
+      },
+      {
+        "y": 0.49080596506149254,
+        "anteriorLateralAngle": 0.523811170055228,
+        "posteriorLateralAngle": -0.2144231715058009
+      },
+      {
+        "y": 0.49166860640756616,
+        "anteriorLateralAngle": 0.5391140614712769,
+        "posteriorLateralAngle": -0.22135843949006542
+      },
+      {
+        "y": 0.4925312477536397,
+        "anteriorLateralAngle": 0.5538448233615317,
+        "posteriorLateralAngle": -0.22801895861247043
+      },
+      {
+        "y": 0.4933938890997133,
+        "anteriorLateralAngle": 0.5679276108199098,
+        "posteriorLateralAngle": -0.23437429130704865
+      },
+      {
+        "y": 0.4942565304457869,
+        "anteriorLateralAngle": 0.5812851694423316,
+        "posteriorLateralAngle": -0.24039280076762629
+      },
+      {
+        "y": 0.4951191717918605,
+        "anteriorLateralAngle": 0.5938389422627594,
+        "posteriorLateralAngle": -0.24604163010689553
+      },
+      {
+        "y": 0.4959818131379341,
+        "anteriorLateralAngle": 0.6055091801909231,
+        "posteriorLateralAngle": -0.2512866836188841
+      },
+      {
+        "y": 0.49684445448400766,
+        "anteriorLateralAngle": 0.6162150559517515,
+        "posteriorLateralAngle": -0.2560926101448316
+      },
+      {
+        "y": 0.49770709583008127,
+        "anteriorLateralAngle": 0.6258753462787522,
+        "posteriorLateralAngle": -0.2604227885424685
+      },
+      {
+        "y": 0.4985697371761548,
+        "anteriorLateralAngle": 0.6344108507785919,
+        "posteriorLateralAngle": -0.2642393152586964
+      },
+      {
+        "y": 0.49943237852222844,
+        "anteriorLateralAngle": 0.641742576383439,
+        "posteriorLateralAngle": -0.26750299400567407
+      },
+      {
+        "y": 0.500295019868302,
+        "anteriorLateralAngle": 0.647863789191853,
+        "posteriorLateralAngle": -0.27021231388246864
+      },
+      {
+        "y": 0.5011576612143755,
+        "anteriorLateralAngle": 0.6536227403385466,
+        "posteriorLateralAngle": -0.27282118443736947
+      },
+      {
+        "y": 0.5020203025604492,
+        "anteriorLateralAngle": 0.6592853712510647,
+        "posteriorLateralAngle": -0.27546963748841
+      },
+      {
+        "y": 0.5028829439065228,
+        "anteriorLateralAngle": 0.6648537407124353,
+        "posteriorLateralAngle": -0.2781563102531334
+      },
+      {
+        "y": 0.5037455852525964,
+        "anteriorLateralAngle": 0.6703299075056882,
+        "posteriorLateralAngle": -0.28087983994908333
+      },
+      {
+        "y": 0.50460822659867,
+        "anteriorLateralAngle": 0.6757159304138527,
+        "posteriorLateralAngle": -0.28363886379380343
+      },
+      {
+        "y": 0.5054708679447435,
+        "anteriorLateralAngle": 0.6810138682199572,
+        "posteriorLateralAngle": -0.28643201900483695
+      },
+      {
+        "y": 0.5063335092908171,
+        "anteriorLateralAngle": 0.6862257797070328,
+        "posteriorLateralAngle": -0.28925794279972816
+      },
+      {
+        "y": 0.5071961506368907,
+        "anteriorLateralAngle": 0.6913537236581078,
+        "posteriorLateralAngle": -0.2921152723960204
+      },
+      {
+        "y": 0.5080587919829643,
+        "anteriorLateralAngle": 0.6963997588562119,
+        "posteriorLateralAngle": -0.29500264501125717
+      },
+      {
+        "y": 0.5089214333290378,
+        "anteriorLateralAngle": 0.7013659440843734,
+        "posteriorLateralAngle": -0.29791869786298186
+      },
+      {
+        "y": 0.5097840746751114,
+        "anteriorLateralAngle": 0.706254338125623,
+        "posteriorLateralAngle": -0.3008620681687386
+      },
+      {
+        "y": 0.510646716021185,
+        "anteriorLateralAngle": 0.7110669997629897,
+        "posteriorLateralAngle": -0.3038313931460709
+      },
+      {
+        "y": 0.5115093573672587,
+        "anteriorLateralAngle": 0.7158059877795029,
+        "posteriorLateralAngle": -0.3068253100125222
+      },
+      {
+        "y": 0.5123719987133322,
+        "anteriorLateralAngle": 0.720473360958191,
+        "posteriorLateralAngle": -0.30984245598563565
+      },
+      {
+        "y": 0.5132346400594058,
+        "anteriorLateralAngle": 0.7250711780820851,
+        "posteriorLateralAngle": -0.31288146828295593
+      },
+      {
+        "y": 0.5140972814054794,
+        "anteriorLateralAngle": 0.7296014979342131,
+        "posteriorLateralAngle": -0.315940984122026
+      },
+      {
+        "y": 0.514959922751553,
+        "anteriorLateralAngle": 0.734066379297605,
+        "posteriorLateralAngle": -0.3190196407203896
+      },
+      {
+        "y": 0.5158225640976266,
+        "anteriorLateralAngle": 0.73846788095529,
+        "posteriorLateralAngle": -0.3221160752955902
+      },
+      {
+        "y": 0.5166852054437001,
+        "anteriorLateralAngle": 0.7428080616902968,
+        "posteriorLateralAngle": -0.3252289250651712
+      },
+      {
+        "y": 0.5175478467897737,
+        "anteriorLateralAngle": 0.7470889802856562,
+        "posteriorLateralAngle": -0.32835682724667686
+      },
+      {
+        "y": 0.5184104881358473,
+        "anteriorLateralAngle": 0.7513126955243967,
+        "posteriorLateralAngle": -0.33149841905765054
+      },
+      {
+        "y": 0.519273129481921,
+        "anteriorLateralAngle": 0.7554812661895475,
+        "posteriorLateralAngle": -0.33465233771563574
+      },
+      {
+        "y": 0.5201357708279944,
+        "anteriorLateralAngle": 0.7595967510641378,
+        "posteriorLateralAngle": -0.33781722043817564
+      },
+      {
+        "y": 0.5209984121740681,
+        "anteriorLateralAngle": 0.7636612089311978,
+        "posteriorLateralAngle": -0.3409917044428148
+      },
+      {
+        "y": 0.5218610535201417,
+        "anteriorLateralAngle": 0.7676766985737564,
+        "posteriorLateralAngle": -0.3441744269470963
+      },
+      {
+        "y": 0.5227236948662153,
+        "anteriorLateralAngle": 0.7716452787748429,
+        "posteriorLateralAngle": -0.34736402516856374
+      },
+      {
+        "y": 0.5235863362122888,
+        "anteriorLateralAngle": 0.775569008317486,
+        "posteriorLateralAngle": -0.3505591363247605
+      },
+      {
+        "y": 0.5244489775583624,
+        "anteriorLateralAngle": 0.7794499459847166,
+        "posteriorLateralAngle": -0.3537583976332308
+      },
+      {
+        "y": 0.525311618904436,
+        "anteriorLateralAngle": 0.783290150559563,
+        "posteriorLateralAngle": -0.35696044631151796
+      },
+      {
+        "y": 0.5261742602505096,
+        "anteriorLateralAngle": 0.7870916808250548,
+        "posteriorLateralAngle": -0.3601639195771656
+      },
+      {
+        "y": 0.5270369015965832,
+        "anteriorLateralAngle": 0.790856595564221,
+        "posteriorLateralAngle": -0.36336745464771725
+      },
+      {
+        "y": 0.5278995429426567,
+        "anteriorLateralAngle": 0.794586953560091,
+        "posteriorLateralAngle": -0.36656968874071616
+      },
+      {
+        "y": 0.5287621842887303,
+        "anteriorLateralAngle": 0.7982848135956948,
+        "posteriorLateralAngle": -0.3697692590737067
+      },
+      {
+        "y": 0.529624825634804,
+        "anteriorLateralAngle": 0.8019522344540615,
+        "posteriorLateralAngle": -0.3729648028642322
+      },
+      {
+        "y": 0.5304874669808776,
+        "anteriorLateralAngle": 0.8055912749182201,
+        "posteriorLateralAngle": -0.3761549573298363
+      },
+      {
+        "y": 0.5313501083269511,
+        "anteriorLateralAngle": 0.8092039937711999,
+        "posteriorLateralAngle": -0.379338359688062
+      },
+      {
+        "y": 0.5322127496730247,
+        "anteriorLateralAngle": 0.8127924497960306,
+        "posteriorLateralAngle": -0.3825136471564538
+      },
+      {
+        "y": 0.5330753910190983,
+        "anteriorLateralAngle": 0.816358701775742,
+        "posteriorLateralAngle": -0.38567945695255507
+      },
+      {
+        "y": 0.5339380323651719,
+        "anteriorLateralAngle": 0.8199048084933624,
+        "posteriorLateralAngle": -0.3888344262939092
+      },
+      {
+        "y": 0.5348006737112454,
+        "anteriorLateralAngle": 0.8234328287319217,
+        "posteriorLateralAngle": -0.3919771923980595
+      },
+      {
+        "y": 0.535663315057319,
+        "anteriorLateralAngle": 0.8269448212744495,
+        "posteriorLateralAngle": -0.3951063924825504
+      },
+      {
+        "y": 0.5365259564033926,
+        "anteriorLateralAngle": 0.8304428449039747,
+        "posteriorLateralAngle": -0.39822066376492504
+      },
+      {
+        "y": 0.5373885977494662,
+        "anteriorLateralAngle": 0.8339289584035269,
+        "posteriorLateralAngle": -0.4013186434627273
+      },
+      {
+        "y": 0.5382512390955398,
+        "anteriorLateralAngle": 0.8374052205561354,
+        "posteriorLateralAngle": -0.4043989687935003
+      },
+      {
+        "y": 0.5391138804416133,
+        "anteriorLateralAngle": 0.8408736901448292,
+        "posteriorLateralAngle": -0.4074602769747876
+      },
+      {
+        "y": 0.539976521787687,
+        "anteriorLateralAngle": 0.8443364259526385,
+        "posteriorLateralAngle": -0.4105012052241336
+      },
+      {
+        "y": 0.5408391631337606,
+        "anteriorLateralAngle": 0.8477954867625919,
+        "posteriorLateralAngle": -0.4135203907590814
+      },
+      {
+        "y": 0.5417018044798342,
+        "anteriorLateralAngle": 0.8512529313577191,
+        "posteriorLateralAngle": -0.4165164707971746
+      },
+      {
+        "y": 0.5425644458259078,
+        "anteriorLateralAngle": 0.8547108185210492,
+        "posteriorLateralAngle": -0.41948808255595693
+      },
+      {
+        "y": 0.5434270871719813,
+        "anteriorLateralAngle": 0.8581712070356116,
+        "posteriorLateralAngle": -0.42243386325297166
+      },
+      {
+        "y": 0.5442897285180549,
+        "anteriorLateralAngle": 0.861636155198084,
+        "posteriorLateralAngle": -0.42535245010576295
+      },
+      {
+        "y": 0.5451523698641285,
+        "anteriorLateralAngle": 0.8651074110963877,
+        "posteriorLateralAngle": -0.4282424803318742
+      },
+      {
+        "y": 0.546015011210202,
+        "anteriorLateralAngle": 0.8685858808529899,
+        "posteriorLateralAngle": -0.4311025914179565
+      },
+      {
+        "y": 0.5468776525562756,
+        "anteriorLateralAngle": 0.8720723291113289,
+        "posteriorLateralAngle": -0.4339316675360029
+      },
+      {
+        "y": 0.5477402939023492,
+        "anteriorLateralAngle": 0.8755675205148425,
+        "posteriorLateralAngle": -0.43672929533995253
+      },
+      {
+        "y": 0.5486029352484229,
+        "anteriorLateralAngle": 0.879072219706968,
+        "posteriorLateralAngle": -0.439495185698913
+      },
+      {
+        "y": 0.5494655765944965,
+        "anteriorLateralAngle": 0.8825871913311434,
+        "posteriorLateralAngle": -0.4422290494819919
+      },
+      {
+        "y": 0.55032821794057,
+        "anteriorLateralAngle": 0.8861133060555146,
+        "posteriorLateralAngle": -0.4449305975582961
+      },
+      {
+        "y": 0.5511908592866436,
+        "anteriorLateralAngle": 0.8896521187893798,
+        "posteriorLateralAngle": -0.4475995407969343
+      },
+      {
+        "y": 0.5520535006327172,
+        "anteriorLateralAngle": 0.8932054561466733,
+        "posteriorLateralAngle": -0.4502355900670134
+      },
+      {
+        "y": 0.5529161419787908,
+        "anteriorLateralAngle": 0.8967751454294248,
+        "posteriorLateralAngle": -0.4528384562376409
+      },
+      {
+        "y": 0.5537787833248644,
+        "anteriorLateralAngle": 0.9003630139396629,
+        "posteriorLateralAngle": -0.45540785017792434
+      },
+      {
+        "y": 0.5546414246709379,
+        "anteriorLateralAngle": 0.9039708889794169,
+        "posteriorLateralAngle": -0.4579434827569711
+      },
+      {
+        "y": 0.5555040660170115,
+        "anteriorLateralAngle": 0.9076005978507169,
+        "posteriorLateralAngle": -0.4604450648438893
+      },
+      {
+        "y": 0.5563667073630851,
+        "anteriorLateralAngle": 0.911253967855592,
+        "posteriorLateralAngle": -0.46291230730778604
+      },
+      {
+        "y": 0.5572293487091587,
+        "anteriorLateralAngle": 0.9149328262960712,
+        "posteriorLateralAngle": -0.46534554790790567
+      },
+      {
+        "y": 0.5580919900552322,
+        "anteriorLateralAngle": 0.9186390004741838,
+        "posteriorLateralAngle": -0.46775009291781616
+      },
+      {
+        "y": 0.5589546314013059,
+        "anteriorLateralAngle": 0.9223743176919598,
+        "posteriorLateralAngle": -0.47013361388274694
+      },
+      {
+        "y": 0.5598172727473795,
+        "anteriorLateralAngle": 0.926140605251428,
+        "posteriorLateralAngle": -0.472503796812679
+      },
+      {
+        "y": 0.5606799140934531,
+        "anteriorLateralAngle": 0.929939690454618,
+        "posteriorLateralAngle": -0.4748683277175931
+      },
+      {
+        "y": 0.5615425554395266,
+        "anteriorLateralAngle": 0.9337734006035583,
+        "posteriorLateralAngle": -0.47723489260747004
+      },
+      {
+        "y": 0.5624051967856002,
+        "anteriorLateralAngle": 0.9376435630002797,
+        "posteriorLateralAngle": -0.4796111774922915
+      },
+      {
+        "y": 0.5632678381316738,
+        "anteriorLateralAngle": 0.9415520049468107,
+        "posteriorLateralAngle": -0.4820048683820379
+      },
+      {
+        "y": 0.5641304794777474,
+        "anteriorLateralAngle": 0.9455005537451806,
+        "posteriorLateralAngle": -0.48442365128669035
+      },
+      {
+        "y": 0.564993120823821,
+        "anteriorLateralAngle": 0.9494910366974192,
+        "posteriorLateralAngle": -0.4868752122162299
+      },
+      {
+        "y": 0.5658557621698945,
+        "anteriorLateralAngle": 0.9535252811055547,
+        "posteriorLateralAngle": -0.4893672371806372
+      },
+      {
+        "y": 0.5667184035159681,
+        "anteriorLateralAngle": 0.9576051142716178,
+        "posteriorLateralAngle": -0.4919074121898937
+      },
+      {
+        "y": 0.5675810448620418,
+        "anteriorLateralAngle": 0.9617323634976375,
+        "posteriorLateralAngle": -0.49450342325398017
+      },
+      {
+        "y": 0.5684436862081154,
+        "anteriorLateralAngle": 0.9659088560856428,
+        "posteriorLateralAngle": -0.4971629563828776
+      },
+      {
+        "y": 0.5693063275541889,
+        "anteriorLateralAngle": 0.9701364193376627,
+        "posteriorLateralAngle": -0.4998936975865666
+      },
+      {
+        "y": 0.5701689689002625,
+        "anteriorLateralAngle": 0.9744168805557275,
+        "posteriorLateralAngle": -0.502703332875029
+      },
+      {
+        "y": 0.5710316102463361,
+        "anteriorLateralAngle": 0.9787520670418663,
+        "posteriorLateralAngle": -0.5055995482582452
+      },
+      {
+        "y": 0.5718942515924097,
+        "anteriorLateralAngle": 0.9831438060981081,
+        "posteriorLateralAngle": -0.5085900297461963
+      },
+      {
+        "y": 0.5727568929384832,
+        "anteriorLateralAngle": 0.9875939250264818,
+        "posteriorLateralAngle": -0.5116824633488627
+      },
+      {
+        "y": 0.5736195342845568,
+        "anteriorLateralAngle": 0.9921042511290177,
+        "posteriorLateralAngle": -0.5148845350762264
+      },
+      {
+        "y": 0.5744821756306304,
+        "anteriorLateralAngle": 0.9966766117077449,
+        "posteriorLateralAngle": -0.5182039309382678
+      },
+      {
+        "y": 0.575344816976704,
+        "anteriorLateralAngle": 1.0013128340646926,
+        "posteriorLateralAngle": -0.521648336944968
+      },
+      {
+        "y": 0.5762074583227776,
+        "anteriorLateralAngle": 1.00601474550189,
+        "posteriorLateralAngle": -0.525225439106308
+      },
+      {
+        "y": 0.5770700996688511,
+        "anteriorLateralAngle": 1.0107841733213663,
+        "posteriorLateralAngle": -0.5289429234322682
+      },
+      {
+        "y": 0.5779327410149248,
+        "anteriorLateralAngle": 1.0156229448251515,
+        "posteriorLateralAngle": -0.5328084759328306
+      },
+      {
+        "y": 0.5787953823609984,
+        "anteriorLateralAngle": 1.0205328873152744,
+        "posteriorLateralAngle": -0.5368297826179758
+      },
+      {
+        "y": 0.579658023707072,
+        "anteriorLateralAngle": 1.0255158280937646,
+        "posteriorLateralAngle": -0.5410145294976846
+      },
+      {
+        "y": 0.5805206650531456,
+        "anteriorLateralAngle": 1.0305735944626515,
+        "posteriorLateralAngle": -0.5453704025819379
+      },
+      {
+        "y": 0.5813833063992191,
+        "anteriorLateralAngle": 1.0357080137239638,
+        "posteriorLateralAngle": -0.5499050878807165
+      },
+      {
+        "y": 0.5822459477452927,
+        "anteriorLateralAngle": 1.0409209131797315,
+        "posteriorLateralAngle": -0.554626271404002
+      },
+      {
+        "y": 0.5831085890913663,
+        "anteriorLateralAngle": 1.0462141201319841,
+        "posteriorLateralAngle": -0.5595416391617752
+      },
+      {
+        "y": 0.5839712304374398,
+        "anteriorLateralAngle": 1.05158946188275,
+        "posteriorLateralAngle": -0.5646588771640163
+      },
+      {
+        "y": 0.5848338717835134,
+        "anteriorLateralAngle": 1.0570487657340597,
+        "posteriorLateralAngle": -0.5699856714207077
+      },
+      {
+        "y": 0.585696513129587,
+        "anteriorLateralAngle": 1.0625938589879418,
+        "posteriorLateralAngle": -0.5755297079418293
+      },
+      {
+        "y": 0.5865591544756606,
+        "anteriorLateralAngle": 1.068226568946426,
+        "posteriorLateralAngle": -0.5812986727373626
+      },
+      {
+        "y": 0.5874217958217343,
+        "anteriorLateralAngle": 1.0739487229115414,
+        "posteriorLateralAngle": -0.5873002518172883
+      },
+      {
+        "y": 0.5882844371678078,
+        "anteriorLateralAngle": 1.079762148185317,
+        "posteriorLateralAngle": -0.5935421311915867
+      },
+      {
+        "y": 0.5891470785138814,
+        "anteriorLateralAngle": 1.085668672069783,
+        "posteriorLateralAngle": -0.6000319968702403
+      },
+      {
+        "y": 0.590009719859955,
+        "anteriorLateralAngle": 1.0916701218669684,
+        "posteriorLateralAngle": -0.6067775348632292
+      },
+      {
+        "y": 0.5908723612060286,
+        "anteriorLateralAngle": 1.0977683248789025,
+        "posteriorLateralAngle": -0.6137864311805347
+      },
+      {
+        "y": 0.5917350025521022,
+        "anteriorLateralAngle": 1.1039651247672415,
+        "posteriorLateralAngle": -0.6210663718321374
+      },
+      {
+        "y": 0.5925976438981757,
+        "anteriorLateralAngle": 1.110263312072484,
+        "posteriorLateralAngle": -0.6286250441686503
+      },
+      {
+        "y": 0.5934602852442493,
+        "anteriorLateralAngle": 1.1166671253857925,
+        "posteriorLateralAngle": -0.636471085303788
+      },
+      {
+        "y": 0.5943229265903229,
+        "anteriorLateralAngle": 1.123180823148826,
+        "posteriorLateralAngle": -0.6446156274279624
+      },
+      {
+        "y": 0.5951855679363964,
+        "anteriorLateralAngle": 1.1298078802105769,
+        "posteriorLateralAngle": -0.6530696647516874
+      },
+      {
+        "y": 0.59604820928247,
+        "anteriorLateralAngle": 1.136551409594938,
+        "posteriorLateralAngle": -0.6620550586902538
+      },
+      {
+        "y": 0.5969108506285437,
+        "anteriorLateralAngle": 1.1434145223788075,
+        "posteriorLateralAngle": -0.6716908141220671
+      },
+      {
+        "y": 0.5977734919746173,
+        "anteriorLateralAngle": 1.1504003296390843,
+        "posteriorLateralAngle": -0.6820007937605344
+      },
+      {
+        "y": 0.5986361333206909,
+        "anteriorLateralAngle": 1.1575119424526683,
+        "posteriorLateralAngle": -0.6930158119303498
+      },
+      {
+        "y": 0.5994987746667644,
+        "anteriorLateralAngle": 1.164752471896457,
+        "posteriorLateralAngle": -0.7047740116074778
+      },
+      {
+        "y": 0.600361416012838,
+        "anteriorLateralAngle": 1.1721250290473515,
+        "posteriorLateralAngle": -0.71732091743743
+      },
+      {
+        "y": 0.6012240573589116,
+        "anteriorLateralAngle": 1.17963272498225,
+        "posteriorLateralAngle": -0.730709164731821
+      },
+      {
+        "y": 0.6020866987049852,
+        "anteriorLateralAngle": 1.1872786707780514,
+        "posteriorLateralAngle": -0.7449979044432297
+      },
+      {
+        "y": 0.6029493400510588,
+        "anteriorLateralAngle": 1.1950659775116552,
+        "posteriorLateralAngle": -0.7602518841183441
+      },
+      {
+        "y": 0.6038119813971323,
+        "anteriorLateralAngle": 1.2029977562599603,
+        "posteriorLateralAngle": -0.7765402048293961
+      },
+      {
+        "y": 0.6046746227432059,
+        "anteriorLateralAngle": 1.211077118099866,
+        "posteriorLateralAngle": -0.7939347540838997
+      },
+      {
+        "y": 0.6055372640892795,
+        "anteriorLateralAngle": 1.2193071741082717,
+        "posteriorLateralAngle": -0.8125083147126564
+      },
+      {
+        "y": 0.606399905435353,
+        "anteriorLateralAngle": 1.227691035362075,
+        "posteriorLateralAngle": -0.8323323497360734
+      },
+      {
+        "y": 0.6072625467814267,
+        "anteriorLateralAngle": 1.2362318129381773,
+        "posteriorLateralAngle": -0.8534744632087716
+      },
+      {
+        "y": 0.6081251881275003,
+        "anteriorLateralAngle": 1.2449326179134765,
+        "posteriorLateralAngle": -0.8759955370424659
+      },
+      {
+        "y": 0.6089878294735739,
+        "anteriorLateralAngle": 1.253796561364872,
+        "posteriorLateralAngle": -0.8999500513759962
+      },
+      {
+        "y": 0.6098504708196475,
+        "anteriorLateralAngle": 1.2628267543692626,
+        "posteriorLateralAngle": -0.925428638179246
+      },
+      {
+        "y": 0.610713112165721,
+        "anteriorLateralAngle": 1.272026308003547,
+        "posteriorLateralAngle": -0.9525179805816626
+      },
+      {
+        "y": 0.6115757535117946,
+        "anteriorLateralAngle": 1.2813983333446255,
+        "posteriorLateralAngle": -0.9817378835853066
+      },
+      {
+        "y": 0.6124383948578682,
+        "anteriorLateralAngle": 1.2909459414693965,
+        "posteriorLateralAngle": -1.0144653376864348
+      },
+      {
+        "y": 0.6133010362039418,
+        "anteriorLateralAngle": 1.30067224345476,
+        "posteriorLateralAngle": -1.0522274921669676
+      },
+      {
+        "y": 0.6141636775500154,
+        "anteriorLateralAngle": 1.3105803503776134,
+        "posteriorLateralAngle": -1.096601915300242
+      },
+      {
+        "y": 0.6150263188960889,
+        "anteriorLateralAngle": 1.3206733733148561,
+        "posteriorLateralAngle": -1.148927030106083
+      },
+      {
+        "y": 0.6158889602421626,
+        "anteriorLateralAngle": 1.330961852655895,
+        "posteriorLateralAngle": -1.2097975215178982
+      },
+      {
+        "y": 0.6167516015882362,
+        "anteriorLateralAngle": 1.3415252660787433,
+        "posteriorLateralAngle": -1.2795897631728568
+      },
+      {
+        "y": 0.6176142429343097,
+        "anteriorLateralAngle": 1.3525190358031747,
+        "posteriorLateralAngle": -1.3585604073635535
+      },
+      {
+        "y": 0.6184768842803833,
+        "anteriorLateralAngle": 1.3641058419298844,
+        "posteriorLateralAngle": -1.446180879261838
+      },
+      {
+        "y": 0.6193395256264569,
+        "anteriorLateralAngle": 1.3764483645595642,
+        "posteriorLateralAngle": -1.5388953852091845
+      },
+      {
+        "y": 0.6202021669725305,
+        "anteriorLateralAngle": 1.3897092837929068,
+        "posteriorLateralAngle": -1.6322684911920817
+      },
+      {
+        "y": 0.6210648083186041,
+        "anteriorLateralAngle": 1.4040512797306057,
+        "posteriorLateralAngle": -1.723831337704641
+      },
+      {
+        "y": 0.6219274496646776,
+        "anteriorLateralAngle": 1.4196370324733518,
+        "posteriorLateralAngle": -1.810543595681275
+      },
+      {
+        "y": 0.6227900910107512,
+        "anteriorLateralAngle": 1.436629222121842,
+        "posteriorLateralAngle": -1.8886295770776966
+      },
+      {
+        "y": 0.6236527323568248,
+        "anteriorLateralAngle": 1.4551905287767672,
+        "posteriorLateralAngle": -1.954313593849587
+      },
+      {
+        "y": 0.6245153737028984,
+        "anteriorLateralAngle": 1.4754836325388208,
+        "posteriorLateralAngle": -2.0038199579526372
+      },
+      {
+        "y": 0.6253780150489721,
+        "anteriorLateralAngle": 1.497674933463001,
+        "posteriorLateralAngle": -2.016987636660713
+      },
+      {
+        "y": 0.6262406563950456,
+        "anteriorLateralAngle": 1.5219464693170899,
+        "posteriorLateralAngle": -2.016987636660713
+      },
+      {
+        "y": 0.6271032977411192,
+        "anteriorLateralAngle": 1.5484843863229547,
+        "posteriorLateralAngle": -2.016987636660713
+      },
+      {
+        "y": 0.6279659390871928,
+        "anteriorLateralAngle": 1.5774748307202047,
+        "posteriorLateralAngle": -2.016987636660713
+      },
+      {
+        "y": 0.6288285804332663,
+        "anteriorLateralAngle": 1.6091039487484513,
+        "posteriorLateralAngle": -2.016987636660713
+      },
+      {
+        "y": 0.62969122177934,
+        "anteriorLateralAngle": 1.6435578866473186,
+        "posteriorLateralAngle": -2.016987636660713
+      },
+      {
+        "y": 0.6305538631254135,
+        "anteriorLateralAngle": 1.6810227906564041,
+        "posteriorLateralAngle": -2.016987636660713
+      },
+      {
+        "y": 0.6314165044714871,
+        "anteriorLateralAngle": 1.721684807015334,
+        "posteriorLateralAngle": -2.016987636660713
+      },
+      {
+        "y": 0.6322791458175607,
+        "anteriorLateralAngle": 1.7657300819637174,
+        "posteriorLateralAngle": -2.016987636660713
+      },
+      {
+        "y": 0.6331417871636342,
+        "anteriorLateralAngle": 1.813344761741162,
+        "posteriorLateralAngle": -2.016987636660713
+      },
+      {
+        "y": 0.6340044285097078,
+        "anteriorLateralAngle": 1.8369837970578875,
+        "posteriorLateralAngle": -2.016987636660713
+      },
+      {
+        "y": 0.6348670698557815,
+        "anteriorLateralAngle": 1.8369837970578875,
+        "posteriorLateralAngle": -2.016987636660713
+      },
+      {
+        "y": 0.6357297112018551,
+        "anteriorLateralAngle": 1.8369837970578875,
+        "posteriorLateralAngle": -2.016987636660713
+      },
+      {
+        "y": 0.6365923525479287,
+        "anteriorLateralAngle": 1.8369837970578875,
+        "posteriorLateralAngle": -2.016987636660713
+      },
+      {
+        "y": 0.6374549938940022,
+        "anteriorLateralAngle": 1.8369837970578875,
+        "posteriorLateralAngle": -2.016987636660713
+      },
+      {
+        "y": 0.6383176352400758,
+        "anteriorLateralAngle": 1.8369837970578875,
+        "posteriorLateralAngle": -2.016987636660713
+      },
+      {
+        "y": 0.6391802765861494,
+        "anteriorLateralAngle": 1.8369837970578875,
+        "posteriorLateralAngle": -2.016987636660713
+      },
+      {
+        "y": 0.640042917932223,
+        "anteriorLateralAngle": 1.8369837970578875,
+        "posteriorLateralAngle": -2.016987636660713
+      },
+      {
+        "y": 0.6409055592782966,
+        "anteriorLateralAngle": 1.8369837970578875,
+        "posteriorLateralAngle": -2.016987636660713
+      },
+      {
+        "y": 0.6417682006243701,
+        "anteriorLateralAngle": 1.8369837970578875,
+        "posteriorLateralAngle": -2.016987636660713
+      },
+      {
+        "y": 0.6426308419704437,
+        "anteriorLateralAngle": 1.8369837970578875,
+        "posteriorLateralAngle": -2.016987636660713
+      }
+    ],
+    "originAnterior": [
+      -0.1576150357723236,
+      0.6336308419704437,
+      0.0066266655921936035
+    ],
+    "originPosterior": [
+      -0.16018089652061462,
+      0.6248267889022827,
+      -0.09062716364860535
+    ],
+    "crownY": 0.6426308419704437
+  },
+  "left": {
+    "insertion": [
+      0.2501296103000641,
+      0.45408862829208374,
+      -0.05135781690478325
+    ],
+    "chartAxisSourceM": [
+      0.177,
+      -0.055
+    ],
+    "rows": [
+      {
+        "y": 0.45418862829208373,
+        "anteriorLateralAngle": 0.049766269531027946,
+        "posteriorLateralAngle": 0.04976051819344056
+      },
+      {
+        "y": 0.4550481804029038,
+        "anteriorLateralAngle": 0.05003214082563756,
+        "posteriorLateralAngle": 0.04950115181125662
+      },
+      {
+        "y": 0.45590773251372385,
+        "anteriorLateralAngle": 0.05073683616966801,
+        "posteriorLateralAngle": 0.04882359655348043
+      },
+      {
+        "y": 0.4567672846245439,
+        "anteriorLateralAngle": 0.051890181814178184,
+        "posteriorLateralAngle": 0.04773190750372974
+      },
+      {
+        "y": 0.457626836735364,
+        "anteriorLateralAngle": 0.05350158671817634,
+        "posteriorLateralAngle": 0.046230770372811404
+      },
+      {
+        "y": 0.45848638884618403,
+        "anteriorLateralAngle": 0.055579902626768325,
+        "posteriorLateralAngle": 0.04432550324000887
+      },
+      {
+        "y": 0.45934594095700404,
+        "anteriorLateralAngle": 0.05813329016783367,
+        "posteriorLateralAngle": 0.04202205819358296
+      },
+      {
+        "y": 0.4602054930678241,
+        "anteriorLateralAngle": 0.06116909096723071,
+        "posteriorLateralAngle": 0.03932702287048491
+      },
+      {
+        "y": 0.46106504517864416,
+        "anteriorLateralAngle": 0.06469370578252813,
+        "posteriorLateralAngle": 0.036247621895283966
+      },
+      {
+        "y": 0.4619245972894642,
+        "anteriorLateralAngle": 0.06871247865526633,
+        "posteriorLateralAngle": 0.032791718218306676
+      },
+      {
+        "y": 0.4627841494002843,
+        "anteriorLateralAngle": 0.07351892953189583,
+        "posteriorLateralAngle": 0.028967814352989934
+      },
+      {
+        "y": 0.46364370151110434,
+        "anteriorLateralAngle": 0.07897897683452469,
+        "posteriorLateralAngle": 0.024785053512446968
+      },
+      {
+        "y": 0.4645032536219244,
+        "anteriorLateralAngle": 0.08507204524571568,
+        "posteriorLateralAngle": 0.020253220645246386
+      },
+      {
+        "y": 0.46536280573274447,
+        "anteriorLateralAngle": 0.09180734729185534,
+        "posteriorLateralAngle": 0.015382743370404364
+      },
+      {
+        "y": 0.4662223578435645,
+        "anteriorLateralAngle": 0.09919122667125382,
+        "posteriorLateralAngle": 0.010184692811589846
+      },
+      {
+        "y": 0.4670819099543846,
+        "anteriorLateralAngle": 0.10722711692965815,
+        "posteriorLateralAngle": 0.00467078433054291
+      },
+      {
+        "y": 0.46794146206520465,
+        "anteriorLateralAngle": 0.11591550541170338,
+        "posteriorLateralAngle": -0.0011466218402938766
+      },
+      {
+        "y": 0.4688010141760247,
+        "anteriorLateralAngle": 0.12525390248830096,
+        "posteriorLateralAngle": -0.007254520065930969
+      },
+      {
+        "y": 0.4696605662868447,
+        "anteriorLateralAngle": 0.13523681605996402,
+        "posteriorLateralAngle": -0.013639258877773883
+      },
+      {
+        "y": 0.4705201183976648,
+        "anteriorLateralAngle": 0.14585573133607377,
+        "posteriorLateralAngle": -0.020286540643354112
+      },
+      {
+        "y": 0.47137967050848484,
+        "anteriorLateralAngle": 0.15709909589007642,
+        "posteriorLateralAngle": -0.02718142133684312
+      },
+      {
+        "y": 0.4722392226193049,
+        "anteriorLateralAngle": 0.16895230999062455,
+        "posteriorLateralAngle": -0.03430831041035699
+      },
+      {
+        "y": 0.47309877473012496,
+        "anteriorLateralAngle": 0.18139772220865252,
+        "posteriorLateralAngle": -0.04165097076604621
+      },
+      {
+        "y": 0.473958326840945,
+        "anteriorLateralAngle": 0.19441463030039008,
+        "posteriorLateralAngle": -0.04919251882897269
+      },
+      {
+        "y": 0.4748178789517651,
+        "anteriorLateralAngle": 0.2079792873663138,
+        "posteriorLateralAngle": -0.05691542472077375
+      },
+      {
+        "y": 0.47567743106258514,
+        "anteriorLateralAngle": 0.22206491328603542,
+        "posteriorLateralAngle": -0.06480151253411287
+      },
+      {
+        "y": 0.4765369831734052,
+        "anteriorLateralAngle": 0.2366417114291285,
+        "posteriorLateralAngle": -0.07283196070791773
+      },
+      {
+        "y": 0.47739653528422527,
+        "anteriorLateralAngle": 0.2516768906418918,
+        "posteriorLateralAngle": -0.08098730250340447
+      },
+      {
+        "y": 0.4782560873950453,
+        "anteriorLateralAngle": 0.26713469251005084,
+        "posteriorLateralAngle": -0.0892474265808898
+      },
+      {
+        "y": 0.47911563950586533,
+        "anteriorLateralAngle": 0.28297642389739597,
+        "posteriorLateralAngle": -0.09759157767738869
+      },
+      {
+        "y": 0.4799751916166854,
+        "anteriorLateralAngle": 0.2991604947603621,
+        "posteriorLateralAngle": -0.10599835738500221
+      },
+      {
+        "y": 0.48083474372750545,
+        "anteriorLateralAngle": 0.31564246123853706,
+        "posteriorLateralAngle": -0.11444572503008629
+      },
+      {
+        "y": 0.4816942958383255,
+        "anteriorLateralAngle": 0.3323750740211173,
+        "posteriorLateralAngle": -0.12291099865321373
+      },
+      {
+        "y": 0.4825538479491456,
+        "anteriorLateralAngle": 0.34930833198929484,
+        "posteriorLateralAngle": -0.13137085608991927
+      },
+      {
+        "y": 0.48341340005996564,
+        "anteriorLateralAngle": 0.3663895411345849,
+        "posteriorLateralAngle": -0.1398013361522333
+      },
+      {
+        "y": 0.4842729521707857,
+        "anteriorLateralAngle": 0.38356337875308916,
+        "posteriorLateralAngle": -0.14817783991100142
+      },
+      {
+        "y": 0.48513250428160576,
+        "anteriorLateralAngle": 0.4007719629156977,
+        "posteriorLateralAngle": -0.15647513207899177
+      },
+      {
+        "y": 0.4859920563924258,
+        "anteriorLateralAngle": 0.4179549272142277,
+        "posteriorLateralAngle": -0.16465519503402445
+      },
+      {
+        "y": 0.4868516085032459,
+        "anteriorLateralAngle": 0.4350495007835008,
+        "posteriorLateralAngle": -0.1727158460716031
+      },
+      {
+        "y": 0.48771116061406594,
+        "anteriorLateralAngle": 0.4519905935993561,
+        "posteriorLateralAngle": -0.18066907950104888
+      },
+      {
+        "y": 0.48857071272488595,
+        "anteriorLateralAngle": 0.46871088705260155,
+        "posteriorLateralAngle": -0.1884901232306816
+      },
+      {
+        "y": 0.48943026483570606,
+        "anteriorLateralAngle": 0.4851409297989085,
+        "posteriorLateralAngle": -0.1961530832105519
+      },
+      {
+        "y": 0.49028981694652607,
+        "anteriorLateralAngle": 0.5012092388846263,
+        "posteriorLateralAngle": -0.20363091017199086
+      },
+      {
+        "y": 0.49114936905734613,
+        "anteriorLateralAngle": 0.5168424061485616,
+        "posteriorLateralAngle": -0.21089536838060619
+      },
+      {
+        "y": 0.4920089211681662,
+        "anteriorLateralAngle": 0.5319652098996688,
+        "posteriorLateralAngle": -0.2179170064026995
+      },
+      {
+        "y": 0.49286847327898625,
+        "anteriorLateralAngle": 0.546500731870694,
+        "posteriorLateralAngle": -0.22466512988512505
+      },
+      {
+        "y": 0.4937280253898063,
+        "anteriorLateralAngle": 0.5603704794477509,
+        "posteriorLateralAngle": -0.2311077763485802
+      },
+      {
+        "y": 0.4945875775006264,
+        "anteriorLateralAngle": 0.573494513175836,
+        "posteriorLateralAngle": -0.2372116919943289
+      },
+      {
+        "y": 0.49544712961144644,
+        "anteriorLateralAngle": 0.5857915795402799,
+        "posteriorLateralAngle": -0.24294231052435988
+      },
+      {
+        "y": 0.4963066817222665,
+        "anteriorLateralAngle": 0.5971792490241359,
+        "posteriorLateralAngle": -0.24826373397497808
+      },
+      {
+        "y": 0.49716623383308656,
+        "anteriorLateralAngle": 0.6075742765864605,
+        "posteriorLateralAngle": -0.2531387155638306
+      },
+      {
+        "y": 0.4980257859439066,
+        "anteriorLateralAngle": 0.6168961668345403,
+        "posteriorLateralAngle": -0.25752864455036534
+      },
+      {
+        "y": 0.4988853380547267,
+        "anteriorLateralAngle": 0.6250667497520714,
+        "posteriorLateralAngle": -0.2613935331097242
+      },
+      {
+        "y": 0.4997448901655467,
+        "anteriorLateralAngle": 0.6320073701840823,
+        "posteriorLateralAngle": -0.26469200522006986
+      },
+      {
+        "y": 0.5006044422763668,
+        "anteriorLateralAngle": 0.6379473471446195,
+        "posteriorLateralAngle": -0.26754773258232917
+      },
+      {
+        "y": 0.5014639943871868,
+        "anteriorLateralAngle": 0.6437316991813522,
+        "posteriorLateralAngle": -0.2704146421057547
+      },
+      {
+        "y": 0.5023235464980069,
+        "anteriorLateralAngle": 0.6494177773862826,
+        "posteriorLateralAngle": -0.2733204770532078
+      },
+      {
+        "y": 0.5031830986088269,
+        "anteriorLateralAngle": 0.6550091964673193,
+        "posteriorLateralAngle": -0.2762639590143309
+      },
+      {
+        "y": 0.5040426507196469,
+        "anteriorLateralAngle": 0.6605095711323727,
+        "posteriorLateralAngle": -0.27924380957876804
+      },
+      {
+        "y": 0.504902202830467,
+        "anteriorLateralAngle": 0.6659225160893543,
+        "posteriorLateralAngle": -0.2822587503361629
+      },
+      {
+        "y": 0.5057617549412871,
+        "anteriorLateralAngle": 0.6712516460461724,
+        "posteriorLateralAngle": -0.28530750287615814
+      },
+      {
+        "y": 0.5066213070521072,
+        "anteriorLateralAngle": 0.6765005757107385,
+        "posteriorLateralAngle": -0.288388788788398
+      },
+      {
+        "y": 0.5074808591629272,
+        "anteriorLateralAngle": 0.6816729197909615,
+        "posteriorLateralAngle": -0.2915013296625251
+      },
+      {
+        "y": 0.5083404112737473,
+        "anteriorLateralAngle": 0.6867722929947528,
+        "posteriorLateralAngle": -0.2946438470881837
+      },
+      {
+        "y": 0.5091999633845673,
+        "anteriorLateralAngle": 0.6918023100300208,
+        "posteriorLateralAngle": -0.29781506265501634
+      },
+      {
+        "y": 0.5100595154953874,
+        "anteriorLateralAngle": 0.6967665856046774,
+        "posteriorLateralAngle": -0.3010136979526673
+      },
+      {
+        "y": 0.5109190676062074,
+        "anteriorLateralAngle": 0.7016687344266312,
+        "posteriorLateralAngle": -0.3042384745707791
+      },
+      {
+        "y": 0.5117786197170275,
+        "anteriorLateralAngle": 0.7065123712037937,
+        "posteriorLateralAngle": -0.3074881140989962
+      },
+      {
+        "y": 0.5126381718278475,
+        "anteriorLateralAngle": 0.7113011106440734,
+        "posteriorLateralAngle": -0.310761338126961
+      },
+      {
+        "y": 0.5134977239386677,
+        "anteriorLateralAngle": 0.716038567455382,
+        "posteriorLateralAngle": -0.3140568682443179
+      },
+      {
+        "y": 0.5143572760494877,
+        "anteriorLateralAngle": 0.7207283563456282,
+        "posteriorLateralAngle": -0.3173734260407093
+      },
+      {
+        "y": 0.5152168281603077,
+        "anteriorLateralAngle": 0.7253740920227225,
+        "posteriorLateralAngle": -0.3207097331057792
+      },
+      {
+        "y": 0.5160763802711278,
+        "anteriorLateralAngle": 0.7299793891945761,
+        "posteriorLateralAngle": -0.32406451102917144
+      },
+      {
+        "y": 0.5169359323819478,
+        "anteriorLateralAngle": 0.7345478625690975,
+        "posteriorLateralAngle": -0.3274364814005285
+      },
+      {
+        "y": 0.5177954844927679,
+        "anteriorLateralAngle": 0.739083126854198,
+        "posteriorLateralAngle": -0.33082436580949476
+      },
+      {
+        "y": 0.5186550366035879,
+        "anteriorLateralAngle": 0.743588796757787,
+        "posteriorLateralAngle": -0.33422688584571264
+      },
+      {
+        "y": 0.519514588714408,
+        "anteriorLateralAngle": 0.7480684869877752,
+        "posteriorLateralAngle": -0.3376427630988266
+      },
+      {
+        "y": 0.520374140825228,
+        "anteriorLateralAngle": 0.7525258119525047,
+        "posteriorLateralAngle": -0.34107071915847914
+      },
+      {
+        "y": 0.5212336929360482,
+        "anteriorLateralAngle": 0.7569636156813897,
+        "posteriorLateralAngle": -0.3445094756143145
+      },
+      {
+        "y": 0.5220932450468682,
+        "anteriorLateralAngle": 0.7613823052178146,
+        "posteriorLateralAngle": -0.34795775405597523
+      },
+      {
+        "y": 0.5229527971576882,
+        "anteriorLateralAngle": 0.7657818068776752,
+        "posteriorLateralAngle": -0.35141427607310527
+      },
+      {
+        "y": 0.5238123492685083,
+        "anteriorLateralAngle": 0.7701620469768671,
+        "posteriorLateralAngle": -0.3548777632553485
+      },
+      {
+        "y": 0.5246719013793284,
+        "anteriorLateralAngle": 0.7745229518312851,
+        "posteriorLateralAngle": -0.3583469371923478
+      },
+      {
+        "y": 0.5255314534901484,
+        "anteriorLateralAngle": 0.7788644477568238,
+        "posteriorLateralAngle": -0.36182051947374616
+      },
+      {
+        "y": 0.5263910056009684,
+        "anteriorLateralAngle": 0.7831864610693793,
+        "posteriorLateralAngle": -0.3652972316891875
+      },
+      {
+        "y": 0.5272505577117885,
+        "anteriorLateralAngle": 0.7874889180848466,
+        "posteriorLateralAngle": -0.36877579542831557
+      },
+      {
+        "y": 0.5281101098226085,
+        "anteriorLateralAngle": 0.7917717451191204,
+        "posteriorLateralAngle": -0.3722549322807732
+      },
+      {
+        "y": 0.5289696619334286,
+        "anteriorLateralAngle": 0.7960348684880967,
+        "posteriorLateralAngle": -0.37573336383620437
+      },
+      {
+        "y": 0.5298292140442487,
+        "anteriorLateralAngle": 0.8002782145076697,
+        "posteriorLateralAngle": -0.3792098116842518
+      },
+      {
+        "y": 0.5306887661550688,
+        "anteriorLateralAngle": 0.8045017094937355,
+        "posteriorLateralAngle": -0.3826829974145598
+      },
+      {
+        "y": 0.5315483182658888,
+        "anteriorLateralAngle": 0.8087052797621883,
+        "posteriorLateralAngle": -0.3861516426167708
+      },
+      {
+        "y": 0.5324078703767089,
+        "anteriorLateralAngle": 0.8128888516289248,
+        "posteriorLateralAngle": -0.3896144688805292
+      },
+      {
+        "y": 0.5332674224875289,
+        "anteriorLateralAngle": 0.8170523514098382,
+        "posteriorLateralAngle": -0.39307019779547747
+      },
+      {
+        "y": 0.534126974598349,
+        "anteriorLateralAngle": 0.8211957054208257,
+        "posteriorLateralAngle": -0.3965175509512599
+      },
+      {
+        "y": 0.534986526709169,
+        "anteriorLateralAngle": 0.8253188399777807,
+        "posteriorLateralAngle": -0.3999552499375193
+      },
+      {
+        "y": 0.535846078819989,
+        "anteriorLateralAngle": 0.8294216813965991,
+        "posteriorLateralAngle": -0.40338201634389925
+      },
+      {
+        "y": 0.5367056309308091,
+        "anteriorLateralAngle": 0.8335041559931771,
+        "posteriorLateralAngle": -0.4067965717600436
+      },
+      {
+        "y": 0.5375651830416291,
+        "anteriorLateralAngle": 0.8375661900834079,
+        "posteriorLateralAngle": -0.41019763777559504
+      },
+      {
+        "y": 0.5384247351524493,
+        "anteriorLateralAngle": 0.8416077099831887,
+        "posteriorLateralAngle": -0.41358393598019777
+      },
+      {
+        "y": 0.5392842872632693,
+        "anteriorLateralAngle": 0.8456286420084131,
+        "posteriorLateralAngle": -0.4169541879634945
+      },
+      {
+        "y": 0.5401438393740894,
+        "anteriorLateralAngle": 0.8496289124749776,
+        "posteriorLateralAngle": -0.4203071153151292
+      },
+      {
+        "y": 0.5410033914849094,
+        "anteriorLateralAngle": 0.853608447698776,
+        "posteriorLateralAngle": -0.42364143962474476
+      },
+      {
+        "y": 0.5418629435957295,
+        "anteriorLateralAngle": 0.8575671739957051,
+        "posteriorLateralAngle": -0.42695588248198535
+      },
+      {
+        "y": 0.5427224957065495,
+        "anteriorLateralAngle": 0.8615050176816583,
+        "posteriorLateralAngle": -0.43024916547649356
+      },
+      {
+        "y": 0.5435820478173696,
+        "anteriorLateralAngle": 0.8654219050725322,
+        "posteriorLateralAngle": -0.43352001019791353
+      },
+      {
+        "y": 0.5444415999281896,
+        "anteriorLateralAngle": 0.8693178024204948,
+        "posteriorLateralAngle": -0.4367671382358881
+      },
+      {
+        "y": 0.5453011520390096,
+        "anteriorLateralAngle": 0.8731933147666981,
+        "posteriorLateralAngle": -0.4399892744434217
+      },
+      {
+        "y": 0.5461607041498298,
+        "anteriorLateralAngle": 0.8770495608687139,
+        "posteriorLateralAngle": -0.4431853962994926
+      },
+      {
+        "y": 0.5470202562606498,
+        "anteriorLateralAngle": 0.8808876740329563,
+        "posteriorLateralAngle": -0.4463549095799726
+      },
+      {
+        "y": 0.5478798083714699,
+        "anteriorLateralAngle": 0.8847087875658417,
+        "posteriorLateralAngle": -0.449497261557678
+      },
+      {
+        "y": 0.5487393604822899,
+        "anteriorLateralAngle": 0.8885140347737845,
+        "posteriorLateralAngle": -0.4526118995054234
+      },
+      {
+        "y": 0.54959891259311,
+        "anteriorLateralAngle": 0.8923045489632013,
+        "posteriorLateralAngle": -0.45569827069602503
+      },
+      {
+        "y": 0.55045846470393,
+        "anteriorLateralAngle": 0.8960816111493746,
+        "posteriorLateralAngle": -0.4587558224022978
+      },
+      {
+        "y": 0.5513180168147501,
+        "anteriorLateralAngle": 0.8998475651544462,
+        "posteriorLateralAngle": -0.46178400189705787
+      },
+      {
+        "y": 0.5521775689255701,
+        "anteriorLateralAngle": 0.9036052200927773,
+        "posteriorLateralAngle": -0.46478225645311994
+      },
+      {
+        "y": 0.5530371210363902,
+        "anteriorLateralAngle": 0.9073573870466225,
+        "posteriorLateralAngle": -0.4677500333433002
+      },
+      {
+        "y": 0.5538966731472103,
+        "anteriorLateralAngle": 0.9111068770982356,
+        "posteriorLateralAngle": -0.47068677984041357
+      },
+      {
+        "y": 0.5547562252580303,
+        "anteriorLateralAngle": 0.9148565013298702,
+        "posteriorLateralAngle": -0.47359194321727566
+      },
+      {
+        "y": 0.5556157773688504,
+        "anteriorLateralAngle": 0.9186090708237817,
+        "posteriorLateralAngle": -0.4764649707467025
+      },
+      {
+        "y": 0.5564753294796704,
+        "anteriorLateralAngle": 0.9223673966622223,
+        "posteriorLateralAngle": -0.4793053097015089
+      },
+      {
+        "y": 0.5573348815904905,
+        "anteriorLateralAngle": 0.9261342899274481,
+        "posteriorLateralAngle": -0.48211348691002737
+      },
+      {
+        "y": 0.5581944337013105,
+        "anteriorLateralAngle": 0.9299125617017114,
+        "posteriorLateralAngle": -0.4848948164843085
+      },
+      {
+        "y": 0.5590539858121306,
+        "anteriorLateralAngle": 0.9337050230672677,
+        "posteriorLateralAngle": -0.48765593908678456
+      },
+      {
+        "y": 0.5599135379229506,
+        "anteriorLateralAngle": 0.9375144851063697,
+        "posteriorLateralAngle": -0.4904034954284772
+      },
+      {
+        "y": 0.5607730900337707,
+        "anteriorLateralAngle": 0.9413437589012723,
+        "posteriorLateralAngle": -0.49314412622040976
+      },
+      {
+        "y": 0.5616326421445907,
+        "anteriorLateralAngle": 0.9451956555342294,
+        "posteriorLateralAngle": -0.4958844721736036
+      },
+      {
+        "y": 0.5624921942554109,
+        "anteriorLateralAngle": 0.9490729860874949,
+        "posteriorLateralAngle": -0.49863117399908236
+      },
+      {
+        "y": 0.5633517463662309,
+        "anteriorLateralAngle": 0.9529785616433226,
+        "posteriorLateralAngle": -0.5013908724078673
+      },
+      {
+        "y": 0.5642112984770509,
+        "anteriorLateralAngle": 0.9569151932839672,
+        "posteriorLateralAngle": -0.5041702081109811
+      },
+      {
+        "y": 0.565070850587871,
+        "anteriorLateralAngle": 0.9608856920916831,
+        "posteriorLateralAngle": -0.5069758218194471
+      },
+      {
+        "y": 0.565930402698691,
+        "anteriorLateralAngle": 0.9648928691487229,
+        "posteriorLateralAngle": -0.5098143542442863
+      },
+      {
+        "y": 0.5667899548095111,
+        "anteriorLateralAngle": 0.968939535537342,
+        "posteriorLateralAngle": -0.5126924460965223
+      },
+      {
+        "y": 0.5676495069203311,
+        "anteriorLateralAngle": 0.9730285023397935,
+        "posteriorLateralAngle": -0.5156167380871763
+      },
+      {
+        "y": 0.5685090590311512,
+        "anteriorLateralAngle": 0.9771625806383324,
+        "posteriorLateralAngle": -0.5185938709272722
+      },
+      {
+        "y": 0.5693686111419712,
+        "anteriorLateralAngle": 0.9813445815152118,
+        "posteriorLateralAngle": -0.5216304853278309
+      },
+      {
+        "y": 0.5702281632527914,
+        "anteriorLateralAngle": 0.9855773160526868,
+        "posteriorLateralAngle": -0.5247332219998757
+      },
+      {
+        "y": 0.5710877153636114,
+        "anteriorLateralAngle": 0.9898635953330102,
+        "posteriorLateralAngle": -0.5279087216544287
+      },
+      {
+        "y": 0.5719472674744315,
+        "anteriorLateralAngle": 0.9942062304384374,
+        "posteriorLateralAngle": -0.5311636250025125
+      },
+      {
+        "y": 0.5728068195852515,
+        "anteriorLateralAngle": 0.9986080324512212,
+        "posteriorLateralAngle": -0.5345045727551494
+      },
+      {
+        "y": 0.5736663716960715,
+        "anteriorLateralAngle": 1.003071812453616,
+        "posteriorLateralAngle": -0.5379382056233613
+      },
+      {
+        "y": 0.5745259238068916,
+        "anteriorLateralAngle": 1.007600381527877,
+        "posteriorLateralAngle": -0.5414711643181715
+      },
+      {
+        "y": 0.5753854759177117,
+        "anteriorLateralAngle": 1.0121965507562574,
+        "posteriorLateralAngle": -0.5451100895506023
+      },
+      {
+        "y": 0.5762450280285317,
+        "anteriorLateralAngle": 1.0168631312210106,
+        "posteriorLateralAngle": -0.5488616220316753
+      },
+      {
+        "y": 0.5771045801393517,
+        "anteriorLateralAngle": 1.021602934004391,
+        "posteriorLateralAngle": -0.5527324024724132
+      },
+      {
+        "y": 0.5779641322501718,
+        "anteriorLateralAngle": 1.0264187701886538,
+        "posteriorLateralAngle": -0.5567290715838391
+      },
+      {
+        "y": 0.5788236843609919,
+        "anteriorLateralAngle": 1.0313134508560515,
+        "posteriorLateralAngle": -0.5608582700769742
+      },
+      {
+        "y": 0.579683236471812,
+        "anteriorLateralAngle": 1.0362897870888392,
+        "posteriorLateralAngle": -0.5651266386628424
+      },
+      {
+        "y": 0.580542788582632,
+        "anteriorLateralAngle": 1.0413505899692705,
+        "posteriorLateralAngle": -0.5695408180524646
+      },
+      {
+        "y": 0.5814023406934521,
+        "anteriorLateralAngle": 1.0464986705795998,
+        "posteriorLateralAngle": -0.5741074489568645
+      },
+      {
+        "y": 0.5822618928042721,
+        "anteriorLateralAngle": 1.0517368400020806,
+        "posteriorLateralAngle": -0.5788331720870632
+      },
+      {
+        "y": 0.5831214449150921,
+        "anteriorLateralAngle": 1.057067909318967,
+        "posteriorLateralAngle": -0.583724628154084
+      },
+      {
+        "y": 0.5839809970259122,
+        "anteriorLateralAngle": 1.062494689612514,
+        "posteriorLateralAngle": -0.5887884578689495
+      },
+      {
+        "y": 0.5848405491367323,
+        "anteriorLateralAngle": 1.068019991964975,
+        "posteriorLateralAngle": -0.5940313019426819
+      },
+      {
+        "y": 0.5857001012475523,
+        "anteriorLateralAngle": 1.0736466274586038,
+        "posteriorLateralAngle": -0.5994598010863026
+      },
+      {
+        "y": 0.5865596533583723,
+        "anteriorLateralAngle": 1.0793774071756541,
+        "posteriorLateralAngle": -0.6050805960108347
+      },
+      {
+        "y": 0.5874192054691925,
+        "anteriorLateralAngle": 1.0852151421983818,
+        "posteriorLateralAngle": -0.6109003274273015
+      },
+      {
+        "y": 0.5882787575800125,
+        "anteriorLateralAngle": 1.0911626436090385,
+        "posteriorLateralAngle": -0.6169256360467239
+      },
+      {
+        "y": 0.5891383096908326,
+        "anteriorLateralAngle": 1.0972227224898805,
+        "posteriorLateralAngle": -0.6231631625801257
+      },
+      {
+        "y": 0.5899978618016526,
+        "anteriorLateralAngle": 1.10339818992316,
+        "posteriorLateralAngle": -0.6296195477385278
+      },
+      {
+        "y": 0.5908574139124727,
+        "anteriorLateralAngle": 1.1096918569911327,
+        "posteriorLateralAngle": -0.6363014322329541
+      },
+      {
+        "y": 0.5917169660232927,
+        "anteriorLateralAngle": 1.1161066398581294,
+        "posteriorLateralAngle": -0.6432154567744257
+      },
+      {
+        "y": 0.5925765181341127,
+        "anteriorLateralAngle": 1.1226470733957368,
+        "posteriorLateralAngle": -0.6503694413075141
+      },
+      {
+        "y": 0.5934360702449328,
+        "anteriorLateralAngle": 1.1293189627085232,
+        "posteriorLateralAngle": -0.6577808598472779
+      },
+      {
+        "y": 0.594295622355753,
+        "anteriorLateralAngle": 1.1361277973808606,
+        "posteriorLateralAngle": -0.6654708842178534
+      },
+      {
+        "y": 0.595155174466573,
+        "anteriorLateralAngle": 1.1430762411832966,
+        "posteriorLateralAngle": -0.673467290663696
+      },
+      {
+        "y": 0.596014726577393,
+        "anteriorLateralAngle": 1.1501655900853156,
+        "posteriorLateralAngle": -0.6820886612752597
+      },
+      {
+        "y": 0.5968742786882131,
+        "anteriorLateralAngle": 1.1573971311114664,
+        "posteriorLateralAngle": -0.6915397269777208
+      },
+      {
+        "y": 0.5977338307990331,
+        "anteriorLateralAngle": 1.164772151286296,
+        "posteriorLateralAngle": -0.7018841919549696
+      },
+      {
+        "y": 0.5985933829098532,
+        "anteriorLateralAngle": 1.172291937634355,
+        "posteriorLateralAngle": -0.7131911175928187
+      },
+      {
+        "y": 0.5994529350206732,
+        "anteriorLateralAngle": 1.1799577771801906,
+        "posteriorLateralAngle": -0.725534683317252
+      },
+      {
+        "y": 0.6003124871314933,
+        "anteriorLateralAngle": 1.1877709569483528,
+        "posteriorLateralAngle": -0.7389937228042815
+      },
+      {
+        "y": 0.6011720392423133,
+        "anteriorLateralAngle": 1.195732763963389,
+        "posteriorLateralAngle": -0.7536510355613655
+      },
+      {
+        "y": 0.6020315913531333,
+        "anteriorLateralAngle": 1.2038444852498484,
+        "posteriorLateralAngle": -0.7695924738804376
+      },
+      {
+        "y": 0.6028911434639534,
+        "anteriorLateralAngle": 1.2121074078322809,
+        "posteriorLateralAngle": -0.7869058051625051
+      },
+      {
+        "y": 0.6037506955747736,
+        "anteriorLateralAngle": 1.2205228187352346,
+        "posteriorLateralAngle": -0.8056793496138321
+      },
+      {
+        "y": 0.6046102476855936,
+        "anteriorLateralAngle": 1.2290920049832565,
+        "posteriorLateralAngle": -0.826000393313717
+      },
+      {
+        "y": 0.6054697997964136,
+        "anteriorLateralAngle": 1.2378162536008968,
+        "posteriorLateralAngle": -0.847953376653857
+      },
+      {
+        "y": 0.6063293519072337,
+        "anteriorLateralAngle": 1.2466968516127053,
+        "posteriorLateralAngle": -0.8716178581492906
+      },
+      {
+        "y": 0.6071889040180537,
+        "anteriorLateralAngle": 1.2557350860432286,
+        "posteriorLateralAngle": -0.8970662536209182
+      },
+      {
+        "y": 0.6080484561288738,
+        "anteriorLateralAngle": 1.264932243917017,
+        "posteriorLateralAngle": -0.9243639226797697
+      },
+      {
+        "y": 0.6089080082396938,
+        "anteriorLateralAngle": 1.2742896122586176,
+        "posteriorLateralAngle": -0.9535725472665804
+      },
+      {
+        "y": 0.6097675603505139,
+        "anteriorLateralAngle": 1.2838084780925818,
+        "posteriorLateralAngle": -0.9847352745390607
+      },
+      {
+        "y": 0.6106271124613339,
+        "anteriorLateralAngle": 1.2934901284434548,
+        "posteriorLateralAngle": -1.0179675263858348
+      },
+      {
+        "y": 0.6114866645721541,
+        "anteriorLateralAngle": 1.3033358503357886,
+        "posteriorLateralAngle": -1.0536142371754842
+      },
+      {
+        "y": 0.6123462166829741,
+        "anteriorLateralAngle": 1.313346930794129,
+        "posteriorLateralAngle": -1.092063676024439
+      },
+      {
+        "y": 0.6132057687937942,
+        "anteriorLateralAngle": 1.3235246568430277,
+        "posteriorLateralAngle": -1.1337047968378466
+      },
+      {
+        "y": 0.6140653209046142,
+        "anteriorLateralAngle": 1.3338703155070304,
+        "posteriorLateralAngle": -1.1789165722958217
+      },
+      {
+        "y": 0.6149248730154342,
+        "anteriorLateralAngle": 1.3443852000006546,
+        "posteriorLateralAngle": -1.228055285346628
+      },
+      {
+        "y": 0.6157844251262543,
+        "anteriorLateralAngle": 1.3550797774068313,
+        "posteriorLateralAngle": -1.2814397782066826
+      },
+      {
+        "y": 0.6166439772370744,
+        "anteriorLateralAngle": 1.3660301155161343,
+        "posteriorLateralAngle": -1.3393346588674089
+      },
+      {
+        "y": 0.6175035293478944,
+        "anteriorLateralAngle": 1.3773923178005103,
+        "posteriorLateralAngle": -1.4019410552357314
+      },
+      {
+        "y": 0.6183630814587144,
+        "anteriorLateralAngle": 1.3893309902475948,
+        "posteriorLateralAngle": -1.4693712258476168
+      },
+      {
+        "y": 0.6192226335695346,
+        "anteriorLateralAngle": 1.4020107388450236,
+        "posteriorLateralAngle": -1.5415409892952088
+      },
+      {
+        "y": 0.6200821856803546,
+        "anteriorLateralAngle": 1.4155961695804269,
+        "posteriorLateralAngle": -1.6183131663068844
+      },
+      {
+        "y": 0.6209417377911747,
+        "anteriorLateralAngle": 1.4302518884414435,
+        "posteriorLateralAngle": -1.7013014055842388
+      },
+      {
+        "y": 0.6218012899019947,
+        "anteriorLateralAngle": 1.4461425014157032,
+        "posteriorLateralAngle": -1.7920163797308826
+      },
+      {
+        "y": 0.6226608420128148,
+        "anteriorLateralAngle": 1.4634326144908432,
+        "posteriorLateralAngle": -1.8909449813386443
+      },
+      {
+        "y": 0.6235203941236348,
+        "anteriorLateralAngle": 1.4822868336544948,
+        "posteriorLateralAngle": -1.998574102999304
+      },
+      {
+        "y": 0.6243799462344548,
+        "anteriorLateralAngle": 1.5028697671990119,
+        "posteriorLateralAngle": -2.0343178767355763
+      },
+      {
+        "y": 0.6252394983452749,
+        "anteriorLateralAngle": 1.525371144011014,
+        "posteriorLateralAngle": -2.0343178767355763
+      },
+      {
+        "y": 0.626099050456095,
+        "anteriorLateralAngle": 1.5500679311900785,
+        "posteriorLateralAngle": -2.0343178767355763
+      },
+      {
+        "y": 0.626958602566915,
+        "anteriorLateralAngle": 1.577256020886932,
+        "posteriorLateralAngle": -2.0343178767355763
+      },
+      {
+        "y": 0.627818154677735,
+        "anteriorLateralAngle": 1.6072313052523086,
+        "posteriorLateralAngle": -2.0343178767355763
+      },
+      {
+        "y": 0.6286777067885552,
+        "anteriorLateralAngle": 1.6402896764369441,
+        "posteriorLateralAngle": -2.0343178767355763
+      },
+      {
+        "y": 0.6295372588993752,
+        "anteriorLateralAngle": 1.6767270265915606,
+        "posteriorLateralAngle": -2.0343178767355763
+      },
+      {
+        "y": 0.6303968110101953,
+        "anteriorLateralAngle": 1.7168392478668988,
+        "posteriorLateralAngle": -2.0343178767355763
+      },
+      {
+        "y": 0.6312563631210153,
+        "anteriorLateralAngle": 1.7609222324136788,
+        "posteriorLateralAngle": -2.0343178767355763
+      },
+      {
+        "y": 0.6321159152318354,
+        "anteriorLateralAngle": 1.8092718723826433,
+        "posteriorLateralAngle": -2.0343178767355763
+      },
+      {
+        "y": 0.6329754673426554,
+        "anteriorLateralAngle": 1.862184059924511,
+        "posteriorLateralAngle": -2.0343178767355763
+      },
+      {
+        "y": 0.6338350194534754,
+        "anteriorLateralAngle": 1.8834614942197025,
+        "posteriorLateralAngle": -2.0343178767355763
+      },
+      {
+        "y": 0.6346945715642955,
+        "anteriorLateralAngle": 1.8834614942197025,
+        "posteriorLateralAngle": -2.0343178767355763
+      },
+      {
+        "y": 0.6355541236751157,
+        "anteriorLateralAngle": 1.8834614942197025,
+        "posteriorLateralAngle": -2.0343178767355763
+      },
+      {
+        "y": 0.6364136757859357,
+        "anteriorLateralAngle": 1.8834614942197025,
+        "posteriorLateralAngle": -2.0343178767355763
+      },
+      {
+        "y": 0.6372732278967557,
+        "anteriorLateralAngle": 1.8834614942197025,
+        "posteriorLateralAngle": -2.0343178767355763
+      },
+      {
+        "y": 0.6381327800075758,
+        "anteriorLateralAngle": 1.8834614942197025,
+        "posteriorLateralAngle": -2.0343178767355763
+      },
+      {
+        "y": 0.6389923321183958,
+        "anteriorLateralAngle": 1.8834614942197025,
+        "posteriorLateralAngle": -2.0343178767355763
+      },
+      {
+        "y": 0.6398518842292159,
+        "anteriorLateralAngle": 1.8834614942197025,
+        "posteriorLateralAngle": -2.0343178767355763
+      },
+      {
+        "y": 0.6407114363400359,
+        "anteriorLateralAngle": 1.8834614942197025,
+        "posteriorLateralAngle": -2.0343178767355763
+      },
+      {
+        "y": 0.641570988450856,
+        "anteriorLateralAngle": 1.8834614942197025,
+        "posteriorLateralAngle": -2.0343178767355763
+      },
+      {
+        "y": 0.642430540561676,
+        "anteriorLateralAngle": 1.8834614942197025,
+        "posteriorLateralAngle": -2.0343178767355763
+      }
+    ],
+    "originAnterior": [
+      0.15448281168937683,
+      0.633430540561676,
+      0.005136554944328964
+    ],
+    "originPosterior": [
+      0.15972906351089478,
+      0.6237908601760864,
+      -0.09018217772245407
+    ],
+    "crownY": 0.642430540561676
+  }
+}

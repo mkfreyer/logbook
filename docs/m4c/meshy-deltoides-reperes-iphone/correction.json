@@ -1,0 +1,875 @@
+{
+  "baseCommit": "06fa665",
+  "zones": {
+    "pectoralis.left": {
+      "before": 90081,
+      "after": 90081,
+      "removed": 0,
+      "added": 0
+    },
+    "pectoralis.right": {
+      "before": 90130,
+      "after": 90130,
+      "removed": 0,
+      "added": 0
+    },
+    "deltoid.left.anterior": {
+      "before": 38171,
+      "after": 26063,
+      "removed": 17186,
+      "added": 5078
+    },
+    "deltoid.left.lateral": {
+      "before": 38139,
+      "after": 46654,
+      "removed": 7206,
+      "added": 15721
+    },
+    "deltoid.left.posterior": {
+      "before": 28907,
+      "after": 35430,
+      "removed": 1412,
+      "added": 7935
+    },
+    "deltoid.right.anterior": {
+      "before": 39009,
+      "after": 25268,
+      "removed": 18591,
+      "added": 4850
+    },
+    "deltoid.right.lateral": {
+      "before": 38585,
+      "after": 49453,
+      "removed": 6035,
+      "added": 16903
+    },
+    "deltoid.right.posterior": {
+      "before": 30945,
+      "after": 37451,
+      "removed": 1225,
+      "added": 7731
+    }
+  },
+  "sideDiagnostics": {
+    "right": {
+      "candidateTexels": 242430,
+      "selectedTexels": 112348,
+      "commonInsertionSourceM": [
+        -0.2536669671535492,
+        0.45361238718032837,
+        -0.051185134798288345
+      ],
+      "manualEndpointsSourceM": {
+        "posterior.posterior_lateral": [
+          -0.2542937397956848,
+          0.4846958518028259,
+          -0.08191078901290894
+        ],
+        "lateral.posterior_lateral": [
+          -0.25256770849227905,
+          0.449643611907959,
+          -0.05096563696861267
+        ],
+        "lateral.anterior_lateral": [
+          -0.25256770849227905,
+          0.449643611907959,
+          -0.05096563696861267
+        ],
+        "anterior.anterior_lateral": [
+          -0.24014639854431152,
+          0.4615195691585541,
+          -0.026364624500274658
+        ],
+        "anterior.anterior_outer": [
+          -0.24014639854431152,
+          0.4615195691585541,
+          -0.026364624500274658
+        ]
+      }
+    },
+    "left": {
+      "candidateTexels": 239859,
+      "selectedTexels": 108398,
+      "commonInsertionSourceM": [
+        0.2501296103000641,
+        0.45408862829208374,
+        -0.05135781690478325
+      ],
+      "manualEndpointsSourceM": {
+        "posterior.posterior_lateral": [
+          0.2509223222732544,
+          0.48567748069763184,
+          -0.08064007014036179
+        ],
+        "lateral.posterior_lateral": [
+          0.2493627518415451,
+          0.4494054913520813,
+          -0.05176787078380585
+        ],
+        "lateral.anterior_lateral": [
+          0.2493627518415451,
+          0.4494054913520813,
+          -0.05176787078380585
+        ],
+        "anterior.anterior_lateral": [
+          0.24003343284130096,
+          0.46202749013900757,
+          -0.02725359983742237
+        ],
+        "anterior.anterior_outer": [
+          0.24003343284130096,
+          0.46202749013900757,
+          -0.02725359983742237
+        ]
+      }
+    }
+  },
+  "upperPosteriorArcRegularization": {
+    "right": {
+      "upperArcTexelsRegularized": 103,
+      "sharedSideAssignedToLateral": 88,
+      "sharedSideAssignedToPosterior": 214
+    },
+    "left": {
+      "upperArcTexelsRegularized": 238,
+      "sharedSideAssignedToLateral": 233,
+      "sharedSideAssignedToPosterior": 16
+    }
+  },
+  "microscopicBoundaryFragmentsRemoved": [
+    {
+      "code": 3,
+      "texels": 1,
+      "coveredTexels": 1,
+      "sourceSpanM": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "code": 3,
+      "texels": 2,
+      "coveredTexels": 2,
+      "sourceSpanM": [
+        0.0001894235610961914,
+        0.0004050135612487793,
+        0.00046327710151672363
+      ]
+    },
+    {
+      "code": 3,
+      "texels": 3,
+      "coveredTexels": 3,
+      "sourceSpanM": [
+        0.0003788471221923828,
+        0.0008100569248199463,
+        0.0009265504777431488
+      ]
+    },
+    {
+      "code": 3,
+      "texels": 1,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 3,
+      "texels": 11,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 4,
+      "texels": 18,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 4,
+      "texels": 6,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 4,
+      "texels": 2,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 4,
+      "texels": 1,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 4,
+      "texels": 1,
+      "coveredTexels": 1,
+      "sourceSpanM": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "code": 4,
+      "texels": 11,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 4,
+      "texels": 18,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 4,
+      "texels": 1,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 4,
+      "texels": 1,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 4,
+      "texels": 48,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 4,
+      "texels": 2,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 4,
+      "texels": 4,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 4,
+      "texels": 31,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 4,
+      "texels": 2,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 4,
+      "texels": 2,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 4,
+      "texels": 16,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 4,
+      "texels": 1,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 4,
+      "texels": 1,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 4,
+      "texels": 1,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 5,
+      "texels": 1,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 5,
+      "texels": 1,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 5,
+      "texels": 1,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 5,
+      "texels": 25,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 5,
+      "texels": 1,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 5,
+      "texels": 13,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 5,
+      "texels": 1,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 5,
+      "texels": 1,
+      "coveredTexels": 1,
+      "sourceSpanM": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "code": 5,
+      "texels": 1,
+      "coveredTexels": 1,
+      "sourceSpanM": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "code": 5,
+      "texels": 2,
+      "coveredTexels": 2,
+      "sourceSpanM": [
+        0.00014525651931762695,
+        0.0006271600723266602,
+        0.0005015581846237183
+      ]
+    },
+    {
+      "code": 5,
+      "texels": 7,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 5,
+      "texels": 6,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 5,
+      "texels": 1,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 6,
+      "texels": 1,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 6,
+      "texels": 16,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 6,
+      "texels": 1,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 6,
+      "texels": 1,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 6,
+      "texels": 1,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 6,
+      "texels": 2,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 6,
+      "texels": 23,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 6,
+      "texels": 1,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 6,
+      "texels": 2,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 6,
+      "texels": 1,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 6,
+      "texels": 1,
+      "coveredTexels": 1,
+      "sourceSpanM": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "code": 6,
+      "texels": 1,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 6,
+      "texels": 1,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 7,
+      "texels": 17,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 7,
+      "texels": 20,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 7,
+      "texels": 1,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 7,
+      "texels": 2,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 7,
+      "texels": 1,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 7,
+      "texels": 1,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 7,
+      "texels": 1,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 7,
+      "texels": 1,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 7,
+      "texels": 1,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 7,
+      "texels": 1,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 7,
+      "texels": 1,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 7,
+      "texels": 1,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 7,
+      "texels": 6,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 7,
+      "texels": 2,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 8,
+      "texels": 18,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 8,
+      "texels": 6,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 8,
+      "texels": 1,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 8,
+      "texels": 9,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 8,
+      "texels": 2,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 8,
+      "texels": 1,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 8,
+      "texels": 9,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 8,
+      "texels": 1,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "code": 8,
+      "texels": 6,
+      "coveredTexels": 0,
+      "sourceSpanM": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "geometryChanged": false,
+  "uvChanged": false,
+  "normalsChanged": false,
+  "pectoralMaskBytesIdentical": true
+}
