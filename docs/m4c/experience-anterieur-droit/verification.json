@@ -1,0 +1,79 @@
+{
+  "status": "passed",
+  "baseCommit": "168ac61",
+  "maskReference": "06fa665",
+  "onlyIDTransition": [
+    0,
+    6
+  ],
+  "addedIDTexels": 5792,
+  "removedIDTexels": 0,
+  "sevenOtherMasks": [
+    {
+      "id": "pectoralis.left",
+      "sha256": "6362c4af4a35944304d8eccb29f0d15cbb2dbbfd313cc3392e46adbea97689da",
+      "byteIdentical": true
+    },
+    {
+      "id": "pectoralis.right",
+      "sha256": "eb2794be05e4876f6de303553cf216055c15538fe7c7c860ea064a1cd4567774",
+      "byteIdentical": true
+    },
+    {
+      "id": "deltoid.left.anterior",
+      "sha256": "33748a1b9f8cba3d68fab4b3794610694cd8986762125e4f9645ee0ee0628b89",
+      "byteIdentical": true
+    },
+    {
+      "id": "deltoid.left.lateral",
+      "sha256": "438dc06646ba846d7ce835addbbd873257eb50bdcbd4a762548b9434120e14f9",
+      "byteIdentical": true
+    },
+    {
+      "id": "deltoid.left.posterior",
+      "sha256": "5622d5fde32f3f2e8d4ddfd46cf98411bfb0f1451810720374a9d0f26e485c61",
+      "byteIdentical": true
+    },
+    {
+      "id": "deltoid.right.lateral",
+      "sha256": "04cff1872acf709ec7d3519165623930670796566559ab4d1058894d82c2bad1",
+      "byteIdentical": true
+    },
+    {
+      "id": "deltoid.right.posterior",
+      "sha256": "560ae8b0b11c3f94a0cf45d3c489b0abea5b3ffbc1549d467da9ac524ee4dc18",
+      "byteIdentical": true
+    }
+  ],
+  "anteriorLateralBoundaryAnd4pxNeighborhoodIdentical": true,
+  "allEightIDsPresent": [
+    "pectoralis.left",
+    "pectoralis.right",
+    "deltoid.left.anterior",
+    "deltoid.left.lateral",
+    "deltoid.left.posterior",
+    "deltoid.right.anterior",
+    "deltoid.right.lateral",
+    "deltoid.right.posterior"
+  ],
+  "geometryAndUVBuffersBitIdentical": [
+    "POSITION",
+    "NORMAL",
+    "TEXCOORD_0",
+    "indices"
+  ],
+  "trianglesBefore": 110588,
+  "trianglesAfter": 110588,
+  "newTriangles": 0,
+  "maxPositionDisplacementM": 0,
+  "masterSha256": "421e593cad17f60d1c0c5e67707729fb88bbf69026795e22011ecc7d90b38959",
+  "neutralBeforeAfterRenderBytesIdentical": true,
+  "allPreviouslyTrackedFilesByteIdentical": 583,
+  "noMaskWeightOverlaps": true,
+  "continuityAudit": "passed",
+  "guideSamplesOnProtectedPectoral": 253,
+  "totalGuideSamples": 800,
+  "guideLimit": "Guide is clipped to existing neutral surface to preserve pectoral ID2 exactly. The user confirmed the capture depicts the left shoulder and requested transfer to the right; the reconstructed reference view is reflected accordingly, not the UV atlas.",
+  "iphoneIntegrationPerformed": false,
+  "visualValidationByUser": false
+}

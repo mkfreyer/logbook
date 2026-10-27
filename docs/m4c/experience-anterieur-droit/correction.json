@@ -1,0 +1,12 @@
+{
+  "base": "168ac61",
+  "editableID": 6,
+  "addedIDTexels": 5792,
+  "removedIDTexels": 0,
+  "changedAlphaTexels": 6007,
+  "localRasterPinholesFilled": 297,
+  "tinyAddedGutterTexelsDiscarded": 2,
+  "geometryEdits": false,
+  "uvEdits": false,
+  "sevenOtherMasksByteIdentical": true
+}

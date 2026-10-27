@@ -1,0 +1,76 @@
+{
+  "status": "passed",
+  "referenceCommit": "7b69e3d",
+  "editableID": 3,
+  "immutableReferenceID": 6,
+  "sevenOtherMasks": [
+    {
+      "id": "pectoralis.left",
+      "sha256": "6362c4af4a35944304d8eccb29f0d15cbb2dbbfd313cc3392e46adbea97689da",
+      "byteIdentical": true
+    },
+    {
+      "id": "pectoralis.right",
+      "sha256": "eb2794be05e4876f6de303553cf216055c15538fe7c7c860ea064a1cd4567774",
+      "byteIdentical": true
+    },
+    {
+      "id": "deltoid.left.lateral",
+      "sha256": "438dc06646ba846d7ce835addbbd873257eb50bdcbd4a762548b9434120e14f9",
+      "byteIdentical": true
+    },
+    {
+      "id": "deltoid.left.posterior",
+      "sha256": "5622d5fde32f3f2e8d4ddfd46cf98411bfb0f1451810720374a9d0f26e485c61",
+      "byteIdentical": true
+    },
+    {
+      "id": "deltoid.right.anterior",
+      "sha256": "3d291bb845df6b72f4135ea68795e7ce659a042bb03c44087bef4d5a3359d71c",
+      "byteIdentical": true
+    },
+    {
+      "id": "deltoid.right.lateral",
+      "sha256": "04cff1872acf709ec7d3519165623930670796566559ab4d1058894d82c2bad1",
+      "byteIdentical": true
+    },
+    {
+      "id": "deltoid.right.posterior",
+      "sha256": "560ae8b0b11c3f94a0cf45d3c489b0abea5b3ffbc1549d467da9ac524ee4dc18",
+      "byteIdentical": true
+    }
+  ],
+  "rightMaskAndPackedAtlasByteIdentical": true,
+  "bothAnteriorLateralBoundariesIdentical": true,
+  "leftProtectedFilteringBandTexels": 4,
+  "eightStableIDs": [
+    "pectoralis.left",
+    "pectoralis.right",
+    "deltoid.left.anterior",
+    "deltoid.left.lateral",
+    "deltoid.left.posterior",
+    "deltoid.right.anterior",
+    "deltoid.right.lateral",
+    "deltoid.right.posterior"
+  ],
+  "geometryBuffersBitIdentical": [
+    "POSITION",
+    "NORMAL",
+    "TEXCOORD_0",
+    "indices"
+  ],
+  "trianglesBefore": 110588,
+  "trianglesAfter": 110588,
+  "newTriangles": 0,
+  "maxPositionDisplacementM": 0,
+  "masterSha256": "421e593cad17f60d1c0c5e67707729fb88bbf69026795e22011ecc7d90b38959",
+  "noOverlappingWeights": true,
+  "continuityAudit": "passed",
+  "neutralRenderBytesIdentical": true,
+  "rightRenderBytesIdentical": true,
+  "allPreviouslyTrackedFilesByteIdentical": 630,
+  "actualLeftSourceSurfaceProjection": true,
+  "uvPixelsReflected": false,
+  "applicationIntegration": false,
+  "visualApprovalLeft": false
+}
