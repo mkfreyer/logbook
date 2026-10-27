@@ -2,7 +2,7 @@
 from pathlib import Path
 import json, sys
 from PIL import Image, ImageDraw, ImageFont
-root = Path(sys.argv[1] if len(sys.argv)>1 else 'docs/m4d/selection-deltoides-corriges')
+root = Path(sys.argv[1] if len(sys.argv)>1 else 'docs/m4d/selection-restauree')
 audit = json.loads((root / 'browser-verification.json').read_text())
 assert audit['status'] == 'passed'
 font = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', 17)

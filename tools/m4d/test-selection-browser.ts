@@ -8,12 +8,12 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { buildViewerDocument } from '../../src/features/model3d/document';
 import { MUSCLES } from '../../src/features/model3d/selection';
 async function main() {
-const out = process.env.M4D_ARTIFACT_DIR ?? 'docs/m4d/selection-deltoides-corriges';
+const out = process.env.M4D_ARTIFACT_DIR ?? 'docs/m4d/selection-restauree';
 await mkdir(out,{recursive:true});
 const glb=await readFile('assets/models/meshy-m4d-uv.glb');
 const scene=await new GLTFLoader().parseAsync(glb.buffer.slice(glb.byteOffset,glb.byteOffset+glb.byteLength),'');
 const center=new Box3().setFromObject(scene.scene).getCenter(new Vector3());
-const witnesses=JSON.parse(await readFile('docs/m4c/meshy-deltoides-reperes-iphone/picking-witnesses.json','utf8'));
+const witnesses=JSON.parse(await readFile('docs/m4c/meshy-posterieurs-harmonises/picking-witnesses.json','utf8'));
 const html=buildViewerDocument(glb.toString('base64'));
 const server=createServer((_req,res)=>{res.writeHead(200,{'Content-Type':'text/html'});res.end(html);});
 await new Promise<void>(resolve=>server.listen(0,'127.0.0.1',resolve));
@@ -66,7 +66,7 @@ await gesture([{x:150,y:400,id:1},{x:280,y:400,id:2}],[{x:150,y:550,id:1},{x:280
 assert.equal(await selected(),null);
 const checks=[];
 for(const witness of witnesses){
- const angle=Math.atan2(witness.normal[0],witness.normal[2]);console.log(`Checking ${witness.expectedId}`);await orient(angle);
+ const angle=witness.expectedId.endsWith('.lateral') ? (witness.expectedId.includes('.left.') ? Math.PI/2 : -Math.PI/2) : Math.atan2(witness.normal[0],witness.normal[2]);console.log(`Checking ${witness.expectedId}`);await orient(angle);
  await command('reset-selection');await page.waitForTimeout(200);
  const p=await screenPoint(witness.point);assert.ok(p.x>0&&p.x<430&&p.y>0&&p.y<760,JSON.stringify(p));
  const before=await page.screenshot();await tap(p.x,p.y);

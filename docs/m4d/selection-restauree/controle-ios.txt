@@ -4,7 +4,7 @@
 
 Starting Metro Bundler
 
-iOS Bundled 34212ms ../logbook-m4b-sdk58/node_modules/expo-router/entry.js (2036 modules)
+iOS Bundled 32427ms ../logbook-m4b-sdk58/node_modules/expo-router/entry.js (2036 modules)
 
 › Assets (44):
 ../logbook-m4b-sdk58/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/AntDesign.ttf (130KB)
@@ -42,7 +42,7 @@ assets/models/meshy-m4d-uv.glb (2.6MB)
 assets/rest-complete.wav (24KB)
 
 › ios bundles (1):
-_expo/static/js/ios/entry-4885822bb01dc463fe62e19d8452743b.hbc (6.7MB)
+_expo/static/js/ios/entry-927c7be0ae309a80abdeadb034c85faf.hbc (6.7MB)
 
 › Files (1):
 metadata.json (2.9KB)
