@@ -1,0 +1,15 @@
+{
+  "method": "Threshold actual emissive mask renders at 0.5, anatomically mirrored cameras \u00b145deg. Reflect only the rendered right image, no registration/translation or UV pixel reflection. Finite raster comparison, not exact geometric symmetry.",
+  "results": {
+    "before": {
+      "intersectionOverUnion": 0.8748122472559214,
+      "leftPixels": 90940,
+      "rightPixels": 103778
+    },
+    "after": {
+      "intersectionOverUnion": 0.9574367803930245,
+      "leftPixels": 99723,
+      "rightPixels": 103778
+    }
+  }
+}

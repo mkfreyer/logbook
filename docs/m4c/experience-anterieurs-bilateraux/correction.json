@@ -1,0 +1,15 @@
+{
+  "referenceCommit": "7b69e3d",
+  "editableID": 3,
+  "immutableReferenceID": 6,
+  "addedIDTexels": 4161,
+  "removedIDTexels": 187,
+  "changedAlphaTexels": 4654,
+  "localPinholesFilled": 14,
+  "emptyAddedGutterTexelsPruned": 39,
+  "coveredSingleTexelFragmentsPruned": 7,
+  "sevenOtherMasksByteIdentical": true,
+  "rightAtlasPackByteIdentical": true,
+  "geometryEdits": false,
+  "uvEdits": false
+}

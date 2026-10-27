@@ -1,0 +1,15 @@
+{
+  "onlyEditableID": 3,
+  "referenceID": 6,
+  "anteriorLateralImmutableBandTexels": 4,
+  "curveDomainY": [
+    69.3511139796381,
+    175.95386749763404
+  ],
+  "oldLeftDomainY": [
+    69.0,
+    175.5
+  ],
+  "candidateTexels": 4861,
+  "method": "Object-space curve transposition, actual left UV triangle interpolation, 4px padding; no texture reflection."
+}
