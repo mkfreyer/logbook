@@ -1,0 +1,50 @@
+{
+  "status": "passed",
+  "engine": "Blender BVH ray on unchanged real mesh, two UV ID atlases; no application UI",
+  "fourIndependentRegions": [
+    {
+      "id": "biceps.left",
+      "code": 9,
+      "sourceFace": 79357,
+      "firstSurfaceHit": [
+        0.24620255827903748,
+        0.38174471259117126,
+        -0.0018452461808919907
+      ],
+      "protectedID": 0
+    },
+    {
+      "id": "biceps.right",
+      "code": 10,
+      "sourceFace": 11604,
+      "firstSurfaceHit": [
+        -0.2441551238298416,
+        0.38113805651664734,
+        0.0024994388222694397
+      ],
+      "protectedID": 0
+    },
+    {
+      "id": "triceps.left",
+      "code": 11,
+      "sourceFace": 79621,
+      "firstSurfaceHit": [
+        0.24778205156326294,
+        0.3823617398738861,
+        -0.1276988387107849
+      ],
+      "protectedID": 0
+    },
+    {
+      "id": "triceps.right",
+      "code": 12,
+      "sourceFace": 10786,
+      "firstSurfaceHit": [
+        -0.2523587644100189,
+        0.38399824500083923,
+        -0.12689107656478882
+      ],
+      "protectedID": 0
+    }
+  ]
+}

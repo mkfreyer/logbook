@@ -1,0 +1,44 @@
+{
+  "existingEightMasksModified": false,
+  "policy": "Do not paint any protected weight; add 1.5mm neutral safety margin on actual surface. Counts are atlas samples, not physical areas.",
+  "zones": [
+    {
+      "id": "biceps.left",
+      "candidateCoveredTexels": 64941,
+      "clippedCoveredTexels": 0,
+      "protectedIDsEncountered": {},
+      "neutralSafetyMarginM": 0.0015,
+      "fadeToFullAtM": 0.0025
+    },
+    {
+      "id": "biceps.right",
+      "candidateCoveredTexels": 65316,
+      "clippedCoveredTexels": 0,
+      "protectedIDsEncountered": {},
+      "neutralSafetyMarginM": 0.0015,
+      "fadeToFullAtM": 0.0025
+    },
+    {
+      "id": "triceps.left",
+      "candidateCoveredTexels": 106045,
+      "clippedCoveredTexels": 2789,
+      "protectedIDsEncountered": {
+        "4": 252,
+        "5": 1991
+      },
+      "neutralSafetyMarginM": 0.0015,
+      "fadeToFullAtM": 0.0025
+    },
+    {
+      "id": "triceps.right",
+      "candidateCoveredTexels": 111789,
+      "clippedCoveredTexels": 2383,
+      "protectedIDsEncountered": {
+        "7": 270,
+        "8": 1668
+      },
+      "neutralSafetyMarginM": 0.0015,
+      "fadeToFullAtM": 0.0025
+    }
+  ]
+}
