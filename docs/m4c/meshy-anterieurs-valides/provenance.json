@@ -1,0 +1,149 @@
+{
+  "referenceCommit": "09c61ab937464f47133ece32944c568311583545",
+  "anatomicalBase": "06fa665",
+  "sourcePrefix": "docs/m4c/experience-anterieurs-bilateraux/",
+  "sourceFiles": [
+    {
+      "file": "textures/pectoralis.left.png",
+      "source": "docs/m4c/experience-anterieurs-bilateraux/textures/pectoralis.left.png",
+      "sha256": "6362c4af4a35944304d8eccb29f0d15cbb2dbbfd313cc3392e46adbea97689da",
+      "byteIdentical": true
+    },
+    {
+      "file": "textures/pectoralis.right.png",
+      "source": "docs/m4c/experience-anterieurs-bilateraux/textures/pectoralis.right.png",
+      "sha256": "eb2794be05e4876f6de303553cf216055c15538fe7c7c860ea064a1cd4567774",
+      "byteIdentical": true
+    },
+    {
+      "file": "textures/deltoid.left.anterior.png",
+      "source": "docs/m4c/experience-anterieurs-bilateraux/textures/deltoid.left.anterior.png",
+      "sha256": "dbd05936b70833e8461530617426939b2570b29a0b350cbae5b621da4b38f35a",
+      "byteIdentical": true
+    },
+    {
+      "file": "textures/deltoid.left.lateral.png",
+      "source": "docs/m4c/experience-anterieurs-bilateraux/textures/deltoid.left.lateral.png",
+      "sha256": "438dc06646ba846d7ce835addbbd873257eb50bdcbd4a762548b9434120e14f9",
+      "byteIdentical": true
+    },
+    {
+      "file": "textures/deltoid.left.posterior.png",
+      "source": "docs/m4c/experience-anterieurs-bilateraux/textures/deltoid.left.posterior.png",
+      "sha256": "5622d5fde32f3f2e8d4ddfd46cf98411bfb0f1451810720374a9d0f26e485c61",
+      "byteIdentical": true
+    },
+    {
+      "file": "textures/deltoid.right.anterior.png",
+      "source": "docs/m4c/experience-anterieurs-bilateraux/textures/deltoid.right.anterior.png",
+      "sha256": "3d291bb845df6b72f4135ea68795e7ce659a042bb03c44087bef4d5a3359d71c",
+      "byteIdentical": true
+    },
+    {
+      "file": "textures/deltoid.right.lateral.png",
+      "source": "docs/m4c/experience-anterieurs-bilateraux/textures/deltoid.right.lateral.png",
+      "sha256": "04cff1872acf709ec7d3519165623930670796566559ab4d1058894d82c2bad1",
+      "byteIdentical": true
+    },
+    {
+      "file": "textures/deltoid.right.posterior.png",
+      "source": "docs/m4c/experience-anterieurs-bilateraux/textures/deltoid.right.posterior.png",
+      "sha256": "560ae8b0b11c3f94a0cf45d3c489b0abea5b3ffbc1549d467da9ac524ee4dc18",
+      "byteIdentical": true
+    },
+    {
+      "file": "textures/control-basecolor.png",
+      "source": "docs/m4c/experience-anterieurs-bilateraux/textures/control-basecolor.png",
+      "sha256": "4a8ae63046b4705a0158715f0b899c8b879b337bacf354aa3cc08fab91ae5573",
+      "byteIdentical": true
+    },
+    {
+      "file": "exports/meshy-eight-zones-control.glb",
+      "source": "docs/m4c/experience-anterieurs-bilateraux/exports/meshy-eight-zones-control.glb",
+      "sha256": "3059c4791dd60dc57b25fc56ebf603bcc9392d4f4ff4186625a99eb700ef1475",
+      "byteIdentical": true
+    },
+    {
+      "file": "region-binding.json",
+      "source": "docs/m4c/experience-anterieurs-bilateraux/region-binding.json",
+      "sha256": "13395b0b290e36b2fd5a3f830d9ef924d5ad14a262a33132c6faff1d834269e2",
+      "byteIdentical": true
+    },
+    {
+      "file": "picking-witnesses.json",
+      "source": "docs/m4c/experience-anterieurs-bilateraux/picking-witnesses.json",
+      "sha256": "84a324cc47511857b91c4ffd6664432cc68e872881701e88a4529db8f923848d",
+      "byteIdentical": true
+    },
+    {
+      "file": "surface-transfer.json",
+      "source": "docs/m4c/experience-anterieurs-bilateraux/surface-transfer.json",
+      "sha256": "a7adacfb2d98b4dbb349b7218ffed5dfd9297b4c34e01922567c884d5613de33",
+      "byteIdentical": true
+    },
+    {
+      "file": "contour-comparison.json",
+      "source": "docs/m4c/experience-anterieurs-bilateraux/contour-comparison.json",
+      "sha256": "efb355b9a8a0a39eb4efd33ad9a094d5700d4f25160ff0c1ab273f9b9f8a8d72",
+      "byteIdentical": true
+    },
+    {
+      "file": "meshy-anterieurs-valides.blend",
+      "source": "docs/m4c/experience-anterieurs-bilateraux/experience-anterieurs-bilateraux.blend",
+      "sha256": "8b4e381c468ce7d528c791790041a6dc8c5cebd30c9d6129aeb22bb7d2d15b01",
+      "byteIdentical": true
+    },
+    {
+      "file": "renders/face-bilaterale.png",
+      "source": "docs/m4c/experience-anterieurs-bilateraux/renders/face-bilaterale.png",
+      "sha256": "39218a3608e076fd95d1e54eb9b3a005bfe9b93eb623f93d0c6cbda9edab9591",
+      "byteIdentical": true
+    },
+    {
+      "file": "renders/epaule-droite-validee.png",
+      "source": "docs/m4c/experience-anterieurs-bilateraux/renders/epaule-droite-validee.png",
+      "sha256": "eee4effd08c455c8bbcf0926ff312c4e94b2a01cfb42c814dbf1a94eefb0b729",
+      "byteIdentical": true
+    },
+    {
+      "file": "renders/epaule-gauche-validee.png",
+      "source": "docs/m4c/experience-anterieurs-bilateraux/renders/epaule-gauche-nouvelle.png",
+      "sha256": "59dec10232fb882ca299a1e9fe72ed5f4c5e3f61effd7de09d487c80b717b4c2",
+      "byteIdentical": true
+    },
+    {
+      "file": "textures/muscle-ids.png",
+      "source": "docs/m4c/experience-anterieurs-bilateraux/textures/muscle-ids.png",
+      "sha256": "9a2a6283a02f2fed1d4287d9d6e848b3c6031e70ab2808f6ad533e5bba6fa4cd",
+      "byteIdentical": true,
+      "regeneratedFromEightApprovedMasks": true
+    },
+    {
+      "file": "textures/masks-rgba-0.png",
+      "source": "docs/m4c/experience-anterieurs-bilateraux/textures/masks-rgba-0.png",
+      "sha256": "a17ef4d23e886e919a2aa773d472e403b22f0148ff8538145276144308bdb0b5",
+      "byteIdentical": true,
+      "regeneratedFromEightApprovedMasks": true
+    },
+    {
+      "file": "textures/masks-rgba-1.png",
+      "source": "docs/m4c/experience-anterieurs-bilateraux/textures/masks-rgba-1.png",
+      "sha256": "4434b807c9e6bf45ddaad96e29a09f70965fbf27c8dd6fd2d74845b096aeebb4",
+      "byteIdentical": true,
+      "regeneratedFromEightApprovedMasks": true
+    }
+  ],
+  "sixProtectedMasksByteIdenticalTo06fa665": [
+    "pectoralis.left",
+    "pectoralis.right",
+    "deltoid.left.lateral",
+    "deltoid.left.posterior",
+    "deltoid.right.lateral",
+    "deltoid.right.posterior"
+  ],
+  "regeneratedAtlasesByteIdenticalToApprovedReference": true,
+  "modelMasterSha256": "421e593cad17f60d1c0c5e67707729fb88bbf69026795e22011ecc7d90b38959",
+  "geometryEdited": false,
+  "uvEdited": false,
+  "rejectedSourcesUsed": false
+}
