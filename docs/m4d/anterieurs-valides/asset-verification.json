@@ -1,0 +1,90 @@
+{
+  "status": "passed",
+  "approvedReference": "09c61ab",
+  "anatomicalBase": "06fa665",
+  "eightMasks": [
+    {
+      "id": "pectoralis.left",
+      "code": 1,
+      "sha256": "6362c4af4a35944304d8eccb29f0d15cbb2dbbfd313cc3392e46adbea97689da",
+      "approved09c61abByteIdentical": true,
+      "protected06fa665ByteIdentical": true
+    },
+    {
+      "id": "pectoralis.right",
+      "code": 2,
+      "sha256": "eb2794be05e4876f6de303553cf216055c15538fe7c7c860ea064a1cd4567774",
+      "approved09c61abByteIdentical": true,
+      "protected06fa665ByteIdentical": true
+    },
+    {
+      "id": "deltoid.left.anterior",
+      "code": 3,
+      "sha256": "dbd05936b70833e8461530617426939b2570b29a0b350cbae5b621da4b38f35a",
+      "approved09c61abByteIdentical": true,
+      "protected06fa665ByteIdentical": false
+    },
+    {
+      "id": "deltoid.left.lateral",
+      "code": 4,
+      "sha256": "438dc06646ba846d7ce835addbbd873257eb50bdcbd4a762548b9434120e14f9",
+      "approved09c61abByteIdentical": true,
+      "protected06fa665ByteIdentical": true
+    },
+    {
+      "id": "deltoid.left.posterior",
+      "code": 5,
+      "sha256": "5622d5fde32f3f2e8d4ddfd46cf98411bfb0f1451810720374a9d0f26e485c61",
+      "approved09c61abByteIdentical": true,
+      "protected06fa665ByteIdentical": true
+    },
+    {
+      "id": "deltoid.right.anterior",
+      "code": 6,
+      "sha256": "3d291bb845df6b72f4135ea68795e7ce659a042bb03c44087bef4d5a3359d71c",
+      "approved09c61abByteIdentical": true,
+      "protected06fa665ByteIdentical": false
+    },
+    {
+      "id": "deltoid.right.lateral",
+      "code": 7,
+      "sha256": "04cff1872acf709ec7d3519165623930670796566559ab4d1058894d82c2bad1",
+      "approved09c61abByteIdentical": true,
+      "protected06fa665ByteIdentical": true
+    },
+    {
+      "id": "deltoid.right.posterior",
+      "code": 8,
+      "sha256": "560ae8b0b11c3f94a0cf45d3c489b0abea5b3ffbc1549d467da9ac524ee4dc18",
+      "approved09c61abByteIdentical": true,
+      "protected06fa665ByteIdentical": true
+    }
+  ],
+  "sixProtectedMasksByteIdentical": true,
+  "bothAnteriorLateralBoundariesAnd4pxBandsIdentical": true,
+  "atlasByteIdenticalToApproval": true,
+  "noOverlappingWeights": true,
+  "continuity": "passed",
+  "blenderAndControlGlbByteIdenticalToApproval": true,
+  "geometryUvNormalsIndicesBitIdentical": [
+    "POSITION",
+    "NORMAL",
+    "TEXCOORD_0",
+    "indices"
+  ],
+  "triangles": 110588,
+  "newTriangles": 0,
+  "maxVertexDisplacementM": 0,
+  "masterSha256": "421e593cad17f60d1c0c5e67707729fb88bbf69026795e22011ecc7d90b38959",
+  "protectedApplicationFilesCompared": 175,
+  "applicationBaseline": "fd737ca",
+  "rejectedContoursUsed": false,
+  "runtime": {
+    "neutralMasterMaterialExact": true,
+    "controlImagesOrMaterialsEmbedded": false,
+    "runtimeAtlasByteIdenticalTo09c61ab": true,
+    "runtimeGeometryUvNormalsExact": true,
+    "assetSha256": "646dd3331cfe7889122dd4356fff501f3e7c7bbd61c03c6015262909833e3b5f",
+    "atlasSha256": "9a2a6283a02f2fed1d4287d9d6e848b3c6031e70ab2808f6ad533e5bba6fa4cd"
+  }
+}

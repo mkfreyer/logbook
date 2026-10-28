@@ -7,7 +7,7 @@ import { BufferGeometry, BufferAttribute, Mesh, MeshBasicMaterial, Raycaster, Ve
 import { MUSCLES, SelectionTap, sampleMuscle } from '../src/features/model3d/selection';
 import { SELECTION_MODEL, muscleAtlasBase64 } from '../src/features/model3d/generated/selectionData';
 import { parseViewerEvent, commandScript } from '../src/features/model3d/bridge';
-const base = 'docs/m4c/meshy-posterieurs-harmonises';
+const base = 'docs/m4c/meshy-anterieurs-valides';
 function glb(path: string) {
   const bytes = readFileSync(path), n = bytes.readUInt32LE(12), doc = JSON.parse(bytes.toString('utf8', 20, 20+n));
   const bin = bytes.subarray(28+n), p = doc.meshes[0].primitives[0];
@@ -52,6 +52,19 @@ test('eight actual raycasts resolve the exact validated atlas, including anatomi
   assert.equal(sampleMuscle({x:0,y:0},atlas.pixels,atlas.width,atlas.height),null);
   for(const uv of [undefined,{x:NaN,y:0},{x:-.1,y:0},{x:1.01,y:0}])assert.equal(sampleMuscle(uv,atlas.pixels,atlas.width,atlas.height),null);
   assert.equal(sampleMuscle({x:.49,y:0},Uint8Array.from([1,2]),2,1)?.code,1);assert.equal(sampleMuscle({x:.5,y:0},Uint8Array.from([1,2]),2,1)?.code,2);
+});
+test('runtime atlas changes only the two approved anterior zones and preserves six restored muscles',()=>{
+  const before=decodeL8(readFileSync('docs/m4c/meshy-posterieurs-harmonises/textures/muscle-ids.png'));
+  const after=decodeL8(Buffer.from(muscleAtlasBase64,'base64'));
+  assert.equal(after.width,before.width);assert.equal(after.height,before.height);
+  const protectedCodes=new Set([1,2,4,5,7,8]),allowedCodes=new Set([0,3,6]);
+  let changesLeft=0,changesRight=0;
+  for(let i=0;i<after.pixels.length;i++){
+    const a=before.pixels[i]!,b=after.pixels[i]!;
+    if(protectedCodes.has(a)||protectedCodes.has(b))assert.equal(a,b,`Protected muscle changed at texel ${i}`);
+    if(a!==b){assert.ok(allowedCodes.has(a)&&allowedCodes.has(b));if(a===3||b===3)changesLeft++;if(a===6||b===6)changesRight++;}
+  }
+  assert.ok(changesLeft>0&&changesRight>0,'Both approved anterior changes must actually reach the runtime atlas');
 });
 test('selection bridge accepts exactly eight IDs and null; reset is a bounded command',()=>{
   for(const m of MUSCLES) assert.deepEqual(parseViewerEvent(JSON.stringify({version:1,type:'selection',muscleId:m.id})),{version:1,type:'selection',muscleId:m.id});

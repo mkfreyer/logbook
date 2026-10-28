@@ -1,0 +1,39 @@
+{
+  "method": "Lossless crops and panel layout only. No mannequin pixel repainted. Source: actual Chromium WebGL, not an iPhone.",
+  "crops": [
+    {
+      "file": "anterieur-droit-orange.png",
+      "source": "selection-deltoid.right.anterior.png",
+      "sourceBox": [
+        53,
+        61,
+        224,
+        247
+      ]
+    },
+    {
+      "file": "anterieur-gauche-orange.png",
+      "source": "selection-deltoid.left.anterior.png",
+      "sourceBox": [
+        187,
+        58,
+        352,
+        243
+      ]
+    }
+  ],
+  "faceComparison": {
+    "file": "comparaison-face-anterieurs.png",
+    "sources": [
+      "face-anterieur-droit.png",
+      "face-anterieur-gauche.png"
+    ],
+    "sameSourceBox": [
+      25,
+      76,
+      405,
+      264
+    ],
+    "modelPixelsCombinedBetweenFrames": false
+  }
+}

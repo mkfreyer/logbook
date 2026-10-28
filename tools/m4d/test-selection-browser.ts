@@ -8,12 +8,12 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { buildViewerDocument } from '../../src/features/model3d/document';
 import { MUSCLES } from '../../src/features/model3d/selection';
 async function main() {
-const out = process.env.M4D_ARTIFACT_DIR ?? 'docs/m4d/selection-restauree';
+const out = process.env.M4D_ARTIFACT_DIR ?? 'docs/m4d/anterieurs-valides';
 await mkdir(out,{recursive:true});
 const glb=await readFile('assets/models/meshy-m4d-uv.glb');
 const scene=await new GLTFLoader().parseAsync(glb.buffer.slice(glb.byteOffset,glb.byteOffset+glb.byteLength),'');
 const center=new Box3().setFromObject(scene.scene).getCenter(new Vector3());
-const witnesses=JSON.parse(await readFile('docs/m4c/meshy-posterieurs-harmonises/picking-witnesses.json','utf8'));
+const witnesses=JSON.parse(await readFile('docs/m4c/meshy-anterieurs-valides/picking-witnesses.json','utf8'));
 const html=buildViewerDocument(glb.toString('base64'));
 const server=createServer((_req,res)=>{res.writeHead(200,{'Content-Type':'text/html'});res.end(html);});
 await new Promise<void>(resolve=>server.listen(0,'127.0.0.1',resolve));
@@ -28,6 +28,11 @@ const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message)
 const snapshot=()=>page.evaluate(()=>window.LogbookModelViewer!.snapshot());
 const command=(c:'overview'|'front'|'reset-selection'|'dispose')=>page.evaluate(c=>window.LogbookModelViewer!.command(c),c);
 const selected=async()=> (await snapshot()).selectedMuscle;
+function sameCoordinates(a:unknown,b:unknown){
+ assert.ok(Array.isArray(a)&&Array.isArray(b));assert.equal(a.length,b.length);
+ // OrbitControls may round-trip spherical floats on an invalidated frame.
+ for(let i=0;i<a.length;i++)assert.ok(typeof a[i]==='number'&&typeof b[i]==='number'&&Math.abs(a[i]-b[i])<1e-7);
+}
 const cdp=await context.newCDPSession(page);
 type P={x:number;y:number;id:number};
 // With software WebGL, inertia may still run after a fixed delay. Projecting a
@@ -78,6 +83,21 @@ for(const witness of witnesses){
  await command('reset-selection');await page.waitForTimeout(200);assert.equal(await selected(),null);
  const resetImage=await page.screenshot(checks.length===1?{path:`${out}/selection-reinitialisee.png`}:{});assert.equal(resetImage.equals(after),false,'Reset must remove visible highlight');
 }
+// Compare the two approved anteriors from the EXACT same front camera, using
+// the existing single-selection behavior. No new multi-selection UI/shader.
+await command('front');await settleCamera();const faceSelections=[];
+for(const [id,side] of [['deltoid.right.anterior','droit'],['deltoid.left.anterior','gauche']] as const){
+ const w=witnesses.find((value:{expectedId:string})=>value.expectedId===id);assert.ok(w);
+ await command('reset-selection');await page.waitForTimeout(200);const p=await screenPoint(w.point);await tap(p.x,p.y);assert.equal(await selected(),id);
+ const s=await snapshot();faceSelections.push({id,camera:s.camera,target:s.target});await page.screenshot({path:`${out}/face-anterieur-${side}.png`});
+}
+sameCoordinates(faceSelections[0]!.camera,faceSelections[1]!.camera);sameCoordinates(faceSelections[0]!.target,faceSelections[1]!.target);
+await command('front');await settleCamera();assert.equal(await selected(),'deltoid.left.anterior');
+// Front clears OrbitControls' residual damping. Check reset invariance from
+// this stable, zoomed/panned view, rather than during a software-rendered turn.
+const resetCamera=(await snapshot()).camera,resetTarget=(await snapshot()).target;
+await command('reset-selection');await page.waitForTimeout(200);assert.equal(await selected(),null);
+sameCoordinates((await snapshot()).camera,resetCamera);sameCoordinates((await snapshot()).target,resetTarget);
 // Change directly from left to right pectoral without an intervening reset.
 await orient(0);for(const w of witnesses.slice(0,2)){const p=await screenPoint(w.point);await tap(p.x,p.y);assert.equal(await selected(),w.expectedId);}
 const previous=await selected();
@@ -86,6 +106,7 @@ await gesture([{x:150,y:430,id:1},{x:280,y:430,id:2}],[{x:130,y:430,id:1},{x:300
 // A long hold does not select, even over a different valid muscle.
 const left=await screenPoint(witnesses[0].point);await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{...left,id:1}]});await page.waitForTimeout(450);await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});assert.equal(await selected(),previous);
 await command('overview');await page.waitForTimeout(750);
+assert.equal(await selected(),previous);
 // Head is a real neutral surface, not merely an empty background.
 const head=await screenPoint({x:0,y:.85,z:.04});await tap(head.x,head.y);assert.equal(await selected(),null);
 await tap(4,4);assert.equal(await selected(),null);
@@ -94,7 +115,7 @@ for(const muscle of MUSCLES)assert.ok(events.some(e=>e.type==='selection'&&e.mus
 const idle=await snapshot();await page.waitForTimeout(400);assert.equal((await snapshot()).renderCount,idle.renderCount);
 await command('dispose');const disposed=await snapshot();assert.equal(disposed.atlasBytes,0);assert.equal(disposed.geometries,0);assert.equal(disposed.selectedMuscle,null);assert.equal(await page.locator('canvas').count(),0);
 assert.deepEqual(errors,[]);assert.ok(requests.every(u=>u.startsWith(origin)));
-await writeFile(`${out}/browser-verification.json`,JSON.stringify({status:'passed',environment:'Chromium SwiftShader, actual CDP touch events, 430×760 CSS px; not an iPhone',eightMuscles:checks,neutralSurfaceAndBackground:true,directChange:true,resetRemovesVisibleHighlight:true,rotationAndPinchPreserveSelection:true,longHoldRejected:true,localOnly:true,cleanup:true,initial,disposed,errors},null,2)+'\n');
+await writeFile(`${out}/browser-verification.json`,JSON.stringify({status:'passed',environment:'Chromium SwiftShader, actual CDP touch events, 430×760 CSS px; not an iPhone',eightMuscles:checks,faceSelections,frontComparisonCameraIdentical:true,neutralSurfaceAndBackground:true,directChange:true,resetRemovesVisibleHighlight:true,resetPreservesCamera:true,frontAndOverviewPreserveSelection:true,rotationAndPinchPreserveSelection:true,longHoldRejected:true,localOnly:true,cleanup:true,initial,disposed,errors},null,2)+'\n');
 console.log('Eight WebGL selections, actual touch gestures, neutral surfaces, reset, cleanup: passed. iPhone pending.');
 }finally{await browser.close();server.close();}
 
