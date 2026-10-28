@@ -1,0 +1,26 @@
+{
+  "referenceCommit": "977f68a",
+  "rawBlenderFrames": 9,
+  "matchedBeforeAfterBackCameraAndLighting": true,
+  "rightUnlitSilhouettePixelIdentical": true,
+  "neutralFacePixelIdentical": true,
+  "maxColoredRightChannelDifference8bit": 1,
+  "silhouetteComparison": [
+    {
+      "state": "avant",
+      "leftProjectedPixels": 61563,
+      "rightProjectedPixels": 76144,
+      "areaRatioLeftOverRight": 0.8085075646144148,
+      "IoU": 0.7899135633976734
+    },
+    {
+      "state": "apres",
+      "leftProjectedPixels": 73687,
+      "rightProjectedPixels": 76144,
+      "areaRatioLeftOverRight": 0.9677321916368985,
+      "IoU": 0.9342766037102542
+    }
+  ],
+  "silhouetteMethod": "Actual unlit material masks, left image reflected for visual comparison only, threshold 128/255, equal cameras and scale.",
+  "imageProcessing": "Layout, captions, proportional reduction, explicitly labelled presentation mirror and numerical silhouette overlay only. Raw model renders unchanged."
+}

@@ -1,0 +1,33 @@
+{
+  "referenceCommit": "977f68a",
+  "onlyEditableID": 5,
+  "immutableReferenceID": 8,
+  "addedID5Texels": 6561,
+  "removedID5Texels": 263,
+  "rightAndSixOtherMasksByteIdentical": true,
+  "rightPackedGBAChannelsBitIdentical": true,
+  "leftGreenBlueJoinUnchanged": true,
+  "protectedJoinTexels": 1157,
+  "noOtherCoverageOverlapped": true,
+  "geometryBuffersBitIdentical": [
+    "POSITION",
+    "NORMAL",
+    "TEXCOORD_0",
+    "indices"
+  ],
+  "embeddedGLBImagesMatchSourcePNG": true,
+  "triangles": 110588,
+  "exportVertices": 60622,
+  "protectedApplicationFilesUnchanged": 134,
+  "eightStableIDs": [
+    "pectoralis.left",
+    "pectoralis.right",
+    "deltoid.left.anterior",
+    "deltoid.left.lateral",
+    "deltoid.left.posterior",
+    "deltoid.right.anterior",
+    "deltoid.right.lateral",
+    "deltoid.right.posterior"
+  ],
+  "sourceGlbSha256": "421e593cad17f60d1c0c5e67707729fb88bbf69026795e22011ecc7d90b38959"
+}

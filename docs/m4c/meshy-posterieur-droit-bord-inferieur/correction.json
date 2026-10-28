@@ -1,0 +1,15 @@
+{
+  "referenceCommit": "ad08cef",
+  "onlyTransition": [
+    8,
+    0
+  ],
+  "removedIDTexels": 3410,
+  "previousID8Texels": 34355,
+  "remainingID8Texels": 30945,
+  "upperRoundCoverageBitIdentical": true,
+  "protectedUpperTexels": 14160,
+  "sevenOtherMasksByteIdentical": true,
+  "isolatedEmptyGutterTexelsCleared": 12,
+  "controlGlbSha256": "2649b7ebdedad77ea1446541d297baf173c5923f06f58d1ea1cc152cf7877e70"
+}

@@ -1,0 +1,299 @@
+{
+  "status": "passed",
+  "m4cReference": "06fa665b676ea697e862ae3491fa1af6f827199d",
+  "allM4CReferenceFolderFiles": {
+    "docs/m4c/meshy-posterieurs-harmonises/README.md": {
+      "sha256": "05180f49872dba75146dddad77c17d548aa9abd793c7a43c86abe52232d54d3c",
+      "bytes": 2877,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/blender-preservation.json": {
+      "sha256": "2f3915f61f25d6e093c36c4b0bdb251192d65b419b173d181ebcf0f4515ae674",
+      "bytes": 761,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/continuity-audit.json": {
+      "sha256": "fe174446ada0911d1cbb813154f6af0edc258a0743e03ae2cd4972dc6ca9cde1",
+      "bytes": 7916,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/correction.json": {
+      "sha256": "3eb651cdcd142ab0e115f93a49fd452050385bdabe6fbc1360a53cec9ae4c1d4",
+      "bytes": 431,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/exports/meshy-eight-zones-control.glb": {
+      "sha256": "a929c1826016a150e388db27f46a47e9f7406f4679bfe3f8e168729c2e2198e6",
+      "bytes": 2693448,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/left-contour-guides.json": {
+      "sha256": "30926f9c02c2f0a09ff6bf4dcaad509cd64fd1b7c29fe8d2b238c426fb3e40f1",
+      "bytes": 57056,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/left-surface-samples.npz": {
+      "sha256": "9f04776daf7e6959cc433ab63227dcabe86da7d208e4d4e5c456df48acb451fb",
+      "bytes": 642536,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/meshy-posterieurs-harmonises.blend": {
+      "sha256": "76f5ab7109a90a2b84cd13267a99fca7b11c3c1033be92bf45cd45b84117f438",
+      "bytes": 3698747,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/picking-audit.json": {
+      "sha256": "2592ccff8d987abcdcf2341286e811d548648baffd8b2334abdf71d034b68262",
+      "bytes": 2339,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/picking-witnesses.json": {
+      "sha256": "84a324cc47511857b91c4ffd6664432cc68e872881701e88a4529db8f923848d",
+      "bytes": 2941,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/probe-verification.json": {
+      "sha256": "51f654c9439759c1c287d053db23abafb9131c079932512dcb68297857a4c4c8",
+      "bytes": 2695,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/projected-outline.json": {
+      "sha256": "0e732eb08613871e9c1c227f2866a1144e41609f1807a144c4ea767f888e557c",
+      "bytes": 274922,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/region-binding.json": {
+      "sha256": "33fd188872cdf4c80821dc7502c9d385ec8e92dba7830dfc405efbb4ad14c025",
+      "bytes": 6186,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/regions.json": {
+      "sha256": "16a82ff5e818d16acecf015f871e60e93196476f3206ff15ef3fc616fe4f1c25",
+      "bytes": 5665,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/render-verification.json": {
+      "sha256": "3dd36c02a7704baa7d5998530d72d6e1df246799eb802adefdbc2f144efe1302",
+      "bytes": 980,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/renders/apres-dos-grand.png": {
+      "sha256": "17de86d9a2fdb9be87f61bf7835727c9d69d2ed270070f8bbb1dadb40368ea30",
+      "bytes": 3274233,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/renders/apres-silhouette-droit.png": {
+      "sha256": "7a814047870901a15cdd127246dc3b71f5f9068170f6a7bbc4279419f44735e6",
+      "bytes": 480373,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/renders/apres-silhouette-gauche.png": {
+      "sha256": "312656bc97fece7fd9fceabf23c02e4ce9e8ff4e19365a54b28c08f78770d021",
+      "bytes": 490268,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/renders/apres-trois-quarts-arriere-droit.png": {
+      "sha256": "eff2ac1d9bc99ea2de5ab3eec0f5f50b499f9f45436af85345c666d77ec715d9",
+      "bytes": 1351460,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/renders/apres-trois-quarts-arriere-gauche.png": {
+      "sha256": "13e12124315d67a39c37bf2c2d6ffa9cb719bc1d6ec767d58ba48f7156f69938",
+      "bytes": 1344371,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/renders/avant-dos-grand.png": {
+      "sha256": "7de0ae44751940a39d7427db75f8c1b1030ede14bbf35ab653e875374f332ad5",
+      "bytes": 3271473,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/renders/avant-silhouette-droit.png": {
+      "sha256": "9105d1d66267ebc354cc3d896d0ecadac28ece875925aff4a196cfa31093601e",
+      "bytes": 480391,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/renders/avant-silhouette-gauche.png": {
+      "sha256": "9d677e2ac570aa5ce92e368d4a8fdd52b83eebbf4e0dab0cbd6bf049c92cf12b",
+      "bytes": 495068,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/renders/comparaison-miroir-couleur.png": {
+      "sha256": "1c616b00cb69588e35c36ead83029c79a44e70136303d85546c7b9e727e56685",
+      "bytes": 1025925,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/renders/comparaison-silhouettes-miroir.png": {
+      "sha256": "606dedb7e0af2f19afa77254f65c81964e9fc3c67c21ed36d845c60c551cc2a4",
+      "bytes": 37419,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/renders/comparatif-dos.png": {
+      "sha256": "a22623597fe348b7f4214f06c5557ac4da354ab7484589cefdf8e2df9346a0cc",
+      "bytes": 580699,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/renders/comparatif-gauche.png": {
+      "sha256": "833514b0df6bb5011776efe5f0290af9b8a2385da569a849322b572b394b12d9",
+      "bytes": 598360,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/renders/neutre-face.png": {
+      "sha256": "239ba83d8ba8d8ca7b9681681e86b40ba71fd355125f7e932aa838e6b741eb3e",
+      "bytes": 944498,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/renders/render-metadata.json": {
+      "sha256": "02e9633c70556388ed1e9e5e3a675d02cf299c687477a1353a2f0e8277452bf2",
+      "bytes": 8185,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/right-reference-outline.json": {
+      "sha256": "a14eec3e2985f6719241eeabf69a7e8d52c0f44c5bec0034c75d8f21287db9f6",
+      "bytes": 51131,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/surface-adaptation.json": {
+      "sha256": "387c096c56f30a865650a42dc20284a16fc73ff2e21c1519fd7e65c1652f6ecf",
+      "bytes": 440734,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/surface-candidates.npz": {
+      "sha256": "b789ee32ed90906cec35feb568af36a50d402851654fdbd559c7d53b43a765f2",
+      "bytes": 181612,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/surface-visibility.npz": {
+      "sha256": "df1f6d4ee5fb63c9852ce01fc69b97c6a02d2356b00c659c8dc4300c47aa829a",
+      "bytes": 16314,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/textures/changed-texels.png": {
+      "sha256": "719e3d28794d2f4815fbe6f1451a83793fb1b431ed51cf0f6033ac27a388d922",
+      "bytes": 6019,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/textures/control-basecolor.png": {
+      "sha256": "0921f38aa162a1ee6ea6fa8a2d6a06c8f8b5adbabbd64912af6fef75fd7f7897",
+      "bytes": 53277,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/textures/deltoid.left.anterior.png": {
+      "sha256": "33748a1b9f8cba3d68fab4b3794610694cd8986762125e4f9645ee0ee0628b89",
+      "bytes": 10517,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/textures/deltoid.left.lateral.png": {
+      "sha256": "438dc06646ba846d7ce835addbbd873257eb50bdcbd4a762548b9434120e14f9",
+      "bytes": 7627,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/textures/deltoid.left.posterior.png": {
+      "sha256": "5622d5fde32f3f2e8d4ddfd46cf98411bfb0f1451810720374a9d0f26e485c61",
+      "bytes": 9441,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/textures/deltoid.right.anterior.png": {
+      "sha256": "418afeb68e59944756a40a479e7aa40eba5074d4704838d3be6786d1700e9a63",
+      "bytes": 8894,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/textures/deltoid.right.lateral.png": {
+      "sha256": "04cff1872acf709ec7d3519165623930670796566559ab4d1058894d82c2bad1",
+      "bytes": 6951,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/textures/deltoid.right.posterior.png": {
+      "sha256": "560ae8b0b11c3f94a0cf45d3c489b0abea5b3ffbc1549d467da9ac524ee4dc18",
+      "bytes": 9611,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/textures/masks-rgba-0.png": {
+      "sha256": "9852073e8e083de316e3c66840aa6316ca6f04b3da3c7facff28bb2022b765cd",
+      "bytes": 36146,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/textures/masks-rgba-1.png": {
+      "sha256": "be3782c00d0663d973726438f780494a633b110fd7eafb8d93dd69c9c735f86a",
+      "bytes": 34809,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/textures/muscle-ids.png": {
+      "sha256": "bfc8db8814057c052e36b9b8acc35414253f1989d51bbde839b05d7173a0a54d",
+      "bytes": 31679,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/textures/pectoralis.left.png": {
+      "sha256": "6362c4af4a35944304d8eccb29f0d15cbb2dbbfd313cc3392e46adbea97689da",
+      "bytes": 10534,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/textures/pectoralis.right.png": {
+      "sha256": "eb2794be05e4876f6de303553cf216055c15538fe7c7c860ea064a1cd4567774",
+      "bytes": 10863,
+      "byteIdentical": true
+    },
+    "docs/m4c/meshy-posterieurs-harmonises/verification.json": {
+      "sha256": "1143421866443f725b072871a8020cef8b43eca2af3e31e2233178cbc0f35f2b",
+      "bytes": 917,
+      "byteIdentical": true
+    }
+  },
+  "eightMasks": {
+    "pectoralis.left": {
+      "sha256": "6362c4af4a35944304d8eccb29f0d15cbb2dbbfd313cc3392e46adbea97689da",
+      "bytes": 10534,
+      "byteIdentical": true
+    },
+    "pectoralis.right": {
+      "sha256": "eb2794be05e4876f6de303553cf216055c15538fe7c7c860ea064a1cd4567774",
+      "bytes": 10863,
+      "byteIdentical": true
+    },
+    "deltoid.left.anterior": {
+      "sha256": "33748a1b9f8cba3d68fab4b3794610694cd8986762125e4f9645ee0ee0628b89",
+      "bytes": 10517,
+      "byteIdentical": true
+    },
+    "deltoid.left.lateral": {
+      "sha256": "438dc06646ba846d7ce835addbbd873257eb50bdcbd4a762548b9434120e14f9",
+      "bytes": 7627,
+      "byteIdentical": true
+    },
+    "deltoid.left.posterior": {
+      "sha256": "5622d5fde32f3f2e8d4ddfd46cf98411bfb0f1451810720374a9d0f26e485c61",
+      "bytes": 9441,
+      "byteIdentical": true
+    },
+    "deltoid.right.anterior": {
+      "sha256": "418afeb68e59944756a40a479e7aa40eba5074d4704838d3be6786d1700e9a63",
+      "bytes": 8894,
+      "byteIdentical": true
+    },
+    "deltoid.right.lateral": {
+      "sha256": "04cff1872acf709ec7d3519165623930670796566559ab4d1058894d82c2bad1",
+      "bytes": 6951,
+      "byteIdentical": true
+    },
+    "deltoid.right.posterior": {
+      "sha256": "560ae8b0b11c3f94a0cf45d3c489b0abea5b3ffbc1549d467da9ac524ee4dc18",
+      "bytes": 9611,
+      "byteIdentical": true
+    }
+  },
+  "muscleIDs": {
+    "pectoralis.left": 1,
+    "pectoralis.right": 2,
+    "deltoid.left.anterior": 3,
+    "deltoid.left.lateral": 4,
+    "deltoid.left.posterior": 5,
+    "deltoid.right.anterior": 6,
+    "deltoid.right.lateral": 7,
+    "deltoid.right.posterior": 8
+  },
+  "meshyMaster": {
+    "sha256": "421e593cad17f60d1c0c5e67707729fb88bbf69026795e22011ecc7d90b38959",
+    "bytes": 1993204,
+    "byteIdentical": true
+  },
+  "anatomicalEditsPerformed": false
+}

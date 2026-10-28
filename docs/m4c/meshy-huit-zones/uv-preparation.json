@@ -1,0 +1,8 @@
+{
+  "source_vertices": 55288,
+  "source_triangles": 110588,
+  "uv_support_triangles": 23749,
+  "source_positions_unchanged": true,
+  "source_indices_unchanged": true,
+  "uv_method": "Local upper-body smart project; multiple nonoverlapping UV islands with padding; elsewhere reserved neutral texel."
+}

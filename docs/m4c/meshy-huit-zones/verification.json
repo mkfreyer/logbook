@@ -1,0 +1,49 @@
+{
+  "source_sha256": "421e593cad17f60d1c0c5e67707729fb88bbf69026795e22011ecc7d90b38959",
+  "source_sha_verified": true,
+  "export_vertices": 60622,
+  "source_vertices": 55288,
+  "triangles_source": 110588,
+  "triangles_export": 110588,
+  "all_original_vertices_bit_identical": true,
+  "all_export_corners_positions_bit_identical": true,
+  "all_export_corners_normals_bit_identical": true,
+  "max_position_displacement_m": 0,
+  "new_surface_triangles": 0,
+  "new_geometric_holes_or_intersections": false,
+  "eight_ids_present": true,
+  "overlapping_mask_pixels": 0,
+  "rgba_masks_match_ids": true,
+  "source_face_order_preserved": true,
+  "glb_export_sha256": "7c0a7d314371ce575b924e339646a507ebd764d96670604ab1a0f62ee38da844",
+  "source_face_center_components_diagnostic_only": {
+    "pectoralis.left": [
+      1039
+    ],
+    "pectoralis.right": [
+      943,
+      1
+    ],
+    "deltoid.left.anterior": [
+      489,
+      2,
+      2
+    ],
+    "deltoid.left.lateral": [
+      397
+    ],
+    "deltoid.left.posterior": [
+      307,
+      1
+    ],
+    "deltoid.right.anterior": [
+      490
+    ],
+    "deltoid.right.lateral": [
+      431
+    ],
+    "deltoid.right.posterior": [
+      300
+    ]
+  }
+}

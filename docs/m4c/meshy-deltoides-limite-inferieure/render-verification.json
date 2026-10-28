@@ -1,0 +1,23 @@
+{
+  "matched_render_count": 10,
+  "camera_matrices_equal_to_8b723d9": true,
+  "reference_crop_pixels": [
+    133,
+    392,
+    370,
+    574
+  ],
+  "neutral_comparisons": [
+    {
+      "view": "face",
+      "pixel_identical": true,
+      "max_channel_difference_8bit": 0
+    },
+    {
+      "view": "profil",
+      "pixel_identical": true,
+      "max_channel_difference_8bit": 0
+    }
+  ],
+  "image_processing": "Common crop, proportional resize and captions only. No color or model pixels retouched."
+}

@@ -1,0 +1,18 @@
+{
+  "base_commit": "8b723d9",
+  "before": {
+    "positions": "db49350e1dc5adbf375bb1aee760566362b49faa8ebf844703ae2c42b2fb11f7",
+    "indices": "3ccd08a1eb7c19b860c83232346c54c09201b47ba2d1d2f6287d7e4cc2ef9051",
+    "uv": "829d9074395e42e04aa982a8288a755d5e7d9a1edce179eae80cf176eacc9b6f",
+    "corner_normals": "e7c66e8c9dceaf5213bacb1356c10aa6ee561e13c4cc1071ec1cac5b1a65a527"
+  },
+  "after": {
+    "positions": "db49350e1dc5adbf375bb1aee760566362b49faa8ebf844703ae2c42b2fb11f7",
+    "indices": "3ccd08a1eb7c19b860c83232346c54c09201b47ba2d1d2f6287d7e4cc2ef9051",
+    "uv": "829d9074395e42e04aa982a8288a755d5e7d9a1edce179eae80cf176eacc9b6f",
+    "corner_normals": "e7c66e8c9dceaf5213bacb1356c10aa6ee561e13c4cc1071ec1cac5b1a65a527"
+  },
+  "identical": true,
+  "vertices": 55288,
+  "triangles": 110588
+}

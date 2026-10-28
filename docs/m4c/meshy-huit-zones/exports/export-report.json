@@ -1,0 +1,17 @@
+{
+  "source_sha256": "421e593cad17f60d1c0c5e67707729fb88bbf69026795e22011ecc7d90b38959",
+  "source_vertices": 55288,
+  "export_vertices": 60622,
+  "uv_seam_duplicates": 5334,
+  "triangles_before": 110588,
+  "triangles_after": 110588,
+  "position_buffers_equal_via_binding": true,
+  "normal_buffers_equal_via_binding": true,
+  "source_triangle_order_preserved": true,
+  "index_component_type": 5123,
+  "glb_bytes": 2684776,
+  "glb_sha256": "7c0a7d314371ce575b924e339646a507ebd764d96670604ab1a0f62ee38da844",
+  "source_binding_faces": 23749,
+  "source_binding_bytes": 664972,
+  "original_glb_untouched": true
+}

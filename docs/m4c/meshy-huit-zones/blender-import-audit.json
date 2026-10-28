@@ -1,0 +1,11 @@
+{
+  "standard_blender_gltf_import": "passed",
+  "control_import_vertices": 60622,
+  "triangles": 110588,
+  "editable_original_vertices": 55288,
+  "editable_source_positions_and_indices_equal": true,
+  "editable_eight_show_and_color_controls": true,
+  "modifiers_or_shape_keys": false,
+  "imported_uv_and_pbr_image": true,
+  "source_glb_untouched": true
+}

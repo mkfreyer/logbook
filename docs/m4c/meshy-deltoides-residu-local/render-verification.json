@@ -1,0 +1,21 @@
+{
+  "matchedBlenderFrameCount": 8,
+  "closeupPixelSize": [
+    500,
+    650
+  ],
+  "closeupRenderedAtSourceResolution": [
+    6400,
+    6400
+  ],
+  "commonCropIn640ReferencePixels": [
+    196,
+    432,
+    246,
+    497
+  ],
+  "closeAndNeighborCameraMatricesEqual": true,
+  "neutralFacePixelIdenticalTo71f70dc": true,
+  "maxNeutralChannelDifference8bit": 0,
+  "imageProcessing": "Layout, captions and proportional reduction only. No model pixels painted or modified."
+}

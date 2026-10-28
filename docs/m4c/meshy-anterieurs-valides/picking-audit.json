@@ -1,0 +1,88 @@
+{
+  "status": "passed",
+  "engine": "Three.js 0.186.1 CPU Raycaster, no application UI",
+  "originalWithoutUV": true,
+  "sourceAndExportRaycasts": [
+    {
+      "expectedId": "pectoralis.left",
+      "original": "pectoralis.left",
+      "exportedUV": "pectoralis.left",
+      "pointDeltaM": 0
+    },
+    {
+      "expectedId": "pectoralis.right",
+      "original": "pectoralis.right",
+      "exportedUV": "pectoralis.right",
+      "pointDeltaM": 0
+    },
+    {
+      "expectedId": "deltoid.left.anterior",
+      "original": "deltoid.left.anterior",
+      "exportedUV": "deltoid.left.anterior",
+      "pointDeltaM": 0
+    },
+    {
+      "expectedId": "deltoid.left.lateral",
+      "original": "deltoid.left.lateral",
+      "exportedUV": "deltoid.left.lateral",
+      "pointDeltaM": 0
+    },
+    {
+      "expectedId": "deltoid.left.posterior",
+      "original": "deltoid.left.posterior",
+      "exportedUV": "deltoid.left.posterior",
+      "pointDeltaM": 0
+    },
+    {
+      "expectedId": "deltoid.right.anterior",
+      "original": "deltoid.right.anterior",
+      "exportedUV": "deltoid.right.anterior",
+      "pointDeltaM": 0
+    },
+    {
+      "expectedId": "deltoid.right.lateral",
+      "original": "deltoid.right.lateral",
+      "exportedUV": "deltoid.right.lateral",
+      "pointDeltaM": 0
+    },
+    {
+      "expectedId": "deltoid.right.posterior",
+      "original": "deltoid.right.posterior",
+      "exportedUV": "deltoid.right.posterior",
+      "pointDeltaM": 0
+    }
+  ],
+  "boundaryCrossesOriginalTriangle": {
+    "sourceFace": 9670,
+    "hits": [
+      {
+        "id": "deltoid.right.anterior",
+        "hit": {
+          "assetId": "meshy-e45e5d8",
+          "coordinateSpace": "mesh-local",
+          "faceIndex": 9670,
+          "point": {
+            "x": -0.26472563743591304,
+            "y": 0.4985792636871338,
+            "z": -0.037688917666673656
+          }
+        }
+      },
+      {
+        "id": "deltoid.right.lateral",
+        "hit": {
+          "assetId": "meshy-e45e5d8",
+          "coordinateSpace": "mesh-local",
+          "faceIndex": 9670,
+          "point": {
+            "x": -0.264893364906311,
+            "y": 0.4987633764743805,
+            "z": -0.038426910713315006
+          }
+        }
+      }
+    ]
+  },
+  "invalidOrMismatchedAssetsRejected": true,
+  "actualIPhonePerformanceMeasured": false
+}

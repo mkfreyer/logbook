@@ -1,0 +1,34 @@
+{
+  "texture_resolution": [
+    2048,
+    2048
+  ],
+  "uv_covered_texels": 1188709,
+  "uv_overlap_texels": 0,
+  "shared_edge_texel_samples": 2,
+  "padding_pixels": 4,
+  "label_codes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "pixel_counts": {
+    "pectoralis.left": 90081,
+    "pectoralis.right": 90130,
+    "deltoid.left.anterior": 38171,
+    "deltoid.left.lateral": 38139,
+    "deltoid.left.posterior": 23881,
+    "deltoid.right.anterior": 39009,
+    "deltoid.right.lateral": 38585,
+    "deltoid.right.posterior": 26467
+  },
+  "mask_png_sha256": "ca751a91fdbc28d7c061add5062c97610bc981cb2f20e7eccce000cca34c0421",
+  "geometry_changed": false,
+  "procedure": "Continuous object-space contours sampled on each actual UV triangle. IDs exclusive, RGBA masks one-hot. Linear filtering used only on mask weights and colors, never ID values."
+}
