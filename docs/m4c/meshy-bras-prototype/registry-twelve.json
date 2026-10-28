@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 2,
+  "zones": [
+    {
+      "code": 1,
+      "id": "pectoralis.left",
+      "name": "Grand pectoral gauche",
+      "color": "#FF932B",
+      "uvSet": 0,
+      "atlas": "textures/muscle-ids.png"
+    },
+    {
+      "code": 2,
+      "id": "pectoralis.right",
+      "name": "Grand pectoral droit",
+      "color": "#F2D347",
+      "uvSet": 0,
+      "atlas": "textures/muscle-ids.png"
+    },
+    {
+      "code": 3,
+      "id": "deltoid.left.anterior",
+      "name": "Deltoïde antérieur gauche",
+      "color": "#E55B5B",
+      "uvSet": 0,
+      "atlas": "textures/muscle-ids.png"
+    },
+    {
+      "code": 4,
+      "id": "deltoid.left.lateral",
+      "name": "Deltoïde moyen gauche",
+      "color": "#447EEB",
+      "uvSet": 0,
+      "atlas": "textures/muscle-ids.png"
+    },
+    {
+      "code": 5,
+      "id": "deltoid.left.posterior",
+      "name": "Deltoïde postérieur gauche",
+      "color": "#46C47B",
+      "uvSet": 0,
+      "atlas": "textures/muscle-ids.png"
+    },
+    {
+      "code": 6,
+      "id": "deltoid.right.anterior",
+      "name": "Deltoïde antérieur droit",
+      "color": "#E55B5B",
+      "uvSet": 0,
+      "atlas": "textures/muscle-ids.png"
+    },
+    {
+      "code": 7,
+      "id": "deltoid.right.lateral",
+      "name": "Deltoïde moyen droit",
+      "color": "#447EEB",
+      "uvSet": 0,
+      "atlas": "textures/muscle-ids.png"
+    },
+    {
+      "code": 8,
+      "id": "deltoid.right.posterior",
+      "name": "Deltoïde postérieur droit",
+      "color": "#46C47B",
+      "uvSet": 0,
+      "atlas": "textures/muscle-ids.png"
+    },
+    {
+      "id": "biceps.left",
+      "code": 9,
+      "name": "Biceps brachial gauche",
+      "uvSet": 1,
+      "atlas": "textures/muscle-ids-arms.png",
+      "channel": 0
+    },
+    {
+      "id": "biceps.right",
+      "code": 10,
+      "name": "Biceps brachial droit",
+      "uvSet": 1,
+      "atlas": "textures/muscle-ids-arms.png",
+      "channel": 1
+    },
+    {
+      "id": "triceps.left",
+      "code": 11,
+      "name": "Triceps brachial gauche",
+      "uvSet": 1,
+      "atlas": "textures/muscle-ids-arms.png",
+      "channel": 2
+    },
+    {
+      "id": "triceps.right",
+      "code": 12,
+      "name": "Triceps brachial droit",
+      "uvSet": 1,
+      "atlas": "textures/muscle-ids-arms.png",
+      "channel": 3
+    }
+  ],
+  "status": "8 approved, 4 experimental; no viewer integration"
+}

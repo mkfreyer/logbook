@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 2,
+  "status": "experimental-four-arm-zones-awaiting-user-validation",
+  "sourceCommit": "d552e23",
+  "sourceMasterSha256": "421e593cad17f60d1c0c5e67707729fb88bbf69026795e22011ecc7d90b38959",
+  "uvSource": "arms-uv-binding.npz",
+  "coverageSource": "textures/uv-covered-pixels.png",
+  "atlas": {
+    "file": "textures/muscle-ids-arms.png",
+    "width": 2048,
+    "height": 2048,
+    "uvSet": 1,
+    "format": "L8",
+    "neutralCode": 0,
+    "sampling": "nearest; no mipmaps"
+  },
+  "zones": [
+    {
+      "id": "biceps.left",
+      "code": 9,
+      "name": "Biceps brachial gauche",
+      "uvSet": 1,
+      "atlas": "textures/muscle-ids-arms.png",
+      "channel": 0
+    },
+    {
+      "id": "biceps.right",
+      "code": 10,
+      "name": "Biceps brachial droit",
+      "uvSet": 1,
+      "atlas": "textures/muscle-ids-arms.png",
+      "channel": 1
+    },
+    {
+      "id": "triceps.left",
+      "code": 11,
+      "name": "Triceps brachial gauche",
+      "uvSet": 1,
+      "atlas": "textures/muscle-ids-arms.png",
+      "channel": 2
+    },
+    {
+      "id": "triceps.right",
+      "code": 12,
+      "name": "Triceps brachial droit",
+      "uvSet": 1,
+      "atlas": "textures/muscle-ids-arms.png",
+      "channel": 3
+    }
+  ],
+  "protectedAtlas": {
+    "file": "textures/muscle-ids.png",
+    "uvSet": 0,
+    "codes": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  "applicationIntegration": false
+}

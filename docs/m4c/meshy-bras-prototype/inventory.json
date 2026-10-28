@@ -1,0 +1,706 @@
+{
+  "baseCommit": "d552e23",
+  "catalogSource": "src/db/exerciseCatalog.ts",
+  "catalogSourceSha256": "b063f3179aab05def0b7b9058021712462cc81c04c55bd73ecea0da02ed41575",
+  "initialExerciseCount": 15,
+  "initialGroupCounts": {
+    "Pectoraux": 3,
+    "Dos": 3,
+    "Quadriceps": 2,
+    "Ischio-jambiers": 2,
+    "Épaules": 2,
+    "Biceps": 1,
+    "Triceps": 1,
+    "Abdominaux": 1
+  },
+  "personalDatabaseRead": false,
+  "exerciseToMuscleLinksCreated": false,
+  "existingValidatedCodes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "proposedRemainingZones": [
+    {
+      "codeProposed": 9,
+      "idProposed": "biceps.left",
+      "nameFrench": "Biceps brachial gauche",
+      "group": "Bras",
+      "location": "Face antérieure du bras, sous le deltoïde, avant le coude.",
+      "visibleLimits": "Bonne pour le ventre global ; chefs long/court non séparables de façon fiable.",
+      "stage": "POC",
+      "maskCreated": true
+    },
+    {
+      "codeProposed": 10,
+      "idProposed": "biceps.right",
+      "nameFrench": "Biceps brachial droit",
+      "group": "Bras",
+      "location": "Face antérieure du bras, sous le deltoïde, avant le coude.",
+      "visibleLimits": "Bonne pour le ventre global ; chefs long/court non séparables de façon fiable.",
+      "stage": "POC",
+      "maskCreated": true
+    },
+    {
+      "codeProposed": 11,
+      "idProposed": "triceps.left",
+      "nameFrench": "Triceps brachial gauche",
+      "group": "Bras",
+      "location": "Face postérieure et externe du bras, vers le tendon du coude.",
+      "visibleLimits": "Bonne pour le groupe ; portion médiale profonde et trois chefs non isolés.",
+      "stage": "POC",
+      "maskCreated": true
+    },
+    {
+      "codeProposed": 12,
+      "idProposed": "triceps.right",
+      "nameFrench": "Triceps brachial droit",
+      "group": "Bras",
+      "location": "Face postérieure et externe du bras, vers le tendon du coude.",
+      "visibleLimits": "Bonne pour le groupe ; portion médiale profonde et trois chefs non isolés.",
+      "stage": "POC",
+      "maskCreated": true
+    },
+    {
+      "codeProposed": 13,
+      "idProposed": "brachialis.left",
+      "nameFrench": "Brachial gauche",
+      "group": "Bras",
+      "location": "Bandes latérales/distales entre biceps et triceps, au-dessus du coude.",
+      "visibleLimits": "Moyenne : bande visible, limite exacte avec le biceps peu marquée.",
+      "stage": "Ultérieur",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 14,
+      "idProposed": "brachialis.right",
+      "nameFrench": "Brachial droit",
+      "group": "Bras",
+      "location": "Bandes latérales/distales entre biceps et triceps, au-dessus du coude.",
+      "visibleLimits": "Moyenne : bande visible, limite exacte avec le biceps peu marquée.",
+      "stage": "Ultérieur",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 15,
+      "idProposed": "brachioradialis.left",
+      "nameFrench": "Brachio-radial gauche",
+      "group": "Avant-bras",
+      "location": "Relief externe proximal de l’avant-bras, côté pouce.",
+      "visibleLimits": "Bonne pour le relief global ; raccord au coude à vérifier en rotation.",
+      "stage": "Ultérieur",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 16,
+      "idProposed": "brachioradialis.right",
+      "nameFrench": "Brachio-radial droit",
+      "group": "Avant-bras",
+      "location": "Relief externe proximal de l’avant-bras, côté pouce.",
+      "visibleLimits": "Bonne pour le relief global ; raccord au coude à vérifier en rotation.",
+      "stage": "Ultérieur",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 17,
+      "idProposed": "forearm.left.flexors",
+      "nameFrench": "Fléchisseurs superficiels de l’avant-bras gauche",
+      "group": "Avant-bras",
+      "location": "Face palmaire/antérieure, du coude au poignet.",
+      "visibleLimits": "Groupe fonctionnel : les muscles individuels et tendons ne sont pas tous distincts.",
+      "stage": "Ultérieur",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 18,
+      "idProposed": "forearm.right.flexors",
+      "nameFrench": "Fléchisseurs superficiels de l’avant-bras droit",
+      "group": "Avant-bras",
+      "location": "Face palmaire/antérieure, du coude au poignet.",
+      "visibleLimits": "Groupe fonctionnel : les muscles individuels et tendons ne sont pas tous distincts.",
+      "stage": "Ultérieur",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 19,
+      "idProposed": "forearm.left.extensors",
+      "nameFrench": "Extenseurs superficiels de l’avant-bras gauche",
+      "group": "Avant-bras",
+      "location": "Face dorsale/postérieure, du coude au poignet.",
+      "visibleLimits": "Groupe fonctionnel : ne pas inventer une séparation de chaque tendon.",
+      "stage": "Ultérieur",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 20,
+      "idProposed": "forearm.right.extensors",
+      "nameFrench": "Extenseurs superficiels de l’avant-bras droit",
+      "group": "Avant-bras",
+      "location": "Face dorsale/postérieure, du coude au poignet.",
+      "visibleLimits": "Groupe fonctionnel : ne pas inventer une séparation de chaque tendon.",
+      "stage": "Ultérieur",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 21,
+      "idProposed": "trapezius.left.upper",
+      "nameFrench": "Trapèze supérieur gauche",
+      "group": "Dos",
+      "location": "Du cou vers le sommet des épaules.",
+      "visibleLimits": "Volume lisible, origine cervicale simplifiée ; ne pas altérer le cou validé.",
+      "stage": "Priorité suivante possible",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 22,
+      "idProposed": "trapezius.right.upper",
+      "nameFrench": "Trapèze supérieur droit",
+      "group": "Dos",
+      "location": "Du cou vers le sommet des épaules.",
+      "visibleLimits": "Volume lisible, origine cervicale simplifiée ; ne pas altérer le cou validé.",
+      "stage": "Priorité suivante possible",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 23,
+      "idProposed": "trapezius.left.middle",
+      "nameFrench": "Trapèze moyen gauche",
+      "group": "Dos",
+      "location": "Haut du dos, entre rachis et omoplate.",
+      "visibleLimits": "Moyenne : subdivisions du trapèze peu matérialisées, frontière fonctionnelle à valider.",
+      "stage": "Ultérieur",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 24,
+      "idProposed": "trapezius.right.middle",
+      "nameFrench": "Trapèze moyen droit",
+      "group": "Dos",
+      "location": "Haut du dos, entre rachis et omoplate.",
+      "visibleLimits": "Moyenne : subdivisions du trapèze peu matérialisées, frontière fonctionnelle à valider.",
+      "stage": "Ultérieur",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 25,
+      "idProposed": "trapezius.left.lower",
+      "nameFrench": "Trapèze inférieur gauche",
+      "group": "Dos",
+      "location": "Triangle inférieur du haut du dos vers le rachis thoracique.",
+      "visibleLimits": "Moyenne : transition vers les dorsaux graduelle.",
+      "stage": "Ultérieur",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 26,
+      "idProposed": "trapezius.right.lower",
+      "nameFrench": "Trapèze inférieur droit",
+      "group": "Dos",
+      "location": "Triangle inférieur du haut du dos vers le rachis thoracique.",
+      "visibleLimits": "Moyenne : transition vers les dorsaux graduelle.",
+      "stage": "Ultérieur",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 27,
+      "idProposed": "latissimus.left",
+      "nameFrench": "Grand dorsal gauche",
+      "group": "Dos",
+      "location": "Large aile latérale et inférieure du dos, jusqu’au pli axillaire postérieur.",
+      "visibleLimits": "Bonne pour l’aile ; raccord grand rond/triceps plus ambigu.",
+      "stage": "Priorité suivante possible",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 28,
+      "idProposed": "latissimus.right",
+      "nameFrench": "Grand dorsal droit",
+      "group": "Dos",
+      "location": "Large aile latérale et inférieure du dos, jusqu’au pli axillaire postérieur.",
+      "visibleLimits": "Bonne pour l’aile ; raccord grand rond/triceps plus ambigu.",
+      "stage": "Priorité suivante possible",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 29,
+      "idProposed": "teres_major.left",
+      "nameFrench": "Grand rond gauche",
+      "group": "Dos",
+      "location": "Sous le deltoïde postérieur, bord externe de l’omoplate.",
+      "visibleLimits": "Partiel : très proche des dorsaux et du triceps ; bornes à contrôler.",
+      "stage": "Ultérieur",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 30,
+      "idProposed": "teres_major.right",
+      "nameFrench": "Grand rond droit",
+      "group": "Dos",
+      "location": "Sous le deltoïde postérieur, bord externe de l’omoplate.",
+      "visibleLimits": "Partiel : très proche des dorsaux et du triceps ; bornes à contrôler.",
+      "stage": "Ultérieur",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 31,
+      "idProposed": "infraspinatus.left",
+      "nameFrench": "Infra-épineux gauche",
+      "group": "Dos",
+      "location": "Partie postérieure de l’omoplate, sous son épine.",
+      "visibleLimits": "Moyenne/faible : relief scapulaire stylisé, zone partiellement masquée par le deltoïde.",
+      "stage": "Optionnel",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 32,
+      "idProposed": "infraspinatus.right",
+      "nameFrench": "Infra-épineux droit",
+      "group": "Dos",
+      "location": "Partie postérieure de l’omoplate, sous son épine.",
+      "visibleLimits": "Moyenne/faible : relief scapulaire stylisé, zone partiellement masquée par le deltoïde.",
+      "stage": "Optionnel",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 33,
+      "idProposed": "erector_spinae.left",
+      "nameFrench": "Érecteurs du rachis gauche",
+      "group": "Dos",
+      "location": "Colonnes lombaires de part et d’autre de la colonne.",
+      "visibleLimits": "Moyenne : groupe superficiel, pas de subdivision multifides/longissimus.",
+      "stage": "Ultérieur",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 34,
+      "idProposed": "erector_spinae.right",
+      "nameFrench": "Érecteurs du rachis droit",
+      "group": "Dos",
+      "location": "Colonnes lombaires de part et d’autre de la colonne.",
+      "visibleLimits": "Moyenne : groupe superficiel, pas de subdivision multifides/longissimus.",
+      "stage": "Ultérieur",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 35,
+      "idProposed": "rectus_abdominis.left",
+      "nameFrench": "Grand droit de l’abdomen gauche",
+      "group": "Abdomen",
+      "location": "De part et d’autre de la ligne médiane abdominale.",
+      "visibleLimits": "Bonne : tablettes lisibles ; une région par côté, pas un muscle par tablette.",
+      "stage": "Priorité suivante possible",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 36,
+      "idProposed": "rectus_abdominis.right",
+      "nameFrench": "Grand droit de l’abdomen droit",
+      "group": "Abdomen",
+      "location": "De part et d’autre de la ligne médiane abdominale.",
+      "visibleLimits": "Bonne : tablettes lisibles ; une région par côté, pas un muscle par tablette.",
+      "stage": "Priorité suivante possible",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 37,
+      "idProposed": "obliques.left.external",
+      "nameFrench": "Oblique externe gauche",
+      "group": "Abdomen",
+      "location": "Flancs, sous les côtes et vers le bassin.",
+      "visibleLimits": "Bonne globalement ; limites basses simplifiées par la finition du bassin.",
+      "stage": "Ultérieur",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 38,
+      "idProposed": "obliques.right.external",
+      "nameFrench": "Oblique externe droit",
+      "group": "Abdomen",
+      "location": "Flancs, sous les côtes et vers le bassin.",
+      "visibleLimits": "Bonne globalement ; limites basses simplifiées par la finition du bassin.",
+      "stage": "Ultérieur",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 39,
+      "idProposed": "serratus_anterior.left",
+      "nameFrench": "Dentelé antérieur gauche",
+      "group": "Abdomen",
+      "location": "Digitations latérales du thorax, sous les pectoraux.",
+      "visibleLimits": "Reliefs visibles, plusieurs digitations regroupées ; respecter les pectoraux validés.",
+      "stage": "Ultérieur",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 40,
+      "idProposed": "serratus_anterior.right",
+      "nameFrench": "Dentelé antérieur droit",
+      "group": "Abdomen",
+      "location": "Digitations latérales du thorax, sous les pectoraux.",
+      "visibleLimits": "Reliefs visibles, plusieurs digitations regroupées ; respecter les pectoraux validés.",
+      "stage": "Ultérieur",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 41,
+      "idProposed": "gluteus_maximus.left",
+      "nameFrench": "Grand fessier gauche",
+      "group": "Bassin et fessiers",
+      "location": "Masse postérieure principale de la fesse.",
+      "visibleLimits": "Bonne globalement ; jonction ischio-jambiers progressive.",
+      "stage": "Priorité suivante possible",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 42,
+      "idProposed": "gluteus_maximus.right",
+      "nameFrench": "Grand fessier droit",
+      "group": "Bassin et fessiers",
+      "location": "Masse postérieure principale de la fesse.",
+      "visibleLimits": "Bonne globalement ; jonction ischio-jambiers progressive.",
+      "stage": "Priorité suivante possible",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 43,
+      "idProposed": "gluteus_medius.left",
+      "nameFrench": "Moyen fessier superficiel gauche",
+      "group": "Bassin et fessiers",
+      "location": "Partie supérieure/externe de la hanche.",
+      "visibleLimits": "Partiellement visible ; ne représenter que la surface exposée.",
+      "stage": "Ultérieur",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 44,
+      "idProposed": "gluteus_medius.right",
+      "nameFrench": "Moyen fessier superficiel droit",
+      "group": "Bassin et fessiers",
+      "location": "Partie supérieure/externe de la hanche.",
+      "visibleLimits": "Partiellement visible ; ne représenter que la surface exposée.",
+      "stage": "Ultérieur",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 45,
+      "idProposed": "tensor_fasciae_latae.left",
+      "nameFrench": "Tenseur du fascia lata gauche",
+      "group": "Bassin et fessiers",
+      "location": "Petite région antéro-externe de la hanche.",
+      "visibleLimits": "Faible/moyenne : relief proche du quadriceps et du fessier, à confirmer.",
+      "stage": "Optionnel",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 46,
+      "idProposed": "tensor_fasciae_latae.right",
+      "nameFrench": "Tenseur du fascia lata droit",
+      "group": "Bassin et fessiers",
+      "location": "Petite région antéro-externe de la hanche.",
+      "visibleLimits": "Faible/moyenne : relief proche du quadriceps et du fessier, à confirmer.",
+      "stage": "Optionnel",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 47,
+      "idProposed": "quadriceps.left.rectus_femoris",
+      "nameFrench": "Droit fémoral gauche",
+      "group": "Cuisses",
+      "location": "Ventre central de la face antérieure de cuisse.",
+      "visibleLimits": "Bonne : volume principal lisible.",
+      "stage": "Priorité suivante possible",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 48,
+      "idProposed": "quadriceps.right.rectus_femoris",
+      "nameFrench": "Droit fémoral droit",
+      "group": "Cuisses",
+      "location": "Ventre central de la face antérieure de cuisse.",
+      "visibleLimits": "Bonne : volume principal lisible.",
+      "stage": "Priorité suivante possible",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 49,
+      "idProposed": "quadriceps.left.vastus_lateralis",
+      "nameFrench": "Vaste latéral gauche",
+      "group": "Cuisses",
+      "location": "Face antéro-externe de la cuisse.",
+      "visibleLimits": "Bonne : galbe latéral net, origine haute moins délimitée.",
+      "stage": "Ultérieur",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 50,
+      "idProposed": "quadriceps.right.vastus_lateralis",
+      "nameFrench": "Vaste latéral droit",
+      "group": "Cuisses",
+      "location": "Face antéro-externe de la cuisse.",
+      "visibleLimits": "Bonne : galbe latéral net, origine haute moins délimitée.",
+      "stage": "Ultérieur",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 51,
+      "idProposed": "quadriceps.left.vastus_medialis",
+      "nameFrench": "Vaste médial gauche",
+      "group": "Cuisses",
+      "location": "Goutte au-dessus du bord interne du genou.",
+      "visibleLimits": "Bonne distalement ; raccord proximal plus progressif.",
+      "stage": "Ultérieur",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 52,
+      "idProposed": "quadriceps.right.vastus_medialis",
+      "nameFrench": "Vaste médial droit",
+      "group": "Cuisses",
+      "location": "Goutte au-dessus du bord interne du genou.",
+      "visibleLimits": "Bonne distalement ; raccord proximal plus progressif.",
+      "stage": "Ultérieur",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 53,
+      "idProposed": "hamstrings.left.biceps_femoris",
+      "nameFrench": "Biceps fémoral superficiel gauche",
+      "group": "Cuisses",
+      "location": "Partie postéro-externe de la cuisse.",
+      "visibleLimits": "Bonne pour le territoire externe ; tendon bas à préserver neutre.",
+      "stage": "Priorité suivante possible",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 54,
+      "idProposed": "hamstrings.right.biceps_femoris",
+      "nameFrench": "Biceps fémoral superficiel droit",
+      "group": "Cuisses",
+      "location": "Partie postéro-externe de la cuisse.",
+      "visibleLimits": "Bonne pour le territoire externe ; tendon bas à préserver neutre.",
+      "stage": "Priorité suivante possible",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 55,
+      "idProposed": "hamstrings.left.semitendinosus",
+      "nameFrench": "Semi-tendineux superficiel gauche",
+      "group": "Cuisses",
+      "location": "Partie postéro-interne de la cuisse.",
+      "visibleLimits": "Moyenne : ne pas attribuer arbitrairement le semi-membraneux profond.",
+      "stage": "Ultérieur",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 56,
+      "idProposed": "hamstrings.right.semitendinosus",
+      "nameFrench": "Semi-tendineux superficiel droit",
+      "group": "Cuisses",
+      "location": "Partie postéro-interne de la cuisse.",
+      "visibleLimits": "Moyenne : ne pas attribuer arbitrairement le semi-membraneux profond.",
+      "stage": "Ultérieur",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 57,
+      "idProposed": "adductors.left",
+      "nameFrench": "Adducteurs superficiels gauche",
+      "group": "Cuisses",
+      "location": "Face interne de cuisse, sous le pli de l’aine.",
+      "visibleLimits": "Groupe : origine proximale volontairement simplifiée ; préserver l’aine validée.",
+      "stage": "Ultérieur",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 58,
+      "idProposed": "adductors.right",
+      "nameFrench": "Adducteurs superficiels droit",
+      "group": "Cuisses",
+      "location": "Face interne de cuisse, sous le pli de l’aine.",
+      "visibleLimits": "Groupe : origine proximale volontairement simplifiée ; préserver l’aine validée.",
+      "stage": "Ultérieur",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 59,
+      "idProposed": "gracilis.left",
+      "nameFrench": "Gracile gauche",
+      "group": "Cuisses",
+      "location": "Bande fine médiale de cuisse.",
+      "visibleLimits": "Faible : voisin des adducteurs, séparation non fiable partout.",
+      "stage": "Optionnel",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 60,
+      "idProposed": "gracilis.right",
+      "nameFrench": "Gracile droit",
+      "group": "Cuisses",
+      "location": "Bande fine médiale de cuisse.",
+      "visibleLimits": "Faible : voisin des adducteurs, séparation non fiable partout.",
+      "stage": "Optionnel",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 61,
+      "idProposed": "sartorius.left",
+      "nameFrench": "Sartorius gauche",
+      "group": "Cuisses",
+      "location": "Trajet diagonal de la hanche externe vers le genou interne.",
+      "visibleLimits": "Faible/moyenne : ne pas inventer un ruban là où le relief est absent.",
+      "stage": "Optionnel",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 62,
+      "idProposed": "sartorius.right",
+      "nameFrench": "Sartorius droit",
+      "group": "Cuisses",
+      "location": "Trajet diagonal de la hanche externe vers le genou interne.",
+      "visibleLimits": "Faible/moyenne : ne pas inventer un ruban là où le relief est absent.",
+      "stage": "Optionnel",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 63,
+      "idProposed": "gastrocnemius.left.medial",
+      "nameFrench": "Gastrocnémien médial gauche",
+      "group": "Jambes",
+      "location": "Chef interne du mollet postérieur.",
+      "visibleLimits": "Bonne pour les grands galbes, raccord au tendon d’Achille simplifié.",
+      "stage": "Priorité suivante possible",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 64,
+      "idProposed": "gastrocnemius.right.medial",
+      "nameFrench": "Gastrocnémien médial droit",
+      "group": "Jambes",
+      "location": "Chef interne du mollet postérieur.",
+      "visibleLimits": "Bonne pour les grands galbes, raccord au tendon d’Achille simplifié.",
+      "stage": "Priorité suivante possible",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 65,
+      "idProposed": "gastrocnemius.left.lateral",
+      "nameFrench": "Gastrocnémien latéral gauche",
+      "group": "Jambes",
+      "location": "Chef externe du mollet postérieur.",
+      "visibleLimits": "Bonne globalement ; séparation centrale à confirmer sous plusieurs angles.",
+      "stage": "Ultérieur",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 66,
+      "idProposed": "gastrocnemius.right.lateral",
+      "nameFrench": "Gastrocnémien latéral droit",
+      "group": "Jambes",
+      "location": "Chef externe du mollet postérieur.",
+      "visibleLimits": "Bonne globalement ; séparation centrale à confirmer sous plusieurs angles.",
+      "stage": "Ultérieur",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 67,
+      "idProposed": "soleus.left",
+      "nameFrench": "Soléaire superficiel exposé gauche",
+      "group": "Jambes",
+      "location": "Bords inférieurs/latéraux du mollet, sous les gastrocnémiens.",
+      "visibleLimits": "Partiel : seule la portion réellement exposée est sélectionnable.",
+      "stage": "Ultérieur",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 68,
+      "idProposed": "soleus.right",
+      "nameFrench": "Soléaire superficiel exposé droit",
+      "group": "Jambes",
+      "location": "Bords inférieurs/latéraux du mollet, sous les gastrocnémiens.",
+      "visibleLimits": "Partiel : seule la portion réellement exposée est sélectionnable.",
+      "stage": "Ultérieur",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 69,
+      "idProposed": "tibialis_anterior.left",
+      "nameFrench": "Tibial antérieur gauche",
+      "group": "Jambes",
+      "location": "Face antéro-externe de la jambe, à côté du tibia.",
+      "visibleLimits": "Moyenne : territoire long lisible mais cheville/pied volontairement lissés.",
+      "stage": "Ultérieur",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 70,
+      "idProposed": "tibialis_anterior.right",
+      "nameFrench": "Tibial antérieur droit",
+      "group": "Jambes",
+      "location": "Face antéro-externe de la jambe, à côté du tibia.",
+      "visibleLimits": "Moyenne : territoire long lisible mais cheville/pied volontairement lissés.",
+      "stage": "Ultérieur",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 71,
+      "idProposed": "fibularis.left",
+      "nameFrench": "Fibulaires superficiels gauche",
+      "group": "Jambes",
+      "location": "Bord externe de la jambe.",
+      "visibleLimits": "Faible/moyenne : groupe fonctionnel, long/court fibulaire non distingués.",
+      "stage": "Optionnel",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 72,
+      "idProposed": "fibularis.right",
+      "nameFrench": "Fibulaires superficiels droit",
+      "group": "Jambes",
+      "location": "Bord externe de la jambe.",
+      "visibleLimits": "Faible/moyenne : groupe fonctionnel, long/court fibulaire non distingués.",
+      "stage": "Optionnel",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 73,
+      "idProposed": "neck.left.sternocleidomastoid",
+      "nameFrench": "Sterno-cléido-mastoïdien gauche",
+      "group": "Cou — facultatif",
+      "location": "Bande oblique superficielle latérale du cou.",
+      "visibleLimits": "Zone simplifiée et validée esthétiquement ; intérêt fitness secondaire, pas de retouche prévue.",
+      "stage": "Optionnel",
+      "maskCreated": false
+    },
+    {
+      "codeProposed": 74,
+      "idProposed": "neck.right.sternocleidomastoid",
+      "nameFrench": "Sterno-cléido-mastoïdien droit",
+      "group": "Cou — facultatif",
+      "location": "Bande oblique superficielle latérale du cou.",
+      "visibleLimits": "Zone simplifiée et validée esthétiquement ; intérêt fitness secondaire, pas de retouche prévue.",
+      "stage": "Optionnel",
+      "maskCreated": false
+    }
+  ],
+  "onlyMasksCreatedInThisDelivery": [
+    "biceps.left",
+    "biceps.right",
+    "triceps.left",
+    "triceps.right"
+  ],
+  "excludedAsDeepOrNotRepresentable": [
+    "Petit pectoral",
+    "Transverse abdominal",
+    "Vaste intermédiaire",
+    "Rhomboïdes sous les trapèzes",
+    "Sous-scapulaire",
+    "Muscles faciaux",
+    "Muscles intrinsèques des mains/pieds"
+  ],
+  "scope": "Main superficial fitness groups, not all anatomical muscles. Future IDs are proposals; no future masks or app mappings implemented."
+}

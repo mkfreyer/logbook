@@ -1,0 +1,171 @@
+{
+  "method": "4-connected ID pixel components, stitched at 33 samples on every real shared source edge with distinct corner UVs. Includes 4px island padding. This is finite sampling, not a medical/anatomical proof.",
+  "uv_seam_edges_tested": 2964,
+  "zones": [
+    {
+      "id": "biceps.left",
+      "uv_components_before_seam_stitch": 14,
+      "enclosed_zero_pixels_in_UV": 0,
+      "stitched_surface_component_pixel_counts": [
+        73568
+      ],
+      "component_diagnostics": [
+        {
+          "root": 1,
+          "pixels": 73568,
+          "sourceFaceCenterCount": 513,
+          "firstSourceFaces": [
+            73636,
+            73637,
+            73638,
+            73663,
+            73664,
+            73841,
+            73888,
+            73889,
+            74019,
+            74020,
+            74089,
+            74090
+          ],
+          "sourceCenterBounds": {
+            "min": [
+              0.19804303348064423,
+              0.2905655801296234,
+              -0.052642643451690674
+            ],
+            "max": [
+              0.266378790140152,
+              0.47455039620399475,
+              0.015894068405032158
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "biceps.right",
+      "uv_components_before_seam_stitch": 20,
+      "enclosed_zero_pixels_in_UV": 0,
+      "stitched_surface_component_pixel_counts": [
+        72759
+      ],
+      "component_diagnostics": [
+        {
+          "root": 15,
+          "pixels": 72759,
+          "sourceFaceCenterCount": 497,
+          "firstSourceFaces": [
+            9170,
+            9171,
+            9172,
+            9192,
+            9193,
+            9197,
+            9198,
+            9211,
+            9212,
+            9222,
+            9223,
+            9224
+          ],
+          "sourceCenterBounds": {
+            "min": [
+              -0.2701054513454437,
+              0.2959343194961548,
+              -0.05077165737748146
+            ],
+            "max": [
+              -0.19775883853435516,
+              0.47774168848991394,
+              0.01607392728328705
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "triceps.left",
+      "uv_components_before_seam_stitch": 15,
+      "enclosed_zero_pixels_in_UV": 0,
+      "stitched_surface_component_pixel_counts": [
+        113829
+      ],
+      "component_diagnostics": [
+        {
+          "root": 35,
+          "pixels": 113829,
+          "sourceFaceCenterCount": 721,
+          "firstSourceFaces": [
+            72923,
+            73593,
+            73594,
+            73651,
+            73652,
+            73867,
+            73868,
+            74054,
+            74059,
+            74060,
+            74061,
+            74072
+          ],
+          "sourceCenterBounds": {
+            "min": [
+              0.19501781463623047,
+              0.293131560087204,
+              -0.14997170865535736
+            ],
+            "max": [
+              0.28874441981315613,
+              0.4863379895687103,
+              -0.05893596634268761
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "triceps.right",
+      "uv_components_before_seam_stitch": 4,
+      "enclosed_zero_pixels_in_UV": 0,
+      "stitched_surface_component_pixel_counts": [
+        116426
+      ],
+      "component_diagnostics": [
+        {
+          "root": 50,
+          "pixels": 116426,
+          "sourceFaceCenterCount": 759,
+          "firstSourceFaces": [
+            7245,
+            7247,
+            7248,
+            7249,
+            7255,
+            7256,
+            7273,
+            7274,
+            7275,
+            7276,
+            7313,
+            7314
+          ],
+          "sourceCenterBounds": {
+            "min": [
+              -0.2921006381511688,
+              0.2964320480823517,
+              -0.15037506818771362
+            ],
+            "max": [
+              -0.19777719676494598,
+              0.48752865195274353,
+              -0.05869731307029724
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "status": "passed"
+}
