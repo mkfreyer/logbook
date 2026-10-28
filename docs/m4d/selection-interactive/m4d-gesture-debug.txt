@@ -1,0 +1,14 @@
+
+> logbook@0.1.0 test:ui
+> jest --runInBand --runTestsByPath tests/pager.test.tsx --silent
+
+
+Test Suites: 1 passed, 1 total
+Tests:       17 passed, 17 total
+Snapshots:   0 total
+Time:        51.011 s
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

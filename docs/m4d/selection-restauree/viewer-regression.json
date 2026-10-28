@@ -1,0 +1,99 @@
+{
+  "device": "Chromium desktop, SwiftShader software WebGL; emulated touch viewport 390×540, not an iPhone",
+  "asset": {
+    "id": "meshy-e45e5d8",
+    "sourceCommit": "e45e5d8444ff54a96b43eae4f8727081d1452764",
+    "bytes": 1993204,
+    "triangles": 110588,
+    "sha256": "421e593cad17f60d1c0c5e67707729fb88bbf69026795e22011ecc7d90b38959"
+  },
+  "offlineAfterLoad": true,
+  "initial": {
+    "disposed": false,
+    "loaded": true,
+    "renderCount": 1,
+    "triangles": 110588,
+    "geometryBytes": 2603432,
+    "selectedMuscle": null,
+    "atlasBytes": 4194304,
+    "camera": [
+      0,
+      2.246040425393971e-16,
+      3.6680623784061686
+    ],
+    "target": [
+      0,
+      0,
+      0
+    ],
+    "size": [
+      0.7588047385215759,
+      1.898673415184021,
+      0.3255406618118286
+    ],
+    "minDistance": 0.7181063599792815,
+    "maxDistance": 6.602512281131103,
+    "distance": 3.6680623784061686,
+    "polarAngle": 1.5707963267948966,
+    "azimuth": 0,
+    "geometries": 1,
+    "textures": 2,
+    "renderedTriangles": 110588,
+    "contextLost": false,
+    "projectedBounds": {
+      "isBox3": true,
+      "min": {
+        "x": -0.37940236926078796,
+        "y": -0.9493367075920105,
+        "z": -0.1627703309059143
+      },
+      "max": {
+        "x": 0.37940236926078796,
+        "y": 0.9493367075920105,
+        "z": 0.1627703309059143
+      }
+    }
+  },
+  "overviewFits": {
+    "vertical": 0.8335276823155707,
+    "horizontal": 0.46124210480099853
+  },
+  "touchRotationSweepRadians": 8.840569515655456,
+  "touch": {
+    "rotation": true,
+    "pinchIn": true,
+    "pinchOut": true,
+    "zoomLimits": true,
+    "verticalPan": true,
+    "front": true,
+    "overview": true,
+    "realRaycast": true,
+    "idleRenderStops": true
+  },
+  "openCloseCycles": [
+    {
+      "geometriesAfterDispose": 0,
+      "contextLost": true
+    },
+    {
+      "geometriesAfterDispose": 0,
+      "contextLost": true
+    },
+    {
+      "geometriesAfterDispose": 0,
+      "contextLost": true
+    },
+    {
+      "geometriesAfterDispose": 0,
+      "contextLost": true
+    },
+    {
+      "geometriesAfterDispose": 0,
+      "contextLost": true
+    }
+  ],
+  "invalidModelReportsError": true,
+  "externalRequests": 0,
+  "errors": [],
+  "status": "passed"
+}

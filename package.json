@@ -16,10 +16,11 @@
     "test:ui": "jest --runInBand",
     "test:navigation": "tsx --test tests/navigation.test.ts",
     "viewer:build": "node tools/m4b/build-viewer.mjs",
-    "viewer:check": "node tools/m4b/build-viewer.mjs --check",
-    "test:model-viewer": "tsx --test tests/model-viewer.test.ts",
+    "viewer:check": "node tools/m4d/build-selection.mjs --check && node tools/m4b/build-viewer.mjs --check",
+    "test:model-viewer": "tsx --test tests/model-viewer.test.ts tests/muscle-selection.test.ts",
     "test:viewer-browser": "tsx tools/m4b/test-browser.ts",
-    "test:upgrade": "tsx --test tests/sdk58-preservation.test.ts"
+    "test:upgrade": "tsx --test tests/sdk58-preservation.test.ts",
+    "test:selection-browser": "tsx tools/m4d/test-selection-browser.ts"
   },
   "dependencies": {
     "@expo/metro-runtime": "~58.0.15",

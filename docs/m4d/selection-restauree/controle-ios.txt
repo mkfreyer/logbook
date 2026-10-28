@@ -1,0 +1,50 @@
+
+> logbook@0.1.0 export:ios
+> expo export --platform ios --output-dir dist/ios
+
+Starting Metro Bundler
+
+iOS Bundled 32427ms ../logbook-m4b-sdk58/node_modules/expo-router/entry.js (2036 modules)
+
+› Assets (44):
+../logbook-m4b-sdk58/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/AntDesign.ttf (130KB)
+../logbook-m4b-sdk58/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Entypo.ttf (66KB)
+../logbook-m4b-sdk58/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/EvilIcons.ttf (13KB)
+../logbook-m4b-sdk58/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Feather.ttf (56KB)
+../logbook-m4b-sdk58/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/FontAwesome.ttf (166KB)
+../logbook-m4b-sdk58/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf (134KB)
+../logbook-m4b-sdk58/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf (34KB)
+../logbook-m4b-sdk58/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf (203KB)
+../logbook-m4b-sdk58/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/FontAwesome6_Brands.ttf (209KB)
+../logbook-m4b-sdk58/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/FontAwesome6_Regular.ttf (68KB)
+../logbook-m4b-sdk58/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/FontAwesome6_Solid.ttf (424KB)
+../logbook-m4b-sdk58/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Fontisto.ttf (314KB)
+../logbook-m4b-sdk58/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Foundation.ttf (57KB)
+../logbook-m4b-sdk58/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Ionicons.ttf (390KB)
+../logbook-m4b-sdk58/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf (1.3MB)
+../logbook-m4b-sdk58/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/MaterialIcons.ttf (357KB)
+../logbook-m4b-sdk58/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Octicons.ttf (69KB)
+../logbook-m4b-sdk58/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/SimpleLineIcons.ttf (54KB)
+../logbook-m4b-sdk58/node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Zocial.ttf (26KB)
+../logbook-m4b-sdk58/node_modules/expo-router/assets/arrow_down.png (9.5KB)
+../logbook-m4b-sdk58/node_modules/expo-router/assets/error.png (469B)
+../logbook-m4b-sdk58/node_modules/expo-router/assets/file.png (138B)
+../logbook-m4b-sdk58/node_modules/expo-router/assets/forward.png (188B)
+../logbook-m4b-sdk58/node_modules/expo-router/assets/pkg.png (364B)
+../logbook-m4b-sdk58/node_modules/expo-router/assets/react-navigation/elements/back-icon-mask.png (653B)
+../logbook-m4b-sdk58/node_modules/expo-router/assets/react-navigation/elements/back-icon.png (4 variations | 566B)
+../logbook-m4b-sdk58/node_modules/expo-router/assets/react-navigation/elements/clear-icon.png (4 variations | 425B)
+../logbook-m4b-sdk58/node_modules/expo-router/assets/react-navigation/elements/close-icon.png (4 variations | 235B)
+../logbook-m4b-sdk58/node_modules/expo-router/assets/react-navigation/elements/search-icon.png (3 variations | 582B)
+../logbook-m4b-sdk58/node_modules/expo-router/assets/sitemap.png (465B)
+../logbook-m4b-sdk58/node_modules/expo-router/assets/unmatched.png (4.8KB)
+assets/models/meshy-m4d-uv.glb (2.6MB)
+assets/rest-complete.wav (24KB)
+
+› ios bundles (1):
+_expo/static/js/ios/entry-927c7be0ae309a80abdeadb034c85faf.hbc (6.7MB)
+
+› Files (1):
+metadata.json (2.9KB)
+
+Exported: dist/ios

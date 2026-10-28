@@ -10,7 +10,7 @@ import { MODEL } from '../../src/features/model3d/model';
 async function main() {
 const artifactDir = process.env.M4B_ARTIFACT_DIR ?? '/tmp/logbook-m4b-validation';
 await mkdir(artifactDir, { recursive: true });
-const glb = await readFile('assets/models/meshy-e45e5d8.glb');
+const glb = await readFile('assets/models/meshy-m4d-uv.glb');
 const html = buildViewerDocument(glb.toString('base64'));
 const server = createServer((request, response) => {
   response.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' });
@@ -40,13 +40,14 @@ const ready = async () => {
 const cdp = await context.newCDPSession(page);
 type Point = { x: number; y: number; id: number };
 async function touch(start: Point[], end: Point[], steps = 12) {
-  await cdp.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: start });
+  const timestamp = Date.now() / 1000;
+  await cdp.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: start, timestamp });
   for (let i = 1; i <= steps; i++) {
     const points = start.map((p, k) => ({ ...p, x: p.x + (end[k]!.x - p.x) * i / steps, y: p.y + (end[k]!.y - p.y) * i / steps }));
-    await cdp.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: points });
+    await cdp.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: points, timestamp: timestamp + i * .012 });
     await page.waitForTimeout(12);
   }
-  await cdp.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
+  await cdp.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [], timestamp: timestamp + steps * .012 + .04 });
   await page.waitForTimeout(500);
 }
 const results: Record<string, unknown> = { device: 'Chromium desktop, SwiftShader software WebGL; emulated touch viewport 390×540, not an iPhone', asset: MODEL };
@@ -106,11 +107,11 @@ try {
   const reset = await snapshot();
   assert.ok(Math.abs((reset.distance as number) - (initial.distance as number)) < 1e-5);
   assert.deepEqual(reset.target, [0, 0, 0]); assert.ok(Math.abs(reset.azimuth as number) < 1e-6);
-  // A real raycast yields geometry only; there is no invented anatomical selection.
+  // A brief touch emits both the technical hit and the validated segmentation result.
   await touch([{ x: 195, y: 190, id: 3 }], [{ x: 195, y: 190, id: 3 }], 1);
   const events = await page.evaluate(() => (window as unknown as { messages: Array<{ type: string; hit?: unknown }> }).messages);
   assert.ok(events.some(event => event.type === 'surface-hit'));
-  assert.ok(!JSON.stringify(events).includes('muscleId'));
+  assert.ok(events.some(event => event.type === 'selection'));
   await page.waitForTimeout(700); const idle = await snapshot(); await page.waitForTimeout(200);
   assert.equal((await snapshot()).renderCount, idle.renderCount);
   results.touch = { rotation: true, pinchIn: true, pinchOut: true, zoomLimits: true, verticalPan: true, front: true, overview: true, realRaycast: true, idleRenderStops: true };

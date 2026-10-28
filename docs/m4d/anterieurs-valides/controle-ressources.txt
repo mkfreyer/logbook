@@ -1,0 +1,6 @@
+
+> logbook@0.1.0 viewer:check
+> node tools/m4d/build-selection.mjs --check && node tools/m4b/build-viewer.mjs --check
+
+M4D asset 2606320 bytes; atlas PNG 32015 bytes; masks unchanged.
+Viewer bundle is current.

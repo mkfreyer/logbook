@@ -3,14 +3,16 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { ActivityIndicator, AppState, StyleSheet, Text, View } from 'react-native';
 import { WebView } from 'react-native-webview';
 import { Button, colors } from '../../ui';
+import type { MuscleId } from './selection';
 import { commandScript, parseViewerEvent, type SurfaceHit, type ViewerCommand } from './bridge';
 import { buildViewerDocument } from './document';
 import { loadModelBase64 } from './loadModel';
 
 export type ModelViewerHandle = { command(command: Exclude<ViewerCommand, 'dispose'>): void };
-export function ModelViewer({ controller, onReadyChange, onSurfaceTouch }: {
+export function ModelViewer({ controller, onReadyChange, onSurfaceTouch, onSelectionChange }: {
   controller: React.RefObject<ModelViewerHandle | null>;
   onReadyChange(ready: boolean): void;
+  onSelectionChange?: (id: MuscleId | null) => void;
   onSurfaceTouch?: (hit: SurfaceHit) => void;
 }) {
   // WebView 14 defaults its additional-props generic to undefined, making
@@ -83,6 +85,7 @@ export function ModelViewer({ controller, onReadyChange, onSurfaceTouch }: {
         const message = parseViewerEvent(event.nativeEvent.data);
         if (message?.type === 'ready') { setReady(true); setError(null); }
         else if (message?.type === 'error') fail('Le rendu 3D a été interrompu. Réessayez.');
+        else if (message?.type === 'selection' && ready) onSelectionChange?.(message.muscleId);
         else if (message?.type === 'surface-hit' && ready) onSurfaceTouch?.(message.hit);
       }}
       onError={() => fail('Le visualiseur 3D n’a pas pu démarrer.')}

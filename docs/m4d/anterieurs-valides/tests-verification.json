@@ -1,0 +1,58 @@
+{
+  "status": "passed-for-requested-checks-awaiting-user-iphone-test",
+  "approvedMasksCommit": "09c61ab",
+  "m4cCommit": "d552e23759f77f5f6d4cb2d116e2605d60cd3cfa",
+  "synchronizationCommit": "bd1319a79616b1ffb904599c40c25db72f7fd275",
+  "tests": {
+    "total": 552,
+    "database": 219,
+    "navigation": 13,
+    "nativeUI": 310,
+    "modelAndSelection": 9,
+    "sqliteV8Preservation": 1
+  },
+  "viewerCheck": "passed",
+  "typescript": "passed",
+  "iosJavaScriptExport": "passed",
+  "eightActualWebGLTouchSelections": "passed",
+  "viewerGesturesAndLifecycle": "passed",
+  "runtimeAssetSha256": "646dd3331cfe7889122dd4356fff501f3e7c7bbd61c03c6015262909833e3b5f",
+  "runtimeAtlasSha256": "9a2a6283a02f2fed1d4287d9d6e848b3c6031e70ab2808f6ad533e5bba6fa4cd",
+  "expoSdk": 58,
+  "dependenciesChanged": false,
+  "offlineExpoCheck": "passed-with-offline-reliability-warning",
+  "onlineExpoCheck": "nonzero-recommends-newer-sdk58-patches-not-applied",
+  "onlineRecommendations": {
+    "expo": "~58.0.20",
+    "expo-file-system": "~58.0.12",
+    "expo-router": "~58.0.27"
+  },
+  "logs": [
+    {
+      "file": "controle-ressources.txt",
+      "sha256": "88aea30b7ea77f40d8ad04cd40b5217192f2795d93acc67c6a1f4506d1274299"
+    },
+    {
+      "file": "controle-types.txt",
+      "sha256": "a2a9ce4c5ae934144e62bc29d798aa5d35fe6d94ec3d38cc80d42d48527cf46a"
+    },
+    {
+      "file": "controle-tests.txt",
+      "sha256": "ff36c11e2f0a06a70c4c397d8d3151f6884196814e667d3bb6e175e1613701ab"
+    },
+    {
+      "file": "controle-ios.txt",
+      "sha256": "9a383628d37630fca848b9b5bbc67fd4a60f5f71cabcf295a528701e824eaae5"
+    },
+    {
+      "file": "controle-expo-hors-ligne.txt",
+      "sha256": "28adcc05dfc4b32af564b8765a9b02b663448cfb9640eefa9b9a48494f703f91"
+    },
+    {
+      "file": "diagnostic-expo-en-ligne.txt",
+      "sha256": "f08edf3f129df0c566de4c9d29c2c93900c64c1f4ffedfe22ae2d55018cc4c44"
+    }
+  ],
+  "realIphoneTest": "pending-user",
+  "pullRequestsMerged": false
+}

@@ -1,0 +1,28 @@
+
+> logbook@0.1.0 test:model-viewer
+> tsx --test tests/model-viewer.test.ts tests/muscle-selection.test.ts
+
+✔ the preserved M4A master remains byte-identical, with its original unsegmented mesh (16.157097ms)
+✔ overview fits head, feet and width across narrow and wide viewports (1.971483ms)
+✔ bridge validates technical surface hits, without inventing muscle identifiers (2.834644ms)
+✔ HTML contains only bundled code/data and forbids external connections (5.182798ms)
+(node:33233) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
+Replace `const THREE = require("three")` with `import * as THREE from "three"`.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ runtime UV derivative preserves all validated positions, normals, triangles, UV and neutral material (520.639788ms)
+✔ eight actual raycasts resolve the exact validated atlas, including anatomical left/right (682.487656ms)
+✔ selection bridge accepts exactly eight IDs and null; reset is a bounded command (1.01168ms)
+✔ brief taps survive jitter; drag-return, pinch, hold, cancellation and residual releases never select (0.673432ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3541.488343
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

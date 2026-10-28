@@ -6,6 +6,9 @@ import {
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { cameraFraming, MIN_POLAR_ANGLE, MAX_POLAR_ANGLE, VIEW_FOV_DEGREES } from '../camera';
+import { SELECTION_MODEL } from '../generated/selectionData';
+import { SelectionTap, sampleMuscle, type MuscleId } from '../selection';
+import { loadSelectionAtlas, installSelectionMaterial } from './selectionMaterial';
 import { MODEL } from '../model';
 import type { SurfaceHit, ViewerCommand, ViewerEvent } from '../bridge';
 
@@ -51,13 +54,20 @@ function decodeModel() {
   element?.remove();
   if (!text) throw new Error('Modèle local absent.');
   const binary = atob(text);
-  if (binary.length !== MODEL.bytes) throw new Error('Modèle local incomplet.');
+  if (binary.length !== SELECTION_MODEL.bytes) throw new Error('Modèle local incomplet.');
   const data = new Uint8Array(binary.length);
   for (let i = 0; i < binary.length; i++) data[i] = binary.charCodeAt(i);
   return data.buffer;
 }
 async function start() {
   let disposed = false, frame = 0, renderCount = 0, root: Group | null = null;
+  let atlas: Awaited<ReturnType<typeof loadSelectionAtlas>> | null = null;
+  let selectedUniform: { value: number } | null = null, selectedMuscle: MuscleId | null = null;
+  function select(muscle: ReturnType<typeof sampleMuscle>) {
+    selectedMuscle = muscle?.id ?? null;
+    if (selectedUniform) selectedUniform.value = muscle?.code ?? 0;
+    invalidate(); post({ version: 1, type: 'selection', muscleId: selectedMuscle });
+  }
   let loaded = false, geometryBytes = 0, triangles = 0;
   const renderer = new WebGLRenderer({ antialias: true, alpha: false, powerPreference: 'default' });
   renderer.setClearColor(0x050d16);
@@ -128,35 +138,29 @@ async function start() {
     if (!disposed) post({ version: 1, type: 'error', message: 'Le rendu 3D a été interrompu. Réessayez.' });
   };
   canvas.addEventListener('webglcontextlost', onContextLost);
-  const raycaster = new Raycaster(), pointer = new Vector2(), pointers = new Set<number>();
-  let tap: { id: number; x: number; y: number } | null = null;
-  const down = (event: PointerEvent) => {
-    pointers.add(event.pointerId);
-    tap = pointers.size === 1 ? { id: event.pointerId, x: event.clientX, y: event.clientY } : null;
-  };
-  const move = (event: PointerEvent) => {
-    if (tap && Math.hypot(event.clientX - tap.x, event.clientY - tap.y) > 8) tap = null;
-  };
+  const raycaster = new Raycaster(), pointer = new Vector2(), taps = new SelectionTap();
+  const down = (event: PointerEvent) => taps.down(event.pointerId, event.clientX, event.clientY, event.timeStamp);
+  const move = (event: PointerEvent) => taps.move(event.pointerId, event.clientX, event.clientY);
   const up = (event: PointerEvent) => {
-    pointers.delete(event.pointerId);
-    const candidate = tap; tap = null;
-    if (!candidate || candidate.id !== event.pointerId || !root || !loaded) return;
+    if (!taps.up(event.pointerId, event.clientX, event.clientY, event.timeStamp) || !root || !loaded || !atlas) return;
     const rect = canvas.getBoundingClientRect();
     pointer.set((event.clientX - rect.left) / rect.width * 2 - 1, -(event.clientY - rect.top) / rect.height * 2 + 1);
     raycaster.setFromCamera(pointer, camera);
     const hit = raycaster.intersectObject(root, true)[0];
-    if (!hit || !(hit.object instanceof Mesh) || hit.faceIndex == null) return;
+    if (!hit || !(hit.object instanceof Mesh) || hit.faceIndex == null) { select(null); return; }
+    select(sampleMuscle(hit.uv, atlas.pixels, atlas.width, atlas.height));
     const point = hit.object.worldToLocal(hit.point.clone());
     const surface: SurfaceHit = { assetId: MODEL.id, coordinateSpace: 'mesh-local', point: { x: point.x, y: point.y, z: point.z }, faceIndex: hit.faceIndex };
     if (hit.uv) surface.uv = { x: hit.uv.x, y: hit.uv.y };
     post({ version: 1, type: 'surface-hit', hit: surface });
   };
-  const cancel = (event: PointerEvent) => { pointers.delete(event.pointerId); tap = null; };
+  const cancel = (event: PointerEvent) => taps.cancel(event.pointerId);
   canvas.addEventListener('pointerdown', down, true); canvas.addEventListener('pointermove', move, true);
   canvas.addEventListener('pointerup', up, true); canvas.addEventListener('pointercancel', cancel, true);
   function dispose() {
     if (disposed) return;
-    disposed = true; loaded = false;
+    disposed = true; loaded = false; taps.clear(); selectedMuscle = null;
+    atlas?.texture.dispose(); atlas = null; selectedUniform = null;
     if (frame) cancelAnimationFrame(frame); frame = 0;
     observer.disconnect(); controls.dispose();
     document.removeEventListener('visibilitychange', onVisibility);
@@ -172,6 +176,7 @@ async function start() {
     command(command) {
       if (command === 'dispose') { dispose(); return; }
       if (disposed || !loaded) return;
+      if (command === 'reset-selection') select(null);
       if (command === 'overview') overview();
       if (command === 'front') {
         const distance = controls.getDistance(), target = controls.target.clone();
@@ -179,7 +184,7 @@ async function start() {
         controls.update(); invalidate();
       }
     },
-    snapshot: () => ({ disposed, loaded, renderCount, triangles, geometryBytes,
+    snapshot: () => ({ disposed, loaded, renderCount, triangles, geometryBytes, selectedMuscle, atlasBytes: atlas?.pixels.byteLength ?? 0,
       camera: camera.position.toArray(), target: controls.target.toArray(), size: size.toArray(),
       minDistance: controls.minDistance, maxDistance: controls.maxDistance, distance: controls.getDistance(),
       polarAngle: controls.getPolarAngle(), azimuth: controls.getAzimuthalAngle(),
@@ -188,9 +193,13 @@ async function start() {
       projectedBounds: root ? new Box3().setFromObject(root) : null }),
   };
   try {
+    const decodedAtlas = await loadSelectionAtlas();
+    if (disposed) { decodedAtlas.texture.dispose(); return; }
+    atlas = decodedAtlas;
     const parsed = await new GLTFLoader().parseAsync(decodeModel(), '');
     if (disposed) { disposeModel(parsed.scene); return; }
     root = parsed.scene;
+    selectedUniform = installSelectionMaterial(root, atlas.texture);
     const info = modelInformation(root); triangles = info.triangles; geometryBytes = info.geometryBytes;
     if (triangles !== MODEL.triangles) throw new Error('Le mannequin ne correspond pas à la version validée.');
     const bounds = new Box3().setFromObject(root), center = bounds.getCenter(new Vector3());
